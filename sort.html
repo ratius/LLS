@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@ratius55">
+<meta name="twitter:creator" content="@ratius55">
+<meta name="twitter:title" content="ラブライブ！なんでもソート">
+<meta name="twitter:description" content="「ラブライブ!」シリーズの色々なものをソートできます。上のプルダウンメニューからソートしたい対象を選んだ後、より好きなキャラの名前をクリックしていってください。">
+<meta name="twitter:image" content="https://ratius.github.io/lovelivesort/card.png">
+
+<title>ラブライブ！なんでもソート</title>
+<script><!--
+
+//色の定義
+const ColHono = "#ffd6a5";
+const ColEli  = "#c4edfa";
+const ColKoto = "#e7dada";
+const ColUmi  = "#cddffc";
+const ColRin  = "#fffdb1";
+const ColMaki = "#ffc3b7";
+const ColNozo = "#e4d6f2";
+const ColPana = "#cbf5ce";
+const ColNico = "#ffb9e9";
+const ColChik = "#ffcdb7";
+const ColRiko = "#ffc8d2";
+const ColKana = "#b6eae7";
+const ColDia  = "#fdc2c7";
+const ColYou  = "#c4e5fe";
+const ColYosi = "#d9e9f0";
+const ColMaru = "#f5eb9c";
+const ColMari = "#ecd1f3";
+const ColRuby = "#fbceeb";
+
+const ColAyum = "#edc5ce";
+const ColKasu = "#e8e089";
+const ColShiz = "#bee0ed";
+const ColKari = "#c0cafa";
+const ColAi   = "#fdb792";
+const ColKnta = "#d3b8e5";
+const ColSetu = "#f9a6aa";
+const ColEmma = "#c8edbe";
+const ColRina = "#cfd0e3";
+
+
+var MemberGroup = [
+	[""  ,"μ’s",["Muse"]],
+	["┣","μ’s＋A-RISE＋妹",["Muse","Muse2"]],
+	["┣","ラブライブ!",["Muse","Muse2","Muse3"]],
+	["┣","μ’sキャスト",["MuseCast"]],
+	["┣","μ’sユニット",["MuseUnit"]],
+	["┗","μ’sカップリング",["MuseCP"]],
+	[""  ,"Aqours",["Aqours"]],
+	["┣","Saint Aqours Snow",["Aqours","Aqours2"]],
+	["┣","ラブライブ!サンシャイン!!",["Aqours","Aqours2","Aqours3"]],
+	["┣","Aqoursキャスト",["AqoursCast"]],
+	["┣","Aqoursユニット",["AqoursUnit"]],
+	["┗","Aqoursカップリング",["AqoursCP"]],
+	[""  ,"μ’s＆Aqorus",["Muse","Aqours"]],
+	[""  ,"虹ヶ咲学園スクールアイドル同好会",["Niji"]],
+	["┣","虹ヶ咲キャスト",["NijiCast"]],
+	["┣","虹ヶ咲ユニット",["NijiUnit"]],
+	["┗","虹ヶ咲カップリング",["NijiCP"]],
+	[""  ,"スクフェスAll Stars",["Muse","Aqours","Niji"]],
+	["┗","スクスタキャスト",["MuseCast","AqoursCast","NijiCast"]],
+	[""  ,"スクフェス転入生",["Seiran","Shino","Chitose","Touoh","Shion","YG"]],
+	["┣","青藍高校",["Seiran"]],
+	["┣","東雲学院",["Shino"]],
+	["┣","千歳橋高校",["Chitose"]],
+	["┣","藤黄学園",["Touoh"]],
+	["┣","紫苑女学院",["Shion"]],
+	["┗","Y.G国際学園",["YG"]]
+];
+var CharList = [
+	{name:"高坂穂乃果",     color:[ColHono], group:{"Muse":1}},
+	{name:"絢瀬絵里",       color:[ColEli ], group:{"Muse":1}},
+	{name:"南ことり",       color:[ColKoto], group:{"Muse":1}},
+	{name:"園田海未",       color:[ColUmi ], group:{"Muse":1}},
+	{name:"星空凛",         color:[ColRin ], group:{"Muse":1}},
+	{name:"西木野真姫",     color:[ColMaki], group:{"Muse":1}},
+	{name:"東條希",         color:[ColNozo], group:{"Muse":1}},
+	{name:"小泉花陽",       color:[ColPana], group:{"Muse":1}},
+	{name:"矢澤にこ",       color:[ColNico], group:{"Muse":1}},
+
+	{name:"高坂雪穂",       color:["#eee"], group:{"Muse2":1}},
+	{name:"絢瀬亜里沙",     color:["#eee"], group:{"Muse2":1}},
+	{name:"綺羅ツバサ",     color:["#eee"], group:{"Muse2":1}},
+	{name:"優木あんじゅ",   color:["#eee"], group:{"Muse2":1}},
+	{name:"統堂英玲奈",     color:["#eee"], group:{"Muse2":1}},
+
+	{name:"穂乃果の母",     color:["#ddd"], group:{"Muse3":1}},
+	{name:"穂乃果の父",     color:["#ddd"], group:{"Muse3":1}},
+	{name:"ことりの母",     color:["#ddd"], group:{"Muse3":1}},
+	{name:"真姫の母",       color:["#ddd"], group:{"Muse3":1}},
+	{name:"にこの母",       color:["#ddd"], group:{"Muse3":1}},
+	{name:"矢澤ここあ",     color:["#ddd"], subtext:"白い服の方", group:{"Muse3":1}},
+	{name:"矢澤こころ",     color:["#ddd"], subtext:"黄色い服の方", group:{"Muse3":1}},
+	{name:"矢澤虎太郎",     color:["#ddd"], group:{"Muse3":1}},
+	{name:"ヒデコ",         color:["#ddd"], group:{"Muse3":1}},
+	{name:"フミコ",         color:["#ddd"], group:{"Muse3":1}},
+	{name:"ミカ",           color:["#ddd"], group:{"Muse3":1}},
+	{name:"アルパカ",       color:["#ddd"], group:{"Muse3":1}},
+	{name:"女性シンガー",   color:["#ddd"], group:{"Muse3":1}},
+
+	{name:"新田恵海",   subtext:"高坂穂乃果 役", color:[ColHono], group:{"MuseCast":1}},
+	{name:"南條愛乃",   subtext:"絢瀬絵里 役",   color:[ColEli ], group:{"MuseCast":1}},
+	{name:"内田彩",     subtext:"南ことり 役",   color:[ColKoto], group:{"MuseCast":1}},
+	{name:"三森すずこ", subtext:"園田海未 役",   color:[ColUmi ], group:{"MuseCast":1}},
+	{name:"飯田里穂",   subtext:"星空凛 役",     color:[ColRin ], group:{"MuseCast":1}},
+	{name:"Pile",       subtext:"西木野真姫 役", color:[ColMaki], group:{"MuseCast":1}},
+	{name:"楠田亜衣奈", subtext:"東條希 役",     color:[ColNozo], group:{"MuseCast":1}},
+	{name:"久保ユリカ", subtext:"小泉花陽 役",   color:[ColPana], group:{"MuseCast":1}},
+	{name:"徳井青空",   subtext:"矢澤にこ 役",   color:[ColNico], group:{"MuseCast":1}},
+
+	{name:"μ’s1年生",     color:["#8be"], subtext:"西木野真姫<br>星空凛<br>小泉花陽", group:{"MuseUnit":1}},
+	{name:"μ’s2年生",     color:["#e99"], subtext:"高坂穂乃果<br>南ことり<br>園田海未", group:{"MuseUnit":1}},
+	{name:"μ’s3年生",     color:["#8e8"], subtext:"絢瀬絵里<br>東條希<br>矢澤にこ", group:{"MuseUnit":1}},
+	{name:"Printemps",      color:["#fce"], subtext:"高坂穂乃果<br>南ことり<br>小泉花陽", group:{"MuseUnit":1}},
+	{name:"BiBi",           color:["#ff9"], subtext:"絢瀬絵里<br>矢澤にこ<br>西木野真姫", group:{"MuseUnit":1}},
+	{name:"lily white",     color:["#cfc"], subtext:"園田海未<br>東條希<br>星空凛", group:{"MuseUnit":1}},
+	{name:"にこりんぱな",   color:["#ccf"], subtext:"矢澤にこ<br>星空凛<br>小泉花陽", group:{"MuseUnit":1}},
+	{name:"A-RISE",         color:["#fff"], subtext:"綺羅ツバサ<br>統堂英玲奈<br>優木あんじゅ", group:{"MuseUnit":1}},
+	{name:"スクフェススマイル組", namealt:"スクフェス<br>スマイル組", color:["#f9c"], subtext:"高坂穂乃果<br>星空凛<br>矢澤にこ", group:{"MuseUnit":1}},
+	{name:"スクフェスピュア組",   namealt:"スクフェス<br>ピュア組",   color:["#9fb"], subtext:"南ことり<br>東條希<br>小泉花陽", group:{"MuseUnit":1}},
+	{name:"スクフェスクール組",   namealt:"スクフェス<br>クール組",   color:["#9df"], subtext:"絢瀬絵里<br>園田海未<br>西木野真姫", group:{"MuseUnit":1}},
+
+	{name:"ほのえり",       color:[ColHono, ColEli ], group:{"MuseCP":1}},
+	{name:"ことほの",       color:[ColKoto, ColHono], group:{"MuseCP":1}},
+	{name:"ほのうみ",       color:[ColHono, ColUmi ], group:{"MuseCP":1}},
+	{name:"ほのりん",       color:[ColHono, ColRin ], group:{"MuseCP":1}},
+	{name:"ほのまき",       color:[ColHono, ColMaki], group:{"MuseCP":1}},
+	{name:"ほののぞ",       color:[ColHono, ColNozo], group:{"MuseCP":1}},
+	{name:"ほのぱな",       color:[ColHono, ColPana], group:{"MuseCP":1}},
+	{name:"ほのにこ",       color:[ColHono, ColNico], group:{"MuseCP":1}},
+	{name:"ことえり",       color:[ColKoto, ColEli ], group:{"MuseCP":1}},
+	{name:"えりうみ",       color:[ColEli , ColUmi ], group:{"MuseCP":1}},
+	{name:"えりりん",       color:[ColEli , ColRin ], group:{"MuseCP":1}},
+	{name:"えりまき",       color:[ColEli , ColMaki], group:{"MuseCP":1}},
+	{name:"のぞえり",       color:[ColNozo, ColEli ], group:{"MuseCP":1}},
+	{name:"えりぱな",       color:[ColEli , ColPana], group:{"MuseCP":1}},
+	{name:"にこえり",       color:[ColNico, ColEli ], group:{"MuseCP":1}},
+	{name:"ことうみ",       color:[ColKoto, ColUmi ], group:{"MuseCP":1}},
+	{name:"ことりん",       color:[ColKoto, ColRin ], group:{"MuseCP":1}},
+	{name:"ことまき",       color:[ColKoto, ColMaki], group:{"MuseCP":1}},
+	{name:"ことのぞ",       color:[ColKoto, ColNozo], group:{"MuseCP":1}},
+	{name:"ことぱな",       color:[ColKoto, ColPana], group:{"MuseCP":1}},
+	{name:"ことにこ",       color:[ColKoto, ColNico], group:{"MuseCP":1}},
+	{name:"うみりん",       color:[ColUmi , ColRin ], group:{"MuseCP":1}},
+	{name:"うみまき",       color:[ColUmi , ColMaki], group:{"MuseCP":1}},
+	{name:"のぞうみ",       color:[ColNozo, ColUmi ], group:{"MuseCP":1}},
+	{name:"うみぱな",       color:[ColUmi , ColPana], group:{"MuseCP":1}},
+	{name:"うみにこ",       color:[ColUmi , ColNico], group:{"MuseCP":1}},
+	{name:"りんまき",       color:[ColRin , ColMaki], group:{"MuseCP":1}},
+	{name:"のぞりん",       color:[ColNozo, ColRin ], group:{"MuseCP":1}},
+	{name:"りんぱな",       color:[ColRin , ColPana], group:{"MuseCP":1}},
+	{name:"にこりん",       color:[ColNico, ColRin ], group:{"MuseCP":1}},
+	{name:"のぞまき",       color:[ColNozo, ColMaki], group:{"MuseCP":1}},
+	{name:"まきぱな",       color:[ColMaki, ColPana], group:{"MuseCP":1}},
+	{name:"にこまき",       color:[ColNico, ColMaki], group:{"MuseCP":1}},
+	{name:"のぞぱな",       color:[ColNozo, ColPana], group:{"MuseCP":1}},
+	{name:"のぞにこ",       color:[ColNozo, ColNico], group:{"MuseCP":1}},
+	{name:"にこぱな",       color:[ColNico, ColPana], group:{"MuseCP":1}},
+
+	{name:"高海千歌",       color:[ColChik], group:{"Aqours":1}},
+	{name:"桜内梨子",       color:[ColRiko], group:{"Aqours":1}},
+	{name:"松浦果南",       color:[ColKana], group:{"Aqours":1}},
+	{name:"黒澤ダイヤ",     color:[ColDia ], group:{"Aqours":1}},
+	{name:"渡辺曜",         color:[ColYou ], group:{"Aqours":1}},
+	{name:"津島善子",       color:[ColYosi], group:{"Aqours":1}},
+	{name:"国木田花丸",     color:[ColMaru], group:{"Aqours":1}},
+	{name:"小原鞠莉",       color:[ColMari], group:{"Aqours":1}},
+	{name:"黒澤ルビィ",     color:[ColRuby], group:{"Aqours":1}},
+
+	{name:"鹿角理亞",       color:["#eee"], group:{"Aqours2":1}},
+	{name:"鹿角聖良",       color:["#adf"], group:{"Aqours2":1}},
+
+	{name:"千歌の母",       color:["#ddd"], group:{"Aqours3":1}},
+	{name:"梨子の母",       color:["#ddd"], group:{"Aqours3":1}},
+	{name:"善子の母",       color:["#ddd"], group:{"Aqours3":1}},
+	{name:"ダイヤの母",     color:["#ddd"], group:{"Aqours3":1}},
+	{name:"鞠莉の母",       color:["#ddd"], group:{"Aqours3":1}},
+	{name:"高海美渡",       color:["#ddd"], group:{"Aqours3":1}},
+	{name:"高海志満",       color:["#ddd"], group:{"Aqours3":1}},
+	{name:"よしみ",         color:["#ddd"], group:{"Aqours3":1}},
+	{name:"いつき",         color:["#ddd"], group:{"Aqours3":1}},
+	{name:"むつ",           color:["#ddd"], group:{"Aqours3":1}},
+	{name:"しいたけ",       color:["#ddd"], group:{"Aqours3":1}},
+	{name:"わたあめ",       color:["#ddd"], group:{"Aqours3":1}},
+	{name:"あんこ",         color:["#ddd"], subtext:"「ノクターン」<br>「ライラプス」", group:{"Aqours3":1}},
+	{name:"渡辺月",         color:["#ddd"], group:{"Aqours3":1}},
+
+	{name:"伊波杏樹",   subtext:"高海千歌 役",   color:[ColChik], group:{"AqoursCast":1}},
+	{name:"逢田梨香子", subtext:"桜内梨子 役",   color:[ColRiko], group:{"AqoursCast":1}},
+	{name:"諏訪ななか", subtext:"松浦果南 役",   color:[ColKana], group:{"AqoursCast":1}},
+	{name:"小宮有紗",   subtext:"黒澤ダイヤ 役", color:[ColDia ], group:{"AqoursCast":1}},
+	{name:"斉藤朱夏",   subtext:"渡辺曜 役",     color:[ColYou ], group:{"AqoursCast":1}},
+	{name:"小林愛香",   subtext:"津島善子 役",   color:[ColYosi], group:{"AqoursCast":1}},
+	{name:"高槻かなこ", subtext:"国木田花丸 役", color:[ColMaru], group:{"AqoursCast":1}},
+	{name:"鈴木愛奈",   subtext:"小原鞠莉 役",   color:[ColMari], group:{"AqoursCast":1}},
+	{name:"降幡愛",     subtext:"黒澤ルビィ 役", color:[ColRuby], group:{"AqoursCast":1}},
+
+	{name:"Aqours1年生",      color:["#ed9"], subtext:"国木田花丸<br>黒澤ルビィ<br>津島善子", group:{"AqoursUnit":1}},
+	{name:"Aqours2年生",      color:["#eaa"], subtext:"高海千歌<br>渡辺曜<br>桜内梨子", group:{"AqoursUnit":1}},
+	{name:"Aqours3年生",      color:["#9ec"], subtext:"黒澤ダイヤ<br>松浦果南<br>小原鞠莉", group:{"AqoursUnit":1}},
+	{name:"CYaRon!",          color:["#fc9"], subtext:"高海千歌<br>渡辺曜<br>黒澤ルビィ", group:{"AqoursUnit":1}},
+	{name:"AZALEA",           color:["#fbd"], subtext:"松浦果南<br>黒澤ダイヤ<br>国木田花丸", group:{"AqoursUnit":1}},
+	{name:"Guilty Kiss",      color:["#cae"], subtext:"桜内梨子<br>津島善子<br>小原鞠莉", group:{"AqoursUnit":1}},
+	{name:"ぐ〜りんぱ",       color:["#fec"], subtext:"高海千歌<br>黒澤ダイヤ<br>津島善子", group:{"AqoursUnit":1}},
+	{name:"わいわいわい",     color:["#cef"], subtext:"渡辺曜<br>津島善子<br>黒澤ルビィ", group:{"AqoursUnit":1}},
+	{name:"Saint Snow",       color:["#fff"], subtext:"鹿角理亞<br>鹿角聖良", group:{"AqoursUnit":1}},
+
+	{name:"ちかりこ",       color:[ColChik, ColRiko], group:{"AqoursCP":1}},
+	{name:"ちかなん",       color:[ColChik, ColKana], group:{"AqoursCP":1}},
+	{name:"ちかダイ",       color:[ColChik, ColDia ], group:{"AqoursCP":1}},
+	{name:"ようちか",       color:[ColYou , ColChik], group:{"AqoursCP":1}},
+	{name:"ちかよし",       color:[ColChik, ColYosi], group:{"AqoursCP":1}},
+	{name:"ちかまる",       color:[ColChik, ColMaru], group:{"AqoursCP":1}},
+	{name:"ちかまり",       color:[ColChik, ColMari], group:{"AqoursCP":1}},
+	{name:"ちかルビ",       color:[ColChik, ColRuby], group:{"AqoursCP":1}},
+	{name:"かなりこ",       color:[ColKana, ColRiko], group:{"AqoursCP":1}},
+	{name:"ダイりこ",       color:[ColDia , ColRiko], group:{"AqoursCP":1}},
+	{name:"ようりこ",       color:[ColYou , ColRiko], group:{"AqoursCP":1}},
+	{name:"よしりこ",       color:[ColYosi, ColRiko], group:{"AqoursCP":1}},
+	{name:"りこまる",       color:[ColRiko, ColMaru], group:{"AqoursCP":1}},
+	{name:"りこまり",       color:[ColRiko, ColMari], group:{"AqoursCP":1}},
+	{name:"りこルビ",       color:[ColRiko, ColRuby], group:{"AqoursCP":1}},
+	{name:"かなダイ",       color:[ColKana, ColDia ], group:{"AqoursCP":1}},
+	{name:"ようかな",       color:[ColYou , ColKana], group:{"AqoursCP":1}},
+	{name:"かなよし",       color:[ColKana, ColYosi], group:{"AqoursCP":1}},
+	{name:"かなまる",       color:[ColKana, ColMaru], group:{"AqoursCP":1}},
+	{name:"かなまり",       color:[ColKana, ColMari], group:{"AqoursCP":1}},
+	{name:"かなルビ",       color:[ColKana, ColRuby], group:{"AqoursCP":1}},
+	{name:"ようダイ",       color:[ColYou , ColDia ], group:{"AqoursCP":1}},
+	{name:"ダイよし",       color:[ColDia , ColYosi], group:{"AqoursCP":1}},
+	{name:"ダイまる",       color:[ColDia , ColMaru], group:{"AqoursCP":1}},
+	{name:"ダイマリ",       color:[ColDia , ColMari], group:{"AqoursCP":1}},
+	{name:"ダイルビ",       color:[ColDia , ColRuby], group:{"AqoursCP":1}},
+	{name:"ようよし",       color:[ColYou , ColYosi], group:{"AqoursCP":1}},
+	{name:"ようまる",       color:[ColYou , ColMaru], group:{"AqoursCP":1}},
+	{name:"ようまり",       color:[ColYou , ColMari], group:{"AqoursCP":1}},
+	{name:"ようルビ",       color:[ColYou , ColRuby], group:{"AqoursCP":1}},
+	{name:"よしまる",       color:[ColYosi, ColMaru], group:{"AqoursCP":1}},
+	{name:"よしまり",       color:[ColYosi, ColMari], group:{"AqoursCP":1}},
+	{name:"よしルビ",       color:[ColYosi, ColRuby], group:{"AqoursCP":1}},
+	{name:"まるまり",       color:[ColMaru, ColMari], group:{"AqoursCP":1}},
+	{name:"ルビまる",       color:[ColRuby, ColMaru], group:{"AqoursCP":1}},
+	{name:"ルビまり",       color:[ColRuby, ColMari], group:{"AqoursCP":1}},
+
+	{name:"上原歩夢",       color:[ColAyum], group:{"Niji":1}},
+	{name:"中須かすみ",     color:[ColKasu], group:{"Niji":1}},
+	{name:"桜坂しずく",     color:[ColShiz], group:{"Niji":1}},
+	{name:"朝香果林",       color:[ColKari], group:{"Niji":1}},
+	{name:"宮下愛",         color:[ColAi  ], group:{"Niji":1}},
+	{name:"近江彼方",       color:[ColKnta], group:{"Niji":1}},
+	{name:"優木せつ菜",     color:[ColSetu], group:{"Niji":1}},
+	{name:"エマ・ヴェルデ", color:[ColEmma], group:{"Niji":1}},
+	{name:"天王寺璃奈",     color:[ColRina], group:{"Niji":1}},
+
+	{name:"大西亜玖璃", subtext:"上原歩夢 役",   color:[ColAyum], group:{"NijiCast":1}},
+	{name:"相良茉優", subtext:"中須かすみ 役",   color:[ColKasu], group:{"NijiCast":1}},
+	{name:"前田佳織里", subtext:"桜坂しずく 役", color:[ColShiz], group:{"NijiCast":1}},
+	{name:"久保田未夢", subtext:"朝香果林 役",   color:[ColKari], group:{"NijiCast":1}},
+	{name:"村上奈津実", subtext:"宮下愛 役",     color:[ColAi  ], group:{"NijiCast":1}},
+	{name:"鬼頭明里",   subtext:"近江彼方 役",   color:[ColKnta], group:{"NijiCast":1}},
+	{name:"楠木ともり", subtext:"優木せつ菜 役", color:[ColSetu], group:{"NijiCast":1}},
+	{name:"指出毬亜",   subtext:"エマ・ヴェルデ 役", color:[ColEmma], group:{"NijiCast":1}},
+	{name:"田中ちえ美", subtext:"天王寺璃奈 役", color:[ColRina], group:{"NijiCast":1}},
+
+	{name:"虹ヶ咲学園1年生",  namealt:"虹ヶ咲学園<br>1年生",   color:["#ed9"], subtext:"中須かすみ<br>桜坂しずく<br>天王寺璃奈", group:{"NijiUnit":1}},
+	{name:"虹ヶ咲学園2年生",  namealt:"虹ヶ咲学園<br>2年生",   color:["#eaa"], subtext:"上原歩夢<br>宮下愛<br>優木せつ菜", group:{"NijiUnit":1}},
+	{name:"虹ヶ咲学園3年生",  namealt:"虹ヶ咲学園<br>3年生",   color:["#9ec"], subtext:"朝香果林<br>近江彼方<br>エマ・ヴェルデ", group:{"NijiUnit":1}},
+	{name:"スクフェス分室",     namealt:"スクフェス<br>分室", color:["#eee"], subtext:"桜坂しずく<br>近江彼方<br>エマ・ヴェルデ", group:{"NijiUnit":1}},
+	{name:"ファミ通App分室",    namealt:"ファミ通App<br>分室", color:["#eee"], subtext:"上原歩夢<br>宮下愛<br>天王寺璃奈", group:{"NijiUnit":1}},
+	{name:"電撃オンライン分室", namealt:"電撃オンライン<br>分室", color:["#eee"], subtext:"中須かすみ<br>朝香果林<br>優木せつ菜", group:{"NijiUnit":1}},
+	{name:"DivenDiva",        color:["#eee"], subtext:"宮下愛<br>朝香果林", group:{"NijiUnit":1}},
+	{name:"A・ZU・NA",        color:["#eee"], subtext:"上原歩夢<br>桜坂しずく<br>優木せつ菜", group:{"NijiUnit":1}},
+	{name:"QU4RTZ",           color:["#eee"], subtext:"中須かすみ<br>近江彼方<br>エマ・ヴェルデ<br>天王寺璃奈", group:{"NijiUnit":1}},
+	{name:"スクスタスマイル組", namealt:"スクスタ<br>スマイル組", color:["#f9c"], subtext:"宮下愛<br>近江彼方<br>天王寺璃奈", group:{"NijiUnit":1}},
+	{name:"スクスタピュア組",   namealt:"スクスタ<br>ピュア組",   color:["#9fb"], subtext:"上原歩夢<br>中須かすみ<br>エマ・ヴェルデ", group:{"NijiUnit":1}},
+	{name:"スクスタクール組",   namealt:"スクスタ<br>クール組",   color:["#9df"], subtext:"桜坂しずく<br>朝香果林<br>優木せつ菜", group:{"NijiUnit":1}},
+	{name:"お昼休み放送室",     namealt:"虹ヶ咲学園<br>お昼休み放送室", color:["#fcb"], subtext:"朝香果林<br>優木せつ菜<br>天王寺璃奈", group:{"NijiUnit":1}},
+
+	{name:"あゆかす",       color:[ColAyum, ColKasu], group:{"NijiCP":1}},
+	{name:"あゆしず",       color:[ColAyum, ColShiz], group:{"NijiCP":1}},
+	{name:"あゆかり",       color:[ColAyum, ColKari], group:{"NijiCP":1}},
+	{name:"あゆあい",       color:[ColAyum, ColAi  ], group:{"NijiCP":1}},
+	{name:"あゆかな",       color:[ColAyum, ColKnta], group:{"NijiCP":1}},
+	{name:"あゆせつ",       color:[ColAyum, ColSetu], group:{"NijiCP":1}},
+	{name:"あゆエマ",       color:[ColAyum, ColEmma], group:{"NijiCP":1}},
+	{name:"あゆりな",       color:[ColAyum, ColRina], group:{"NijiCP":1}},
+	{name:"しずかす",       color:[ColShiz, ColKasu], group:{"NijiCP":1}},
+	{name:"かすかり",       color:[ColKasu, ColKari], group:{"NijiCP":1}},
+	{name:"かすあい",       color:[ColKasu, ColAi  ], group:{"NijiCP":1}},
+	{name:"かすかな",       color:[ColKasu, ColKnta], group:{"NijiCP":1}},
+	{name:"せつかす",       color:[ColSetu, ColKasu], group:{"NijiCP":1}},
+	{name:"かすエマ",       color:[ColKasu, ColEmma], group:{"NijiCP":1}},
+	{name:"かすりな",       color:[ColKasu, ColRina], group:{"NijiCP":1}},
+	{name:"しずかり",       color:[ColShiz, ColKari], group:{"NijiCP":1}},
+	{name:"しずあい",       color:[ColShiz, ColAi  ], group:{"NijiCP":1}},
+	{name:"しずかな",       color:[ColShiz, ColKnta], group:{"NijiCP":1}},
+	{name:"しずせつ",       color:[ColShiz, ColSetu], group:{"NijiCP":1}},
+	{name:"しずエマ",       color:[ColShiz, ColEmma], group:{"NijiCP":1}},
+	{name:"しずりな",       color:[ColShiz, ColRina], group:{"NijiCP":1}},
+	{name:"かりあい",       color:[ColKari, ColAi  ], group:{"NijiCP":1}},
+	{name:"かりかな",       color:[ColKari, ColKnta], group:{"NijiCP":1}},
+	{name:"かりせつ",       color:[ColKari, ColSetu], group:{"NijiCP":1}},
+	{name:"かりエマ",       color:[ColKari, ColEmma], group:{"NijiCP":1}},
+	{name:"かりりな",       color:[ColKari, ColRina], group:{"NijiCP":1}},
+	{name:"あいかな",       color:[ColAi  , ColKnta], group:{"NijiCP":1}},
+	{name:"あいせつ",       color:[ColAi  , ColSetu], group:{"NijiCP":1}},
+	{name:"あいエマ",       color:[ColAi  , ColEmma], group:{"NijiCP":1}},
+	{name:"あいりな",       color:[ColAi  , ColRina], group:{"NijiCP":1}},
+	{name:"かなせつ",       color:[ColKnta, ColSetu], group:{"NijiCP":1}},
+	{name:"かなエマ",       color:[ColKnta, ColEmma], group:{"NijiCP":1}},
+	{name:"かなりな",       color:[ColKnta, ColRina], group:{"NijiCP":1}},
+	{name:"せつエマ",       color:[ColSetu, ColEmma], group:{"NijiCP":1}},
+	{name:"せつりな",       color:[ColSetu, ColRina], group:{"NijiCP":1}},
+	{name:"りなエマ",       color:[ColRina, ColEmma], group:{"NijiCP":1}},
+
+	{name:"桜坂しずく",    color:["#acf"], group:{"Seiran":1}},
+	{name:"一之瀬マリカ",  color:["#acf"], group:{"Seiran":1}},
+	{name:"永山みなみ",    color:["#acf"], group:{"Seiran":1}},
+	{name:"杉崎亜矢",      color:["#acf"], group:{"Seiran":1}},
+	{name:"鳥居歩美",      color:["#acf"], group:{"Seiran":1}},
+	{name:"九条聖来",      color:["#acf"], group:{"Seiran":1}},
+	{name:"田中さち子",    color:["#acf"], group:{"Seiran":1}},
+	{name:"篠宮あきる",    color:["#acf"], group:{"Seiran":1}},
+	{name:"藤城悠弓",      color:["#acf"], group:{"Seiran":1}},
+	{name:"宮下ココ",      color:["#fbb"], group:{"Shino":1}},
+	{name:"結城紗菜",      color:["#fbb"], group:{"Shino":1}},
+	{name:"クリスティーナ",color:["#fbb"], group:{"Shino":1}},
+	{name:"御堂優理",      color:["#fbb"], group:{"Shino":1}},
+	{name:"神谷理華",      color:["#fbb"], group:{"Shino":1}},
+	{name:"近江彼方",      color:["#fbb"], group:{"Shino":1}},
+	{name:"近江遥",        color:["#fbb"], group:{"Shino":1}},
+	{name:"支倉かさね",    color:["#fbb"], group:{"Shino":1}},
+	{name:"吉川瑞希",      color:["#fbb"], group:{"Shino":1}},
+	{name:"逢沢遊宇",      color:["#bda"], group:{"Chitose":1}},
+	{name:"西村文絵",      color:["#bda"], group:{"Chitose":1}},
+	{name:"菊池朱美",      color:["#bda"], group:{"Chitose":1}},
+	{name:"須田いるか",    color:["#bda"], group:{"Chitose":1}},
+	{name:"佐伯麗音",      color:["#bda"], group:{"Chitose":1}},
+	{name:"森嶋ななか",    color:["#bda"], group:{"Chitose":1}},
+	{name:"下園咲",        color:["#bda"], group:{"Chitose":1}},
+	{name:"多々良るう",    color:["#bda"], group:{"Chitose":1}},
+	{name:"白木凪",        color:["#bda"], group:{"Chitose":1}},
+	{name:"黒崎隼",        color:["#eda"], group:{"Touoh":1}},
+	{name:"門田剣",        color:["#eda"], group:{"Touoh":1}},
+	{name:"設楽ふみ",      color:["#eda"], group:{"Touoh":1}},
+	{name:"桐原優香",      color:["#eda"], group:{"Touoh":1}},
+	{name:"斉木風",        color:["#eda"], group:{"Touoh":1}},
+	{name:"紫藤美咲",      color:["#eda"], group:{"Touoh":1}},
+	{name:"綾小路姫乃",    color:["#eda"], group:{"Touoh":1}},
+	{name:"白瀬小雪",      color:["#eda"], group:{"Touoh":1}},
+	{name:"相川涼",        color:["#eda"], group:{"Touoh":1}},
+	{name:"坂巻千鶴子",    color:["#cae"], group:{"Shion":1}},
+	{name:"志賀仁美",      color:["#cae"], group:{"Shion":1}},
+	{name:"福原命",        color:["#cae"], group:{"Shion":1}},
+	{name:"鬼崎アキラ",    color:["#cae"], group:{"Shion":1}},
+	{name:"月島結架",      color:["#cae"], group:{"Shion":1}},
+	{name:"兵藤さゆり",    color:["#cae"], group:{"Shion":1}},
+	{name:"黒羽咲良",      color:["#cae"], group:{"Shion":1}},
+	{name:"黒羽咲夜",      color:["#cae"], group:{"Shion":1}},
+	{name:"高天原睦月",    color:["#cae"], group:{"Shion":1}},
+	{name:"蘭花",          color:["#dfb"], group:{"YG":1}},
+	{name:"ラクシャータ",  color:["#dfb"], group:{"YG":1}},
+	{name:"レベッカ",      color:["#dfb"], group:{"YG":1}},
+	{name:"イザベラ",      color:["#dfb"], group:{"YG":1}},
+	{name:"エマ・ヴェルデ",color:["#dfb"], group:{"YG":1}},
+	{name:"ジェニファー",  color:["#dfb"], group:{"YG":1}},
+	{name:"マリア",        color:["#dfb"], group:{"YG":1}},
+	{name:"レオ",          color:["#dfb"], group:{"YG":1}},
+	{name:"早乙女紫",      color:["#dfa"], group:{"YG":1}}
+];
+
+//■リストを変換する
+var Member = [];
+for(j=0; j<MemberGroup.length; j++){
+	Member[j] = [];
+}
+
+for(i=0; i<CharList.length; i++){
+	obj = CharList[i];
+	for(j=0; j<MemberGroup.length; j++){
+		for(k=0; k<MemberGroup[j][2].length; k++){
+			if(MemberGroup[j][2][k] in obj.group){
+				Member[j].push(i);
+				break;
+			}
+		}
+	}
+}
+//シャッフルもしておく
+for(i=0; i<MemberGroup.length; i++){
+	shuffle(Member[i]);
+}
+
+//*********************************************************
+
+var lstMember = new Array();
+var parent = new Array();
+var equal = new Array();
+var rec = new Array();
+var cmp1,cmp2;
+var head1,head2;
+var nrec;
+
+var numQuestion;
+var totalSize;
+var finishSize;
+var finishFlag;
+var SortingGroup;
+
+//変数の初期化+++++++++++++++++++++++++++++++++++++++++++++
+function initList(){
+	if(document.starter.CharacterSelect.selectedIndex == 0){ return;} //「選択してください」の場合は無し
+	
+	SortingGroup = document.starter.CharacterSelect.selectedIndex-1;
+	var n = 0;
+	var mid;
+	var i;
+	
+	lstMember = new Array();
+	parent = new Array();
+	equal = new Array();
+	rec = new Array();
+	cmp1,cmp2;
+	head1,head2;
+	nrec;
+
+	numQuestion;
+	totalSize;
+	finishSize;
+	finishFlag;
+
+	//ソートすべき配列
+	lstMember[n] = new Array();
+	for (i=0; i<Member[SortingGroup].length; i++) {
+		lstMember[n][i] = i;
+	}
+	
+	parent[n] = -1;
+	totalSize = 0;
+	n++;
+
+	for (i=0; i<lstMember.length; i++) {
+		//要素数が２以上なら２分割し、
+		//分割された配列をlstMemberの最後に加える
+		if(lstMember[i].length>=2) {
+			mid = Math.ceil(lstMember[i].length/2);
+			lstMember[n] = new Array();
+			lstMember[n] = lstMember[i].slice(0,mid);
+			totalSize += lstMember[n].length;
+			parent[n] = i;
+			n++;
+			lstMember[n] = new Array();
+			lstMember[n] = lstMember[i].slice(mid,lstMember[i].length);
+			totalSize += lstMember[n].length;
+			parent[n] = i;
+			n++;
+		}
+	}
+
+	//保存用配列
+	for (i=0; i<Member[SortingGroup].length; i++) {
+		rec[i] = 0;
+	}
+	nrec = 0;
+
+	//引き分けの結果を保存するリスト
+	//キー：リンク始点の値
+	// 値 ：リンク終点の値
+	for (i=0; i<=Member[SortingGroup].length; i++) {
+		equal[i] = -1;
+	}
+
+	cmp1 = lstMember.length-2;
+	cmp2 = lstMember.length-1;
+	head1 = 0;
+	head2 = 0;
+	numQuestion = 1;
+	finishSize = 0;
+	finishFlag = 0;
+
+	showImage();
+}
+
+//リストのソート+++++++++++++++++++++++++++++++++++++++++++
+//flag：比較結果
+//  -1：左を選択
+//   0：引き分け
+//   1：右を選択
+function sortList(flag){
+	var i;
+	var str;
+
+	//recに保存
+	if (flag<0) {
+		rec[nrec] = lstMember[cmp1][head1];
+		head1++;
+		nrec++;
+		finishSize++;
+		while (equal[rec[nrec-1]]!=-1) {
+			rec[nrec] = lstMember[cmp1][head1];
+			head1++;
+			nrec++;
+			finishSize++;
+		}
+	}
+	else if (flag>0) {
+		rec[nrec] = lstMember[cmp2][head2];
+		head2++;
+		nrec++;
+		finishSize++;
+		while (equal[rec[nrec-1]]!=-1) {
+			rec[nrec] = lstMember[cmp2][head2];
+			head2++;
+			nrec++;
+			finishSize++;
+		}
+	}
+	else {
+		rec[nrec] = lstMember[cmp1][head1];
+		head1++;
+		nrec++;
+		finishSize++;
+		while (equal[rec[nrec-1]]!=-1) {
+			rec[nrec] = lstMember[cmp1][head1];
+			head1++;
+			nrec++;
+			finishSize++;
+		}
+		equal[rec[nrec-1]] = lstMember[cmp2][head2];
+		rec[nrec] = lstMember[cmp2][head2];
+		head2++;
+		nrec++;
+		finishSize++;
+		while (equal[rec[nrec-1]]!=-1) {
+			rec[nrec] = lstMember[cmp2][head2];
+			head2++;
+			nrec++;
+			finishSize++;
+		}
+	}
+
+	//片方のリストを走査し終えた後の処理
+	if (head1<lstMember[cmp1].length && head2==lstMember[cmp2].length) {
+		//リストcmp2が走査済 - リストcmp1の残りをコピー
+		while (head1<lstMember[cmp1].length){
+			rec[nrec] = lstMember[cmp1][head1];
+			head1++;
+			nrec++;
+			finishSize++;
+		}
+	}
+	else if (head1==lstMember[cmp1].length && head2<lstMember[cmp2].length) {
+		//リストcmp1が走査済 - リストcmp2の残りをコピー
+		while (head2<lstMember[cmp2].length){
+			rec[nrec] = lstMember[cmp2][head2];
+			head2++;
+			nrec++;
+			finishSize++;
+		}
+	}
+
+	//両方のリストの最後に到達した場合は
+	//親リストを更新する
+	if (head1==lstMember[cmp1].length && head2==lstMember[cmp2].length) {
+		for (i=0; i<lstMember[cmp1].length+lstMember[cmp2].length; i++) {
+			lstMember[parent[cmp1]][i] = rec[i];
+		}
+		lstMember.pop();
+		lstMember.pop();
+		cmp1 = cmp1-2;
+		cmp2 = cmp2-2;
+		head1 = 0;
+		head2 = 0;
+
+		//新しい比較を行う前にrecを初期化
+		if (head1==0 && head2==0) {
+			for (i=0; i<Member.length; i++) {
+				rec[i] = 0;
+			}
+			nrec = 0;
+		}
+	}
+
+	if (cmp1<0) {
+		str = "Battle No."+(numQuestion-1)+"<br>"+Math.floor(finishSize*100/totalSize)+"% sorted.";
+		document.getElementById("battleNumber").innerHTML = str;
+
+		showResult();
+		finishFlag = 1;
+	}
+	else {
+		showImage();
+	}
+}
+
+//結果の表示+++++++++++++++++++++++++++++++++++++++++++++++
+function showResult() {
+	var ranking = 1;
+	var sameRank = 1;
+	var str = "";
+	var num = 0;
+	var temp0 = MemberGroup[document.starter.CharacterSelect.selectedIndex-1][1] + " をソートしたよ！\n";
+	var temp1 = 7;
+	var i;
+	//ヘッダー
+	str += '<table class="resultTable" align="center"><tr>'
+	+ '<td class="result"; style="text-align:center;">順位<\/td>'
+	+ '<td class="result"; style="text-align:center;">名前<\/td><\/tr>';
+
+	for (i=0; i<Member[SortingGroup].length; i++) {
+		num = Member[SortingGroup][lstMember[0][i]];
+		str += 
+		'<tr><td class="result"; style="background-color:'
+		+ ('coloralt' in CharList[num] ? CharList[num].coloralt : CharList[num].color[0])
+		+ '; text-align:right; padding-right:5px;">' +ranking+ '<\/td>'
+		+ '<td class="result"; style="background-color:'
+		+ ('coloralt' in CharList[num] ? CharList[num].coloralt : CharList[num].color[CharList[num].color.length-1])
+		+ '; padding-left:5px;">' + CharList[num].name + '<\/td><\/tr>';
+		
+		if(temp1 > 0){
+			temp0 += ranking + "位 " + CharList[num].name + "\n";
+			temp1--;
+		}
+
+		if (i<Member[SortingGroup].length-1) {
+			if (equal[lstMember[0][i]]==lstMember[0][i+1]) {
+				sameRank++;
+			} else {
+				ranking += sameRank;
+				sameRank = 1;
+			}
+		}
+	}
+	//ツイート用
+	
+	str += '<\/table><button id="tweet-button" onclick="window.open().location.href=' + "'"
+	+ 'https://twitter.com/share?url=https://ratius.github.io/lovelivesort/&text='
+	+ encodeURIComponent(temp0 + "#ラブライブなんでもソート")
+	+ '&count=none&lang=ja'
+	+ "'" + '">結果をツイート<\/\button>';
+	
+
+	document.getElementById("resultField").innerHTML = str;
+}
+
+//比較する２つ要素の表示+++++++++++++++++++++++++++++++++++
+function showImage() {
+	var str0 = "Battle No."+numQuestion+"<br>"+Math.floor(finishSize*100/totalSize)+"% sorted.";
+	var str1 = Member[SortingGroup][lstMember[cmp1][head1]];
+	var str2 = Member[SortingGroup][lstMember[cmp2][head2]];
+	var temp = "";
+	var temp2 = 0;
+	
+	document.getElementById("battleNumber").innerHTML = str0;
+	
+	temp = "";
+	temp2 = 100/CharList[str1].color.length;
+	for(i=0; i<CharList[str1].color.length; i++){
+		temp += '<div class="CPcolor" style="background-color:' + CharList[str1].color[i]
+		+ '; left: ' + (i*temp2) + '%; width: ' + temp2 + '%"><\/div>';
+	}
+	temp += '<div class="ShownText"><b>'
+	+ ('namealt' in CharList[str1] ? CharList[str1].namealt : CharList[str1].name) + '<\/b>'
+	+ ('subtext' in CharList[str1] ? '<br><div class="note">'+ CharList[str1].subtext +'<\/div>' : "") + '<\/div>';
+	document.getElementById("leftField").innerHTML = temp;
+
+	temp = "";
+	temp2 = 100/CharList[str2].color.length;
+	for(i=0; i<CharList[str2].color.length; i++){
+		temp += '<div class="CPcolor" style="background-color:' + CharList[str2].color[i]
+		+ '; left: ' + (i*temp2) + '%; width: ' + temp2 + '%"><\/div>';
+	}
+	temp += '<div class="ShownText"><b>'
+	+ ('namealt' in CharList[str2] ? CharList[str2].namealt : CharList[str2].name) + '<\/b>'
+	+ ('subtext' in CharList[str2] ? '<br><div class="note">'+ CharList[str2].subtext +'<\/div>' : "") + '<\/div>';
+	document.getElementById("rightField").innerHTML = temp;
+
+
+
+	
+	numQuestion++;
+}
+
+//項目をシャッフル
+function shuffle(array) {
+  var n = array.length, t, i;
+
+  while (n) {
+    i = Math.floor(Math.random() * n--);
+    t = array[n];
+    array[n] = array[i];
+    array[i] = t;
+  }
+
+  return array;
+}
+--></script>
+<link rel="stylesheet" href="main.css">
+<style type="text/css">
+<!--
+/**********************************************************
+
+ 表のスタイルを変更する場合はここを編集してください。
+
+**********************************************************/
+body {
+	background-color: #eee;
+}
+
+#mainTable{
+	font-size: 16px;
+	font-family: 'ＭＳ Ｐゴシック',sans-serif;
+	text-align: center;
+	vertical-align: middle;
+	width: 440px;
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: separate;
+	border-spacing: 10px 5px;
+	border:1px solid #e4007f;
+	background-color: #eee;
+}
+#leftField, #rightField{
+	position: relative;
+	width: 130px;
+	height: 150px;
+	border:1px solid #aaa;
+}
+
+.middleField{
+	width: 130px;
+	height: 70px;
+	border:1px solid #aaa;
+	background-color: #e4e4e4;
+}
+
+.CPcolor{
+	position: absolute;
+	top: 0px;
+	height: 152px;
+	border:none;
+	z-index: 2;
+}
+.result{
+	border:1px solid #e4007f;
+}
+
+.resultTable{
+	width: 200px;
+	font-size:12px;
+	line-height:120%;
+	margin: 10px auto;
+	border:1px solid #ccc;
+	border-collapse:collapse;
+}
+
+.ShownText{
+	position: relative;
+	width: 100%;
+	z-index: 2;
+}
+
+.note{
+	font-size: small;
+	width: 100%;
+	margin: 10px 0px;
+}
+
+#tweet-button{
+	width: auto;
+	margin: auto;
+	padding: 4px 10px;
+	background-color: #20a1f0;
+	border-radius: 5px;
+	color: white;
+	font-size: 120%;
+}
+
+//-->
+</style>
+</head>
+
+<body>
+<div style="text-align:center;">
+	<img src="logo.png" width="600" height="120" alt="キャラソート！">
+
+<script><!--
+document.write('<form name="starter"><select name="CharacterSelect" onchange="initList()"><option selected>▼ソート対象を選択<\/option>');
+
+for(i=0; i<MemberGroup.length; i++){
+	document.write("<option>" + MemberGroup[i][0] + MemberGroup[i][1] + " (" + Member[i].length + ")<\/option>");
+}
+document.write('<\/select><\/form>');
+--></script>
+
+<table id="mainTable">
+	<tr>
+		<td id="battleNumber" colspan="3" style="height: 30px; padding-bottom: 10px;">
+		</td>
+	</tr>
+	<tr>
+		<td id="leftField" onClick="if(finishFlag==0)sortList(-1);" rowspan="2">
+			<span id="leftField2" style="z-index:2;"></span>
+		</td>
+
+		<td class="middleField" onClick="if(finishFlag==0)sortList(0);">
+
+			引き分け
+		</td>
+		<td id="rightField" onClick="if(finishFlag==0)sortList(1);" rowspan="2">
+			<span id="rightField2" style="z-index:2;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="middleField" onClick="if(finishFlag==0)sortList(0);">
+
+			どっちも興味無い
+		</td>
+
+	</tr>
+</table>
+<div id="resultField">
+<p>
+	「ラブライブ!」シリーズの色々なものをソートできます。<br>
+	上のプルダウンメニューからソートしたい対象を選んだ後、<br>
+	より好きなキャラの名前をクリックしていってください。
+</p>
+<p>
+	最後に、あなたの好きなキャラのランキングがずらーっと出ます。<br>
+	「結果をツイート」ボタンを押すとツイートできます。
+</p>
+<p>
+	【注意】ソート対象の要素数が20以上のものは、結果が出るまでに時間がかかります。暇な時にどうぞ。<br>
+	下位だと思ったもの同士の比較は中央（引き分けorどっちも興味無い）を押すことで時間短縮可能です。
+</p>
+<p>
+	要望・不具合報告は <a href="https://twitter.com/ratius55">@ratius55 のTwitter</a>までどうぞ。
+</p>
+<h3 class="niji">更新履歴</h3>
+<table class="history" style="margin: auto;">
+<tbody>
+<tr>
+	<td>2019/09/24</td>
+	<td><span class="fix"></span>環境によってレイアウトが崩れる場合があったのを修正</td>
+</tr>
+<tr>
+	<td>2019/07/06</td>
+	<td><span class="new"></span>「μ’sキャスト」「Aqoursキャスト」「虹ヶ咲キャスト」モードを追加</td>
+</tr>
+<tr>
+	<td>2019/07/05</td>
+	<td><span class="new"></span>結果をツイートする機能を追加<br>
+		<span class="new"></span>「虹ヶ咲ユニット」「虹ヶ咲カップリング」モードを追加</td>
+</tr>
+<tr>
+	<td>2018/10/17</td>
+	<td><span class="new"></span>「μ’sユニット」「Aqoursユニット」モードを追加</td>
+</tr>
+<tr>
+	<td>2018/09/22</td>
+	<td><span class="new"></span>「μ’sカップリング」「Aqoursカップリング」モードを追加</td>
+</tr>
+<tr>
+	<td>2018/02/26</td>
+	<td><span class="fix"></span>穂乃果の父、女性シンガー、saint snowを追加（実装忘れ）</td>
+</tr>
+<tr>
+	<td>2018/02/25</td>
+	<td><span class="new"></span>公開</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</body>
+</html>
