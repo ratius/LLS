@@ -111,6 +111,8 @@ td:hover .tool-tip {
 .Rina    { background-color: rgb(208, 206, 225);}
 --></style>
 <script><!--
+var RawCardList = [];
+
 //CSVファイルを読み込む関数getCSV()の定義
 function getCSV(){
     var req = new XMLHttpRequest(); // HTTPでファイルを読み込むためのXMLHttpRrequestオブジェクトを生成
@@ -131,7 +133,7 @@ function convertCSVtoArray(str){ // 読み込んだCSVデータが文字列と�
     for(var i=0;i<tmp.length;++i){
         result[i] = tmp[i].split(',');
     }
-    alert(result[1][2]);
+     RawCardList = result;
 }
 getCSV();
 
