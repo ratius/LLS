@@ -131,9 +131,8 @@ function convertCSVtoArray(str){ // 読み込んだCSVデータが文字列と�
     for(var i=0;i<tmp.length;++i){
         result[i] = tmp[i].split(',');
     }
-    return result;
+    alert(result[1][2]);
 }
-const RawCardList = result;
 getCSV();
 
 const CharId = [
