@@ -133,7 +133,11 @@ function convertCSVtoArray(str){ // 読み込んだCSVデータが文字列と�
     for(var i=0;i<tmp.length;++i){
         result[i] = tmp[i].split(',');
     }
-     RawCardList = result;
+    RawCardList = result;
+    document.getElementById("MainArea").innerHTML =
+	DrawTable(ListMuse)
+	+ DrawTable(ListAqours)
+	+ DrawTable(ListNiji);
 }
 getCSV();
 
@@ -304,16 +308,6 @@ function DrawTable(group){
 	お手数ですが、JavaScriptの実行を許可した上でページを読み込み直してください。<br>
 	</div>
 </div>
-
-<script><!--
-
-
-document.getElementById("MainArea").innerHTML =
-DrawTable(ListMuse)
-+ DrawTable(ListAqours)
-+ DrawTable(ListNiji);
---></script>
-
 
 </body>
 </html>
