@@ -134,6 +134,16 @@ function convertCSVtoArray(str){ // 読み込んだCSVデータが文字列と�
         result[i] = tmp[i].split(',');
     }
     RawCardList = result;
+    var CardList = new Array(NumberOfCharacter * 2);
+	for(i=0; i<NumberOfCharacter * 2; i++) {
+		CardList[i] = new Array();
+	}
+	for(i=0; i<RawCardList.length; i++) {
+		var key = CharId.indexOf(RawCardList[i].name); // キャラ番号を確認
+		if(RawCardList[i].rare == 'SR') { key += NumberOfCharacter;}
+		CardList[key].push(RawCardList[i]);
+	}
+
     document.getElementById("MainArea").innerHTML =
 	DrawTable(ListMuse)
 	+ DrawTable(ListAqours)
@@ -156,16 +166,6 @@ const ListNiji = [18,19,20,21,22,23,24,25,26];
 const ToolTipSource = {'gacha':'特効', 'reward':'報酬', 'fes':'フェス', 'none':'非イベ'};
 const NumberOfCharacter = 27;
 
-// ■生データから新たなデータを作成
-var CardList = new Array(NumberOfCharacter * 2);
-for(i=0; i<NumberOfCharacter * 2; i++) {
-	CardList[i] = new Array();
-}
-for(i=0; i<RawCardList.length; i++) {
-	var key = CharId.indexOf(RawCardList[i].name); // キャラ番号を確認
-	if(RawCardList[i].rare == 'SR') { key += NumberOfCharacter;}
-	CardList[key].push(RawCardList[i]);
-}
 
 // ■テーブルを作るための関数
 function DrawTable(group){
