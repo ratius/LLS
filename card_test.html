@@ -140,7 +140,7 @@ function convertCSVtoArray(str){ // 読み込んだCSVデータが文字列と�
 	}
 	for(i=0; i<RawCardList.length; i++) {
 		var key = CharId.indexOf(RawCardList[i].name); // キャラ番号を確認
-		if(RawCardList[i].rare == 'SR') { key += NumberOfCharacter;}
+		if(RawCardList[i][2] == 'SR') { key += NumberOfCharacter;}
 		CardList[key].push(RawCardList[i]);
 	}
 
@@ -192,20 +192,20 @@ function DrawTable(group){
 		for(x=0; x<group.length; x++){
 			if(y < CardList[group[x] + z*NumberOfCharacter].length){ //あるならば
 				ListTmp = CardList[group[x] + z*NumberOfCharacter][y]
-				if(ListTmp.source == 'none'){
-					ToolTipTmp = '「' + ListTmp.desc + '」で追加';
-				}else if(ListTmp.source == 'gacha'){
-					ToolTipTmp = '「' + ListTmp.desc + 'ガチャ」で追加';
-				}else if(ListTmp.source == 'reward'){
-					ToolTipTmp = 'イベント「' + ListTmp.desc + '」報酬';
+				if(ListTmp[4] == 'none'){
+					ToolTipTmp = '「' + ListTmp[5] + '」で追加';
+				}else if(ListTmp[4] == 'gacha'){
+					ToolTipTmp = '「' + ListTmp[5] + 'ガチャ」で追加';
+				}else if(ListTmp[4] == 'reward'){
+					ToolTipTmp = 'イベント「' + ListTmp[5] + '」報酬';
 				}
-				if(ListTmp.cn1 && ListTmp.cn2){
-					ToolTipTmp += '&#10;覚醒前：' + ListTmp.cn1 + '&#10;覚醒後：' + ListTmp.cn2 ;
+				if(ListTmp[6] && ListTmp[7]){
+					ToolTipTmp += '&#10;覚醒前：' + ListTmp[6] + '&#10;覚醒後：' + ListTmp[7] ;
 				}
 			
-				OutputTmp += '<td class="' + ListTmp.source + '" title="' + ToolTipTmp + '">'
-				+ '<strong>' + ToolTipSource[ListTmp.source] + '</strong>'
-				+ ' #' + ListTmp.id + '<br>' + ListTmp.date + '</td>\n';
+				OutputTmp += '<td class="' + ListTmp[4] + '" title="' + ToolTipTmp + '">'
+				+ '<strong>' + ToolTipSource[ListTmp[4]] + '</strong>'
+				+ ' #' + ListTmp[2] + '<br>' + ListTmp[3] + '</td>\n';
 			}else{
 				OutputTmp += '<td></td>\n';
 				blank++;
