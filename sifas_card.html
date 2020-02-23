@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>スクスタALL STARS カード追加順</title>
+<link rel="stylesheet" href="main.css">
+<style><!--
+
+table.cardlist {
+	text-align: center;
+}
+
+.card-box {
+	width: 100%;
+	overflow-x: auto;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+}
+
+.cardlist { min-width: 1080px;}
+
+.cardlist tr.header-top th {
+	height: 32px;
+	padding: 6px 0 0 0;
+	border-radius: 20px 20px 0 0;
+}
+
+.cardlist tbody th {
+	padding: 3px;
+	font-size: 80%;
+	line-height: 150%;
+}
+
+.cardlist td {
+	position: relative;
+	width: 100px;
+	padding: 3px;
+	font-size: 80%;
+}
+
+.shadowname {
+	color: white;
+	filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
+}
+
+.tool-tip {
+	display: none;
+	position: absolute;
+	left: -8em;
+	top: 2.5em;
+	z-index: 100;
+	padding: 0.5em;
+	color: white;
+	font-size: 80%;
+	text-align: left;
+	background: #957;
+	border-radius: 0.5em;
+}
+
+td:hover .tool-tip {
+  display: block;
+}
+
+
+.UR {
+	background-image: url(img/UR.png);
+	background-size: 100% 100%;
+}
+
+.SR {
+	background-color: #ccc;
+}
+
+.cap { font-size: 120%; }
+.sleep { color: #999; }
+
+.gacha  { background-color: #9df; }
+.reward { background-color: #9bf; }
+.fes    { background-color: #fac; }
+.none, .release { background-color: #ddd; }
+
+.Honoka  { background-color: rgb(255, 163, 054);}
+.Eli     { background-color: rgb(122, 238, 255);}
+.Kotori  { background-color: rgb(206, 191, 191);}
+.Umi     { background-color: rgb(023, 105, 255);}
+.Rin     { background-color: rgb(219, 212, 030);}
+.Maki    { background-color: rgb(255, 080, 062);}
+.Nozomi  { background-color: rgb(196, 085, 246);}
+.Hanayo  { background-color: rgb(106, 230, 115);}
+.Nico    { background-color: rgb(255, 079, 145);}
+
+.Chika   { background-color: rgb(255, 149, 071);}
+.Riko    { background-color: rgb(255, 158, 172);}
+.Kanan   { background-color: rgb(039, 193, 183);}
+.Dia     { background-color: rgb(219, 008, 057);}
+.You     { background-color: rgb(102, 192, 255);}
+.Yoshiko { background-color: rgb(193, 202, 212);}
+.Hanamaru{ background-color: rgb(255, 208, 016);}
+.Mari    { background-color: rgb(194, 082, 198);}
+.Ruby    { background-color: rgb(255, 111, 190);}
+
+.Ayumu   { background-color: rgb(255, 191, 224);}
+.Kasumi  { background-color: rgb(213, 222, 112);}
+.Shizuku { background-color: rgb(187, 237, 255);}
+.Karin   { background-color: rgb(074, 047, 237);}
+.Ai      { background-color: rgb(255, 130, 070);}
+.Kanata  { background-color: rgb(190, 130, 255);}
+.Setsuna { background-color: rgb(246, 014, 014);}
+.Emma    { background-color: rgb(143, 218, 121); font-size: 80%;}
+.Rina    { background-color: rgb(208, 206, 225);}
+--></style>
+<script><!--
+
+const CharId = [
+	'Honoka', 'Eli', 'Kotori', 'Umi', 'Rin', 'Maki', 'Nozomi', 'Hanayo', 'Nico',
+	'Chika', 'Riko', 'Kanan', 'Dia', 'You', 'Yoshiko', 'Hanamaru', 'Mari', 'Ruby',
+	'Ayumu', 'Kasumi', 'Shizuku', 'Karin', 'Ai', 'Kanata', 'Setsuna', 'Emma', 'Rina'
+];
+const CharName = [
+	'高坂 穂乃果', '絢瀬 絵里', '南 ことり', '園田 海未', '星空 凛', '西木野 真姫', '東條 希', '小泉 花陽', '矢澤 にこ',
+	'高海 千歌', '桜内 梨子', '松浦 果南', '黒澤 ダイヤ', '渡辺 曜', '津島 善子', '国木田 花丸', '小原 鞠莉', '黒澤 ルビィ',
+	'上原 歩夢', '中須 かすみ', '桜坂 しずく', '朝香 果林', '宮下 愛', '近江 彼方', '優木 せつ菜', 'エマ・ヴェルデ', '天王寺 璃奈'
+];
+const ListMuse = [0,1,2,3,4,5,6,7,8];
+const ListAqours = [9,10,11,12,13,14,15,16,17];
+const ListNiji = [18,19,20,21,22,23,24,25,26];
+const ToolTipSource = {'gacha':'特効', 'reward':'報酬', 'fes':'フェス', 'none':'非イベ', 'release':'初期'};
+const NumberOfCharacter = 27;
+
+// ■生データから新たなデータを作成
+function LoadRawData(){
+	CardList = new Array(NumberOfCharacter * 2);
+	for(i=0; i<NumberOfCharacter * 2; i++) {
+		CardList[i] = new Array();
+	}
+	for(i=0; i<RawCardList.length; i++) {
+		if(CharId.indexOf(RawCardList[i].name) == -1){break;} //存在しなければ飛ばす
+		var key = CharId.indexOf(RawCardList[i].name); // キャラ番号を確認
+		if(RawCardList[i].rare == 'SR') { key += NumberOfCharacter;}
+		CardList[key].push(RawCardList[i]);
+	}
+}
+
+// ■テーブルを作るための関数
+function DrawTable(group){
+	var Output = '<div class="card-box">\n<table class="cardlist">\n';
+
+	//■ヘッダー
+	Output += '<thead>\n<tr class="header-top">\n<th></th>\n';
+	for(x=0; x<group.length; x++){
+		Output += '<th class="' + CharId[group[x]] + '"><strong class="shadowname">'
+		+ CharName[group[x]] + '</strong></th>\n';
+	}
+
+	Output += '</tr>\n</thead>\n<tbody>\n';
+	var y=0;
+	var z=0;
+
+	//■メイン
+	while(z<=1){
+		Rarity = ['UR','SR'][z];
+		OutputTmp = '';
+		blank = 0; //仕込み
+		OutputTmp += '<tr><th class="' + Rarity +'"><span class="cap">' + Rarity + (y+1) + '枚目</span></th>\n';
+		
+		for(x=0; x<group.length; x++){
+			if(y < CardList[group[x] + z*NumberOfCharacter].length){ //あるならば
+				ListTmp = CardList[group[x] + z*NumberOfCharacter][y]
+				ToolTipTmp = ListTmp.desc;
+				
+				if(ListTmp.cn1 && ListTmp.cn2){ //覚醒前後がきちんと出ていれば
+					ToolTipTmp += '&#10;覚醒前：' + ListTmp.cn1 + '&#10;覚醒後：' + ListTmp.cn2 ;
+				} else {
+					console.log("[データ不備] " + ListTmp.id + "番の覚醒前/覚醒後カード名が設定されていません");
+				}
+			
+				OutputTmp += '<td class="' + ListTmp.source + '" title="' + ToolTipTmp + '">'
+				+ '<strong>' + ToolTipSource[ListTmp.source] + '</strong>'
+				+ ' #' + ListTmp.id + '<br>' + ListTmp.date + '</td>\n';
+			}else{
+				OutputTmp += '<td></td>\n';
+				blank++;
+			}
+		}
+		if(blank == group.length || y >= 30){ //全部が空マスか、リストが長くなりすぎたら中断
+			y=0;
+			z++;
+		} else { 
+			y++;
+			Output += OutputTmp;
+		}
+	}
+	Output += '</tbody>\n</table>\n</div>\n';
+	return Output;
+}
+
+--></script>
+
+</head>
+
+<body>
+
+<div id="MainArea">
+	<div style="text-align:center; margin-top: 40px;">
+	<span style="font-size: 150%; font-weight: bold;">よみこみちゅう…</span><br>
+	このコンテンツはJavaScriptを使用しています。<br>
+	いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
+	お手数ですが、JavaScriptの実行を許可した上でページを読み込み直してください。<br>
+	</div>
+</div>
+
+<script><!--
+
+function loadScript(src, callback) {
+    var done = false;
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.src = src;
+    head.appendChild(script);
+    // Attach handlers for all browsers
+    script.onload = script.onreadystatechange = function() {
+        if ( !done && (!this.readyState ||
+                this.readyState === "loaded" || this.readyState === "complete") ) {
+            done = true;
+            callback();
+            // Handle memory leak in IE
+            script.onload = script.onreadystatechange = null;
+            if ( head && script.parentNode ) {
+                head.removeChild( script );
+            }
+        }
+    };
+}
+
+loadScript("data/cards.js", function() {
+	var CardList = [];
+	LoadRawData();
+	xx=1;
+
+	document.getElementById("MainArea").innerHTML =
+	  '<h3 style="background-color:#ddd; color:#777; border-color:#999;">まえがき<\/h3>'
+	+ '<p>スクフェスALL STARSにおける、UR・SRの追加日時のまとめです。<br>PCで閲覧している場合、セルをポイントすることで詳しい情報のツールチップが出現します。</p>'
+	+ '<h3 class="muse">μ’s</h3>'
+	+ DrawTable(ListMuse)
+	+ '<h3 class="aqours">Aqours</h3>'
+	+ DrawTable(ListAqours)
+	+ '<h3 class="niji">ニジガク</h3>'
+	+ DrawTable(ListNiji);
+});
+
+
+--></script>
+
+
+</body>
+</html>
