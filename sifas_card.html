@@ -62,12 +62,11 @@ td:hover .tool-tip {
 }
 
 
-.UR {
+.UR > th {
 	background-image: url(img/UR.png);
 	background-size: 100% 100%;
 }
-
-.SR {
+.SR > th {
 	background-color: #ccc;
 }
 
@@ -161,7 +160,7 @@ function DrawTable(group){
 		Rarity = ['UR','SR'][z];
 		OutputTmp = '';
 		blank = 0; //仕込み
-		OutputTmp += '<tr><th class="' + Rarity +'"><span class="cap">' + Rarity + (y+1) + '枚目</span></th>\n';
+		OutputTmp += '<tr class="' + Rarity +'"><th><span class="cap">' + Rarity + (y+1) + '枚目</span></th>\n';
 		
 		for(x=0; x<group.length; x++){
 			if(y < CardList[group[x] + z*NumberOfCharacter].length){ //あるならば
@@ -239,7 +238,7 @@ loadScript("data/cards.js", function() {
 
 	document.getElementById("MainArea").innerHTML =
 	  '<h3 style="background-color:#ddd; color:#777; border-color:#999;">まえがき<\/h3>'
-	+ '<p>スクフェスALL STARSにおける、UR・SRの追加日時のまとめです。<br>PCで閲覧している場合、セルをポイントすることで詳しい情報のツールチップが出現します。</p>'
+	+ '<p>スクフェスALL STARSにおける、UR・SRの追加日時のまとめです。<br>PCで閲覧している場合、セルにカーソルを当てることで詳しい情報のツールチップが出現します。</p>'
 	+ '<h3 class="muse">μ’s</h3>'
 	+ DrawTable(ListMuse)
 	+ '<h3 class="aqours">Aqours</h3>'
