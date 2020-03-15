@@ -360,6 +360,96 @@ const RawCardList = [
 	"desc": "「スクスタリリースガチャ」で追加"
 },
 {
+	"id": 75,
+	"name": "Ayumu",
+	"rare": "SR",
+	"date": "2019/09/26",
+	"source": "release",
+	"cn1": "食べ過ぎ注意報",
+	"cn2": "夢への一歩",
+	"desc": "「スクスタリリースガチャ」で追加"
+},
+{
+	"id": 78,
+	"name": "Kasumi",
+	"rare": "SR",
+	"date": "2019/09/26",
+	"source": "release",
+	"cn1": "楽しみなご褒美！",
+	"cn2": "ダイアモンド",
+	"desc": "「スクスタリリースガチャ」で追加"
+},
+{
+	"id": 81,
+	"name": "Shizuku",
+	"rare": "SR",
+	"date": "2019/09/26",
+	"source": "release",
+	"cn1": "女優を夢見て",
+	"cn2": "あなたの理想のヒロイン",
+	"desc": "「スクスタリリースガチャ」で追加"
+},
+{
+	"id": 84,
+	"name": "Karin",
+	"rare": "SR",
+	"date": "2019/09/26",
+	"source": "release",
+	"cn1": "教えてあげる",
+	"cn2": "Starlight",
+	"desc": "「スクスタリリースガチャ」で追加"
+},
+{
+	"id": 87,
+	"name": "Ai",
+	"rare": "SR",
+	"date": "2019/09/26",
+	"source": "release",
+	"cn1": "愛のメモリー",
+	"cn2": "めっちゃGoing!",
+	"desc": "「スクスタリリースガチャ」で追加"
+},
+{
+	"id": 90,
+	"name": "Kanata",
+	"rare": "SR",
+	"date": "2019/09/26",
+	"source": "release",
+	"cn1": "夢見心地のティータイム",
+	"cn2": "眠れる森に行きたいな",
+	"desc": "「スクスタリリースガチャ」で追加"
+},
+{
+	"id": 93,
+	"name": "Setsuna",
+	"rare": "SR",
+	"date": "2019/09/26",
+	"source": "release",
+	"cn1": "もっと教えてください！",
+	"cn2": "CHASE!",
+	"desc": "「スクスタリリースガチャ」で追加"
+},
+{
+	"id": 96,
+	"name": "Emma",
+	"rare": "SR",
+	"date": "2019/09/26",
+	"source": "release",
+	"cn1": "ぽかぽか天使",
+	"cn2": "Evergreen",
+	"desc": "「スクスタリリースガチャ」で追加"
+},
+{
+	"id": 99,
+	"name": "Rina",
+	"rare": "SR",
+	"date": "2019/09/26",
+	"source": "release",
+	"cn1": "はい！チーズ",
+	"cn2": "ドキピポ☆エモーション",
+	"desc": "「スクスタリリースガチャ」で追加"
+},
+{
 	"id": 100,
 	"name": "Kotori",
 	"rare": "UR",
@@ -1046,7 +1136,7 @@ const RawCardList = [
 	"date": "2020/02/06",
 	"source": "gacha",
 	"cn1": "まあっ……すごく綺麗なお花！",
-	"cn2": "わくわくアニマル",
+	"cn2": "僕らのLIVE 君とのLIFE",
 	"desc": "「二人の奏でる音♡ガチャ」で追加"
 },
 {
@@ -1170,14 +1260,124 @@ const RawCardList = [
 	"desc": "イベント「それゆけUMA捜索隊」報酬"
 },
 {
-	"id": undefined,
-	"name": "",
-	"rare": "",
-	"date": "",
-	"source": "",
-	"cn1": "",
-	"cn2": "",
-	"desc": ""
+	"id": 181,
+	"name": "Mari",
+	"rare": "UR",
+	"date": "2020/02/28",
+	"source": "fes",
+	"cn1": "私がサポートしてあげる♪",
+	"cn2": "ロイヤルプリンセス",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 182,
+	"name": "Kanata",
+	"rare": "UR",
+	"date": "2020/02/28",
+	"source": "fes",
+	"cn1": "次は彼方ちゃんの番で～す♪",
+	"cn2": "天使の子守歌",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 183,
+	"name": "Emma",
+	"rare": "SR",
+	"date": "2020/02/28",
+	"source": "none",
+	"cn1": "どれもこれも美味しそう",
+	"cn2": "レインボーローズ",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 184,
+	"name": "Rin",
+	"rare": "SR",
+	"date": "2020/02/28",
+	"source": "none",
+	"cn1": "むにゃむにゃ……っへへ",
+	"cn2": "僕らのLIVE 君とのLIFE",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 185,
+	"name": "Emma",
+	"rare": "UR",
+	"date": "2020/03/06",
+	"source": "gacha",
+	"cn1": "持ってきたんだよ",
+	"cn2": "無邪気な赤ずきん",
+	"desc": "イベント「いたずらオオカミを捕まえろ！ガチャ」で追加"
+},
+{
+	"id": 186,
+	"name": "Umi",
+	"rare": "SR",
+	"date": "2020/03/06",
+	"source": "gacha",
+	"cn1": "全く、あなた達は……",
+	"cn2": "僕らのLIVE 君とのLIFE",
+	"desc": "イベント「いたずらオオカミを捕まえろ！ガチャ」で追加"
+},
+{
+	"id": 187,
+	"name": "Chika",
+	"rare": "UR",
+	"date": "2020/03/06",
+	"source": "reward",
+	"cn1": "結構上手くない？",
+	"cn2": "ミッドナイトウルフ",
+	"desc": "イベント「いたずらオオカミを捕まえろ！」報酬"
+},
+{
+	"id": 188,
+	"name": "Rin",
+	"rare": "UR",
+	"date": "2020/03/06",
+	"source": "gacha",
+	"cn1": "全速力で行くにゃ～♪",
+	"cn2": "森のハンターガール",
+	"desc": "イベント「いたずらオオカミを捕まえろ！ガチャ」で追加"
+},
+{
+	"id": 189,
+	"name": "Ruby",
+	"rare": "SR",
+	"date": "2020/03/06",
+	"source": "reward",
+	"cn1": "いいなぁ、食べたい……！",
+	"cn2": "青空Jumping Heart",
+	"desc": "イベント「いたずらオオカミを捕まえろ！」報酬"
+},
+{
+	"id": 190,
+	"name": "Setsuna",
+	"rare": "SR",
+	"date": "2020/03/06",
+	"source": "reward",
+	"cn1": "気を付けてくださいね～！",
+	"cn2": "レインボーローズ",
+	"desc": "イベント「いたずらオオカミを捕まえろ！」報酬"
+},
+{
+	"id": 191,
+	"name": "Karin",
+	"rare": "UR",
+	"date": "2020/03/16",
+	"source": "none",
+	"cn1": "きみをドキッとさせちゃった？",
+	"cn2": "セレブリティ・ブルー",
+	"desc": "「ピックアップガチャ」で追加"
+},
+{
+	"id": 192,
+	"name": "Mari",
+	"rare": "SR",
+	"date": "2020/03/16",
+	"source": "none",
+	"cn1": "はい♪　聞いてみて",
+	"cn2": "青空Jumping Heart",
+	"desc": "「ピックアップガチャ」で追加"
 },
 {
 	"id": undefined,
