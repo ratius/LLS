@@ -31,30 +31,20 @@ table.cardlist {
 	line-height: 150%;
 }
 
-.cardlist td {
-	position: relative;
-	width: 100px;
-	padding: 3px;
-	font-size: 80%;
-}
-
 .shadowname {
 	color: white;
 	filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
 }
 
-.tool-tip {
-	display: none;
-	position: absolute;
-	left: -8em;
-	top: 2.5em;
-	z-index: 100;
-	padding: 0.5em;
-	color: white;
+.cardlist td {
+	position: relative;
+	width: 100px;
+	height: 40px;
+	padding: 3px;
 	font-size: 80%;
-	text-align: left;
-	background: #957;
-	border-radius: 0.5em;
+}
+.cardlist td img {
+	vertical-align: bottom;
 }
 
 td:hover .tool-tip {
@@ -70,13 +60,15 @@ td:hover .tool-tip {
 	background-color: #ccc;
 }
 
+
 .cap { font-size: 120%; }
 .sleep { color: #999; }
 
-.gacha  { background-color: #9df; }
-.reward { background-color: #9bf; }
+.gacha  { background-color: #adf; }
+.reward { background-color: #abf; }
 .fes    { background-color: #fac; }
-.none, .release { background-color: #ddd; }
+.release{ background-color: #eee; }
+.none   { background-color: #ddd; }
 
 .Honoka  { background-color: rgb(255, 163, 054);}
 .Eli     { background-color: rgb(122, 238, 255);}
@@ -165,7 +157,7 @@ function DrawTable(group){
 		for(x=0; x<group.length; x++){
 			if(y < CardList[group[x] + z*NumberOfCharacter].length){ //あるならば
 				ListTmp = CardList[group[x] + z*NumberOfCharacter][y]
-				ToolTipTmp = ListTmp.desc;
+				ToolTipTmp = (ListTmp.id ? 'No.' + ListTmp.id : '') + ' ' + ListTmp.desc;
 				
 				if(ListTmp.cn1 && ListTmp.cn2){ //覚醒前後がきちんと出ていれば
 					ToolTipTmp += '&#10;覚醒前：' + ListTmp.cn1 + '&#10;覚醒後：' + ListTmp.cn2 ;
@@ -175,7 +167,10 @@ function DrawTable(group){
 			
 				OutputTmp += '<td class="' + ListTmp.source + '" title="' + ToolTipTmp + '">'
 				+ '<strong>' + ToolTipSource[ListTmp.source] + '</strong>'
-				+ ' #' + ListTmp.id + '<br>' + ListTmp.date + '</td>\n';
+				+ (ListTmp.atr ? ' <img src="img/atr_' + ListTmp.atr + '.png" width="24" height="24">' : '')
+				+ (ListTmp.type ? '<img src="img/type_' + ListTmp.type + '.png" width="24" height="24">' : '')
+				+ '<br>' + ListTmp.date
+				+ '</td>\n';
 			}else{
 				OutputTmp += '<td></td>\n';
 				blank++;
@@ -246,10 +241,21 @@ loadScript("data/cards.js", function() {
 	+ '<h3 class="niji">ニジガク</h3>'
 	+ DrawTable(ListNiji);
 });
-
-
 --></script>
 
+<h3 class="niji">更新履歴 (カード追加以外)</h3>
+<table class="history">
+<tbody>
+<tr>
+	<td>2020/03/19 13:00頃</td>
+	<td><span class="new"></span>属性・タイプを掲載</td>
+</tr>
+<tr>
+	<td>2020/03/15 15:00頃</td>
+	<td><span class="new"></span>公開</td>
+</tr>
+</tbody>
+</table>
 
 </body>
 </html>
