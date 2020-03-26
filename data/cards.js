@@ -609,7 +609,7 @@ const RawCardList = [
 	"cn2": "トワイライトデーモン",
 	"date": "2019/10/15",
 	"source": "none",
-	"desc": "「スクスタガチャ」で追加"
+	"desc": "「ピックアップガチャ」で追加"
 },
 {
 	"id": 106,
@@ -621,7 +621,7 @@ const RawCardList = [
 	"cn2": "Snow halation",
 	"date": "2019/10/15",
 	"source": "none",
-	"desc": "「スクスタガチャ」で追加"
+	"desc": "「ピックアップガチャ」で追加"
 },
 {
 	"id": 107,
@@ -693,7 +693,7 @@ const RawCardList = [
 	"cn2": "ブルーアモール",
 	"date": "2019/10/31",
 	"source": "none",
-	"desc": "「スクスタガチャ」で追加"
+	"desc": "「ピックアップガチャ」で追加"
 },
 {
 	"id": 113,
@@ -705,7 +705,7 @@ const RawCardList = [
 	"cn2": "君のこころは輝いてるかい？",
 	"date": "2019/10/31",
 	"source": "none",
-	"desc": "「スクスタガチャ」で追加"
+	"desc": "「ピックアップガチャ」で追加"
 },
 {
 	"id": 114,
@@ -717,7 +717,7 @@ const RawCardList = [
 	"cn2": "わくわくアニマル",
 	"date": "2019/10/31",
 	"source": "none",
-	"desc": "「スクスタガチャ」で追加"
+	"desc": "「ピックアップガチャ」で追加"
 },
 {
 	"id": 115,
@@ -789,7 +789,7 @@ const RawCardList = [
 	"cn2": "プレリュードブロッサム",
 	"date": "2019/11/15",
 	"source": "none",
-	"desc": "「スクスタガチャ」で追加"
+	"desc": "「ピックアップガチャ」で追加"
 },
 {
 	"id": 121,
@@ -801,7 +801,7 @@ const RawCardList = [
 	"cn2": "Snow halation",
 	"date": "2019/11/15",
 	"source": "none",
-	"desc": "「スクスタガチャ」で追加"
+	"desc": "「ピックアップガチャ」で追加"
 },
 {
 	"id": 122,
@@ -993,7 +993,7 @@ const RawCardList = [
 	"cn2": "アフタースクールキャット",
 	"date": "2019/12/16",
 	"source": "none",
-	"desc": "「スクスタガチャ」で追加"
+	"desc": "「ピックアップガチャ」で追加"
 },
 {
 	"id": 138,
@@ -1005,7 +1005,7 @@ const RawCardList = [
 	"cn2": "君のこころは輝いてるかい？",
 	"date": "2019/12/16",
 	"source": "none",
-	"desc": "「スクスタガチャ」で追加"
+	"desc": "「ピックアップガチャ」で追加"
 },
 {
 	"id": 139,
@@ -1209,7 +1209,7 @@ const RawCardList = [
 	"cn2": "ハッピーパレード",
 	"date": "2020/01/15",
 	"source": "none",
-	"desc": "「スクスタガチャ」で追加"
+	"desc": "「ピックアップガチャ」で追加"
 },
 {
 	"id": 156,
@@ -1221,7 +1221,7 @@ const RawCardList = [
 	"cn2": "青空Jumping Heart",
 	"date": "2020/01/15",
 	"source": "none",
-	"desc": "「スクスタガチャ」で追加"
+	"desc": "「ピックアップガチャ」で追加"
 },
 {
 	"id": 157,
@@ -1425,7 +1425,7 @@ const RawCardList = [
 	"source": "none",
 	"cn1": "絶対クリアする……",
 	"cn2": "フィーリングシグナル",
-	"desc": "「スクスタガチャ」で追加"
+	"desc": "「ピックアップガチャ」で追加"
 },
 {
 	"id": 174,
@@ -1437,7 +1437,7 @@ const RawCardList = [
 	"cn2": "僕らのLIVE 君とのLIFE",
 	"date": "2020/02/14",
 	"source": "none",
-	"desc": "「スクスタガチャ」で追加"
+	"desc": "「ピックアップガチャ」で追加"
 },
 {
 	"id": 175,
@@ -1544,7 +1544,7 @@ const RawCardList = [
 	"cn1": "どれもこれも美味しそう",
 	"cn2": "レインボーローズ",
 	"date": "2020/02/28",
-	"source": "fes",
+	"source": "none",
 	"desc": "「スクスタフェス」で追加"
 },
 {
