@@ -1556,7 +1556,7 @@ const RawCardList = [
 	"cn1": "むにゃむにゃ……っへへ",
 	"cn2": "僕らのLIVE 君とのLIFE",
 	"date": "2020/02/28",
-	"source": "fes",
+	"source": "none",
 	"desc": "「スクスタフェス」で追加"
 },
 {
