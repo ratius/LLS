@@ -1149,7 +1149,7 @@ const RawCardList = [
 	"cn2": "わくわくアニマル",
 	"date": "2020/01/06",
 	"source": "gacha",
-	"desc": "「海の上の大熱戦ガチャ」で追加"
+	"desc": "「海の上の大熱戦ガチャ(前編)」で追加"
 },
 {
 	"id": 151,
@@ -1245,7 +1245,7 @@ const RawCardList = [
 	"cn2": "わくわくアニマル",
 	"date": "2020/01/22",
 	"source": "gacha",
-	"desc": "「スペシャルスイーツを召し上がれ♡ガチャ」で追加"
+	"desc": "「スペシャルスイーツを召し上がれ♡ガチャ(前編)」で追加"
 },
 {
 	"id": 159,
@@ -1449,7 +1449,7 @@ const RawCardList = [
 	"cn2": "竜宮城の姫君",
 	"date": "2020/02/20",
 	"source": "gacha",
-	"desc": "「それゆけUMA捜索隊ガチャ」で追加"
+	"desc": "「それゆけUMA捜索隊ガチャ(前編)」で追加"
 },
 {
 	"id": 176,
@@ -1461,7 +1461,7 @@ const RawCardList = [
 	"cn2": "レインボーローズ",
 	"date": "2020/02/20",
 	"source": "gacha",
-	"desc": "「それゆけUMA捜索隊ガチャ」で追加"
+	"desc": "「それゆけUMA捜索隊ガチャ(前編)」で追加"
 },
 {
 	"id": 177,
@@ -1485,7 +1485,7 @@ const RawCardList = [
 	"cn2": "竜宮城の姫君",
 	"date": "2020/02/24",
 	"source": "gacha",
-	"desc": "「それゆけUMA捜索隊ガチャ」で追加"
+	"desc": "「それゆけUMA捜索隊ガチャ(後編)」で追加"
 },
 {
 	"id": 179,
@@ -1633,24 +1633,24 @@ const RawCardList = [
 },
 {
 	"id": 191,
-	"name": "Karin",
-	"rare": "UR",
-	"atr": "elegant",
-	"type": "vo",
-	"cn1": "きみをドキッとさせちゃった？",
-	"cn2": "セレブリティ・ブルー",
-	"date": "2020/03/16",
-	"source": "none",
-	"desc": "「ピックアップガチャ」で追加"
-},
-{
-	"id": 192,
 	"name": "Mari",
 	"rare": "SR",
 	"atr": "elegant",
 	"type": "sp",
 	"cn1": "はい♪　聞いてみて",
 	"cn2": "青空Jumping Heart",
+	"date": "2020/03/16",
+	"source": "none",
+	"desc": "「ピックアップガチャ」で追加"
+},
+{
+	"id": 192,
+	"name": "Karin",
+	"rare": "UR",
+	"atr": "elegant",
+	"type": "vo",
+	"cn1": "きみをドキッとさせちゃった？",
+	"cn2": "セレブリティ・ブルー",
 	"date": "2020/03/16",
 	"source": "none",
 	"desc": "「ピックアップガチャ」で追加"
@@ -1665,7 +1665,7 @@ const RawCardList = [
 	"cn2": "マジカル☆フィーバー",
 	"date": "2020/03/23",
 	"source": "gacha",
-	"desc": "「マジカル・タイム！ガチャ」で追加"
+	"desc": "「マジカル・タイム！ガチャ(前編)」で追加"
 },
 {
 	"id": 194,
@@ -1677,16 +1677,16 @@ const RawCardList = [
 	"cn2": "青空Jumping Heart",
 	"date": "2020/03/23",
 	"source": "gacha",
-	"desc": "「マジカル・タイム！ガチャ」で追加"
+	"desc": "「マジカル・タイム！ガチャ(前編)」で追加"
 },
 {
 	"id": 195,
-	"name": "Kasumi",
-	"rare": "UR",
-	"atr": "natural",
-	"type": "vo",
-	"cn1": "あなたにご覧にいれましょう！",
-	"cn2": "マジカル☆フィーバー",
+	"name": "Kotori",
+	"rare": "SR",
+	"atr": "active",
+	"type": "sp",
+	"cn1": "魔法でなおしてあげるよ♪",
+	"cn2": "僕らのLIVE 君とのLIFE",
 	"date": "2020/03/23",
 	"source": "reward",
 	"desc": "イベント「マジカル・タイム！」報酬"
@@ -1701,16 +1701,16 @@ const RawCardList = [
 	"cn2": "マジカル☆フィーバー",
 	"date": "2020/03/27",
 	"source": "gacha",
-	"desc": "「マジカル・タイム！ガチャ」で追加"
+	"desc": "「マジカル・タイム！ガチャ(後半)」で追加"
 },
 {
 	"id": 197,
-	"name": "Kotori",
-	"rare": "SR",
-	"atr": "active",
-	"type": "sp",
-	"cn1": "魔法でなおしてあげるよ♪",
-	"cn2": "僕らのLIVE 君とのLIFE",
+	"name": "Kasumi",
+	"rare": "UR",
+	"atr": "natural",
+	"type": "vo",
+	"cn1": "あなたにご覧にいれましょう！",
+	"cn2": "マジカル☆フィーバー",
 	"date": "2020/03/23",
 	"source": "reward",
 	"desc": "イベント「マジカル・タイム！」報酬"
@@ -1726,6 +1726,150 @@ const RawCardList = [
 	"date": "2020/03/23",
 	"source": "reward",
 	"desc": "イベント「マジカル・タイム！」報酬"
+},
+{
+	"id": 199,
+	"name": "Hanayo",
+	"rare": "UR",
+	"atr": "elegant",
+	"type": "sk",
+	"cn1": "あなたのために歌うね",
+	"cn2": "カラフルフェスタ",
+	"date": "2020/03/31",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 200,
+	"name": "Hanamaru",
+	"rare": "UR",
+	"atr": "natural",
+	"type": "gd",
+	"cn1": "天国ずら～！",
+	"cn2": "楽園からの使者",
+	"date": "2020/03/31",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 201,
+	"name": "Ai",
+	"rare": "SR",
+	"atr": "cool",
+	"type": "sk",
+	"cn1": "来てくれたんだね！サンキュー♪",
+	"cn2": "レインボーローズ",
+	"date": "2020/03/31",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 202,
+	"name": "Kanata",
+	"rare": "SR",
+	"atr": "cool",
+	"type": "gd",
+	"cn1": "すやあ～すぴ～すやすや～～",
+	"cn2": "レインボーローズ",
+	"date": "2020/03/31",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 203,
+	"name": "Yoshiko",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "あっちにいって――あっ！！",
+	"cn2": "ベジタブル☆ワンダーランド",
+	"date": "2020/04/06",
+	"source": "gacha",
+	"desc": "「ベジタブル☆クッキング！ガチャ(前編)」で追加"
+},
+{
+	"id": 204,
+	"name": "Emma",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "お野菜も入れるねー。それー♪",
+	"cn2": "マーチング・ハーモニー",
+	"date": "2020/04/06",
+	"source": "gacha",
+	"desc": "「ベジタブル☆クッキング！ガチャ(前編)」で追加"
+},
+{
+	"id": 205,
+	"name": "Rina",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "みんなと一緒にひとつのお鍋",
+	"cn2": "ベジタブル☆ワンダーランド",
+	"date": "2020/04/06",
+	"source": "gacha",
+	"desc": "「ベジタブル☆クッキング！ガチャ(後編)」で追加"
+},
+{
+	"id": 206,
+	"name": "Eli",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "なんなのいきなり……",
+	"cn2": "それは僕たちの奇跡",
+	"date": "2020/04/06",
+	"source": "reward",
+	"desc": "イベント「ベジタブル☆クッキング！」報酬"
+},
+{
+	"id": 207,
+	"name": "Kotori",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "味見してみて",
+	"cn2": "ベジタブル☆ワンダーランド",
+	"date": "2020/04/06",
+	"source": "reward",
+	"desc": "イベント「ベジタブル☆クッキング！」報酬"
+},
+{
+	"id": 208,
+	"name": "Dia",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "ん～、たまりませんわ！",
+	"cn2": "Brightest Melody",
+	"date": "2020/04/06",
+	"source": "reward",
+	"desc": "イベント「ベジタブル☆クッキング！」報酬"
+},
+{
+	"id": 218,
+	"name": "Shizuku",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "もうくすぐったいってば！",
+	"cn2": "薔薇の騎士",
+	"date": "2020/04/15",
+	"source": "none",
+	"desc": "「メンバーピックアップガチャ」で追加"
+},
+{
+	"id": 219,
+	"name": "Hanayo",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "えっ……？",
+	"cn2": "僕らは今のなかで",
+	"date": "2020/04/15",
+	"source": "none",
+	"desc": "「メンバーピックアップガチャ」で追加"
 },
 {
 	"id": undefined,
