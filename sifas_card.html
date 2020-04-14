@@ -167,8 +167,8 @@ function DrawTable(group){
 			
 				OutputTmp += '<td class="' + ListTmp.source + '" title="' + ToolTipTmp + '">'
 				+ '<strong>' + ToolTipSource[ListTmp.source] + '</strong>'
-				+ (ListTmp.atr ? ' <img src="img/atr_' + ListTmp.atr + '.png" width="24" height="24">' : '')
-				+ (ListTmp.type ? '<img src="img/type_' + ListTmp.type + '.png" width="24" height="24">' : '')
+				+ (ListTmp.atr ? ' <img src="img/atr_' + ListTmp.atr.toLowerCase() + '.png" width="24" height="24">' : '')
+				+ (ListTmp.type ? '<img src="img/type_' + ListTmp.type.toLowerCase() + '.png" width="24" height="24">' : '')
 				+ '<br>' + ListTmp.date
 				+ '</td>\n';
 			}else{
