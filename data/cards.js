@@ -1,3 +1,5 @@
+const LatestUpdate = "イベント「取り戻せ！笑顔のラーメン」まで";
+
 const RawCardList = [
 {
 	"id": 3,
@@ -2062,6 +2064,102 @@ const RawCardList = [
 	"date": "2020/05/07",
 	"source": "reward",
 	"desc": "イベント「温泉旅行ラプソディ」報酬"
+},
+{
+	"id": 236,
+	"name": "Mari",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "私たちの色",
+	"cn2": "カラースプラッシュ",
+	"date": "2020/05/15",
+	"source": "none",
+	"desc": "「メンバーピックアップガチャ」で追加"
+},
+{
+	"id": 237,
+	"name": "Umi",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "完成したら見せますね",
+	"cn2": "それは僕たちの奇跡",
+	"date": "2020/05/15",
+	"source": "none",
+	"desc": "「メンバーピックアップガチャ」で追加"
+},
+{
+	"id": 238,
+	"name": "Honoka",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "私に任せて！",
+	"cn2": "僕らのLIVE 君とのLIFE",
+	"date": "2020/05/21",
+	"source": "gacha",
+	"desc": "「取り戻せ！笑顔のラーメンガチャ(前編)」で追加"
+},
+{
+	"id": 239,
+	"name": "Rin",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "やっった――――！！",
+	"cn2": "熱烈歓迎☆チャイにゃメイド",
+	"date": "2020/05/25",
+	"source": "gacha",
+	"desc": "「取り戻せ！笑顔のラーメンガチャ(後編)」で追加"
+},
+{
+	"id": 240,
+	"name": "Ayumu",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "いらっしゃいませ♪",
+	"cn2": "熱烈歓迎☆チャイナメイド",
+	"date": "2020/05/21",
+	"source": "gacha",
+	"desc": "「取り戻せ！笑顔のラーメンガチャ(前編)」で追加"
+},
+{
+	"id": 241,
+	"name": "Kanan",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Gd",
+	"cn1": "わかめラーメンを作ってみたんだ",
+	"cn2": "Brightest Melody",
+	"date": "2020/05/21",
+	"source": "reward",
+	"desc": "イベント「取り戻せ！笑顔のラーメン」報酬"
+},
+{
+	"id": 242,
+	"name": "Dia",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Vo",
+	"cn1": "もうひと頑張りいたしましょう！",
+	"cn2": "熱烈歓迎☆チャイナメイド",
+	"date": "2020/05/21",
+	"source": "reward",
+	"desc": "イベント「取り戻せ！笑顔のラーメン」報酬"
+},
+{
+	"id": 243,
+	"name": "Rina",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Sk",
+	"cn1": "全てを正確に見極めて……えい！",
+	"cn2": "マーチング・ハーモニー",
+	"date": "2020/05/21",
+	"source": "reward",
+	"desc": "イベント「取り戻せ！笑顔のラーメン」報酬"
 },
 {
 	"id": undefined,
