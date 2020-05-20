@@ -115,7 +115,7 @@ const CharName = [
 const ListMuse = [0,1,2,3,4,5,6,7,8];
 const ListAqours = [9,10,11,12,13,14,15,16,17];
 const ListNiji = [18,19,20,21,22,23,24,25,26];
-const ToolTipSource = {'gacha':'特効', 'reward':'報酬', 'fes':'フェス', 'none':'非イベ', 'release':'初期'};
+const ToolTipSource = {'gacha':'Ｅ特効', 'reward':'Ｅ報酬', 'fes':'フェス', 'none':'非イベ', 'release':'初期'};
 const NumberOfCharacter = 27;
 
 // ■生データから新たなデータを作成
@@ -233,7 +233,8 @@ loadScript("data/cards.js", function() {
 
 	document.getElementById("MainArea").innerHTML =
 	  '<h3 style="background-color:#ddd; color:#777; border-color:#999;">まえがき<\/h3>'
-	+ '<p>スクフェスALL STARSにおける、UR・SRの追加日時のまとめです。<br>PCで閲覧している場合、セルにカーソルを当てることで詳しい情報のツールチップが出現します。</p>'
+	+ '<p>スクフェスALL STARSにおける、UR・SRの追加日時のまとめです。<br>PCで閲覧している場合、セルにカーソルを当てることで詳しい情報のツールチップが出現します。'
+	+ '<br>最終更新：' + LatestUpdate + '</p>'
 	+ '<h3 class="muse">μ’s</h3>'
 	+ DrawTable(ListMuse)
 	+ '<h3 class="aqours">Aqours</h3>'
