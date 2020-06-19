@@ -1,4 +1,4 @@
-const LatestUpdate = "イベント「取り戻せ！笑顔のラーメン」まで";
+const LatestUpdate = "2020/05/29 スクスタフェスまで";
 
 const RawCardList = [
 {
@@ -2091,30 +2091,6 @@ const RawCardList = [
 },
 {
 	"id": 238,
-	"name": "Honoka",
-	"rare": "SR",
-	"atr": "Cool",
-	"type": "Sp",
-	"cn1": "私に任せて！",
-	"cn2": "僕らのLIVE 君とのLIFE",
-	"date": "2020/05/21",
-	"source": "gacha",
-	"desc": "「取り戻せ！笑顔のラーメンガチャ(前編)」で追加"
-},
-{
-	"id": 239,
-	"name": "Rin",
-	"rare": "UR",
-	"atr": "Active",
-	"type": "Gd",
-	"cn1": "やっった――――！！",
-	"cn2": "熱烈歓迎☆チャイにゃメイド",
-	"date": "2020/05/25",
-	"source": "gacha",
-	"desc": "「取り戻せ！笑顔のラーメンガチャ(後編)」で追加"
-},
-{
-	"id": 240,
 	"name": "Ayumu",
 	"rare": "UR",
 	"atr": "Natural",
@@ -2126,25 +2102,49 @@ const RawCardList = [
 	"desc": "「取り戻せ！笑顔のラーメンガチャ(前編)」で追加"
 },
 {
-	"id": 241,
-	"name": "Kanan",
+	"id": 239,
+	"name": "Honoka",
 	"rare": "SR",
-	"atr": "Elegant",
-	"type": "Gd",
-	"cn1": "わかめラーメンを作ってみたんだ",
-	"cn2": "Brightest Melody",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "私に任せて！",
+	"cn2": "僕らのLIVE 君とのLIFE",
 	"date": "2020/05/21",
-	"source": "reward",
-	"desc": "イベント「取り戻せ！笑顔のラーメン」報酬"
+	"source": "gacha",
+	"desc": "「取り戻せ！笑顔のラーメンガチャ(前編)」で追加"
 },
 {
-	"id": 242,
+	"id": 240,
+	"name": "Rin",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "やっった――――！！",
+	"cn2": "熱烈歓迎☆チャイにゃメイド",
+	"date": "2020/05/25",
+	"source": "gacha",
+	"desc": "「取り戻せ！笑顔のラーメンガチャ(後編)」で追加"
+},
+{
+	"id": 241,
 	"name": "Dia",
 	"rare": "UR",
 	"atr": "Natural",
 	"type": "Vo",
 	"cn1": "もうひと頑張りいたしましょう！",
 	"cn2": "熱烈歓迎☆チャイナメイド",
+	"date": "2020/05/21",
+	"source": "reward",
+	"desc": "イベント「取り戻せ！笑顔のラーメン」報酬"
+},
+{
+	"id": 242,
+	"name": "Kanan",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Gd",
+	"cn1": "わかめラーメンを作ってみたんだ",
+	"cn2": "Brightest Melody",
 	"date": "2020/05/21",
 	"source": "reward",
 	"desc": "イベント「取り戻せ！笑顔のラーメン」報酬"
@@ -2160,6 +2160,150 @@ const RawCardList = [
 	"date": "2020/05/21",
 	"source": "reward",
 	"desc": "イベント「取り戻せ！笑顔のラーメン」報酬"
+},
+{
+	"id": 244,
+	"name": "Ai",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "二人きりの時間を過ごしたい",
+	"cn2": "ハートビート★スクールガール",
+	"date": "2020/05/29",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 245,
+	"name": "Eli",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "キミがそばにいてくれるなら",
+	"cn2": "トゥルーアラベスク",
+	"date": "2020/05/29",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 246,
+	"name": "Karin",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "まだまだ終わらせないんだから！",
+	"cn2": "マーチング・ハーモニー",
+	"date": "2020/05/29",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 247,
+	"name": "Yoshiko",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Gd",
+	"cn1": "これが次の暗黒舞踏会の衣装よ！",
+	"cn2": "Brightest Melody",
+	"date": "2020/05/29",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 248,
+	"name": "Riko",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "プリンセスに近づけたらいいな",
+	"cn2": "Noble Princess",
+	"date": "2020/06/05",
+	"source": "gacha",
+	"desc": "「3人のプリンセスガチャ(前編)」で追加"
+},
+{
+	"id": 249,
+	"name": "Maki",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "そんな顔で私のこと見ないでよ",
+	"cn2": "それは僕たちの奇跡",
+	"date": "2020/06/05",
+	"source": "gacha",
+	"desc": "「3人のプリンセスガチャ(前編)」で追加"
+},
+{
+	"id": 250,
+	"name": "Karin",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sk",
+	"cn1": "困るわ……そんな風に言うなんて",
+	"cn2": "Noble Princess",
+	"date": "2020/06/09",
+	"source": "gacha",
+	"desc": "「3人のプリンセスガチャ(後編)」で追加"
+},
+{
+	"id": 251,
+	"name": "Honoka",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Sk",
+	"cn1": "本物のプリンセスになれそう",
+	"cn2": "Noble Princess",
+	"date": "2020/06/05",
+	"source": "reward",
+	"desc": "イベント「3人のプリンセス」報酬"
+},
+{
+	"id": 252,
+	"name": "Setsuna",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "私があなたの笑顔を守ります！",
+	"cn2": "マーチング・ハーモニー",
+	"date": "2020/06/05",
+	"source": "reward",
+	"desc": "イベント「3人のプリンセス」報酬"
+},
+{
+	"id": 253,
+	"name": "You",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sk",
+	"cn1": "もうすぐできるからね～",
+	"cn2": "Brightest Melody",
+	"date": "2020/06/05",
+	"source": "reward",
+	"desc": "イベント「3人のプリンセス」報酬"
+},
+{
+	"id": 254,
+	"name": "Kotori",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Sk",
+	"cn1": "おかえりなさいませ、ご主人様",
+	"cn2": "それは僕たちの奇跡",
+	"date": "2020/06/15",
+	"source": "none",
+	"desc": "「メンバーピックアップガチャ」で追加"
+},
+{
+	"id": 255,
+	"name": "Kasumi",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "かすみん、限界ですぅ！",
+	"cn2": "レディー・デビュー",
+	"date": "2020/06/15",
+	"source": "none",
+	"desc": "「メンバーピックアップガチャ」で追加"
 },
 {
 	"id": undefined,
