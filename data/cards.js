@@ -1,4 +1,4 @@
-const LatestUpdate = "2020/05/29 スクスタフェスまで";
+const LatestUpdate = "2020/06/22 イベント「君と、雨に歌えば」まで";
 
 const RawCardList = [
 {
@@ -2306,15 +2306,75 @@ const RawCardList = [
 	"desc": "「メンバーピックアップガチャ」で追加"
 },
 {
-	"id": undefined,
-	"name": "",
-	"rare": "",
-	"atr": "",
-	"type": "",
-	"cn1": "",
-	"cn2": "",
-	"date": "",
-	"source": "",
-	"desc": ""
+	"id": 246,
+	"name": "Nozomi",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Gd",
+	"cn1": "こうするの、っと！",
+	"cn2": "レインドロップ",
+	"date": "2020/06/22",
+	"source": "gacha",
+	"desc": "「君と、雨に歌えばガチャ(前編)」で追加"
 },
+{
+	"id": 247,
+	"name": "Nico",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "にこもがんばっちゃおうかな～",
+	"cn2": "それは僕たちの奇跡",
+	"date": "2020/06/22",
+	"source": "gacha",
+	"desc": "「君と、雨に歌えばガチャ(前編)」で追加"
+},
+{
+	"id": 258,
+	"name": "Kanan",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "雨に消えたりしないように",
+	"cn2": "レインドロップ",
+	"date": "2020/06/26",
+	"source": "gacha",
+	"desc": "「君と、雨に歌えばガチャ(後編)」で追加"
+},
+{
+	"id": 259,
+	"name": "Hanamaru",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "特別な道具を使うずら",
+	"cn2": "Brightest Melody",
+	"date": "2020/06/22",
+	"source": "reward",
+	"desc": "イベント「君と、雨に歌えば」報酬"
+},
+{
+	"id": 260,
+	"name": "Ai",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Gd",
+	"cn1": "愛さん特製スペシャルもんじゃ",
+	"cn2": "マーチング・ハーモニー",
+	"date": "2020/06/22",
+	"source": "reward",
+	"desc": "イベント「君と、雨に歌えば」報酬"
+},
+{
+	"id": 261,
+	"name": "Emma",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "みんなも一緒に歌おうよ〜♪",
+	"cn2": "レインドロップ",
+	"date": "2020/06/22",
+	"source": "reward",
+	"desc": "イベント「君と、雨に歌えば」報酬"
+}
 ];
