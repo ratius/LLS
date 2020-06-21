@@ -125,7 +125,10 @@ function LoadRawData(){
 		CardList[i] = new Array();
 	}
 	for(i=0; i<RawCardList.length; i++) {
-		if(CharId.indexOf(RawCardList[i].name) == -1){break;} //存在しなければ飛ばす
+		if(CharId.indexOf(RawCardList[i].name) == -1){
+			console.log("警告：不明なキャラクターID (" + RawCardList[i].name + ")");
+			break;
+		} //存在しなければ飛ばす
 		var key = CharId.indexOf(RawCardList[i].name); // キャラ番号を確認
 		if(RawCardList[i].rare == 'SR') { key += NumberOfCharacter;}
 		CardList[key].push(RawCardList[i]);
