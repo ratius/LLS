@@ -1,4 +1,4 @@
-const LatestUpdate = "2020/06/22 イベント「君と、雨に歌えば」まで";
+const LatestUpdate = "2020/06/30 「スクスタフェス」まで";
 
 const RawCardList = [
 {
@@ -2376,5 +2376,53 @@ const RawCardList = [
 	"date": "2020/06/22",
 	"source": "reward",
 	"desc": "イベント「君と、雨に歌えば」報酬"
+},
+{
+	"id": 262,
+	"name": "Rin",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "にゃああっ……！",
+	"cn2": "Pom!☆",
+	"date": "2020/06/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 263,
+	"name": "Chika",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "あなたと一緒に海を見ていたいな",
+	"cn2": "チカキュン☆サマー",
+	"date": "2020/06/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 264,
+	"name": "Ruby",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "今日は絶対、すくうんだ",
+	"cn2": "Brightest Melody",
+	"date": "2020/06/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 265,
+	"name": "Kanata",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Sk",
+	"cn1": "遥ちゃん専用アルバムなの",
+	"cn2": "マーチング・ハーモニー",
+	"date": "2020/06/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
 }
 ];
