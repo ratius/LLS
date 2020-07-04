@@ -2326,7 +2326,7 @@ const RawCardList = [
 	"cn1": "にこもがんばっちゃおうかな～",
 	"cn2": "それは僕たちの奇跡",
 	"date": "2020/06/22",
-	"source": "gacha",
+	"source": "reward",
 	"desc": "「君と、雨に歌えばガチャ(前編)」で追加"
 },
 {
@@ -2350,7 +2350,7 @@ const RawCardList = [
 	"cn1": "特別な道具を使うずら",
 	"cn2": "Brightest Melody",
 	"date": "2020/06/22",
-	"source": "reward",
+	"source": "gacha",
 	"desc": "イベント「君と、雨に歌えば」報酬"
 },
 {
