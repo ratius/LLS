@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>スクフェスALL STARS 過去のイベントまとめ</title>
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="color_sifas.css">
+<style><!--
+
+.card-box {
+	width: 100%;
+	height: 90vh;
+	overflow-x: auto;
+	overflow-y: auto;
+	white-space: nowrap;
+	border: 2px solid #999;
+}
+
+table.PairList {
+	width: 2268px;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+.PairList td, th {
+	width: 80px;
+	color: white;
+	padding: 1px auto;
+	text-align:center;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #aaa;
+}
+
+.shadowname {
+	color: white;
+	filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
+}
+
+.bg_tp_white {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAQCAMAAAAcVM5PAAAAMFBMVEWEhISHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7vAwMC/AbLaAAAALElEQVR42jXBtwHAIADAMNNLAvz/LYuROGKLJX7xiSmG6KKJKorIIokogngubj8DwatbdggAAAAASUVORK5CYII=);
+	background-size:contain;
+	background-blend-mode: screen;
+}
+.EventBox {
+	display: inline-block;
+	align: center;
+	vertical-align: middle;
+	width: 18px;
+	height: 18px;
+	border: 1px solid #666;
+	border-radius: 10px;
+	margin: 0 2px;
+}
+.EventBox span {
+	font-size: small;
+	font-weight: bold;
+	vertical-align: middle;
+	line-height: 15px;
+}
+
+--></style>
+<script><!--
+
+const CharIdMuse = ['Honoka', 'Eli', 'Kotori', 'Umi', 'Rin', 'Maki', 'Nozomi', 'Hanayo', 'Nico'];
+const CharIdAqours = ['Chika', 'Riko', 'Kanan', 'Dia', 'You', 'Yoshiko', 'Hanamaru', 'Mari', 'Ruby'];
+const CharIdNiji = ['Ayumu', 'Kasumi', 'Shizuku', 'Karin', 'Ai', 'Kanata', 'Setsuna', 'Emma', 'Rina'];
+const CharId = CharIdMuse.concat(CharIdAqours).concat(CharIdNiji);
+
+const CharLookUpTable = [
+	{"number":0 , "id": "Honoka",   "name": "穂乃果", "color": "black"},
+	{"number":1 , "id": "Eli",      "name": "絵里",   "color": "black"},
+	{"number":2 , "id": "Kotori",   "name": "ことり", "color": "black"},
+	{"number":3 , "id": "Umi",      "name": "海未",   "color": "white"},
+	{"number":4 , "id": "Rin",      "name": "凛",     "color": "black"},
+	{"number":5 , "id": "Maki",     "name": "真姫",   "color": "black"},
+	{"number":6 , "id": "Nozomi",   "name": "希",     "color": "white"},
+	{"number":7 , "id": "Hanayo",   "name": "花陽",   "color": "black"},
+	{"number":8 , "id": "Nico",     "name": "にこ",   "color": "black"},
+	{"number":9 , "id": "Chika",    "name": "千歌",   "color": "black"},
+	{"number":10, "id": "Riko",     "name": "梨子",   "color": "black"},
+	{"number":11, "id": "Kanan",    "name": "果南",   "color": "white"},
+	{"number":12, "id": "Dia",      "name": "ダイヤ", "color": "white"},
+	{"number":13, "id": "You",      "name": "曜",     "color": "black"},
+	{"number":14, "id": "Yoshiko",  "name": "善子",   "color": "black"},
+	{"number":15, "id": "Hanamaru", "name": "花丸",   "color": "black"},
+	{"number":16, "id": "Mari",     "name": "鞠莉",   "color": "white"},
+	{"number":17, "id": "Ruby",     "name": "ルビィ", "color": "black"},
+	{"number":18, "id": "Ayumu",    "name": "歩夢",   "color": "black"},
+	{"number":19, "id": "Kasumi",   "name": "かすみ", "color": "black"},
+	{"number":20, "id": "Shizuku",  "name": "しずく", "color": "black"},
+	{"number":21, "id": "Karin",    "name": "果林",   "color": "white"},
+	{"number":22, "id": "Ai",       "name": "愛",     "color": "black"},
+	{"number":23, "id": "Kanata",   "name": "彼方",   "color": "white"},
+	{"number":24, "id": "Setsuna",  "name": "せつ菜", "color": "white"},
+	{"number":25, "id": "Emma",     "name": "エマ",   "color": "black"},
+	{"number":26, "id": "Rina",     "name": "璃奈",   "color": "black"}
+];
+
+//■■各種関数
+
+//■キャラクター用のルックアップテーブル (ID, データ種)
+function LookUp(id, data){
+	var temp = CharLookUpTable.filter((u)=>{return(u.id === id);})[0][data];
+	
+	if(temp === undefined){ //データが見つからなかった場合
+		if(data === "number"){
+			return -1;
+		} else {
+			return "";
+		}
+	} else {
+		return temp;
+	}
+}
+
+//■イベント用のルックアップテーブル (イベントNo., データ種)
+function LookUpEvent(id, data){
+	return EventList.filter((u)=>{return(u.id === id);})[0][data];
+	
+}
+
+//■ペアの表を作る
+let PairData = [];
+
+for(temp1=0; temp1<CharId.length; temp1++){
+	PairData[temp1] = [];
+	for(temp2=0; temp2<CharId.length; temp2++){
+		PairData[temp1][temp2] = [];
+	}
+}
+//表にデータを埋め込む
+function MakePairData(){
+	//各イベントに埋め込まれた、参加キャラクターを見る
+	for(i=0; i<EventList.length; i++){
+		var temp1 = EventList[i].participated;
+		
+		//そこからペアを取り出す
+		for(c1=0; c1<temp1.length-1; c1++){
+			for(c2=c1+1; c2<temp1.length; c2++){
+				temp2 = CharId.indexOf(temp1[c1]);
+				temp3 = CharId.indexOf(temp1[c2]);
+				
+				if(temp2 === -1 || temp3 === -1){
+					console.log("Database Error: Either " + temp1[c1] + " or " + temp1[c2] + " is not a valid character ID");
+					continue;
+				}
+				PairData[temp2][temp3].push(EventList[i].id);
+				PairData[temp3][temp2].push(EventList[i].id);
+			}
+		}
+	}
+}
+
+// ■テーブルを作るための関数。col, rowには行列が入る
+function DrawPairTable(col, row){
+	var Output = '<div class="card-box">\n<table class="PairList">\n';
+
+	//■ヘッダー
+	Output += '<thead>\n<tr class="header-top">\n<th></th>\n';
+	for(x of col){
+		//キャラクター名取得
+		Output += '<th class="bg_' + x + '"><strong class="shadowname">' + LookUp(x,"name") + '<\/strong><\/th>\n';
+	}
+
+	Output += '<\/tr>\n<\/thead>\n<tbody>\n';
+	
+	//■メイン
+	for(y of row){
+		Output += '<th class="bg_' + y + '"><strong class="shadowname">' + LookUp(y,"name") + '<\/strong><\/th>\n';
+
+		for(x of col){
+			if(x === y){ //同キャラは灰色でいい
+				Output += '<td style="background-color:#aaa"><\/td>';
+			}else {
+				var Number = 0;
+				Output += '<td class="bg_tp_white bg_' + y + '">'
+
+				for(z of PairData[LookUp(x,"number")][LookUp(y,"number")]){
+					Output += '<div class="EventBox bg_' + x + '" title="'
+					+ LookUp(x,"name") + '・' + LookUp(y,"name") + '\n'
+					+ LookUpEvent(z,"name")
+					+ '" style="color:' + LookUp(x,"color") + '">'
+					+ '<span>' + z + '<\/span><\/div>';
+					
+					if(++Number == 3){
+						Output += '<br>';
+						Number = 0;
+					}
+				}
+				Output += '<\/td>\n';
+			}
+		}
+		
+		Output += '<\/tr>';
+	}
+	
+	Output += '</tbody>\n</table>\n</div>\n';
+	return Output;
+}
+
+--></script>
+
+</head>
+<body>
+<div id="MainArea">
+	<div style="text-align:center; margin-top: 40px;">
+	<span style="font-size: 150%; font-weight: bold;">よみこみちゅう…</span><br>
+	このコンテンツはJavaScriptを使用しています。<br>
+	いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
+	お手数ですが、JavaScriptの実行を許可した上でページを読み込み直してください。<br>
+	</div>
+</div>
+
+<script><!--
+
+function loadScript(src, callback) {
+    var done = false;
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.src = src;
+    head.appendChild(script);
+    // Attach handlers for all browsers
+    script.onload = script.onreadystatechange = function() {
+        if ( !done && (!this.readyState ||
+                this.readyState === "loaded" || this.readyState === "complete") ) {
+            done = true;
+            callback();
+            // Handle memory leak in IE
+            script.onload = script.onreadystatechange = null;
+            if ( head && script.parentNode ) {
+                head.removeChild( script );
+            }
+        }
+    };
+}
+
+loadScript("data/events.js", function() {
+	var CardList = [];
+	MakePairData();
+
+	document.getElementById("MainArea").innerHTML =
+	  '<h3 style="background-color:#ddd; color:#777; border-color:#999;">まえがき<\/h3>'
+	+ '<p>スクフェスALL STARSのイベントストーリーおける、各ペアの共演状況です。<br>PCで閲覧している場合、セルにカーソルを当てることで詳しい情報のツールチップが出現します。'
+	+ '<br>最終更新：' + LatestUpdate + '</p>'
+	
+	+ '<h3 style="background-color:#ddd; color:#777; border-color:#999;">共演ペア一覧<\/h3>'
+	+ DrawPairTable(CharId, CharId);
+});
+--></script>
+
+<h3 class="niji">更新履歴</h3>
+<table class="history">
+<tbody>
+<tr>
+	<td>2019/07/17 12:00頃</td>
+	<td><span class="new"></span>公開</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<a href="index.html">トップページに戻る。</a>
+</p>
+
+</body>
+</html>
