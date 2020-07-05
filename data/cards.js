@@ -1,4 +1,4 @@
-const LatestUpdate = "2020/06/30 「スクスタフェス」まで";
+const LatestUpdate = "2020/07/06 「ヨハネと花陽の事件簿」まで";
 
 const RawCardList = [
 {
@@ -2424,5 +2424,77 @@ const RawCardList = [
 	"date": "2020/06/30",
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 266,
+	"name": "Eli",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "怪盗からのメッセージが！！",
+	"cn2": "Wonderful Rush",
+	"date": "2020/07/06",
+	"source": "reward",
+	"desc": "イベント「ヨハネと花陽の事件簿」報酬"
+},
+{
+	"id": 267,
+	"name": "Hanayo",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sp",
+	"cn1": "私わかったよ！",
+	"cn2": "見習い探偵",
+	"date": "2020/07/06",
+	"source": "gacha",
+	"desc": "「ヨハネと花陽の事件簿ガチャ(前編)」で追加"
+},
+{
+	"id": 268,
+	"name": "Kanan",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "焦らなくていいからね",
+	"cn2": "恋になりたいAQUARIUM",
+	"date": "2020/07/06",
+	"source": "gacha",
+	"desc": "「ヨハネと花陽の事件簿ガチャ(前編)」で追加"
+},
+{
+	"id": 269,
+	"name": "Yoshiko",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Gd",
+	"cn1": "名探偵ヨハネよ！",
+	"cn2": "堕天探偵☆ヨハネ",
+	"date": "2020/07/06",
+	"source": "reward",
+	"desc": "イベント「ヨハネと花陽の事件簿」報酬"
+},
+{
+	"id": 270,
+	"name": "Ayumu",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "いい感じにできてるよ！",
+	"cn2": "Love U my friend",
+	"date": "2020/07/06",
+	"source": "reward",
+	"desc": "イベント「ヨハネと花陽の事件簿」報酬"
+},
+{
+	"id": 271,
+	"name": "Kanata",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "彼方ちゃん、ここに見参！",
+	"cn2": "神出鬼没☆怪盗K",
+	"date": "2020/07/10",
+	"source": "gacha",
+	"desc": "「ヨハネと花陽の事件簿ガチャ(後編)」で追加"
 }
 ];
