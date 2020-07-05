@@ -142,7 +142,8 @@ const CharData = [
 		sifas_s2: {r:255, g:224, b:206},
 		vote2nd:  {r:240, g:162, b: 11},
 		vote3rd:  {r:238, g:120, b:  0},
-		vote4th:  {r:239, g:120, b:  0}
+		vote4th:  {r:239, g:120, b:  0},
+		duotrio:  {r:243, g:152, b:  1}
 	},
 
 	{ id:'Riko'    , name:'桜内 梨子',
@@ -156,7 +157,8 @@ const CharData = [
 		sifas_s2: {r:254, g:218, b:224},
 		vote2nd:  {r:233, g:169, b:232},
 		vote3rd:  {r:220, g:118, b:171},
-		vote4th:  {r:238, g:135, b:180}
+		vote4th:  {r:238, g:135, b:180},
+		duotrio:  {r:229, g:164, b:198}
 	},
 
 	{ id:'Kanan'   , name:'松浦 果南',
@@ -170,7 +172,8 @@ const CharData = [
 		sifas_s2: {r:194, g:242, b:236},
 		vote2nd:  {r: 19, g:232, b:174},
 		vote3rd:  {r:  0, g:179, b:134},
-		vote4th:  {r:  0, g:170, b:131}
+		vote4th:  {r:  0, g:170, b:131},
+		duotrio:  {r:120, g:196, b:166}
 	},
 
 	{ id:'Dia'     , name:'黒澤 ダイヤ',
@@ -184,7 +187,8 @@ const CharData = [
 		sifas_s2: {r:248, g:194, b:204},
 		vote2nd:  {r:242, g: 59, b: 76},
 		vote3rd:  {r:231, g: 45, b: 54},
-		vote4th:  {r:231, g: 45, b: 56}
+		vote4th:  {r:231, g: 45, b: 56},
+		duotrio:  {r:224, g: 50, b: 51}
 	},
 
 	{ id:'You'     , name:'渡辺 曜',
@@ -198,7 +202,8 @@ const CharData = [
 		sifas_s2: {r:194, g:237, b:248},
 		vote2nd:  {r: 73, g:185, b:249},
 		vote3rd:  {r:  0, g:149, b:216},
-		vote4th:  {r:  0, g:149, b:217}
+		vote4th:  {r:  0, g:149, b:217},
+		duotrio:  {r: 74, g:183, b:239}
 	},
 
 	{ id:'Yoshiko' , name:'津島 善子',
@@ -212,7 +217,8 @@ const CharData = [
 		sifas_s2: {r:236, g:237, b:237},
 		vote2nd:  {r:137, g:137, b:137},
 		vote3rd:  {r: 76, g: 73, b: 72},
-		vote4th:  {r:113, g:113, b:113}
+		vote4th:  {r:113, g:113, b:113},
+		duotrio:  {r:137, g:148, b:154}
 	},
 
 	{ id:'Hanamaru', name:'国木田 花丸',
@@ -226,7 +232,8 @@ const CharData = [
 		sifas_s2: {r:255, g:243, b:194},
 		vote2nd:  {r:230, g:214, b: 23},
 		vote3rd:  {r:159, g:140, b:  0},
-		vote4th:  {r:255, g:241, b:  0}
+		vote4th:  {r:255, g:241, b:  0},
+		duotrio:  {r:224, g:208, b: 35}
 	},
 
 	{ id:'Mari'    , name:'小原 鞠莉',
@@ -240,7 +247,8 @@ const CharData = [
 		sifas_s2: {r:231, g:203, b:238},
 		vote2nd:  {r:174, g: 88, b:235},
 		vote3rd:  {r:124, g: 80, b:157},
-		vote4th:  {r:124, g: 80, b:157}
+		vote4th:  {r:124, g: 80, b:157},
+		duotrio:  {r:115, g: 72, b:152}
 	},
 
 	{ id:'Ruby'    , name:'黒澤 ルビィ',
@@ -254,7 +262,8 @@ const CharData = [
 		sifas_s2: {r:250, g:208, b:235},
 		vote2nd:  {r:251, g:117, b:228},
 		vote3rd:  {r:183, g: 63, b:145},
-		vote4th:  {r:230, g: 47, b:139}
+		vote4th:  {r:230, g: 47, b:139},
+		duotrio:  {r:221, g: 50, b:146}
 	},
 
 
@@ -372,7 +381,8 @@ const LabelName = {
 	nijiyon: 'にじよん<br>（キャラ名）',
 	vote2nd: '2ndシングル<br>センター投票',
 	vote3rd: '3rdシングル<br>センター投票',
-	vote4th: '4thシングル<br>センター投票'
+	vote4th: '4thシングル<br>センター投票',
+	duotrio: 'デュオトリオ<br>組み合わせ投票'
 };
 
 //■ 連想配列のr・g・bから、カラーコードを返す関数
@@ -467,7 +477,7 @@ document.getElementById("MainArea").innerHTML =
 	+ '<h3 class="muse">μ’sメンバーの色<\/h3>'
 	+ CreateColorListTable([0,1,2,3,4,5,6,7,8], ['sifas', 'sifas_s1', 'sifas_s2', 'puchi', 'llsif', 'llsif2', 'sifac'], '#e4007f')
 	+ '<h3 class="aqours">Aqoursメンバーの色<\/h3>'
-	+ CreateColorListTable([9,10,11,12,13,14,15,16,17], ['official', 'sifas', 'sifas_s1', 'sifas_s2', 'puchi', 'llsif', 'llsif2', 'sifac', 'vote2nd', 'vote3rd', 'vote4th'], '#00a0ea')
+	+ CreateColorListTable([9,10,11,12,13,14,15,16,17], ['official', 'sifas', 'sifas_s1', 'sifas_s2', 'puchi', 'llsif', 'llsif2', 'sifac', 'vote2nd', 'vote3rd', 'vote4th','duotrio'], '#00a0ea')
 	+ '<h3 class="niji">ニジガクメンバーの色<\/h3>'
 	+ CreateColorListTable([18,19,20,21,22,23,24,25,26], ['official', 'sifas', 'sifas_s1', 'sifas_s2', 'llsif', 'llsif2', 'monthly', 'nijiyon'], '#f29600');
 
@@ -490,6 +500,10 @@ document.getElementById("MainArea").innerHTML =
 </tr>
 </tbody>
 </table>
+
+<p>
+<a href="index.html">トップページに戻る。</a>
+</p>
 
 </body>
 </html>
