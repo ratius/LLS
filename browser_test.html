@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+
+<title>閲覧環境テスト</title>
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="color_sifas.css">
+</head>
+<body>
+<div id="MainArea">
+	<div style="text-align:center; margin-top: 40px;">
+	<span style="font-size: 150%; font-weight: bold;">よみこみちゅう…</span><br>
+	このコンテンツはJavaScriptを使用しています。<br>
+	いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
+	お手数ですが、JavaScriptの実行を許可した上でページを読み込み直してください。<br>
+	</div>
+</div>
+
+<script><!--
+var temp = new Date("2020-06-22T15:00:00+0900");
+
+Output = '\n<div id="MonthlyRanking">\n<h3 class="niji">テスト<\/h3>\n'
++ '<p>ISO 8601規格での読み込み：<br>\n' + temp + '<\/p>';
++ '<p>GetFullYear：<br>\n' + temp.getFullYear() + '<\/p>';
+
+document.getElementById("MainArea").innerHTML = Output;
+--></script>
+
+<h3 class="niji">更新履歴</h3>
+<table class="history">
+<tbody>
+<tr>
+	<td>2019/07/07 8:30頃</td>
+	<td><span class="new"></span>公開</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<a href="index.html">トップページに戻る。</a>
+</p>
+
+</body>
+</html>
