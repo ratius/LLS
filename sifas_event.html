@@ -56,7 +56,7 @@
 .PT-Left      { overflow-y: hidden; width: 68px; border-right: 2px solid #379;}
 .PT-Left th   { width: 68px;}
 .PT-Right     { overflow-y: scroll; width: calc(100vw - 105px); margin-right: 0;}
-.PT-Right td, div.PT-Right th { width: 79px; }
+.PT-Right td, div.PT-Right th { width: 74px; }
 
 .quarter-table {
 	border-collapse: collapse;
@@ -258,7 +258,7 @@ function DrawPairTable(){
 
 		//■右上
 		Output += '<td><div class="PT-Top PT-Right" id="PT-TR">\n'
-		+ '<table class="quarter-table" style="width: ' + (CharId.length*80) + 'px">\n<thead>\n<tr>\n';
+		+ '<table class="quarter-table" style="width: ' + (CharId.length*75) + 'px">\n<thead>\n<tr>\n';
 		for(x of CharId){
 			//キャラクター名取得
 			Output += '<th class="bg_' + x + '"><strong class="shadowname">'
@@ -280,7 +280,7 @@ function DrawPairTable(){
 
 		//■右下
 		Output += '<td><div class="PT-Bottom PT-Right" id="PT-BR" onscroll="SyncScroll();">\n'
-		+ '<table class="quarter-table" style="width: ' + (CharId.length*80) + 'px">\n<tbody>\n';
+		+ '<table class="quarter-table" style="width: ' + (CharId.length*75) + 'px">\n<tbody>\n';
 		for(y of CharId){
 			Output += '<tr>\n';
 			for(x of CharId){
@@ -295,7 +295,7 @@ function DrawPairTable(){
 					}
 
 					for(z of PairData[LookUp(x,"number")][LookUp(y,"number")]){
-						Output += '\n<div class="EventBox bg_' + x + '" title="'
+						Output += '<div class="EventBox bg_' + x + '" title="'
 						+ LookUp(x,"name") + '・' + LookUp(y,"name") + '\n'
 						+ LookUpEvent(z,"name")
 						+ '" style="color:' + LookUp(x,"color") + '">'
@@ -380,7 +380,7 @@ loadScript("data/events.js", function() {
 <table class="history">
 <tbody>
 <tr>
-	<td rowspan="2">2019/07/05 18:30頃</td>
+	<td rowspan="2">2019/07/05 19:30頃</td>
 	<td><span class="new"></span>「イベント一覧」に情報を追加</td>
 </tr>
 <tr>
