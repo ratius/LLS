@@ -37,30 +37,44 @@
 	border: solid 1px #ccc;
 }
 
-.card-box {
+#Pair-Table {
 	width: 100%;
-	height: 90vh;
-	overflow-x: auto;
-	overflow-y: auto;
-	white-space: nowrap;
-	border: 2px solid #999;
-}
-
-
-table.PairList {
-	width: 2268px;
+	height: 80vh;
 	text-align: center;
 	border-collapse: collapse;
+	border: 4px solid #00a0ea;
 }
 
-.PairList td, .PairList th {
-	width: 80px;
-	color: white;
-	padding: 1px auto;
+#Pair-Table td{
+	padding: 0;
+}
+
+.PT-Top       { overflow-x: hidden; height: 28px; border-bottom: 2px solid #379;}
+.PT-Top tr    { height: 28px; }
+.PT-Bottom    { overflow-x: scroll; height: calc(100vh - 140px);}
+.PT-Bottom tr { height: 59px; }
+.PT-Left      { overflow-y: hidden; width: 68px; border-right: 2px solid #379;}
+.PT-Left th   { width: 68px;}
+.PT-Right     { overflow-y: scroll; width: calc(100vw - 105px); margin-right: 0;}
+.PT-Right td, div.PT-Right th { width: 79px; }
+
+.quarter-table {
+	border-collapse: collapse;
+	padding: 1px 0;
 	text-align:center;
-	border-right: 1px solid #999;
+}
+
+#PT-TL { background-color: #dbf4ff; }
+
+.PT-Right > .quarter-table th,
+.PT-Right > .quarter-table td {
+	border-right: 1px solid #aaa;
+}
+.PT-Bottom > .quarter-table tr {
 	border-bottom: 1px solid #aaa;
 }
+.quarter-table td { color: #999; }
+
 
 .shadowname {
 	color: white;
@@ -81,7 +95,7 @@ td.bg_tp_white{
 	line-height: 18px;
 	border: 1px solid #666;
 	border-radius: 10px;
-	margin: 0 2px;
+	margin: 0 1px;
 }
 
 .EventBox span {
@@ -93,10 +107,11 @@ td.bg_tp_white{
 --></style>
 <script><!--
 
-const CharIdMuse = ['Honoka', 'Eli', 'Kotori', 'Umi', 'Rin', 'Maki', 'Nozomi', 'Hanayo', 'Nico'];
-const CharIdAqours = ['Chika', 'Riko', 'Kanan', 'Dia', 'You', 'Yoshiko', 'Hanamaru', 'Mari', 'Ruby'];
-const CharIdNiji = ['Ayumu', 'Kasumi', 'Shizuku', 'Karin', 'Ai', 'Kanata', 'Setsuna', 'Emma', 'Rina'];
-const CharId = CharIdMuse.concat(CharIdAqours).concat(CharIdNiji);
+const CharId = ['Honoka', 'Eli', 'Kotori', 'Umi', 'Rin', 'Maki', 'Nozomi', 'Hanayo', 'Nico',
+		'Chika', 'Riko', 'Kanan', 'Dia', 'You', 'Yoshiko', 'Hanamaru', 'Mari', 'Ruby',
+		'Ayumu', 'Kasumi', 'Shizuku', 'Karin', 'Ai', 'Kanata', 'Setsuna', 'Emma', 'Rina'];
+
+const EventType = []
 
 const CharLookUpTable = [
 	{"number":0 , "id": "Honoka",   "name": "穂乃果", "color": "black"},
@@ -129,6 +144,21 @@ const CharLookUpTable = [
 ];
 
 //■■各種関数
+//■Date型を「YYYY/MM/DD hh:mm」という文字列に変換
+function GetStringFromDate(date){
+	temp = new Date(date);
+	
+	if(temp.getFullYear() == 1970){ //取得失敗などの理由で1970年になった場合、空文字列を返す
+		console.log("Error: " + temp + "may not be a date");
+		return "";
+	}
+
+	return temp.getFullYear()
+	+ "/" + ("00" + (temp.getMonth()+1)).slice(-2)
+	+ "/" + ("00" + (temp.getDate())).slice(-2)
+	+ " " + ("00" + (temp.getHours())).slice(-2)
+	+ ":" + ("00" + (temp.getMinutes())).slice(-2);
+}
 
 //■キャラクター用のルックアップテーブル (ID, データ種)
 function LookUp(id, data){
@@ -151,23 +181,36 @@ function LookUpEvent(id, data){
 }
 
 
+//■■描画用関数
 //■イベントリスト
 function WriteEventList(){
 	var Output = '<table id="EventList">\n';
 
 	//■ヘッダー
 	Output += '<thead>\n<tr class="header-top">\n'
-	+ '<th>No.<\/th><th>イベント名<\/th><th>期間<\/th>\n<\/tr><\/thead>\n<tbody>\n';
+	+ '<th>No.<\/th><th>イベント名<\/th><th>タイプ<\/th><th>開催期間<\/th><\/tr>\n<\/thead>\n<tbody>\n';
 
 	//■メイン
-	
 	for(y of EventList){
 		Output += '<tr><td>' + y.id
 		+ '<\/td><td>' + y.name
-		+ '<\/td><td>' + y.date + '開始, ' + y.duration + '日間'
+		+ '<\/td><td style="text-align:center;';
+		switch(y.type) {
+			case "story":
+				Output += ' background-color:#cef;">ストーリー';
+				break;
+			case "exchange":
+				Output += ' background-color:#fdc;">交換所';
+				break;
+			default:
+				Output += '">' + y.type;
+		}
+		Output += '<\/td><td style="font-size: small;">開始：' + GetStringFromDate(y.started) + '<br>'
+		+ '終了：' +  GetStringFromDate(y.ended)
+		+ ' (' + Math.round((y.ended - y.started)/86400000) + '日間)'
 		+ '<\/td><\/tr>';
 	}
-	Output += '</tbody>\n</table>\n';
+	Output += '<\/tbody>\n<\/table>\n';
 	return Output;
 }
 
@@ -204,51 +247,79 @@ function MakePairData(){
 	}
 }
 
-// ■テーブルを作るための関数。col, rowには行列が入る
-function DrawPairTable(col, row){
-	var Output = '<div class="card-box">\n<table class="PairList">\n';
+// ■「共演ペア一覧」テーブルの作成
+function DrawPairTable(){
 
-	//■ヘッダー
-	Output += '<thead>\n<tr class="header-top">\n<th></th>\n';
-	for(x of col){
-		//キャラクター名取得
-		Output += '<th class="bg_' + x + '"><strong class="shadowname">' + LookUp(x,"name") + '<\/strong><\/th>\n';
-	}
+	//■親テーブル
+	var Output = '<table id="Pair-Table">\n<thead>\n<tr>\n';
 
-	Output += '<\/tr>\n<\/thead>\n<tbody>\n';
-	
-	//■メイン
-	for(y of row){
-		Output += '<th class="bg_' + y + '"><strong class="shadowname">' + LookUp(y,"name") + '<\/strong><\/th>\n';
+		//■左上
+		Output += '<td>\n<div class="PT-Top PT-Left" id="PT-TL"><\/div><\/td>\n';
 
-		for(x of col){
-			if(x === y){ //同キャラは灰色でいい
-				Output += '<td style="background-color:#aaa"><\/td>';
-			}else {
-				var Number = 0;
-				Output += '<td class="bg_tp_white bg_' + y + '">'
-
-				for(z of PairData[LookUp(x,"number")][LookUp(y,"number")]){
-					Output += '<div class="EventBox bg_' + x + '" title="'
-					+ LookUp(x,"name") + '・' + LookUp(y,"name") + '\n'
-					+ LookUpEvent(z,"name")
-					+ '" style="color:' + LookUp(x,"color") + '">'
-					+ '<span>' + z + '<\/span><\/div>';
-					
-					if(++Number == 3){
-						Output += '<br>';
-						Number = 0;
-					}
-				}
-				Output += '<\/td>\n';
-			}
+		//■右上
+		Output += '<td><div class="PT-Top PT-Right" id="PT-TR">\n'
+		+ '<table class="quarter-table" style="width: ' + (CharId.length*80) + 'px">\n<thead>\n<tr>\n';
+		for(x of CharId){
+			//キャラクター名取得
+			Output += '<th class="bg_' + x + '"><strong class="shadowname">'
+			+ LookUp(x,"name") + '<\/strong><\/th>\n';
 		}
-		
-		Output += '<\/tr>';
-	}
+		Output += '<\/tr>\n<\/thead>\n<\/table>\n<\/div>\n<\/td>';
 	
-	Output += '</tbody>\n</table>\n</div>\n';
+	Output += '<\/tr>\n<\/thead>\n<tbody>\n<tr>';
+	
+		//■左下
+		Output += '<td><div class="PT-Bottom PT-Left" id="PT-BL">\n'
+		+ '<table class="quarter-table">\n<tbody>\n';
+		
+		for(y of CharId){
+			Output += '<tr><th class="bg_' + y + '"><strong class="shadowname">'
+			+ LookUp(y,"name") + '<\/strong><\/th><\/tr>\n';
+		}
+		Output += '<\/tbody>\n<\/table>\n<\/div><\/td>\n';
+
+		//■右下
+		Output += '<td><div class="PT-Bottom PT-Right" id="PT-BR" onscroll="SyncScroll();">\n'
+		+ '<table class="quarter-table" style="width: ' + (CharId.length*80) + 'px">\n<tbody>\n';
+		for(y of CharId){
+			Output += '<tr>\n';
+			for(x of CharId){
+				if(x === y){ //同キャラは灰色でいい
+					Output += '<td style="background-color:#aaa"><\/td>\n';
+				}else {
+					var Number = 0;
+					Output += '<td class="bg_tp_white bg_' + y + '">'
+
+					if(PairData[LookUp(x,"number")][LookUp(y,"number")].length == 0){
+						Output += '－';
+					}
+
+					for(z of PairData[LookUp(x,"number")][LookUp(y,"number")]){
+						Output += '\n<div class="EventBox bg_' + x + '" title="'
+						+ LookUp(x,"name") + '・' + LookUp(y,"name") + '\n'
+						+ LookUpEvent(z,"name")
+						+ '" style="color:' + LookUp(x,"color") + '">'
+						+ '<span>' + z + '<\/span><\/div>';
+						
+						if(++Number == 3){
+							Output += '<br>';
+							Number = 0;
+						}
+					}
+					Output += '<\/td>\n';
+				}
+			}
+			Output += '<\/tr>\n';
+		}
+
+	Output += '<\/div><\/td>\n<\/tr>\n<\/tbody>\n<\/table>';
 	return Output;
+}
+
+//■スクロールバー連動
+function SyncScroll() {
+	document.getElementById('PT-TR').scrollLeft = document.all('PT-BR').scrollLeft;
+	document.getElementById('PT-BL').scrollTop = document.all('PT-BR').scrollTop;
 }
 
 --></script>
@@ -292,15 +363,16 @@ loadScript("data/events.js", function() {
 	MakePairData();
 
 	document.getElementById("MainArea").innerHTML =
-	  '<h3 style="background-color:#ddd; color:#777; border-color:#999;">まえがき<\/h3>'
+	'<h2>スクフェスALL STARS 過去のイベントまとめ<\/h2>'
+	+ '<h3 style="background-color:#ddd; color:#777; border-color:#999;">まえがき<\/h3>'
 	+ '<p>スクフェスALL STARSのイベントストーリーおける、各ペアの共演状況です。<br>PCで閲覧している場合、イベント番号の書かれた丸にカーソルを当てることで詳しい情報のツールチップが出現します。'
-	+ '<br>最終更新：' + LatestUpdate + '</p>'
+	+ '<br>最終更新：' + LatestUpdate + '<\/p>'
 	
-	+'<h3 style="background-color:#ddd; color:#777; border-color:#999;">イベント一覧<\/h3>'
+	+ '<h3 class="muse">イベント一覧<\/h3>'
 	+ WriteEventList()
 	
-	+ '<h3 style="background-color:#ddd; color:#777; border-color:#999;">共演ペア一覧<\/h3>'
-	+ DrawPairTable(CharId, CharId);
+	+ '<h3 class="aqours">ペア共演状況<\/h3>'
+	+ DrawPairTable();
 });
 --></script>
 
@@ -308,11 +380,18 @@ loadScript("data/events.js", function() {
 <table class="history">
 <tbody>
 <tr>
-	<td>2019/07/06 19:00頃</td>
+	<td rowspan="2">2019/07/05 18:30頃</td>
+	<td><span class="new"></span>「イベント一覧」に情報を追加</td>
+</tr>
+<tr>
+	<td><span class="fix"></span>「ペア共演状況」の表</td>
+</tr>
+<tr>
+	<td>2019/07/05 19:00頃</td>
 	<td><span class="fix"></span>レイアウト調整</td>
 </tr>
 <tr>
-	<td>2019/07/06 18:30頃</td>
+	<td>2019/07/05 18:30頃</td>
 	<td><span class="new"></span>公開</td>
 </tr>
 </tbody>
