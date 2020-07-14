@@ -57,12 +57,13 @@ var MemberGroup = [
 	["┣","Aqoursキャスト",["AqoursCast"]],
 	["┣","Aqoursユニット",["AqoursUnit"]],
 	["┗","Aqoursカップリング",["AqoursCP"]],
-	[""  ,"μ’s＆Aqorus",["Muse","Aqours"]],
 	[""  ,"虹ヶ咲学園スクールアイドル同好会",["Niji"]],
 	["┣","虹ヶ咲関係者",["Niji","Niji2"]],
 	["┣","虹ヶ咲キャスト",["NijiCast"]],
 	["┣","虹ヶ咲ユニット",["NijiUnit"]],
 	["┗","虹ヶ咲カップリング",["NijiCP"]],
+	[""  ,"ラブライブ!スーパースター!!",["SuperStar"]],
+	[""  ,"μ’s＆Aqorus",["Muse","Aqours"]],
 	[""  ,"スクフェスAll Stars",["Muse","Aqours","Niji"]],
 	["┣","スクスタキャスト",["MuseCast","AqoursCast","NijiCast"]],
 	["┗","楽曲ユニット",["AllUnit"]],
@@ -326,6 +327,12 @@ var CharList = [
 	{name:"せつエマ",       color:[ColSetu, ColEmma], group:{"NijiCP":1}},
 	{name:"せつりな",       color:[ColSetu, ColRina], group:{"NijiCP":1}},
 	{name:"りなエマ",       color:[ColRina, ColEmma], group:{"NijiCP":1}},
+
+	{name:"澁谷かのん",     color:["#ddd"], group:{"SuperStar":1}},
+	{name:"唐可可",         color:["#ddd"], group:{"SuperStar":1}},
+	{name:"嵐千砂都",       color:["#ddd"], group:{"SuperStar":1}},
+	{name:"平安名すみれ",   color:["#ddd"], group:{"SuperStar":1}},
+	{name:"葉月恋",         color:["#ddd"], group:{"SuperStar":1}},
 
 	{name:"桜坂しずく",    color:["#acf"], group:{"Seiran":1}},
 	{name:"一之瀬マリカ",  color:["#acf"], group:{"Seiran":1}},
@@ -710,7 +717,7 @@ function shuffle(array) {
 }
 --></script>
 <link rel="stylesheet" href="main.css">
-<style type="text/css">
+<style>
 <!--
 /**********************************************************
 
@@ -790,8 +797,7 @@ body {
 	font-size: 120%;
 }
 
-//-->
-</style>
+--></style>
 </head>
 
 <body>
@@ -850,6 +856,10 @@ document.write('<\/select><\/form>');
 <h3 class="niji">更新履歴</h3>
 <table class="history" style="margin: auto;">
 <tbody>
+<tr>
+	<td>2020/07/15</td>
+	<td><span class="new"></span>「ラブライブ!スーパースター!!」を追加</td>
+</tr>
 <tr>
 	<td>2020/02/06</td>
 	<td><span class="new"></span>「虹ヶ咲関係者」モードを追加</td>
