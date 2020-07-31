@@ -152,5 +152,13 @@ const EventList = [
 	"started" : new Date("2020-07-06T15:00:00+09:00"),
 	"ended"   : new Date("2020-07-15T14:59:59+09:00"),
 	"participated" : ["Eli", "Hanayo", "Kanan", "Yoshiko", "Ayumu", "Kanata"]
+},
+{
+	"id" : 20,
+	"name" : "璃奈のビックリお化け屋敷",
+	"type" : "story",
+	"started" : new Date("2020-07-22T15:00:00+09:00"),
+	"ended"   : new Date("2020-07-31T14:59:59+09:00"),
+	"participated" : ["Kotori", "Umi", "Riko", "Ruby", "Kasumi", "Rina"]
 }
 ];
