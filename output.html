@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="utf-8">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@ratius55">
+<meta name="twitter:creator" content="@ratius55">
+<meta name="twitter:title" content="ラブライブ！イメージカラーまとめ">
+<meta name="twitter:description" content="「ラブライブ！」シリーズにおいて、各所で使われているイメージカラーのまとめです。">
+<meta name="twitter:image" content="https://ratius.github.io/LLS/img/card_color.png">
+
+<title>ラブライブ！イメージカラーまとめ</title>
+
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="main.css">
+<style><!--
+
+table.call {
+	text-align: center;
+	font-size: 75%;
+	border-style: solid;
+	border-width: 3px;
+	border-collapse: collapse;
+	margin-bottom: 40px;
+}
+
+th.Emma { font-size: 80%;}
+
+table.call tr:nth-child(2n) {
+	background-color: #ddd;
+}
+
+.call td {
+	width: 10%;
+	padding: 4px 2px;
+	border-top: solid 2px white;
+	border-left: solid 2px white;
+}
+
+--></style>
+<script><!--
+
+const CharData = [
+	{ id:'Honoka', name:'高坂 穂乃果',
+		llsif:    {r:255, g:214, b:165},
+		llsif2:   {r:255, g:247, b:237},
+		sifac:    {r:243, g:150, b: 47},
+		puchi:    {r:255, g:134, b: 37},
+		sifas:    {r:255, g:163, b:054},
+		sifas_s1: {r:255, g:219, b:153},
+		sifas_s2: {r:255, g:233, b:194}
+	},
+
+	{ id:'Eli', name:'絢瀬 絵里',
+		llsif:    {r:196, g:237, b:250},
+		llsif2:   {r:243, g:251, b:254},
+		sifac:    {r: 14, g:167, b:225},
+		puchi:    {r: 78, g:183, b:227},
+		sifas:    {r:122, g:238, b:255},
+		sifas_s1: {r:179, g:226, b:245},
+		sifas_s2: {r:209, g:238, b:249}
+	},
+
+	{ id:'Kotori', name:'南 ことり',
+		llsif:    {r:231, g:218, b:218},
+		llsif2:   {r:250, g:248, b:248},
+		sifac:    {r:176, g:176, b:161},
+		puchi:    {r:142, g:142, b:142},
+		sifas:    {r:206, g:191, b:191},
+		sifas_s1: {r:224, g:225, b:224},
+		sifas_s2: {r:236, g:237, b:236}
+	},
+
+	{ id:'Umi', name:'園田 海未',
+		llsif:    {r:205, g:223, b:252},
+		llsif2:   {r:245, g:249, b:254},
+		sifac:    {r: 54, g:114, b:186},
+		puchi:    {r: 58, g:141, b:255},
+		sifas:    {r: 23, g:105, b:255},
+		sifas_s1: {r:153, g:177, b:219},
+		sifas_s2: {r:194, g:208, b:233}
+	},
+
+	{ id:'Rin', name:'星空 凛',
+		llsif:    {r:255, g:253, b:177},
+		llsif2:   {r:255, g:255, b:239},
+		sifac:    {r:227, g:206, b: 16},
+		puchi:    {r:227, g:193, b:  2},
+		sifas:    {r:219, g:212, b: 30},
+		sifas_s1: {r:255, g:241, b:153},
+		sifas_s2: {r:255, g:247, b:194}
+	},
+
+	{ id:'Maki', name:'西木野 真姫',
+		llsif:    {r:255, g:195, b:183},
+		llsif2:   {r:255, g:243, b:241},
+		sifac:    {r:233, g: 80, b: 64},
+		puchi:    {r:240, g: 70, b: 70},
+		sifas:    {r:255, g: 80, b: 62},
+		sifas_s1: {r:248, g:169, b:175},
+		sifas_s2: {r:251, g:203, b:207}
+	},
+
+	{ id:'Nozomi', name:'東條 希',
+		llsif:    {r:228, g:214, b:242},
+		llsif2:   {r:250, g:247, b:252},
+		sifac:    {r:103, g: 81, b:153},
+		puchi:    {r:195, g:100, b:255},
+		sifas:    {r:196, g:085, b:246},
+		sifas_s1: {r:206, g:173, b:215},
+		sifas_s2: {r:226, g:206, b:231}
+	},
+
+	{ id:'Hanayo', name:'小泉 花陽',
+		llsif:    {r:203, g:245, b:206},
+		llsif2:   {r:245, g:253, b:245},
+		sifac:    {r: 77, g:180, b: 75},
+		puchi:    {r: 88, g:208, b:108},
+		sifas:    {r:106, g:230, b:115},
+		sifas_s1: {r:153, g:221, b:206},
+		sifas_s2: {r:194, g:235, b:226}
+	},
+
+	{ id:'Nico', name:'矢澤 にこ',
+		llsif:    {r:255, g:209, b:243},
+		llsif2:   {r:255, g:241, b:251},
+		sifac:    {r:233, g: 80, b:148},
+		puchi:    {r:255, g: 79, b:133},
+		sifas:    {r:255, g:079, b:145},
+		sifas_s1: {r:244, g:164, b:201},
+		sifas_s2: {r:248, g:200, b:223}
+	},
+	
+
+	{ id:'Chika'   , name:'高海 千歌',
+		official: {r:255, g:121, b: 27},
+		llsif:    {r:255, g:205, b:183},
+		llsif2:   {r:255, g:245, b:241},
+		sifac:    {r:238, g:123, b: 58},
+		puchi:    {r:255, g:155, b: 13},
+		sifas:    {r:255, g:149, b: 71},
+		sifas_s1: {r:255, g:204, b:173},
+		sifas_s2: {r:255, g:224, b:206},
+		vote2nd:  {r:240, g:162, b: 11},
+		vote3rd:  {r:238, g:120, b:  0},
+		vote4th:  {r:239, g:120, b:  0},
+		duotrio:  {r:243, g:152, b:  1}
+	},
+
+	{ id:'Riko'    , name:'桜内 梨子',
+		official: {r:255, g:119, b:119},
+		llsif:    {r:255, g:200, b:210},
+		llsif2:   {r:255, g:244, b:246},
+		sifac:    {r:242, g:150, b:191},
+		puchi:    {r:248, g:138, b:149},
+		sifas:    {r:255, g:158, b:172},
+		sifas_s1: {r:253, g:193, b:203},
+		sifas_s2: {r:254, g:218, b:224},
+		vote2nd:  {r:233, g:169, b:232},
+		vote3rd:  {r:220, g:118, b:171},
+		vote4th:  {r:238, g:135, b:180},
+		duotrio:  {r:229, g:164, b:198}
+	},
+
+	{ id:'Kanan'   , name:'松浦 果南',
+		official: {r:  0, g:210, b:158},
+		llsif:    {r:182, g:234, b:231},
+		llsif2:   {r:240, g:251, b:250},
+		sifac:    {r:  0, g:176, b:162},
+		puchi:    {r: 15, g:219, b:155},
+		sifas:    {r: 39, g:193, b:183},
+		sifas_s1: {r:153, g:233, b:224},
+		sifas_s2: {r:194, g:242, b:236},
+		vote2nd:  {r: 19, g:232, b:174},
+		vote3rd:  {r:  0, g:179, b:134},
+		vote4th:  {r:  0, g:170, b:131},
+		duotrio:  {r:120, g:196, b:166}
+	},
+
+	{ id:'Dia'     , name:'黒澤 ダイヤ',
+		official: {r:244, g: 50, b: 50},
+		llsif:    {r:253, g:194, b:199},
+		llsif2:   {r:255, g:243, b:244},
+		sifac:    {r:220, g:  9, b: 43},
+		puchi:    {r:251, g: 74, b: 74},
+		sifas:    {r:219, g:  7, b: 57},
+		sifas_s1: {r:244, g:153, b:170},
+		sifas_s2: {r:248, g:194, b:204},
+		vote2nd:  {r:242, g: 59, b: 76},
+		vote3rd:  {r:231, g: 45, b: 54},
+		vote4th:  {r:231, g: 45, b: 56},
+		duotrio:  {r:224, g: 50, b: 51}
+	},
+
+	{ id:'You'     , name:'渡辺 曜',
+		official: {r: 42, g:164, b:219},
+		llsif:    {r:196, g:229, b:254},
+		llsif2:   {r:243, g:250, b:255},
+		sifac:    {r:  0, g:167, b:210},
+		puchi:    {r: 43, g:207, b:242},
+		sifas:    {r:102, g:192, b:255},
+		sifas_s1: {r:153, g:225, b:243},
+		sifas_s2: {r:194, g:237, b:248},
+		vote2nd:  {r: 73, g:185, b:249},
+		vote3rd:  {r:  0, g:149, b:216},
+		vote4th:  {r:  0, g:149, b:217},
+		duotrio:  {r: 74, g:183, b:239}
+	},
+
+	{ id:'Yoshiko' , name:'津島 善子',
+		official: {r:174, g:174, b:174},
+		llsif:    {r:217, g:223, b:240},
+		llsif2:   {r:247, g:249, b:252},
+		sifac:    {r:179, g:177, b:177},
+		puchi:    {r:142, g:142, b:142},
+		sifas:    {r:193, g:202, b:212},
+		sifas_s1: {r:224, g:225, b:225},
+		sifas_s2: {r:236, g:237, b:237},
+		vote2nd:  {r:137, g:137, b:137},
+		vote3rd:  {r: 76, g: 73, b: 72},
+		vote4th:  {r:113, g:113, b:113},
+		duotrio:  {r:137, g:148, b:154}
+	},
+
+	{ id:'Hanamaru', name:'国木田 花丸',
+		official: {r:207, g:186, b: 15},
+		llsif:    {r:245, g:235, b:156},
+		llsif2:   {r:253, g:251, b:235},
+		sifac:    {r:248, g:199, b:  0},
+		puchi:    {r:215, g:197, b:  1},
+		sifas:    {r:255, g:208, b: 15},
+		sifas_s1: {r:255, g:235, b:153},
+		sifas_s2: {r:255, g:243, b:194},
+		vote2nd:  {r:230, g:214, b: 23},
+		vote3rd:  {r:159, g:140, b:  0},
+		vote4th:  {r:255, g:241, b:  0},
+		duotrio:  {r:224, g:208, b: 35}
+	},
+
+	{ id:'Mari'    , name:'小原 鞠莉',
+		official: {r:165, g: 48, b:224},
+		llsif:    {r:236, g:209, b:243},
+		llsif2:   {r:251, g:246, b:253},
+		sifac:    {r:134, g: 57, b:145},
+		puchi:    {r:195, g:100, b:255},
+		sifas:    {r:194, g: 82, b:198},
+		sifas_s1: {r:215, g:168, b:226},
+		sifas_s2: {r:231, g:203, b:238},
+		vote2nd:  {r:174, g: 88, b:235},
+		vote3rd:  {r:124, g: 80, b:157},
+		vote4th:  {r:124, g: 80, b:157},
+		duotrio:  {r:115, g: 72, b:152}
+	},
+
+	{ id:'Ruby'    , name:'黒澤 ルビィ',
+		official: {r:238, g: 85, b:183},
+		llsif:    {r:251, g:206, b:235},
+		llsif2:   {r:254, g:245, b:251},
+		sifac:    {r:212, g: 71, b:148},
+		puchi:    {r:255, g: 98, b:146},
+		sifas:    {r:255, g:111, b:190},
+		sifas_s1: {r:246, g:177, b:222},
+		sifas_s2: {r:250, g:208, b:235},
+		vote2nd:  {r:251, g:117, b:228},
+		vote3rd:  {r:183, g: 63, b:145},
+		vote4th:  {r:230, g: 47, b:139},
+		duotrio:  {r:221, g: 50, b:146}
+	},
+
+
+	{ id:'Ayumu'   , name:'上原 歩夢',
+		official: {r:237, g:125, b:149},
+		llsif:    {r:254, g:186, b:203},
+		llsif2:   {r:255, g:241, b:245},
+		sifas:    {r:255, g:191, b:224},
+		sifas_s1: {r:248, g:203, b:213},
+		sifas_s2: {r:251, g:224, b:230},
+		monthly:  {r:237, g:197, b:206},
+		nijiyon:  {r:220 ,g:152 ,b:166}
+	},
+
+	{ id:'Kasumi'  , name:'中須 かすみ',
+		official: {r:231, g:214, b:  0},
+		llsif:    {r:245, g:252, b:164},
+		llsif2:   {r:253, g:254, b:237},
+		sifas:    {r:213, g:222, b:112},
+		sifas_s1: {r:245, g:239, b:153},
+		sifas_s2: {r:249, g:245, b:194},
+		monthly:  {r:232, g:224, b:137},
+		nijiyon:  {r:202 ,g:188 ,b: 53}
+	},
+
+	{ id:'Shizuku' , name:'桜坂 しずく',
+		official: {r:  1, g:183, b:237},
+		llsif:    {r:178, g:223, b:238},
+		llsif2:   {r:240, g:249, b:252},
+		sifas_s1: {r:178, g:219, b:232},
+		sifas_s2: {r:209, g:233, b:241},
+		sifas:    {r:187, g:237, b:255},
+		monthly:  {r:190, g:224, b:237},
+		nijiyon:  {r:143 ,g:197 ,b:220}
+	},
+
+	{ id:'Karin'   , name:'朝香 果林',
+		official: {r:072, g:094, b:198},
+		llsif:    {r:176, g:204, b:251},
+		llsif2:   {r:239, g:245, b:254},
+		sifas:    {r:074, g:047, b:237},
+		sifas_s1: {r:182, g:191, b:232},
+		sifas_s2: {r:211, g:217, b:241},
+		monthly:  {r:192, g:202, b:250},
+		nijiyon:  {r:145 ,g:160 ,b:245}
+	},
+
+	{ id:'Ai'      , name:'宮下 愛',
+		official: {r:255, g:088, b:  0},
+		llsif:    {r:255, g:213, b:151},
+		llsif2:   {r:255, g:247, b:234},
+		sifas:    {r:255, g:130, b: 70},
+		sifas_s1: {r:255, g:188, b:153},
+		sifas_s2: {r:255, g:215, b:193},
+		monthly:  {r:253, g:183, b:146},
+		nijiyon:  {r:251 ,g:134 ,b: 84}
+	},
+
+	{ id:'Kanata'  , name:'近江 彼方',
+		official: {r:166, g:100, b:160},
+		llsif:    {r:225, g:209, b:246},
+		llsif2:   {r:249, g:246, b:253},
+		sifas:    {r:190, g:130, b:255},
+		sifas_s1: {r:225, g:193, b:223},
+		sifas_s2: {r:237, g:218, b:236},
+		monthly:  {r:211, g:184, b:229},
+		nijiyon:  {r:173 ,g:133 ,b:206}
+	},
+
+	{ id:'Setsuna' , name:'優木 せつ菜',
+		official: {r:216, g: 28, b: 47},
+		llsif:    {r:255, g:175, b:175},
+		llsif2:   {r:255, g:239, b:239},
+		sifas:    {r:246, g: 14, b: 14},
+		sifas_s1: {r:239, g:164, b:172},
+		sifas_s2: {r:245, g:200, b:205},
+		monthly:  {r:249, g:166, b:170},
+		nijiyon:  {r:243, g:108, b:113}
+	},
+
+	{ id:'Emma'    , name:'エマ・ヴェルデ',
+		official: {r:132, g:195, b:110},
+		llsif:    {r:211, g:250, b:211},
+		llsif2:   {r:246, g:254, b:246},
+		sifas:    {r:143, g:218, b:121},
+		sifas_s1: {r:203, g:232, b:170},
+		sifas_s2: {r:224, g:241, b:204},
+		monthly:  {r:200, g:237, b:190},
+		nijiyon:  {r:157, g:220, b:142}
+	},
+
+	{ id:'Rina'    , name:'天王寺 璃奈',
+		official: {r:156, g:165, b:185},
+		llsif:    {r:214, g:225, b:227},
+		llsif2:   {r:247, g:247, b:249},
+		sifas:    {r:208, g:206, b:225},
+		sifas_s1: {r:213, g:217, b:225},
+		sifas_s2: {r:230, g:232, b:237},
+		monthly:  {r:207, g:208, b:227},
+		nijiyon:  {r:168, g:170, b:202}
+	}
+
+];
+
+const LabelName = {
+	official: '公式サイト',
+	llsif: 'スクフェス<br>（基本背景：濃）',
+	llsif2: 'スクフェス<br>（基本背景：薄）',
+	puchi: 'ぷちぐる<br>（キャラ名）',
+	sifas: 'スクスタ<br>（ゲーム内）',
+	sifas_s1: 'スクスタ<br>（公式web：濃）',
+	sifas_s2: 'スクスタ<br>（公式web：薄）',
+	sifac: 'アケフェス<br>（キャラ名）',
+	monthly: 'マンスリー<br>ランキング',
+	nijiyon: 'にじよん<br>（キャラ名）',
+	vote2nd: '2ndシングル<br>センター投票',
+	vote3rd: '3rdシングル<br>センター投票',
+	vote4th: '4thシングル<br>センター投票',
+	duotrio: 'デュオトリオ<br>組み合わせ投票'
+};
+
+//■ 連想配列のr・g・bから、カラーコードを返す関数
+function GetColorCode (RGB){
+	var temp = '00000' + (Math.floor(RGB.r)*65536 + Math.floor(RGB.g)*256 + Math.floor(RGB.b)).toString(16).toUpperCase();
+	return '#' + temp.substr(temp.length - 6);
+}
+
+//■ 連想配列のr・g・bから、対応する文字色を返す関数
+//   参考：https://katashin.info/2018/12/18/247
+function chooseTextColor(RGB) {
+	// sRGB を RGB に変換し、背景色の相対輝度を求める
+	const toRgbItem = item => {
+		const i = item / 255
+		return i <= 0.03928 ? i / 12.92:  Math.pow((i + 0.055) / 1.055, 2.4)
+	}
+	const R = toRgbItem(RGB.r)
+	const G = toRgbItem(RGB.g)
+	const B = toRgbItem(RGB.b)
+	const Lbg = 0.2126 * R + 0.7152 * G + 0.0722 * B
+	
+	// 白と黒の相対輝度。定義からそれぞれ 1 と 0 になる。
+	const Lw = 1
+	const Lb = 0
+	
+	// 白と背景色のコントラスト比、黒と背景色のコントラスト比を
+	// それぞれ求める。
+	const Cw = (Lw + 0.05) / (Lbg + 0.05)
+	const Cb = (Lbg + 0.05) / (Lb + 0.05)
+	
+	// コントラスト比が大きい方を文字色として返す。
+	return Cw < Cb ? 'black':  'white'
+}
+
+//■ 連想配列のr・g・bから、"rgb(r,g,b)"の形を返す関数
+function getRGB(RGB){
+	return 'rgb(' + RGB.r + ',' + RGB.g + ',' + RGB.b + ')';
+}
+
+function CreateColorListTable(Idol, col, tablecol){
+	Output = '<table class="call" style="border: solid 3px ' + tablecol + '">\n'
+	+ '<thead>\n<tr><th style="background-color:' + tablecol + '">→キャラクター<br>↓媒体<\/th>';
+	//■ヘッダーのキャラ名
+	for(x of Idol){
+		Output += '<th class="' + CharData[x].id + '">'
+		+ CharData[x].name + '<\/th>\n';
+	}
+	Output += '<\/tr>\n<\/thead>\n';
+
+	//■ここから
+	for (y of col){
+		Output += '<tr><th>' + (LabelName[y] ? LabelName[y]:  '未定義の色') + '<\/th>\n';
+	
+		for (x of Idol) {
+			var k = CharData[x][y];
+		
+			if (k){ //定義されているなら
+				Output += '<td style="color:' + chooseTextColor(k)
+				+ '; background:' + getRGB(k) + '">'
+				+ '<span style="font-size:90%">('
+				+ Math.floor(k.r) + ', ' + Math.floor(k.g) + ', ' + Math.floor(k.b) + ')<\/span><br>'
+				+ GetColorCode(k) + '<\/td>';
+			} else {
+				Output += '<td><\/td>';
+			}
+		}
+		Output += '<\/tr>\n';
+	}
+
+	Output += '<\/table>\n';
+	
+	return Output;
+}
+--></script>
+
+</head>
+<body>
+<div id="MainArea"><h2>ラブライブ！イメージカラーまとめ</h2><p>「ラブライブ！」シリーズにおいて、各所で使われているイメージカラーのまとめです。<br>このページではRGBでの抽出が可能なデジタルカラーのみを扱っています。</p><h3 class="muse">μ’sメンバーの色</h3><table class="call" style="border: solid 3px #e4007f">
+<thead>
+<tr><th style="background-color:#e4007f">→キャラクター<br>↓媒体</th><th class="Honoka">高坂 穂乃果</th>
+<th class="Eli">絢瀬 絵里</th>
+<th class="Kotori">南 ことり</th>
+<th class="Umi">園田 海未</th>
+<th class="Rin">星空 凛</th>
+<th class="Maki">西木野 真姫</th>
+<th class="Nozomi">東條 希</th>
+<th class="Hanayo">小泉 花陽</th>
+<th class="Nico">矢澤 にこ</th>
+</tr>
+</thead>
+<tbody><tr><th>スクスタ<br>（ゲーム内）</th>
+<td style="color:black; background:rgb(255,163,44)"><span style="font-size:90%">(255, 163, 44)</span><br>#FFA32C</td><td style="color:black; background:rgb(122,238,255)"><span style="font-size:90%">(122, 238, 255)</span><br>#7AEEFF</td><td style="color:black; background:rgb(206,191,191)"><span style="font-size:90%">(206, 191, 191)</span><br>#CEBFBF</td><td style="color:white; background:rgb(23,105,255)"><span style="font-size:90%">(23, 105, 255)</span><br>#1769FF</td><td style="color:black; background:rgb(219,212,30)"><span style="font-size:90%">(219, 212, 30)</span><br>#DBD41E</td><td style="color:black; background:rgb(255,80,62)"><span style="font-size:90%">(255, 80, 62)</span><br>#FF503E</td><td style="color:black; background:rgb(196,85,246)"><span style="font-size:90%">(196, 85, 246)</span><br>#C455F6</td><td style="color:black; background:rgb(106,230,115)"><span style="font-size:90%">(106, 230, 115)</span><br>#6AE673</td><td style="color:black; background:rgb(255,79,145)"><span style="font-size:90%">(255, 79, 145)</span><br>#FF4F91</td></tr>
+<tr><th>スクスタ<br>（公式web：濃）</th>
+<td style="color:black; background:rgb(255,219,153)"><span style="font-size:90%">(255, 219, 153)</span><br>#FFDB99</td><td style="color:black; background:rgb(179,226,245)"><span style="font-size:90%">(179, 226, 245)</span><br>#B3E2F5</td><td style="color:black; background:rgb(224,225,224)"><span style="font-size:90%">(224, 225, 224)</span><br>#E0E1E0</td><td style="color:black; background:rgb(153,177,219)"><span style="font-size:90%">(153, 177, 219)</span><br>#99B1DB</td><td style="color:black; background:rgb(255,241,153)"><span style="font-size:90%">(255, 241, 153)</span><br>#FFF199</td><td style="color:black; background:rgb(248,169,175)"><span style="font-size:90%">(248, 169, 175)</span><br>#F8A9AF</td><td style="color:black; background:rgb(206,173,215)"><span style="font-size:90%">(206, 173, 215)</span><br>#CEADD7</td><td style="color:black; background:rgb(153,221,206)"><span style="font-size:90%">(153, 221, 206)</span><br>#99DDCE</td><td style="color:black; background:rgb(244,164,201)"><span style="font-size:90%">(244, 164, 201)</span><br>#F4A4C9</td></tr>
+<tr><th>スクスタ<br>（公式web：薄）</th>
+<td style="color:black; background:rgb(255,233,194)"><span style="font-size:90%">(255, 233, 194)</span><br>#FFE9C2</td><td style="color:black; background:rgb(209,238,249)"><span style="font-size:90%">(209, 238, 249)</span><br>#D1EEF9</td><td style="color:black; background:rgb(236,237,236)"><span style="font-size:90%">(236, 237, 236)</span><br>#ECEDEC</td><td style="color:black; background:rgb(194,208,233)"><span style="font-size:90%">(194, 208, 233)</span><br>#C2D0E9</td><td style="color:black; background:rgb(255,247,194)"><span style="font-size:90%">(255, 247, 194)</span><br>#FFF7C2</td><td style="color:black; background:rgb(251,203,207)"><span style="font-size:90%">(251, 203, 207)</span><br>#FBCBCF</td><td style="color:black; background:rgb(226,206,231)"><span style="font-size:90%">(226, 206, 231)</span><br>#E2CEE7</td><td style="color:black; background:rgb(194,235,226)"><span style="font-size:90%">(194, 235, 226)</span><br>#C2EBE2</td><td style="color:black; background:rgb(248,200,223)"><span style="font-size:90%">(248, 200, 223)</span><br>#F8C8DF</td></tr>
+<tr><th>ぷちぐる<br>（キャラ名）</th>
+<td style="color:black; background:rgb(255,134,37)"><span style="font-size:90%">(255, 134, 37)</span><br>#FF8625</td><td style="color:black; background:rgb(78,183,227)"><span style="font-size:90%">(78, 183, 227)</span><br>#4EB7E3</td><td style="color:black; background:rgb(142,142,142)"><span style="font-size:90%">(142, 142, 142)</span><br>#8E8E8E</td><td style="color:black; background:rgb(58,141,255)"><span style="font-size:90%">(58, 141, 255)</span><br>#3A8DFF</td><td style="color:black; background:rgb(227,193,2)"><span style="font-size:90%">(227, 193, 2)</span><br>#E3C102</td><td style="color:black; background:rgb(240,70,70)"><span style="font-size:90%">(240, 70, 70)</span><br>#F04646</td><td style="color:black; background:rgb(195,100,255)"><span style="font-size:90%">(195, 100, 255)</span><br>#C364FF</td><td style="color:black; background:rgb(88,208,108)"><span style="font-size:90%">(88, 208, 108)</span><br>#58D06C</td><td style="color:black; background:rgb(255,79,133)"><span style="font-size:90%">(255, 79, 133)</span><br>#FF4F85</td></tr>
+<tr><th>スクフェス<br>（基本背景：濃）</th>
+<td style="color:black; background:rgb(255,214,165)"><span style="font-size:90%">(255, 214, 165)</span><br>#FFD6A5</td><td style="color:black; background:rgb(196,237,250)"><span style="font-size:90%">(196, 237, 250)</span><br>#C4EDFA</td><td style="color:black; background:rgb(231,218,218)"><span style="font-size:90%">(231, 218, 218)</span><br>#E7DADA</td><td style="color:black; background:rgb(205,223,252)"><span style="font-size:90%">(205, 223, 252)</span><br>#CDDFFC</td><td style="color:black; background:rgb(255,253,177)"><span style="font-size:90%">(255, 253, 177)</span><br>#FFFDB1</td><td style="color:black; background:rgb(255,195,183)"><span style="font-size:90%">(255, 195, 183)</span><br>#FFC3B7</td><td style="color:black; background:rgb(228,214,242)"><span style="font-size:90%">(228, 214, 242)</span><br>#E4D6F2</td><td style="color:black; background:rgb(203,245,206)"><span style="font-size:90%">(203, 245, 206)</span><br>#CBF5CE</td><td style="color:black; background:rgb(255,209,243)"><span style="font-size:90%">(255, 209, 243)</span><br>#FFD1F3</td></tr>
+<tr><th>スクフェス<br>（基本背景：薄）</th>
+<td style="color:black; background:rgb(255,247,237)"><span style="font-size:90%">(255, 247, 237)</span><br>#FFF7ED</td><td style="color:black; background:rgb(243,251,254)"><span style="font-size:90%">(243, 251, 254)</span><br>#F3FBFE</td><td style="color:black; background:rgb(250,248,248)"><span style="font-size:90%">(250, 248, 248)</span><br>#FAF8F8</td><td style="color:black; background:rgb(245,249,254)"><span style="font-size:90%">(245, 249, 254)</span><br>#F5F9FE</td><td style="color:black; background:rgb(255,255,239)"><span style="font-size:90%">(255, 255, 239)</span><br>#FFFFEF</td><td style="color:black; background:rgb(255,243,241)"><span style="font-size:90%">(255, 243, 241)</span><br>#FFF3F1</td><td style="color:black; background:rgb(250,247,252)"><span style="font-size:90%">(250, 247, 252)</span><br>#FAF7FC</td><td style="color:black; background:rgb(245,253,245)"><span style="font-size:90%">(245, 253, 245)</span><br>#F5FDF5</td><td style="color:black; background:rgb(255,241,251)"><span style="font-size:90%">(255, 241, 251)</span><br>#FFF1FB</td></tr>
+<tr><th>アケフェス<br>（キャラ名）</th>
+<td style="color:black; background:rgb(243,150,47)"><span style="font-size:90%">(243, 150, 47)</span><br>#F3962F</td><td style="color:black; background:rgb(14,167,225)"><span style="font-size:90%">(14, 167, 225)</span><br>#0EA7E1</td><td style="color:black; background:rgb(176,176,161)"><span style="font-size:90%">(176, 176, 161)</span><br>#B0B0A1</td><td style="color:white; background:rgb(54,114,186)"><span style="font-size:90%">(54, 114, 186)</span><br>#3672BA</td><td style="color:black; background:rgb(227,206,16)"><span style="font-size:90%">(227, 206, 16)</span><br>#E3CE10</td><td style="color:black; background:rgb(233,80,64)"><span style="font-size:90%">(233, 80, 64)</span><br>#E95040</td><td style="color:white; background:rgb(103,81,153)"><span style="font-size:90%">(103, 81, 153)</span><br>#675199</td><td style="color:black; background:rgb(77,180,75)"><span style="font-size:90%">(77, 180, 75)</span><br>#4DB44B</td><td style="color:black; background:rgb(233,80,148)"><span style="font-size:90%">(233, 80, 148)</span><br>#E95094</td></tr>
+</tbody></table>
+<h3 class="aqours">Aqoursメンバーの色</h3><table class="call" style="border: solid 3px #00a0ea">
+<thead>
+<tr><th style="background-color:#00a0ea">→キャラクター<br>↓媒体</th><th class="Chika">高海 千歌</th>
+<th class="Riko">桜内 梨子</th>
+<th class="Kanan">松浦 果南</th>
+<th class="Dia">黒澤 ダイヤ</th>
+<th class="You">渡辺 曜</th>
+<th class="Yoshiko">津島 善子</th>
+<th class="Hanamaru">国木田 花丸</th>
+<th class="Mari">小原 鞠莉</th>
+<th class="Ruby">黒澤 ルビィ</th>
+</tr>
+</thead>
+<tbody><tr><th>公式サイト</th>
+<td style="color:black; background:rgb(255,121,27)"><span style="font-size:90%">(255, 121, 27)</span><br>#FF791B</td><td style="color:black; background:rgb(255,119,119)"><span style="font-size:90%">(255, 119, 119)</span><br>#FF7777</td><td style="color:black; background:rgb(0,210,158)"><span style="font-size:90%">(0, 210, 158)</span><br>#00D29E</td><td style="color:black; background:rgb(244,50,50)"><span style="font-size:90%">(244, 50, 50)</span><br>#F43232</td><td style="color:black; background:rgb(42,164,219)"><span style="font-size:90%">(42, 164, 219)</span><br>#2AA4DB</td><td style="color:black; background:rgb(174,174,174)"><span style="font-size:90%">(174, 174, 174)</span><br>#AEAEAE</td><td style="color:black; background:rgb(207,186,15)"><span style="font-size:90%">(207, 186, 15)</span><br>#CFBA0F</td><td style="color:white; background:rgb(165,48,224)"><span style="font-size:90%">(165, 48, 224)</span><br>#A530E0</td><td style="color:black; background:rgb(238,85,183)"><span style="font-size:90%">(238, 85, 183)</span><br>#EE55B7</td></tr>
+<tr><th>スクスタ<br>（ゲーム内）</th>
+<td style="color:black; background:rgb(255,149,71)"><span style="font-size:90%">(255, 149, 71)</span><br>#FF9547</td><td style="color:black; background:rgb(255,158,172)"><span style="font-size:90%">(255, 158, 172)</span><br>#FF9EAC</td><td style="color:black; background:rgb(39,193,183)"><span style="font-size:90%">(39, 193, 183)</span><br>#27C1B7</td><td style="color:white; background:rgb(219,7,57)"><span style="font-size:90%">(219, 7, 57)</span><br>#DB0739</td><td style="color:black; background:rgb(102,192,255)"><span style="font-size:90%">(102, 192, 255)</span><br>#66C0FF</td><td style="color:black; background:rgb(193,202,212)"><span style="font-size:90%">(193, 202, 212)</span><br>#C1CAD4</td><td style="color:black; background:rgb(255,208,15)"><span style="font-size:90%">(255, 208, 15)</span><br>#FFD00F</td><td style="color:black; background:rgb(194,82,198)"><span style="font-size:90%">(194, 82, 198)</span><br>#C252C6</td><td style="color:black; background:rgb(255,111,190)"><span style="font-size:90%">(255, 111, 190)</span><br>#FF6FBE</td></tr>
+<tr><th>スクスタ<br>（公式web：濃）</th>
+<td style="color:black; background:rgb(255,204,173)"><span style="font-size:90%">(255, 204, 173)</span><br>#FFCCAD</td><td style="color:black; background:rgb(253,193,203)"><span style="font-size:90%">(253, 193, 203)</span><br>#FDC1CB</td><td style="color:black; background:rgb(153,233,224)"><span style="font-size:90%">(153, 233, 224)</span><br>#99E9E0</td><td style="color:black; background:rgb(244,153,170)"><span style="font-size:90%">(244, 153, 170)</span><br>#F499AA</td><td style="color:black; background:rgb(153,225,243)"><span style="font-size:90%">(153, 225, 243)</span><br>#99E1F3</td><td style="color:black; background:rgb(224,225,225)"><span style="font-size:90%">(224, 225, 225)</span><br>#E0E1E1</td><td style="color:black; background:rgb(255,235,153)"><span style="font-size:90%">(255, 235, 153)</span><br>#FFEB99</td><td style="color:black; background:rgb(215,168,226)"><span style="font-size:90%">(215, 168, 226)</span><br>#D7A8E2</td><td style="color:black; background:rgb(246,177,222)"><span style="font-size:90%">(246, 177, 222)</span><br>#F6B1DE</td></tr>
+<tr><th>スクスタ<br>（公式web：薄）</th>
+<td style="color:black; background:rgb(255,224,206)"><span style="font-size:90%">(255, 224, 206)</span><br>#FFE0CE</td><td style="color:black; background:rgb(254,218,224)"><span style="font-size:90%">(254, 218, 224)</span><br>#FEDAE0</td><td style="color:black; background:rgb(194,242,236)"><span style="font-size:90%">(194, 242, 236)</span><br>#C2F2EC</td><td style="color:black; background:rgb(248,194,204)"><span style="font-size:90%">(248, 194, 204)</span><br>#F8C2CC</td><td style="color:black; background:rgb(194,237,248)"><span style="font-size:90%">(194, 237, 248)</span><br>#C2EDF8</td><td style="color:black; background:rgb(236,237,237)"><span style="font-size:90%">(236, 237, 237)</span><br>#ECEDED</td><td style="color:black; background:rgb(255,243,194)"><span style="font-size:90%">(255, 243, 194)</span><br>#FFF3C2</td><td style="color:black; background:rgb(231,203,238)"><span style="font-size:90%">(231, 203, 238)</span><br>#E7CBEE</td><td style="color:black; background:rgb(250,208,235)"><span style="font-size:90%">(250, 208, 235)</span><br>#FAD0EB</td></tr>
+<tr><th>ぷちぐる<br>（キャラ名）</th>
+<td style="color:black; background:rgb(255,155,13)"><span style="font-size:90%">(255, 155, 13)</span><br>#FF9B0D</td><td style="color:black; background:rgb(248,138,149)"><span style="font-size:90%">(248, 138, 149)</span><br>#F88A95</td><td style="color:black; background:rgb(15,219,155)"><span style="font-size:90%">(15, 219, 155)</span><br>#0FDB9B</td><td style="color:black; background:rgb(251,74,74)"><span style="font-size:90%">(251, 74, 74)</span><br>#FB4A4A</td><td style="color:black; background:rgb(43,207,242)"><span style="font-size:90%">(43, 207, 242)</span><br>#2BCFF2</td><td style="color:black; background:rgb(142,142,142)"><span style="font-size:90%">(142, 142, 142)</span><br>#8E8E8E</td><td style="color:black; background:rgb(215,197,1)"><span style="font-size:90%">(215, 197, 1)</span><br>#D7C501</td><td style="color:black; background:rgb(195,100,255)"><span style="font-size:90%">(195, 100, 255)</span><br>#C364FF</td><td style="color:black; background:rgb(255,98,146)"><span style="font-size:90%">(255, 98, 146)</span><br>#FF6292</td></tr>
+<tr><th>スクフェス<br>（基本背景：濃）</th>
+<td style="color:black; background:rgb(255,205,183)"><span style="font-size:90%">(255, 205, 183)</span><br>#FFCDB7</td><td style="color:black; background:rgb(255,200,210)"><span style="font-size:90%">(255, 200, 210)</span><br>#FFC8D2</td><td style="color:black; background:rgb(182,234,231)"><span style="font-size:90%">(182, 234, 231)</span><br>#B6EAE7</td><td style="color:black; background:rgb(253,194,199)"><span style="font-size:90%">(253, 194, 199)</span><br>#FDC2C7</td><td style="color:black; background:rgb(196,229,254)"><span style="font-size:90%">(196, 229, 254)</span><br>#C4E5FE</td><td style="color:black; background:rgb(217,223,240)"><span style="font-size:90%">(217, 223, 240)</span><br>#D9DFF0</td><td style="color:black; background:rgb(245,235,156)"><span style="font-size:90%">(245, 235, 156)</span><br>#F5EB9C</td><td style="color:black; background:rgb(236,209,243)"><span style="font-size:90%">(236, 209, 243)</span><br>#ECD1F3</td><td style="color:black; background:rgb(251,206,235)"><span style="font-size:90%">(251, 206, 235)</span><br>#FBCEEB</td></tr>
+<tr><th>スクフェス<br>（基本背景：薄）</th>
+<td style="color:black; background:rgb(255,245,241)"><span style="font-size:90%">(255, 245, 241)</span><br>#FFF5F1</td><td style="color:black; background:rgb(255,244,246)"><span style="font-size:90%">(255, 244, 246)</span><br>#FFF4F6</td><td style="color:black; background:rgb(240,251,250)"><span style="font-size:90%">(240, 251, 250)</span><br>#F0FBFA</td><td style="color:black; background:rgb(255,243,244)"><span style="font-size:90%">(255, 243, 244)</span><br>#FFF3F4</td><td style="color:black; background:rgb(243,250,255)"><span style="font-size:90%">(243, 250, 255)</span><br>#F3FAFF</td><td style="color:black; background:rgb(247,249,252)"><span style="font-size:90%">(247, 249, 252)</span><br>#F7F9FC</td><td style="color:black; background:rgb(253,251,235)"><span style="font-size:90%">(253, 251, 235)</span><br>#FDFBEB</td><td style="color:black; background:rgb(251,246,253)"><span style="font-size:90%">(251, 246, 253)</span><br>#FBF6FD</td><td style="color:black; background:rgb(254,245,251)"><span style="font-size:90%">(254, 245, 251)</span><br>#FEF5FB</td></tr>
+<tr><th>アケフェス<br>（キャラ名）</th>
+<td style="color:black; background:rgb(238,123,58)"><span style="font-size:90%">(238, 123, 58)</span><br>#EE7B3A</td><td style="color:black; background:rgb(242,150,191)"><span style="font-size:90%">(242, 150, 191)</span><br>#F296BF</td><td style="color:black; background:rgb(0,176,162)"><span style="font-size:90%">(0, 176, 162)</span><br>#00B0A2</td><td style="color:white; background:rgb(220,9,43)"><span style="font-size:90%">(220, 9, 43)</span><br>#DC092B</td><td style="color:black; background:rgb(0,167,210)"><span style="font-size:90%">(0, 167, 210)</span><br>#00A7D2</td><td style="color:black; background:rgb(179,177,177)"><span style="font-size:90%">(179, 177, 177)</span><br>#B3B1B1</td><td style="color:black; background:rgb(248,199,0)"><span style="font-size:90%">(248, 199, 0)</span><br>#F8C700</td><td style="color:white; background:rgb(134,57,145)"><span style="font-size:90%">(134, 57, 145)</span><br>#863991</td><td style="color:black; background:rgb(212,71,148)"><span style="font-size:90%">(212, 71, 148)</span><br>#D44794</td></tr>
+<tr><th>2ndシングル<br>センター投票</th>
+<td style="color:black; background:rgb(240,162,11)"><span style="font-size:90%">(240, 162, 11)</span><br>#F0A20B</td><td style="color:black; background:rgb(233,169,232)"><span style="font-size:90%">(233, 169, 232)</span><br>#E9A9E8</td><td style="color:black; background:rgb(19,232,174)"><span style="font-size:90%">(19, 232, 174)</span><br>#13E8AE</td><td style="color:black; background:rgb(242,59,76)"><span style="font-size:90%">(242, 59, 76)</span><br>#F23B4C</td><td style="color:black; background:rgb(73,185,249)"><span style="font-size:90%">(73, 185, 249)</span><br>#49B9F9</td><td style="color:black; background:rgb(137,137,137)"><span style="font-size:90%">(137, 137, 137)</span><br>#898989</td><td style="color:black; background:rgb(230,214,23)"><span style="font-size:90%">(230, 214, 23)</span><br>#E6D617</td><td style="color:black; background:rgb(174,88,235)"><span style="font-size:90%">(174, 88, 235)</span><br>#AE58EB</td><td style="color:black; background:rgb(251,117,228)"><span style="font-size:90%">(251, 117, 228)</span><br>#FB75E4</td></tr>
+<tr><th>3rdシングル<br>センター投票</th>
+<td style="color:black; background:rgb(238,120,0)"><span style="font-size:90%">(238, 120, 0)</span><br>#EE7800</td><td style="color:black; background:rgb(220,118,171)"><span style="font-size:90%">(220, 118, 171)</span><br>#DC76AB</td><td style="color:black; background:rgb(0,179,134)"><span style="font-size:90%">(0, 179, 134)</span><br>#00B386</td><td style="color:black; background:rgb(231,45,54)"><span style="font-size:90%">(231, 45, 54)</span><br>#E72D36</td><td style="color:black; background:rgb(0,149,216)"><span style="font-size:90%">(0, 149, 216)</span><br>#0095D8</td><td style="color:white; background:rgb(76,73,72)"><span style="font-size:90%">(76, 73, 72)</span><br>#4C4948</td><td style="color:black; background:rgb(159,140,0)"><span style="font-size:90%">(159, 140, 0)</span><br>#9F8C00</td><td style="color:white; background:rgb(124,80,157)"><span style="font-size:90%">(124, 80, 157)</span><br>#7C509D</td><td style="color:white; background:rgb(183,63,145)"><span style="font-size:90%">(183, 63, 145)</span><br>#B73F91</td></tr>
+<tr><th>4thシングル<br>センター投票</th>
+<td style="color:black; background:rgb(239,120,0)"><span style="font-size:90%">(239, 120, 0)</span><br>#EF7800</td><td style="color:black; background:rgb(238,135,180)"><span style="font-size:90%">(238, 135, 180)</span><br>#EE87B4</td><td style="color:black; background:rgb(0,170,131)"><span style="font-size:90%">(0, 170, 131)</span><br>#00AA83</td><td style="color:black; background:rgb(231,45,56)"><span style="font-size:90%">(231, 45, 56)</span><br>#E72D38</td><td style="color:black; background:rgb(0,149,217)"><span style="font-size:90%">(0, 149, 217)</span><br>#0095D9</td><td style="color:white; background:rgb(113,113,113)"><span style="font-size:90%">(113, 113, 113)</span><br>#717171</td><td style="color:black; background:rgb(255,241,0)"><span style="font-size:90%">(255, 241, 0)</span><br>#FFF100</td><td style="color:white; background:rgb(124,80,157)"><span style="font-size:90%">(124, 80, 157)</span><br>#7C509D</td><td style="color:black; background:rgb(230,47,139)"><span style="font-size:90%">(230, 47, 139)</span><br>#E62F8B</td></tr>
+<tr><th>デュオトリオ<br>組み合わせ投票</th>
+<td style="color:black; background:rgb(243,152,1)"><span style="font-size:90%">(243, 152, 1)</span><br>#F39801</td><td style="color:black; background:rgb(229,164,198)"><span style="font-size:90%">(229, 164, 198)</span><br>#E5A4C6</td><td style="color:black; background:rgb(120,196,166)"><span style="font-size:90%">(120, 196, 166)</span><br>#78C4A6</td><td style="color:black; background:rgb(224,50,51)"><span style="font-size:90%">(224, 50, 51)</span><br>#E03233</td><td style="color:black; background:rgb(74,183,239)"><span style="font-size:90%">(74, 183, 239)</span><br>#4AB7EF</td><td style="color:black; background:rgb(137,148,154)"><span style="font-size:90%">(137, 148, 154)</span><br>#89949A</td><td style="color:black; background:rgb(224,208,35)"><span style="font-size:90%">(224, 208, 35)</span><br>#E0D023</td><td style="color:white; background:rgb(115,72,152)"><span style="font-size:90%">(115, 72, 152)</span><br>#734898</td><td style="color:black; background:rgb(221,50,146)"><span style="font-size:90%">(221, 50, 146)</span><br>#DD3292</td></tr>
+</tbody></table>
+<h3 class="niji">ニジガクメンバーの色</h3><table class="call" style="border: solid 3px #f29600">
+<thead>
+<tr><th style="background-color:#f29600">→キャラクター<br>↓媒体</th><th class="Ayumu">上原 歩夢</th>
+<th class="Kasumi">中須 かすみ</th>
+<th class="Shizuku">桜坂 しずく</th>
+<th class="Karin">朝香 果林</th>
+<th class="Ai">宮下 愛</th>
+<th class="Kanata">近江 彼方</th>
+<th class="Setsuna">優木 せつ菜</th>
+<th class="Emma">エマ・ヴェルデ</th>
+<th class="Rina">天王寺 璃奈</th>
+</tr>
+</thead>
+<tbody><tr><th>公式サイト</th>
+<td style="color:black; background:rgb(237,125,149)"><span style="font-size:90%">(237, 125, 149)</span><br>#ED7D95</td><td style="color:black; background:rgb(231,214,0)"><span style="font-size:90%">(231, 214, 0)</span><br>#E7D600</td><td style="color:black; background:rgb(1,183,237)"><span style="font-size:90%">(1, 183, 237)</span><br>#01B7ED</td><td style="color:white; background:rgb(58,94,198)"><span style="font-size:90%">(58, 94, 198)</span><br>#3A5EC6</td><td style="color:black; background:rgb(255,88,0)"><span style="font-size:90%">(255, 88, 0)</span><br>#FF5800</td><td style="color:black; background:rgb(166,100,160)"><span style="font-size:90%">(166, 100, 160)</span><br>#A664A0</td><td style="color:white; background:rgb(216,28,47)"><span style="font-size:90%">(216, 28, 47)</span><br>#D81C2F</td><td style="color:black; background:rgb(132,195,110)"><span style="font-size:90%">(132, 195, 110)</span><br>#84C36E</td><td style="color:black; background:rgb(156,165,185)"><span style="font-size:90%">(156, 165, 185)</span><br>#9CA5B9</td></tr>
+<tr><th>スクスタ<br>（ゲーム内）</th>
+<td style="color:black; background:rgb(255,191,224)"><span style="font-size:90%">(255, 191, 224)</span><br>#FFBFE0</td><td style="color:black; background:rgb(213,222,112)"><span style="font-size:90%">(213, 222, 112)</span><br>#D5DE70</td><td style="color:black; background:rgb(187,237,255)"><span style="font-size:90%">(187, 237, 255)</span><br>#BBEDFF</td><td style="color:white; background:rgb(60,39,237)"><span style="font-size:90%">(60, 39, 237)</span><br>#3C27ED</td><td style="color:black; background:rgb(255,130,70)"><span style="font-size:90%">(255, 130, 70)</span><br>#FF8246</td><td style="color:black; background:rgb(190,130,255)"><span style="font-size:90%">(190, 130, 255)</span><br>#BE82FF</td><td style="color:black; background:rgb(246,14,14)"><span style="font-size:90%">(246, 14, 14)</span><br>#F60E0E</td><td style="color:black; background:rgb(143,218,121)"><span style="font-size:90%">(143, 218, 121)</span><br>#8FDA79</td><td style="color:black; background:rgb(208,206,225)"><span style="font-size:90%">(208, 206, 225)</span><br>#D0CEE1</td></tr>
+<tr><th>スクスタ<br>（公式web：濃）</th>
+<td style="color:black; background:rgb(248,203,213)"><span style="font-size:90%">(248, 203, 213)</span><br>#F8CBD5</td><td style="color:black; background:rgb(245,239,153)"><span style="font-size:90%">(245, 239, 153)</span><br>#F5EF99</td><td style="color:black; background:rgb(178,219,232)"><span style="font-size:90%">(178, 219, 232)</span><br>#B2DBE8</td><td style="color:black; background:rgb(182,191,232)"><span style="font-size:90%">(182, 191, 232)</span><br>#B6BFE8</td><td style="color:black; background:rgb(255,188,153)"><span style="font-size:90%">(255, 188, 153)</span><br>#FFBC99</td><td style="color:black; background:rgb(225,193,223)"><span style="font-size:90%">(225, 193, 223)</span><br>#E1C1DF</td><td style="color:black; background:rgb(239,164,172)"><span style="font-size:90%">(239, 164, 172)</span><br>#EFA4AC</td><td style="color:black; background:rgb(203,232,170)"><span style="font-size:90%">(203, 232, 170)</span><br>#CBE8AA</td><td style="color:black; background:rgb(213,217,225)"><span style="font-size:90%">(213, 217, 225)</span><br>#D5D9E1</td></tr>
+<tr><th>スクスタ<br>（公式web：薄）</th>
+<td style="color:black; background:rgb(251,224,230)"><span style="font-size:90%">(251, 224, 230)</span><br>#FBE0E6</td><td style="color:black; background:rgb(249,245,194)"><span style="font-size:90%">(249, 245, 194)</span><br>#F9F5C2</td><td style="color:black; background:rgb(209,233,241)"><span style="font-size:90%">(209, 233, 241)</span><br>#D1E9F1</td><td style="color:black; background:rgb(211,217,241)"><span style="font-size:90%">(211, 217, 241)</span><br>#D3D9F1</td><td style="color:black; background:rgb(255,215,193)"><span style="font-size:90%">(255, 215, 193)</span><br>#FFD7C1</td><td style="color:black; background:rgb(237,218,236)"><span style="font-size:90%">(237, 218, 236)</span><br>#EDDAEC</td><td style="color:black; background:rgb(245,200,205)"><span style="font-size:90%">(245, 200, 205)</span><br>#F5C8CD</td><td style="color:black; background:rgb(224,241,204)"><span style="font-size:90%">(224, 241, 204)</span><br>#E0F1CC</td><td style="color:black; background:rgb(230,232,237)"><span style="font-size:90%">(230, 232, 237)</span><br>#E6E8ED</td></tr>
+<tr><th>スクフェス<br>（基本背景：濃）</th>
+<td style="color:black; background:rgb(254,186,203)"><span style="font-size:90%">(254, 186, 203)</span><br>#FEBACB</td><td style="color:black; background:rgb(245,252,164)"><span style="font-size:90%">(245, 252, 164)</span><br>#F5FCA4</td><td style="color:black; background:rgb(178,223,238)"><span style="font-size:90%">(178, 223, 238)</span><br>#B2DFEE</td><td style="color:black; background:rgb(176,204,251)"><span style="font-size:90%">(176, 204, 251)</span><br>#B0CCFB</td><td style="color:black; background:rgb(255,213,151)"><span style="font-size:90%">(255, 213, 151)</span><br>#FFD597</td><td style="color:black; background:rgb(225,209,246)"><span style="font-size:90%">(225, 209, 246)</span><br>#E1D1F6</td><td style="color:black; background:rgb(255,175,175)"><span style="font-size:90%">(255, 175, 175)</span><br>#FFAFAF</td><td style="color:black; background:rgb(211,250,211)"><span style="font-size:90%">(211, 250, 211)</span><br>#D3FAD3</td><td style="color:black; background:rgb(214,225,227)"><span style="font-size:90%">(214, 225, 227)</span><br>#D6E1E3</td></tr>
+<tr><th>スクフェス<br>（基本背景：薄）</th>
+<td style="color:black; background:rgb(255,241,245)"><span style="font-size:90%">(255, 241, 245)</span><br>#FFF1F5</td><td style="color:black; background:rgb(253,254,237)"><span style="font-size:90%">(253, 254, 237)</span><br>#FDFEED</td><td style="color:black; background:rgb(240,249,252)"><span style="font-size:90%">(240, 249, 252)</span><br>#F0F9FC</td><td style="color:black; background:rgb(239,245,254)"><span style="font-size:90%">(239, 245, 254)</span><br>#EFF5FE</td><td style="color:black; background:rgb(255,247,234)"><span style="font-size:90%">(255, 247, 234)</span><br>#FFF7EA</td><td style="color:black; background:rgb(249,246,253)"><span style="font-size:90%">(249, 246, 253)</span><br>#F9F6FD</td><td style="color:black; background:rgb(255,239,239)"><span style="font-size:90%">(255, 239, 239)</span><br>#FFEFEF</td><td style="color:black; background:rgb(246,254,246)"><span style="font-size:90%">(246, 254, 246)</span><br>#F6FEF6</td><td style="color:black; background:rgb(247,247,249)"><span style="font-size:90%">(247, 247, 249)</span><br>#F7F7F9</td></tr>
+<tr><th>マンスリー<br>ランキング</th>
+<td style="color:black; background:rgb(237,197,206)"><span style="font-size:90%">(237, 197, 206)</span><br>#EDC5CE</td><td style="color:black; background:rgb(232,224,137)"><span style="font-size:90%">(232, 224, 137)</span><br>#E8E089</td><td style="color:black; background:rgb(190,224,237)"><span style="font-size:90%">(190, 224, 237)</span><br>#BEE0ED</td><td style="color:black; background:rgb(192,202,250)"><span style="font-size:90%">(192, 202, 250)</span><br>#C0CAFA</td><td style="color:black; background:rgb(253,183,146)"><span style="font-size:90%">(253, 183, 146)</span><br>#FDB792</td><td style="color:black; background:rgb(211,184,229)"><span style="font-size:90%">(211, 184, 229)</span><br>#D3B8E5</td><td style="color:black; background:rgb(249,166,170)"><span style="font-size:90%">(249, 166, 170)</span><br>#F9A6AA</td><td style="color:black; background:rgb(200,237,190)"><span style="font-size:90%">(200, 237, 190)</span><br>#C8EDBE</td><td style="color:black; background:rgb(207,208,227)"><span style="font-size:90%">(207, 208, 227)</span><br>#CFD0E3</td></tr>
+<tr><th>にじよん<br>（キャラ名）</th>
+<td style="color:black; background:rgb(220,152,166)"><span style="font-size:90%">(220, 152, 166)</span><br>#DC98A6</td><td style="color:black; background:rgb(202,188,53)"><span style="font-size:90%">(202, 188, 53)</span><br>#CABC35</td><td style="color:black; background:rgb(143,197,220)"><span style="font-size:90%">(143, 197, 220)</span><br>#8FC5DC</td><td style="color:black; background:rgb(145,160,245)"><span style="font-size:90%">(145, 160, 245)</span><br>#91A0F5</td><td style="color:black; background:rgb(251,134,84)"><span style="font-size:90%">(251, 134, 84)</span><br>#FB8654</td><td style="color:black; background:rgb(173,133,206)"><span style="font-size:90%">(173, 133, 206)</span><br>#AD85CE</td><td style="color:black; background:rgb(243,108,113)"><span style="font-size:90%">(243, 108, 113)</span><br>#F36C71</td><td style="color:black; background:rgb(157,220,142)"><span style="font-size:90%">(157, 220, 142)</span><br>#9DDC8E</td><td style="color:black; background:rgb(168,170,202)"><span style="font-size:90%">(168, 170, 202)</span><br>#A8AACA</td></tr>
+</tbody></table>
+</div>
+
+<script><!-- 
+document.getElementById("MainArea").innerHTML =
+	'<h2>ラブライブ！イメージカラーまとめ<\/h2>'
+	+ '<p>「ラブライブ！」シリーズにおいて、各所で使われているイメージカラーのまとめです。<br>'
+	+ 'このページではRGBでの抽出が可能なデジタルカラーのみを扱っています。<\/p>'
+	+ '<h3 class="muse">μ’sメンバーの色<\/h3>'
+	+ CreateColorListTable([0,1,2,3,4,5,6,7,8], ['sifas', 'sifas_s1', 'sifas_s2', 'puchi', 'llsif', 'llsif2', 'sifac'], '#e4007f')
+	+ '<h3 class="aqours">Aqoursメンバーの色<\/h3>'
+	+ CreateColorListTable([9,10,11,12,13,14,15,16,17], ['official', 'sifas', 'sifas_s1', 'sifas_s2', 'puchi', 'llsif', 'llsif2', 'sifac', 'vote2nd', 'vote3rd', 'vote4th','duotrio'], '#00a0ea')
+	+ '<h3 class="niji">ニジガクメンバーの色<\/h3>'
+	+ CreateColorListTable([18,19,20,21,22,23,24,25,26], ['official', 'sifas', 'sifas_s1', 'sifas_s2', 'llsif', 'llsif2', 'monthly', 'nijiyon'], '#f29600');
+
+--></script>
+
+<h3 class="niji">更新履歴</h3>
+<table class="history">
+<tbody>
+<tr>
+	<td>2020/01/22 17:00頃</td>
+	<td><span class="new"></span>「ぷちぐる」「アケフェス」を追加</td>
+</tr>
+<tr>
+	<td>2020/01/06 17:00頃</td>
+	<td><span class="new"></span>スクスタ公式Webの色を追加</td>
+</tr>
+<tr>
+	<td>2019/12/17 17:30頃</td>
+	<td><span class="new"></span>公開</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<a href="index.html">トップページに戻る。</a>
+</p>
+
+
+</body></html>

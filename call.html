@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>スクフェスALL STARS 呼称表</title>
+
+<link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="stylesheet" href="main.css">
 <style><!--
 
@@ -28,7 +30,7 @@ const CharData = [
 		Honoka:'私<br>穂乃果', Eli:'絵里ちゃん', Kotori:'ことりちゃん', Umi:'海未ちゃん', Rin:'凛ちゃん',
 		Maki:'真姫ちゃん', Nozomi:'希ちゃん', Hanayo:'花陽ちゃん',Nico:'にこちゃん',
 		Chika:'千歌ちゃん', Riko:'梨子ちゃん', Kanan:'果南さん', Dia:'ダイヤさん', You:'曜ちゃん',
-		Hanamaru:'花丸ちゃん', Mari:'鞠莉さん',
+		Yoshiko:'善子ちゃん', Hanamaru:'花丸ちゃん', Mari:'鞠莉さん',
 		Ayumu:'歩夢ちゃん', Shizuku:'しずくちゃん', Karin:'果林さん', Ai:'愛ちゃん',
 		Kasumi:'かすみちゃん', Shizuku:'しずくちゃん',
 		Kanata:'彼方さん', Setsuna:'せつ菜ちゃん', Emma:'エマさん', Rina:'璃奈ちゃん', Player:'あなた'},
@@ -86,7 +88,7 @@ const CharData = [
 		Honoka:'穂乃果', Eli:'絵里', Umi:'海未', Rin:'凛', 
 		Maki:'真姫', Nozomi:'希', Hanayo:'花陽', Nico:'私<br>にこ/ニコ<br>ニコニー',
 		Chika:'千歌', Riko:'梨子', Kanan:'果南', Dia:'ダイヤ', You:'曜',
-		Hanamaru:'花丸', Mari:'鞠莉',
+		Yoshiko:'善子', Hanamaru:'花丸', Mari:'鞠莉',
 		Ayumu:'歩夢', Kasumi:'かすみ<br>かすみん', Shizuku:'しずく', Karin:'果林', Ai:'愛',
 		Kanata:'彼方', Setsuna:'せつ菜', Emma:'エマ', Rina:'璃奈', Player:'あなた'},
 
@@ -99,7 +101,7 @@ const CharData = [
 		Kanata:'彼方さん', Setsuna:'せつ菜ちゃん', Emma:'エマさん', Rina:'璃奈ちゃん', Player:'あなた'},
 	{ id:'Riko'    , name:'桜内 梨子'     , r:255, g:158, b:172,
 		Honoka:'穂乃果ちゃん', Eli:'絵里さん', Kotori:'ことりちゃん', Umi:'海未ちゃん', Rin:'凛ちゃん',
-		Maki:'真姫ちゃん', Nozomi:'希さん', Hanayo:'花陽ちゃん',
+		Maki:'真姫ちゃん', Nozomi:'希さん', Hanayo:'花陽ちゃん', Nico:'にこさん',
 		Chika:'千歌ちゃん', Riko:'私', Kanan:'果南ちゃん', Dia:'ダイヤさん', You:'曜ちゃん',
 		Yoshiko:'善子ちゃん', Hanamaru:'花丸ちゃん', Mari:'鞠莉ちゃん',
 		Ayumu:'歩夢ちゃん', Kasumi:'かすみちゃん', Shizuku:'しずくちゃん', Karin:'果林さん', Ai:'愛ちゃん',
@@ -122,13 +124,13 @@ const CharData = [
 		Shioriko:'(三船さん)'},
 	{ id:'You'     , name:'渡辺 曜'       , r:102, g:192, b:255,
 		Honoka:'穂乃果ちゃん', Eli:'絵里さん', Kotori:'ことりちゃん', Umi:'海未ちゃん', Rin:'凛ちゃん',
-		Maki:'真姫ちゃん', Nozomi:'希さん', Hanayo:'花陽ちゃん',
+		Maki:'真姫ちゃん', Nozomi:'希さん', Hanayo:'花陽ちゃん', Nico:'にこさん',
 		Chika:'千歌ちゃん', Riko:'梨子ちゃん', Kanan:'果南ちゃん', Dia:'ダイヤさん', You:'私',
 		Yoshiko:'善子ちゃん', Hanamaru:'花丸ちゃん', Mari:'鞠莉ちゃん', Ruby:'ルビィちゃん',
 		Ayumu:'歩夢ちゃん', Kasumi:'かすみちゃん', Shizuku:'しずくちゃん', Karin:'果林さん', Ai:'愛ちゃん',
 		Kanata:'彼方さん', Emma:'エマさん', Rina:'璃奈ちゃん', Player:'キミ'},
 	{ id:'Yoshiko' , name:'津島 善子'     , r:193, g:202, b:212,
-		Eli:'絵里', Umi:'海未', Rin:'凛', Maki:'真姫', Nozomi:'希', Hanayo:'花陽',
+		Eli:'絵里', Umi:'海未', Rin:'凛', Maki:'真姫', Nozomi:'希', Hanayo:'花陽', Nico:'にこ',
 		Riko:'リリー<br>梨子', Kanan:'果南', Dia:'ダイヤ', You:'曜',
 		Yoshiko:'ヨハネ<br>私', Hanamaru:'ずら丸', Mari:'鞠莉', Ruby:'ルビィ',
 		Ayumu:'歩夢', Kasumi:'かすみ', Shizuku:'しずく', Karin:'果林', Ai:'愛',
@@ -159,7 +161,7 @@ const CharData = [
 		Honoka:'穂乃果ちゃん', Eli:'絵里さん', Kotori:'ことりちゃん', Umi:'海未ちゃん', Rin:'凛ちゃん',
 		Maki:'真姫ちゃん', Hanayo:'花陽ちゃん', Nozomi:'希さん', Nico:'にこさん',
 		Chika:'千歌ちゃん', Kanan:'果南さん', Dia:'ダイヤさん', You:'曜ちゃん',
-		Yoshiko:'善子ちゃん<br>ヨハネちゃん', Hanamaru:'花丸ちゃん', Mari:'鞠莉さん', Ruby:'ルビィちゃん',
+		Yoshiko:'善子ちゃん', Hanamaru:'花丸ちゃん', Mari:'鞠莉さん', Ruby:'ルビィちゃん',
 		Ayumu:'私', Kasumi:'かすみちゃん', Shizuku:'しずくちゃん', Karin:'果林さん', Ai:'愛ちゃん',
 		Kanata:'彼方さん', Setsuna:'せつ菜ちゃん', Emma:'エマさん', Rina:'璃奈ちゃん', Player:'あなた',
 		Shioriko:'栞子ちゃん'},
@@ -215,13 +217,13 @@ const CharData = [
 		Eli:'絵里ちゃん', Umi:'海未ちゃん', Kotori:'ことりちゃん', Rin:'凛ちゃん',
 		Maki:'真姫ちゃん', Nozomi:'希ちゃん', Hanayo:'花陽ちゃん', Nico:'にこちゃん',
 		Chika:'千歌ちゃん', Riko:'梨子ちゃん', Kanan:'果南ちゃん', Dia:'ダイヤちゃん', You:'曜ちゃん',
-		Hanamaru:'花丸ちゃん', Mari:'鞠莉ちゃん', Ruby:'ルビィちゃん',
+		Yoshiko:'善子ちゃん', Hanamaru:'花丸ちゃん', Mari:'鞠莉ちゃん', Ruby:'ルビィちゃん',
 		Ayumu:'歩夢ちゃん', Kasumi:'かすみちゃん', Shizuku:'しずくちゃん', Karin:'果林ちゃん', Ai:'愛ちゃん',
 		Kanata:'彼方ちゃん', Setsuna:'せつ菜ちゃん', Emma:'わたし', Rina:'璃奈ちゃん', Player:'あなた',
 		Shioriko:'栞子ちゃん'},
 	{ id:'Rina'    , name:'天王寺 璃奈'    , r:208, g:206, b:225,
 		Honoka:'穂乃果さん', Eli:'絵里さん', Umi:'海未さん', Rin:'凛ちゃん',
-		Maki:'真姫ちゃん', Nozomi:'希さん', Hanayo:'花陽ちゃん',
+		Maki:'真姫ちゃん', Nozomi:'希さん', Hanayo:'花陽ちゃん', Nico:'にこさん',
 		Kanan:'果南さん', Dia:'ダイヤさん', You:'曜さん',
 		Yoshiko:'善子ちゃん', Hanamaru:'花丸さん', Mari:'鞠莉さん',
 		Ayumu:'歩夢さん', Kasumi:'かすみちゃん', Shizuku:'しずくちゃん', Karin:'果林さん', Ai:'愛さん',
@@ -336,7 +338,7 @@ document.getElementById("MainArea").innerHTML =
 	+ '<h3 class="aqours">Aqoursメンバーの呼ばれ方<\/h3>\n' + CreateTable(ListAqours.concat([27]), ListAS)
 	+ '<h3 class="niji">ニジガクメンバーの呼ばれ方<\/h3>\n' + CreateTable(ListNiji.concat([27]), ListAS.concat([28,29]))
 	+ '<h3 class="niji">その他キャラクターの呼ばれ方<\/h3>\n' + CreateTable([28,29], [1,11,12].concat(ListNiji).concat([27,29]))
-	+ '<h3 style="background-color:#ddd; color:#777; border-color:#999;">期間限定イベント<\/h3>' + CreateTable([6,8,11,15,22,25],[6,8,11,15,22,25])
+	+ '<h3 style="background-color:#ddd; color:#777; border-color:#999;">期間限定イベント<\/h3>' + CreateTable([1,7,11,14,18,23],[1,7,11,14,18,23])
 	
 	;
 

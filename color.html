@@ -11,6 +11,7 @@
 <meta name="twitter:image" content="https://ratius.github.io/LLS/img/card_color.png">
 
 <title>ラブライブ！イメージカラーまとめ</title>
+<link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="stylesheet" href="main.css">
 <style><!--
 
@@ -443,8 +444,8 @@ function CreateColorListTable(Idol, col, tablecol){
 				Output += '<td style="color:' + chooseTextColor(k)
 				+ '; background:' + getRGB(k) + '">'
 				+ '<span style="font-size:90%">('
-				+ Math.floor(k.r) + ', ' + Math.floor(k.g) + ', ' + Math.floor(k.b) + ')</\span><br>'
-				+ GetColorCode(k) + '<\/td>';
+				+ Math.floor(k.r) + ', ' + Math.floor(k.g) + ', ' + Math.floor(k.b) + ')<\/span><br>'
+				+ GetColorCode(k) + '<\/td>\n';
 			} else {
 				Output += '<td><\/td>';
 			}

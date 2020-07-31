@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>スクスタALL STARS カード追加順</title>
+<link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="stylesheet" href="main.css">
 <style><!--
 
@@ -140,13 +141,13 @@ function DrawTable(group){
 	var Output = '<div class="card-box">\n<table class="cardlist">\n';
 
 	//■ヘッダー
-	Output += '<thead>\n<tr class="header-top">\n<th></th>\n';
+	Output += '<thead>\n<tr class="header-top">\n<th><\/th>\n';
 	for(x=0; x<group.length; x++){
 		Output += '<th class="' + CharId[group[x]] + '"><strong class="shadowname">'
-		+ CharName[group[x]] + '</strong></th>\n';
+		+ CharName[group[x]] + '<\/strong><\/th>\n';
 	}
 
-	Output += '</tr>\n</thead>\n<tbody>\n';
+	Output += '<\/tr>\n<\/thead>\n<tbody>\n';
 	var y=0;
 	var z=0;
 
@@ -155,7 +156,7 @@ function DrawTable(group){
 		Rarity = ['UR','SR'][z];
 		OutputTmp = '';
 		blank = 0; //仕込み
-		OutputTmp += '<tr class="' + Rarity +'"><th><span class="cap">' + Rarity + (y+1) + '枚目</span></th>\n';
+		OutputTmp += '<tr class="' + Rarity +'"><th><span class="cap">' + Rarity + (y+1) + '枚目<\/span><\/th>\n';
 		
 		for(x=0; x<group.length; x++){
 			if(y < CardList[group[x] + z*NumberOfCharacter].length){ //あるならば
@@ -169,13 +170,13 @@ function DrawTable(group){
 				}
 			
 				OutputTmp += '<td class="' + ListTmp.source + '" title="' + ToolTipTmp + '">'
-				+ '<strong>' + ToolTipSource[ListTmp.source] + '</strong>'
-				+ (ListTmp.atr ? ' <img src="img/atr_' + ListTmp.atr.toLowerCase() + '.png" width="24" height="24">' : '')
-				+ (ListTmp.type ? '<img src="img/type_' + ListTmp.type.toLowerCase() + '.png" width="24" height="24">' : '')
+				+ '<strong>' + ToolTipSource[ListTmp.source] + '<\/strong>'
+				+ (ListTmp.atr ? ' <img src="img/atr_' + ListTmp.atr.toLowerCase() + '.png" width="24" height="24" alt="' +  ListTmp.atr.toLowerCase() + '">' : '')
+				+ (ListTmp.type ? '<img src="img/type_' + ListTmp.type.toLowerCase() + '.png" width="24" height="24" alt="' + ListTmp.type.toLowerCase() + '">' : '')
 				+ '<br>' + ListTmp.date
-				+ '</td>\n';
+				+ '<\/td>\n';
 			}else{
-				OutputTmp += '<td></td>\n';
+				OutputTmp += '<td><\/td>\n';
 				blank++;
 			}
 		}
@@ -187,7 +188,7 @@ function DrawTable(group){
 			Output += OutputTmp;
 		}
 	}
-	Output += '</tbody>\n</table>\n</div>\n';
+	Output += '<\/tbody>\n<\/table>\n<\/div>\n';
 	return Output;
 }
 
@@ -237,12 +238,12 @@ loadScript("data/cards.js", function() {
 	document.getElementById("MainArea").innerHTML =
 	  '<h3 style="background-color:#ddd; color:#777; border-color:#999;">まえがき<\/h3>'
 	+ '<p>スクフェスALL STARSにおける、UR・SRの追加日時のまとめです。<br>PCで閲覧している場合、セルにカーソルを当てることで詳しい情報のツールチップが出現します。'
-	+ '<br>最終更新：' + LatestUpdate + '</p>'
-	+ '<h3 class="muse">μ’s</h3>'
+	+ '<br>最終更新：' + LatestUpdate + '<\/p>'
+	+ '<h3 class="muse">μ’s<\/h3>'
 	+ DrawTable(ListMuse)
-	+ '<h3 class="aqours">Aqours</h3>'
+	+ '<h3 class="aqours">Aqours<\/h3>'
 	+ DrawTable(ListAqours)
-	+ '<h3 class="niji">ニジガク</h3>'
+	+ '<h3 class="niji">ニジガク<\/h3>'
 	+ DrawTable(ListNiji);
 });
 --></script>
