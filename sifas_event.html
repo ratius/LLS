@@ -23,14 +23,16 @@
 
 #EventList thead{
 	padding: 2px 5px;
-	background-color: rgba(226, 006, 126, 0.4);
+	background-color: rgba(226, 006, 126, 0.3);
 	border-bottom: solid 2px rgb(226,6,126);
 }
 
-#EventList tbody th{
-	padding: 2px 5px;
-	background-color: rgba(241, 149, 14, 0.3);
-	border-bottom: solid 1px #ccc;
+#EventList thead tr:first-child th{
+	border-right: solid 1px rgb(226,6,126);
+}
+
+#EventList thead tr:nth-child(2){
+	background-color: #ffdbef;
 }
 
 #EventList tbody td{
@@ -133,7 +135,7 @@ const CharLookUpTable = [
 	{"number":8 , "id": "Nico",     "name": "にこ",   "color": "black"},
 	{"number":9 , "id": "Chika",    "name": "千歌",   "color": "black"},
 	{"number":10, "id": "Riko",     "name": "梨子",   "color": "black"},
-	{"number":11, "id": "Kanan",    "name": "果南",   "color": "white"},
+	{"number":11, "id": "Kanan",    "name": "果南",   "color": "black"},
 	{"number":12, "id": "Dia",      "name": "ダイヤ", "color": "white"},
 	{"number":13, "id": "You",      "name": "曜",     "color": "black"},
 	{"number":14, "id": "Yoshiko",  "name": "善子",   "color": "black"},
@@ -145,33 +147,34 @@ const CharLookUpTable = [
 	{"number":20, "id": "Shizuku",  "name": "しずく", "color": "black"},
 	{"number":21, "id": "Karin",    "name": "果林",   "color": "white"},
 	{"number":22, "id": "Ai",       "name": "愛",     "color": "black"},
-	{"number":23, "id": "Kanata",   "name": "彼方",   "color": "white"},
+	{"number":23, "id": "Kanata",   "name": "彼方",   "color": "black"},
 	{"number":24, "id": "Setsuna",  "name": "せつ菜", "color": "white"},
 	{"number":25, "id": "Emma",     "name": "エマ",   "color": "black"},
 	{"number":26, "id": "Rina",     "name": "璃奈",   "color": "black"}
 ];
 
 //■■各種関数
-//■Date型を「YYYY/MM/DD hh:mm」という文字列に変換
-function GetStringFromDate(date){
+//■Date型を「YYYY/MM/DD (hh:mm)」という文字列に変換
+function GetStringFromDate(date,hm){
 	temp = new Date(date);
 	
 	if(temp.getFullYear() == 1970){ //取得失敗などの理由で1970年になった場合、空文字列を返す
 		console.log("Error: " + temp + "may not be a date");
 		return "";
 	}
-
-	return temp.getFullYear()
+	temp2 = temp.getFullYear()
 	+ "/" + ("00" + (temp.getMonth()+1)).slice(-2)
-	+ "/" + ("00" + (temp.getDate())).slice(-2)
-	+ " " + ("00" + (temp.getHours())).slice(-2)
-	+ ":" + ("00" + (temp.getMinutes())).slice(-2);
+	+ "/" + ("00" + (temp.getDate())).slice(-2);
+	if(hm){
+		temp2 += " " + ("00" + (temp.getHours())).slice(-2)
+		+ ":" + ("00" + (temp.getMinutes())).slice(-2);
+	}
+	return temp2;
 }
 
 //■キャラクター用のルックアップテーブル (ID, データ種)
 function LookUp(id, data){
 	var temp = CharLookUpTable.filter((u)=>{return(u.id === id);})[0][data];
-	
 	if(temp === undefined){ //データが見つからなかった場合
 		if(data === "number"){
 			return -1;
@@ -196,13 +199,14 @@ function WriteEventList(){
 
 	//■ヘッダー
 	Output += '<thead>\n<tr class="header-top">\n'
-	+ '<th>No.<\/th><th>イベント名<\/th><th>タイプ<\/th><th>開催期間<\/th><\/tr>\n<\/thead>\n<tbody>\n';
+	+ '<th rowspan="2">No.<\/th><th rowspan="2">イベント名<\/th><th rowspan="2">タイプ<\/th><th rowspan="2">開催期間<\/th><th colspan="2">参加キャラクター<\/th><\/tr>\n'
+	+ '<tr><th>UR<\/th><th>SR<\/th<\/tr>\n<\/thead>\n<tbody>\n';
 
 	//■メイン
 	for(y of EventList){
-		Output += '<tr><td>' + y.id
+		Output += '<tr><td style="text-align:center;">' + y.id
 		+ '<\/td><td>' + y.name
-		+ '<\/td><td style="text-align:center;';
+		+ '<\/td><td style="font-size: small; text-align:center;';
 		switch(y.type) {
 			case "story":
 				Output += ' background-color:#cef;">ストーリー';
@@ -213,10 +217,26 @@ function WriteEventList(){
 			default:
 				Output += '">' + y.type;
 		}
-		Output += '<\/td><td style="font-size: small;">開始：' + GetStringFromDate(y.started) + '<br>'
-		+ '終了：' +  GetStringFromDate(y.ended)
+		Output += '<\/td><td style="font-size: small;">開始：' + GetStringFromDate(y.started, true) + '<br>'
+		+ '終了：' +  GetStringFromDate(y.ended, true)
 		+ ' (' + Math.round((y.ended - y.started)/86400000) + '日間)'
-		+ '<\/td><\/tr>';
+		+ '<\/td><td style="font-size: small;">';
+
+		if(y["UR"]){
+			for(z=0; z<y.UR.length; z++){
+				Output += LookUp(y.UR[z], 'name');
+				if(z < y.UR.length-1){ Output += '、';}
+			}
+		}
+		Output += '<\/td><td style="font-size: small;">';
+		
+		if(y["SR"]){
+			for(z=0; z<y.SR.length; z++){
+				Output += LookUp(y.SR[z], 'name');
+				if(z < y.SR.length-1){ Output += '、';}
+			}
+		}
+		Output +=  '<\/td><\/tr>';
 	}
 	Output += '<\/tbody>\n<\/table>\n';
 	return Output;
@@ -236,7 +256,7 @@ for(temp1=0; temp1<CharId.length; temp1++){
 function MakePairData(){
 	//各イベントに埋め込まれた、参加キャラクターを見る
 	for(i=0; i<EventList.length; i++){
-		var temp1 = EventList[i].participated;
+		var temp1 = EventList[i].UR.concat(EventList[i].SR);
 		//そこからペアを取り出す
 		for(var c1=0; c1<temp1.length-1; c1++){
 			for(var c2=c1+1; c2<temp1.length; c2++){
@@ -286,7 +306,9 @@ function DrawSingleTable(CharList){
 		Output += '<td class="bg_tp_white bg_' + CharId[x] + '">';
 		for(y of temp1){
 			Output += '<div class="EventBox bg_' + CharId[x] + '" title="'
-			+ LookUpEvent(y,"name")
+			+ LookUpEvent(y,"name") + '\n('
+			+ GetStringFromDate(LookUpEvent(y,"started"), false) + '～'
+			+ GetStringFromDate(LookUpEvent(y,"ended"), false) + ')'
 			+ '" style="color:' + LookUp(CharId[x],"color") + '">'
 			+ '<span>' + y + '<\/span><\/div>';
 			
@@ -347,7 +369,9 @@ function DrawPairTable(){
 					for(z of PairData[LookUp(x,"number")][LookUp(y,"number")]){
 						Output += '<div class="EventBox bg_' + x + '" title="'
 						+ LookUp(x,"name") + '・' + LookUp(y,"name") + '\n'
-						+ LookUpEvent(z,"name")
+						+ LookUpEvent(z,"name") + '\n('
+						+ GetStringFromDate(LookUpEvent(z,"started"), false) + '～'
+						+ GetStringFromDate(LookUpEvent(z,"ended"), false) + ')'
 						+ '" style="color:' + LookUp(x,"color") + '">'
 						+ '<span>' + z + '<\/span><\/div>';
 						
@@ -434,6 +458,10 @@ loadScript("data/events.js", function() {
 <h3 class="niji">更新履歴</h3>
 <table class="history">
 <tbody>
+<tr>
+	<td>2019/08/02 23:30頃</td>
+	<td><span class="new"></span>「イベント一覧」のテーブルに「参加キャラクター」を追加</td>
+</tr>
 <tr>
 	<td>2019/07/31 20:30頃</td>
 	<td><span class="new"></span>「キャラクター登場状況」を追加</td>
