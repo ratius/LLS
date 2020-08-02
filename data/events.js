@@ -1,5 +1,3 @@
-const LatestUpdate = "2020/07/06 「ヨハネと花陽の事件簿」まで";
-
 const EventList = [
 {
 	"id" : 1,
@@ -7,7 +5,8 @@ const EventList = [
 	"type" : "story",
 	"started" : new Date("2019-10-03T15:00:00+09:00"),
 	"ended"   : new Date("2019-10-15T14:59:59+09:00"),
-	"participated" : ["Honoka", "Kotori", "Chika", "You", "Ayumu"]
+	"UR" : ["Honoka", "Kotori"],
+	"SR" : ["Chika", "You", "Ayumu"]
 },
 {
 	"id" : 2,
@@ -15,7 +14,8 @@ const EventList = [
 	"type" : "story",
 	"started" : new Date("2019-10-21T15:00:00+09:00"),
 	"ended"   : new Date("2019-11-01T14:59:59+09:00"),
-	"participated" : ["Nico", "Maki", "Dia", "Ruby", "Kasumi"]
+	"UR" : ["Dia", "Ruby"],
+	"SR" : ["Nico", "Maki", "Kasumi"]
 },
 {
 	"id" : 3,
@@ -23,7 +23,8 @@ const EventList = [
 	"type" : "story",
 	"started" : new Date("2019-11-06T15:00:00+09:00"),
 	"ended"   : new Date("2019-11-15T14:59:59+09:00"),
-	"participated" : ["Rin", "Hanayo", "Kanan", "Mari", "Ai"]
+	"UR" : ["Hanayo", "Kanan"],
+	"SR" : ["Rin", "Mari", "Ai"]
 },
 {
 	"id" : 4,
@@ -31,7 +32,8 @@ const EventList = [
 	"type" : "story",
 	"started" : new Date("2019-11-21T15:00:00+09:00"),
 	"ended"   : new Date("2019-11-30T14:59:59+09:00"),
-	"participated" : ["Eli", "Umi", "Yoshiko", "Hanamaru", "Kanata"]
+	"UR" : ["Eli", "Hanamaru"],
+	"SR" : ["Umi", "Yoshiko", "Kanata"]
 },
 {
 	"id" : 5,
@@ -39,7 +41,8 @@ const EventList = [
 	"type" : "story",
 	"started" : new Date("2020-12-06T15:00:00+09:00"),
 	"ended"   : new Date("2020-12-16T14:59:59+09:00"),
-	"participated" : ["Nozomi", "Hanayo", "Chika", "Riko", "Emma"]
+	"UR" : ["Nozomi", "Chika"],
+	"SR" : ["Hanayo", "Riko", "Emma"]
 },
 {
 	"id" : 6,
@@ -47,7 +50,8 @@ const EventList = [
 	"type" : "story",
 	"started" : new Date("2020-12-23T15:00:00+09:00"),
 	"ended"   : new Date("2020-12-31T14:59:59+09:00"),
-	"participated" : ["Honoka", "Nico", "Dia", "Mari", "Rina"]
+	"UR" : ["Nico", "Mari"],
+	"SR" : ["Honoka", "Dia", "Rina"]
 },
 {
 	"id" : 7,
@@ -55,7 +59,8 @@ const EventList = [
 	"type" : "exchange",
 	"started" : new Date("2020-01-06T15:00:00+09:00"),
 	"ended"   : new Date("2020-01-15T14:59:59+09:00"),
-	"participated" : ["Umi", "Maki", "You", "Hanamaru", "Shizuku", "Karin"]
+	"UR" : ["Umi", "You", "Shizuku"],
+	"SR" : ["Maki", "Hanamaru", "Karin"]
 },
 {
 	"id" : 8,
@@ -63,7 +68,8 @@ const EventList = [
 	"type" : "story",
 	"started" : new Date("2020-01-22T15:00:00+09:00"),
 	"ended"   : new Date("2020-01-31T14:59:59+09:00"),
-	"participated" : ["Eli", "Nozomi", "Kanan", "Ruby", "Ayumu", "Setsuna"]
+	"UR" : ["Eli", "Ruby", "Ayumu"],
+	"SR" : ["Nozomi", "Kanan", "Setsuna"],
 },
 {
 	"id" : 9,
@@ -71,7 +77,8 @@ const EventList = [
 	"type" : "exchange",
 	"started" : new Date("2020-02-06T15:00:00+09:00"),
 	"ended"   : new Date("2020-02-14T14:59:59+09:00"),
-	"participated" : ["Eli", "Maki", "Riko", "Yoshiko", "Kasumi", "Karin"]
+	"UR" : ["Maki", "Riko", "Kasumi"],
+	"SR" : ["Eli", "Yoshiko", "Karin"]
 },
 {
 	"id" : 10,
@@ -79,7 +86,8 @@ const EventList = [
 	"type" : "story",
 	"started" : new Date("2020-02-20T15:00:00+09:00"),
 	"ended"   : new Date("2020-02-28T14:59:59+09:00"),
-	"participated" : ["Honoka", "Hanayo", "Kanan", "You", "Ayumu", "Ai"]
+	"UR" : ["Honoka", "Kanan", "Ai"],
+	"SR" : ["Hanayo", "You", "Ayumu"]
 },
 {
 	"id" : 11,
@@ -87,7 +95,8 @@ const EventList = [
 	"type" : "exchange",
 	"started" : new Date("2020-03-06T15:00:00+09:00"),
 	"ended"   : new Date("2020-03-16T14:59:59+09:00"),
-	"participated" : ["Umi", "Rin", "Chika", "Ruby", "Setsuna", "Emma"]
+	"UR" : ["Rin", "Chika", "Emma"],
+	"SR" : ["Umi", "Ruby", "Setsuna"]
 },
 {
 	"id" : 12,
@@ -95,7 +104,8 @@ const EventList = [
 	"type" : "story",
 	"started" : new Date("2020-03-23T15:00:00+09:00"),
 	"ended"   : new Date("2020-03-31T14:59:59+09:00"),
-	"participated" : ["Kotori", "Nozomi", "Riko", "Dia", "Kasumi", "Shizuku"]
+	"UR" : ["Nozomi", "Dia", "Kasumi"],
+	"SR" : ["Kotori", "Riko", "Shizuku"]
 },
 {
 	"id" : 13,
@@ -103,7 +113,8 @@ const EventList = [
 	"type" : "exchange",
 	"started" : new Date("2020-04-06T15:00:00+09:00"),
 	"ended"   : new Date("2020-04-15T14:59:59+09:00"),
-	"participated" : ["Eli", "Kotori", "Dia", "Yoshiko", "Emma", "Rina"]
+	"UR" : ["Kotori", "Yoshiko", "Rina"],
+	"SR" : ["Eli", "Dia", "Emma"]
 },
 {
 	"id" : 14,
@@ -111,7 +122,8 @@ const EventList = [
 	"type" : "story",
 	"started" : new Date("2020-04-21T15:00:00+09:00"),
 	"ended"   : new Date("2020-04-30T14:59:59+09:00"),
-	"participated" : ["Rin", "Maki", "You", "Mari", "Kasumi", "Setsuna"]
+	"UR" : ["Maki", "You", "Setsuna"],
+	"SR" : ["Rin", "Mari", "Kasumi"]
 },
 {
 	"id" : 15,
@@ -119,7 +131,8 @@ const EventList = [
 	"type" : "exchange",
 	"started" : new Date("2020-05-07T15:00:00+09:00"),
 	"ended"   : new Date("2020-05-15T14:59:59+09:00"),
-	"participated" : ["Nozomi", "Nico", "Chika", "Hanamaru", "Shizuku", "Kanata"]
+	"UR" : ["Nico", "Hanamaru", "Kanata"],
+	"SR" : ["Nozomi", "Chika", "Shizuku"]
 },
 {
 	"id" : 16,
@@ -127,7 +140,8 @@ const EventList = [
 	"type" : "story",
 	"started" : new Date("2020-05-21T15:00:00+09:00"),
 	"ended"   : new Date("2020-05-29T14:59:59+09:00"),
-	"participated" : ["Honoka", "Rin", "Kanan", "Dia", "Ayumu", "Rina"]
+	"UR" : ["Rin", "Dia", "Ayumu"],
+	"SR" : ["Honoka", "Kanan", "Rina"]
 },
 {
 	"id" : 17,
@@ -135,7 +149,8 @@ const EventList = [
 	"type" : "exchange",
 	"started" : new Date("2020-06-05T15:00:00+09:00"),
 	"ended"   : new Date("2020-06-13T14:59:59+09:00"),
-	"participated" : ["Honoka", "Maki", "Riko", "You", "Karin", "Setsuna"]
+	"UR" : ["Honoka", "Riko", "Karin"],
+	"SR" : ["Maki", "You", "Setsuna"]
 },
 {
 	"id" : 18,
@@ -143,7 +158,8 @@ const EventList = [
 	"type" : "story",
 	"started" : new Date("2020-06-22T15:00:00+09:00"),
 	"ended"   : new Date("2020-06-30T14:59:59+09:00"),
-	"participated" : ["Nozomi", "Nico", "Kanan", "Hanamaru", "Ai", "Emma"]
+	"UR" : ["Nozomi", "Kanan", "Emma"],
+	"SR" : ["Nico", "Hanamaru", "Ai"]
 },
 {
 	"id" : 19,
@@ -151,7 +167,8 @@ const EventList = [
 	"type" : "exchange",
 	"started" : new Date("2020-07-06T15:00:00+09:00"),
 	"ended"   : new Date("2020-07-15T14:59:59+09:00"),
-	"participated" : ["Eli", "Hanayo", "Kanan", "Yoshiko", "Ayumu", "Kanata"]
+	"UR" : ["Hanayo", "Yoshiko", "Kanata"],
+	"SR" : ["Eli", "Kanan", "Ayumu"]
 },
 {
 	"id" : 20,
@@ -159,6 +176,7 @@ const EventList = [
 	"type" : "story",
 	"started" : new Date("2020-07-22T15:00:00+09:00"),
 	"ended"   : new Date("2020-07-31T14:59:59+09:00"),
-	"participated" : ["Kotori", "Umi", "Riko", "Ruby", "Kasumi", "Rina"]
+	"UR" : ["Umi", "Ruby", "Rina"],
+	"SR" : ["Kotori", "Riko", "Kasumi"]
 }
 ];
