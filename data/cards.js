@@ -2647,7 +2647,7 @@ const RawCardList = [
 	"id": 286,
 	"name": "Shioriko",
 	"rare": "SR",
-	"atr": "Cool",
+	"atr": "Pure",
 	"type": "Sp",
 	"cn1": "えっ！？　真っ赤……？",
 	"cn2": "決意の光",
