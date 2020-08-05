@@ -2559,7 +2559,6 @@ const RawCardList = [
 	"source": "gacha",
 	"desc": "「璃奈のビックリお化け屋敷ガチャ(後編)」で追加"
 },
-
 {
 	"id": 277,
 	"name": "Ruby",
@@ -2655,5 +2654,77 @@ const RawCardList = [
 	"date": "2020/08/05",
 	"source": "none",
 	"desc": "「ニジガクフェス」で追加"
+},
+{
+	"id": 287,
+	"name": "Mari",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "ウフフ♪　元気のいいコね！",
+	"cn2": "トワイライト・カウガール",
+	"date": "2020/08/06",
+	"source": "gacha",
+	"desc": "「勝ち抜け！スポーツバトルガチャ(前編)」で追加"
+},
+{
+	"id": 288,
+	"name": "Rina",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "鞠莉さんの部屋に泊まってみたい",
+	"cn2": "Love U my friend",
+	"date": "2020/08/06",
+	"source": "gacha",
+	"desc": "「勝ち抜け！スポーツバトルガチャ(前編)」で追加"
+},
+{
+	"id": 289,
+	"name": "Eli",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "優勝は……私のものよ！",
+	"cn2": "Queen of the Circuit",
+	"date": "2020/08/10",
+	"source": "gacha",
+	"desc": "「勝ち抜け！スポーツバトルガチャ(後編)」で追加"
+},
+{
+	"id": 290,
+	"name": "Setsuna",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sp",
+	"cn1": "レインボートルマリンアロー！！",
+	"cn2": "ジャスティス・アーチャー",
+	"date": "2020/08/06",
+	"source": "reward",
+	"desc": "イベント「勝ち抜け！スポーツバトル」報酬"
+},
+{
+	"id": 291,
+	"name": "Hanamaru",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "落ちるずら～！",
+	"cn2": "恋になりたいAQUARIUM",
+	"date": "2020/08/06",
+	"source": "reward",
+	"desc": "イベント「勝ち抜け！スポーツバトル」報酬"
+},
+{
+	"id": 292,
+	"name": "Rin",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "もう１回やりたいにゃ！",
+	"cn2": "Wonderful Rush",
+	"date": "2020/08/06",
+	"source": "reward",
+	"desc": "イベント「勝ち抜け！スポーツバトル」報酬"
 }
 ];
