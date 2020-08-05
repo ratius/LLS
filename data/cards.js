@@ -1,6 +1,8 @@
 const LatestUpdate = "2020/07/06 「ヨハネと花陽の事件簿」まで";
 
 const RawCardList = [
+{"id": -1, "name": "Shioriko", "rare": "UR", "offset":1 },
+{"id": -1, "name": "Shioriko", "rare": "SR", "offset":4 },
 {
 	"id": 3,
 	"name": "Honoka",
@@ -2283,18 +2285,6 @@ const RawCardList = [
 },
 {
 	"id": 254,
-	"name": "Kotori",
-	"rare": "SR",
-	"atr": "Pure",
-	"type": "Sk",
-	"cn1": "おかえりなさいませ、ご主人様",
-	"cn2": "それは僕たちの奇跡",
-	"date": "2020/06/15",
-	"source": "none",
-	"desc": "「メンバーピックアップガチャ」で追加"
-},
-{
-	"id": 255,
 	"name": "Kasumi",
 	"rare": "UR",
 	"atr": "Cool",
@@ -2306,7 +2296,19 @@ const RawCardList = [
 	"desc": "「メンバーピックアップガチャ」で追加"
 },
 {
-	"id": 246,
+	"id": 255,
+	"name": "Kotori",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Sk",
+	"cn1": "おかえりなさいませ、ご主人様",
+	"cn2": "それは僕たちの奇跡",
+	"date": "2020/06/15",
+	"source": "none",
+	"desc": "「メンバーピックアップガチャ」で追加"
+},
+{
+	"id": 256,
 	"name": "Nozomi",
 	"rare": "UR",
 	"atr": "Pure",
@@ -2318,15 +2320,15 @@ const RawCardList = [
 	"desc": "「君と、雨に歌えばガチャ(前編)」で追加"
 },
 {
-	"id": 247,
-	"name": "Nico",
+	"id": 257,
+	"name": "Hanamaru",
 	"rare": "SR",
-	"atr": "Elegant",
-	"type": "Sk",
-	"cn1": "にこもがんばっちゃおうかな～",
-	"cn2": "それは僕たちの奇跡",
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "特別な道具を使うずら",
+	"cn2": "Brightest Melody",
 	"date": "2020/06/22",
-	"source": "reward",
+	"source": "gacha",
 	"desc": "「君と、雨に歌えばガチャ(前編)」で追加"
 },
 {
@@ -2343,14 +2345,14 @@ const RawCardList = [
 },
 {
 	"id": 259,
-	"name": "Hanamaru",
-	"rare": "SR",
-	"atr": "Smile",
+	"name": "Emma",
+	"rare": "UR",
+	"atr": "Active",
 	"type": "Vo",
-	"cn1": "特別な道具を使うずら",
-	"cn2": "Brightest Melody",
+	"cn1": "みんなも一緒に歌おうよ〜♪",
+	"cn2": "レインドロップ",
 	"date": "2020/06/22",
-	"source": "gacha",
+	"source": "reward",
 	"desc": "イベント「君と、雨に歌えば」報酬"
 },
 {
@@ -2367,12 +2369,12 @@ const RawCardList = [
 },
 {
 	"id": 261,
-	"name": "Emma",
-	"rare": "UR",
-	"atr": "Active",
-	"type": "Vo",
-	"cn1": "みんなも一緒に歌おうよ〜♪",
-	"cn2": "レインドロップ",
+	"name": "Nico",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "にこもがんばっちゃおうかな～",
+	"cn2": "それは僕たちの奇跡",
 	"date": "2020/06/22",
 	"source": "reward",
 	"desc": "イベント「君と、雨に歌えば」報酬"
@@ -2427,18 +2429,6 @@ const RawCardList = [
 },
 {
 	"id": 266,
-	"name": "Eli",
-	"rare": "SR",
-	"atr": "Cool",
-	"type": "Gd",
-	"cn1": "怪盗からのメッセージが！！",
-	"cn2": "Wonderful Rush",
-	"date": "2020/07/06",
-	"source": "reward",
-	"desc": "イベント「ヨハネと花陽の事件簿」報酬"
-},
-{
-	"id": 267,
 	"name": "Hanayo",
 	"rare": "UR",
 	"atr": "Pure",
@@ -2450,7 +2440,7 @@ const RawCardList = [
 	"desc": "「ヨハネと花陽の事件簿ガチャ(前編)」で追加"
 },
 {
-	"id": 268,
+	"id": 267,
 	"name": "Kanan",
 	"rare": "SR",
 	"atr": "Smile",
@@ -2462,7 +2452,7 @@ const RawCardList = [
 	"desc": "「ヨハネと花陽の事件簿ガチャ(前編)」で追加"
 },
 {
-	"id": 269,
+	"id": 268,
 	"name": "Yoshiko",
 	"rare": "UR",
 	"atr": "Elegant",
@@ -2474,19 +2464,7 @@ const RawCardList = [
 	"desc": "イベント「ヨハネと花陽の事件簿」報酬"
 },
 {
-	"id": 270,
-	"name": "Ayumu",
-	"rare": "SR",
-	"atr": "Active",
-	"type": "Vo",
-	"cn1": "いい感じにできてるよ！",
-	"cn2": "Love U my friend",
-	"date": "2020/07/06",
-	"source": "reward",
-	"desc": "イベント「ヨハネと花陽の事件簿」報酬"
-},
-{
-	"id": 271,
+	"id": 269,
 	"name": "Kanata",
 	"rare": "UR",
 	"atr": "Smile",
@@ -2496,6 +2474,30 @@ const RawCardList = [
 	"date": "2020/07/10",
 	"source": "gacha",
 	"desc": "「ヨハネと花陽の事件簿ガチャ(後編)」で追加"
+},
+{
+	"id": 270,
+	"name": "Eli",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "怪盗からのメッセージが！！",
+	"cn2": "Wonderful Rush",
+	"date": "2020/07/06",
+	"source": "reward",
+	"desc": "イベント「ヨハネと花陽の事件簿」報酬"
+},
+{
+	"id": 271,
+	"name": "Ayumu",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "いい感じにできてるよ！",
+	"cn2": "Love U my friend",
+	"date": "2020/07/06",
+	"source": "reward",
+	"desc": "イベント「ヨハネと花陽の事件簿」報酬"
 },
 {
 	"id": 272,
@@ -2522,7 +2524,7 @@ const RawCardList = [
 	"desc": "「メンバーピックアップガチャ」で追加"
 },
 {
-	"id": 277,
+	"id": 274,
 	"name": "Rina",
 	"rare": "UR",
 	"atr": "Smile",
@@ -2534,7 +2536,7 @@ const RawCardList = [
 	"desc": "「璃奈のビックリお化け屋敷ガチャ(前編)」で追加"
 },
 {
-	"id": 278,
+	"id": 275,
 	"name": "Kotori",
 	"rare": "SR",
 	"atr": "Elegant",
@@ -2546,7 +2548,7 @@ const RawCardList = [
 	"desc": "「璃奈のビックリお化け屋敷ガチャ(前編)」で追加"
 },
 {
-	"id": 279,
+	"id": 276,
 	"name": "Umi",
 	"rare": "UR",
 	"atr": "Elegant",
@@ -2559,7 +2561,7 @@ const RawCardList = [
 },
 
 {
-	"id": 280,
+	"id": 277,
 	"name": "Ruby",
 	"rare": "UR",
 	"atr": "Natural",
@@ -2571,7 +2573,7 @@ const RawCardList = [
 	"desc": "イベント「璃奈のビックリお化け屋敷」報酬"
 },
 {
-	"id": 281,
+	"id": 278,
 	"name": "Riko",
 	"rare": "SR",
 	"atr": "Smile",
@@ -2583,7 +2585,7 @@ const RawCardList = [
 	"desc": "イベント「璃奈のビックリお化け屋敷」報酬"
 },
 {
-	"id": 282,
+	"id": 279,
 	"name": "Kasumi",
 	"rare": "SR",
 	"atr": "Pure",
@@ -2595,19 +2597,7 @@ const RawCardList = [
 	"desc": "イベント「璃奈のビックリお化け屋敷」報酬"
 },
 {
-	"id": 283,
-	"name": "Dia",
-	"rare": "UR",
-	"atr": "Pure",
-	"type": "Sk",
-	"cn1": "……わ、わかりましたわ",
-	"cn2": "ラグジュアリー・ピンク",
-	"date": "2020/07/28",
-	"source": "fes",
-	"desc": "「スクスタフェス」で追加"
-},
-{
-	"id": 284,
+	"id": 280,
 	"name": "Shizuku",
 	"rare": "UR",
 	"atr": "Cool",
@@ -2619,7 +2609,31 @@ const RawCardList = [
 	"desc": "「スクスタフェス」で追加"
 },
 {
-	"id": 285,
+	"id": 281,
+	"name": "Dia",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sk",
+	"cn1": "……わ、わかりましたわ",
+	"cn2": "ラグジュアリー・ピンク",
+	"date": "2020/07/28",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 282,
+	"name": "You",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Vo",
+	"cn1": "本当に似合うかな……？",
+	"cn2": "恋になりたいAQUARIUM",
+	"date": "2020/07/28",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 283,
 	"name": "Nico",
 	"rare": "SR",
 	"atr": "Natural",
@@ -2632,14 +2646,14 @@ const RawCardList = [
 },
 {
 	"id": 286,
-	"name": "You",
+	"name": "Shioriko",
 	"rare": "SR",
-	"atr": "Elegant",
-	"type": "Vo",
-	"cn1": "本当に似合うかな……？",
-	"cn2": "恋になりたいAQUARIUM",
-	"date": "2020/07/28",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "えっ！？　真っ赤……？",
+	"cn2": "決意の光",
+	"date": "2020/08/05",
 	"source": "none",
-	"desc": "「スクスタフェス」で追加"
+	"desc": "「ニジガクフェス」で追加"
 }
 ];

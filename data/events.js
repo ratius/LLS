@@ -178,5 +178,14 @@ const EventList = [
 	"ended"   : new Date("2020-07-31T14:59:59+09:00"),
 	"UR" : ["Umi", "Ruby", "Rina"],
 	"SR" : ["Kotori", "Riko", "Kasumi"]
+},
+{
+	"id" : 21,
+	"name" : "勝ち抜け！スポーツバトル",
+	"type" : "exchange",
+	"started" : new Date("2020-08-06T15:00:00+09:00"),
+	"ended"   : new Date("2020-08-14T14:59:59+09:00"),
+	"UR" : ["Eli", "Mari", "Setsuna"],
+	"SR" : ["Rin", "Hanamaru", "Rina"]
 }
 ];
