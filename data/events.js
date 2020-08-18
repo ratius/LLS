@@ -187,5 +187,14 @@ const EventList = [
 	"ended"   : new Date("2020-08-14T14:59:59+09:00"),
 	"UR" : ["Eli", "Mari", "Setsuna"],
 	"SR" : ["Rin", "Hanamaru", "Rina"]
+},
+{
+	"id" : 22,
+	"name" : "オモチャ屋さんパニック☆",
+	"type" : "story",
+	"started" : new Date("2020-08-21T15:00:00+09:00"),
+	"ended"   : new Date("2020-08-31T14:59:59+09:00"),
+	"UR" : ["Nico", "You", "Ai"],
+	"SR" : ["Hanayo", "Dia", "Karin"]
 }
 ];

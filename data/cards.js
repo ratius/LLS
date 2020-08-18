@@ -1,5 +1,3 @@
-const LatestUpdate = "2020/07/06 「ヨハネと花陽の事件簿」まで";
-
 const RawCardList = [
 {"id": -1, "name": "Shioriko", "rare": "UR", "offset":1 },
 {"id": -1, "name": "Shioriko", "rare": "SR", "offset":4 },
@@ -2726,5 +2724,102 @@ const RawCardList = [
 	"date": "2020/08/06",
 	"source": "reward",
 	"desc": "イベント「勝ち抜け！スポーツバトル」報酬"
+},
+{
+	"id": 293,
+	"name": "Ayumu",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "ぎゅって捕まってもいい？",
+	"cn2": "Present For You&hearts;",
+	"date": "2020/08/14",
+	"source": "none",
+	"desc": "「メンバーピックアップガチャ」で追加"
+},
+{
+	"id": 294,
+	"name": "Chika",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Vo",
+	"cn1": "一緒に涼もう",
+	"cn2": "恋になりたいAQUARIUM",
+	"date": "2020/08/14",
+	"source": "none",
+	"desc": "「メンバーピックアップガチャ」で追加"
+},
+{
+	"id": 295,
+	"name": "You",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "電車を走らせるよ～！いけーー！",
+	"cn2": "おもちゃの世界へようこそ",
+	"date": "2020/08/18",
+	"source": "gacha",
+	"desc": "「オモチャ屋さんパニック☆ガチャ(前編)」で追加"
+},
+{
+	"id": 296,
+	"name": "Karin",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "このシリーズの人形、持ってたわ",
+	"cn2": "Love U my friend",
+	"date": "2020/08/21",
+	"source": "gacha",
+	"desc": "「オモチャ屋さんパニック☆ガチャ(前編)」で追加"
+},
+{
+	"id": 297,
+	"name": "Nico",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "ままごとセットを使いましょう！",
+	"cn2": "おもちゃの世界へようこそ",
+	"date": "2020/08/21",
+	"source": "gacha",
+	"desc": "「オモチャ屋さんパニック☆ガチャ(後編)」で追加"
+},
+{
+	"id": 298,
+	"name": "Ai",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sp",
+	"cn1": "愛さんを捕まえてみな～！",
+	"cn2": "おもちゃの世界へようこそ",
+	"date": "2020/08/21",
+	"source": "reward",
+	"desc": "イベント「オモチャ屋さんパニック☆」報酬"
+},
+{
+	"id": 299,
+	"name": "Dia",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "思い出し笑いですわ",
+	"cn2": "恋になりたいAQUARIUM",
+	"date": "2020/08/21",
+	"source": "reward",
+	"desc": "イベント「オモチャ屋さんパニック☆」報酬"
+},
+{
+	"id": 300,
+	"name": "Hanayo",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "あ、あれっ、あれー！？",
+	"cn2": "Wonderful Rush",
+	"date": "2020/08/21",
+	"source": "reward",
+	"desc": "イベント「オモチャ屋さんパニック☆」報酬"
 }
 ];
+const LatestUpdate = "2020/08/17 「オモチャ屋さんパニック☆」まで";
