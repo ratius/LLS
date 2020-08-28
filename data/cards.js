@@ -2731,7 +2731,7 @@ const RawCardList = [
 	"rare": "UR",
 	"atr": "Elegant",
 	"type": "Sp",
-	"cn1": "ぎゅって捕まってもいい？",
+	"cn1": "ぎゅってつかまってもいい？",
 	"cn2": "Present For You&hearts;",
 	"date": "2020/08/14",
 	"source": "none",
@@ -2820,6 +2820,54 @@ const RawCardList = [
 	"date": "2020/08/21",
 	"source": "reward",
 	"desc": "イベント「オモチャ屋さんパニック☆」報酬"
+},
+{
+	"id": 301,
+	"name": "Honoka",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "ほらほら、じっとして～",
+	"cn2": "コスミック☆ドライバー",
+	"date": "2020/08/26",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 302,
+	"name": "Riko",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "私とあなた、二人だけの時間",
+	"cn2": "薔薇のしらべ",
+	"date": "2020/08/26",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 303,
+	"name": "Nozomi",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "神様に聞いてみる？",
+	"cn2": "Wonderful Rush",
+	"date": "2020/08/26",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 304,
+	"name": "Emma",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "ふわふわで、カラフルでキラキラ",
+	"cn2": "Love U my friend",
+	"date": "2020/08/26",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
 }
 ];
 const LatestUpdate = "2020/08/17 「オモチャ屋さんパニック☆」まで";
