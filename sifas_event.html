@@ -9,19 +9,19 @@
 <meta name="twitter:title" content="スクフェスALL STARS 過去のイベントまとめ">
 <meta name="twitter:description" content="スクスタのイベントストーリーで開催されたイベント、および共演したペアのまとめです。">
 
-<title>スクフェスALL STARS 過去のイベントまとめ</title>
+<title>(テスト)スクフェスALL STARS 過去のイベントまとめ</title>
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="color_sifas.css">
 <style><!--
 
-#EventList {
+#EventList, #Trio-Table {
 	margin: 10px;
 	border: solid 3px rgb(226,6,126);
 	border-collapse: collapse;
 }
 
-#EventList thead{
+#EventList thead, #Trio-Table thead{
 	padding: 2px 5px;
 	background-color: rgba(226, 006, 126, 0.3);
 	border-bottom: solid 2px rgb(226,6,126);
@@ -85,6 +85,17 @@
 }
 .quarter-table td { color: #999; }
 
+#Trio-Table tbody th{
+	padding: 5px;
+	border-top: solid 1px #aaa;
+	border-right: solid 1px #aaa;
+}
+#Trio-Table tbody td{
+	padding: 5px;
+	font-size: small;
+	border-top: solid 1px #aaa;
+	border-right: solid 1px #aaa;
+}
 
 .shadowname {
 	color: white;
@@ -121,36 +132,35 @@ const CharId = ['Honoka', 'Eli', 'Kotori', 'Umi', 'Rin', 'Maki', 'Nozomi', 'Hana
 		'Chika', 'Riko', 'Kanan', 'Dia', 'You', 'Yoshiko', 'Hanamaru', 'Mari', 'Ruby',
 		'Ayumu', 'Kasumi', 'Shizuku', 'Karin', 'Ai', 'Kanata', 'Setsuna', 'Emma', 'Rina'];
 
-const EventType = []
-
 const CharLookUpTable = [
-	{"number":0 , "id": "Honoka",   "name": "穂乃果", "color": "black"},
-	{"number":1 , "id": "Eli",      "name": "絵里",   "color": "black"},
-	{"number":2 , "id": "Kotori",   "name": "ことり", "color": "black"},
-	{"number":3 , "id": "Umi",      "name": "海未",   "color": "white"},
-	{"number":4 , "id": "Rin",      "name": "凛",     "color": "black"},
-	{"number":5 , "id": "Maki",     "name": "真姫",   "color": "white"},
-	{"number":6 , "id": "Nozomi",   "name": "希",     "color": "white"},
-	{"number":7 , "id": "Hanayo",   "name": "花陽",   "color": "black"},
-	{"number":8 , "id": "Nico",     "name": "にこ",   "color": "black"},
-	{"number":9 , "id": "Chika",    "name": "千歌",   "color": "black"},
-	{"number":10, "id": "Riko",     "name": "梨子",   "color": "black"},
-	{"number":11, "id": "Kanan",    "name": "果南",   "color": "black"},
-	{"number":12, "id": "Dia",      "name": "ダイヤ", "color": "white"},
-	{"number":13, "id": "You",      "name": "曜",     "color": "black"},
-	{"number":14, "id": "Yoshiko",  "name": "善子",   "color": "black"},
-	{"number":15, "id": "Hanamaru", "name": "花丸",   "color": "black"},
-	{"number":16, "id": "Mari",     "name": "鞠莉",   "color": "white"},
-	{"number":17, "id": "Ruby",     "name": "ルビィ", "color": "black"},
-	{"number":18, "id": "Ayumu",    "name": "歩夢",   "color": "black"},
-	{"number":19, "id": "Kasumi",   "name": "かすみ", "color": "black"},
-	{"number":20, "id": "Shizuku",  "name": "しずく", "color": "black"},
-	{"number":21, "id": "Karin",    "name": "果林",   "color": "white"},
-	{"number":22, "id": "Ai",       "name": "愛",     "color": "black"},
-	{"number":23, "id": "Kanata",   "name": "彼方",   "color": "black"},
-	{"number":24, "id": "Setsuna",  "name": "せつ菜", "color": "white"},
-	{"number":25, "id": "Emma",     "name": "エマ",   "color": "black"},
-	{"number":26, "id": "Rina",     "name": "璃奈",   "color": "black"}
+	{"number":0 , "id": "Honoka",   "name": "穂乃果", "color": "black", "group": "M"},
+	{"number":1 , "id": "Eli",      "name": "絵里",   "color": "black", "group": "M"},
+	{"number":2 , "id": "Kotori",   "name": "ことり", "color": "black", "group": "M"},
+	{"number":3 , "id": "Umi",      "name": "海未",   "color": "white", "group": "M"},
+	{"number":4 , "id": "Rin",      "name": "凛",     "color": "black", "group": "M"},
+	{"number":5 , "id": "Maki",     "name": "真姫",   "color": "white", "group": "M"},
+	{"number":6 , "id": "Nozomi",   "name": "希",     "color": "white", "group": "M"},
+	{"number":7 , "id": "Hanayo",   "name": "花陽",   "color": "black", "group": "M"},
+	{"number":8 , "id": "Nico",     "name": "にこ",   "color": "white", "group": "M"},
+	{"number":9 , "id": "Chika",    "name": "千歌",   "color": "black", "group": "A"},
+	{"number":10, "id": "Riko",     "name": "梨子",   "color": "black", "group": "A"},
+	{"number":11, "id": "Kanan",    "name": "果南",   "color": "black", "group": "A"},
+	{"number":12, "id": "Dia",      "name": "ダイヤ", "color": "white", "group": "A"},
+	{"number":13, "id": "You",      "name": "曜",     "color": "black", "group": "A"},
+	{"number":14, "id": "Yoshiko",  "name": "善子",   "color": "black", "group": "A"},
+	{"number":15, "id": "Hanamaru", "name": "花丸",   "color": "black", "group": "A"},
+	{"number":16, "id": "Mari",     "name": "鞠莉",   "color": "white", "group": "A"},
+	{"number":17, "id": "Ruby",     "name": "ルビィ", "color": "black", "group": "A"},
+	{"number":18, "id": "Ayumu",    "name": "歩夢",   "color": "black", "group": "N"},
+	{"number":19, "id": "Kasumi",   "name": "かすみ", "color": "black", "group": "N"},
+	{"number":20, "id": "Shizuku",  "name": "しずく", "color": "black", "group": "N"},
+	{"number":21, "id": "Karin",    "name": "果林",   "color": "white", "group": "N"},
+	{"number":22, "id": "Ai",       "name": "愛",     "color": "black", "group": "N"},
+	{"number":23, "id": "Kanata",   "name": "彼方",   "color": "black", "group": "N"},
+	{"number":24, "id": "Setsuna",  "name": "せつ菜", "color": "white", "group": "N"},
+	{"number":25, "id": "Emma",     "name": "エマ",   "color": "black", "group": "N"},
+	{"number":26, "id": "Rina",     "name": "璃奈",   "color": "black", "group": "N"},
+	{"number":27, "id": "Shioriko", "name": "栞子",   "color": "black", "group": "N"}
 ];
 
 //■■各種関数
@@ -242,39 +252,50 @@ function WriteEventList(){
 	return Output;
 }
 
+//■トリオ用のデータ集計。最大4重の配列で格納する
+//  TrioHistory[a][0]   は、メンバーaの出席状況の配列
+//  TrioHistory[a][b][0]は、メンバーa・a+bの共演状況の配列
+//  TrioHistory[a][b][c]は、メンバーa・a+b・a+b+cの共演状況の配列
 
-//■ペアの表を作る
-let PairData = [];
-
+let TrioHistory = new Array(CharId.length);
 for(temp1=0; temp1<CharId.length; temp1++){
-	PairData[temp1] = new Array(28); //最後はペア用に
-	for(temp2=0; temp2<CharId.length+1; temp2++){
-		PairData[temp1][temp2] = [];
+	TrioHistory[temp1] = new Array(CharId.length - temp1);
+	TrioHistory[temp1][0] = [];
+	
+	for(temp2=1; temp2<TrioHistory[temp1].length; temp2++){
+		TrioHistory[temp1][temp2] = new Array(CharId.length - temp1 - temp2);
+		TrioHistory[temp1][temp2][0] = [];
+		
+		for(temp3=1; temp3<TrioHistory[temp1][temp2].length; temp3++){
+			TrioHistory[temp1][temp2][temp3] = [];
+		}
 	}
 }
 //表にデータを埋め込む
-function MakePairData(){
+function MakeTrioData(){
 	//各イベントに埋め込まれた、参加キャラクターを見る
 	for(i=0; i<EventList.length; i++){
 		var temp1 = EventList[i].UR.concat(EventList[i].SR);
-		//そこからペアを取り出す
-		for(var c1=0; c1<temp1.length-1; c1++){
-			for(var c2=c1+1; c2<temp1.length; c2++){
-				temp2 = CharId.indexOf(temp1[c1]);
-				temp3 = CharId.indexOf(temp1[c2]);
-				
-				if(temp2 === -1 || temp3 === -1){
-					console.log("Database Error: Either " + temp1[c1] + " or " + temp1[c2] + " is not a valid character ID");
-					continue;
-				}
-				PairData[temp2][temp3].push(EventList[i].id);
-				PairData[temp3][temp2].push(EventList[i].id);
-			}
-		}
 		
-		//単独での登場回数も記録
-		for(var c3 in temp1){
-			PairData[CharId.indexOf(temp1[c3])][27].push(EventList[i].id);
+		var temp2= new Array();
+		for(var j=0; j<temp1.length; j++){
+			temp2[j] = LookUp(temp1[j],"number");
+		}
+		temp2 = temp2.sort(function(a,b){return a-b}); //イベント参加者のIDを昇順に並べ替えて
+		
+		//そこからソロ・ペア・トリオのデータを生成
+		for(var c1=0; c1<temp1.length; c1++){
+			TrioHistory[temp2[c1]][0].push(EventList[i].id);
+			if(c1>temp1.length-2){ break; }
+
+			for(var c2=c1+1; c2<temp1.length; c2++){
+				TrioHistory[temp2[c1]][temp2[c2]-temp2[c1]][0].push(EventList[i].id);
+				if(c2>temp1.length-1){ break; }
+
+				for(var c3=c2+1; c3<temp1.length; c3++){
+					TrioHistory[temp2[c1]][temp2[c2]-temp2[c1]][temp2[c3]-temp2[c2]].push(EventList[i].id);
+				}
+			}
 		}
 	}
 }
@@ -285,7 +306,7 @@ function DrawSingleTable(CharList){
 	var maxnumber = 0;
 	var Output = '<table class="Single-Table" style="width:100%">\n<thead>\n<tr>\n';
 	for(x of CharList){
-		if(maxnumber < PairData[x][27].length){ maxnumber = PairData[x][27].length; }
+		if(maxnumber < TrioHistory[x][0].length){ maxnumber = TrioHistory[x][0].length; }
 		
 		Output += '<th class="bg_' + CharId[x] + '" style="width:' + (100/CharList.length) + '%">'
 		+ '<strong class="shadowname">' + LookUp(CharId[x],"name") + '<\/strong><\/th>\n';
@@ -295,14 +316,14 @@ function DrawSingleTable(CharList){
 	//■回数
 	for(x of CharList){
 		Output += '<td>'
-		+ PairData[x][27].length + '回<br></td>';
+		+ TrioHistory[x][0].length + '回<br></td>';
 	}
 	Output += '<\/tr><tr>';
 	
 	//■ボタン
 	Output += '<\/tr>';
 	for(x of CharList){
-		var temp1 = PairData[x][27];
+		var temp1 = TrioHistory[x][0];
 		Output += '<td class="bg_tp_white bg_' + CharId[x] + '">';
 		for(y of temp1){
 			Output += '<div class="EventBox bg_' + CharId[x] + '" title="'
@@ -320,7 +341,7 @@ function DrawSingleTable(CharList){
 	return Output;
 }
 
-// ■「共演ペア一覧」テーブルの作成
+// ■「ペア共演状況」テーブルの作成
 function DrawPairTable(){
 	//■親テーブル
 	var Output = '<table id="Pair-Table">\n<thead>\n<tr>\n';
@@ -359,14 +380,16 @@ function DrawPairTable(){
 				if(x === y){ //同キャラは灰色でいい
 					Output += '<td style="background-color:#aaa"><\/td>\n';
 				}else {
-					var Number = 0;
+					var CirclesInRow = 0;
 					Output += '<td class="bg_tp_white bg_' + y + '">'
+					
+					var temp1 = [LookUp(x,"number"),LookUp(y,"number")].sort(function(a,b){return a-b});
 
-					if(PairData[LookUp(x,"number")][LookUp(y,"number")].length == 0){
+					if(TrioHistory[temp1[0]][temp1[1]-temp1[0]][0].length == 0){
 						Output += '－';
 					}
 
-					for(z of PairData[LookUp(x,"number")][LookUp(y,"number")]){
+					for(z of TrioHistory[temp1[0]][temp1[1]-temp1[0]][0]){
 						Output += '<div class="EventBox bg_' + x + '" title="'
 						+ LookUp(x,"name") + '・' + LookUp(y,"name") + '\n'
 						+ LookUpEvent(z,"name") + '\n('
@@ -375,9 +398,9 @@ function DrawPairTable(){
 						+ '" style="color:' + LookUp(x,"color") + '">'
 						+ '<span>' + z + '<\/span><\/div>';
 						
-						if(++Number == 3){
+						if(++CirclesInRow == 3){ //改行処理
 							Output += '<br>';
-							Number = 0;
+							CirclesInRow = 0;
 						}
 					}
 					Output += '<\/td>\n';
@@ -386,7 +409,37 @@ function DrawPairTable(){
 			Output += '<\/tr>\n';
 		}
 
-	Output += '<\/div><\/td>\n<\/tr>\n<\/tbody>\n<\/table>';
+	Output += '<\/table><\/div><\/td>\n<\/tr>\n<\/tbody>\n<\/table>';
+	return Output;
+}
+
+// ■「トリオ重複状況」テーブルの作成
+function DrawDuplicatedTrioList(){
+	var Output = '<table id="Trio-Table">\n'
+	+ '<thead>\n<tr>\n<th colspan="3">重複トリオ<\/th><th>参加イベント<\/th><\/tr><\/thead>\n<tbody>'
+
+	for(temp1=0; temp1<TrioHistory.length; temp1++){
+		for(temp2=1; temp2<TrioHistory[temp1].length; temp2++){
+			for(temp3=1; temp3<TrioHistory[temp1][temp2].length; temp3++){
+				if(TrioHistory[temp1][temp2][temp3].length > 1){
+					Output += '<tr>'
+					+ '<th class="bg_' + CharId[temp1] + '"><span class="shadowname">'
+					+ LookUp(CharId[temp1],"name") + '<\/span><\/th>'
+					+ '<th class="bg_' + CharId[temp1+temp2] + '"><span class="shadowname">'
+					+ LookUp(CharId[temp1+temp2],"name") + '<\/span><\/th>'
+					+ '<th class="bg_' + CharId[temp1+temp2+temp3] + '"><span class="shadowname">'
+					+ LookUp(CharId[temp1+temp2+temp3],"name") + '<\/span><\/th>'
+					+ '<td>';
+					
+					for(temp4 of TrioHistory[temp1][temp2][temp3]){
+						Output += LookUpEvent(temp4,"name") + '<br>';
+					}
+					Output += '<\/td><\/tr>\n';
+				}
+			}
+		}
+	}
+	Output += '<\/tbody>\n<\/table>';
 	return Output;
 }
 
@@ -434,7 +487,7 @@ function loadScript(src, callback) {
 
 loadScript("data/events.js", function() {
 	var CardList = [];
-	MakePairData();
+	MakeTrioData();
 
 	document.getElementById("MainArea").innerHTML =
 	'<h2>スクフェスALL STARS 過去のイベントまとめ<\/h2>'
@@ -443,7 +496,7 @@ loadScript("data/events.js", function() {
 	
 	+ '<h3 class="muse">イベント一覧<\/h3>'
 	+ WriteEventList()
-	
+
 	+ '<h3 class="aqours">キャラクター登場状況<\/h3>'
 	+ DrawSingleTable([0,1,2,3,4,5,6,7,8])
 	+ DrawSingleTable([9,10,11,12,13,14,15,16,17])
@@ -451,6 +504,9 @@ loadScript("data/events.js", function() {
 	
 	+ '<h3 class="niji">ペア共演状況<\/h3>'
 	+ DrawPairTable()
+	
+	+ '<h3 class="muse">トリオ重複状況<\/h3>'
+	+ DrawDuplicatedTrioList()
 	;
 });
 --></script>
@@ -458,6 +514,10 @@ loadScript("data/events.js", function() {
 <h3 class="niji">更新履歴</h3>
 <table class="history">
 <tbody>
+<tr>
+	<td>2019/09/03 17:00頃</td>
+	<td><span class="new"></span>「トリオ重複状況」を追加</td>
+</tr>
 <tr>
 	<td>2019/08/02 23:30頃</td>
 	<td><span class="new"></span>「イベント一覧」のテーブルに「参加キャラクター」を追加</td>
