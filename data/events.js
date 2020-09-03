@@ -196,5 +196,14 @@ const EventList = [
 	"ended"   : new Date("2020-08-31T14:59:59+09:00"),
 	"UR" : ["Nico", "You", "Ai"],
 	"SR" : ["Hanayo", "Dia", "Karin"]
+},
+{
+	"id" : 23,
+	"name" : "チョイ悪イメチェン計画",
+	"type" : "exchange",
+	"started" : new Date("2020-09-07T15:00:00+09:00"),
+	"ended"   : new Date("2020-09-15T14:59:59+09:00"),
+	"UR" : ["Kotori", "Chika", "Setsuna"],
+	"SR" : ["Maki","Yoshiko","Shizuku"]
 }
 ];
