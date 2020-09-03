@@ -2769,7 +2769,7 @@ const RawCardList = [
 	"type": "Sp",
 	"cn1": "このシリーズの人形、持ってたわ",
 	"cn2": "Love U my friend",
-	"date": "2020/08/21",
+	"date": "2020/08/18",
 	"source": "gacha",
 	"desc": "「オモチャ屋さんパニック☆ガチャ(前編)」で追加"
 },
@@ -2868,6 +2868,78 @@ const RawCardList = [
 	"date": "2020/08/26",
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 305,
+	"name": "Kotori",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "２人とも……そこまでにして！",
+	"cn2": "Pioneering a new World",
+	"date": "2020/09/04",
+	"source": "gacha",
+	"desc": "「チョイ悪イメチェン計画ガチャ(前編)」で追加"
+},
+{
+	"id": 306,
+	"name": "Shizuku",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "風になったような気分",
+	"cn2": "Love U my friends",
+	"date": "2020/09/04",
+	"source": "gacha",
+	"desc": "「チョイ悪イメチェン計画ガチャ(前編)」で追加"
+},
+{
+	"id": 307,
+	"name": "Setsuna",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "やらないわけにはいきません",
+	"cn2": "Pioneering a new World",
+	"date": "2020/09/07",
+	"source": "gacha",
+	"desc": "「チョイ悪イメチェン計画ガチャ(後編)」で追加"
+},
+{
+	"id": 308,
+	"name": "Chika",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Gd",
+	"cn1": "",
+	"cn2": "Pioneering a new World",
+	"date": "2020/09/07",
+	"source": "reward",
+	"desc": "イベント「チョイ悪イメチェン計画」報酬"
+},
+{
+	"id": 309,
+	"name": "Yoshiko",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "設定言うな！",
+	"cn2": "恋になりたいAQUARIUM",
+	"date": "2020/09/07",
+	"source": "reward",
+	"desc": "イベント「チョイ悪イメチェン計画」報酬"
+},
+{
+	"id": 310,
+	"name": "Maki",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "なんでこんなことになるのよ～！",
+	"cn2": "Wonderful Rush",
+	"date": "2020/09/07",
+	"source": "reward",
+	"desc": "イベント「チョイ悪イメチェン計画」報酬"
 }
 ];
-const LatestUpdate = "2020/08/17 「オモチャ屋さんパニック☆」まで";
+const LatestUpdate = "2020/09/04 「チョイ悪イメチェン計画」まで";
