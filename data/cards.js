@@ -1,5 +1,5 @@
 const RawCardList = [
-{"id": -1, "name": "Shioriko", "rare": "UR", "offset":1 },
+{"id": -1, "name": "Shioriko", "rare": "UR", "offset":3 },
 {"id": -1, "name": "Shioriko", "rare": "SR", "offset":4 },
 {
 	"id": 3,
@@ -2940,6 +2940,102 @@ const RawCardList = [
 	"date": "2020/09/07",
 	"source": "reward",
 	"desc": "イベント「チョイ悪イメチェン計画」報酬"
-}
+},
+{
+	"id": 311,
+	"name": "Nozomi",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "ほーら、ごはんだよ～",
+	"cn2": "彩り金平糖",
+	"date": "2020/09/13",
+	"source": "none",
+	"desc": "「メンバーピックアップガチャ」で追加"
+},
+{
+	"id": 312,
+	"name": "Ai",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Vo",
+	"cn1": "一球入魂～～～～っ！！",
+	"cn2": "Love U my friends",
+	"date": "2020/09/13",
+	"source": "none",
+	"desc": "「メンバーピックアップガチャ」で追加"
+},
+{
+	"id": 305,
+	"name": "Hanamaru",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "よいしょ！よいしょ！",
+	"cn2": "オータムキッチン",
+	"date": "2020/09/18",
+	"source": "gacha",
+	"desc": "「秋の味覚を召し上がれ！ガチャ(前編)」で追加"
+},
+{
+	"id": 306,
+	"name": "Umi",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "足を滑らせてそのまま川へ……",
+	"cn2": "Wonderful Rush",
+	"date": "2020/09/18",
+	"source": "gacha",
+	"desc": "「秋の味覚を召し上がれ！ガチャ(前編)」で追加"
+},
+{
+	"id": 307,
+	"name": "Emma",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "このお魚とっても美味しい！",
+	"cn2": "オータムキッチン",
+	"date": "2020/09/21",
+	"source": "gacha",
+	"desc": "「秋の味覚を召し上がれ！ガチャ(後編)」で追加"
+},
+{
+	"id": 308,
+	"name": "Hanayo",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "私達もたくさん採ってきたよ",
+	"cn2": "オータムキッチン",
+	"date": "2020/09/21",
+	"source": "reward",
+	"desc": "イベント「秋の味覚を召し上がれ！」報酬"
+},
+{
+	"id": 309,
+	"name": "Ruby",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "ルビィもう歩けないよ……",
+	"cn2": "恋になりたいAQUARIUM",
+	"date": "2020/09/21",
+	"source": "reward",
+	"desc": "イベント「秋の味覚を召し上がれ！」報酬"
+},
+{
+	"id": 310,
+	"name": "Kanata",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "彼方ちゃん眠る暇もないからー！",
+	"cn2": "Love U my friends",
+	"date": "2020/09/21",
+	"source": "reward",
+	"desc": "イベント「秋の味覚を召し上がれ！」報酬"
+},
 ];
-const LatestUpdate = "2020/09/04 「チョイ悪イメチェン計画」まで";
+const LatestUpdate = "2020/09/18 「秋の味覚を召し上がれ！」まで";

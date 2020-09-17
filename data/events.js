@@ -205,5 +205,14 @@ const EventList = [
 	"ended"   : new Date("2020-09-15T14:59:59+09:00"),
 	"UR" : ["Kotori", "Chika", "Setsuna"],
 	"SR" : ["Maki","Yoshiko","Shizuku"]
+},
+{
+	"id" : 24,
+	"name" : "秋の味覚を召し上がれ！",
+	"type" : "story",
+	"started" : new Date("2020-09-21T15:00:00+09:00"),
+	"ended"   : new Date("2020-09-30T14:59:59+09:00"),
+	"UR" : ["Hanayo", "Hanamaru", "Emma"],
+	"SR" : ["Umi", "Ruby", "Kanata"]
 }
 ];
