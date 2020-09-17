@@ -2911,7 +2911,7 @@ const RawCardList = [
 	"rare": "UR",
 	"atr": "Natural",
 	"type": "Gd",
-	"cn1": "",
+	"cn1": "やるからには負けられない！",
 	"cn2": "Pioneering a new World",
 	"date": "2020/09/07",
 	"source": "reward",
@@ -2966,7 +2966,7 @@ const RawCardList = [
 	"desc": "「メンバーピックアップガチャ」で追加"
 },
 {
-	"id": 305,
+	"id": 313,
 	"name": "Hanamaru",
 	"rare": "UR",
 	"atr": "Smile",
@@ -2978,7 +2978,7 @@ const RawCardList = [
 	"desc": "「秋の味覚を召し上がれ！ガチャ(前編)」で追加"
 },
 {
-	"id": 306,
+	"id": 314,
 	"name": "Umi",
 	"rare": "SR",
 	"atr": "Pure",
@@ -2990,7 +2990,7 @@ const RawCardList = [
 	"desc": "「秋の味覚を召し上がれ！ガチャ(前編)」で追加"
 },
 {
-	"id": 307,
+	"id": 315,
 	"name": "Emma",
 	"rare": "UR",
 	"atr": "Cool",
@@ -3002,7 +3002,7 @@ const RawCardList = [
 	"desc": "「秋の味覚を召し上がれ！ガチャ(後編)」で追加"
 },
 {
-	"id": 308,
+	"id": 316,
 	"name": "Hanayo",
 	"rare": "UR",
 	"atr": "Active",
@@ -3014,7 +3014,7 @@ const RawCardList = [
 	"desc": "イベント「秋の味覚を召し上がれ！」報酬"
 },
 {
-	"id": 309,
+	"id": 317,
 	"name": "Ruby",
 	"rare": "SR",
 	"atr": "Elegant",
@@ -3026,7 +3026,7 @@ const RawCardList = [
 	"desc": "イベント「秋の味覚を召し上がれ！」報酬"
 },
 {
-	"id": 310,
+	"id": 318,
 	"name": "Kanata",
 	"rare": "SR",
 	"atr": "Smile",
