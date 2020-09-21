@@ -1207,6 +1207,76 @@ const StoryList = [
 	"character": []
 },
 {
+	"type": "main",
+	"chapter": "メインストーリー 第18章「いざ！　秘密の特訓へ！」",
+	"title": "第1話 あなたがいなくても！",
+	"desc": "海外への短期留学に行っているあなた。あなたのいない毎日を送る虹ヶ咲学園スクールアイドル同好会は、少し物足りなさを感じていた。そんなとき、歩夢に電話がかかってきて……",
+	"character": ["Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー 第18章「いざ！　秘密の特訓へ！」",
+	"title": "第2話 計画はしっかりと！",
+	"desc": "μ'sとの合同合宿をすることになったニジガクメンバー。まずは事前準備を兼ねた話をしようと、にこから声がかかり……",
+	"character": ["Honoka", "Kotori", "Rin", "Hanayo", "Nico", "Kasumi", "Shizuku", "Ai", "Rina", "Shioriko"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー 第18章「いざ！　秘密の特訓へ！」",
+	"title": "第3話 行くぞ、合宿！　待ってろ、離島！",
+	"desc": "真姫の両親の伝手で借りた離島で合同合宿をすることになったμ'sとニジガクメンバー。ついに出発の日を迎え……",
+	"character": ["Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー 第18章「いざ！　秘密の特訓へ！」",
+	"title": "第4話 合宿初日にやることは……？",
+	"desc": "合同合宿場所である離島に着いたμ'sとニジガクメンバー。荷物を置いて、みんなと島を満喫しにかかる……",
+	"character": ["Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー 第18章「いざ！　秘密の特訓へ！」",
+	"title": "第5話 月明かりのバーベキュー",
+	"desc": "ビーチバレーをしたり海で泳いだりと、離島をたっぷり満喫したμ'sとニジガクメンバー。さて、今日の夕飯は……？",
+	"character": ["Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー 第18章「いざ！　秘密の特訓へ！」",
+	"title": "第6話 夜のお楽しみ！",
+	"desc": "日暮れのバーベキューもしっかりと楽しんだμ'sとニジガクメンバー。おなかもいっぱいで、明日からの練習へのやる気も満ち溢れている。宿に戻って今夜は早く就寝するのかと思いきや……？",
+	"character": ["Eli", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Setsuna", "Emma", "Rina", "Shioriko"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー 第18章「いざ！　秘密の特訓へ！」",
+	"title": "第7話 明日に備えて！",
+	"desc": "にこ渾身の怪談に、ヘトヘトになる者、テンションの上がる者と楽しい時間を満喫しているμ'sとニジガクメンバー。そろそろ就寝の時間となり……？",
+	"character": ["Honoka", "Eli", "Umi", "Rin", "Nozomi", "Nico", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー 第18章「いざ！　秘密の特訓へ！」",
+	"title": "第8話 惨劇の夜",
+	"desc": "就寝のため、それぞれの部屋に戻り、これからのことを語り合っていたとき、ものすごい悲鳴が聞こえた。ただ事ではないと部屋を飛び出したメンバーが見たものは……！？",
+	"character": ["Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー 第18章「いざ！　秘密の特訓へ！」",
+	"title": "第9話 疑心暗鬼！？",
+	"desc": "絶海の孤島に佇む別荘で、こときれた穂乃果が見つかった！　にこたちは犯人探しに奔走するが……！？",
+	"character": ["Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー 第18章「いざ！　秘密の特訓へ！」",
+	"title": "第10話 本物の恐怖",
+	"desc": "にこたち、いたずらの仕掛け人が繰り広げる「絶海の孤島・殺人事件」を見るのにも飽きてきたメンバー。そろそろお開きに、と動いたとき、本当の事件が起こった",
+	"character": ["Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
+},
+{
 	"type": "event",
 	"chapter": "イベントストーリー「秘密のパーティー！」",
 	"title": "第1話",
@@ -1360,7 +1430,7 @@ const StoryList = [
 {
 	"type": "kizuna",
 	"color": "Honoka",
-	"chapter": "キズナエピソード 高坂穂乃果",
+	"chapter": "キズナエピソード 高坂穂乃果 / ソロライブ編",
 	"title": "7話 μ's合同ソロライブへ！",
 	"desc": "雪穂の何気ない言葉を意識してしまった穂乃果は、妙に落ち着かない様子。それでも、虹ヶ咲のソロライブを見て刺激を受けたようで……。",
 	"character": ["Player", "Honoka"]
@@ -1368,7 +1438,7 @@ const StoryList = [
 {
 	"type": "kizuna",
 	"color": "Honoka",
-	"chapter": "キズナエピソード 高坂穂乃果",
+	"chapter": "キズナエピソード 高坂穂乃果 / ソロライブ編",
 	"title": "8話 いっぱいやりたいソロライブ！",
 	"desc": "μ'sのソロライブを提案したあなたは、穂乃果と二人でどんなライブにするか話し合うことに。ソロライブへの夢はどんどん広がり……って、広がりすぎ！？",
 	"character": ["Player", "Honoka", "Kotori", "Umi"]
@@ -1376,7 +1446,7 @@ const StoryList = [
 {
 	"type": "kizuna",
 	"color": "Honoka",
-	"chapter": "キズナエピソード 高坂穂乃果",
+	"chapter": "キズナエピソード 高坂穂乃果 / ソロライブ編",
 	"title": "9話 たったひとつの、やりたいこと",
 	"desc": "ソロライブへ向けて情熱を燃やす穂乃果だったが、やりたいことが山ほどありすぎて……！？　本当にやりたいことを見つけるため、あなたは考えることに。",
 	"character": ["Player", "Honoka"]
@@ -1384,7 +1454,7 @@ const StoryList = [
 {
 	"type": "kizuna",
 	"color": "Honoka",
-	"chapter": "キズナエピソード 高坂穂乃果",
+	"chapter": "キズナエピソード 高坂穂乃果 / ソロライブ編",
 	"title": "10話 はじめてのソロライブ！",
 	"desc": "「歌をみんなに届けたい」……ずっと変わらない、穂乃果の願い。願いを抱いて、穂乃果はソロライブへと向かう。",
 	"character": ["Player", "Honoka"]
@@ -1392,7 +1462,7 @@ const StoryList = [
 {
 	"type": "kizuna",
 	"color": "Honoka",
-	"chapter": "キズナエピソード 高坂穂乃果",
+	"chapter": "キズナエピソード 高坂穂乃果 / ソロライブ編",
 	"title": "11話 新しい世界へ",
 	"desc": "はじめてのソロライブを大成功させた穂乃果。μ'sのライブとは違う穂乃果の姿は、海未やことりの目にも新鮮に映る。穂乃果は自然と、次のソロライブを意識することになり……。",
 	"character": ["Player", "Honoka", "Kotori", "Umi"]
@@ -1400,10 +1470,2244 @@ const StoryList = [
 {
 	"type": "kizuna",
 	"color": "Honoka",
-	"chapter": "キズナエピソード 高坂穂乃果",
+	"chapter": "キズナエピソード 高坂穂乃果 / ソロライブ編",
 	"title": "12話 新しい魅力",
 	"desc": "ソロライブの先に新しい景色があるのなら、と穂乃果はソロ活動を続けることに。あなたに新しい魅力を見つけてもらいたい、と話す穂乃果だが……。",
 	"character": ["Player", "Honoka"]
+},
+{
+	"type": "kizuna",
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里 / ソロライブ編",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里 / ソロライブ編",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里 / ソロライブ編",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里 / ソロライブ編",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里 / ソロライブ編",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里 / ソロライブ編",
+	"title": "12話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kotori",
+	"chapter": "キズナエピソード 南ことり",
+	"title": "1話 ケンカするほど仲が良い？",
+	"desc": "μ'sの活動を手伝うことになったあなたは、スクールアイドルになる前からずっと仲良しだった穂乃果、海未、ことりの三人に話を聞くことに。",
+	"character": ["Player", "Honoka", "Kotori", "Umi"]
+},
+{
+	"type": "kizuna",
+	"color": "Kotori",
+	"chapter": "キズナエピソード 南ことり",
+	"title": "2話 ことりのコダワリ",
+	"desc": "普段は穂乃果や海未たちを優しくサポートしていることり。それでも、ことりには絶対妥協できないコダワリがあったようで……！",
+	"character": ["Player", "Honoka", "Kotori", "Umi"]
+},
+{
+	"type": "kizuna",
+	"color": "Kotori",
+	"chapter": "キズナエピソード 南ことり",
+	"title": "3話 ミナリンスキーとの出会い",
+	"desc": "μ'sの衣装作りを担当していることり。ことりのこだわりを知ったあなたは、街でことりにばったり出会い……って、ことりちゃんじゃないの！？",
+	"character": ["Player", "Kotori"]
+},
+{
+	"type": "kizuna",
+	"color": "Kotori",
+	"chapter": "キズナエピソード 南ことり",
+	"title": "4話 ことりの悩み事",
+	"desc": "メイドカフェでミナリンスキーとしてバイトをしていたことり。μ'sとメイドさんを両立していることりだが、衣装のことで悩んでいる様子で……。",
+	"character": ["Player", "Eli", "Kotori", "Hanayo"]
+},
+{
+	"type": "kizuna",
+	"color": "Kotori",
+	"chapter": "キズナエピソード 南ことり",
+	"title": "5話 もっと話を聞きたいの",
+	"desc": "衣装のことで悩んでいたことりを、博物館へ連れ出したあなた。困ったときに助けてくれるあなたの存在を、ことりは心強く思っているようで……♪",
+	"character": ["Player", "Kotori"]
+},
+{
+	"type": "kizuna",
+	"color": "Kotori",
+	"chapter": "キズナエピソード 南ことり",
+	"title": "6話 あなたといる時間",
+	"desc": "ことりはあなたに助けてもらったこと、あなたとお出かけしたことをとても嬉しく思っている様子。話題も自然とあなたのことになって……。",
+	"character": ["Kotori", "Rin"]
+},
+{
+	"type": "kizuna",
+	"color": "Kotori",
+	"chapter": "キズナエピソード 南ことり / ソロライブ編",
+	"title": "7話 μ's合同ソロライブへ！",
+	"desc": "穂乃果や海未たちが大切なように、あなたと話す時間も大切に思うことり。μ'sのソロライブをやる前に、ことりは確認したいことがあって……。",
+	"character": ["Player", "Kotori"]
+},
+{
+	"type": "kizuna",
+	"color": "Kotori",
+	"chapter": "キズナエピソード 南ことり / ソロライブ編",
+	"title": "8話 一人きりのライブ？",
+	"desc": "ソロライブが楽しみ、と話すことりだが、自分のライブよりもみんなのライブを見ることを楽しみにしている様子。どんなライブがいいか、ことりはあなたに相談するが……。",
+	"character": ["Player", "Kotori"]
+},
+{
+	"type": "kizuna",
+	"color": "Kotori",
+	"chapter": "キズナエピソード 南ことり / ソロライブ編",
+	"title": "9話 あこがれのファッションショー",
+	"desc": "みんなと活動するのが好きだから、一人きりのソロライブで何をしたらいいか分からない、と話すことり。あなたはことりのやりたいことを探すことに。",
+	"character": ["Player", "Kotori"]
+},
+{
+	"type": "kizuna",
+	"color": "Kotori",
+	"chapter": "キズナエピソード 南ことり / ソロライブ編",
+	"title": "10話 喜ぶ顔が見たいから",
+	"desc": "ソロライブでファッションショーをやることになったことり。自分のこだわりで、みんなを喜ばせることができるなら、と張り切ります！",
+	"character": ["Player", "Kotori"]
+},
+{
+	"type": "kizuna",
+	"color": "Kotori",
+	"chapter": "キズナエピソード 南ことり / ソロライブ編",
+	"title": "11話 はじめてのソロライブ！",
+	"desc": "ファッションショーをやることになって、ソロライブへの準備はスピードアップ！　ことりは想いをこめたお洋服を身にまとい、本番のステージに立つ。",
+	"character": ["Player", "Kotori"]
+},
+{
+	"type": "kizuna",
+	"color": "Kotori",
+	"chapter": "キズナエピソード 南ことり / ソロライブ編",
+	"title": "12話 ことりのお願い",
+	"desc": "ファッションショーとソロライブを同時に成功させたことり。無事に終えたお礼として、ことりはあなたに手紙を送ったようで……？",
+	"character": ["Player", "Kotori"]
+},
+{
+	"type": "kizuna",
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未 / ソロライブ編",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未 / ソロライブ編",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未 / ソロライブ編",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未 / ソロライブ編",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未 / ソロライブ編",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未 / ソロライブ編",
+	"title": "12話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Rin",
+	"chapter": "キズナエピソード 星空凛",
+	"title": "1話 猫ちゃん大好き凛ちゃん",
+	"desc": "元気いっぱいの凛。真姫と花陽と一緒にごあいさつ♪",
+	"memo": "「こっちのかよちんがかよちんで、真姫ちゃんが真姫ちゃんだよ」",
+	"character": ["Player", "Rin", "Maki", "Hanayo"]
+},
+{
+	"type": "kizuna",
+	"color": "Rin",
+	"chapter": "キズナエピソード 星空凛",
+	"title": "2話 いつでもかよちんと一緒！",
+	"desc": "花陽といつも仲良しの凛。何か手伝えることはないかと聞くあなたですが……。",
+	"character": ["Player", "Rin", "Maki", "Hanayo"]
+},
+{
+	"type": "kizuna",
+	"color": "Rin",
+	"chapter": "キズナエピソード 星空凛",
+	"title": "3話 ピンチヒッター！",
+	"desc": "花陽の代わりに、凛を応援することになったあなたは……。",
+	"character": ["Player", "Rin", "Hanayo"]
+},
+{
+	"type": "kizuna",
+	"color": "Rin",
+	"chapter": "キズナエピソード 星空凛",
+	"title": "4話 ラーメンの味が分からない～",
+	"desc": "花陽のおにぎりを食べてうれしそうな凛。でもなんだか恥ずかしそうで……。",
+	"character": ["Player", "Rin", "Hanayo"]
+},
+{
+	"type": "kizuna",
+	"color": "Rin",
+	"chapter": "キズナエピソード 星空凛",
+	"title": "5話 いっぱい応援してほしい！",
+	"desc": "あなたに応援されてラーメンの味もわからなくなるほど嬉しい凛は……。",
+	"character": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"]
+},
+{
+	"type": "kizuna",
+	"color": "Rin",
+	"chapter": "キズナエピソード 星空凛",
+	"title": "6話 二人は仲良しさん♪",
+	"desc": "あなたのサポートを心待ちにするようになった凛。部活をたくさん頑張ったら、一緒にお出かけも出来るかな？とあれこれ計画中！",
+	"character": ["Umi", "Rin"]
+},
+{
+	"type": "kizuna",
+	"color": "Rin",
+	"chapter": "キズナエピソード 星空凛 / ソロライブ編",
+	"title": "7話 μ's合同ソロライブへ！",
+	"desc": "あなたとの部活も、お出かけも楽しみにしている凛。でも、自分のソロライブと言われると少し反応は違うようで……！？",
+	"character": ["Player", "Rin"]
+},
+{
+	"type": "kizuna",
+	"color": "Rin",
+	"chapter": "キズナエピソード 星空凛 / ソロライブ編",
+	"title": "8話 かわいいなんて、もったいない！",
+	"desc": "ソロライブの準備を始めようと提案するあなたに凛は……。",
+	"character": ["Player", "Rin", "Maki", "Hanayo"]
+},
+{
+	"type": "kizuna",
+	"color": "Rin",
+	"chapter": "キズナエピソード 星空凛 / ソロライブ編",
+	"title": "9話 楽しい時間をみんなに",
+	"desc": "ソロライブに向けてがんばることを決めた凛。でも、どんなソロライブをすればいいのか……。",
+	"character": ["Player", "Rin"]
+},
+{
+	"type": "kizuna",
+	"color": "Rin",
+	"chapter": "キズナエピソード 星空凛 / ソロライブ編",
+	"title": "10話 楽しいって……なんだろう？",
+	"desc": "ソロライブでみんなに楽しんでもらいたい、と凛。でも……楽しいって、どういうことなんだろう！？",
+	"character": ["Player", "Rin"]
+},
+{
+	"type": "kizuna",
+	"color": "Rin",
+	"chapter": "キズナエピソード 星空凛 / ソロライブ編",
+	"title": "11話 はじめてのソロライブ！",
+	"desc": "自分が楽しいだけではなく、お互いに楽しいソロライブにしたい！　凛は全員分のお手製マラカスを用意して、ソロライブの会場へ向かう。",
+	"character": ["Player", "Rin", "Hanamaru"]
+},
+{
+	"type": "kizuna",
+	"color": "Rin",
+	"chapter": "キズナエピソード 星空凛 / ソロライブ編",
+	"title": "12話 凛の大ファン",
+	"desc": "元気いっぱいで楽しいソロライブを実現できた凛。そこには、ライブに感動する花丸の姿があって……！！",
+	"character": ["Player", "Rin", "Hanamaru"]
+},
+{
+	"type": "kizuna",
+	"color": "Maki",
+	"chapter": "キズナエピソード 西木野真姫",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Maki",
+	"chapter": "キズナエピソード 西木野真姫",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Maki",
+	"chapter": "キズナエピソード 西木野真姫",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Maki",
+	"chapter": "キズナエピソード 西木野真姫",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Maki",
+	"chapter": "キズナエピソード 西木野真姫",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Maki",
+	"chapter": "キズナエピソード 西木野真姫",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Maki",
+	"chapter": "キズナエピソード 西木野真姫 / ソロライブ編",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Maki",
+	"chapter": "キズナエピソード 西木野真姫 / ソロライブ編",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Maki",
+	"chapter": "キズナエピソード 西木野真姫 / ソロライブ編",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Maki",
+	"chapter": "キズナエピソード 西木野真姫 / ソロライブ編",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Maki",
+	"chapter": "キズナエピソード 西木野真姫 / ソロライブ編",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Maki",
+	"chapter": "キズナエピソード 西木野真姫 / ソロライブ編",
+	"title": "12話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希 / ソロライブ編",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希 / ソロライブ編",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希 / ソロライブ編",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希 / ソロライブ編",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希 / ソロライブ編",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希 / ソロライブ編",
+	"title": "12話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanayo",
+	"chapter": "キズナエピソード 小泉花陽",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanayo",
+	"chapter": "キズナエピソード 小泉花陽",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanayo",
+	"chapter": "キズナエピソード 小泉花陽",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanayo",
+	"chapter": "キズナエピソード 小泉花陽",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanayo",
+	"chapter": "キズナエピソード 小泉花陽",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanayo",
+	"chapter": "キズナエピソード 小泉花陽",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanayo",
+	"chapter": "キズナエピソード 小泉花陽 / ソロライブ編",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanayo",
+	"chapter": "キズナエピソード 小泉花陽 / ソロライブ編",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanayo",
+	"chapter": "キズナエピソード 小泉花陽 / ソロライブ編",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanayo",
+	"chapter": "キズナエピソード 小泉花陽 / ソロライブ編",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanayo",
+	"chapter": "キズナエピソード 小泉花陽 / ソロライブ編",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanayo",
+	"chapter": "キズナエピソード 小泉花陽 / ソロライブ編",
+	"title": "12話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ / ソロライブ編",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ / ソロライブ編",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ / ソロライブ編",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ / ソロライブ編",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ / ソロライブ編",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ / ソロライブ編",
+	"title": "12話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Chika",
+	"chapter": "キズナエピソード 高海千歌",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Chika",
+	"chapter": "キズナエピソード 高海千歌",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Chika",
+	"chapter": "キズナエピソード 高海千歌",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Chika",
+	"chapter": "キズナエピソード 高海千歌",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Chika",
+	"chapter": "キズナエピソード 高海千歌",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Chika",
+	"chapter": "キズナエピソード 高海千歌",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Chika",
+	"chapter": "キズナエピソード 高海千歌",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Chika",
+	"chapter": "キズナエピソード 高海千歌",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Chika",
+	"chapter": "キズナエピソード 高海千歌",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Chika",
+	"chapter": "キズナエピソード 高海千歌",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Chika",
+	"chapter": "キズナエピソード 高海千歌",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Riko",
+	"chapter": "キズナエピソード 桜内梨子",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Riko",
+	"chapter": "キズナエピソード 桜内梨子",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Riko",
+	"chapter": "キズナエピソード 桜内梨子",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Riko",
+	"chapter": "キズナエピソード 桜内梨子",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Riko",
+	"chapter": "キズナエピソード 桜内梨子",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Riko",
+	"chapter": "キズナエピソード 桜内梨子",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Riko",
+	"chapter": "キズナエピソード 桜内梨子",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Riko",
+	"chapter": "キズナエピソード 桜内梨子",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Riko",
+	"chapter": "キズナエピソード 桜内梨子",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Riko",
+	"chapter": "キズナエピソード 桜内梨子",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Riko",
+	"chapter": "キズナエピソード 桜内梨子",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanan",
+	"chapter": "キズナエピソード 松浦果南",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanan",
+	"chapter": "キズナエピソード 松浦果南",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanan",
+	"chapter": "キズナエピソード 松浦果南",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanan",
+	"chapter": "キズナエピソード 松浦果南",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanan",
+	"chapter": "キズナエピソード 松浦果南",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanan",
+	"chapter": "キズナエピソード 松浦果南",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanan",
+	"chapter": "キズナエピソード 松浦果南",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanan",
+	"chapter": "キズナエピソード 松浦果南",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanan",
+	"chapter": "キズナエピソード 松浦果南",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanan",
+	"chapter": "キズナエピソード 松浦果南",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanan",
+	"chapter": "キズナエピソード 松浦果南",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Dia",
+	"chapter": "キズナエピソード 黒澤ダイヤ",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Dia",
+	"chapter": "キズナエピソード 黒澤ダイヤ",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Dia",
+	"chapter": "キズナエピソード 黒澤ダイヤ",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Dia",
+	"chapter": "キズナエピソード 黒澤ダイヤ",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Dia",
+	"chapter": "キズナエピソード 黒澤ダイヤ",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Dia",
+	"chapter": "キズナエピソード 黒澤ダイヤ",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Dia",
+	"chapter": "キズナエピソード 黒澤ダイヤ",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Dia",
+	"chapter": "キズナエピソード 黒澤ダイヤ",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Dia",
+	"chapter": "キズナエピソード 黒澤ダイヤ",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Dia",
+	"chapter": "キズナエピソード 黒澤ダイヤ",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Dia",
+	"chapter": "キズナエピソード 黒澤ダイヤ",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "You",
+	"chapter": "キズナエピソード 渡辺曜",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "You",
+	"chapter": "キズナエピソード 渡辺曜",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "You",
+	"chapter": "キズナエピソード 渡辺曜",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "You",
+	"chapter": "キズナエピソード 渡辺曜",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "You",
+	"chapter": "キズナエピソード 渡辺曜",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "You",
+	"chapter": "キズナエピソード 渡辺曜",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "You",
+	"chapter": "キズナエピソード 渡辺曜",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "You",
+	"chapter": "キズナエピソード 渡辺曜",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "You",
+	"chapter": "キズナエピソード 渡辺曜",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "You",
+	"chapter": "キズナエピソード 渡辺曜",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "You",
+	"chapter": "キズナエピソード 渡辺曜",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Yoshiko",
+	"chapter": "キズナエピソード 津島善子",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Yoshiko",
+	"chapter": "キズナエピソード 津島善子",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Yoshiko",
+	"chapter": "キズナエピソード 津島善子",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Yoshiko",
+	"chapter": "キズナエピソード 津島善子",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Yoshiko",
+	"chapter": "キズナエピソード 津島善子",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Yoshiko",
+	"chapter": "キズナエピソード 津島善子",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Yoshiko",
+	"chapter": "キズナエピソード 津島善子",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Yoshiko",
+	"chapter": "キズナエピソード 津島善子",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Yoshiko",
+	"chapter": "キズナエピソード 津島善子",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Yoshiko",
+	"chapter": "キズナエピソード 津島善子",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Yoshiko",
+	"chapter": "キズナエピソード 津島善子",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanamaru",
+	"chapter": "キズナエピソード 国木田花丸",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanamaru",
+	"chapter": "キズナエピソード 国木田花丸",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanamaru",
+	"chapter": "キズナエピソード 国木田花丸",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanamaru",
+	"chapter": "キズナエピソード 国木田花丸",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanamaru",
+	"chapter": "キズナエピソード 国木田花丸",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanamaru",
+	"chapter": "キズナエピソード 国木田花丸",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanamaru",
+	"chapter": "キズナエピソード 国木田花丸",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanamaru",
+	"chapter": "キズナエピソード 国木田花丸",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanamaru",
+	"chapter": "キズナエピソード 国木田花丸",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanamaru",
+	"chapter": "キズナエピソード 国木田花丸",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Hanamaru",
+	"chapter": "キズナエピソード 国木田花丸",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Mari",
+	"chapter": "キズナエピソード 小原鞠莉",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Mari",
+	"chapter": "キズナエピソード 小原鞠莉",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Mari",
+	"chapter": "キズナエピソード 小原鞠莉",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Mari",
+	"chapter": "キズナエピソード 小原鞠莉",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Mari",
+	"chapter": "キズナエピソード 小原鞠莉",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Mari",
+	"chapter": "キズナエピソード 小原鞠莉",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Mari",
+	"chapter": "キズナエピソード 小原鞠莉",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Mari",
+	"chapter": "キズナエピソード 小原鞠莉",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Mari",
+	"chapter": "キズナエピソード 小原鞠莉",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Mari",
+	"chapter": "キズナエピソード 小原鞠莉",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Mari",
+	"chapter": "キズナエピソード 小原鞠莉",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ruby",
+	"chapter": "キズナエピソード 黒澤ルビィ",
+	"title": "1話 放課後の秘密",
+	"desc": "ある日、浦女の部室に忘れ物をしてしまったあなた。急いで取りに戻ったあなたが見たのは、夕暮れの部室で1人作業をするルビィの姿だった。",
+	"character": ["Player", "Ruby"]
+},
+{
+	"type": "kizuna",
+	"color": "Ruby",
+	"chapter": "キズナエピソード 黒澤ルビィ",
+	"title": "2話 ルビィのこだわり",
+	"desc": "ルビィを手伝い、衣装の手直しを終えたあなた。これで完成かと思いきや、ルビィはまだ思うところがある様子。一体何が気になっているのだろうか？",
+	"character": ["Player", "Ruby"]
+},
+{
+	"type": "kizuna",
+	"color": "Ruby",
+	"chapter": "キズナエピソード 黒澤ルビィ",
+	"title": "3話 お買い物大冒険",
+	"desc": "ブローチの材料を集めるために、沼津の外の手芸店まで足を伸ばしたあなたとルビィ。目当ての材料は見つかるのだろうか？",
+	"character": ["Player", "Ruby"]
+},
+{
+	"type": "kizuna",
+	"color": "Ruby",
+	"chapter": "キズナエピソード 黒澤ルビィ",
+	"title": "4話 ブローチ制作開始！",
+	"desc": "ブローチ作りスタート！　Aqoursメンバーにそれぞれふさわしいものを作るため、ルビィはしっかりとイメージを固めていた。あなたはルビィのAqoursに対する想いの深さを改めて感じ取る。",
+	"memo": "ルビィがAqoursの各メンバーに対する印象を教えてくれる貴重なエピソード。",
+	"character": ["Player", "Ruby"]
+},
+{
+	"type": "kizuna",
+	"color": "Ruby",
+	"chapter": "キズナエピソード 黒澤ルビィ",
+	"title": "5話 広がる想い、繋がる心",
+	"desc": "ついにブローチが完成！　目の前にきらめくオリジナルアクセサリーに感動するあなたとルビィ。しかしあなたはある異変に気づいてしまう。一体何が起こったのか？",
+	"character": ["Player", "Ruby"]
+},
+{
+	"type": "kizuna",
+	"color": "Ruby",
+	"chapter": "キズナエピソード 黒澤ルビィ",
+	"title": "6話 温かな時間",
+	"desc": "あなたがAqoursの部室を訪れると、千歌と善子がルビィにアクセサリー作りを教わっていた。ブローチの一件でルビィの信頼度はより増したそうで、ルビィも嬉しそうだ。",
+	"character": ["Player", "Chika", "Yoshiko", "Ruby"]
+},
+{
+	"type": "kizuna",
+	"color": "Ruby",
+	"chapter": "キズナエピソード 黒澤ルビィ",
+	"title": "7話 新たな展開",
+	"desc": "ルビィと街へ出掛けたあなた。喫茶店を出て歩いていると、1人の女性が声を掛けてきた。女性はルビィを探していたらしい。一体何者なのだろう？",
+	"character": ["Player", "Ruby"]
+},
+{
+	"type": "kizuna",
+	"color": "Ruby",
+	"chapter": "キズナエピソード 黒澤ルビィ",
+	"title": "8話 ルビィの価値",
+	"desc": "ルビィが雑誌のスカウトを受けたと知り、大喜びの千歌達。しかし、あなたは浮かない表情。どうやらルビィはあまり乗り気ではないらしい……。",
+	"character": ["Player", "Chika", "Dia", "Hanamaru", "Ruby"]
+},
+{
+	"type": "kizuna",
+	"color": "Ruby",
+	"chapter": "キズナエピソード 黒澤ルビィ",
+	"title": "9話 自信を持って",
+	"desc": "ルビィのソロライブは大成功で幕を閉じた。自分に少し自信を持つことが出来たルビィは、ある決心をする。",
+	"character": ["Player", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby"]
+},
+{
+	"type": "kizuna",
+	"color": "Ruby",
+	"chapter": "キズナエピソード 黒澤ルビィ",
+	"title": "10話 攻め時を逃すな！",
+	"desc": "ルビィが掲載された雑誌が発売。立派にモデルをやり遂げたルビィに、メンバー達は賞賛を送る。そしてあなたも、ルビィに更なる可能性を感じていた。",
+	"character": ["Player", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby"]
+},
+{
+	"type": "kizuna",
+	"color": "Ruby",
+	"chapter": "キズナエピソード 黒澤ルビィ",
+	"title": "11話 敏腕マネージャー",
+	"desc": "手芸雑誌の件以降も、あなたはダンス練習でのアドバイスやモデルの仕事の紹介など、ルビィのサポートを続けていた。",
+	"character": ["Player", "Chika", "Riko", "Dia", "You", "Hanamaru", "Mari", "Ruby"]
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢 / 「開花宣言」編",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢 / 「開花宣言」編",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢 / 「開花宣言」編",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢 / 「開花宣言」編",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢 / 「開花宣言」編",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢 / 「開花宣言」編",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢 / 「開花宣言」編",
+	"title": "12話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢 / 「開花宣言」編",
+	"title": "13話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢 / 「開花宣言」編",
+	"title": "14話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢 / 「開花宣言」編",
+	"title": "15話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢 / 「Say Good-Bye 涙」編",
+	"title": "16話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢 / 「Say Good-Bye 涙」編",
+	"title": "17話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢 / 「Say Good-Bye 涙」編",
+	"title": "18話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢 / 「Say Good-Bye 涙」編",
+	"title": "19話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢 / 「Say Good-Bye 涙」編",
+	"title": "20話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢 / 「Say Good-Bye 涙」編",
+	"title": "21話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ / 「☆ワンダーランド☆」編",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ / 「☆ワンダーランド☆」編",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ / 「☆ワンダーランド☆」編",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ / 「☆ワンダーランド☆」編",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ / 「☆ワンダーランド☆」編",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ / 「☆ワンダーランド☆」編",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ / 「☆ワンダーランド☆」編",
+	"title": "12話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ / 「☆ワンダーランド☆」編",
+	"title": "13話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ / 「☆ワンダーランド☆」編",
+	"title": "14話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ / 「☆ワンダーランド☆」編",
+	"title": "15話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ / 「Margaret」編",
+	"title": "16話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ / 「Margaret」編",
+	"title": "17話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ / 「Margaret」編",
+	"title": "18話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ / 「Margaret」編",
+	"title": "19話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ / 「Margaret」編",
+	"title": "20話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ / 「Margaret」編",
+	"title": "21話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく / 「オードリー」編",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく / 「オードリー」編",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく / 「オードリー」編",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく / 「オードリー」編",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく / 「オードリー」編",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく / 「オードリー」編",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく / 「オードリー」編",
+	"title": "12話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく / 「オードリー」編",
+	"title": "13話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく / 「オードリー」編",
+	"title": "14話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく / 「オードリー」編",
+	"title": "15話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく / 「やがてひとつの物語」編",
+	"title": "16話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく / 「やがてひとつの物語」編",
+	"title": "17話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく / 「やがてひとつの物語」編",
+	"title": "18話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく / 「やがてひとつの物語」編",
+	"title": "19話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく / 「やがてひとつの物語」編",
+	"title": "20話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく / 「やがてひとつの物語」編",
+	"title": "21話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林 / 「Wish」編",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林 / 「Wish」編",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林 / 「Wish」編",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林 / 「Wish」編",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林 / 「Wish」編",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林 / 「Wish」編",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林 / 「Wish」編",
+	"title": "12話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林 / 「Wish」編",
+	"title": "13話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林 / 「Wish」編",
+	"title": "14話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林 / 「Wish」編",
+	"title": "15話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林 / 「Fire Bird」編",
+	"title": "16話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林 / 「Fire Bird」編",
+	"title": "17話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林 / 「Fire Bird」編",
+	"title": "18話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林 / 「Fire Bird」編",
+	"title": "19話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林 / 「Fire Bird」編",
+	"title": "20話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林 / 「Fire Bird」編",
+	"title": "21話 ",
+	"desc": "",
+	"character": []
 },
 {
 	"type": "kizuna",
@@ -1576,6 +3880,510 @@ const StoryList = [
 	"desc": "愛は「楽しい」をどんどん作って、弱っている人を元気づけたいと思っていた。そこで病院でライブをしたいという。愛の「楽しい」があふれるライブは、見ている人を元気づけられるのだろうか……！？",
 	"memo": "このサイドエピソードを読むことで、ライブ楽曲「楽しいの天才」が解禁される。",
 	"character": ["Player", "Ai"]
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方 / 「My Own Fairy-Tale」編",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方 / 「My Own Fairy-Tale」編",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方 / 「My Own Fairy-Tale」編",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方 / 「My Own Fairy-Tale」編",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方 / 「My Own Fairy-Tale」編",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方 / 「My Own Fairy-Tale」編",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方 / 「My Own Fairy-Tale」編",
+	"title": "12話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方 / 「My Own Fairy-Tale」編",
+	"title": "13話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方 / 「My Own Fairy-Tale」編",
+	"title": "14話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方 / 「My Own Fairy-Tale」編",
+	"title": "15話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方 / 「Märchen Star」編",
+	"title": "16話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方 / 「Märchen Star」編",
+	"title": "17話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方 / 「Märchen Star」編",
+	"title": "18話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方 / 「Märchen Star」編",
+	"title": "19話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方 / 「Märchen Star」編",
+	"title": "20話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方 / 「Märchen Star」編",
+	"title": "21話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜 / 「MELODY」編",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜 / 「MELODY」編",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜 / 「MELODY」編",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜 / 「MELODY」編",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜 / 「MELODY」編",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜 / 「MELODY」編",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜 / 「MELODY」編",
+	"title": "12話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜 / 「MELODY」編",
+	"title": "13話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜 / 「MELODY」編",
+	"title": "14話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜 / 「MELODY」編",
+	"title": "15話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜 / 「LIKE IT ! LOVE IT!」編",
+	"title": "16話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜 / 「LIKE IT ! LOVE IT!」編",
+	"title": "17話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜 / 「LIKE IT ! LOVE IT!」編",
+	"title": "18話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜 / 「LIKE IT ! LOVE IT!」編",
+	"title": "19話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜 / 「LIKE IT ! LOVE IT!」編",
+	"title": "20話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜 / 「LIKE IT ! LOVE IT!」編",
+	"title": "21話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ",
+	"title": "1話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ",
+	"title": "2話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ",
+	"title": "3話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ",
+	"title": "4話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ",
+	"title": "5話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ / 「声繋ごうよ」編",
+	"title": "6話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ / 「声繋ごうよ」編",
+	"title": "7話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ / 「声繋ごうよ」編",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ / 「声繋ごうよ」編",
+	"title": "9話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ / 「声繋ごうよ」編",
+	"title": "10話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ / 「声繋ごうよ」編",
+	"title": "11話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ / 「声繋ごうよ」編",
+	"title": "12話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ / 「声繋ごうよ」編",
+	"title": "13話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ / 「声繋ごうよ」編",
+	"title": "14話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ / 「声繋ごうよ」編",
+	"title": "15話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ / 「哀温ノ詩」編",
+	"title": "16話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ / 「哀温ノ詩」編",
+	"title": "17話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ / 「哀温ノ詩」編",
+	"title": "18話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ / 「哀温ノ詩」編",
+	"title": "19話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ / 「哀温ノ詩」編",
+	"title": "20話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ / 「哀温ノ詩」編",
+	"title": "21話 ",
+	"desc": "",
+	"character": []
 },
 {
 	"type": "kizuna",
