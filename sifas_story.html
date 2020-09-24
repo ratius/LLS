@@ -16,9 +16,15 @@
 p{
 	margin: 15px 10px;
 }
-ul{
-	margin: 0 auto 5px 5px;
+.history ul{
+	margin: 5px 0 5px 0;
+	color: #444;
+	font-size: small;
+	list-style-type: none;
+	padding-inline-start: 20px;
+	line-height: 180%;
 }
+.history li:before { content:"▶ "; color:#b95;}
 
 .StoryTable {
 	width: 750px;
@@ -38,7 +44,7 @@ ul{
 }
 
 .main   { border-color: #68a0af; background-color: #bae3ee; }
-.event  { border-color: #c6a073; background-color: #ffe4c4; }
+.event  { border-color: #c67473; background-color: #ffc5c2; }
 
 .StoryTable tbody td {
 	padding: 5px 10px;
@@ -62,16 +68,27 @@ ul{
 	background-color:#bbf;
 }
 
-.CharButton {
+.RoundButton {
 	display: inline-block;
-	text-align: center;
-	vertical-align: middle;
-	height: 22px;
-	padding: 0 6px;
+	margin: 1px auto;
+	padding: 0px 7px;
+	height: 24px;
 	border: 2px solid;
 	border-radius: 13px;
-	line-height: 140%;
 }
+
+.SquareButton {
+	display: inline-block;
+	text-align: center;
+	margin: 4px 2px;
+	padding: 2px;
+	border-style: solid;
+	border-radius: 10px;
+	white-space: nowrap;
+	overflow: visible;
+}
+.SquareButton.on  { width: 72px; height: 22px; line-height: 22px; border-width: 4px; color: #222; font-weight: bold;}
+.SquareButton.off { width: 80px; height: 30px; line-height: 30px; border-width: 0px; color: #aaa;}
 
 .story-type {
 	display: block;
@@ -89,55 +106,57 @@ ul{
 	font-weight: bold;
 }
 .excluded { display: none; }
-.transparent { color: #888; opacity: 0.5; }
 
 --></style>
 <script><!--
 const CharLookUpTable = [
-	{"number":0 , "id": "Honoka",   "name": "穂乃果", "r":255, "g":163, "b": 54 },
-	{"number":1 , "id": "Eli",      "name": "絵里",   "r":122, "g":238, "b":255 },
-	{"number":2 , "id": "Kotori",   "name": "ことり", "r":206, "g":191, "b":191 },
-	{"number":3 , "id": "Umi",      "name": "海未",   "r": 23, "g":105, "b":255 },
-	{"number":4 , "id": "Rin",      "name": "凛",     "r":219, "g":212, "b": 30 },
-	{"number":5 , "id": "Maki",     "name": "真姫",   "r":255, "g": 80, "b": 62 },
-	{"number":6 , "id": "Nozomi",   "name": "希",     "r":196, "g": 85, "b":246 },
-	{"number":7 , "id": "Hanayo",   "name": "花陽",   "r":106, "g":230, "b":115 },
-	{"number":8 , "id": "Nico",     "name": "にこ",   "r":255, "g": 79, "b":145 },
-	{"number":9 , "id": "Chika",    "name": "千歌",   "r":255, "g":149, "b": 71 },
-	{"number":10, "id": "Riko",     "name": "梨子",   "r":255, "g":158, "b":172 },
-	{"number":11, "id": "Kanan",    "name": "果南",   "r": 39, "g":193, "b":183 },
-	{"number":12, "id": "Dia",      "name": "ダイヤ", "r":219, "g":  8, "b": 57 },
-	{"number":13, "id": "You",      "name": "曜",     "r":102, "g":192, "b":255 },
-	{"number":14, "id": "Yoshiko",  "name": "善子",   "r":193, "g":202, "b":212 },
-	{"number":15, "id": "Hanamaru", "name": "花丸",   "r":255, "g":208, "b": 16 },
-	{"number":16, "id": "Mari",     "name": "鞠莉",   "r":194, "g": 82, "b":198 },
-	{"number":17, "id": "Ruby",     "name": "ルビィ", "r":255, "g":111, "b":190 },
-	{"number":18, "id": "Ayumu",    "name": "歩夢",   "r":255, "g":191, "b":224 },
-	{"number":19, "id": "Kasumi",   "name": "かすみ", "r":213, "g":222, "b":112 },
-	{"number":20, "id": "Shizuku",  "name": "しずく", "r":187, "g":237, "b":255 },
-	{"number":21, "id": "Karin",    "name": "果林",   "r": 74, "g": 47, "b":237 },
-	{"number":22, "id": "Ai",       "name": "愛",     "r":255, "g":130, "b": 70 },
-	{"number":23, "id": "Kanata",   "name": "彼方",   "r":190, "g":130, "b":255 },
-	{"number":24, "id": "Setsuna",  "name": "せつ菜", "r":246, "g": 14, "b": 14 },
-	{"number":25, "id": "Emma",     "name": "エマ",   "r":143, "g":218, "b":121 },
-	{"number":26, "id": "Rina",     "name": "璃奈",   "r":208, "g":206, "b":225 },
-	{"number":27, "id": "Shioriko", "name": "栞子",   "r": 36, "g":189, "b":139 },
-	{"number":100,"id": "Player",   "name": "あなた", "r":160, "g":192, "b":160 },
+	{"number":0,  "id": "main",     "name": "メイン", "r":122, "g":202, "b":223 },
+	{"number":1,  "id": "event",    "name": "イベント","r":255, "g":130, "b":127 },
+	{"number":2,  "id": "kizuna",   "name": "キズナ", "r":119, "g":191, "b":220 },
 
-	{"number":200,"id": "Yukiho",   "name": "雪穂",    "r":128, "g": 80, "b":112 },
-	{"number":300,"id": "456",      "name": "よいつむ","r": 80, "g":112, "b":128 },
-	{"number":400,"id": "Misato",   "name": "美里",    "r":128, "g":112, "b": 80 },
-	{"number":450,"id": "Hanpen",   "name": "はんぺん","r":128, "g":112, "b": 80 }
+	{"number":10, "id": "Honoka",   "name": "穂乃果", "r":255, "g":163, "b": 54 },
+	{"number":11, "id": "Eli",      "name": "絵里",   "r":122, "g":238, "b":255 },
+	{"number":12, "id": "Kotori",   "name": "ことり", "r":206, "g":191, "b":191 },
+	{"number":13, "id": "Umi",      "name": "海未",   "r": 23, "g":105, "b":255 },
+	{"number":14, "id": "Rin",      "name": "凛",     "r":219, "g":212, "b": 30 },
+	{"number":15, "id": "Maki",     "name": "真姫",   "r":255, "g": 80, "b": 62 },
+	{"number":16, "id": "Nozomi",   "name": "希",     "r":196, "g": 85, "b":246 },
+	{"number":17, "id": "Hanayo",   "name": "花陽",   "r":106, "g":230, "b":115 },
+	{"number":18, "id": "Nico",     "name": "にこ",   "r":255, "g": 79, "b":145 },
+	{"number":20, "id": "Chika",    "name": "千歌",   "r":255, "g":149, "b": 71 },
+	{"number":21, "id": "Riko",     "name": "梨子",   "r":255, "g":158, "b":172 },
+	{"number":22, "id": "Kanan",    "name": "果南",   "r": 39, "g":193, "b":183 },
+	{"number":23, "id": "Dia",      "name": "ダイヤ", "r":219, "g":  8, "b": 57 },
+	{"number":24, "id": "You",      "name": "曜",     "r":102, "g":192, "b":255 },
+	{"number":25, "id": "Yoshiko",  "name": "善子",   "r":193, "g":202, "b":212 },
+	{"number":26, "id": "Hanamaru", "name": "花丸",   "r":255, "g":208, "b": 16 },
+	{"number":27, "id": "Mari",     "name": "鞠莉",   "r":194, "g": 82, "b":198 },
+	{"number":28, "id": "Ruby",     "name": "ルビィ", "r":255, "g":111, "b":190 },
+	{"number":29, "id": "Ayumu",    "name": "歩夢",   "r":255, "g":191, "b":224 },
+	{"number":30, "id": "Kasumi",   "name": "かすみ", "r":213, "g":222, "b":112 },
+	{"number":31, "id": "Shizuku",  "name": "しずく", "r":187, "g":237, "b":255 },
+	{"number":32, "id": "Karin",    "name": "果林",   "r": 74, "g": 47, "b":237 },
+	{"number":33, "id": "Ai",       "name": "愛",     "r":255, "g":130, "b": 70 },
+	{"number":34, "id": "Kanata",   "name": "彼方",   "r":190, "g":130, "b":255 },
+	{"number":35, "id": "Setsuna",  "name": "せつ菜", "r":246, "g": 14, "b": 14 },
+	{"number":36, "id": "Emma",     "name": "エマ",   "r":143, "g":218, "b":121 },
+	{"number":37, "id": "Rina",     "name": "璃奈",   "r":208, "g":206, "b":225 },
+	{"number":38, "id": "Shioriko", "name": "栞子",   "r": 36, "g":189, "b":139 },
+	{"number":40, "id": "Player",   "name": "あなた", "r":160, "g":192, "b":160 },
+
+	{"number":50, "id": "Yukiho",   "name": "雪穂",    "r":128, "g": 80, "b":112 },
+	{"number":51, "id": "456",      "name": "よいつむ","r": 80, "g":112, "b":128 },
+	{"number":52, "id": "Misato",   "name": "美里",    "r":128, "g":112, "b": 80 },
+	{"number":53, "id": "Mai",      "name": "マイ",    "r":128, "g":112, "b": 80 },
+	{"number":54, "id": "Hanpen",   "name": "はんぺん","r":128, "g":112, "b": 80 }
 ];
 
-//	{"number":401,"id": "Arisa",    "name": "亜里沙",  "r":128, "g": 80, "b":112 },
+//	{"number":201,"id": "Arisa",    "name": "亜里沙",  "r":128, "g": 80, "b":112 },
 //	{"number":401,"id": "Haruka",   "name": "遥",      "r":128, "g":112, "b": 80 },
 //	{"number":402,"id": "Kaoruko",  "name": "薫子",    "r":128, "g":112, "b": 80 },
-//	{"number":403,"id": "Mai",      "name": "マイ",    "r":128, "g":112, "b": 80 },
-//	{"number":404,"id": "Haruka",   "name": "遥",      "r":128, "g":112, "b": 80 },
 
 
-let Narrowed = ""; //現在の絞り込み対象
+let Narrowed = []; //現在の絞り込み対象
 
 
 //■■データ取得用
@@ -159,10 +178,10 @@ function LookUp(id, data){
 //■■描画用
 //■絞り込みボタンの描画
 function DrawNarrowingButtons(){
-	var Output = '<div style="line-height: 200%">';
+	var Output = '<div>';
 	for(temp1 of CharLookUpTable){
-		Output += DrawButton(temp1.id);
-		if(temp1.number == 8 || temp1.number == 17 || temp1.number == 27 || temp1.number == 100){
+		Output += DrawCharNameButton(temp1.id);
+		if(temp1.number == 2 || temp1.number == 18 || temp1.number == 28 || temp1.number == 38){
 			Output += '<br>';
 		}
 	}
@@ -214,7 +233,7 @@ function DrawEventList(){
 		Output += '<tr><td class="LeftColumn">登場人物<\/td><td class="RightColumn">';
 		
 		for(temp2 of temp1.character){
-			Output += DrawButton(temp2);
+			Output += DrawCharName(temp2);
 		}
 		
 		Output += '<\/td><\/tr>\n<\/tbody>\n<\/table>\n'
@@ -225,10 +244,10 @@ function DrawEventList(){
 }
 
 //■絞り込み用のボタンを描画
-function DrawButton(character){
+function DrawCharNameButton(character, onclick){
 	if(LookUp(character, "id") === ""){ return "";} //存在しないキャラクターなら描画しない
 
-	var Output = '<span class="CharButton button-' + character
+	var Output = '<div class="SquareButton off button-' + character
 	+ '" style="background-color:rgb('
 	+ Math.floor((LookUp(character, "r")+510)/3) + ','
 	+ Math.floor((LookUp(character, "g")+510)/3) + ','
@@ -236,47 +255,84 @@ function DrawButton(character){
 	+ LookUp(character, "r") + ','
 	+ LookUp(character, "g") + ','
 	+ LookUp(character, "b") + ');" onclick="Narrowing(' + "'" + character + "'" + ')">'
+	+ LookUp(character, "name") + '<\/div>\n';
+	return Output;
+}
+
+function DrawCharName(character){
+	if(LookUp(character, "id") === ""){ return "";} //存在しないキャラクターなら描画しない
+
+	var Output = '<span class="RoundButton" style="background-color:rgb('
+	+ Math.floor((LookUp(character, "r")+510)/3) + ','
+	+ Math.floor((LookUp(character, "g")+510)/3) + ','
+	+ Math.floor((LookUp(character, "b")+510)/3) + '); border-color: rgb('
+	+ LookUp(character, "r") + ','
+	+ LookUp(character, "g") + ','
+	+ LookUp(character, "b") + ');">'
 	+ LookUp(character, "name") + '<\/span>\n';
 	return Output;
 }
 
 //■■その他処理
 //■絞り込み処理
+function ToggleTarget(target){
+	var temp = Narrowed.indexOf(target);
+	if(temp >= 0){ //存在するなら
+		Narrowed.splice(temp,1);
+		return false;
+	} else {
+		Narrowed.push(target);
+		return true;
+	}
+}
+	
+
 function Narrowing(target){
-	if(target == Narrowed){ ClearNarrowing(); return 0;}
+	var temp1 = ToggleTarget(target);
+	if(target === "main" || target === "event" || target === "kizuna"){ //区分は排他的
+		while(ToggleTarget("main")){}
+		while(ToggleTarget("event")){}
+		while(ToggleTarget("kizuna")){}
+		if(temp1){ ToggleTarget(target);}
+	}
+
+	//ストーリーの絞り込み処理
 	var elements = document.getElementsByClassName("StoryTable");
-	for(temp1 of elements){
-		if(temp1.classList.contains(target)){ //絞り込みに該当するなら
-			temp1.classList.remove("excluded");
+	for(temp2 of elements){
+		temp3 = true;
+		for(temp4 of Narrowed){
+			if(!temp2.classList.contains(temp4)){
+				temp3 = false;
+				break;
+			}
+		}
+		if(temp3 === true){
+			temp2.classList.remove("excluded");
 		} else {
-			temp1.classList.add("excluded");
+			temp2.classList.add("excluded");
 		}
 	}
 
-	var elements = document.getElementsByClassName("CharButton");
-	for(temp1 of elements){
-		if(temp1.classList.contains('button-' + target)){ //絞り込みに該当するなら
-			temp1.classList.remove("transparent");
+	//ボタンのオンオフ処理
+	var elements = document.getElementsByClassName("SquareButton");
+	for(temp2 of elements){
+		temp3 = false;
+		for(temp4 of Narrowed){
+			if(temp2.classList.contains("button-" + temp4)){
+				temp3 = true;
+				break;
+			}
+		}
+		if(temp3 === true){
+			temp2.classList.add("on");
+			temp2.classList.remove("off");
 		} else {
-			temp1.classList.add("transparent");
+			temp2.classList.add("off");
+			temp2.classList.remove("on");
 		}
 	}
-	Narrowed = target;
 }
 
-function ClearNarrowing(target){
-	var elements = document.getElementsByClassName("StoryTable");
-	for(temp1 of elements){
-		temp1.classList.remove("excluded");
-	}
-
-	var elements = document.getElementsByClassName("CharButton");
-	for(temp1 of elements){
-		temp1.classList.remove("transparent");
-	}
-	Narrowed = "";
-	return 0;
-}
 
 --></script>
 
@@ -321,15 +377,15 @@ loadScript("data/stories.js", function() {
 	document.getElementById("MainArea").innerHTML =
 	'<h2>スクフェスALL STARS ストーリー便覧<\/h2>'
 	+ '<h3 style="background-color:#ddd; color:#777; border-color:#999;">まえがき<\/h3>'
-	+ '<p>スクフェスALL STARSにおける「メインストーリー」「イベントストーリー」「キズナエピソード」の一覧です。<br>「登場人物」のキャラクター名をクリック/タップすることで、絞り込むことができます。<br>イベントストーリーは、公式によるあらすじが設定されていませんが、ネタバレにならない程度に独自にあらすじを加えてあります。<\/p>'
+	+ '<p>スクフェスALL STARSにおける「メインストーリー」「イベントエピソード」「キズナエピソード」の一覧です。<br>「登場人物」のキャラクター名をクリック/タップすることで、絞り込むことができます。<br>イベントストーリーは、公式によるあらすじが設定されていませんが、ネタバレにならない程度に独自にあらすじを加えてあります。<\/p>'
 	
 	+ '<p><span style="font-weight:bold;">実装済データ<\/span><\/p><ul>'
-	+ '<li><span class="main">メインストーリー<\/span>：第1～4・18章<\/li>'
-	+ '<li><span class="event">イベントストーリー<\/span>：「和装モデルはお任せあれ！」まで<\/li>'
+	+ '<li>メインストーリー：第1～4・18章<\/li>'
+	+ '<li>イベントエピソード：「マジカル・タイム！」までの12イベント分<\/li>'
 	+ '<li>キズナエピソード：<ul>'
-	+ '<li>μ&#39;s：穂乃果・ことり・凛 (各12話まで)<\/li>'
-	+ '<li>Aqours：ルビィ（各11話まで）<\/li>'
-	+ '<li>ニジガク：愛・璃奈 (各21話まで) 栞子 (6話まで)<\/li>'
+	+ '<li>μ&#39;s：穂乃果・ことり・凛・花陽 (各12話まで)<\/li>'
+	+ '<li>Aqours：曜・ルビィ（各11話まで）<\/li>'
+	+ '<li>ニジガク：愛・せつ菜・エマ・璃奈 (各21話まで)　栞子 (6話まで)<\/li>'
 	+ '<\/ul>'
 	+ '<li>サイドエピソード：実装予定なし<\/li>'
 	+ '<\/ul>'
@@ -346,8 +402,33 @@ loadScript("data/stories.js", function() {
 <table class="history">
 <tbody>
 <tr>
+	<td>2020/09/24 18:00頃</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>イベントエピソード (「下町巡り珍道中」～「マジカル・タイム！」)</li>
+			<li>キズナエピソード (花陽・曜・せつ菜・エマ)</li>
+		</ul>
+		<span class="fix"></span>絞り込みボタンの機能改善
+	</td>
+</tr>
+<tr>
+	<td>2020/09/21 11:00頃</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー (第18章)</li>
+			<li>キズナエピソード (ことり・凛・ルビィ)</li>
+		</ul>
+	</td>
+</tr>
+<tr>
 	<td>2020/09/16 10:00頃</td>
-	<td><!--<span class="new"></span>-->テスト公開</td>
+	<td><span class="new"></span>テスト公開
+		<ul>
+			<li>メインストーリー (第1～4章)</li>
+			<li>イベントエピソード (「和装モデルはお任せあれ！」まで)</li>
+			<li>キズナエピソード (穂乃果・愛・璃奈・栞子)</li>
+		</ul>
+	</td>
 </tr>
 </tbody>
 </table>
