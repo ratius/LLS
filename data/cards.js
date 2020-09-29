@@ -3037,5 +3037,53 @@ const RawCardList = [
 	"source": "reward",
 	"desc": "イベント「秋の味覚を召し上がれ！」報酬"
 },
+{
+	"id": 319,
+	"name": "Kanan",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "今まで見た中で一番綺麗",
+	"cn2": "Secret Galaxy",
+	"date": "2020/09/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 320,
+	"name": "Kasumi",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sp",
+	"cn1": "じゃ――――ん！　どうですか？",
+	"cn2": "甘いひととき",
+	"date": "2020/09/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 321,
+	"name": "Honoka",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Gd",
+	"cn1": "やっぱりこれがなくっちゃね",
+	"cn2": "Wonderful Rush",
+	"date": "2020/09/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 322,
+	"name": "Mari",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "ここから見る夕日",
+	"cn2": "恋になりたいAQUARIUM",
+	"date": "2020/09/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+}
 ];
-const LatestUpdate = "2020/09/18 「秋の味覚を召し上がれ！」まで";
+const LatestUpdate = "2020/09/30 「スクスタフェス」まで";
