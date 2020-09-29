@@ -67,7 +67,7 @@ td:hover .tool-tip {
 .fes    { background-color: #fac; padding: 3px;}
 .release{ background-color: #eee; padding: 3px;}
 .none   { background-color: #ddd; padding: 3px;}
-.na     { background-color: #fff; padding: 1px; border: solid 2px #ddd; color: #bbb;}
+.na     { background-color: #fff8f0; padding: 1px; border: solid 2px #ecb; color: #ba9;}
 
 .Honoka  { background-color: rgb(255, 163,  54);}
 .Eli     { background-color: rgb(122, 238, 255);}
@@ -144,7 +144,7 @@ function LoadRawData(){
 
 // ■テーブルを作るための関数
 function DrawTable(group){
-	var Output = '<div class="card-box">\n<table class="cardlist" style="min-width: ' + (90+group.length*108) + 'px">\n';
+	var Output = '<div class="card-box">\n<table class="cardlist" style="min-width: ' + (100+group.length*108) + 'px">\n';
 
 	//■ヘッダー
 	Output += '<thead>\n<tr class="header-top">\n<th><\/th>\n';
@@ -162,7 +162,7 @@ function DrawTable(group){
 		Rarity = ['UR','SR'][z];
 		OutputTmp = '';
 		blank = 0; //仕込み
-		OutputTmp += '<tr class="' + Rarity +'"><th><span class="cap">' + Rarity + (y+1) + '枚目<\/span><\/th>\n';
+		OutputTmp += '<tr class="' + Rarity +'"><th><span class="cap">' + Rarity + ' ' + (y+1) + '周目<\/span><\/th>\n';
 		
 		for(x=0; x<group.length; x++){
 			if(y < CardList[group[x] + z*CharId.length].length){ //あるならば
