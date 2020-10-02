@@ -270,6 +270,9 @@ var CharList = [
 	{name:"近江遥",         color:["#eee"], group:{"Niji2":1}},
 	{name:"三船薫子",       color:["#eee"], group:{"Niji2":1}},
 	{name:"夏川マイ",       color:["#eee"], group:{"Niji2":1}},
+	{name:"鐘嵐珠",         color:["#eee"], group:{"Niji2":1}},
+	{name:"ミア・テイラー", color:["#eee"], group:{"Niji2":1}},
+	{name:"虹ヶ咲学園理事長", color:["#eee"], group:{"Niji2":1}},
 	
 	{name:"大西亜玖璃", subtext:"上原歩夢 役",   color:[ColAyum], group:{"NijiCast":1}},
 	{name:"相良茉優", subtext:"中須かすみ 役",   color:[ColKasu], group:{"NijiCast":1}},
@@ -304,6 +307,7 @@ var CharList = [
 	{name:"あゆせつ",       color:[ColAyum, ColSetu], group:{"NijiCP":1}},
 	{name:"あゆエマ",       color:[ColAyum, ColEmma], group:{"NijiCP":1}},
 	{name:"あゆりな",       color:[ColAyum, ColRina], group:{"NijiCP":1}},
+	{name:"あゆしお",       color:[ColAyum, ColShio], group:{"NijiCP":1}},
 	{name:"しずかす",       color:[ColShiz, ColKasu], group:{"NijiCP":1}},
 	{name:"かすかり",       color:[ColKasu, ColKari], group:{"NijiCP":1}},
 	{name:"かすあい",       color:[ColKasu, ColAi  ], group:{"NijiCP":1}},
@@ -311,27 +315,35 @@ var CharList = [
 	{name:"せつかす",       color:[ColSetu, ColKasu], group:{"NijiCP":1}},
 	{name:"かすエマ",       color:[ColKasu, ColEmma], group:{"NijiCP":1}},
 	{name:"かすりな",       color:[ColKasu, ColRina], group:{"NijiCP":1}},
+	{name:"かすしお",       color:[ColKasu, ColShio], group:{"NijiCP":1}},
 	{name:"しずかり",       color:[ColShiz, ColKari], group:{"NijiCP":1}},
 	{name:"しずあい",       color:[ColShiz, ColAi  ], group:{"NijiCP":1}},
 	{name:"しずかな",       color:[ColShiz, ColKnta], group:{"NijiCP":1}},
 	{name:"しずせつ",       color:[ColShiz, ColSetu], group:{"NijiCP":1}},
 	{name:"しずエマ",       color:[ColShiz, ColEmma], group:{"NijiCP":1}},
 	{name:"しずりな",       color:[ColShiz, ColRina], group:{"NijiCP":1}},
+	{name:"しずしお",       color:[ColShiz, ColShio], group:{"NijiCP":1}},
 	{name:"かりあい",       color:[ColKari, ColAi  ], group:{"NijiCP":1}},
 	{name:"かりかな",       color:[ColKari, ColKnta], group:{"NijiCP":1}},
 	{name:"かりせつ",       color:[ColKari, ColSetu], group:{"NijiCP":1}},
 	{name:"かりエマ",       color:[ColKari, ColEmma], group:{"NijiCP":1}},
 	{name:"かりりな",       color:[ColKari, ColRina], group:{"NijiCP":1}},
+	{name:"かりしお",       color:[ColKari, ColShio], group:{"NijiCP":1}},
 	{name:"あいかな",       color:[ColAi  , ColKnta], group:{"NijiCP":1}},
 	{name:"あいせつ",       color:[ColAi  , ColSetu], group:{"NijiCP":1}},
 	{name:"あいエマ",       color:[ColAi  , ColEmma], group:{"NijiCP":1}},
 	{name:"あいりな",       color:[ColAi  , ColRina], group:{"NijiCP":1}},
+	{name:"あいしお",       color:[ColAi  , ColShio], group:{"NijiCP":1}},
 	{name:"かなせつ",       color:[ColKnta, ColSetu], group:{"NijiCP":1}},
 	{name:"かなエマ",       color:[ColKnta, ColEmma], group:{"NijiCP":1}},
 	{name:"かなりな",       color:[ColKnta, ColRina], group:{"NijiCP":1}},
+	{name:"かなしお",       color:[ColKnta, ColShio], group:{"NijiCP":1}},
 	{name:"せつエマ",       color:[ColSetu, ColEmma], group:{"NijiCP":1}},
 	{name:"せつりな",       color:[ColSetu, ColRina], group:{"NijiCP":1}},
+	{name:"せつしお",       color:[ColSetu, ColShio], group:{"NijiCP":1}},
 	{name:"りなエマ",       color:[ColRina, ColEmma], group:{"NijiCP":1}},
+	{name:"エマしお",       color:[ColEmma, ColShio], group:{"NijiCP":1}},
+	{name:"しおりな",       color:[ColShio, ColRina], group:{"NijiCP":1}},
 
 	{name:"澁谷かのん",     color:["#ddd"], group:{"SuperStar":1}},
 	{name:"唐可可",         color:["#ddd"], group:{"SuperStar":1}},
@@ -813,7 +825,8 @@ body {
 document.write('<form name="starter"><select name="CharacterSelect" onchange="initList()"><option selected>▼ソート対象を選択<\/option>');
 
 for(i=0; i<MemberGroup.length; i++){
-	document.write("<option>" + MemberGroup[i][0] + MemberGroup[i][1] + " (" + Member[i].length + ")<\/option>");
+	document.write("<option>" + MemberGroup[i][0] + MemberGroup[i][1] + " (" + Member[i].length + ")"
+	+ (Member[i].length>=30 ? "【長い】" : "") + "<\/option>");
 }
 document.write('<\/select><\/form>');
 --></script>
@@ -861,6 +874,11 @@ document.write('<\/select><\/form>');
 <h3 class="niji">更新履歴</h3>
 <table class="history" style="margin: auto;">
 <tbody>
+<tr>
+	<td>2020/10/03</td>
+	<td><span class="new"></span>虹ヶ咲関係者に鐘嵐珠、ミア・テイラー、虹ヶ咲学園理事長を追加<br>
+	<span class="new"></span>虹ヶ咲カップリングに三船栞子を含むカップリングを追加</td>
+</tr>
 <tr>
 	<td>2020/08/03</td>
 	<td><span class="new"></span>三船栞子をニジガクメインキャラクターに格上げ<br>
