@@ -214,5 +214,14 @@ const EventList = [
 	"ended"   : new Date("2020-09-30T14:59:59+09:00"),
 	"UR" : ["Hanayo", "Hanamaru", "Emma"],
 	"SR" : ["Umi", "Ruby", "Kanata"]
+},
+{
+	"id" : 25,
+	"name" : "月のウサギと女神様",
+	"type" : "exchange",
+	"started" : new Date("2020-10-07T15:00:00+09:00"),
+	"ended"   : new Date("2020-10-15T14:59:59+09:00"),
+	"UR" : ["Rin", "Riko", "Shizuku"],
+	"SR" : ["Nico", "Kanan", "Emma"]
 }
 ];
