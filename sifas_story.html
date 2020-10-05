@@ -85,7 +85,7 @@ p{
 	border-style: solid;
 	border-radius: 10px;
 	white-space: nowrap;
-	overflow: visible;
+	overflow: hidden;
 }
 .SquareButton.on  { width: 72px; height: 22px; line-height: 22px; border-width: 4px; color: #222; font-weight: bold;}
 .SquareButton.off { width: 80px; height: 30px; line-height: 30px; border-width: 0px; color: #aaa;}
@@ -109,10 +109,12 @@ p{
 
 --></style>
 <script><!--
+let TotalStoryNumber = 0;
 const CharLookUpTable = [
 	{"number":0,  "id": "main",     "name": "メイン", "r":122, "g":202, "b":223 },
 	{"number":1,  "id": "event",    "name": "イベント","r":255, "g":130, "b":127 },
 	{"number":2,  "id": "kizuna",   "name": "キズナ", "r":119, "g":191, "b":220 },
+	{"number":3,  "id": "special",  "name": "特殊", "r":240, "g":192, "b":128 },
 
 	{"number":10, "id": "Honoka",   "name": "穂乃果", "r":255, "g":163, "b": 54 },
 	{"number":11, "id": "Eli",      "name": "絵里",   "r":122, "g":238, "b":255 },
@@ -166,7 +168,7 @@ function LookUp(id, data){
 	if(temp.length){
 		return temp[0][data];
 	} else {
-		console.log("キャラクターID " + id +" は見つかりません");
+		console.log("キャラクターID " + id + " は見つかりません");
 		if(data === "number" || data === "r" || data === "g" || data === "b"){
 			return -1;
 		} else {
@@ -181,7 +183,7 @@ function DrawNarrowingButtons(){
 	var Output = '<div>';
 	for(temp1 of CharLookUpTable){
 		Output += DrawCharNameButton(temp1.id);
-		if(temp1.number == 2 || temp1.number == 18 || temp1.number == 28 || temp1.number == 38){
+		if(temp1.number == 3 || temp1.number == 18 || temp1.number == 28 || temp1.number == 38){
 			Output += '<br>';
 		}
 	}
@@ -203,7 +205,7 @@ function DrawEventList(){
 			Output += ' ' + temp2;
 		}
 		Output += '"';
-		if(temp1.type == "kizuna"){ //キズナエピソードはキャラクターの色を用いる
+		if(temp1.type === "kizuna" || temp1.type === "special"){ //キズナエピソードはキャラクターの色を用いる
 			Output += ' style="background-color:rgb('
 			+ Math.floor((LookUp(temp1.color, "r")+255)/2) + ','
 			+ Math.floor((LookUp(temp1.color, "g")+255)/2) + ','
@@ -237,6 +239,7 @@ function DrawEventList(){
 		}
 		
 		Output += '<\/td><\/tr>\n<\/tbody>\n<\/table>\n'
+		TotalStoryNumber++;
 	}
 	
 	Output += '<\/div>';
@@ -289,14 +292,16 @@ function ToggleTarget(target){
 
 function Narrowing(target){
 	var temp1 = ToggleTarget(target);
-	if(target === "main" || target === "event" || target === "kizuna"){ //区分は排他的
+	if(target === "main" || target === "event" || target === "kizuna" || target === "special"){ //区分は排他的
 		while(ToggleTarget("main")){}
 		while(ToggleTarget("event")){}
 		while(ToggleTarget("kizuna")){}
+		while(ToggleTarget("special")){}
 		if(temp1){ ToggleTarget(target);}
 	}
 
 	//ストーリーの絞り込み処理
+	var hit = 0; //ヒット件数
 	var elements = document.getElementsByClassName("StoryTable");
 	for(temp2 of elements){
 		temp3 = true;
@@ -307,10 +312,18 @@ function Narrowing(target){
 			}
 		}
 		if(temp3 === true){
+			hit++;
 			temp2.classList.remove("excluded");
 		} else {
 			temp2.classList.add("excluded");
 		}
+	}
+
+	//件数設定
+	if(Narrowed.length == 0){
+		document.getElementById("hit").innerHTML = "";
+	} else {
+		document.getElementById("hit").innerHTML = "（絞り込み中：" + hit + "件）";
 	}
 
 	//ボタンのオンオフ処理
@@ -380,20 +393,21 @@ loadScript("data/stories.js", function() {
 	+ '<p>スクフェスALL STARSにおける「メインストーリー」「イベントエピソード」「キズナエピソード」の一覧です。<br>「登場人物」のキャラクター名をクリック/タップすることで、絞り込むことができます。<br>イベントストーリーは、公式によるあらすじが設定されていませんが、ネタバレにならない程度に独自にあらすじを加えてあります。<\/p>'
 	
 	+ '<p><span style="font-weight:bold;">実装済データ<\/span><\/p><ul>'
-	+ '<li>メインストーリー：第1～4・18章<\/li>'
+	+ '<li>メインストーリー：第1～7・18章<\/li>'
 	+ '<li>イベントエピソード：「マジカル・タイム！」までの12イベント分<\/li>'
 	+ '<li>キズナエピソード：<ul>'
 	+ '<li>μ&#39;s：穂乃果・ことり・凛・花陽 (各12話まで)<\/li>'
-	+ '<li>Aqours：曜・ルビィ（各11話まで）<\/li>'
-	+ '<li>ニジガク：愛・せつ菜・エマ・璃奈 (各21話まで)　栞子 (6話まで)<\/li>'
+	+ '<li>Aqours：ダイヤ・曜・ルビィ（各12話まで）<\/li>'
+	+ '<li>ニジガク：歩夢・愛・せつ菜・エマ・璃奈 (各21話まで)　栞子 (6話まで)<\/li>'
 	+ '<\/ul>'
-	+ '<li>サイドエピソード：実装予定なし<\/li>'
+	+ '<li>アニメ連動ストーリー：プロローグまで<\/li>'
+	+ '<li>サイドエピソード：掲載予定なし<\/li>'
 	+ '<\/ul>'
 	
 	+ '<h3 class="muse">絞り込み用ボタン<\/h3>'
 	+ DrawNarrowingButtons()
 
-	+ '<h3 class="aqours">ストーリー一覧<\/h3>'
+	+ '<h3 class="aqours">ストーリー一覧<span id="hit"></span><\/h3>'
 	+ DrawEventList();
 });
 --></script>
@@ -402,31 +416,41 @@ loadScript("data/stories.js", function() {
 <table class="history">
 <tbody>
 <tr>
-	<td>2020/09/24 17:00頃</td>
+	<td>2020/10/05</td>
 	<td><span class="new"></span>ストーリーを新たに掲載
 		<ul>
-			<li>イベントエピソード (「下町巡り珍道中」～「マジカル・タイム！」)</li>
-			<li>キズナエピソード (花陽・曜・せつ菜・エマ)</li>
+			<li>メインストーリー：第5～7章</li>
+			<li>キズナエピソード：ダイヤ・歩夢 (全話)、曜・ルビィ (最新話)</li>
+			<li>TVアニメ連動ストーリー：プロローグ</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2020/09/24</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>イベントエピソード：「下町巡り珍道中」～「マジカル・タイム！」</li>
+			<li>キズナエピソード：花陽・曜・せつ菜・エマ (全話)</li>
 		</ul>
 		<span class="fix"></span>絞り込みボタンの機能改善
 	</td>
 </tr>
 <tr>
-	<td>2020/09/21 11:00頃</td>
+	<td>2020/09/21</td>
 	<td><span class="new"></span>ストーリーを新たに掲載
 		<ul>
-			<li>メインストーリー (第18章)</li>
-			<li>キズナエピソード (ことり・凛・ルビィ)</li>
+			<li>メインストーリー：第18章</li>
+			<li>キズナエピソード：ことり・凛・ルビィ (全話)</li>
 		</ul>
 	</td>
 </tr>
 <tr>
-	<td>2020/09/16 10:00頃</td>
+	<td>2020/09/16</td>
 	<td><span class="new"></span>テスト公開
 		<ul>
-			<li>メインストーリー (第1～4章)</li>
-			<li>イベントエピソード (「和装モデルはお任せあれ！」まで)</li>
-			<li>キズナエピソード (穂乃果・愛・璃奈・栞子)</li>
+			<li>メインストーリー：第1～4章)</li>
+			<li>イベントエピソード：「和装モデルはお任せあれ！」まで</li>
+			<li>キズナエピソード：穂乃果・愛・璃奈・栞子 (全話)</li>
 		</ul>
 	</td>
 </tr>
