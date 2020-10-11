@@ -1075,70 +1075,70 @@ const StoryList = [
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / First Season / 第15章「みんなの夢のために―後編―」",
+	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
 	"title": "第1話",
 	"desc": "",
 	"character": []
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / First Season / 第15章「みんなの夢のために―後編―」",
+	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
 	"title": "第2話",
 	"desc": "",
 	"character": []
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / First Season / 第15章「みんなの夢のために―後編―」",
+	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
 	"title": "第3話",
 	"desc": "",
 	"character": []
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / First Season / 第15章「みんなの夢のために―後編―」",
+	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
 	"title": "第4話",
 	"desc": "",
 	"character": []
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / First Season / 第15章「みんなの夢のために―後編―」",
+	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
 	"title": "第5話",
 	"desc": "",
 	"character": []
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / First Season / 第15章「みんなの夢のために―後編―」",
+	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
 	"title": "第6話",
 	"desc": "",
 	"character": []
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / First Season / 第15章「みんなの夢のために―後編―」",
+	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
 	"title": "第7話",
 	"desc": "",
 	"character": []
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / First Season / 第15章「みんなの夢のために―後編―」",
+	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
 	"title": "第8話",
 	"desc": "",
 	"character": []
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / First Season / 第15章「みんなの夢のために―後編―」",
+	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
 	"title": "第9話",
 	"desc": "",
 	"character": []
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / First Season / 第15章「みんなの夢のために―後編―」",
+	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
 	"title": "第10話",
 	"desc": "",
 	"character": []
@@ -1282,6 +1282,146 @@ const StoryList = [
 	"title": "第10話 本物の恐怖",
 	"desc": "にこたち、いたずらの仕掛け人が繰り広げる「絶海の孤島・殺人事件」を見るのにも飽きてきたメンバー。そろそろお開きに、と動いたとき、本当の事件が起こった",
 	"character": ["Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / Intermisson / 第19章「ゾンビとの戦い」",
+	"title": "第1話 本当の本当に本当！？",
+	"desc": "にこ達の仕込みを、本気で恐怖したり呆れてみていたりしたメンバーを突如襲ったゾンビ！　これもにこの仕込みかと思いきや……？",
+	//"character": ["Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Rina", "Shioriko"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / Intermisson / 第19章「ゾンビとの戦い」",
+	"title": "第2話 ゾンビ対策会議",
+	"desc": "屋敷に籠城し、ゾンビから身を守ることにしたメンバー。島外との唯一の連絡手段は外の倉庫に！　果たしてこの夜を無事に超えられるのか……！？",
+	//"character": ["Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / Intermisson / 第19章「ゾンビとの戦い」",
+	"title": "第3話 束の間の休息",
+	"desc": "",
+	//"character": ["Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / Intermisson / 第19章「ゾンビとの戦い」",
+	"title": "第4話 無線機でいざSOS！",
+	"desc": "",
+	//"character": ["Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / Intermisson / 第19章「ゾンビとの戦い」",
+	"title": "第5話 ゾンビは遭難者！？",
+	"desc": "",
+	//"character": ["Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / Intermisson / 第19章「ゾンビとの戦い」",
+	"title": "第6話 夜が来る！",
+	"desc": "",
+	//"character": ["Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / Intermisson / 第19章「ゾンビとの戦い」",
+	"title": "第7話 ゾンビたちの祝宴",
+	"desc": "",
+	//"character": ["Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Mari", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / Intermisson / 第19章「ゾンビとの戦い」",
+	"title": "第8話 一緒に踊ろう！",
+	"desc": "",
+	//"character": ["Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Kasumi", "Shizuku", "Ai", "Kanata", "Emma", "Rina", "Shioriko"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / Intermisson / 第19章「ゾンビとの戦い」",
+	"title": "第9話 三校合同合宿、再び！",
+	"desc": "",
+	//"character": ["Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / Intermisson / 第19章「ゾンビとの戦い」",
+	"title": "第10話 異国からのタイフーン！",
+	"desc": "",
+	//"character": ["Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Rijicho", "Ranju", "Mia"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第20章「◆*◆」",
+	"title": "第1話",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第20章「◆*◆」",
+	"title": "第2話",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第20章「◆*◆」",
+	"title": "第3話",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第20章「◆*◆」",
+	"title": "第4話",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第20章「◆*◆」",
+	"title": "第5話",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第20章「◆*◆」",
+	"title": "第6話",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第20章「◆*◆」",
+	"title": "第7話",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第20章「◆*◆」",
+	"title": "第8話",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第20章「◆*◆」",
+	"title": "第9話",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第20章「◆*◆」",
+	"title": "第10話",
+	"desc": "",
+	"character": []
 },
 {
 	"type": "event",
@@ -1704,7 +1844,7 @@ const StoryList = [
 	"type": "event",
 	"chapter": "イベントエピソード「二人の奏でる音」",
 	"title": "第4話",
-	"desc": "プレゼントも買った二人は、地図を頼りに演奏会へと向かう。しかし東京のことに疎い善子と方向音痴の果林は、無事たどり着けるのだろうか？",
+	"desc": "プレゼントも買った二人は、地図を頼りに演奏会へと向かう。東京のことに疎い善子と方向音痴の果林だが、無事たどり着けるのだろうか？",
 	"character": ["Yoshiko", "Karin"]
 },
 {
@@ -1880,99 +2020,100 @@ const StoryList = [
 	"type": "event",
 	"chapter": "イベントエピソード「ベジタブル☆クッキング！」",
 	"title": "第1話",
-	"desc": "",
-	"character": []
+	"desc": "商店街でのライブのお礼にたくさんの野菜をもらったが、使い道に困っていたエマ。一緒に野菜を運んでいたことりから、鍋パーティーをしてはどうかとの提案を受ける。",
+	"character": ["Eli", "Kotori", "Dia", "Yoshiko", "Emma", "Rina"]
 },
 {
 	"type": "event",
 	"chapter": "イベントエピソード「ベジタブル☆クッキング！」",
 	"title": "第2話",
-	"desc": "",
-	"character": []
+	"desc": "鍋パーティー当日。エマと絵里は追加の食材の買い出しに、ことりとダイヤは鍋の準備、善子と璃奈は野菜の下ごしらえと、役割分担をする。",
+	"character": ["Eli", "Kotori", "Dia", "Yoshiko", "Emma", "Rina"]
 },
 {
 	"type": "event",
 	"chapter": "イベントエピソード「ベジタブル☆クッキング！」",
 	"title": "第3話",
-	"desc": "",
-	"character": []
+	"desc": "絵里とエマが買い出しから戻ってきた。鍋の準備は着々と進む。",
+	"character": ["Eli", "Kotori", "Dia", "Yoshiko", "Emma", "Rina"]
 },
 {
 	"type": "event",
 	"chapter": "イベントエピソード「ベジタブル☆クッキング！」",
 	"title": "第4話",
-	"desc": "",
-	"character": []
+	"desc": "調理室から良い匂いがただよう中、6人は栄養についての話を始める。",
+	"character": ["Eli", "Kotori", "Dia", "Yoshiko", "Emma", "Rina"]
 },
 {
 	"type": "event",
 	"chapter": "イベントエピソード「ベジタブル☆クッキング！」",
 	"title": "第5話",
-	"desc": "",
-	"character": []
+	"desc": "エマは買い出しに行っていた間、どうしても鍋に入れたくて買ってきたものがあったようで……？",
+	"character": ["Eli", "Kotori", "Dia", "Yoshiko", "Emma", "Rina"]
 },
 {
 	"type": "event",
 	"chapter": "イベントエピソード「ベジタブル☆クッキング！」",
 	"title": "第6話",
-	"desc": "",
-	"character": []
+	"desc": "野菜鍋も、あとは火が通るのを待つのみ。それまでの間に、ことりはチーズケーキを食べながら休憩しようと提案する。",
+	"memo": "「……まさかとは思うけれど……そのチーズケーキを……お鍋に入れる気じゃ……ないわよね？」",
+	"character": ["Eli", "Kotori", "Dia", "Yoshiko", "Emma", "Rina"]
 },
 {
 	"type": "event",
 	"chapter": "イベントエピソード「ベジタブル☆クッキング！」",
 	"title": "第7話",
-	"desc": "",
-	"character": []
+	"desc": "休憩中、5人は善子の姿が見えないことに気づく。鍋のもとへ行くと、善子が何かをしているようだが……？",
+	"character": ["Eli", "Kotori", "Dia", "Yoshiko", "Emma", "Rina"]
 },
 {
 	"type": "event",
 	"chapter": "イベントエピソード「青春のアイススケート」",
 	"title": "第1話",
-	"desc": "",
-	"character": []
+	"desc": "いつも通り部室へと向かったかすみ。そこには、アイススケートを題材にしたアニメに夢中になって見ているせつ菜の姿があった。",
+	"character": ["Kasumi", "Setsuna"]
 },
 {
 	"type": "event",
 	"chapter": "イベントエピソード「青春のアイススケート」",
 	"title": "第2話",
-	"desc": "",
-	"character": []
+	"desc": "かすみとせつ菜は、スケート対決をするため、屋内のスケートリンクにμ's・Aqoursのメンバーを呼び出した。",
+	"character": ["Rin", "Maki", "You", "Mari", "Kasumi", "Setsuna"]
 },
 {
 	"type": "event",
 	"chapter": "イベントエピソード「青春のアイススケート」",
 	"title": "第3話",
-	"desc": "",
-	"character": []
+	"desc": "チーム分けの抽選の結果、凛・曜・かすみチームと、真姫・鞠莉・せつ菜チームに分かれて勝負することになった。1回戦は、凛とせつ菜のスピード対決だ。",
+	"character": ["Rin", "Maki", "You", "Mari", "Kasumi", "Setsuna"]
 },
 {
 	"type": "event",
 	"chapter": "イベントエピソード「青春のアイススケート」",
 	"title": "第4話",
-	"desc": "",
-	"character": []
+	"desc": "2回戦は、曜と鞠莉のフィギュアスケート対決。3分間でより多くの技を出した方が勝利というルールの中、はたして勝利はどちらの手に……？",
+	"character": ["Rin", "Maki", "You", "Mari", "Kasumi", "Setsuna"]
 },
 {
 	"type": "event",
 	"chapter": "イベントエピソード「青春のアイススケート」",
 	"title": "第5話",
-	"desc": "",
-	"character": []
+	"desc": "1勝1敗で迎えた最終戦。かすみと真姫の勝負ということになるのだが、どちらもあまり乗り気ではなさそうだ。",
+	"character": ["Rin", "Maki", "You", "Mari", "Kasumi", "Setsuna"]
 },
 {
 	"type": "event",
 	"chapter": "イベントエピソード「青春のアイススケート」",
 	"title": "第6話",
-	"desc": "",
-	"character": []
+	"desc": "かすみも真姫も、いざスケートリンクに上がると全然滑れないことが判明。どうしてもみんなで勝負をしたいせつ菜は、ある提案をする。",
+	"character": ["Rin", "Maki", "You", "Mari", "Kasumi", "Setsuna"]
 },
 {
 	"type": "event",
 	"chapter": "イベントエピソード「青春のアイススケート」",
 	"title": "第7話",
-	"desc": "",
-	"character": []
+	"desc": "せつ菜が借りてきたのは、スケートリンク用のソリ。滑れない2人のために、ソリを押しながらリンクを1周するチーム戦が始まった！",
+	"character": ["Rin", "Maki", "You", "Mari", "Kasumi", "Setsuna"]
 },
 {
 	"type": "event",
@@ -2420,49 +2561,150 @@ const StoryList = [
 	"chapter": "イベントエピソード「秋の味覚を召し上がれ！」",
 	"title": "第1話",
 	"desc": "海未・ルビィ・彼方の3人は、花陽に呼ばれて「秋の収穫祭」へとやってきた。",
-	//"character": ["Umi", "Ruby", "Kanata"]
+	"character": ["Umi", "Ruby", "Kanata"]
 },
 {
 	"type": "event",
 	"chapter": "イベントエピソード「秋の味覚を召し上がれ！」",
 	"title": "第2話",
 	"desc": "待ち合わせ場所へとやってきた3人。花陽が言うには、「秋の収穫祭」とはバーベキューパーティーのことらしい。",
-	//"character": ["Umi", "Hanayo", "Hanamaru", "Ruby", "Kanata", "Emma"]
+	"character": ["Umi", "Hanayo", "Hanamaru", "Ruby", "Kanata", "Emma"]
 },
 {
 	"type": "event",
 	"chapter": "イベントエピソード「秋の味覚を召し上がれ！」",
 	"title": "第3話",
 	"desc": "メンバーは二人ずつに分かれて、自然の中で食材を調達しに行くことに。花丸とエマは、森の中で食材を探す。",
-	//"character": ["Hanamaru", "Emma"]
+	"character": ["Hanamaru", "Emma"]
 },
 {
 	"type": "event",
 	"chapter": "イベントエピソード「秋の味覚を召し上がれ！」",
 	"title": "第4話",
 	"desc": "海未と彼方は川へとやってきた。渓流で釣りをするようだが、果たして魚を持ち帰ることはできるのか……？",
-	//"character": ["Umi", "Kanata"]
+	"character": ["Umi", "Kanata"]
 },
 {
 	"type": "event",
 	"chapter": "イベントエピソード「秋の味覚を召し上がれ！」",
 	"title": "第5話",
 	"desc": "花陽とルビィは山の中でキノコ狩りに行く。松茸が採れるとのことだが、果たして見つけられるのだろうか？",
-	//"character": ["Hanayo", "Ruby"]
+	"character": ["Hanayo", "Ruby"]
 },
 {
 	"type": "event",
 	"chapter": "イベントエピソード「秋の味覚を召し上がれ！」",
 	"title": "第6話",
 	"desc": "それぞれ食材を携えて戻ってきた6人。それぞれの体験談を交えながら、バーベキューの準備を進めていく。",
-	//"character": ["Umi", "Hanayo", "Hanamaru", "Ruby", "Kanata", "Emma"]
+	"character": ["Umi", "Hanayo", "Hanamaru", "Ruby", "Kanata", "Emma"]
 },
 {
 	"type": "event",
 	"chapter": "イベントエピソード「秋の味覚を召し上がれ！」",
 	"title": "第7話",
 	"desc": "バーベキューの準備も無事終了し、いよいよ……いただきます！",
-	//"character": ["Umi", "Hanayo", "Hanamaru", "Ruby", "Kanata", "Emma"]
+	"character": ["Umi", "Hanayo", "Hanamaru", "Ruby", "Kanata", "Emma"]
+},
+
+{
+	"type": "event",
+	"chapter": "イベントエピソード「月のウサギと女神様」",
+	"title": "第1話",
+	"desc": "お月見をするために、虹ヶ咲学園へとやってきた6人。梨子と果南は買い出しに、にことエマは月見団子を作っていた。",
+	"memo": "「あとは野生のちんすこうとか？」",
+	"character": ["Rin", "Nico", "Riko", "Kanan", "Shizuku", "Emma"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「月のウサギと女神様」",
+	"title": "第2話",
+	"desc": "雲のせいで月が隠れてしまい、がっかりしていた6人。突然、近くの茂みが揺れる音が聞こえる。エマが確認してみると、その正体はウサギだった……！",
+	"character": ["Rin", "Nico", "Riko", "Kanan", "Shizuku", "Emma"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「月のウサギと女神様」",
+	"title": "第3話",
+	"desc": "突然ウサギが逃げ出したので、あわてて追いかける6人。梨子は追いかけているうちに他のメンバーとはぐれてしまい、気がつくとすすき畑の真ん中にいた。",
+	"character": ["Riko", "Shizuku"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「月のウサギと女神様」",
+	"title": "第4話",
+	"desc": "梨子が出会ったのは、ウサギの耳をつけたしずく・エマ・果南・にこ。ここは月の世界で、私達は「月の世界の精霊」だと彼女らは言うが……？",
+	"character": ["Nico", "Riko", "Kanan", "Shizuku", "Emma"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「月のウサギと女神様」",
+	"title": "第5話",
+	"desc": "月が隠れてしまったのは、月の女神が閉じこもってしまったせいらしい。5人は月の女神の興味を引いて出てきてもらうために、各自いろいろなものを用意する。",
+	"character": ["Nico", "Riko", "Kanan", "Shizuku", "Emma"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「月のウサギと女神様」",
+	"title": "第6話",
+	"desc": "5人が楽しんでいると、すすき畑が金色に光りだす。そして現れたのは、月の女神様……？",
+	"character": ["Rin", "Nico", "Riko", "Kanan", "Shizuku", "Emma"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「月のウサギと女神様」",
+	"title": "第7話",
+	"desc": "気がつくと元の世界に戻されていた梨子。みんなが呼んでいる声が聞こえて、そこへ駆けつけると……。",
+	"character": ["Rin", "Nico", "Riko", "Kanan", "Shizuku", "Emma"]
+},
+
+{
+	"type": "event",
+	"chapter": "イベントエピソード「★**★」",
+	"title": "第1話",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「★**★」",
+	"title": "第2話",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「★**★」",
+	"title": "第3話",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「★**★」",
+	"title": "第4話",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「★**★」",
+	"title": "第5話",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「★**★」",
+	"title": "第6話",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「★**★」",
+	"title": "第7話",
+	"desc": "",
+	"character": []
 },
 {
 	"type": "kizuna",
@@ -3690,7 +3932,7 @@ const StoryList = [
 	"chapter": "キズナエピソード 黒澤ダイヤ",
 	"title": "6話 原宿邂逅",
 	"desc": "ある休日、あなたは愛と原宿に来ていた。どこに行こうか話し合っていると、思わぬ人物を発見する。",
-	"memo": "「<ruby>邂<rt>かい</rt>逅<rt>こう</rt></ruby>」は、「偶然の巡り会い」という意味。",
+	"memo": '「<ruby>邂逅<rt>かいこう</rt></ruby>」は、「偶然の巡り会い」という意味。',
 	"character": ["Player", "Dia", "Ai"]
 },
 {
@@ -4453,171 +4695,172 @@ const StoryList = [
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ",
-	"title": "1話 ",
-	"desc": "",
-	"character": []
+	"title": "1話 愛されかすかす",
+	"desc": "１年生のかすみは、どうにも他のメンバーにいじられがち。憤慨するかすみだが、愛されている証拠だとあなたは宥める。",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ",
-	"title": "2話 ",
-	"desc": "",
-	"character": []
+	"title": "2話 悪魔のコッペパン",
+	"desc": "大きなバッグを抱えて部室に現れたかすみ。一体何が入っているのか？かすみは嬉々とした表情でバッグの中身を机に広げる。",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ",
-	"title": "3話 ",
-	"desc": "",
-	"character": []
+	"title": "3話 センター投票！",
+	"desc": "週末に学園でオープンキャンパスが開かれることになった。そこで行われる部活動紹介に、スクールアイドル同好会も参加することに。",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ",
-	"title": "4話 ",
-	"desc": "",
-	"character": []
+	"title": "4話 運命の日",
+	"desc": "臨時センター投票の締切日。持ち前の可愛らしさと入念な根回しで自信満々のかすみ。センターに選ばれたのは果たして……！？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ",
-	"title": "5話 ",
-	"desc": "",
-	"character": []
+	"title": "5話 灰色のお姫様",
+	"desc": "部活動紹介を無事にやり切った同好会メンバー。いつもの調子で会話に混ざるかすみだが、その心中は複雑なものだった……。",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ / 「☆ワンダーランド☆」編",
-	"title": "6話 ",
-	"desc": "",
-	"character": []
+	"title": "6話 何度も何度も？",
+	"desc": "ソロイベントでは自分を応援してくれる人たちだけが特別に思えるようなことをやりたいかすみ。もっと身近に感じて、もっとキュンとしてもらために、自分のどんなかわいい部分をアピールしたらいいのか相談したけど……？",
+	"character": ["Player", "Kasumi"]
 },
 {
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ / 「☆ワンダーランド☆」編",
-	"title": "7話 ",
-	"desc": "",
-	"character": []
+	"title": "7話 ゆけゆけ！かすみん！",
+	"desc": "ソロイベントの余韻に浸っているかすみ。だが、もっとふぁんのみんなに可愛いと言ってもらうため、かすみの魅力をさらに伝えるため次なる作戦を考えているようで……。",
+	"character": ["Player", "Kasumi"]
 },
 {
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ / 「☆ワンダーランド☆」編",
-	"title": "8話 ",
-	"desc": "",
-	"character": []
+	"title": "8話 負けないもん！",
+	"desc": "ファンのみんなをもっと夢中にさせるため、かすみの魅力をもっと見せていきたい！　そこで、かすみが思いついた、いい方法とは……？",
+	"character": ["Player", "Ayumu", "Kasumi", "Ai"]
 },
 {
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ / 「☆ワンダーランド☆」編",
-	"title": "9話 ",
-	"desc": "",
-	"character": []
+	"title": "9話 初！オフィシャルファンクラブ",
+	"desc": "ファンクラブを作ることにしたかすみだが、既に歩夢と愛にはファンクラブがあったと知り、ライバル心に火がついた……！　かすみのファンクラブ、いったいどんなファンクラブになるのか……？",
+	"character": ["Player", "Kasumi"]
 },
 {
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ / 「☆ワンダーランド☆」編",
-	"title": "10話 ",
-	"desc": "",
-	"character": []
+	"title": "10話 ホームページ公開！",
+	"desc": "同好会初のオフィシャルファンクラブとして、かすみのファンクラブのホームページを作ることになったかすみとあなた。無事にホームページは公開できるのか……？",
+	"character": ["Player", "Kasumi"]
 },
 {
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ / 「☆ワンダーランド☆」編",
-	"title": "11話 ",
-	"desc": "",
-	"character": []
+	"title": "11話 もっともっと！",
+	"desc": "ファンクラブのホームページが無事に公開され、徐々に登録数も増えてきた。歩夢と愛のファンクラブを超えるため、さらなる策を考えるかすみ。そこで、ファンクラブの素晴らしさを伝えるためのある行動を思いつく。",
+	"character": ["Player", "Kasumi"]
 },
 {
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ / 「☆ワンダーランド☆」編",
-	"title": "12話 ",
-	"desc": "",
+	"title": "12話 準備万端？",
+	"desc": "ファンクラブの楽しさを歌にして、次のライブで披露することにしたかすみ。そのための曲も作ったが、かすみはどこか不安そうで……。",
 	"memo": "このサイドエピソードを読むことで、ライブ楽曲「☆ワンダーランド☆」が解禁される。",
-	"character": []
+	"character": ["Player", "Kasumi"]
 },
 {
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ / 「☆ワンダーランド☆」編",
-	"title": "13話 ",
-	"desc": "",
-	"character": []
+	"title": "13話 大切なこと",
+	"desc": "ライブ後、ファンのみんなからもらったコメントを嬉しそうに読むかすみ。それに対して、自分の力不足を感じているあなただったが……。",
+	"character": ["Player", "Kasumi"]
 },
 {
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ / 「Margaret」編",
-	"title": "14話 ",
-	"desc": "",
-	"character": []
+	"title": "14話 かすみのおもてなし",
+	"desc": "かすみんファンクラブ会員番号001の会員になったあなた。そんなあなたに、かすみが相談したいことがあるという。",
+	"character": ["Player", "Kasumi"]
 },
 {
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ / 「Margaret」編",
-	"title": "15話 ",
-	"desc": "",
-	"character": []
+	"title": "15話 ファンクラブ名で差をつけろ！",
+	"desc": "かすみんファンクラブのコッペパン企画は大成功！　しかし、かすみは「かすみんファンクラブ」の致命的な欠点に気がついた……！？",
+	"memo": "「マジカル☆かすみんキャッスル」、略してmagi Kas cas(まじかすかす)。",
+	"character": ["Player", "Kasumi"]
 },
 {
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ / 「Margaret」編",
-	"title": "16話 ",
-	"desc": "",
-	"character": []
+	"title": "16話 かすみの日課",
+	"desc": "練習が終わった同好会メンバー。そんな中、かすみは居残りするという。その理由は……？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ / 「Margaret」編",
-	"title": "17話 ",
-	"desc": "",
-	"character": []
+	"title": "17話 全然気にしてませんけど！",
+	"desc": "同好会メンバーの活動は順調で、ファンクラブの会員数も順調に増えていっている。そんな中、かすみのファンクラブは……。",
+	"character": ["Player", "Ayumu", "Kasumi", "Karin", "Rina"]
 },
 {
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ / 「Margaret」編",
-	"title": "18話 ",
-	"desc": "",
-	"character": []
+	"title": "18話 尋ねるまでもないことだけど！",
+	"desc": "他の同好会メンバーに比べ、かすみのファンクラブの会員数が増えない。全然気にしていない、というかすみだったが……。",
+	"character": ["Player", "Kasumi"]
 },
 {
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ / 「Margaret」編",
-	"title": "19話 ",
-	"desc": "",
-	"character": []
+	"title": "19話 これはあくまで作戦です！",
+	"desc": "ファンクラブの会員数を気にしながらも強がるかすみ。既存のファンのために、ファンクラブイベントを開催することになったかすみには、もう既になにか秘策があるようで……？",
+	"character": ["Player", "Kasumi"]
 },
 {
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ / 「Margaret」編",
-	"title": "20話 ",
-	"desc": "",
+	"title": "20話 かすみに夢中！",
+	"desc": "普段は出さない、自分の素顔を知ってもらうようなファンクラブイベントにしたい、というかすみ。いよいよイベント当日……。",
 	"memo": "このサイドエピソードを読むことで、ライブ楽曲「Margaret」が解禁される。",
-	"character": []
+	"character": ["Player", "Kasumi"]
 },
 {
 	"type": "kizuna",
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ / 「Margaret」編",
-	"title": "21話 ",
-	"desc": "",
-	"character": []
+	"title": "21話 集まれ！　キャス民！",
+	"desc": "かすみのファンクラブイベントは大成功！イベントの動画をネットにアップしたあなた、その反響は……？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "kizuna",
@@ -5930,8 +6173,16 @@ const StoryList = [
 	"type": "special",
 	"color": "Ayumu",
 	"chapter": "TVアニメ「ラブライブ！虹ヶ咲学園スクールアイドル同好会」連動ストーリー 上原歩夢",
-	"title": "プロローグ どんな思い出も……",
+	"title": "どんな思い出も……",
 	"desc": "幼馴染である歩夢とあなた。ある日街を歩いていて、昔のことを思い出し……。",
 	"character": ["Player", "Ayumu"]
+},
+{
+	"type": "special",
+	"color": "Kasumi",
+	"chapter": "TVアニメ「ラブライブ！虹ヶ咲学園スクールアイドル同好会」連動ストーリー 中須かすみ",
+	"title": "信じて待つもん！",
+	"desc": "ある日、一番のりで部室に来たかすみ。一人で部室にいると、同好会を一人で守っていたときのことを思い出す……。",
+	"character": ["Kasumi", "Rina"]
 }
 ];
