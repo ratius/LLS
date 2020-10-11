@@ -587,7 +587,7 @@ const RawCardList = [
 	"cn2": "君のこころは輝いてるかい？",
 	"date": "2019/10/03",
 	"source": "reward",
-	"desc": "イベント「秘密のパーティー！」報酬"
+	"desc": "イベント「秘密のパーティー！」報酬 (1000位枠)"
 },
 {
 	"id": 104,
@@ -599,7 +599,7 @@ const RawCardList = [
 	"cn2": "わくわくアニマル",
 	"date": "2019/10/03",
 	"source": "reward",
-	"desc": "イベント「秘密のパーティー！」報酬"
+	"desc": "イベント「秘密のパーティー！」報酬 (300位枠)"
 },
 {
 	"id": 105,
@@ -671,7 +671,7 @@ const RawCardList = [
 	"cn2": "Snow halation",
 	"date": "2019/10/21",
 	"source": "reward",
-	"desc": "イベント「和装モデルはお任せあれ！」報酬"
+	"desc": "イベント「和装モデルはお任せあれ！」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 111,
@@ -683,7 +683,7 @@ const RawCardList = [
 	"cn2": "わくわくアニマル",
 	"date": "2019/10/21",
 	"source": "reward",
-	"desc": "イベント「和装モデルはお任せあれ！」報酬"
+	"desc": "イベント「和装モデルはお任せあれ！」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 112,
@@ -767,7 +767,7 @@ const RawCardList = [
 	"cn2": "君のこころは輝いてるかい？",
 	"date": "2019/11/06",
 	"source": "reward",
-	"desc": "イベント「下町巡り珍道中」報酬"
+	"desc": "イベント「下町巡り珍道中」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 119,
@@ -779,7 +779,7 @@ const RawCardList = [
 	"cn2": "わくわくアニマル",
 	"date": "2019/11/06",
 	"source": "reward",
-	"desc": "イベント「下町巡り珍道中」報酬"
+	"desc": "イベント「下町巡り珍道中」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 120,
@@ -851,7 +851,7 @@ const RawCardList = [
 	"cn2": "Snow halation",
 	"date": "2019/11/21",
 	"source": "reward",
-	"desc": "イベント「ハイキングでリフレッシュ！」報酬"
+	"desc": "イベント「ハイキングでリフレッシュ！」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 126,
@@ -863,7 +863,7 @@ const RawCardList = [
 	"cn2": "わくわくアニマル",
 	"date": "2019/11/21",
 	"source": "reward",
-	"desc": "イベント「ハイキングでリフレッシュ！」報酬"
+	"desc": "イベント「ハイキングでリフレッシュ！」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 127,
@@ -971,7 +971,7 @@ const RawCardList = [
 	"cn2": "君のこころは輝いてるかい？",
 	"date": "2019/12/06",
 	"source": "reward",
-	"desc": "イベント「素敵なところへご招待！」報酬"
+	"desc": "イベント「素敵なところへご招待！」報酬  (3000位/7万位枠)"
 },
 {
 	"id": 136,
@@ -983,7 +983,7 @@ const RawCardList = [
 	"cn2": "わくわくアニマル",
 	"date": "2019/12/06",
 	"source": "reward",
-	"desc": "イベント「素敵なところへご招待！」報酬"
+	"desc": "イベント「素敵なところへご招待！」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 137,
@@ -1055,7 +1055,7 @@ const RawCardList = [
 	"cn2": "Snow halation",
 	"date": "2019/12/23",
 	"source": "reward",
-	"desc": "イベント「スクールアイドルトレイン発車！」報酬"
+	"desc": "イベント「スクールアイドルトレイン発車！」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 143,
@@ -1067,7 +1067,7 @@ const RawCardList = [
 	"cn2": "わくわくアニマル",
 	"date": "2019/12/23",
 	"source": "reward",
-	"desc": "イベント「スクールアイドルトレイン発車！」報酬"
+	"desc": "イベント「スクールアイドルトレイン発車！」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 144,
@@ -1187,7 +1187,7 @@ const RawCardList = [
 	"cn2": "僕らのLIVE 君とのLIFE",
 	"date": "2020/01/06",
 	"source": "reward",
-	"desc": "イベント「海の上の大熱戦」報酬"
+	"desc": "イベント「海の上の大熱戦」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 154,
@@ -1199,7 +1199,7 @@ const RawCardList = [
 	"cn2": "青空Jumping Heart",
 	"date": "2020/01/06",
 	"source": "reward",
-	"desc": "イベント「海の上の大熱戦」報酬"
+	"desc": "イベント「海の上の大熱戦」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 155,
@@ -1283,7 +1283,7 @@ const RawCardList = [
 	"cn2": "青空Jumping Heart",
 	"date": "2020/01/22",
 	"source": "reward",
-	"desc": "イベント「スペシャルスイーツを召し上がれ♡」報酬"
+	"desc": "イベント「スペシャルスイーツを召し上がれ♡」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 162,
@@ -1295,7 +1295,7 @@ const RawCardList = [
 	"cn2": "僕らのLIVE 君とのLIFE",
 	"date": "2020/01/22",
 	"source": "reward",
-	"desc": "イベント「スペシャルスイーツを召し上がれ♡」報酬"
+	"desc": "イベント「スペシャルスイーツを召し上がれ♡」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 163,
@@ -1379,7 +1379,7 @@ const RawCardList = [
 	"cn2": "フラワーシンフォニー",
 	"date": "2020/02/06",
 	"source": "reward",
-	"desc": "イベント「二人の奏でる音♡」報酬"
+	"desc": "イベント「二人の奏でる音」報酬"
 },
 {
 	"id": 170,
@@ -1403,7 +1403,7 @@ const RawCardList = [
 	"cn2": "青空Jumping Heart",
 	"date": "2020/02/06",
 	"source": "reward",
-	"desc": "イベント「二人の奏でる音♡」報酬"
+	"desc": "イベント「二人の奏でる音」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 172,
@@ -1415,7 +1415,7 @@ const RawCardList = [
 	"cn2": "レインボーローズ",
 	"date": "2020/02/06",
 	"source": "reward",
-	"desc": "イベント「二人の奏でる音♡」報酬"
+	"desc": "イベント「二人の奏でる音」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 173,
@@ -1499,7 +1499,7 @@ const RawCardList = [
 	"cn2": "青空Jumping Heart",
 	"date": "2020/02/20",
 	"source": "reward",
-	"desc": "イベント「それゆけUMA捜索隊」報酬"
+	"desc": "イベント「それゆけUMA捜索隊」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 180,
@@ -1511,7 +1511,7 @@ const RawCardList = [
 	"cn2": "僕らのLIVE 君とのLIFE",
 	"date": "2020/02/20",
 	"source": "reward",
-	"desc": "イベント「それゆけUMA捜索隊」報酬"
+	"desc": "イベント「それゆけUMA捜索隊」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 181,
@@ -1619,7 +1619,7 @@ const RawCardList = [
 	"cn2": "青空Jumping Heart",
 	"date": "2020/03/06",
 	"source": "reward",
-	"desc": "イベント「いたずらオオカミを捕まえろ！」報酬"
+	"desc": "イベント「いたずらオオカミを捕まえろ！」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 190,
@@ -1631,7 +1631,7 @@ const RawCardList = [
 	"cn2": "レインボーローズ",
 	"date": "2020/03/06",
 	"source": "reward",
-	"desc": "イベント「いたずらオオカミを捕まえろ！」報酬"
+	"desc": "イベント「いたずらオオカミを捕まえろ！」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 191,
@@ -1683,18 +1683,6 @@ const RawCardList = [
 },
 {
 	"id": 195,
-	"name": "Kotori",
-	"rare": "SR",
-	"atr": "active",
-	"type": "sp",
-	"cn1": "魔法でなおしてあげるよ♪",
-	"cn2": "僕らのLIVE 君とのLIFE",
-	"date": "2020/03/23",
-	"source": "reward",
-	"desc": "イベント「マジカル・タイム！」報酬"
-},
-{
-	"id": 196,
 	"name": "Dia",
 	"rare": "UR",
 	"atr": "active",
@@ -1706,7 +1694,7 @@ const RawCardList = [
 	"desc": "「マジカル・タイム！ガチャ(後半)」で追加"
 },
 {
-	"id": 197,
+	"id": 196,
 	"name": "Kasumi",
 	"rare": "UR",
 	"atr": "natural",
@@ -1718,6 +1706,18 @@ const RawCardList = [
 	"desc": "イベント「マジカル・タイム！」報酬"
 },
 {
+	"id": 195,
+	"name": "Kotori",
+	"rare": "SR",
+	"atr": "active",
+	"type": "sp",
+	"cn1": "魔法でなおしてあげるよ♪",
+	"cn2": "僕らのLIVE 君とのLIFE",
+	"date": "2020/03/23",
+	"source": "reward",
+	"desc": "イベント「マジカル・タイム！」報酬 (3000位/7万位枠)"
+},
+{
 	"id": 198,
 	"name": "Shizuku",
 	"rare": "SR",
@@ -1727,7 +1727,7 @@ const RawCardList = [
 	"cn2": "レインボーローズ",
 	"date": "2020/03/23",
 	"source": "reward",
-	"desc": "イベント「マジカル・タイム！」報酬"
+	"desc": "イベント「マジカル・タイム！」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 199,
@@ -1755,18 +1755,6 @@ const RawCardList = [
 },
 {
 	"id": 201,
-	"name": "Ai",
-	"rare": "SR",
-	"atr": "cool",
-	"type": "sk",
-	"cn1": "来てくれたんだね！サンキュー♪",
-	"cn2": "レインボーローズ",
-	"date": "2020/03/31",
-	"source": "none",
-	"desc": "「スクスタフェス」で追加"
-},
-{
-	"id": 202,
 	"name": "Kanata",
 	"rare": "SR",
 	"atr": "cool",
@@ -1778,7 +1766,19 @@ const RawCardList = [
 	"desc": "「スクスタフェス」で追加"
 },
 {
-	"id": 203,
+	"id": 202,
+	"name": "Ai",
+	"rare": "SR",
+	"atr": "cool",
+	"type": "sk",
+	"cn1": "来てくれたんだね！サンキュー♪",
+	"cn2": "レインボーローズ",
+	"date": "2020/03/31",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 212,
 	"name": "Yoshiko",
 	"rare": "UR",
 	"atr": "Cool",
@@ -1790,7 +1790,7 @@ const RawCardList = [
 	"desc": "「ベジタブル☆クッキング！ガチャ(前編)」で追加"
 },
 {
-	"id": 204,
+	"id": 213,
 	"name": "Emma",
 	"rare": "SR",
 	"atr": "Natural",
@@ -1802,31 +1802,7 @@ const RawCardList = [
 	"desc": "「ベジタブル☆クッキング！ガチャ(前編)」で追加"
 },
 {
-	"id": 205,
-	"name": "Rina",
-	"rare": "UR",
-	"atr": "Natural",
-	"type": "Sk",
-	"cn1": "みんなと一緒にひとつのお鍋",
-	"cn2": "ベジタブル☆ワンダーランド",
-	"date": "2020/04/06",
-	"source": "gacha",
-	"desc": "「ベジタブル☆クッキング！ガチャ(後編)」で追加"
-},
-{
-	"id": 206,
-	"name": "Eli",
-	"rare": "SR",
-	"atr": "Active",
-	"type": "Vo",
-	"cn1": "なんなのいきなり……",
-	"cn2": "それは僕たちの奇跡",
-	"date": "2020/04/06",
-	"source": "reward",
-	"desc": "イベント「ベジタブル☆クッキング！」報酬"
-},
-{
-	"id": 207,
+	"id": 214,
 	"name": "Kotori",
 	"rare": "UR",
 	"atr": "Cool",
@@ -1838,7 +1814,19 @@ const RawCardList = [
 	"desc": "イベント「ベジタブル☆クッキング！」報酬"
 },
 {
-	"id": 208,
+	"id": 215,
+	"name": "Rina",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "みんなと一緒にひとつのお鍋",
+	"cn2": "ベジタブル☆ワンダーランド",
+	"date": "2020/04/06",
+	"source": "gacha",
+	"desc": "「ベジタブル☆クッキング！ガチャ(後編)」で追加"
+},
+{
+	"id": 216,
 	"name": "Dia",
 	"rare": "SR",
 	"atr": "Smile",
@@ -1847,7 +1835,19 @@ const RawCardList = [
 	"cn2": "Brightest Melody",
 	"date": "2020/04/06",
 	"source": "reward",
-	"desc": "イベント「ベジタブル☆クッキング！」報酬"
+	"desc": "イベント「ベジタブル☆クッキング！」報酬 (1万位/10万位枠)"
+},
+{
+	"id": 217,
+	"name": "Eli",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "なんなのいきなり……",
+	"cn2": "それは僕たちの奇跡",
+	"date": "2020/04/06",
+	"source": "reward",
+	"desc": "イベント「ベジタブル☆クッキング！」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 218,
@@ -1911,18 +1911,6 @@ const RawCardList = [
 },
 {
 	"id": 223,
-	"name": "Rin",
-	"rare": "SR",
-	"atr": "Pure",
-	"type": "Gd",
-	"cn1": "どこまでだって行けちゃうにゃ～",
-	"cn2": "それは僕たちの奇跡",
-	"date": "2020/04/21",
-	"source": "reward",
-	"desc": "イベント「青春のアイススケート」報酬"
-},
-{
-	"id": 224,
 	"name": "You",
 	"rare": "UR",
 	"atr": "Elegant",
@@ -1934,6 +1922,18 @@ const RawCardList = [
 	"desc": "イベント「青春のアイススケート」報酬"
 },
 {
+	"id": 224,
+	"name": "Rin",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Gd",
+	"cn1": "どこまでだって行けちゃうにゃ～",
+	"cn2": "それは僕たちの奇跡",
+	"date": "2020/04/21",
+	"source": "reward",
+	"desc": "イベント「青春のアイススケート」報酬 (3000位/7万位枠)"
+},
+{
 	"id": 225,
 	"name": "Mari",
 	"rare": "SR",
@@ -1943,7 +1943,7 @@ const RawCardList = [
 	"cn2": "Brightest Melody",
 	"date": "2020/04/21",
 	"source": "reward",
-	"desc": "イベント「青春のアイススケート」報酬"
+	"desc": "イベント「青春のアイススケート」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 226,
@@ -1971,18 +1971,6 @@ const RawCardList = [
 },
 {
 	"id": 228,
-	"name": "Riko",
-	"rare": "SR",
-	"atr": "Active",
-	"type": "Vo",
-	"cn1": "憧れちゃうシチュエーション",
-	"cn2": "Brightest Melody",
-	"date": "2020/04/30",
-	"source": "none",
-	"desc": "「スクスタフェス」で追加"
-},
-{
-	"id": 229,
 	"name": "Ayumu",
 	"rare": "SR",
 	"atr": "Cool",
@@ -1994,25 +1982,37 @@ const RawCardList = [
 	"desc": "「スクスタフェス」で追加"
 },
 {
-	"id": 230,
-	"name": "Nozomi",
+	"id": 229,
+	"name": "Riko",
 	"rare": "SR",
 	"atr": "Active",
-	"type": "Gd",
-	"cn1": "ウチのお土産はね……",
-	"cn2": "僕らのLIVE 君とのLIFE",
-	"date": "2020/05/07",
-	"source": "gacha",
-	"desc": "「温泉旅行ラプソディガチャ(前編)」で追加"
+	"type": "Vo",
+	"cn1": "憧れちゃうシチュエーション",
+	"cn2": "Brightest Melody",
+	"date": "2020/04/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
 },
 {
-	"id": 231,
+	"id": 230,
 	"name": "Hanamaru",
 	"rare": "UR",
 	"atr": "Cool",
 	"type": "Sk",
 	"cn1": "体も動いちゃうずら～！",
 	"cn2": "湯けむり天女",
+	"date": "2020/05/07",
+	"source": "gacha",
+	"desc": "「温泉旅行ラプソディガチャ(前編)」で追加"
+},
+{
+	"id": 231,
+	"name": "Nozomi",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "ウチのお土産はね……",
+	"cn2": "僕らのLIVE 君とのLIFE",
 	"date": "2020/05/07",
 	"source": "gacha",
 	"desc": "「温泉旅行ラプソディガチャ(前編)」で追加"
@@ -2043,18 +2043,6 @@ const RawCardList = [
 },
 {
 	"id": 234,
-	"name": "Chika",
-	"rare": "SR",
-	"atr": "Cool",
-	"type": "Sk",
-	"cn1": "もう1回温泉行ってくるね",
-	"cn2": "Brightest Melody",
-	"date": "2020/05/07",
-	"source": "reward",
-	"desc": "イベント「温泉旅行ラプソディ」報酬"
-},
-{
-	"id": 235,
 	"name": "Shizuku",
 	"rare": "SR",
 	"atr": "Smile",
@@ -2063,7 +2051,19 @@ const RawCardList = [
 	"cn2": "マーチング・ハーモニー",
 	"date": "2020/05/07",
 	"source": "reward",
-	"desc": "イベント「温泉旅行ラプソディ」報酬"
+	"desc": "イベント「温泉旅行ラプソディ」報酬 (1万位/10万位枠)"
+},
+{
+	"id": 235,
+	"name": "Chika",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "もう1回温泉行ってくるね",
+	"cn2": "Brightest Melody",
+	"date": "2020/05/07",
+	"source": "reward",
+	"desc": "イベント「温泉旅行ラプソディ」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 236,
@@ -2147,7 +2147,7 @@ const RawCardList = [
 	"cn2": "Brightest Melody",
 	"date": "2020/05/21",
 	"source": "reward",
-	"desc": "イベント「取り戻せ！笑顔のラーメン」報酬"
+	"desc": "イベント「取り戻せ！笑顔のラーメン」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 243,
@@ -2159,7 +2159,7 @@ const RawCardList = [
 	"cn2": "マーチング・ハーモニー",
 	"date": "2020/05/21",
 	"source": "reward",
-	"desc": "イベント「取り戻せ！笑顔のラーメン」報酬"
+	"desc": "イベント「取り戻せ！笑顔のラーメン」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 244,
@@ -2255,7 +2255,7 @@ const RawCardList = [
 	"cn2": "Noble Princess",
 	"date": "2020/06/05",
 	"source": "reward",
-	"desc": "イベント「3人のプリンセス」報酬"
+	"desc": "イベント「3人のプリンセス」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 252,
@@ -2267,7 +2267,7 @@ const RawCardList = [
 	"cn2": "マーチング・ハーモニー",
 	"date": "2020/06/05",
 	"source": "reward",
-	"desc": "イベント「3人のプリンセス」報酬"
+	"desc": "イベント「3人のプリンセス」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 253,
@@ -2363,7 +2363,7 @@ const RawCardList = [
 	"cn2": "マーチング・ハーモニー",
 	"date": "2020/06/22",
 	"source": "reward",
-	"desc": "イベント「君と、雨に歌えば」報酬"
+	"desc": "イベント「君と、雨に歌えば」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 261,
@@ -2375,28 +2375,28 @@ const RawCardList = [
 	"cn2": "それは僕たちの奇跡",
 	"date": "2020/06/22",
 	"source": "reward",
-	"desc": "イベント「君と、雨に歌えば」報酬"
+	"desc": "イベント「君と、雨に歌えば」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 262,
-	"name": "Rin",
-	"rare": "UR",
-	"atr": "Cool",
-	"type": "Sp",
-	"cn1": "にゃああっ……！",
-	"cn2": "Pom!☆",
-	"date": "2020/06/30",
-	"source": "fes",
-	"desc": "「スクスタフェス」で追加"
-},
-{
-	"id": 263,
 	"name": "Chika",
 	"rare": "UR",
 	"atr": "Pure",
 	"type": "Vo",
 	"cn1": "あなたと一緒に海を見ていたいな",
 	"cn2": "チカキュン☆サマー",
+	"date": "2020/06/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 263,
+	"name": "Rin",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "にゃああっ……！",
+	"cn2": "Pom!☆",
 	"date": "2020/06/30",
 	"source": "fes",
 	"desc": "「スクスタフェス」で追加"
@@ -2483,7 +2483,7 @@ const RawCardList = [
 	"cn2": "Wonderful Rush",
 	"date": "2020/07/06",
 	"source": "reward",
-	"desc": "イベント「ヨハネと花陽の事件簿」報酬"
+	"desc": "イベント「ヨハネと花陽の事件簿」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 271,
@@ -2495,7 +2495,7 @@ const RawCardList = [
 	"cn2": "Love U my friend",
 	"date": "2020/07/06",
 	"source": "reward",
-	"desc": "イベント「ヨハネと花陽の事件簿」報酬"
+	"desc": "イベント「ヨハネと花陽の事件簿」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 272,
@@ -2579,7 +2579,7 @@ const RawCardList = [
 	"cn2": "恋になりたいAQUARIUM",
 	"date": "2020/07/22",
 	"source": "reward",
-	"desc": "イベント「璃奈のビックリお化け屋敷」報酬"
+	"desc": "イベント「璃奈のビックリお化け屋敷」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 279,
@@ -2591,7 +2591,7 @@ const RawCardList = [
 	"cn2": "Love U my friend",
 	"date": "2020/07/22",
 	"source": "reward",
-	"desc": "イベント「璃奈のビックリお化け屋敷」報酬"
+	"desc": "イベント「璃奈のビックリお化け屋敷」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 280,
@@ -2703,18 +2703,6 @@ const RawCardList = [
 },
 {
 	"id": 291,
-	"name": "Hanamaru",
-	"rare": "SR",
-	"atr": "Elegant",
-	"type": "Sk",
-	"cn1": "落ちるずら～！",
-	"cn2": "恋になりたいAQUARIUM",
-	"date": "2020/08/06",
-	"source": "reward",
-	"desc": "イベント「勝ち抜け！スポーツバトル」報酬"
-},
-{
-	"id": 292,
 	"name": "Rin",
 	"rare": "SR",
 	"atr": "Natural",
@@ -2723,7 +2711,19 @@ const RawCardList = [
 	"cn2": "Wonderful Rush",
 	"date": "2020/08/06",
 	"source": "reward",
-	"desc": "イベント「勝ち抜け！スポーツバトル」報酬"
+	"desc": "イベント「勝ち抜け！スポーツバトル」報酬 (1万位/10万位枠)"
+},
+{
+	"id": 292,
+	"name": "Hanamaru",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "落ちるずら～！",
+	"cn2": "恋になりたいAQUARIUM",
+	"date": "2020/08/06",
+	"source": "reward",
+	"desc": "イベント「勝ち抜け！スポーツバトル」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 293,
@@ -2807,7 +2807,7 @@ const RawCardList = [
 	"cn2": "恋になりたいAQUARIUM",
 	"date": "2020/08/21",
 	"source": "reward",
-	"desc": "イベント「オモチャ屋さんパニック☆」報酬"
+	"desc": "イベント「オモチャ屋さんパニック☆」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 300,
@@ -2819,7 +2819,7 @@ const RawCardList = [
 	"cn2": "Wonderful Rush",
 	"date": "2020/08/21",
 	"source": "reward",
-	"desc": "イベント「オモチャ屋さんパニック☆」報酬"
+	"desc": "イベント「オモチャ屋さんパニック☆」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 301,
@@ -2895,18 +2895,6 @@ const RawCardList = [
 },
 {
 	"id": 307,
-	"name": "Setsuna",
-	"rare": "UR",
-	"atr": "Elegant",
-	"type": "Sk",
-	"cn1": "やらないわけにはいきません",
-	"cn2": "Pioneering a new World",
-	"date": "2020/09/07",
-	"source": "gacha",
-	"desc": "「チョイ悪イメチェン計画ガチャ(後編)」で追加"
-},
-{
-	"id": 308,
 	"name": "Chika",
 	"rare": "UR",
 	"atr": "Natural",
@@ -2918,19 +2906,19 @@ const RawCardList = [
 	"desc": "イベント「チョイ悪イメチェン計画」報酬"
 },
 {
-	"id": 309,
-	"name": "Yoshiko",
-	"rare": "SR",
-	"atr": "Active",
-	"type": "Sp",
-	"cn1": "設定言うな！",
-	"cn2": "恋になりたいAQUARIUM",
+	"id": 308,
+	"name": "Setsuna",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "やらないわけにはいきません",
+	"cn2": "Pioneering a new World",
 	"date": "2020/09/07",
-	"source": "reward",
-	"desc": "イベント「チョイ悪イメチェン計画」報酬"
+	"source": "gacha",
+	"desc": "「チョイ悪イメチェン計画ガチャ(後編)」で追加"
 },
 {
-	"id": 310,
+	"id": 309,
 	"name": "Maki",
 	"rare": "SR",
 	"atr": "Cool",
@@ -2939,7 +2927,19 @@ const RawCardList = [
 	"cn2": "Wonderful Rush",
 	"date": "2020/09/07",
 	"source": "reward",
-	"desc": "イベント「チョイ悪イメチェン計画」報酬"
+	"desc": "イベント「チョイ悪イメチェン計画」報酬 (1万位/10万位枠)"
+},
+{
+	"id": 310,
+	"name": "Yoshiko",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "設定言うな！",
+	"cn2": "恋になりたいAQUARIUM",
+	"date": "2020/09/07",
+	"source": "reward",
+	"desc": "イベント「チョイ悪イメチェン計画」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 311,
@@ -3023,7 +3023,7 @@ const RawCardList = [
 	"cn2": "恋になりたいAQUARIUM",
 	"date": "2020/09/21",
 	"source": "reward",
-	"desc": "イベント「秋の味覚を召し上がれ！」報酬"
+	"desc": "イベント「秋の味覚を召し上がれ！」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 318,
@@ -3035,7 +3035,7 @@ const RawCardList = [
 	"cn2": "Love U my friends",
 	"date": "2020/09/21",
 	"source": "reward",
-	"desc": "イベント「秋の味覚を召し上がれ！」報酬"
+	"desc": "イベント「秋の味覚を召し上がれ！」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 319,
@@ -3084,6 +3084,102 @@ const RawCardList = [
 	"date": "2020/09/30",
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 323,
+	"name": "Shizuku",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "「月の世界」へとご案内",
+	"cn2": "十五夜の月うさぎ",
+	"date": "2020/10/04",
+	"source": "gacha",
+	"desc": "「月のウサギと女神様ガチャ(前編)」で追加"
+},
+{
+	"id": 324,
+	"name": "Nico",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "伝説のスクールアイドル伝説",
+	"cn2": "ユメノトビラ",
+	"date": "2020/10/04",
+	"source": "gacha",
+	"desc": "「月のウサギと女神様ガチャ(前編)」で追加"
+},
+{
+	"id": 325,
+	"name": "Riko",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "きれい……",
+	"cn2": "十五夜の月うさぎ",
+	"date": "2020/10/07",
+	"source": "gacha",
+	"desc": "「月のウサギと女神様ガチャ(後編)」で追加"
+},
+{
+	"id": 326,
+	"name": "Rin",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Gd",
+	"cn1": "なんだか最近、とっても眠くって",
+	"cn2": "十五夜の月うさぎ",
+	"date": "2020/10/07",
+	"source": "reward",
+	"desc": "イベント「月のウサギと女神様」報酬"
+},
+{
+	"id": 327,
+	"name": "Kanan",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "おしょうゆをつけて、っと",
+	"cn2": "未体験HORIZON",
+	"date": "2020/10/07",
+	"source": "reward",
+	"desc": "イベント「月のウサギと女神様」報酬 (3000位/7万位枠)"
+},
+{
+	"id": 328,
+	"name": "Emma",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "お願いだから力をかして！",
+	"cn2": "哀温ノ詩",
+	"date": "2020/10/07",
+	"source": "reward",
+	"desc": "イベント「月のウサギと女神様」報酬 (1万位/10万位枠)"
+},
+{
+	"id": 329,
+	"name": "Ruby",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "どこを探しても無かったグッズ！",
+	"cn2": "ゆめいっぱい☆ルビィランド",
+	"date": "2020/10/12",
+	"source": "none",
+	"desc": "「メンバーピックアップガチャ」で追加"
+},
+{
+	"id": 330,
+	"name": "Eli",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "んぐっ！？",
+	"cn2": "ユメノトビラ",
+	"date": "2020/10/12",
+	"source": "none",
+	"desc": "「メンバーピックアップガチャ」で追加"
 }
 ];
-const LatestUpdate = "2020/09/30 「スクスタフェス」まで";
+const LatestUpdate = "2020/10/12 「メンバーピックアップガチャ」まで";
