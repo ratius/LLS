@@ -2255,7 +2255,7 @@ const RawCardList = [
 	"cn2": "Noble Princess",
 	"date": "2020/06/05",
 	"source": "reward",
-	"desc": "イベント「3人のプリンセス」報酬 (1万位/10万位枠)"
+	"desc": "イベント「3人のプリンセス」報酬"
 },
 {
 	"id": 252,
@@ -2279,7 +2279,7 @@ const RawCardList = [
 	"cn2": "Brightest Melody",
 	"date": "2020/06/05",
 	"source": "reward",
-	"desc": "イベント「3人のプリンセス」報酬"
+	"desc": "イベント「3人のプリンセス」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 254,
@@ -3180,6 +3180,79 @@ const RawCardList = [
 	"date": "2020/10/12",
 	"source": "none",
 	"desc": "「メンバーピックアップガチャ」で追加"
+},
+
+{
+	"id": 331,
+	"name": "Mari",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Vo",
+	"cn1": "魔女のシャイ煮～！",
+	"cn2": "マジカル☆ハロウィン",
+	"date": "2020/10/19",
+	"source": "gacha",
+	"desc": "「楽しいハロウィンパーティーガチャ(前編)」で追加"
+},
+{
+	"id": 332,
+	"name": "Kanata",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "辛いよう～！！",
+	"cn2": "Mârchen Star",
+	"date": "2020/10/19",
+	"source": "gacha",
+	"desc": "「楽しいハロウィンパーティーガチャ(前編)」で追加"
+},
+{
+	"id": 333,
+	"name": "Umi",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sk",
+	"cn1": "お見事、正解です",
+	"cn2": "マジカル☆ハロウィン",
+	"date": "2020/10/22",
+	"source": "gacha",
+	"desc": "「楽しいハロウィンパーティーガチャ(後編)」で追加"
+},
+{
+	"id": 334,
+	"name": "Karin",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Sk",
+	"cn1": "私の真似をして座ってちょうだい",
+	"cn2": "マジカル☆ハロウィン",
+	"date": "2020/10/22",
+	"source": "reward",
+	"desc": "イベント「楽しいハロウィンパーティー」報酬"
+},
+{
+	"id": 335,
+	"name": "Kotori",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "頑張って作ったお話",
+	"cn2": "ユメノトビラ",
+	"date": "2020/10/22",
+	"source": "reward",
+	"desc": "イベント「楽しいハロウィンパーティー」報酬 (?位/?位枠)"
+},
+{
+	"id": 336,
+	"name": "Chika",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "そーっと、そーっと……",
+	"cn2": "未体験HORIZON",
+	"date": "2020/10/22",
+	"source": "reward",
+	"desc": "イベント「楽しいハロウィンパーティー」報酬 (?位/?位枠)"
 }
 ];
-const LatestUpdate = "2020/10/12 「メンバーピックアップガチャ」まで";
+const LatestUpdate = "2020/10/19 「楽しいハロウィンパーティー」まで";

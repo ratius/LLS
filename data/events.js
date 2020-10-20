@@ -223,5 +223,14 @@ const EventList = [
 	"ended"   : new Date("2020-10-15T14:59:59+09:00"),
 	"UR" : ["Rin", "Riko", "Shizuku"],
 	"SR" : ["Nico", "Kanan", "Emma"]
-}
+},
+{
+	"id" : 26,
+	"name" : "楽しいハロウィンパーティー",
+	"type" : "story",
+	"started" : new Date("2020-10-22T15:00:00+09:00"),
+	"ended"   : new Date("2020-10-30T14:59:59+09:00"),
+	"UR" : ["Umi", "Mari", "Karin"],
+	"SR" : ["Kotori", "Chika", "Kanata"]
+},
 ];
