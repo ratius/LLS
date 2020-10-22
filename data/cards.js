@@ -3198,8 +3198,8 @@ const RawCardList = [
 	"id": 332,
 	"name": "Kanata",
 	"rare": "SR",
-	"atr": "Pure",
-	"type": "Vo",
+	"atr": "Active",
+	"type": "Gd",
 	"cn1": "辛いよう～！！",
 	"cn2": "Mârchen Star",
 	"date": "2020/10/19",
@@ -3240,7 +3240,7 @@ const RawCardList = [
 	"cn2": "ユメノトビラ",
 	"date": "2020/10/22",
 	"source": "reward",
-	"desc": "イベント「楽しいハロウィンパーティー」報酬 (?位/?位枠)"
+	"desc": "イベント「楽しいハロウィンパーティー」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 336,
@@ -3252,7 +3252,7 @@ const RawCardList = [
 	"cn2": "未体験HORIZON",
 	"date": "2020/10/22",
 	"source": "reward",
-	"desc": "イベント「楽しいハロウィンパーティー」報酬 (?位/?位枠)"
+	"desc": "イベント「楽しいハロウィンパーティー」報酬 (1万位/10万位枠)"
 }
 ];
 const LatestUpdate = "2020/10/19 「楽しいハロウィンパーティー」まで";
