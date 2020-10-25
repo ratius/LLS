@@ -3253,6 +3253,54 @@ const RawCardList = [
 	"date": "2020/10/22",
 	"source": "reward",
 	"desc": "イベント「楽しいハロウィンパーティー」報酬 (1万位/10万位枠)"
+},
+{
+	"id": 337,
+	"name": "Nozomi",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "ウチのこと見てくれないの？",
+	"cn2": "運命の導き手",
+	"date": "2020/10/26",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 338,
+	"name": "Rina",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "今日、楽しかったから……",
+	"cn2": "ココロ・サイエンス",
+	"date": "2020/10/26",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 339,
+	"name": "You",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "どうかな？　このメガネ！",
+	"cn2": "未体験HORIZON",
+	"date": "2020/10/26",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 340,
+	"name": "Ayumu",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Gd",
+	"cn1": "おすそ分けを持ってきたんだ！",
+	"cn2": "Say Good-Bye 涙",
+	"date": "2020/10/26",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
 }
 ];
-const LatestUpdate = "2020/10/19 「楽しいハロウィンパーティー」まで";
+const LatestUpdate = "2020/10/26 「スクスタフェス」まで";
