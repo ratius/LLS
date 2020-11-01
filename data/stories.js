@@ -1355,73 +1355,80 @@ const StoryList = [
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / 2nd season / 第20章「◆*◆」",
-	"title": "第1話",
-	"desc": "",
-	"character": []
+	"chapter": "メインストーリー / 2nd season / 第20章「スクールアイドル同好会VSスクールアイドル部！？」",
+	"title": "第1話 前半 ただいま、みんな！",
+	"desc": "充実（？）した合宿を終え、日々の練習に励みつつもあなたのいない毎日に寂しさが募ってくるメンバー。ついに、あなたが帰ってくる！！　さっそく学園に向かったあなたが見たステージとは……！？",
+	"character": ["Player", "Karin", "Ai", "Shioriko", "Ranju"]
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / 2nd season / 第20章「◆*◆」",
-	"title": "第2話",
-	"desc": "",
-	"character": []
+	"chapter": "メインストーリー / 2nd season / 第20章「スクールアイドル同好会VSスクールアイドル部！？」",
+	"title": "第1話 後半 パニック！？",
+	"desc": "講堂で行われていたパフォーマンスに圧倒されたあなた。そしてそのステージにはあなたの見たことのない子が立っている。あの子は一体誰なのか……？",
+	"character": ["Player", "Kasumi", "Ranju", "Mia"]
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / 2nd season / 第20章「◆*◆」",
-	"title": "第3話",
-	"desc": "",
-	"character": []
+	"chapter": "メインストーリー / 2nd season / 第20章「スクールアイドル同好会VSスクールアイドル部！？」",
+	"title": "第2話 上陸！　超級タイフーン！",
+	"desc": "講堂でライブをしていたのは、スクールアイドル部！？　あなたのいない間になんだか大変なことが起こっているみたい。「これは戦争ですよ！」と憤るかすみに連れられて行った先で聞いた衝撃的な事実とは……？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / 2nd season / 第20章「◆*◆」",
-	"title": "第4話",
-	"desc": "",
-	"character": []
+	"chapter": "メインストーリー / 2nd season / 第20章「スクールアイドル同好会VSスクールアイドル部！？」",
+	"title": "第3話 交わらない想い",
+	"desc": "香港からやってきて、あっという間にスクールアイドル部を立ち上げたというランジュは、なんと理事長の娘。その地位をいいことに、同好会にスクールアイドル活動禁止令を出したのだという。そして、藍綬からの勧誘を受け、愛と果林はスクールアイドル部に転部！プロがバックアップするというスクールアイドル部と同好会、どっちがいいの！？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / 2nd season / 第20章「◆*◆」",
-	"title": "第5話",
-	"desc": "",
-	"character": []
+	"chapter": "メインストーリー / 2nd season / 第20章「スクールアイドル同好会VSスクールアイドル部！？」",
+	"title": "第4話 ショウ・タイム",
+	"desc": "どうせ活動できないなら、と部に転部した愛と果林と、たとえ活動できなくても同好会にいたいメンバーの間の話し合いは平行線。あなたはランジュに話し合いを申し込みに行く……",
+	"character": ["Player", "Karin", "Ai", "Ranju", "Mia"]
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / 2nd season / 第20章「◆*◆」",
-	"title": "第6話",
-	"desc": "",
-	"character": []
+	"chapter": "メインストーリー / 2nd season / 第20章「スクールアイドル同好会VSスクールアイドル部！？」",
+	"title": "第5話 足枷にはなりたくない",
+	"desc": "ランジュに話し合いを申し込みに行ったあなた。ランジュの作ったというスクールアイドル部の設備のすごさに驚かされっぱなし。すごいのは設備だけではなく、世界中でもヒットソングを連発しているミアをも連れてきていた。圧倒的な差を見せつけられ、同好会のみんなのためには、果たしてどちらの環境がいいのか、わからなくなってきたあなたは……？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / 2nd season / 第20章「◆*◆」",
-	"title": "第7話",
-	"desc": "",
-	"character": []
+	"chapter": "メインストーリー / 2nd season / 第20章「スクールアイドル同好会VSスクールアイドル部！？」",
+	"title": "第6話 楽に呼吸ができる場所",
+	"desc": "栞子から、ランジュがそう悪い人間ではないと聞き、ますます思い悩むあなた。同好会のみんなのために本当にいいことってなんだろう？　思い悩む日々だが、μ's、Aqoursの面々に会い、久しぶりに笑顔が戻る",
+	"character": ["Player", "Honoka", "Kotori", "Umi", "Chika", "You", "Ayumu", "Kasumi"]
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / 2nd season / 第20章「◆*◆」",
-	"title": "第8話",
-	"desc": "",
-	"character": []
+	"chapter": "メインストーリー / 2nd season / 第20章「スクールアイドル同好会VSスクールアイドル部！？」",
+	"title": "第7話 μ'sと一緒！",
+	"desc": "ニジガクでは活動を禁止されていることを話したら、「うちにきて練習すればいいんだよ！」と音ノ木坂に誘ってくれた穂乃果。その言葉に甘えて、久しぶりに思いっきり練習しできるニジガクメンバーは、打倒・スクールアイドル部を誓う！？",
+	"character": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Ayumu", "Kasumi", "Shizuku", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / 2nd season / 第20章「◆*◆」",
-	"title": "第9話",
-	"desc": "",
-	"character": []
+	"chapter": "メインストーリー / 2nd season / 第20章「スクールアイドル同好会VSスクールアイドル部！？」",
+	"title": "第8話 ひみつの作戦会議！",
+	"desc": "打倒・スクールアイドル部のため、ゲリラライブを敢行することにした同好会メンバー。しかし、ゲリラライブといっても人が来てくれないことには始まらない。監視委員会の目を盗んで人を集める方法とは……！？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / 2nd season / 第20章「◆*◆」",
-	"title": "第10話",
-	"desc": "",
-	"character": []
+	"chapter": "メインストーリー / 2nd season / 第20章「スクールアイドル同好会VSスクールアイドル部！？」",
+	"title": "第9話 GO！　GO！　ゲリラライブ",
+	"desc": "ゲリラライブが行われるらしいという噂を密かに広めることに成功した同好会メンバー。これで、ついにライブができる！！　見てもらえさえすれば、同好会のパフォーマンスを好きになってもらえるはず！！　待ちに待ったライブに胸の高鳴りが止まない！！",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Kanata", "Setsuna", "Emma", "Rina", "Ranju"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第20章「スクールアイドル同好会VSスクールアイドル部！？」",
+	"title": "第10話 しずくの決意",
+	"desc": "みんなで力を合わせて開催したゲリラライブ。しかしスクールアイドル部が緊急ライブをぶつけてきたことで、ほとんどのお客さんが向こうに行ってしまった。でも、残ってくれた人を大事に！もっともっと頑張ろう！！　そう決意したはずだが……？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "event",
@@ -2218,7 +2225,7 @@ const StoryList = [
 	"chapter": "イベントエピソード「3人のプリンセス」",
 	"title": "第1話",
 	"desc": "梨子・果林と一緒に、3人でライブををすることになった穂乃果。穂乃果は、次のステージで何か面白いことができないかと考える。",
-	"character": ["Honoka", "Maki", "Riko", "Kanin"]
+	"character": ["Honoka", "Maki", "Riko", "Karin"]
 },
 {
 	"type": "event",
@@ -2707,55 +2714,6 @@ const StoryList = [
 	"character": ["Kotori", "Umi", "Chika", "Mari", "Karin", "Kanata"]
 },
 {
-	"type": "event",
-	"chapter": "イベントエピソード「★**★」",
-	"title": "第1話",
-	"desc": "",
-	"character": []
-},
-{
-	"type": "event",
-	"chapter": "イベントエピソード「★**★」",
-	"title": "第2話",
-	"desc": "",
-	"character": []
-},
-{
-	"type": "event",
-	"chapter": "イベントエピソード「★**★」",
-	"title": "第3話",
-	"desc": "",
-	"character": []
-},
-{
-	"type": "event",
-	"chapter": "イベントエピソード「★**★」",
-	"title": "第4話",
-	"desc": "",
-	"character": []
-},
-{
-	"type": "event",
-	"chapter": "イベントエピソード「★**★」",
-	"title": "第5話",
-	"desc": "",
-	"character": []
-},
-{
-	"type": "event",
-	"chapter": "イベントエピソード「★**★」",
-	"title": "第6話",
-	"desc": "",
-	"character": []
-},
-{
-	"type": "event",
-	"chapter": "イベントエピソード「★**★」",
-	"title": "第7話",
-	"desc": "",
-	"character": []
-},
-{
 	"type": "kizuna",
 	"color": "Honoka",
 	"chapter": "キズナエピソード 高坂穂乃果",
@@ -2855,6 +2813,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Honoka",
+	"chapter": "キズナエピソード 高坂穂乃果 / ソロライブ編",
+	"title": "13話 不安の種",
+	"desc": "あなたが魅力をどんどん見つけてくれることに安心した穂乃果。ソロライブの勉強のため、他のライブを見に行くことにした二人だったが……。",
+	"character": ["Player", "Honoka"]
+},
+{
+	"type": "kizuna",
 	"color": "Eli",
 	"chapter": "キズナエピソード 絢瀬絵里",
 	"title": "1話 ",
@@ -2946,6 +2912,22 @@ const StoryList = [
 	"color": "Eli",
 	"chapter": "キズナエピソード 絢瀬絵里 / ソロライブ編",
 	"title": "12話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里",
+	"title": "13話 音ノ木坂退学事件！",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里",
+	"title": "14話 ",
 	"desc": "",
 	"character": []
 },
@@ -3047,6 +3029,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Kotori",
+	"chapter": "キズナエピソード 南ことり",
+	"title": "13話 夢との狭間で",
+	"desc": "ソロライブをあなたのおかげで終えることができたと感謝することりだが、拾はあなたに相談したいことがあって……と胸のうちを明かす。",
+	"character": ["Player", "Kotori"]
+},
+{
+	"type": "kizuna",
 	"color": "Umi",
 	"chapter": "キズナエピソード 園田海未",
 	"title": "1話 ",
@@ -3138,6 +3128,22 @@ const StoryList = [
 	"color": "Umi",
 	"chapter": "キズナエピソード 園田海未 / ソロライブ編",
 	"title": "12話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未",
+	"title": "13話 師と弟子の出会い",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未",
+	"title": "14話 ",
 	"desc": "",
 	"character": []
 },
@@ -3240,6 +3246,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Rin",
+	"chapter": "キズナエピソード 星空凛 / ソロライブ編",
+	"title": "13話 かわいいを目指して！",
+	"desc": "凛のようにかわいくなりたい、と話す花丸のために、凛が花丸のプロデュースをすることに！　凛とあなたは花丸に誘われ、浦の星女学院へと向かう。",
+	"character": ["Player", "Rin", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby"]
+},
+{
+	"type": "kizuna",
 	"color": "Maki",
 	"chapter": "キズナエピソード 西木野真姫",
 	"title": "1話 ",
@@ -3330,6 +3344,22 @@ const StoryList = [
 	"type": "kizuna",
 	"color": "Maki",
 	"chapter": "キズナエピソード 西木野真姫 / ソロライブ編",
+	"title": "12話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Maki",
+	"chapter": "キズナエピソード 西木野真姫 / ソロライブ編",
+	"title": "13話 友達の証",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Maki",
+	"chapter": "キズナエピソード 西木野真姫",
 	"title": "12話 ",
 	"desc": "",
 	"character": []
@@ -3427,6 +3457,22 @@ const StoryList = [
 	"color": "Nozomi",
 	"chapter": "キズナエピソード 東條希 / ソロライブ編",
 	"title": "12話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希 / ソロライブ編",
+	"title": "13話 優しい歌声",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希",
+	"title": "14話 ",
 	"desc": "",
 	"character": []
 },
@@ -3529,6 +3575,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Hanayo",
+	"chapter": "キズナエピソード 小泉花陽 / ソロライブ編",
+	"title": "13話 ネクストスクールアイドルフェア！",
+	"desc": "スクールアイドルに興味がある小中学生にアドバイスをしてほしい、と依頼を受けた花陽。未来のスクールアイドルのためにも頑張らなくては、と意気込む花陽だが……",
+	"character": ["Player", "Hanayo", "Kanata"]
+},
+{
+	"type": "kizuna",
 	"color": "Nico",
 	"chapter": "キズナエピソード 矢澤にこ",
 	"title": "1話 ",
@@ -3620,6 +3674,22 @@ const StoryList = [
 	"color": "Nico",
 	"chapter": "キズナエピソード 矢澤にこ / ソロライブ編",
 	"title": "12話 ",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ / ソロライブ編",
+	"title": "13話 宣戦布告！",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ / ソロライブ編",
+	"title": "14話 ",
 	"desc": "",
 	"character": []
 },
@@ -4919,361 +4989,347 @@ const StoryList = [
 	"desc": "",
 	"character": []
 },
+
 {
 	"type": "kizuna",
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく",
-	"title": "1話 ",
-	"desc": "",
-	"character": []
-},
-{
-	"type": "kizuna",
-	"color": "Shizuku",
-	"chapter": "キズナエピソード 桜坂しずく",
-	"title": "2話 ",
-	"desc": "",
-	"character": []
+	"title": "1話 物語の魅力",
+	"desc": "部活の休憩中、しずくと話をするあなた。演劇部と兼部のしずくは、いつ舞台の練習が入ってもいいように演劇の練習も毎日欠かさず行うらしく……。",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata"]
 },
 {
 	"type": "kizuna",
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく",
-	"title": "3話 ",
-	"desc": "",
-	"character": []
+	"title": "2話 空想炸裂",
+	"desc": "演劇が大好きなしずくは、自身で劇の設定を作ることも大好きらしい。その能力は幼少期から既に発揮されていたようで……。",
+	"character": ["Player", "Shizuku", "Ai"]
 },
 {
 	"type": "kizuna",
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく",
-	"title": "4話 ",
-	"desc": "",
-	"character": []
+	"title": "3話 羞恥を捨てるべし！",
+	"desc": "ある日、あなたはしずくに劇の練習相手になってほしいと頼まれる。どうやら、役のセリフの中に上手く言えないものがあるようで……。",
+	"character": ["Player", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく",
-	"title": "5話 ",
-	"desc": "",
-	"character": []
+	"title": "4話 球技大会に向けて",
+	"desc": "探し物をしに部室を訪れたあなたは、中で奇怪な動きをしているしずくと遭遇する。一体彼女の身に何が起こったのか！？",
+	"character": ["Player", "Shizuku"]
+},
+{
+	"type": "kizuna",
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく",
+	"title": "5話 苦手克服？",
+	"desc": "しずくのために、同好会メンバーでしずくのバレーの練習相手になることに。しずくは苦手な球技を克服することが出来るのだろうか？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "kizuna",
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく / 「オードリー」編",
-	"title": "6話 ",
-	"desc": "",
-	"character": []
+	"title": "6話 本当の私",
+	"desc": "ソロイベントに向けての応援メッセージが少ないことに悩むしずく。完璧なスクールアイドルとなるためにもっともっと頑張らないとと決意をしたけど、本当の打開策はそこじゃなくて……。",
+	"character": ["Player", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく / 「オードリー」編",
-	"title": "7話 ",
-	"desc": "",
-	"character": []
+	"title": "7話 私らしさってどういうこと？",
+	"desc": "ソロイベントを終えたしずくは、あなたからイベントの感想を聞く。感想を聞いてホッとするしずくだったが、ある違和感が晴れず……。",
+	"character": ["Player", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく / 「オードリー」編",
-	"title": "8話 ",
-	"desc": "",
-	"character": []
+	"title": "8話 Aqoursに会いに沼津へ",
+	"desc": "『私らしいスクールアイドルとは何！？』そんな疑念に答えを得るために、しずくは沼津へと足を運び、Aqoursのみんなにある問いを投げかける。",
+	"character": ["Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく / 「オードリー」編",
-	"title": "9話 ",
-	"desc": "",
-	"character": []
+	"title": "9話 鳥を演じるには！？",
+	"desc": "Aqoursのみんなから話を聞いたしずくは、更なる答えを求め穂乃果の元へ向かう。そこでμ'sのみんなが繰り広げるやり取りは、しずくにとって新鮮なものだった……。",
+	"character": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Hanayo", "Nico", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく / 「オードリー」編",
-	"title": "10話 ",
-	"desc": "",
-	"character": []
+	"title": "10話 みんなになりきれ！",
+	"desc": "μ'sやAqoursから色々なことを学び、吸収することができたしずく。方向性はつかめたものの、まだ『これだ！』というのが思い浮かばず……。",
+	"memo": "声真似回。しずくがかすみと愛の真似をする。",
+	"character": ["Player", "Kasumi", "Shizuku", "Karin", "Ai"]
 },
 {
 	"type": "kizuna",
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく / 「オードリー」編",
-	"title": "11話 ",
-	"desc": "",
-	"character": []
+	"title": "11話 確かな光",
+	"desc": "虹ヶ咲学園のみんなを演じることで、自分らしいスクールアイドルを目指すしずく。そうやって考えぬかれた、しずくの目指すスクールアイドル像があなたに伝えられる！",
+	"character": ["Player", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく / 「オードリー」編",
-	"title": "12話 ",
-	"desc": "",
+	"title": "12話 掴み取った答え",
+	"desc": "演じること、なりきること……。そんな答えによって作り上げられたキャラクター！　ソロイベントまで数日と迫ったしずくは、演じ切るために猛特訓を繰り広げる……。",
 	"memo": "このサイドエピソードを読むことで、ライブ楽曲「オードリー」が解禁される。",
-	"character": []
+	"character": ["Player", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく / 「オードリー」編",
-	"title": "13話 ",
-	"desc": "",
-	"character": []
+	"title": "13話 いよいよ、イベント当日",
+	"desc": "一緒に作り上げたキャラクター……それを見事に演じきりイベントを終えたしずく。そんなしずくがあなたの前で見せる姿には、もう以前のような不安はなく……。",
+	"character": ["Player", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく / 「やがてひとつの物語」編",
-	"title": "14話 ",
-	"desc": "",
-	"character": []
+	"title": "14話 抑えきれない想い",
+	"desc": "しずくのソロイベントも無事成功。ある日嬉しそうにニコニコしているしずく。その理由とは……？",
+	"character": ["Player", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく / 「やがてひとつの物語」編",
-	"title": "15話 ",
-	"desc": "",
-	"character": []
+	"title": "15話 それだけで嬉しいよ",
+	"desc": "日頃のお礼を兼ねて、しずくがあなたをエスコートして遊びに連れて行ってくれるという。果たしてどんな1日になるのか……！？",
+	"character": ["Player", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく / 「やがてひとつの物語」編",
-	"title": "16話 ",
-	"desc": "",
-	"character": []
+	"title": "16話 歌劇団に夢中！",
+	"desc": "最近しずくの表現力がさらに上がっていることに気づいたあなた。そのことをしずくに伝えると、しずくが今ハマっていることがきっかけらしい。しずくのハマっていることとは……？",
+	"character": ["Player", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく / 「やがてひとつの物語」編",
-	"title": "17話 ",
-	"desc": "",
-	"character": []
+	"title": "17話 私ならでは",
+	"desc": "しずくが大好きな歌劇団のファンクラブのように、しずくを応援してくれるみんなのためにファンクラブを作ることに。ファンクラブではいつも応援してくれる人に対して、しずくならではのお返しをしたいというが……？",
+	"character": ["Player", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく / 「やがてひとつの物語」編",
-	"title": "18話 ",
-	"desc": "",
-	"character": []
+	"title": "18話 みんなと共有したいこと",
+	"desc": "ファンクラブで何をすべきか悩んでいたしずくだったが、しずく自身がファンクラブで何をしたら楽しいか、というところから考え始めることに。",
+	"character": ["Player", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく / 「やがてひとつの物語」編",
-	"title": "19話 ",
-	"desc": "",
-	"character": []
+	"title": "19話 人生は舞台",
+	"desc": "ファンクラブのみんなに対するしずくならではのお返しとして、朗読と歌を融合させたパフォーマンスを考えることに。パフォーマンスを通して、どんな物語をみんなに伝えるのか……？",
+	"character": ["Player", "Kasumi", "Shizuku", "Rina"]
 },
 {
 	"type": "kizuna",
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく / 「やがてひとつの物語」編",
-	"title": "20話 ",
-	"desc": "",
-	"character": []
+	"title": "20話 starting",
+	"desc": "しずくがみんなに聞いてほしい物語、それは「すべての始まりの物語」。それとはしずくからあなたへの気持ちが中心となった物語だという。そして今、あなたに聞いてほしい物語が完成した。",
+	"character": ["Player", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく / 「やがてひとつの物語」編",
-	"title": "21話 ",
-	"desc": "",
+	"title": "21話 そして幕が上がる",
+	"desc": "しずくの大切な「始まりのとき」を追体験できるような朗読劇が完成した。ファンクラブのイベント当日、今幕が上がる。",
 	"memo": "このサイドエピソードを読むことで、ライブ楽曲「やがてひとつの物語」が解禁される。",
-	"character": []
-},
-{
-	"type": "kizuna",
-	"color": "Shizuku",
-	"chapter": "キズナエピソード 桜坂しずく",
-	"title": "22話 ",
-	"desc": "",
-	"character": []
+	"character": ["Player", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林",
-	"title": "1話 ",
-	"desc": "",
-	"character": []
+	"title": "1話 果林のお仕事",
+	"desc": "いつも努力を怠らず、ストイックな果林。ある日、部室に戻ったあなたは、居残りしている果林を見つける。",
+	"character": ["Player", "Karin", "Setsuna"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林",
-	"title": "2話 ",
-	"desc": "",
-	"character": []
+	"title": "2話 果林の日常",
+	"desc": "果林があなたを探していた、と声をかけてきた。その目的は、デートのお誘い……！？",
+	"character": ["Player", "Karin"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林",
-	"title": "3話 ",
-	"desc": "",
-	"character": []
+	"title": "3話 前を向いて上を目指して",
+	"desc": "毎日のように、放課後居残り練習をしている果林を心配するあなただったが、果林の思いを聞いて……。",
+	"character": ["Player", "Kasumi", " Karin", "Kanata"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林",
-	"title": "4話 ",
-	"desc": "",
-	"character": []
+	"title": "4話 誰にも負けないもの",
+	"desc": "スクールアイドルを初めて、毎日が充実しているという果林に、一層サポートを頑張ろうと思うあなた。ある日、果林からパフォーマンスについて相談がしたいことがあると言われ……。",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林",
-	"title": "5話 ",
-	"desc": "",
-	"character": []
+	"title": "5話 たまにはこんな休日もね♪",
+	"desc": "自分の良さを活かすためにはどうすればいいか悩んでいた果林だが、同好会メンバーから意見を聞き一歩踏み出した。ただ練習を続けるうちに、少し行き詰まってしまったようで……。",
+	"character": ["Player", "Karin"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林 / 「Wish」編",
-	"title": "6話 ",
-	"desc": "",
-	"character": []
+	"title": "6話 素顔の私",
+	"desc": "SNSのフォロワー数が伸び悩んでいる果林、このままではソロイベントにも影響が出そう。そんな果林のフォロワー数アップ作戦とは？",
+	"character": ["Player", "Karin"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林 / 「Wish」編",
-	"title": "7話 ",
-	"desc": "",
-	"character": []
+	"title": "7話 みんなの個性",
+	"desc": "ソロイベントも終わり、とある日の部室。じーっと果林を見つめてくるかすみ。そんなかすみが果林に尋ねた内容とは……？",
+	"character": ["Player", "Kasumi", "Karin"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林 / 「Wish」編",
-	"title": "8話 ",
-	"desc": "",
-	"character": []
+	"title": "8話 果林の秘密練習",
+	"desc": "かすみとの会話をきっかけに自分自身の個性について考える果林。そんな中、セクシーなパフォーマンスをしてみたいという同好会メンバーの練習を果林が見てあげることに。",
+	"character": ["Player", "Shizuku", "Karin", "Setsuna", "Emma"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林 / 「Wish」編",
-	"title": "9話 ",
-	"desc": "",
-	"character": []
+	"title": "9話 メニューが決められない！",
+	"desc": "果林ならほかのスクールアイドルよりももっとセクシーに踊れるよ、と伝えるあなただったが、果林は浮かない表情。その日の部活終わりに同好会メンバーでファミレスに来たが、やはり果林の様子がおかしい……？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林 / 「Wish」編",
-	"title": "10話 ",
-	"desc": "",
-	"character": []
+	"title": "10話 ライブ準備は順調！？",
+	"desc": "果林の様子に違和感が拭えないあなたは、練習中の果林に声をかける。",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林 / 「Wish」編",
-	"title": "11話 ",
-	"desc": "",
-	"character": []
+	"title": "11話 私のイメージ、キミのイメージ",
+	"desc": "心配して果林に声をかけるも、これからもずっと見ていてと言いはぐらかされてしまうあなた。そんな中始まった次のライブの準備。どんなパフォーマンスにしよう……？",
+	"character": ["Player", "Karin"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林 / 「Wish」編",
-	"title": "12話 ",
-	"desc": "",
+	"title": "12話 キミにはお見通し",
+	"desc": "これまでの果林のイメージとは違う曲のデモを作ってきたあなた。果林も興味を持ち、その曲を次回のライブで披露することに。ライブ前日、果林はずっと気になっていたことをあなたに尋ねる……。",
 	"memo": "このサイドエピソードを読むことで、ライブ楽曲「Wish」が解禁される。",
-	"character": []
+	"character": ["Player", "Karin"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林 / 「Wish」編",
-	"title": "13話 ",
-	"desc": "",
-	"character": []
+	"title": "13話 甘えさせてね♡",
+	"desc": "周りからの期待に応えようとし続けていた果林のために、あなたが作った曲は「もっと甘えてもいいんだよ、素直になってもいいんだよ」というメッセージソングだった。そんないつもと違うテイストの曲をライブで披露した果林は……？",
+	"character": ["Player", "Karin"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林 / 「Fire Bird」編",
-	"title": "14話 ",
-	"desc": "",
-	"character": []
+	"title": "14話 マップスキッパー・果林！",
+	"desc": "ライブも無事に終了したある日、街中で果林を見かけて声をかけるあなた。果林はどこに行こうとしているのか……？",
+	"character": ["Player", "Karin"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林 / 「Fire Bird」編",
-	"title": "15話 ",
-	"desc": "",
-	"character": []
+	"title": "15話 いざ、パンダ！",
+	"desc": "果林と動物園デートをすることになったあなた。動物園のお目当ては……パンダ！！",
+	"character": ["Player", "Karin"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林 / 「Fire Bird」編",
-	"title": "16話 ",
-	"desc": "",
-	"character": []
+	"title": "16話 ファンクラブ？",
+	"desc": "スクールアイドルに対しても、読者モデルに対してもストイックな果林。そんな果林に、果林のファンクラブを作らないか、と持ち掛けたあなただったが……？",
+	"character": ["Player", "Karin"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林 / 「Fire Bird」編",
-	"title": "17話 ",
-	"desc": "",
-	"character": []
+	"title": "17話 苦い思い出",
+	"desc": "果林はファンクラブに対して苦手意識があるらしい。以前、読者モデルとしてファンクラブをやった時に熱くなりすぎたという。一体どういう意味なのか……？",
+	"character": ["Player", "Karin"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林 / 「Fire Bird」編",
-	"title": "18話 ",
-	"desc": "",
-	"character": []
+	"title": "18話 面白いじゃない",
+	"desc": "以前、周囲の読者モデルたちと果林との温度差の違いで、ファンクラブが上手くいかなかった経験があるのだという果林。その経験から果林は「ほどほど」でいたいと言うが……？",
+	"character": ["Player", "Karin"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林 / 「Fire Bird」編",
-	"title": "19話 ",
-	"desc": "",
-	"character": []
+	"title": "19話 心の向くまま、熱く、激しく",
+	"desc": "あなたから見た果林の姿を伝え、果林と一緒にファンクラブを作って、スクールアイドルとして上を目指すことを約束したあなた。あなたの気持ちに応え、果林が本気を出す……！？",
+	"character": ["Player", "Karin"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林 / 「Fire Bird」編",
-	"title": "20話 ",
-	"desc": "",
+	"title": "20話 全部受け止めて",
+	"desc": "ファンクラブのイベントで、果林が持つ全力の熱量を表に出した新曲を披露することに。難易度の高い曲だが、本気の果林は全力で挑む……！",
 	"memo": "このサイドエピソードを読むことで、ライブ楽曲「Fire Bird」が解禁される。",
-	"character": []
+	"character": ["Player", "Karin"]
 },
 {
 	"type": "kizuna",
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林 / 「Fire Bird」編",
-	"title": "21話 ",
-	"desc": "",
-	"character": []
-},
-{
-	"type": "kizuna",
-	"color": "Karin",
-	"chapter": "キズナエピソード 朝香果林",
-	"title": "22話 ",
-	"desc": "",
-	"character": []
+	"title": "21話 高めあう仲間",
+	"desc": "会場は超満員。大歓声のもとファンクラブイベントは終了した。後日、イベントに来てくれたみんなからたくさんのメールが果林に届く。そのメールをチェックしていると……？",
+	"character": ["Player", "Karin"]
 },
 {
 	"type": "kizuna",
@@ -5459,171 +5515,171 @@ const StoryList = [
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方",
-	"title": "1話 ",
-	"desc": "",
-	"character": []
+	"title": "1話 眠り姫・彼方",
+	"desc": "いつものように部活を始めようとする同好会メンバー。しかし、彼方が見当たらない。仕方なくあなたが探しに行くと、彼方は保健室で眠っていた……。",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方",
-	"title": "2話 ",
-	"desc": "",
-	"character": []
+	"title": "2話 彼方の事情",
+	"desc": "部活に送れないよう彼方に釘を刺すため、彼方のクラスを訪ねたあなた。しかし、彼方は見当たらない。どこに行ってしまったのだろう？",
+	"character": ["Player", "Kanata"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方",
-	"title": "3話 ",
-	"desc": "",
-	"character": []
+	"title": "3話 妹大好き",
+	"desc": "部活中、作詞に勤しむあなたの元に彼方がやって来る。妹の遥が大好きな彼方は、あなたに妹への愛を語り出す。",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方",
-	"title": "4話 ",
-	"desc": "",
-	"character": []
+	"title": "4話 意外な特技",
+	"desc": "お昼休み、学食で彼方に話しかけられたあなた。お弁当を作り過ぎたから、あなたに食べてほしいのだという。",
+	"character": ["Player", "Kanata"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方",
-	"title": "5話 ",
-	"desc": "",
-	"character": []
+	"title": "5話 頑張るお姉さん",
+	"desc": "部活が終わって熟睡してしまった彼方。全く起きる気配は無く、同好会メンバーは心配する。あなたは、以前彼方が話してくれた『眠い理由』を思い出し……。",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方 / 「My Own Fairy-Tale」編",
-	"title": "6話 ",
-	"desc": "",
-	"character": []
+	"title": "6話 彼方のお願い",
+	"desc": "ソロイベントでは、自分のお願いをみんなにきいてもらいたいとワクワクしている彼方。彼方の考えるお願いとは……？",
+	"character": ["Player", "Kanata"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方 / 「My Own Fairy-Tale」編",
-	"title": "7話 ",
-	"desc": "",
-	"character": []
+	"title": "7話 夢じゃないよね？",
+	"desc": "ソロイベントを無事に終え、夢見心地な彼方。もっとみんなに喜んでもらえるにはどうすればいいのか悩む彼方を見たあなたは……。",
+	"character": ["Player", "Kanata"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方 / 「My Own Fairy-Tale」編",
-	"title": "8話 ",
-	"desc": "",
-	"character": []
+	"title": "8話 青天の霹靂！",
+	"desc": "天気が良いため、中庭でランチをしようとしていた歩夢とあなた。そこに尋常でない様子の彼方が飛び込んでくる。何があったのか訳を聞くと……？",
+	"character": ["Player", "Ayumu", "Kanata"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方 / 「My Own Fairy-Tale」編",
-	"title": "9話 ",
-	"desc": "",
-	"character": []
+	"title": "9話 不安な夜",
+	"desc": "遥に嫌われてしまったと落ち込む彼方。遥のことで眠れない夜が続く彼方。部室で熟睡してしまった彼方のために、一人で残ったあなたは、帰り道、彼方に遥のことを聞く。",
+	"character": ["Player", "Kasumi", "Shizuku", "Kanata", "Setsuna", "Rina"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方 / 「My Own Fairy-Tale」編",
-	"title": "10話 ",
-	"desc": "",
-	"character": []
+	"title": "10話 彼方の想い、遥の想い",
+	"desc": "遥に理由を聞いてきたあなた。屋上へと呼び出し、彼方に真実を伝えることに……。",
+	"character": ["Player", "Kanata"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方 / 「My Own Fairy-Tale」編",
-	"title": "11話 ",
-	"desc": "",
-	"character": []
+	"title": "11話 もっともっと！全力で！",
+	"desc": "連日練習後に居残りをする彼方。遥の気持ちを知り、やる気に満ちあふれている。そんな中、彼方はある決意をする。",
+	"character": ["Player", "Ayumu", "Karin", "Kanata", "Setsuna"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方 / 「My Own Fairy-Tale」編",
-	"title": "12話 ",
-	"desc": "",
+	"title": "12話 全部受け止めて！",
+	"desc": "ライブ前日、やっと曲が完成した彼方。かなたのたくさんの想いを込めた曲。みんなが喜んでくれるか少し不安だが、あなたの後押しで自信をつける。",
 	"memo": "このサイドエピソードを読むことで、ライブ楽曲「My Own Fairy-Tale」が解禁される。",
-	"character": []
+	"character": ["Player", "Kanata"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方 / 「My Own Fairy-Tale」編",
-	"title": "13話 ",
-	"desc": "",
-	"character": []
+	"title": "13話 雨降って地めっちゃ固まる",
+	"desc": "ライブは大成功！わがままな自分を受け入れてくれたことに安堵する彼方。そんな時、遥からメッセージが届く。",
+	"character": ["Player", "Kanata"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方 / 「Märchen Star」編",
-	"title": "14話 ",
-	"desc": "",
-	"character": []
+	"title": "14話 彼方ちゃん絶好調",
+	"desc": "ソロイベントは大成功、そして無事に彼方と遙も仲直り！　イベント後、彼方からあなたに遊びの誘いの電話がきた。",
+	"character": ["Player", "Kanata", "Haruka"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方 / 「Märchen Star」編",
-	"title": "15話 ",
-	"desc": "",
-	"character": []
+	"title": "15話 レッツ、フィッシング",
+	"desc": "彼方と遥と一緒に魚釣りに行くことになったあなた。場所は内浦、そして千歌と果南も合流！？",
+	"character": ["Player", "Chika", "Kanan", "Kanata", "Haruka"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方 / 「Märchen Star」編",
-	"title": "16話 ",
-	"desc": "",
-	"character": []
+	"title": "16話 ファンクラブ作ってみない？",
+	"desc": "あなたがお昼に部室に行くと、先に彼方がいた。美味しそうな彼方のお弁当はすべて手作り。そのお弁当の中身は……",
+	"character": ["Player", "Kanata"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方 / 「Märchen Star」編",
-	"title": "17話 ",
-	"desc": "",
-	"character": []
+	"title": "17話 彼方ちゃんすやすやクラブ",
+	"desc": "ファンクラブを作ることを面倒くさがっていた彼方。ライブ以外でもみんながワガママを叶えてくれるかもと説得し、無事彼方のファンクラブが結成された！そんな彼方がファンクラブでやりたいこととは……？",
+	"character": ["Player", "Kanata"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方 / 「Märchen Star」編",
-	"title": "18話 ",
-	"desc": "",
-	"character": []
+	"title": "18話 すやすや大成功！",
+	"desc": "彼方がファンクラブでやりたいこと3つのうち一つは、安眠すやすや実況！？果たして、その配信の結果は……？",
+	"character": ["Player", "Kanata"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方 / 「Märchen Star」編",
-	"title": "19話 ",
-	"desc": "",
-	"character": []
+	"title": "19話 夢の国の彼方",
+	"desc": "彼方の生配信は大好評だった。次に行うイベントを考えていたことろ、彼方が突然「ライブを夢の世界でやる」と言い出した！？夢の中でライブとは一体どういうことなのか？",
+	"character": ["Player", "Kanata"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方 / 「Märchen Star」編",
-	"title": "20話 ",
-	"desc": "",
-	"character": []
+	"title": "20話 フワフワ、ホワホワ",
+	"desc": "眠った彼方が見ている夢をイメージして、メルヘンなステージでライブをすることを思いついた彼方。ライブで披露する歌を考え始めた彼方とあなたは……",
+	"character": ["Player", "Kanata"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方 / 「Märchen Star」編",
-	"title": "21話 ",
-	"desc": "",
+	"title": "21話 私のための遊び場",
+	"desc": "彼方の作った歌詞はメルヘンで可愛らしく、彼方らしい歌詞だった。ライブの方向性も決まり、いざファンクラブイベント当日！",
 	"memo": "このサイドエピソードを読むことで、ライブ楽曲「Märchen Star」が解禁される。",
-	"character": []
+	"character": ["Player", "Kanata"]
 },
 {
 	"type": "kizuna",
@@ -6216,7 +6272,24 @@ const StoryList = [
 	"chapter": "キズナエピソード 三船栞子 / 「決意の光」編",
 	"title": "6話 私のうた",
 	"desc": "みんなに釣れられ、生まれて始めてファミレスに入った栞子。曲作りで悩んでいる栞子のため、同好会メンバーはそれぞれアイディアを持ち寄っていた。みんなの意見を受け止めた栞子は……？",
+	"memo": "このサイドエピソードを読むことで、ライブ楽曲「決意の光」が解禁される。",
 	"character": ["Player", "Shioriko"]
+},
+{
+	"type": "kizuna",
+	"color": "Shioriko",
+	"chapter": "キズナエピソード 三船栞子",
+	"title": "7話 頑張り屋さんをお迎えに♪",
+	"desc": "",
+	"character": []
+},
+{
+	"type": "kizuna",
+	"color": "Shioriko",
+	"chapter": "キズナエピソード 三船栞子",
+	"title": "8話 ",
+	"desc": "",
+	"character": []
 },
 {
 	"type": "special",
@@ -6254,9 +6327,9 @@ const StoryList = [
 	"type": "special",
 	"color": "Emma",
 	"chapter": "TVアニメ「ラブライブ！虹ヶ咲学園スクールアイドル同好会」連動ストーリー エマ・ヴェルデ",
-	"title": "",
-	"desc": "",
-	"character": []
+	"title": "お世話好きの秘密",
+	"desc": "一緒に部室の掃除をしていたエマと彼方。かなたは、エマがいつも果林のお世話をしている理由を聞いてみた……。",
+	"character": ["Kanata", "Emma"]
 },
 {
 	"type": "special",
