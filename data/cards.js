@@ -3181,7 +3181,6 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「メンバーピックアップガチャ」で追加"
 },
-
 {
 	"id": 331,
 	"name": "Mari",
@@ -3301,6 +3300,78 @@ const RawCardList = [
 	"date": "2020/10/26",
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 341,
+	"name": "Honoka",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "トップバッター",
+	"cn2": "S.I.Collection",
+	"date": "2020/11/05",
+	"source": "gacha",
+	"desc": "「駆け抜けろランウェイガチャ(前編)」で追加"
+},
+{
+	"id": 342,
+	"name": "Hanamaru",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "ずらあああ……！",
+	"cn2": "未体験HORIZON",
+	"date": "2020/11/05",
+	"source": "gacha",
+	"desc": "「駆け抜けろランウェイガチャ(前編)」で追加"
+},
+{
+	"id": 343,
+	"name": "Ai",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "カメラさん、こっちこっち！",
+	"cn2": "S.I.Collection",
+	"date": "2020/11/08",
+	"source": "gacha",
+	"desc": "「駆け抜けろランウェイガチャ(後編)」で追加"
+},
+{
+	"id": 344,
+	"name": "Dia",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "次は、わたくしですわね",
+	"cn2": "S.I.Collection",
+	"date": "2020/11/08",
+	"source": "reward",
+	"desc": "イベント「駆け抜けろランウェイ」報酬"
+},
+{
+	"id": 345,
+	"name": "Nozomi",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "なんとかなったみたいやね",
+	"cn2": "ユメノトビラ",
+	"date": "2020/11/08",
+	"source": "reward",
+	"desc": "イベント「駆け抜けろランウェイ」報酬 (?位枠)"
+},
+{
+	"id": 346,
+	"name": "Shizuku",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Gd",
+	"cn1": "役者魂が震えたぎります！",
+	"cn2": "やがてひとつの物語",
+	"date": "2020/11/08",
+	"source": "reward",
+	"desc": "イベント「駆け抜けろランウェイ」報酬 (?位枠)"
 }
 ];
-const LatestUpdate = "2020/10/26 「スクスタフェス」まで";
+const LatestUpdate = "2020/11/05 「駆け抜けろランウェイガチャ」まで";

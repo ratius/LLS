@@ -233,4 +233,13 @@ const EventList = [
 	"UR" : ["Umi", "Mari", "Karin"],
 	"SR" : ["Kotori", "Chika", "Kanata"]
 },
+{
+	"id" : 27,
+	"name" : "駆け抜けろランウェイ",
+	"type" : "exchange",
+	"started" : new Date("2020-11-08T15:00:00+09:00"),
+	"ended"   : new Date("2020-11-15T14:59:59+09:00"),
+	"UR" : ["Honoka", "Dia", "Ai"],
+	"SR" : ["Nozomi", "Hanamaru", "Shizuku"]
+}
 ];
