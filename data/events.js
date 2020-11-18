@@ -241,5 +241,14 @@ const EventList = [
 	"ended"   : new Date("2020-11-15T14:59:59+09:00"),
 	"UR" : ["Honoka", "Dia", "Ai"],
 	"SR" : ["Nozomi", "Hanamaru", "Shizuku"]
+},
+{
+	"id" : 28,
+	"name" : "最高の遊園地攻略法！？",
+	"type" : "story",
+	"started" : new Date("2020-11-22T15:00:00+09:00"),
+	"ended"   : new Date("2020-11-30T14:59:59+09:00"),
+	"UR" : ["Maki", "Yoshiko", "Kanata"],
+	"SR" : ["Rin", "Mari", "Kasumi"]
 }
 ];

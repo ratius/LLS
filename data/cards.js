@@ -3359,7 +3359,7 @@ const RawCardList = [
 	"cn2": "ユメノトビラ",
 	"date": "2020/11/08",
 	"source": "reward",
-	"desc": "イベント「駆け抜けろランウェイ」報酬 (?位枠)"
+	"desc": "イベント「駆け抜けろランウェイ」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 346,
@@ -3371,7 +3371,103 @@ const RawCardList = [
 	"cn2": "やがてひとつの物語",
 	"date": "2020/11/08",
 	"source": "reward",
-	"desc": "イベント「駆け抜けろランウェイ」報酬 (?位枠)"
+	"desc": "イベント「駆け抜けろランウェイ」報酬 (1万位/10万位枠)"
+},
+{
+	"id": 347,
+	"name": "Chika",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "やってもやっても終わらない",
+	"cn2": "Afternoon Tea♡",
+	"date": "2020/11/14",
+	"source": "none",
+	"desc": "「メンバーピックアップガチャ」で追加"
+},
+{
+	"id": 348,
+	"name": "Maki",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "当たり前のことでしょ",
+	"cn2": "ユメノトビラ",
+	"date": "2020/11/14",
+	"source": "none",
+	"desc": "「メンバーピックアップガチャ」で追加"
+},
+{
+	"id": 349,
+	"name": "Kanata",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "いっけーーーー！！！",
+	"cn2": "きらきら★ナイトパレード",
+	"date": "2020/11/19",
+	"source": "gacha",
+	"desc": "「最高の遊園地攻略法！？ガチャ(前編)」で追加"
+},
+{
+	"id": 350,
+	"name": "Rin",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "ん～、おいしー！",
+	"cn2": "ユメノトビラ",
+	"date": "2020/11/19",
+	"source": "gacha",
+	"desc": "「最高の遊園地攻略法！？ガチャ(前編)」で追加"
+},
+{
+	"id": 351,
+	"name": "Yoshiko",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "すごい、すごいわ！",
+	"cn2": "きらきら★ナイトパレード",
+	"date": "2020/11/22",
+	"source": "gacha",
+	"desc": "「最高の遊園地攻略法！？ガチャ(後編)」で追加"
+},
+{
+	"id": 352,
+	"name": "Maki",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sk",
+	"cn1": "キラキラしてる……！",
+	"cn2": "きらきら★ナイトパレード",
+	"date": "2020/11/22",
+	"source": "reward",
+	"desc": "イベント「最高の遊園地攻略法！？」報酬"
+},
+{
+	"id": 353,
+	"name": "Mari",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Gd",
+	"cn1": "まだまだ行くわよ～",
+	"cn2": "未体験HORIZON",
+	"date": "2020/11/22",
+	"source": "reward",
+	"desc": "イベント「最高の遊園地攻略法！？」報酬 (?位枠)"
+},
+{
+	"id": 354,
+	"name": "Kasumi",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "どうですか、似合いますか？",
+	"cn2": "Margaret",
+	"date": "2020/11/22",
+	"source": "reward",
+	"desc": "イベント「最高の遊園地攻略法！？」報酬 (?位枠)"
 }
 ];
-const LatestUpdate = "2020/11/05 「駆け抜けろランウェイガチャ」まで";
+const LatestUpdate = "2020/11/20 「最高の遊園地攻略法」まで";
