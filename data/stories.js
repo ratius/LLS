@@ -1434,6 +1434,76 @@ const StoryList = [
 	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第21章「悩めるしずくのイノセント」",
+	"title": "第1話 それぞれの夜",
+	"desc": "スクールアイドル部のやり方を見て、同好会のゲリラライブを見て……思うところがあり、スクールアイドル部に移籍を決めたしずく。しかし、かすみと喧嘩別れをしてしまったことを後悔していた。一方、歩夢とあなたは……？",
+	"character": ["Player", "Ayumu", "Shizuku", "Ai"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第21章「悩めるしずくのイノセント」",
+	"title": "第2話 行っちゃいや！",
+	"desc": "しずくがスクールアイドル部への移籍を表明した翌日。どうしてもなっ日がいかないかすみは、なにかとしずくに対抗する。しずくもついアツくなってしまい、それを見ている璃奈は大慌てで！？",
+	"character": ["Player", "Kasumi", "Shizuku", "Rina"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第21章「悩めるしずくのイノセント」",
+	"title": "第3話 しずく、スクールアイドル部へ！",
+	"desc": "かすみとのたわいない言い争いをした後、ついにスクールアイドル部へ足を向けたしずく。愛、果林、栞子、ランジュたちに歓迎される。早速、部の練習に合流したしずくは、そのあまりのレベルの高さに驚くことに……",
+	"character": ["Shizuku", "Karin", "Ai", "Shioriko", "Ranju", "Mia"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第21章「悩めるしずくのイノセント」",
+	"title": "第4話 ランチタイムを共に",
+	"desc": "スクールアイドル部に移ったしずくは、毎日の厳しいトレーニングで充実した毎日をすごしているようだ。そんなしずくの頑張りを頼もしく思いながら、あなたは今日も同好会復活を目指し、メンバーと活動を続けている。そんなある日のランチの時間に……？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma" ,"Rina", "Shioriko", "Ranju"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第21章「悩めるしずくのイノセント」",
+	"title": "第5話 策略と熱狂",
+	"desc": "同好会が活動亭を言い渡されているうちに、部のファンはどんどん増えている。次々にライブを開催、会場は常に満員で観客は熱狂。なにが観客をそうまでさせるのか考える同好会メンバー。そんな中、ついにしずくがソロ曲でステージに立ち……？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Kanata", "Setsuna", "Emma", "Rina", "Ranju"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第21章「悩めるしずくのイノセント」",
+	"title": "第6話 ゲリラライブ第二弾！　いっくよー！",
+	"desc": "部のライブで、今までとは段違いのパフォーマンスを見せたしずく。ライブ後、あなたとかすみのもとに駆け寄るも、かすみとはまた言い合いになってしまう。かすみから次のゲリラライブでしずくのわかっていないことを教えてあげる、と言われるしずくだった……。",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Kanata", "Setsuna", "Emma", "Rina"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第21章「悩めるしずくのイノセント」",
+	"title": "第7話 私の得意なこと",
+	"desc": "かすみのゲリラライブを見て、衝撃を受けたしずく。かすみにはわかっていて、しずくにわかっていないものは、確かにあった。ショックで眠れない夜を過ごしたしずく、早速、スクールアイドル部に足を向ける……",
+	"character": ["Shizuku", "Ranju", "Mia"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第21章「悩めるしずくのイノセント」",
+	"title": "第8話 あのときの光景、あのときの想い",
+	"desc": "ミアとランジュから託されたのは、しずくの表現力を活かせるであろう、素晴らしい曲だった。きっと昨日までのしずくならどう表現するかワクワクしていたはず。しかしかすみのステージが頭をよぎり、そんな気持ちになれない。悩むしずくはあなたの元を訪れるのだった",
+	"character": ["Player", "Shizuku"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第21章「悩めるしずくのイノセント」",
+	"title": "第9話 あなたの理想のヒロイン",
+	"desc": "かすみにあって自分にないもの……その存在を認め悩んでいたしずくだったが、あなたと話し、自分の原点を思い出すことでようやくその霧が晴れた。スクールアイドル部のライブで、ランジュとミアから託された曲を披露したしずくが取った行動とは……？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Kanata", "Setsuna", "Emma", "Rina", "Ranju", "Mia"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第21章「悩めるしずくのイノセント」",
+	"title": "第10話 おかえり、しずく！",
+	"desc": "スクールアイドル部で完璧なステージをこなしたしずく、ゲリラライブで心のままのステージを魅せたしずく。しずくにとってはどちらのやり方も正解だが、心の向く先は同好会のやり方だった。ゲリラライブに飛び込み参加したしずくを、同好会メンバーはあたたかく迎える……",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Kanata", "Setsuna", "Emma", "Rina", "Ranju", "Mia"]
+},
+{
 	"type": "event",
 	"chapter": "イベントエピソード「秘密のパーティー！」",
 	"title": "第1話",
@@ -2797,7 +2867,7 @@ const StoryList = [
 	"type": "event",
 	"chapter": "イベントエピソード「最高の遊園地攻略法！？」",
 	"title": "第5話",
-	"desc": "まだジェットコースターに乗るまでの時間は残っている。6人は、閉園間際に混みそうなお土産屋さんを先に覗いてみることにした。",
+	"desc": "ジェットコースターに乗れるようになるまで、もう少し時間がある。6人は、閉園間際には混雑していそうなお土産屋さんを先に覗いてみることにした。",
 	"character": ["Rin", "Maki", "Yoshiko", "Mari", "Kasumi", "Kanata"]
 },
 {
@@ -3869,6 +3939,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "",
+	"chapter": "キズナエピソード",
+	"title": "13話 頑張れリーダー！",
+	"desc": "それぞれのグループに分かれて会議が始まった。千歌はAqoursのリーダーとしてグループを引っ張ろうと意気込むが、果たして上手くできるのか……？",
+	"character": ["Player", "Eli", "Rin", "Chika", "Hanamaru"]
+},
+{
+	"type": "kizuna",
 	"color": "Riko",
 	"chapter": "キズナエピソード 桜内梨子",
 	"title": "1話 ",
@@ -4176,9 +4254,9 @@ const StoryList = [
 	"type": "kizuna",
 	"color": "Dia",
 	"chapter": "キズナエピソード 黒澤ダイヤ",
-	"title": "13話 ",
-	"desc": "",
-	"character": []
+	"title": "13話 ダイヤVS絶叫マシン",
+	"desc": "たくさんのアトラクションに乗り、遊園地を楽しむあなたとダイヤ。「次はあれに乗る？」あなたはの提案にダイヤは……。",
+	"character": ["Player", "Dia"]
 },
 {
 	"type": "kizuna",
@@ -4281,9 +4359,9 @@ const StoryList = [
 	"type": "kizuna",
 	"color": "You",
 	"chapter": "キズナエピソード 渡辺曜",
-	"title": "13話 ",
-	"desc": "",
-	"character": []
+	"title": "13話 満喫♪中華街",
+	"desc": "曜と一緒に横浜巡りを続けるあなた。次にやって来たのは中華街。にぎやかな空気に２人の心も浮き立つのだった。",
+	"character": ["Player", "You"]
 },
 {
 	"type": "kizuna",
@@ -4530,7 +4608,7 @@ const StoryList = [
 	"color": "Mari",
 	"chapter": "キズナエピソード 小原鞠莉",
 	"title": "5話 鞠莉の真意",
-	"desc": "",
+	"desc": "そろそろ沼津へ帰るという鞠莉に、あなたは今日の東京観光の本当の目的を尋ねる。鞠莉の答えは……。",
 	"character": ["Player", "Mari"]
 },
 {
@@ -4593,9 +4671,9 @@ const StoryList = [
 	"type": "kizuna",
 	"color": "Mari",
 	"chapter": "キズナエピソード 小原鞠莉",
-	"title": "13話 ",
-	"desc": "",
-	"character": []
+	"title": "13話 Aqoursのソロ活動",
+	"desc": "虹ヶ咲のメンバー達のライブ映像を観て、ソロライブに興味を持ったAqours。あなたも協力を申し出て、どんどんソロライブの話は進んでいくが……。",
+	"character": ["Player", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby"]
 },
 {
 	"type": "kizuna",
@@ -4698,9 +4776,9 @@ const StoryList = [
 	"type": "kizuna",
 	"color": "Ruby",
 	"chapter": "キズナエピソード 黒澤ルビィ",
-	"title": "13話 ",
-	"desc": "",
-	"character": []
+	"title": "13話 すれ違う想い",
+	"desc": "ルビィに会おうとするあなただが、何故かことごとく予定が合わなくなってしまった。避けられているのではないかと落ち込むあなたを、居合わせた果林達３年生が励ますが……。",
+	"character": ["Player", "Ruby", "Karin", "Kanata", "Emma"]
 },
 {
 	"type": "kizuna",
@@ -6354,6 +6432,14 @@ const StoryList = [
 	"character": ["Player", "Kasumi", "Shizuku", "Kanata", "Setsuna", "Shioriko"]
 },
 {
+	"type": "kizuna",
+	"color": "Shioriko",
+	"chapter": "キズナエピソード 三船栞子",
+	"title": "8話 甘えていいんだよ",
+	"desc": "栞子の様子を見に生徒会室にやって来た同好会メンバー。栞子の頑張りを認めてくれるみんなの言葉に、嬉しく思う栞子だった。ある人、栞子が具合が悪いらしい、と歩夢に聞いたあなたは……？",
+	"character": ["Player", "Ayumu", "Shioriko"]
+},
+{
 	"type": "special",
 	"color": "Ayumu",
 	"chapter": "TVアニメ「ラブライブ！虹ヶ咲学園スクールアイドル同好会」連動ストーリー 上原歩夢",
@@ -6421,8 +6507,8 @@ const StoryList = [
 	"type": "special",
 	"color": "Karin",
 	"chapter": "TVアニメ「ラブライブ！虹ヶ咲学園スクールアイドル同好会」連動ストーリー 朝香果林",
-	"title": "",
-	"desc": "",
-	"character": []
+	"title": "持ちつ持たれつ……？",
+	"desc": "いつもエマにお世話をしてもらっている果林。このままではいけないと思い、自立しようとする果林だったが……？",
+	"character": ["Karin", "Emma"]
 }
 ];
