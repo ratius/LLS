@@ -106,7 +106,8 @@ const CharData = [
 		Yoshiko:'善子ちゃん', Hanamaru:'花丸ちゃん', Mari:'鞠莉ちゃん', Ruby:'ルビィちゃん',
 		Ayumu:'歩夢ちゃん', Kasumi:'かすみちゃん', Shizuku:'しずくちゃん', Karin:'果林さん', Ai:'愛ちゃん',
 		Kanata:'彼方さん', Setsuna:'せつ菜ちゃん', Emma:'エマさん', Rina:'璃奈ちゃん', Shioriko:'栞子ちゃん',
-		Player:'あなた'},
+		Player:'あなた',
+		Mito:'美渡姉', Shima:'志満姉'},
 	{ id:'Riko'    , name:'桜内 梨子'     , r:255, g:158, b:172,
 		Honoka:'穂乃果ちゃん', Eli:'絵里さん', Kotori:'ことりちゃん', Umi:'海未ちゃん', Rin:'凛ちゃん',
 		Maki:'真姫ちゃん', Nozomi:'希さん', Hanayo:'花陽ちゃん', Nico:'にこさん',
@@ -184,7 +185,7 @@ const CharData = [
 		Honoka:'穂乃果先輩', Eli:'絵里先輩', Kotori:'ことり先輩', Umi:'海未先輩', Rin:'凛ちゃん',
 		Maki:'真姫ちゃん<br>まき子', Nozomi:'希先輩', Hanayo:'花陽ちゃん<br>かよ子', Nico:'にこ先輩',
 		Chika:'千歌先輩', Riko:'梨子先輩', Kanan:'果南先輩', Dia:'ダイヤ先輩', You:'曜先輩',
-		Yoshiko:'善子ちゃん', Hanamaru:'花丸ちゃん', Mari:'鞠莉先輩', Ruby:'ルビィちゃん',
+		Yoshiko:'善子ちゃん<br>ヨハ子', Hanamaru:'花丸ちゃん', Mari:'鞠莉先輩', Ruby:'ルビィちゃん',
 		Ayumu:'歩夢先輩', Kasumi:'私<br>かすみん', Shizuku:'しず子', Karin:'果林先輩', Ai:'愛先輩',
 		Kanata:'彼方先輩', Setsuna:'せつ菜先輩', Emma:'エマ先輩', Rina:'りな子',
 		Shioriko:'しお子', Ranju:'ランジュ', Mia:'ミア', Player:'あなた<br>先輩'},
@@ -195,7 +196,7 @@ const CharData = [
 		Yoshiko:'善子さん', Hanamaru:'花丸さん', Mari:'鞠莉さん', Ruby:'ルビィさん',
 		Ayumu:'歩夢さん', Kasumi:'かすみさん', Shizuku:'私', Karin:'果林さん', Ai:'愛さん',
 		Kanata:'彼方さん', Setsuna:'せつ菜さん', Emma:'エマさん', Rina:'璃奈さん',
-		Shioriko:'栞子さん', Ranju:'ランジュさん', Player:'先輩' },
+		Shioriko:'栞子さん', Ranju:'ランジュさん', Mia:'ミアさん', Player:'先輩' },
 	{ id:'Karin'   , name:'朝香 果林'     , r:074, g:047, b:237,
 		Honoka:'穂乃果ちゃん', Eli:'絵里ちゃん', Kotori:'ことりちゃん', Umi:'海未ちゃん<br>(海未)', Rin:'凛ちゃん',
 		Maki:'真姫ちゃん', Nozomi:'希ちゃん', Hanayo:'花陽ちゃん', Nico:'にこちゃん',
@@ -230,7 +231,7 @@ const CharData = [
 		Yoshiko:'善子さん', Hanamaru:'花丸さん', Mari:'鞠莉さん', Ruby:'ルビィさん',
 		Ayumu:'歩夢さん', Kasumi:'かすみさん', Shizuku:'しずくさん', Karin:'果林さん', Ai:'愛さん',
 		Kanata:'彼方さん', Setsuna:'私', Emma:'エマさん', Rina:'璃奈さん', Shioriko:'栞子さん', 
-		Player:'あなた', Haruka:'遥さん'},
+		Ranju:'ランジュさん', Player:'あなた', Haruka:'遥さん'},
 	{ id:'Emma'    , name:'エマ・ヴェルデ', r:143, g:218, b:121,
 		Honoka:'穂乃果ちゃん', Eli:'絵里ちゃん', Umi:'海未ちゃん', Kotori:'ことりちゃん', Rin:'凛ちゃん',
 		Maki:'真姫ちゃん', Nozomi:'希ちゃん', Hanayo:'花陽ちゃん', Nico:'にこちゃん',
@@ -250,7 +251,7 @@ const CharData = [
 	{ id:'Shioriko', name:'三船 栞子', r:36, g:189, b:139,
 		Eli:'絵里さん', Kotori:'ことりさん', Rin:'凛さん',
 		Riko:'梨子さん', Ruby:'ルビィさん',
-		Ayumu:'(上原さん)', Kasumi:'(中須さん)', Karin:'(朝香さん)',
+		Ayumu:'歩夢さん', Kasumi:'(中須さん)', Shizuku:'しずくさん', Karin:'(朝香さん)',
 		Setsuna:'せつ菜さん<br>(中川さん)', Emma:'(ヴェルデさん)', Rina:'(天王寺さん)',
 		Shioriko:'私', Kaoruko:'姉さん', Ranju:'ランジュ'},
 	{ id:'Player'  , name:'あなた'      , r:160, g:160, b:160,
@@ -260,15 +261,17 @@ const CharData = [
 		Yoshiko:'善子ちゃん', Hanamaru:'花丸ちゃん', Mari:'鞠莉さん', Ruby:'ルビィちゃん',
 		Ayumu:'歩夢ちゃん', Kasumi:'かすみちゃん', Shizuku:'しずくちゃん', Karin:'果林さん', Ai:'愛ちゃん',
 		Kanata:'彼方さん', Setsuna:'せつ菜ちゃん', Emma:'エマさん', Rina:'璃奈ちゃん',
-		Shioriko:'栞子ちゃん', Ranju:'ランジュさん<br>ランジュちゃん', Mia:'ミアちゃん',
-		Player:'私', Haruka:'遥ちゃん'},
+		Shioriko:'栞子ちゃん', Ranju:'ランジュさん<br>(ランジュちゃん)', Mia:'ミアちゃん',
+		Player:'私', Haruka:'遥ちゃん', Arisa:'亜里沙ちゃん'},
 
 
 	{ id:'Ranju', name:'鐘 嵐珠',
-		Shioriko:'栞子', Ranju:'アタシ<br>ランジュ', Mia:'ミア', Player:'アナタ'
+		Ayumu:'歩夢', Kasumi:'かすみ', Shizuku:'しずく', Karin:'果林', Ai:'愛', 
+		Kanata:'彼方', Setsuna:'せつ菜', Emma:'エマ', Rina:'璃奈', Shioriko:'栞子',
+		Ranju:'アタシ<br>ランジュ', Mia:'ミア', Player:'アナタ'
 		},
 	{ id:'Mia', name:'ミア・テイラー',
-		Ranju:'ランジュ', Mia:'ボク'
+		Shizuku:'しずく', Ranju:'ランジュ', Mia:'ボク'
 		},
 
 	{ id:'Haruka'  , name:'近江 遥',
@@ -286,6 +289,11 @@ const CharData = [
 	{ id:'Cocoro', name:'矢澤 こころ'
 		},
 	{ id:'Cotaro', name:'矢澤 虎太郎'
+		},
+	{ id:'Mito', name:'高海 美渡',
+		Chika:'千歌',
+		},
+	{ id:'Shima', name:'高海 志満',
 		},
 	{ id:'Rijicho', name:'理事長',
 		Shioriko:'栞子ちゃん'
@@ -389,11 +397,11 @@ document.getElementById("MainArea").innerHTML =
 	+ 'スクスタもリリースから1年が経過し、誕生日限定ボイスで初期メンバー27人分は全て埋まりました。<\/p>'
 	+ '<h3 class="muse">μ’sメンバーの呼ばれ方<\/h3>\n' + CreateTable(ListMuse.concat(["Player"]), ListAS.concat(["Yukiho", "Arisa"]))
 	+ '<h3 class="aqours">Aqoursメンバーの呼ばれ方<\/h3>\n' + CreateTable(ListAqours.concat(["Player"]), ListAS)
-	+ '<h3 class="niji">ニジガクメンバーの呼ばれ方(1)<\/h3>\n' + CreateTable(ListNiji.concat(["Player"]), ListAS.concat(["Ranju", "Haruka"]))
+	+ '<h3 class="niji">ニジガクメンバーの呼ばれ方(1)<\/h3>\n' + CreateTable(ListNiji.concat(["Player"]), ListAS.concat(["Ranju", "Mia", "Haruka"]))
 	+ '<h3 class="niji">ニジガクメンバーの呼ばれ方(2)<\/h3>\n' + CreateTable(["Shioriko", "Ranju", "Mia"], ListAS.concat(["Ranju", "Mia", "Rijicho"]))
 	+ '<h3 class="niji">その他キャラクターの呼ばれ方<\/h3>\n'
-	+ CreateTable(["Yukiho", "Arisa", "Cocoa", "Cocoro", "Cotaro", "Haruka", "Misato", "Kaoruko"],
-	 ["Honoka", "Eli", "Nico", "Kanan", "Ai", "Kanata", "Setsuna", "Shioriko", "Player",
+	+ CreateTable(["Yukiho", "Arisa", "Mito", "Shima", "Cocoa", "Cocoro", "Cotaro", "Haruka", "Misato", "Kaoruko"],
+	 ["Honoka", "Eli", "Nico", "Chika", "Kanan", "Ai", "Kanata", "Setsuna", "Shioriko", "Player",
 	 "Yukiho", "Arisa", "Misato", "Kaoruko"])
 	;
 
