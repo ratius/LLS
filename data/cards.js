@@ -3455,7 +3455,7 @@ const RawCardList = [
 	"cn2": "未体験HORIZON",
 	"date": "2020/11/22",
 	"source": "reward",
-	"desc": "イベント「最高の遊園地攻略法！？」報酬 (?位枠)"
+	"desc": "イベント「最高の遊園地攻略法！？」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 354,
@@ -3467,7 +3467,127 @@ const RawCardList = [
 	"cn2": "Margaret",
 	"date": "2020/11/22",
 	"source": "reward",
-	"desc": "イベント「最高の遊園地攻略法！？」報酬 (?位枠)"
+	"desc": "イベント「最高の遊園地攻略法！？」報酬 (1万位/10万位枠)"
+},
+{
+	"id": 355,
+	"name": "Ayumu",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "……はい、私の傘に入って",
+	"cn2": "運命の人",
+	"date": "2020/11/26",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 356,
+	"name": "Shioriko",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "あなたから見て、どうですか？",
+	"cn2": "翡翠色の残響",
+	"date": "2020/11/26",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 357,
+	"name": "Honoka",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "ふふっ、こんな感じかなあ～？",
+	"cn2": "未体験HORIZON",
+	"date": "2020/11/26",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 358,
+	"name": "Rina",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "うん、上手にできました～",
+	"cn2": "アナログハート",
+	"date": "2020/11/26",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 359,
+	"name": "Kotori",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "ふふっ、どうかな？　似合う？",
+	"cn2": "サンタガールが街にやってくる",
+	"date": "2020/12/04",
+	"source": "gacha",
+	"desc": "「１番のクリスマスプレゼントガチャ(前編)」で追加"
+},
+{
+	"id": 360,
+	"name": "Ruby",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Gd",
+	"cn1": "ううう……",
+	"cn2": "未体験HORIZON",
+	"date": "2020/12/04",
+	"source": "gacha",
+	"desc": "「１番のクリスマスプレゼントガチャ(前編)」で追加"
+},
+{
+	"id": 361,
+	"name": "Setsuna",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "私にとって１番のプレゼント",
+	"cn2": "サンタガールが街にやってくる",
+	"date": "2020/12/07",
+	"source": "gacha",
+	"desc": "「１番のクリスマスプレゼントガチャ(後編)」で追加"
+},
+{
+	"id": 362,
+	"name": "You",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Gd",
+	"cn1": "やったーーー、勝ちーーーー！",
+	"cn2": "サンタガールが街にやってくる",
+	"date": "2020/12/07",
+	"source": "reward",
+	"desc": "イベント「１番のクリスマスプレゼント」報酬"
+},
+{
+	"id": 363,
+	"name": "Hanayo",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Vo",
+	"cn1": "すっごくおいしそうーーーー！！",
+	"cn2": "ユメノトビラ",
+	"date": "2020/12/07",
+	"source": "reward",
+	"desc": "イベント「１番のクリスマスプレゼント」報酬 (3000位/7万位枠)"
+},
+{
+	"id": 364,
+	"name": "Ai",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "毎年感動しちゃうよ",
+	"cn2": "楽しいの天才",
+	"date": "2020/12/07",
+	"source": "reward",
+	"desc": "イベント「１番のクリスマスプレゼント」報酬 (1万位/10万位枠)"
 }
 ];
-const LatestUpdate = "2020/11/20 「最高の遊園地攻略法」まで";
+const LatestUpdate = "2020/12/04 「１番のクリスマスプレゼント」まで";
