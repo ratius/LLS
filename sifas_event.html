@@ -85,6 +85,13 @@
 }
 .quarter-table td { color: #999; }
 
+#Trio-Border{
+	overflow-y: scroll;
+	border: solid 3px rgb(226,6,126);
+	height: calc(70vh - 30px);
+	background-color: rgba(226,126,176,0.1);
+}
+
 #Trio-Table tbody th{
 	padding: 5px;
 	border-top: solid 1px #aaa;
@@ -415,7 +422,7 @@ function DrawPairTable(){
 
 // ■「トリオ重複状況」テーブルの作成
 function DrawDuplicatedTrioList(){
-	var Output = '<table id="Trio-Table">\n'
+	var Output = '<div id="Trio-Border"><table id="Trio-Table">\n'
 	+ '<thead>\n<tr>\n<th colspan="3">重複トリオ<\/th><th>参加イベント<\/th><\/tr><\/thead>\n<tbody>'
 
 	for(temp1=0; temp1<TrioHistory.length; temp1++){
@@ -429,7 +436,7 @@ function DrawDuplicatedTrioList(){
 					+ LookUp(CharId[temp1+temp2],"name") + '<\/span><\/th>'
 					+ '<th class="bg_' + CharId[temp1+temp2+temp3] + '"><span class="shadowname">'
 					+ LookUp(CharId[temp1+temp2+temp3],"name") + '<\/span><\/th>'
-					+ '<td>';
+					+ '<td style="background-color: white;">';
 					
 					for(temp4 of TrioHistory[temp1][temp2][temp3]){
 						Output += LookUpEvent(temp4,"name") + '<br>';
@@ -439,7 +446,7 @@ function DrawDuplicatedTrioList(){
 			}
 		}
 	}
-	Output += '<\/tbody>\n<\/table>';
+	Output += '<\/tbody>\n<\/table><\/div>';
 	return Output;
 }
 
