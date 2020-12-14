@@ -2885,6 +2885,56 @@ const StoryList = [
 	"character": ["Rin", "Maki", "Yoshiko", "Mari", "Kasumi", "Kanata"]
 },
 {
+	"type": "event",
+	"chapter": "イベントエピソード「１番のクリスマスプレゼント」",
+	"title": "第1話",
+	"desc": "愛とせつ菜が街で買い物をしていると、大きなクリスマスツリーが目に入ってきた。",
+	"character": ["Ai", "Setsuna"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「１番のクリスマスプレゼント」",
+	"title": "第2話",
+	"desc": "友達とクリスマスパーティーをしたことが無いと話すせつ菜。実はμ's・Aqoursの面々はクリスマスパーティーを企画していたようで……？",
+	"character": ["Kotori", "Hanayo", "You", "Ruby", "Ai", "Setsuna"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「１番のクリスマスプレゼント」",
+	"title": "第3話",
+	"desc": "クリスマスパーティー当日、せつ菜は自分の部屋の飾り付けをして、みんなを出迎える。",
+	"character": ["Kotori", "Hanayo", "You", "Ruby", "Ai", "Setsuna"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「１番のクリスマスプレゼント」",
+	"title": "第4話",
+	"desc": "ババ抜きで盛り上がる6人。他のゲームも色々と楽しむ。",
+	"character": ["Kotori", "Hanayo", "You", "Ruby", "Ai", "Setsuna"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「１番のクリスマスプレゼント」",
+	"title": "第5話",
+	"desc": "お腹が空いてきた6人。せつ菜が手作りケーキを持ってきた。せつ菜は料理が苦手なことは、みんなにも知れ渡っているようだが……？",
+	"memo": "「スペシャルスイーツを召し上がれ！」の後の時系列の話であることが確定する。",
+	"character": ["Kotori", "Hanayo", "You", "Ruby", "Ai", "Setsuna"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「１番のクリスマスプレゼント」",
+	"title": "第6話",
+	"desc": "プレゼント交換が始まった。それぞれが用意してきたプレゼントは、誰の手に届くのだろうか？",
+	"character": ["Kotori", "Hanayo", "You", "Ruby", "Ai", "Setsuna"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「１番のクリスマスプレゼント」",
+	"title": "第7話",
+	"desc": "",
+	"character": []
+},
+{
 	"type": "kizuna",
 	"color": "Honoka",
 	"chapter": "キズナエピソード 高坂穂乃果",
@@ -2992,6 +3042,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Honoka",
+	"chapter": "キズナエピソード 高坂穂乃果 / ソロライブ編",
+	"title": "14話 答えまで、あと少し！",
+	"desc": "ソロライブに向けて、やりたいことを探している穂乃果。答えが見つかりそうな中、穂乃果の顔はさえないままで……",
+	"character": ["Player", "Honoka", "Ayumu", "Ai", "Setsuna"]
+},
+{
+	"type": "kizuna",
 	"color": "Eli",
 	"chapter": "キズナエピソード 絢瀬絵里",
 	"title": "1話 ステージ実現のために",
@@ -3093,6 +3151,14 @@ const StoryList = [
 	"title": "13話 音ノ木坂退学事件！",
 	"desc": "絵里が音ノ木坂を退学になってしまう！？　亜里沙から衝撃の話を聞いたあなたは、慌てて音ノ木坂へ向かうことに！",
 	"character": ["Player", "Eli", "Arisa"]
+},
+{
+	"type": "kizuna",
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里 / ソロライブ編",
+	"title": "14話 私たちのボランティア！",
+	"desc": "亜里沙の思い違いからはじまった絵里の退学騒動。これからも絵里がいてくれることに安心したあなたに、絵里は相談に乗って欲しいことがあると告げる。",
+	"character": ["Player", "Honoka", "Eli", "Kotori", "Eli", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Arisa"]
 },
 {
 	"type": "kizuna",
@@ -3200,107 +3266,123 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
-	"color": "Umi",
-	"chapter": "キズナエピソード 園田海未",
-	"title": "1話 ",
-	"desc": "",
-	"character": []
+	"color": "Kotori",
+	"chapter": "キズナエピソード 南ことり / ソロライブ編",
+	"title": "14話 自分を大事に！",
+	"desc": "専門学校の文化祭でファッションショーのデザインをやってほしいと依頼され、迷うことり。でも、お洋服への情熱は隠しきれなくて……",
+	"character": ["Player", "Kotori"]
 },
 {
 	"type": "kizuna",
 	"color": "Umi",
 	"chapter": "キズナエピソード 園田海未",
-	"title": "2話 ",
-	"desc": "",
-	"character": []
+	"title": "1話 スクールアイドルへの想い",
+	"desc": "μ'sの手伝いをすることになったあなたは、海未にスクールアイドルへの想いを聞くことに。海未にとってのスクールアイドルとは？",
+	"character": ["Player", "Umi"]
 },
 {
 	"type": "kizuna",
 	"color": "Umi",
 	"chapter": "キズナエピソード 園田海未",
-	"title": "3話 ",
-	"desc": "",
-	"character": []
+	"title": "2話 μ'sの作詞担当",
+	"desc": "スクールアイドル。それは穂乃果にとっての夢であり、海未にとっての夢でもあった。海未がμ'sの歌詞をほとんど手がけていると聞いたあなたは……。",
+	"character": ["Player", "Umi", "Rin", "Nozomi"]
 },
 {
 	"type": "kizuna",
 	"color": "Umi",
 	"chapter": "キズナエピソード 園田海未",
-	"title": "4話 ",
-	"desc": "",
-	"character": []
+	"title": "3話 心をこめて",
+	"desc": "海未の家で、作詞風景を見学させてもらうことになったあなた。海未が心を込めて作詞をする中、あなたは……。",
+	"character": ["Player", "Umi"]
 },
 {
 	"type": "kizuna",
 	"color": "Umi",
 	"chapter": "キズナエピソード 園田海未",
-	"title": "5話 ",
-	"desc": "",
-	"character": []
+	"title": "4話 弓道大会へ",
+	"desc": "海未が感情豊かに作詞をする姿を見たあなたは、海未に惹かれていくことを実感する。ある日、海未の弓道大会についていくことになり……。",
+	"character": ["Player", "Umi"]
 },
 {
 	"type": "kizuna",
 	"color": "Umi",
 	"chapter": "キズナエピソード 園田海未",
-	"title": "6話 ",
-	"desc": "",
-	"character": []
+	"title": "5話 もっとあなたを知りたくて",
+	"desc": "μ'sの活動以外でも見えてくる、海未の色々な魅力。これからもお互いをもっと知っていきたいと望む二人は……。",
+	"character": ["Player", "Honoka", "Kotori", "Umi", "Rin", "Nozomi"]
+},
+{
+	"type": "kizuna",
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未",
+	"title": "6話 想いを手紙に込めて",
+	"desc": "μ'sの活動を着実にサポートして、更に海未との交流も深めているあなた。海未はあなたへ感謝の気持ちを表したいようで……。",
+	"character": ["Umi", "Hanayo"]
 },
 {
 	"type": "kizuna",
 	"color": "Umi",
 	"chapter": "キズナエピソード 園田海未 / ソロライブ編",
-	"title": "7話 ",
-	"desc": "",
-	"character": []
+	"title": "7話 μ's合同ソロライブへ！",
+	"desc": "海未はあなたへ感謝の気持ちをこめた手紙を送る。情熱的な手紙を受け取ったあなたは……。",
+	"character": ["Player", "Umi"]
 },
 {
 	"type": "kizuna",
 	"color": "Umi",
 	"chapter": "キズナエピソード 園田海未 / ソロライブ編",
-	"title": "8話 ",
-	"desc": "",
-	"character": []
+	"title": "8話 海未の弱点",
+	"desc": "二人でソロライブの準備をすることになったあなたは、意外な海未の弱点を知ることに……。",
+	"character": ["Player", "Umi"]
 },
 {
 	"type": "kizuna",
 	"color": "Umi",
 	"chapter": "キズナエピソード 園田海未 / ソロライブ編",
-	"title": "9話 ",
-	"desc": "",
-	"character": []
+	"title": "9話 遊園地デート！？",
+	"desc": "一人でステージに立つ自信はまだない、と不安そうに話す海未。何かのきっかけになれば……とあなたは海未を誘い出すことに。",
+	"character": ["Player", "Umi"]
 },
 {
 	"type": "kizuna",
 	"color": "Umi",
 	"chapter": "キズナエピソード 園田海未 / ソロライブ編",
-	"title": "10話 ",
-	"desc": "",
-	"character": []
+	"title": "10話 楽しいを届ける側へ",
+	"desc": "ソロライブへの不安な想いをかかえたまま、遊園地へ来た海未。いつの間にか、不安な想いは薄れていって……。",
+	"character": ["Player", "Umi"]
 },
 {
 	"type": "kizuna",
 	"color": "Umi",
 	"chapter": "キズナエピソード 園田海未 / ソロライブ編",
-	"title": "11話 ",
-	"desc": "",
-	"character": []
+	"title": "11話 はじめてのソロライブ！",
+	"desc": "自分もライブパフォーマンスで楽しい世界を届けたい。遊園地で勇気をもらった海未は、ソロライブのステージへ向かう。",
+	"character": ["Player", "Umi", "Rina"]
 },
 {
 	"type": "kizuna",
 	"color": "Umi",
 	"chapter": "キズナエピソード 園田海未 / ソロライブ編",
-	"title": "12話 ",
-	"desc": "",
-	"character": []
+	"title": "12話 憧れの人",
+	"desc": "はじめは気後れしていたものの、勇気をもらった海未はソロライブを大成功させた。会場には、海未の華やかなパフォーマンスに感動している姿もあって……。",
+	"character": ["Player", "Umi", "Rina"]
 },
 {
 	"type": "kizuna",
 	"color": "Umi",
-	"chapter": "キズナエピソード 園田海未",
+	"chapter": "キズナエピソード 園田海未 / ソロライブ編",
 	"title": "13話 師と弟子の出会い",
-	"desc": "",
-	"character": []
+	"desc": "ソロライブを成功させようと海未のもとに訪れたのは、璃奈だった！　海未のようにもっと自分を表現してみたいと考えていた璃奈は、海未にあるお願いをすることに――",
+	"character": ["Player", "Umi", "Rina"]
+},
+{
+	"type": "kizuna",
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未 / ソロライブ編",
+	"title": "14話 心の届け方",
+	"desc": "海未のライブパフォーマンスに憧れた璃奈が、まさかの弟子入り！？　感情を表現したい璃奈へ、海未が贈るアドバイスは……",
+	"character": ["Player", "Umi", "Rina"]
 },
 {
 	"type": "kizuna",
@@ -3409,6 +3491,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Rin",
+	"chapter": "キズナエピソード 星空凛 / ソロライブ編",
+	"title": "14話 かわいい特訓！",
+	"desc": "凛が花丸のかわいいをプロデュースすることに。二人はジョイントライブで結果を出すために、かわいいの猛特訓をはじめる！",
+	"character": ["Player", "Rin", "Hanamaru"]
+},
+{
+	"type": "kizuna",
 	"color": "Maki",
 	"chapter": "キズナエピソード 西木野真姫",
 	"title": "1話 返事しなくちゃいけない？",
@@ -3513,115 +3603,123 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
-	"color": "Nozomi",
-	"chapter": "キズナエピソード 東條希",
-	"title": "1話 ",
-	"desc": "",
-	"character": []
+	"color": "",
+	"chapter": "キズナエピソード 西木野真姫 / ソロライブ編",
+	"title": "14話 はじめてのアルバイト",
+	"desc": "凛と花陽のお揃いグッズを見た後も、表情の冴えない真姫。そんな中、あなたはショッピングモールで偶然真姫を見つけて……！？",
+	"character": ["Player", "Maki"]
 },
 {
 	"type": "kizuna",
 	"color": "Nozomi",
 	"chapter": "キズナエピソード 東條希",
-	"title": "2話 ",
-	"desc": "",
-	"character": []
+	"title": "1話 パワーでお迎え♪",
+	"desc": "面白い子が来た、と喜ぶ希。でも、それって……？",
+	"character": ["Player", "Eli", "Nozomi", "Nico"]
 },
 {
 	"type": "kizuna",
 	"color": "Nozomi",
 	"chapter": "キズナエピソード 東條希",
-	"title": "3話 ",
-	"desc": "",
-	"character": []
+	"title": "2話 生徒会のお仕事",
+	"desc": "生徒会の副会長としても活動する希。希の学校生活に対する想いにふれることに。",
+	"character": ["Player", "Eli", "Nozomi"]
 },
 {
 	"type": "kizuna",
 	"color": "Nozomi",
 	"chapter": "キズナエピソード 東條希",
-	"title": "4話 ",
-	"desc": "",
-	"character": []
+	"title": "3話 ウチの占いが告げているっ",
+	"desc": "希お得意の占いは……ま、まさかの結果に！",
+	"character": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"]
 },
 {
 	"type": "kizuna",
 	"color": "Nozomi",
 	"chapter": "キズナエピソード 東條希",
-	"title": "5話 ",
-	"desc": "",
-	"character": []
+	"title": "4話 希のアドバイス？",
+	"desc": "わるーい占いの結果。希のアドバイスで、このピンチを切り抜けたい！",
+	"character": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"]
 },
 {
 	"type": "kizuna",
 	"color": "Nozomi",
 	"chapter": "キズナエピソード 東條希",
-	"title": "6話 ",
-	"desc": "",
-	"character": []
+	"title": "5話 アイドル研究部へようこそ♪",
+	"desc": "希の言葉に導かれ、赤点を取らないよう行動することにしたあなたは……。",
+	"character": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"]
+},
+{
+	"type": "kizuna",
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希",
+	"title": "6話 あなたの椅子",
+	"desc": "希のおかげで、自然にみんなと仲良くなれたあなた。今日も希は部室であなたを待っているみたいです♪",
+	"character": ["Honoka", "Nozomi"]
 },
 {
 	"type": "kizuna",
 	"color": "Nozomi",
 	"chapter": "キズナエピソード 東條希 / ソロライブ編",
-	"title": "7話 ",
-	"desc": "",
-	"character": []
+	"title": "7話 μ's合同ソロライブへ！",
+	"desc": "希はあなたが部室にいつも来てくれることを喜んでいるみたい。でも、自分のソロライブの話になると、少し反応が違うみたいで……？？",
+	"character": ["Player", "Nozomi"]
 },
 {
 	"type": "kizuna",
 	"color": "Nozomi",
 	"chapter": "キズナエピソード 東條希 / ソロライブ編",
-	"title": "8話 ",
-	"desc": "",
-	"character": []
+	"title": "8話 一人で大丈夫！",
+	"desc": "今までとは違うライブになりそう、とμ'sのソロライブ決定を喜ぶ希。当然、あなたも希のソロライブをサポートするつもりだが、希の反応は……？",
+	"character": ["Player", "Nozomi"]
 },
 {
 	"type": "kizuna",
 	"color": "Nozomi",
 	"chapter": "キズナエピソード 東條希 / ソロライブ編",
-	"title": "9話 ",
-	"desc": "",
-	"character": []
+	"title": "9話 頼れるあなた",
+	"desc": "困ったことがあったら、声をかけるね。そう言ったまま、希はあなたにサポートを求めないまま。みんなのお手伝いをするよりも、自分のソロライブを考えてほしいと思うあなたは……。",
+	"character": ["Player", "Honoka", "Nozomi"]
 },
 {
 	"type": "kizuna",
 	"color": "Nozomi",
 	"chapter": "キズナエピソード 東條希 / ソロライブ編",
-	"title": "10話 ",
-	"desc": "",
-	"character": []
+	"title": "10話 目覚めの朝",
+	"desc": "希はソロライブの準備でも自分より周りを優先してしまう。しかし、自分のソロライブを持っている人がいることに気づいて……。",
+	"character": ["Player", "Nozomi"]
 },
 {
 	"type": "kizuna",
 	"color": "Nozomi",
 	"chapter": "キズナエピソード 東條希 / ソロライブ編",
-	"title": "11話 ",
-	"desc": "",
-	"character": []
+	"title": "11話 はじめてのソロライブ！",
+	"desc": "字部分のソロライブを楽しみにしている人がいるのなら――　感情を見せずとも、ソロライブへの想いはしっかり持っていた希。本番前の準備を終えたあなたは、神社へと向かう。",
+	"character": ["Player", "Nozomi"]
 },
 {
 	"type": "kizuna",
 	"color": "Nozomi",
 	"chapter": "キズナエピソード 東條希 / ソロライブ編",
-	"title": "12話 ",
-	"desc": "",
-	"character": []
+	"title": "12話 意外な自分",
+	"desc": "自分のソロライブを無事に終えた希。仲間を優先してきた希だったが、ソロライブでは新しい自分が見つかった様子。",
+	"character": ["Player", "Nozomi"]
 },
 {
 	"type": "kizuna",
 	"color": "Nozomi",
 	"chapter": "キズナエピソード 東條希 / ソロライブ編",
 	"title": "13話 優しい歌声",
-	"desc": "",
-	"character": []
+	"desc": "希は、もっと新しいことに挑戦しようと決意を新たにする。ソロ活動の先輩でもあるニジガクのみんなに話を聞きに行った希は、優しい歌声に出会う。",
+	"character": ["Player", "Nozomi", "Ayumu", "Shizuku", "Karin", "Emma", "Rina"]
 },
 {
 	"type": "kizuna",
 	"color": "Nozomi",
 	"chapter": "キズナエピソード 東條希",
-	"title": "14話 ",
-	"desc": "",
-	"character": []
+	"title": "14話 知らない自分に会いたくて",
+	"desc": "ソロ活動で新しいことに挑戦したい、とニジガクへ勉強しにいく希は、愛のパフォーマンスに圧倒される。自分とは違うタイプだかから、と話していた希だが……",
+	"character": ["Player", "Nozomi", "Kasumi", "Ai", "Kanata", "Setsuna"]
 },
 {
 	"type": "kizuna",
@@ -3730,115 +3828,124 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
-	"color": "Nico",
-	"chapter": "キズナエピソード 矢澤にこ",
-	"title": "1話 ",
-	"desc": "",
-	"character": []
+	"color": "Hanayo",
+	"chapter": "キズナエピソード 小泉花陽 / ソロライブ編",
+	"title": "14話 花陽からのアドバイス",
+	"desc": "スクールアイドルが好きな小中学生に向けたイベント……のはずが、会場に彼方が現れてしまった！　もっとスクールアイドルらしくなりたいと話す彼方へ、花陽がおくったアドバイスは……？",
+	"character": ["Player", "Hanayo", "Kanata"]
 },
 {
 	"type": "kizuna",
 	"color": "Nico",
 	"chapter": "キズナエピソード 矢澤にこ",
-	"title": "2話 ",
-	"desc": "",
-	"character": []
+	"title": "1話 手伝いなんていらないっ！",
+	"desc": "μ'sの部活を手伝うことになったあなた。１人だけそのことに不満そうなメンバーが……。",
+	"character": ["Player", "Eli", "Nozomi", "Nico"]
 },
 {
 	"type": "kizuna",
 	"color": "Nico",
 	"chapter": "キズナエピソード 矢澤にこ",
-	"title": "3話 ",
-	"desc": "",
-	"character": []
+	"title": "2話 本気を見せて",
+	"desc": "にこに本気の気持ちを伝えたいあなた。にこは疑念を隠せない様子だが……。",
+	"character": ["Player", "Rin", "Maki", "Nico"]
 },
 {
 	"type": "kizuna",
 	"color": "Nico",
 	"chapter": "キズナエピソード 矢澤にこ",
-	"title": "4話 ",
-	"desc": "",
-	"character": []
+	"title": "3話 待ってて、にこちゃん",
+	"desc": "期待に応えられるよう、努力するあなた。その熱意はにこにもだんだん伝わって……。",
+	"character": ["Player", "Nico"]
 },
 {
 	"type": "kizuna",
 	"color": "Nico",
 	"chapter": "キズナエピソード 矢澤にこ",
-	"title": "5話 ",
-	"desc": "",
-	"character": []
+	"title": "4話 にこの疑問",
+	"desc": "スクールアイドルが好きなのに、どうしてスクールアイドルにならないの？と訊くにこにあなたは……。",
+	"memo": "「1択の選択肢」が登場する。",
+	"character": ["Player", "Eli", "Nozomi", "Nico"]
 },
 {
 	"type": "kizuna",
 	"color": "Nico",
 	"chapter": "キズナエピソード 矢澤にこ",
-	"title": "6話 ",
-	"desc": "",
-	"character": []
+	"title": "5話 輝きサポート！",
+	"desc": "にこに認められたいあなた。特訓の成果を発揮するときがきた！",
+	"character": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"]
+},
+{
+	"type": "kizuna",
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ",
+	"title": "6話 二人の絆",
+	"desc": "一緒にステージを作り上げていく存在として、あなたのことを認めたにこ。絵里や希もそのことを喜んでいるようだが、にこ本人の想いは……。",
+	"character": ["Eli", "Nozomi", "Nico"]
 },
 {
 	"type": "kizuna",
 	"color": "Nico",
 	"chapter": "キズナエピソード 矢澤にこ / ソロライブ編",
-	"title": "7話 ",
-	"desc": "",
-	"character": []
+	"title": "7話 μ's合同ソロライブへ！",
+	"desc": "今まで以上のステージを作り上げることは簡単ではない。そう気を引き締めるにこ。にこに認めてもらってうれしいあなたも、喜んでばかりもいられない！？",
+	"character": ["Player", "Nico"]
 },
 {
 	"type": "kizuna",
 	"color": "Nico",
 	"chapter": "キズナエピソード 矢澤にこ / ソロライブ編",
-	"title": "8話 ",
-	"desc": "",
-	"character": []
+	"title": "8話 あっと驚くソロライブ！？",
+	"desc": "にこのソロライブを銀河まで届けよう！　と意気込む二人。にこのかわいいパフォーマンスを活かしたソロライブに……と思いきや、にこはそれには反対のようで……？",
+	"character": ["Player", "Nico"]
 },
 {
 	"type": "kizuna",
 	"color": "Nico",
 	"chapter": "キズナエピソード 矢澤にこ / ソロライブ編",
-	"title": "9話 ",
-	"desc": "",
-	"character": []
+	"title": "9話 魅力が100個！？",
+	"desc": "にこらしらを活かした、かわいいソロライブにしよう！と話す二人。だが、にこはまだあなたのことを少し疑っているようで……？",
+	"character": ["Player", "Nico"]
 },
 {
 	"type": "kizuna",
 	"color": "Nico",
 	"chapter": "キズナエピソード 矢澤にこ / ソロライブ編",
-	"title": "10話 ",
-	"desc": "",
-	"character": []
+	"title": "10話 一人きりのソロライブ",
+	"desc": "最高にかわいいソロライブにしよう、と話していたにこ。それでも、本番が近づくにつれて悲しそうな表情をすることが増えて……。",
+	"character": ["Player", "Nico"]
 },
 {
 	"type": "kizuna",
 	"color": "Nico",
 	"chapter": "キズナエピソード 矢澤にこ / ソロライブ編",
-	"title": "11話 ",
-	"desc": "",
-	"character": []
+	"title": "11話 はじめてのソロライブ！",
+	"desc": "いつも自信たっぷりに見えて、それでいて繊細なところがあって……。にこはソロライブに向けてひたすら準備を重ねてきた。ついに迎えるソロライブ本番、それを客席から見ていたのは……！？",
+	"character": ["Player", "Nico", "Kasumi"]
 },
 {
 	"type": "kizuna",
 	"color": "Nico",
 	"chapter": "キズナエピソード 矢澤にこ / ソロライブ編",
-	"title": "12話 ",
-	"desc": "",
-	"character": []
+	"title": "12話 ライバル登場！？",
+	"desc": "最高にかわいいスクールアイドルでいたい。そう願って努力を重ね、ソロライブを大成功させたにこ。だが、そこに現れたのは……",
+	"character": ["Player", "Nico", "Kasumi"]
 },
 {
 	"type": "kizuna",
 	"color": "Nico",
 	"chapter": "キズナエピソード 矢澤にこ / ソロライブ編",
 	"title": "13話 宣戦布告！",
-	"desc": "",
-	"character": []
+	"desc": "にこのソロライブを見にきていたかすみ。どっちのパフォーマンスがより優れているか、揉めはじめたにことかすみの解決策は……！？",
+	"character": ["Player", "Nico", "Kasumi"]
 },
 {
 	"type": "kizuna",
 	"color": "Nico",
 	"chapter": "キズナエピソード 矢澤にこ / ソロライブ編",
-	"title": "14話 ",
-	"desc": "",
-	"character": []
+	"title": "14話 挑戦者へ贈る言葉",
+	"desc": "どっちのパフォーマンスがより優れているか、にことかすみがライブ対決をすることに！？　絶対勝ってみせる、と勝ち気のかすみに対して、にこの反応は……",
+	"character": ["Player", "Nico", "Kasumi"]
 },
 {
 	"type": "kizuna",
@@ -3939,8 +4046,8 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
-	"color": "",
-	"chapter": "キズナエピソード",
+	"color": "Chika",
+	"chapter": "キズナエピソード 高海千歌",
 	"title": "13話 頑張れリーダー！",
 	"desc": "それぞれのグループに分かれて会議が始まった。千歌はAqoursのリーダーとしてグループを引っ張ろうと意気込むが、果たして上手くできるのか……？",
 	"character": ["Player", "Eli", "Rin", "Chika", "Hanamaru"]
@@ -6510,5 +6617,19 @@ const StoryList = [
 	"title": "持ちつ持たれつ……？",
 	"desc": "いつもエマにお世話をしてもらっている果林。このままではいけないと思い、自立しようとする果林だったが……？",
 	"character": ["Karin", "Emma"]
+},
+{
+	"type": "special",
+	"chapter": "TVアニメ「ラブライブ！虹ヶ咲学園スクールアイドル同好会」連動ストーリー 1年生",
+	"title": "負けないぞ！　一年生トリオ",
+	"desc": "ある日の練習のこと。強力なライバルでもあるニジガクの先輩たちに負けないように、秘密特訓が必要だとかすみが意気込んでいて……。",
+	"character": ["Kasumi", "Shizuku", "Rina"]
+},
+{
+	"type": "special",
+	"chapter": "TVアニメ「ラブライブ！虹ヶ咲学園スクールアイドル同好会」連動ストーリー 2年生",
+	"title": "あの子のために！",
+	"desc": "ある日のお昼、なんだか元気のない歩夢を見て心配する愛とせつ菜。２人が歩夢に理由をたずねると……？",
+	"character": ["Ayumu", "Ai", "Setsuna"]
 }
 ];
