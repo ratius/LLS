@@ -45,6 +45,7 @@ p{
 
 .main   { border-color: #68a0af; background-color: #bae3ee; }
 .event  { border-color: #c67473; background-color: #ffc5c2; }
+.special{ border-color: #e0b070; background-color: #faead4; }
 
 .StoryTable tbody td {
 	padding: 5px 10px;
@@ -209,7 +210,7 @@ function DrawEventList(){
 			Output += ' ' + temp2;
 		}
 		Output += '"';
-		if(temp1.type === "kizuna" || temp1.type === "special"){ //キズナエピソードはキャラクターの色を用いる
+		if(temp1.color){ //個別の色が設定されているなら、その色を用いる
 			Output += ' style="background-color:rgb('
 			+ Math.floor((LookUp(temp1.color, "r")+255)/2) + ','
 			+ Math.floor((LookUp(temp1.color, "g")+255)/2) + ','
@@ -397,14 +398,14 @@ loadScript("data/stories.js", function() {
 	+ '<p>スクフェスALL STARSにおける「メインストーリー」「イベントエピソード」「キズナエピソード」の一覧です。<br>「登場人物」のキャラクター名をクリック/タップすることで、絞り込むことができます。<br>イベントストーリーは、公式によるあらすじが設定されていませんが、ネタバレにならない程度に独自にあらすじを加えてあります。<\/p>'
 	
 	+ '<p><span style="font-weight:bold;">実装済データ<\/span><\/p><ul>'
-	+ '<li>メインストーリー：第1～9・18～20章<\/li>'
-	+ '<li>イベントエピソード：「最高の遊園地攻略法！？」までの28イベント分<\/li>'
+	+ '<li>メインストーリー：第1～9・18～21章<\/li>'
+	+ '<li>イベントエピソード：「１番のクリスマスプレゼント」までの29イベント分<\/li>'
 	+ '<li>キズナエピソード：<ul>'
-	+ '<li>μ&#39;s：穂乃果・絵里・ことり・凛・真姫・花陽 (各13話まで)<\/li>'
+	+ '<li>μ&#39;s：<b>全員分、2020年12月分まで掲載完了。<\/b>(各14話まで)<\/li>'
 	+ '<li>Aqours：千歌・ダイヤ・曜・鞠莉・ルビィ (各13話まで)<\/li>'
-	+ '<li>ニジガク：<b>2020年10月分まで掲載完了。<\/b>初期9人 (各21話まで)、栞子 (6話まで)<\/li>'
+	+ '<li>ニジガク：<b>全員分、2020年11月分まで掲載完了。<\/b>初期9人 (各21話まで)、栞子 (8話まで)<\/li>'
 	+ '<\/ul>'
-	+ '<li>アニメ連動ストーリー：桜坂しずくまで<\/li>'
+	+ '<li>アニメ連動ストーリー：2年生トリオまで<\/li>'
 	+ '<li>サイドエピソード：掲載予定なし<\/li>'
 	+ '<\/ul>'
 	
@@ -420,16 +421,25 @@ loadScript("data/stories.js", function() {
 <table class="history">
 <tbody>
 <tr>
-	<td>2020/11/30</td>
+	<td>2020/12/15</td>
 	<td><span class="new"></span>ストーリーを新たに掲載
 		<ul>
-			<li>メインストーリー：第21章</li>
-			<li>キズナエピソード：千歌・ダイヤ・曜・鞠莉・ルビィ (全話)</li>
-			<li>TVアニメ連動ストーリー：果林</li>
+			<li>キズナエピソード：μ's全メンバー (第14話まで)</li>
+			<li>TVアニメ連動ストーリー：1年生・2年生</li>
 		</ul>
 	</td>
 </tr>
 <!--
+<tr>
+	<td>2020/11/30</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第21章</li>
+			<li>キズナエピソード：千歌・ダイヤ・曜・鞠莉・ルビィ・栞子 (全話)</li>
+			<li>TVアニメ連動ストーリー：果林</li>
+		</ul>
+	</td>
+</tr>
 <tr>
 	<td>2020/11/24</td>
 	<td><span class="new"></span>ストーリーを新たに掲載
