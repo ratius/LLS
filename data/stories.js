@@ -1504,6 +1504,83 @@ const StoryList = [
 	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Kanata", "Setsuna", "Emma", "Rina", "Ranju", "Mia"]
 },
 {
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第22章「気づいて、小さな声」",
+	"title": "第1話 ミア・テイラー",
+	"desc": "部から同好会に戻ってきたしずく。たくさんの学びを得て、しずくのパフォーマンスはますます成長して見えた。一方、しずくの抜けたスクールアイドル部には、少し異変が、あれだけハイペースで曲を作り上げていたミアの姿が、最近見えなくて……？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Ranju"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第22章「気づいて、小さな声」",
+	"title": "第2話 ボクの曲",
+	"desc": "同好会のゲリラライブが一定の評価を得てきた。SNSに並ぶ、「いいじゃん！」の声に自信を深めるメンバー達。一方、最近ﾐｱの姿が見えないことを心配していた部の面々。大人びて見えてもまだ子供であるミアへの心配は尽きず……？",
+	"character": ["Player", "Ayumu", "Karin", "Ai", "Rina", "Shioriko", "Ranju", "Mia"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第22章「気づいて、小さな声」",
+	"title": "第3話 誰のための曲？",
+	"desc": "ランジュに外へ引き摺り出されたミア。かきあげた新曲を披露する。いつも通りの洗練された完成度の高い曲だったが、ランジュからは強烈なダメ出しが……。絶対みんなの納得いく曲をかきあげて見せると、再びミアは閉じこもってしまう。",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Kanata", "Setsuna", "Emma", "Rina", "Mia"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第22章「気づいて、小さな声」",
+	"title": "第4話 音楽の名門、テイラー家",
+	"desc": "なんだか最近、監視委員の規制がゆるくなっていることに気づき、ゲリラライブの回数をこれまで以上に増やしていこうと決めた同好会。さらなるパワーアップのため、部のライブ動画もチェックすることに。貫禄のクオリティに圧倒されるも、なにかひっかかる璃奈だった……。",
+	"character": ["Player", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Kanata", "Setsuna", "Emma", "Rina", "Mia"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第22章「気づいて、小さな声」",
+	"title": "第5話 前進する者とうずくまる者",
+	"desc": "Aqoursのライブに応援に行った同好会メンバー。そこで、ミアが世界的にも有名な音楽一家の一員であることを知る。その直後学校に戻った璃奈は、空腹で倒れていたミアを偶然見つけ、ミアの新しい一面をろ知るのだった。",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Kanata", "Setsuna", "Emma", "Rina", "Ranju", "Mia"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第22章「気づいて、小さな声」",
+	"title": "第6話 完璧な新曲を！",
+	"desc": "同好会のゲリラライブは着々と人を増やしていった。観客はそれに夢中になり、SNSには好意的な言葉が並ぶ。それを見たミアは、つい対抗した書き込みをしてしまう。同好会のステージに、ミアの集中力は乱されるばかりだった。そんな中開かれた、部のライブは……？",
+	"character": ["Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Ranju", "Mia"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第22章「気づいて、小さな声」",
+	"title": "第7話 迷子の子猫",
+	"desc": "同好会の勢いに押され、満足のいくライブがでいきていない藍綬。原因は新曲が歌えていないことだとミアを問い詰める。ミアは、曲を作ると言い残して去るが、その語ばったり姿を表さなくなったどころか、所在がわからなくなった。心配する愛たちは……？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Ranju"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第22章「気づいて、小さな声」",
+	"title": "第8話 ディーヴァは膝を抱えた",
+	"desc": "愛に頼まれ、ミアを探しに奔走する同好会メンバー。以前、空腹のミアを助けたときにシンパシーを感じていた璃奈は、心当たりの場所を探す。そして語られる、ミアの過去とは……",
+	"character": ["Rina", "Mia"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第22章「気づいて、小さな声」",
+	"title": "第9話 「楽しさ」を取り戻せ！",
+	"desc": "無事ミアを見つけ、凍った心を解きほぐすことができた璃奈。音楽は嫌い、楽しくないと言うミアのために、なにかしてあげたいと考え、名案を思いつく。それは同好会の悩みも解決できそうなアイディアで……",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第22章「気づいて、小さな声」",
+	"title": "第10話 前半 あたたかな手",
+	"desc": "璃奈の提案により、次のゲリラライブはインターネットで生配信することになった。ただの配信ではつまらないと、あれこれとアイディアを出し合う同好会メンバー。そして、今回のライブには、ミアも出ることに……",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Kanata", "Setsuna", "Emma", "Rina", "Mia"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第22章「気づいて、小さな声」",
+	"title": "第10話 後半 ディーヴァ誕生",
+	"desc": "オンラインライブのスペシャルゲスト、ミアは自分の作った曲を初めて披露した。そんなミアの歌声を聴いたみんなは……",
+	"character": ["Player", "Karin", "Ai", "Shioriko", "Ranju", "Mia"]
+},
+{
 	"type": "event",
 	"chapter": "イベントエピソード「秘密のパーティー！」",
 	"title": "第1話",
@@ -2931,8 +3008,57 @@ const StoryList = [
 	"type": "event",
 	"chapter": "イベントエピソード「１番のクリスマスプレゼント」",
 	"title": "第7話",
-	"desc": "",
-	"character": []
+	"desc": "せつ菜が買い出しから戻ってくると、そこにはプレゼントが……。",
+	"character": ["Kotori", "Hanayo", "You", "Ruby", "Ai", "Setsuna"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「イルミネーションナイト」",
+	"title": "第1話",
+	"desc": "善子と花丸が図書室で本を探していると、果林からパーティーのお誘いが……！",
+	"character": ["Hanamaru", "Yoshiko"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「イルミネーションナイト」",
+	"title": "第2話",
+	"desc": "果林は、善子と花丸だけでなく、μ'sにもパーティーのお誘いのメールを送信しているようだ。",
+	"character": ["Umi", "Nozomi", "Karin", "Emma"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「イルミネーションナイト」",
+	"title": "第3話",
+	"desc": "パーティー当日。4人は、パーティー開始まで時間はたっぷりあるので、お台場の散策に行くことに。",
+	"character": ["Umi", "Nozomi", "Yoshiko", "Hanamaru"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「イルミネーションナイト」",
+	"title": "第4話",
+	"desc": "そろそろパーティーが始まる。慣れていない花丸・善子は、落ち着かない様子だ。",
+	"character": ["Umi", "Nozomi", "Yoshiko", "Hanamaru", "Karin", "Emma"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「イルミネーションナイト」",
+	"title": "第5話",
+	"desc": "パーティーではそれぞれが楽しく過ごしている。善子とエマの元には、ファンの人がやってきて……。",
+	"character": ["Umi", "Nozomi", "Yoshiko", "Hanamaru", "Karin", "Emma"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「イルミネーションナイト」",
+	"title": "第6話",
+	"desc": "エマがパーティーの料理を楽しんでいると、突然、真っ暗に……！",
+	"character": ["Umi", "Nozomi", "Yoshiko", "Hanamaru", "Karin", "Emma"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「イルミネーションナイト」",
+	"title": "第7話",
+	"desc": "停電で真っ暗になった建物の中で、6人は歌を歌うことを場を落ち着かせることに成功。あとは各自、家路につくだけだが……？",
+	"character": ["Umi", "Nozomi", "Yoshiko", "Hanamaru", "Karin", "Emma"]
 },
 {
 	"type": "kizuna",
@@ -6620,16 +6746,30 @@ const StoryList = [
 },
 {
 	"type": "special",
-	"chapter": "TVアニメ「ラブライブ！虹ヶ咲学園スクールアイドル同好会」連動ストーリー 1年生",
+	"chapter": "TVアニメ「ラブライブ！虹ヶ咲学園スクールアイドル同好会」連動ストーリー",
 	"title": "負けないぞ！　一年生トリオ",
 	"desc": "ある日の練習のこと。強力なライバルでもあるニジガクの先輩たちに負けないように、秘密特訓が必要だとかすみが意気込んでいて……。",
 	"character": ["Kasumi", "Shizuku", "Rina"]
 },
 {
 	"type": "special",
-	"chapter": "TVアニメ「ラブライブ！虹ヶ咲学園スクールアイドル同好会」連動ストーリー 2年生",
+	"chapter": "TVアニメ「ラブライブ！虹ヶ咲学園スクールアイドル同好会」連動ストーリー",
 	"title": "あの子のために！",
 	"desc": "ある日のお昼、なんだか元気のない歩夢を見て心配する愛とせつ菜。２人が歩夢に理由をたずねると……？",
 	"character": ["Ayumu", "Ai", "Setsuna"]
+},
+{
+	"type": "special",
+	"chapter": "TVアニメ「ラブライブ！虹ヶ咲学園スクールアイドル同好会」連動ストーリー",
+	"title": "先輩らしく",
+	"desc": "エマの部屋で、みんなからもらったファンレターを読む果林と彼方とエマ。一枚一枚手紙を読んでいくと、見慣れた字を見つけて……。",
+	"character": ["Karin", "Kanata", "Emma"]
+},
+{
+	"type": "special",
+	"chapter": "TVアニメ「ラブライブ！虹ヶ咲学園スクールアイドル同好会」連動ストーリー",
+	"title": "スペクトルの空",
+	"desc": "長雨があがったある日、いてもたってもいられなくなったあなたは、自分の部屋を飛び出し、学校に向かう……！",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 }
 ];

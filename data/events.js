@@ -260,4 +260,13 @@ const EventList = [
 	"UR" : ["Kotori", "You", "Setsuna"],
 	"SR" : ["Hanayo", "Ruby", "Ai"]
 },
+{
+	"id" : 30,
+	"name" : "イルミネーションナイト",
+	"type" : "story",
+	"started" : new Date("2020-12-21T15:00:00+09:00"),
+	"ended"   : new Date("2020-12-28T14:59:59+09:00"),
+	"UR" : ["Nozomi", "Hanamaru", "Emma"],
+	"SR" : ["Umi", "Yoshiko", "Karin"]
+}
 ];
