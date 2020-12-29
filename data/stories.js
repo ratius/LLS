@@ -3050,7 +3050,7 @@ const StoryList = [
 	"type": "event",
 	"chapter": "イベントエピソード「イルミネーションナイト」",
 	"title": "第6話",
-	"desc": "エマがパーティーの料理を楽しんでいると、突然、真っ暗に……！",
+	"desc": "エマがパーティーの料理を楽しんでいると、突然、会場が真っ暗に……！？",
 	"character": ["Umi", "Nozomi", "Yoshiko", "Hanamaru", "Karin", "Emma"]
 },
 {
@@ -3729,7 +3729,7 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
-	"color": "",
+	"color": "Maki",
 	"chapter": "キズナエピソード 西木野真姫 / ソロライブ編",
 	"title": "14話 はじめてのアルバイト",
 	"desc": "凛と花陽のお揃いグッズを見た後も、表情の冴えない真姫。そんな中、あなたはショッピングモールで偶然真姫を見つけて……！？",
