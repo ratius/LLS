@@ -3745,5 +3745,102 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
 },
+
+{
+	"id": 378,
+	"name": "Hanayo",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "どうか見守っていてください",
+	"cn2": "色鮮やか☆新春",
+	"date": "2021/01/01",
+	"source": "gacha",
+	"desc": "「あけまして、浦の星流初詣ガチャ」で追加"
+},
+{
+	"id": 379,
+	"name": "Riko",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "ふふ、分かる？",
+	"cn2": "色鮮やか☆新春",
+	"date": "2021/01/01",
+	"source": "gacha",
+	"desc": "「あけまして、浦の星流初詣ガチャ」で追加"
+},
+{
+	"id": 380,
+	"name": "Ai",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "愛さんに任せて♪",
+	"cn2": "虹色Passions！",
+	"date": "2021/01/01",
+	"source": "gacha",
+	"desc": "「あけまして、浦の星流初詣ガチャ」で追加"
+},
+{
+	"id": 381,
+	"name": "Kanata",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Gd",
+	"cn1": "大吉パワーを、半分こだよ～！",
+	"cn2": "色鮮やか☆新春",
+	"date": "2021/01/07",
+	"source": "reward",
+	"desc": "イベント「あけまして、浦の星流初詣」報酬"
+},
+{
+	"id": 382,
+	"name": "Maki",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "ごくっ……じゃあ、いくわよ！",
+	"cn2": "KiRa-KiRa Sensation!",
+	"date": "2020/01/07",
+	"source": "reward",
+	"desc": "イベント「あけまして、浦の星流初詣」報酬 (3000位/7万位枠)"
+},
+{
+	"id": 383,
+	"name": "Hanamaru",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Gd",
+	"cn1": "お姫様みたいずら～っ",
+	"cn2": "MIRACLE WAVE",
+	"date": "2020/01/07",
+	"source": "reward",
+	"desc": "イベント「あけまして、浦の星流初詣」報酬 (1万位/10万位枠)"
+},
+{
+	"id": 384,
+	"name": "Ayumu",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "休んでいないとダメだよ！",
+	"cn2": "ミスティック・フェアリー",
+	"date": "2020/01/14",
+	"source": "none",
+	"desc": "「メンバーピックアップガチャ」で追加"
+},
+{
+	"id": 385,
+	"name": "Dia",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "温かい……甘くて美味しいですわね",
+	"cn2": "MIRACLE WAVE",
+	"date": "2020/01/14",
+	"source": "none",
+	"desc": "「メンバーピックアップガチャ」で追加"
+}
 ];
-const LatestUpdate = "2020/12/26 「スクスタフェス」まで";
+const LatestUpdate = "2021/01/14 「メンバーピックアップガチャ」まで";
