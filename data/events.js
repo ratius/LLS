@@ -282,8 +282,8 @@ const EventList = [
 	"id" : 32,
 	"name" : "新春丑年特別エクササイズ",
 	"type" : "story",
-	"started" : new Date("2021-01-21T15:00:00+09:00"),
-	"ended"   : new Date("2021-01-28T14:59:59+09:00"),
+	"started" : new Date("2021-01-22T15:00:00+09:00"),
+	"ended"   : new Date("2021-01-30T14:59:59+09:00"),
 	"UR" : ["Umi", "Kanan", "Karin"],
 	"SR" : ["Honoka", "Chika", "Rina"]
 },
