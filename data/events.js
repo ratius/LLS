@@ -268,5 +268,23 @@ const EventList = [
 	"ended"   : new Date("2020-12-28T14:59:59+09:00"),
 	"UR" : ["Nozomi", "Hanamaru", "Emma"],
 	"SR" : ["Umi", "Yoshiko", "Karin"]
-}
+},
+{
+	"id" : 31,
+	"name" : "あけまして、浦の星流初詣",
+	"type" : "exchange",
+	"started" : new Date("2021-01-07T15:00:00+09:00"),
+	"ended"   : new Date("2021-01-14T14:59:59+09:00"),
+	"UR" : ["Hanayo", "Riko", "Kanata"],
+	"SR" : ["Maki", "Hanamaru", "Ai"]
+},
+{
+	"id" : 32,
+	"name" : "新春丑年特別エクササイズ",
+	"type" : "story",
+	"started" : new Date("2021-01-21T15:00:00+09:00"),
+	"ended"   : new Date("2021-01-28T14:59:59+09:00"),
+	"UR" : ["Umi", "Kanan", "Karin"],
+	"SR" : ["Honoka", "Chika", "Rina"]
+},
 ];
