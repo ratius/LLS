@@ -3745,7 +3745,6 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
 },
-
 {
 	"id": 378,
 	"name": "Hanayo",
@@ -3841,6 +3840,78 @@ const RawCardList = [
 	"date": "2020/01/14",
 	"source": "none",
 	"desc": "「メンバーピックアップガチャ」で追加"
+},
+{
+	"id": 386,
+	"name": "Umi",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "全力できてください！",
+	"cn2": "モーモー♡ファームデイズ",
+	"date": "2021/01/19",
+	"source": "gacha",
+	"desc": "「新春丑年特別エクササイズガチャ」で追加"
+},
+{
+	"id": 387,
+	"name": "Chika",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "すっごい伸びるね、このおもち！",
+	"cn2": "MIRACLE WAVE",
+	"date": "2021/01/19",
+	"source": "gacha",
+	"desc": "「新春丑年特別エクササイズガチャ」で追加"
+},
+{
+	"id": 388,
+	"name": "Karin",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Sk",
+	"cn1": "こんな感じで",
+	"cn2": "モーモー♡ファームデイズ",
+	"date": "2021/01/22",
+	"source": "gacha",
+	"desc": "「新春丑年特別エクササイズガチャ」で追加"
+},
+{
+	"id": 389,
+	"name": "Kanan",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sp",
+	"cn1": "いつでもオッケーだよ！",
+	"cn2": "モーモー♡ファームデイズ",
+	"date": "2021/01/22",
+	"source": "reward",
+	"desc": "イベント「新春丑年特別エクササイズ」報酬"
+},
+{
+	"id": 390,
+	"name": "Honoka",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "衣装が着れなくなっているなんて",
+	"cn2": "KiRa-KiRa Sensation!",
+	"date": "2021/01/22",
+	"source": "reward",
+	"desc": "イベント「新春丑年特別エクササイズ」報酬 (3000位/7万位枠)"
+},
+{
+	"id": 391,
+	"name": "Rina",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Vo",
+	"cn1": "先生を呼んできた",
+	"cn2": "虹色Passions！",
+	"date": "2021/01/22",
+	"source": "reward",
+	"desc": "イベント「新春丑年特別エクササイズ」報酬 (1万位/10万位枠)"
 }
 ];
-const LatestUpdate = "2021/01/14 「メンバーピックアップガチャ」まで";
+const LatestUpdate = "2021/01/19「新春丑年特別エクササイズ」まで";
