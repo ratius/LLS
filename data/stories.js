@@ -3061,6 +3061,104 @@ const StoryList = [
 	"character": ["Umi", "Nozomi", "Yoshiko", "Hanamaru", "Karin", "Emma"]
 },
 {
+	"type": "event",
+	"chapter": "イベントエピソード「あけまして、浦の星流初詣」",
+	"title": "第1話",
+	"desc": "初詣に行く前、愛の部屋で振り袖の着付けをする6人。",
+	"character": ["Maki", "Hanayo", "Riko", "Hanamaru", "Ai", "Kanata"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「あけまして、浦の星流初詣」",
+	"title": "第2話",
+	"desc": "神田明神に初詣に行った6人。みんなでおみくじを引くことになったが、真姫はあまり乗り気でないようで……。",
+	"character": ["Maki", "Hanayo", "Riko", "Hanamaru", "Ai", "Kanata"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「あけまして、浦の星流初詣」",
+	"title": "第3話",
+	"desc": "初詣を終え、花陽の家にやってきた。花陽はみんなにおせちを振る舞う。",
+	"character": ["Maki", "Hanayo", "Riko", "Hanamaru", "Ai", "Kanata"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「あけまして、浦の星流初詣」",
+	"title": "第4話",
+	"desc": "花陽がおせちの後に持ってきたのは、たくさんのお餅。彼方が「着物を脱ぐとお正月感がない」と言ったのを耳にした梨子は、あることを思い出す。",
+	"character": ["Maki", "Hanayo", "Riko", "Hanamaru", "Ai", "Kanata"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「あけまして、浦の星流初詣」",
+	"title": "第5話",
+	"desc": "内浦の海岸へやってきた6人。これから、「浦の星流初詣」が始まる。",
+	"character": ["Maki", "Hanayo", "Riko", "Hanamaru", "Ai", "Kanata"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「あけまして、浦の星流初詣」",
+	"title": "第6話",
+	"desc": "「浦の星流初詣」は果南考案のトレーニングだった！ 海と山とを往復する過酷なルートに、みんなはついていけるのか……？",
+	"character": ["Maki", "Hanayo", "Riko", "Hanamaru", "Ai", "Kanata"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「あけまして、浦の星流初詣」",
+	"title": "第7話",
+	"desc": "浦の星流初詣を無事に終えた6人。今度は、神田明神でも同じこと……！？",
+	"character": ["Maki", "Hanayo", "Riko", "Hanamaru", "Ai", "Kanata"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「新年丑年特別エクササイズ」",
+	"title": "第1話",
+	"desc": "新年早々、穂乃果の家にお邪魔している千歌と璃奈。μ'sの皆でついた餅をたくさん味わう。",
+	"character": ["Honoka", "Chika", "Rina"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「新年丑年特別エクササイズ」",
+	"title": "第2話",
+	"desc": "その数日後。海未は穂乃果を誘ってトレーニングをすることに。いつものコースのはずなのに、息が上がって走れない穂乃果は……。",
+	"character": ["Honoka", "Umi", "Chika"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「新年丑年特別エクササイズ」",
+	"title": "第3話",
+	"desc": "体重が増えていて驚く穂乃果・千歌をよそ目に、璃奈の体重は変化なし。璃奈は2人の体重を戻すために、とっておきの「先生」を用意していた！",
+	"character": ["Honoka", "Umi", "Chika", "Kanan", "Karin", "Rina"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「新年丑年特別エクササイズ」",
+	"title": "第4話",
+	"desc": "果林先生と助手の果南が用意したメニューは「羽根つき」だ。",
+	"character": ["Honoka", "Umi", "Chika", "Kanan", "Karin", "Rina"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「新年丑年特別エクササイズ」",
+	"title": "第5話",
+	"desc": "果南は千歌と海未。果林は穂乃果と璃奈を見ることに。果南のパワフルな羽子板さばきを見て、海未は……。",
+	"character": ["Honoka", "Umi", "Chika", "Kanan", "Karin", "Rina"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「新年丑年特別エクササイズ」",
+	"title": "第6話",
+	"desc": "穂乃果と千歌の体が慣れてきたところで羽根つきは終わり。しかし……？",
+	"character": ["Honoka", "Umi", "Chika", "Kanan", "Karin", "Rina"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「新年丑年特別エクササイズ」",
+	"title": "第7話",
+	"desc": "エクササイズを終え、一息ついた穂乃果と千歌は大好きなパンを頬張る。",
+	"character": ["Honoka", "Umi", "Chika", "Kanan", "Karin", "Rina"]
+},
+{
 	"type": "kizuna",
 	"color": "Honoka",
 	"chapter": "キズナエピソード 高坂穂乃果",
@@ -4180,6 +4278,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Chika",
+	"chapter": "キズナエピソード 高海千歌",
+	"title": "14話 緊急事態発生！",
+	"desc": "特設ステージについて、出演予定のスクールアイドル達と打ち合わせを行うことになった。待ち合わせ場所に集まったあなた達だが、そこでとんでもない事実が発覚して……。",
+	"character": ["Player", "Eli", "Rin", "Chika", "Hanamaru"]
+},
+{
+	"type": "kizuna",
 	"color": "Riko",
 	"chapter": "キズナエピソード 桜内梨子",
 	"title": "1話 ",
@@ -4286,105 +4392,113 @@ const StoryList = [
 	"type": "kizuna",
 	"color": "Kanan",
 	"chapter": "キズナエピソード 松浦果南",
-	"title": "1話 ",
-	"desc": "",
-	"character": []
+	"title": "1話 淡島初上陸！",
+	"desc": "淡島に初めてやって来たあなた。どんなものに、どんな人に出会えるのだろう？　期待に胸を膨らませ向かったのは……。",
+	"character": ["Player", "Kanan"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanan",
 	"chapter": "キズナエピソード 松浦果南",
-	"title": "2話 ",
-	"desc": "",
-	"character": []
+	"title": "2話 青い島",
+	"desc": "果南のダイビングの話に心を惹かれたあなた。果南の手を借り、海に潜ってみることに！",
+	"character": ["Player", "Kanan"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanan",
 	"chapter": "キズナエピソード 松浦果南",
-	"title": "3話 ",
-	"desc": "",
-	"character": []
+	"title": "3話 内浦の強み",
+	"desc": "果南と一緒に内浦の海に潜ったあなた。その美しさを大勢の人に知ってほしいのだが……。",
+	"character": ["Player", "Kanan", "Mari"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanan",
 	"chapter": "キズナエピソード 松浦果南",
-	"title": "4話 ",
-	"desc": "",
-	"character": []
+	"title": "4話 作戦会議",
+	"desc": "あなたと果南、そして鞠莉も加わり、内浦の海の良さを広めるための作戦会議を開始！",
+	"character": ["Player", "Kanan", "Mari"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanan",
 	"chapter": "キズナエピソード 松浦果南",
-	"title": "5話 ",
-	"desc": "",
-	"character": []
+	"title": "5話 広報活動",
+	"desc": "内浦のダイビングスポットをアピールするために一肌脱ぐという鞠莉。手始めは……。",
+	"character": ["Player", "Kanan", "Mari"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanan",
 	"chapter": "キズナエピソード 松浦果南",
-	"title": "6話 ",
-	"desc": "",
-	"character": []
+	"title": "6話 広報活動第2弾！",
+	"desc": "制作したPR動画が好評を博し、活気づいたダイビングショップ。満足げなあなたと果南だったが、現実はそう甘くはないようで……。",
+	"character": ["Player", "Kanan", "Dia", "Mari"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanan",
 	"chapter": "キズナエピソード 松浦果南",
-	"title": "7話 ",
-	"desc": "",
-	"character": []
+	"title": "7話 次なる一手",
+	"desc": "PR動画制作第2弾のため、早速話し合いが開かれた。あれこれ意見を出すものの、なかなか進展しない。しかし、思わぬところからヒントを得て……。",
+	"character": ["Player", "Kanan", "Dia", "Mari"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanan",
 	"chapter": "キズナエピソード 松浦果南",
-	"title": "8話 ",
-	"desc": "",
-	"character": []
+	"title": "8話 動画制作進行中！",
+	"desc": "ソロライブ動画を制作することにしたあなた達。ライブをするならば曲が必要だが……。",
+	"character": ["Player", "Kanan", "Dia", "Mari"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanan",
 	"chapter": "キズナエピソード 松浦果南",
-	"title": "9話 ",
-	"desc": "",
-	"character": []
+	"title": "9話 はじまりの3人",
+	"desc": "PR動画が完成し、果南の部屋で打ち上げを行う果南、鞠莉、ダイヤ、そしてあなた。そこであなたは、彼女たちの昔話を聞く。",
+	"character": ["Player", "Kanan", "Dia", "Mari"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanan",
 	"chapter": "キズナエピソード 松浦果南",
-	"title": "10話 ",
-	"desc": "",
-	"character": []
+	"title": "10話 PR動画作戦、大成功！",
+	"desc": "そろそろ動画の効果が出る頃だ。あなたがダイビングショップを訪ねると、店は以前にも増して大盛況しており、果南が客の対応に追われていた。",
+	"character": ["Player", "Kanan", "Dia", "Mari"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanan",
 	"chapter": "キズナエピソード 松浦果南",
-	"title": "11話 ",
-	"desc": "",
-	"character": []
+	"title": "11話 行く末",
+	"desc": "今日も繁盛している様子のダイビングショップ。喜ぶ果南を見て、あなたも嬉しくなる。そんな時、あなたの頭にふと疑問が浮かぶ……。",
+	"character": ["Player", "Kanan"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanan",
 	"chapter": "キズナエピソード 松浦果南",
-	"title": "12話 ",
-	"desc": "",
-	"character": []
+	"title": "12話 果南の変化",
+	"desc": "同好会のメンバー達と練習を終えたあなた。そこに、ダイヤから電話がかかってきた。",
+	"character": ["Player", "Kanan", "Dia", "Ayumu", "Shizuku", "Ai", "Emma"]
 },
 {
 	"type": "kizuna",
 	"color": "Kanan",
 	"chapter": "キズナエピソード 松浦果南",
-	"title": "13話 ",
-	"desc": "",
-	"character": []
+	"title": "13話 タイムリミット",
+	"desc": "将来について考え込んでいた果南。進学か、家を継ぐのか、別の道か。しかし、果南を悩ませる本当の理由は、確実に訪れる『ある未来』のことだった。",
+	"character": ["Player", "Kanan"]
+},
+{
+	"type": "kizuna",
+	"color": "Kanan",
+	"chapter": "キズナエピソード 松浦果南",
+	"title": "14話 好きだからこそ",
+	"desc": "果南の悩みは分かったものの、上手く言葉を返せないあなた。その時、果南から店に戻る時間が迫っていると聞き、あなたは手伝いを申し出る。",
+	"character": ["Player", "Kanan"]
 },
 {
 	"type": "kizuna",
@@ -4493,6 +4607,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Dia",
+	"chapter": "キズナエピソード 黒澤ダイヤ",
+	"title": "14話 パレードパニック",
+	"desc": "遊園地ではパレードも行われるらしい。観に行くことを決めたあなたとダイヤだが、パレードの前は人だかりができていて……。",
+	"character": ["Player", "Dia"]
+},
+{
+	"type": "kizuna",
 	"color": "You",
 	"chapter": "キズナエピソード 渡辺曜",
 	"title": "1話 沼津巡り！",
@@ -4594,6 +4716,15 @@ const StoryList = [
 	"chapter": "キズナエピソード 渡辺曜",
 	"title": "13話 満喫♪中華街",
 	"desc": "曜と一緒に横浜巡りを続けるあなた。次にやって来たのは中華街。にぎやかな空気に２人の心も浮き立つのだった。",
+	"character": ["Player", "You"]
+},
+{
+	"type": "kizuna",
+	"color": "You",
+	"chapter": "キズナエピソード 渡辺曜",
+	"title": "14話 氷川丸乗船！",
+	"desc": "中華街を満喫したあなたと曜。次に向かうのは観覧車から見た大きな船。船が大好きな曜は大はしゃぎ！",
+	"memo": "「<ruby>氷川丸<rt>ひかわまる</rt></ruby>」は、横浜に停泊している博物館船。2016年に国の重要文化財に指定された。",
 	"character": ["Player", "You"]
 },
 {
@@ -4910,6 +5041,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Mari",
+	"chapter": "キズナエピソード 小原鞠莉",
+	"title": "14話 見えない異変",
+	"desc": "Aqoursのソロ曲作りを手伝うため、浦女を訪れたあなた。鞠莉も楽しそうにしているが、あなたは僅かな違和感を抱いていた。そんなあなたと同じ心境の人物がいて……。",
+	"character": ["Player", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby"]
+},
+{
+	"type": "kizuna",
 	"color": "Ruby",
 	"chapter": "キズナエピソード 黒澤ルビィ",
 	"title": "1話 放課後の秘密",
@@ -5012,6 +5151,14 @@ const StoryList = [
 	"title": "13話 すれ違う想い",
 	"desc": "ルビィに会おうとするあなただが、何故かことごとく予定が合わなくなってしまった。避けられているのではないかと落ち込むあなたを、居合わせた果林達３年生が励ますが……。",
 	"character": ["Player", "Ruby", "Karin", "Kanata", "Emma"]
+},
+{
+	"type": "kizuna",
+	"color": "Ruby",
+	"chapter": "キズナエピソード 黒澤ルビィ",
+	"title": "14話 こぼれた本心",
+	"desc": "ルビィとの間に溝ができてしまい、重苦しい気持ちを抱えるあなた。しかし、あなたがいてくれることを喜ぶ同好会メンバーを見て、今までの自分の行動を思い返した。",
+	"character": ["Player", "Ruby", "Ayumu", "Kasumi", "Karin", "Ai", "Kanata", "Emma"]
 },
 {
 	"type": "kizuna",
