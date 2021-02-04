@@ -4034,4 +4034,4 @@ const RawCardList = [
 	"desc": "イベント「愛がたっぷり、バレンタイン♪」報酬 (1万位/10万位枠)"
 }
 ];
-const LatestUpdate = "2021/01/30「スクスタフェス」まで";
+const LatestUpdate = "2021/02/04「愛がたっぷり、バレンタイン♪ガチャ」まで";
