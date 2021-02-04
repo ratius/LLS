@@ -3801,7 +3801,7 @@ const RawCardList = [
 	"type": "Sp",
 	"cn1": "ごくっ……じゃあ、いくわよ！",
 	"cn2": "KiRa-KiRa Sensation!",
-	"date": "2020/01/07",
+	"date": "2021/01/07",
 	"source": "reward",
 	"desc": "イベント「あけまして、浦の星流初詣」報酬 (3000位/7万位枠)"
 },
@@ -3813,7 +3813,7 @@ const RawCardList = [
 	"type": "Gd",
 	"cn1": "お姫様みたいずら～っ",
 	"cn2": "MIRACLE WAVE",
-	"date": "2020/01/07",
+	"date": "2021/01/07",
 	"source": "reward",
 	"desc": "イベント「あけまして、浦の星流初詣」報酬 (1万位/10万位枠)"
 },
@@ -3825,7 +3825,7 @@ const RawCardList = [
 	"type": "Vo",
 	"cn1": "休んでいないとダメだよ！",
 	"cn2": "ミスティック・フェアリー",
-	"date": "2020/01/14",
+	"date": "2021/01/14",
 	"source": "none",
 	"desc": "「メンバーピックアップガチャ」で追加"
 },
@@ -3837,7 +3837,7 @@ const RawCardList = [
 	"type": "Sp",
 	"cn1": "温かい……甘くて美味しいですわね",
 	"cn2": "MIRACLE WAVE",
-	"date": "2020/01/14",
+	"date": "2021/01/14",
 	"source": "none",
 	"desc": "「メンバーピックアップガチャ」で追加"
 },
@@ -3912,6 +3912,126 @@ const RawCardList = [
 	"date": "2021/01/22",
 	"source": "reward",
 	"desc": "イベント「新春丑年特別エクササイズ」報酬 (1万位/10万位枠)"
+},
+{
+	"id": 392,
+	"name": "Nico",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "うるさいわね……ふわぁ～",
+	"cn2": "Little Venus",
+	"date": "2021/01/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 393,
+	"name": "You",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "む～、悔しい！",
+	"cn2": "宴の艶めき",
+	"date": "2021/01/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 394,
+	"name": "Rin",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "うう～～すっごいかわいいにゃー",
+	"cn2": "KiRa-KiRa Sensation!",
+	"date": "2021/01/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 395,
+	"name": "Shizuku",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sk",
+	"cn1": "運命的な出会い",
+	"cn2": "虹色Passions！",
+	"date": "2021/01/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 396,
+	"name": "Honoka",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "はい、どうぞ",
+	"cn2": "スイート♡ショコラ",
+	"date": "2021/02/04",
+	"source": "gacha",
+	"desc": "「愛がたっぷり、バレンタイン♪ガチャ」で追加"
+},
+{
+	"id": 397,
+	"name": "Ayumu",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "いつも私のことを感じてほしいな",
+	"cn2": "虹色Passions！",
+	"date": "2021/02/04",
+	"source": "gacha",
+	"desc": "「愛がたっぷり、バレンタイン♪ガチャ」で追加"
+},
+{
+	"id": 398,
+	"name": "Mari",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "最高にラヴリーな毎日を一緒に",
+	"cn2": "スイート♡ショコラ",
+	"date": "2021/02/07",
+	"source": "gacha",
+	"desc": "「愛がたっぷり、バレンタイン♪ガチャ」で追加"
+},
+{
+	"id": 399,
+	"name": "Shizuku",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "チョコに乗せて伝えたかったから",
+	"cn2": "スイート♡ショコラ",
+	"date": "2021/02/07",
+	"source": "reward",
+	"desc": "イベント「愛がたっぷり、バレンタイン♪」報酬"
+},
+{
+	"id": 400,
+	"name": "Ruby",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Vo",
+	"cn1": "大好きな人にチョコをあげるんだ",
+	"cn2": "MIRACLE WAVE",
+	"date": "2021/02/07",
+	"source": "reward",
+	"desc": "イベント「愛がたっぷり、バレンタイン♪」報酬 (3000位/7万位枠)"
+},
+{
+	"id": 401,
+	"name": "Nico",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "宇宙で一番かわいいチョコ",
+	"cn2": "KiRa-KiRa Sensation!",
+	"date": "2021/02/07",
+	"source": "reward",
+	"desc": "イベント「愛がたっぷり、バレンタイン♪」報酬 (1万位/10万位枠)"
 }
 ];
-const LatestUpdate = "2021/01/19「新春丑年特別エクササイズ」まで";
+const LatestUpdate = "2021/01/30「スクスタフェス」まで";

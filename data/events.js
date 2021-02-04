@@ -287,4 +287,13 @@ const EventList = [
 	"UR" : ["Umi", "Kanan", "Karin"],
 	"SR" : ["Honoka", "Chika", "Rina"]
 },
+{
+	"id" : 33,
+	"name" : "愛がたっぷり、バレンタイン♪",
+	"type" : "exchange",
+	"started" : new Date("2021-02-07T15:00:00+09:00"),
+	"ended"   : new Date("2021-02-14T14:59:59+09:00"),
+	"UR" : ["Honoka", "Mari", "Shizuku"],
+	"SR" : ["Nico", "Ruby", "Ayumu"]
+}
 ];
