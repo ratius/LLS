@@ -4032,6 +4032,43 @@ const RawCardList = [
 	"date": "2021/02/07",
 	"source": "reward",
 	"desc": "イベント「愛がたっぷり、バレンタイン♪」報酬 (1万位/10万位枠)"
+},
+
+{
+	"id": 402,
+	"name": "Ai",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "おめでとー！そしてありがとー！",
+	"cn2": "アイ♡ドール",
+	"date": "2021/02/14",
+	"source": "party",
+	"desc": "「メンバーピックアップガチャ」で追加"
+},
+{
+	"id": 403,
+	"name": "Hanayo",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Sk",
+	"cn1": "たくさんの人に伝わるような",
+	"cn2": "KiRa-KiRa Sensation!",
+	"date": "2021/02/14",
+	"source": "none",
+	"desc": "「メンバーピックアップガチャ」で追加"
+},
+{
+	"id": 404,
+	"name": "Shioriko",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "要検討というところでしょうか",
+	"cn2": "Love U my friends",
+	"date": "2021/02/14",
+	"source": "none",
+	"desc": "「メンバーピックアップガチャ」で追加"
 }
 ];
-const LatestUpdate = "2021/02/04「愛がたっぷり、バレンタイン♪ガチャ」まで";
+const LatestUpdate = "2021/02/14「パーティーガチャ」まで";
