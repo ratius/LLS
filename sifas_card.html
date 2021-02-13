@@ -74,6 +74,7 @@ td:hover .tool-tip {
 .reward { background-color: #abf; padding: 3px;}
 .fes    { background-color: #fac; padding: 3px;}
 .release{ background-color: #eee; padding: 3px;}
+.party  { background-color: #fda; padding: 3px;}
 .none   { background-color: #ddd; padding: 3px;}
 .na     { background-color: #fff8f0; padding: 1px; border: solid 2px #ecb; color: #ba9;}
 
@@ -124,7 +125,7 @@ const CharName = [
 const ListMuse = [0,1,2,3,4,5,6,7,8];
 const ListAqours = [9,10,11,12,13,14,15,16,17];
 const ListNiji = [18,19,20,21,22,23,24,25,26,27];
-const ToolTipSource = {'gacha':'Ｅ特効', 'reward':'Ｅ報酬', 'fes':'フェス', 'none':'非イベ', 'release':'初期'};
+const ToolTipSource = {'gacha':'Ｅ特効', 'reward':'Ｅ報酬', 'fes':'フェス', 'party':'ﾊﾟｰﾃｨｰ', 'none':'非イベ', 'release':'初期'};
 
 // ■生データから新たなデータを作成
 function LoadRawData(){
@@ -170,7 +171,7 @@ function DrawTable(group){
 		Rarity = ['UR','SR'][z];
 		OutputTmp = '';
 		blank = 0; //仕込み
-		OutputTmp += '<tr class="' + Rarity +'"><th><span class="cap">' + Rarity + ' ' + (y+1) + '周目<\/span><\/th>\n';
+		OutputTmp += '<tr class="' + Rarity +'"><th><span class="cap">' + Rarity + ' ' + (y+1) + '枚目<\/span><\/th>\n';
 		
 		for(x=0; x<group.length; x++){
 			if(y < CardList[group[x] + z*CharId.length].length){ //あるならば
