@@ -295,5 +295,23 @@ const EventList = [
 	"ended"   : new Date("2021-02-14T14:59:59+09:00"),
 	"UR" : ["Honoka", "Mari", "Shizuku"],
 	"SR" : ["Nico", "Ruby", "Ayumu"]
+},
+{
+	"id" : 34,
+	"name" : "未来のラボは大騒ぎ",
+	"type" : "story",
+	"started" : new Date("2021-02-20T15:00:00+09:00"),
+	"ended"   : new Date("2021-02-27T14:59:59+09:00"),
+	"UR" : ["Eli", "Chika", "Setsuna"],
+	"SR" : ["Kotori", "Riko", "Kanata"]
+},
+{
+	"id" : 35,
+	"name" : "思いよ届け、ホワイトデー",
+	"type" : "exchange",
+	"started" : new Date("2021-03-07T15:00:00+09:00"),
+	"ended"   : new Date("2021-03-14T14:59:59+09:00"),
+	"UR" : ["Kotori", "Hanamaru", "Rina"],
+	"SR" : ["Nozomi", "Ruby", "Emma"]
 }
 ];
