@@ -587,7 +587,7 @@ const RawCardList = [
 	"cn2": "君のこころは輝いてるかい？",
 	"date": "2019/10/03",
 	"source": "reward",
-	"desc": "イベント「秘密のパーティー！」報酬 (1000位枠)"
+	"desc": "イベント「秘密のパーティー！」報酬 (300位・40万位枠)"
 },
 {
 	"id": 104,
@@ -599,7 +599,7 @@ const RawCardList = [
 	"cn2": "わくわくアニマル",
 	"date": "2019/10/03",
 	"source": "reward",
-	"desc": "イベント「秘密のパーティー！」報酬 (300位枠)"
+	"desc": "イベント「秘密のパーティー！」報酬 (1000位・50万位枠)"
 },
 {
 	"id": 105,
@@ -2267,7 +2267,7 @@ const RawCardList = [
 	"cn2": "マーチング・ハーモニー",
 	"date": "2020/06/05",
 	"source": "reward",
-	"desc": "イベント「3人のプリンセス」報酬 (3000位/7万位枠)"
+	"desc": "イベント「3人のプリンセス」報酬 (1万位/10万位枠)"
 },
 {
 	"id": 253,
@@ -2279,7 +2279,7 @@ const RawCardList = [
 	"cn2": "Brightest Melody",
 	"date": "2020/06/05",
 	"source": "reward",
-	"desc": "イベント「3人のプリンセス」報酬 (1万位/10万位枠)"
+	"desc": "イベント「3人のプリンセス」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 254,
@@ -3500,7 +3500,7 @@ const RawCardList = [
 	"atr": "Elegant",
 	"type": "Sk",
 	"cn1": "ふふっ、こんな感じかなあ～？",
-	"cn2": "未体験HORIZON",
+	"cn2": "ユメノトビラ",
 	"date": "2020/11/26",
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
@@ -3851,7 +3851,7 @@ const RawCardList = [
 	"cn2": "モーモー♡ファームデイズ",
 	"date": "2021/01/19",
 	"source": "gacha",
-	"desc": "「新春丑年特別エクササイズガチャ」で追加"
+	"desc": "「新春丑年特別エクササイズガチャ(前編)」で追加"
 },
 {
 	"id": 387,
@@ -3863,7 +3863,7 @@ const RawCardList = [
 	"cn2": "MIRACLE WAVE",
 	"date": "2021/01/19",
 	"source": "gacha",
-	"desc": "「新春丑年特別エクササイズガチャ」で追加"
+	"desc": "「新春丑年特別エクササイズガチャ(前編)」で追加"
 },
 {
 	"id": 388,
@@ -3875,7 +3875,7 @@ const RawCardList = [
 	"cn2": "モーモー♡ファームデイズ",
 	"date": "2021/01/22",
 	"source": "gacha",
-	"desc": "「新春丑年特別エクササイズガチャ」で追加"
+	"desc": "「新春丑年特別エクササイズガチャ(後編)」で追加"
 },
 {
 	"id": 389,
@@ -4069,6 +4069,210 @@ const RawCardList = [
 	"date": "2021/02/14",
 	"source": "none",
 	"desc": "「メンバーピックアップガチャ」で追加"
+},
+{
+	"id": 405,
+	"name": "Eli",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "みんなにもよろしく♪",
+	"cn2": "スチームパンク☆アドベンチャー",
+	"date": "2021/02/17",
+	"source": "gacha",
+	"desc": "「未来のラボは大騒ぎガチャ(前編)」で追加"
+},
+{
+	"id": 406,
+	"name": "Riko",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "あ――――っ！　いた！！",
+	"cn2": "MIRACLE WAVE",
+	"date": "2021/02/17",
+	"source": "gacha",
+	"desc": "「未来のラボは大騒ぎガチャ(前編)」で追加"
+},
+{
+	"id": 407,
+	"name": "Chika",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Gd",
+	"cn1": "こっちのボタンを……あれ？",
+	"cn2": "スチームパンク☆アドベンチャー",
+	"date": "2021/02/20",
+	"source": "gacha",
+	"desc": "「未来のラボは大騒ぎガチャ(後編)」で追加"
+},
+{
+	"id": 408,
+	"name": "Setsuna",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Vo",
+	"cn1": "は、花……花びらです！",
+	"cn2": "スチームパンク☆アドベンチャー",
+	"date": "2021/02/20",
+	"source": "reward",
+	"desc": "イベント「未来のラボは大騒ぎ」報酬"
+},
+{
+	"id": 409,
+	"name": "Kotori",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "彼方さんの運命候補達です",
+	"cn2": "KiRa-KiRa Sensation!",
+	"date": "2021/02/20",
+	"source": "reward",
+	"desc": "イベント「未来のラボは大騒ぎ」報酬 (3000位/7万位枠)"
+},
+{
+	"id": 410,
+	"name": "Kanata",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "完全無欠のチーズケーキの研究",
+	"cn2": "虹色Passions！",
+	"date": "2021/02/20",
+	"source": "reward",
+	"desc": "イベント「未来のラボは大騒ぎ」報酬 (1万位/10万位枠)"
+},
+{
+	"id": 411,
+	"name": "Yoshiko",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "どうしよう、どうしよう！？",
+	"cn2": "Angel of Eden",
+	"date": "2021/02/28",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 412,
+	"name": "Rin",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Vo",
+	"cn1": "えへへ、冷たくて気持ちいいね～",
+	"cn2": "Rin's アトリエ",
+	"date": "2021/02/28",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 413,
+	"name": "Shioriko",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "私の格好、変ではありませんか？",
+	"cn2": "清純♡ラブリーモーメント",
+	"date": "2021/02/28",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 414,
+	"name": "Kanan",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "よーし、そのいき！",
+	"cn2": "MIRACLE WAVE",
+	"date": "2021/02/28",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 415,
+	"name": "Karin",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Gd",
+	"cn1": "これは……パンダのクッキー？",
+	"cn2": "虹色Passions！",
+	"date": "2021/02/28",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 416,
+	"name": "Hanamaru",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "おーい、ことりさーん！",
+	"cn2": "ピュアホワイト♡",
+	"date": "2021/03/04",
+	"source": "gacha",
+	"desc": "「思いよ届け、ホワイトデーガチャ(前編)」で追加"
+},
+{
+	"id": 417,
+	"name": "Nozomi",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "……このことだったんやね",
+	"cn2": "KiRa-KiRa Sensation!",
+	"date": "2021/03/04",
+	"source": "gacha",
+	"desc": "「思いよ届け、ホワイトデーガチャ(前編)」で追加"
+},
+{
+	"id": 418,
+	"name": "Rina",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "お願い、力をかして",
+	"cn2": "ピュアホワイト♡",
+	"date": "2021/03/07",
+	"source": "gacha",
+	"desc": "「思いよ届け、ホワイトデーガチャ(後編)」で追加"
+},
+{
+	"id": 419,
+	"name": "Kotori",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "ちゃんと届きますように！",
+	"cn2": "ピュアホワイト♡",
+	"date": "2021/03/07",
+	"source": "reward",
+	"desc": "イベント「思いよ届け、ホワイトデー」報酬"
+},
+{
+	"id": 420,
+	"name": "You",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Gd",
+	"cn1": "手触りもたまらない",
+	"cn2": "MIRACLE WAVE",
+	"date": "2021/03/07",
+	"source": "reward",
+	"desc": "イベント「思いよ届け、ホワイトデー」報酬 (3000位/7万位枠)"
+},
+{
+	"id": 421,
+	"name": "Emma",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "だから……ぎゅーっ！",
+	"cn2": "虹色Passions！",
+	"date": "2021/03/07",
+	"source": "reward",
+	"desc": "イベント「思いよ届け、ホワイトデー」報酬 (1万位/10万位枠)"
 }
 ];
-const LatestUpdate = "2021/02/14「パーティーガチャ」まで";
+const LatestUpdate = "2021/03/07「思いよ届け、ホワイトデー」まで";

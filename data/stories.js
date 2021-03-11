@@ -1403,7 +1403,7 @@ const StoryList = [
 	"chapter": "メインストーリー / 2nd season / 第20章「スクールアイドル同好会VSスクールアイドル部！？」",
 	"title": "第6話 楽に呼吸ができる場所",
 	"desc": "栞子から、ランジュがそう悪い人間ではないと聞き、ますます思い悩むあなた。同好会のみんなのために本当にいいことってなんだろう？　思い悩む日々だが、μ's、Aqoursの面々に会い、久しぶりに笑顔が戻る",
-	"character": ["Player", "Honoka", "Kotori", "Umi", "Chika", "You", "Ayumu", "Kasumi"]
+	"character": ["Player", "Honoka", "Kotori", "Umi", "Chika", "You", "Ayumu", "Kasumi", "Secretary"]
 },
 {
 	"type": "main",
@@ -1571,7 +1571,7 @@ const StoryList = [
 	"chapter": "メインストーリー / 2nd season / 第22章「気づいて、小さな声」",
 	"title": "第10話 前半 あたたかな手",
 	"desc": "璃奈の提案により、次のゲリラライブはインターネットで生配信することになった。ただの配信ではつまらないと、あれこれとアイディアを出し合う同好会メンバー。そして、今回のライブには、ミアも出ることに……",
-	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Kanata", "Setsuna", "Emma", "Rina", "Mia"]
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Kanata", "Setsuna", "Emma", "Rina", "Mia", "Secretary"]
 },
 {
 	"type": "main",
@@ -1592,7 +1592,7 @@ const StoryList = [
 	"chapter": "メインストーリー / 2nd season / 第23章「愛さんプロデュース！合同イベント！　前編」",
 	"title": "第2話 理想と目標",
 	"desc": "今の自分の新たな想いを自覚した愛、自分のぶが同好会より圧倒的に優れていることを知らしめるためのアイディアを要求したランジュ。何か新しいことが生まれそうな雰囲気の中、栞子は同好会のみんなのもとへと足を運ぶのだった",
-	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu"]
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Secretary"]
 },
 {
 	"type": "main",
@@ -1649,6 +1649,76 @@ const StoryList = [
 	"title": "第10話 組み合わせ抽選会！",
 	"desc": "二人きりのプチ合宿で闘志を高めた愛と果林。ついに合同イベントの組み合わせ抽選会の日が来た。組み合わせ抽選は公開形式。歩夢、彼方、エマが司会になり、一週間後の決戦の相手が決まる！！",
 	"character": ["Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 愛さんプロデュース！合同イベント！　後編",
+	"title": "第1話 準備万端！　いきます！",
+	"desc": "愛プロデュース・合同イベントの対戦カードは、璃奈vs愛、しずくvsランジュ、かすみvs果林、せつ菜vs栞子に決まった。熱い戦いが繰り広げられるであろう日の朝は、静かに始まる……",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Setsuna", "Rina", "Shioriko", "Lanzhu", "Mia"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 愛さんプロデュース！合同イベント！　後編",
+	"title": "第2話 １回戦第１ステージ、開始！",
+	"desc": "愛プロデュース・合同イベントがついに始まった！　１回戦第１ステージのカードは璃奈vs愛！　愛と戦うにあたり、璃奈には秘密の作戦があり……？",
+	"character": ["Player", "Ayumu", "Ai", "Kanata", "Emma", "Rina", "Mia"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 愛さんプロデュース！合同イベント！　後編",
+	"title": "第3話 １回戦第２ステージ、開始！",
+	"desc": "１回戦第１ステージ、璃奈vs愛の対決は、愛が勝利をおさめた。続く１回戦第２試合はしずくvsランジュ。部から戻ってきたしずくが、ランジュに挑む……！",
+	"character": ["Player", "Ayumu", "Shizuku", "Ai", "Kanata", "Emma", "Rina", "Lanzhu", "Mia"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 愛さんプロデュース！合同イベント！　後編",
+	"title": "第4話 １回戦第３ステージ、開始！",
+	"desc": "１回戦第１ステージ、璃奈vs愛の対決は、愛が勝利をおさめ、第２ステージ、しずくvsランジュの対決は、ランジュが勝利をおさめた。続く１回戦第３ステージはかすみvs果林。正反対の個性を持つ２人の勝負の行方は！？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Kanata", "Emma", "Rina", "Secretary"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 愛さんプロデュース！合同イベント！　後編",
+	"title": "第5話 ランチタイム、そして……",
+	"desc": "午前中に開催された１回戦が終わった。合同イベントは一旦ランチタイムを挟む。あなたたちは白熱の１回戦を振り返り……？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Mia", "Secretary"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 愛さんプロデュース！合同イベント！　後編",
+	"title": "第6話 認めているの",
+	"desc": "同好会のランチタイムに乱入したランジュとミア。それなりに楽しい時間を過ごし、午後の準備のために部室に戻って来た。プロの本気のしに意図を求めるランジュが、生徒たち手作りの拙いイベントに文句ひとつ言わず参加していることを不思議に思ったミアは……？",
+	"character": ["Player", "Ayumu", "Kanata", "Emma", "Lanzhu", "Mia"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 愛さんプロデュース！合同イベント！　後編",
+	"title": "第7話 魂のビッグバン",
+	"desc": "ついに合同イベント午後の部が始まる！　２回戦第１ステージはせつ菜vs愛。ずっとせつ菜と戦ってみたかった愛。ついにその願いが叶うときがきた。同好会から部に移ってまで自分を鍛え上げてきた愛が、せつ菜に挑む！",
+	"character": ["Player", "Ayumu", "Shizuku", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Lanzhu"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 愛さんプロデュース！合同イベント！　後編",
+	"title": "第8話 私の最高のライバル！",
+	"desc": "２回戦第１ステージ、せつ菜vs愛。人を引きつける天性の魅力を武器に、プロレベルの演出を得て最高のパフォーマンスを行った愛。せつ菜は、愛とは正反対の静のパフォーマンス。派手な演出も動きもなく、ただ優木せつ菜という個性をこれでもかと表現した。結果は……",
+	"character": ["Player", "Ai", "Setsuna"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 愛さんプロデュース！合同イベント！　後編",
+	"title": "第9話 いよいよ決勝戦！",
+	"desc": "愛vsせつ菜の対決は、お互いに相手を褒め称える素晴らしい対決になった。白熱した対決が続く中、ステージはいよいよ決勝戦を迎える……",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Mia"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 愛さんプロデュース！合同イベント！　後編",
+	"title": "第10話 トップの行方",
+	"desc": "せつ菜vsランジュの決勝戦。同好会メンバーの期待を一身に背負って立ち向かうせつ菜と、いつも通りワガママな姿勢を貫き通すランジュの勝負の決着がついた……",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Mia"]
 },
 {
 	"type": "event",
@@ -3229,6 +3299,154 @@ const StoryList = [
 	"character": ["Honoka", "Umi", "Chika", "Kanan", "Karin", "Rina"]
 },
 {
+	"type": "event",
+	"chapter": "イベントエピソード「愛がたっぷり、バレンタイン♪」",
+	"title": "第1話",
+	"desc": "練習を終えたしずくとルビィ。しずくは、バレンタインに本命チョコを手作りしようと考えていた。",
+	"character": ["Honoka", "Nico", "Mari", "Ruby", "Ayumu", "Shizuku"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「愛がたっぷり、バレンタイン♪」",
+	"title": "第2話",
+	"desc": "学年ごとに分かれてチョコを作ることになった6人。穂乃果と歩夢は、買い出しを終えて喫茶店に立ち寄っていた。",
+	"character": ["Honoka", "Ayumu"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「愛がたっぷり、バレンタイン♪」",
+	"title": "第3話",
+	"desc": "チョコ作りを始める鞠莉とにこ。鞠莉は海外からあれこれ食材を持ってきたようだが……？",
+	"character": ["Nico", "Mari"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「愛がたっぷり、バレンタイン♪」",
+	"title": "第4話",
+	"desc": "ルビィとしずくは無事にチョコが完成し、本命チョコを渡す相手について語り合う。",
+	"character": ["Ruby", "Shizuku"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「愛がたっぷり、バレンタイン♪」",
+	"title": "第5話",
+	"desc": "チョコ交換パーティの日がやってきた。それぞれが作ったチョコを持参して。",
+	"character": ["Honoka", "Nico", "Mari", "Ruby", "Ayumu", "Shizuku"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「愛がたっぷり、バレンタイン♪」",
+	"title": "第6話",
+	"desc": "「ただ交換するだけではつまらない」というにこの提案で、みんなはチョコの渡し方を披露することに。",
+	"character": ["Honoka", "Nico", "Mari", "Ruby", "Ayumu", "Shizuku"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「愛がたっぷり、バレンタイン♪」",
+	"title": "第7話",
+	"desc": "交換パーティは大成功だが、皆はしずくが本命チョコを作ろうとしていたことを思い出す。その相手とは……？",
+	"character": ["Honoka", "Nico", "Mari", "Ruby", "Ayumu", "Shizuku"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「未来のラボは大騒ぎ」",
+	"title": "第1話",
+	"desc": "科学雑誌のライターである絵里は、「天王寺ラボ」の取材に来ていた。しかし璃奈は海外出張であいにくの不在だ。",
+	"character": ["Eli", "Chika", "Riko"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「未来のラボは大騒ぎ」",
+	"title": "第2話",
+	"desc": "ラボにやってきた絵里。絵里の目に入ってきたのは、厨房のような部屋だった。",
+	"character": ["Eli", "Chika", "Riko", "Kanata"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「未来のラボは大騒ぎ」",
+	"title": "第3話",
+	"desc": "彼方が試作したチーズケーキをいただいた絵里・千歌・梨子。次は、みんなでことりの研究室におじゃまする。",
+	"character": ["Eli", "Kotori", "Chika", "Riko", "Kanata"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「未来のラボは大騒ぎ」",
+	"title": "第4話",
+	"desc": "ことりの開発した枕で微睡んでいると、突如、大きな爆発音が……！",
+	"character": ["Eli", "Kotori", "Chika", "Riko", "Kanata", "Setsuna"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「未来のラボは大騒ぎ」",
+	"title": "第5話",
+	"desc": "爆発音はせつ菜の実験によるものだった。絵里は本来の目的を思い出し、所長室へと行く。",
+	"character": ["Eli", "Kotori", "Chika", "Riko", "Kanata", "Setsuna"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「未来のラボは大騒ぎ」",
+	"title": "第6話",
+	"desc": "所長室での取材中、ラボに警報が鳴り響く。そこは時間操作の研究室からだ！",
+	"character": ["Eli", "Kotori", "Chika", "Riko", "Kanata", "Setsuna"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「未来のラボは大騒ぎ」",
+	"title": "第7話",
+	"desc": "装置の暴走は、千歌がコンセントを引っこ抜いてなんとか収まった。",
+	"character": ["Eli", "Kotori", "Chika", "Riko", "Kanata", "Setsuna"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「思いよ届け、ホワイトデー」",
+	"title": "第1話",
+	"desc": "エマからバレンタインデーのチョコレートをもらった璃奈。そのお礼に何を贈るか、ことりと曜に相談する。",
+	"memo": "回想シーンで語られている通り、ヨーロッパのバレンタインデーの贈り物はチョコレートとは限らない。また、ホワイトデーの習慣は無い（日本が発祥であるため）。",
+	"character": ["Kotori", "You", "Rina"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「思いよ届け、ホワイトデー」",
+	"title": "第2話",
+	"desc": "プレゼントに良さそうなぬいぐるみを見つけたことり・曜・璃奈。そこに偶然エマと花丸が通りかかって……。",
+	"character": ["Kotori", "You", "Hanamaru", "Emma", "Rina"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「思いよ届け、ホワイトデー」",
+	"title": "第3話",
+	"desc": "プレゼントを渡そうと思っている相手に何をしているかと聞かれた3人だったが、ことりの咄嗟の機転で切り抜ける。",
+	"character": ["Kotori", "You", "Hanamaru", "Emma", "Rina"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「思いよ届け、ホワイトデー」",
+	"title": "第4話",
+	"desc": "花丸とエマは、希との待ち合わせにやってきた。「来る途中に曜と璃奈に会ったが、何だか慌てていた」と聞いた希がとった行動とは……。",
+	"character": ["Nozomi", "Hanamaru", "Emma"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「思いよ届け、ホワイトデー」",
+	"title": "第5話",
+	"desc": "プレゼントをぬいぐるみにしようと思ったが、値段の高さで断念した3人。璃奈はゲーム大会に出場して、優勝賞品のぬいぐるみを手に入れようとする。",
+	"character": ["Kotori", "Nozomi", "You", "Hanamaru", "Emma", "Rina"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「思いよ届け、ホワイトデー」",
+	"title": "第6話",
+	"desc": "希・花丸・エマが璃奈たちのいる所へ駆けつけてきた！　ことりと曜は、璃奈を集中させてあげるため、そっと見守ってもらうように説得する。",
+	"character": ["Kotori", "Nozomi", "You", "Hanamaru", "Emma", "Rina"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「思いよ届け、ホワイトデー」",
+	"title": "第7話",
+	"desc": "ゲーム大会で優勝し、賞品のぬいぐるみを手に入れた璃奈。バレンタインのお返しとして、そのぬいぐるみをエマにプレゼントする。",
+	"character": ["Kotori", "Nozomi", "You", "Hanamaru", "Emma", "Rina"]
+},
+{
 	"type": "kizuna",
 	"color": "Honoka",
 	"chapter": "キズナエピソード 高坂穂乃果",
@@ -3344,6 +3562,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Honoka",
+	"chapter": "キズナエピソード 高坂穂乃果 / ソロライブ編",
+	"title": "15話 これが私の答え！",
+	"desc": "気持ちが定まらない様子の穂乃果。ソロライブへの情熱は失われてしまったのか……？　あなたへ届ける、穂乃果の答えとは",
+	"character": ["Player", "Honoka", "Ayumu", "Karin"]
+},
+{
+	"type": "kizuna",
 	"color": "Eli",
 	"chapter": "キズナエピソード 絢瀬絵里",
 	"title": "1話 ステージ実現のために",
@@ -3453,6 +3679,14 @@ const StoryList = [
 	"title": "14話 私たちのボランティア！",
 	"desc": "亜里沙の思い違いからはじまった絵里の退学騒動。これからも絵里がいてくれることに安心したあなたに、絵里は相談に乗って欲しいことがあると告げる。",
 	"character": ["Player", "Honoka", "Eli", "Kotori", "Eli", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Arisa"]
+},
+{
+	"type": "kizuna",
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里 / ソロライブ編",
+	"title": "15話 アキバお掃除大作戦！！",
+	"desc": "一人でボランティア活動をしようとする絵里に対して、全員でやろうと説得するあなた。せっかくのボランティア活動、思いっきりお掃除しちゃおう！",
+	"character": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Ayumu", "Ai", "Setsuna", "Yukiho", "Arisa"]
 },
 {
 	"type": "kizuna",
@@ -3568,6 +3802,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Kotori",
+	"chapter": "キズナエピソード 南ことり / ソロライブ編",
+	"title": "15話 わくわくが止まらない！",
+	"desc": "スクールアイドルとお洋服のデザインの両立は無理だと悩んでいたことりに、スクールアイドルのみんなにもショーに出演してもらおうと持ちかけるあなた。ことりは思い切って、デザインを引き受けることに……！",
+	"character": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Nico", "Chika", "Dia", "Ayumu", "Karin"]
+},
+{
+	"type": "kizuna",
 	"color": "Umi",
 	"chapter": "キズナエピソード 園田海未",
 	"title": "1話 スクールアイドルへの想い",
@@ -3676,6 +3918,14 @@ const StoryList = [
 	"chapter": "キズナエピソード 園田海未 / ソロライブ編",
 	"title": "14話 心の届け方",
 	"desc": "海未のライブパフォーマンスに憧れた璃奈が、まさかの弟子入り！？　感情を表現したい璃奈へ、海未が贈るアドバイスは……",
+	"character": ["Player", "Umi", "Rina"]
+},
+{
+	"type": "kizuna",
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未 / ソロライブ編",
+	"title": "15話 勇気を出して、また一歩",
+	"desc": "心を届けることを大切にすれば、きっと璃奈にも豊かな表現ができるはず、と璃奈に教えた海未。璃奈へ思いを伝えるうちに、海未には新たな感情が……？",
 	"character": ["Player", "Umi", "Rina"]
 },
 {
@@ -3793,6 +4043,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Rin",
+	"chapter": "キズナエピソード 星空凛 / ソロライブ編",
+	"title": "15話 本当のかわいい！",
+	"desc": "ジョイントライブに向けて、かわいい特訓を続ける凛と花丸。自分ならではのかわいいを見つけた二人のジョイントライブ。今、幕が上がる……！",
+	"character": ["Player", "Rin", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby"]
+},
+{
+	"type": "kizuna",
 	"color": "Maki",
 	"chapter": "キズナエピソード 西木野真姫",
 	"title": "1話 返事しなくちゃいけない？",
@@ -3905,6 +4163,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Maki",
+	"chapter": "キズナエピソード 西木野真姫 / ソロライブ編",
+	"title": "15話 真姫のほしいもの",
+	"desc": "初めてのアルバイトを無事に終えた真姫は、あなたを連れてショッピングモールへと向かう。真姫のほしいものとは……",
+	"character": ["Player", "Maki"]
+},
+{
+	"type": "kizuna",
 	"color": "Nozomi",
 	"chapter": "キズナエピソード 東條希",
 	"title": "1話 パワーでお迎え♪",
@@ -4010,10 +4276,18 @@ const StoryList = [
 {
 	"type": "kizuna",
 	"color": "Nozomi",
-	"chapter": "キズナエピソード 東條希",
+	"chapter": "キズナエピソード 東條希 / ソロライブ編",
 	"title": "14話 知らない自分に会いたくて",
 	"desc": "ソロ活動で新しいことに挑戦したい、とニジガクへ勉強しにいく希は、愛のパフォーマンスに圧倒される。自分とは違うタイプだかから、と話していた希だが……",
 	"character": ["Player", "Nozomi", "Kasumi", "Ai", "Kanata", "Setsuna"]
+},
+{
+	"type": "kizuna",
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希 / ソロライブ編",
+	"title": "15話 みんなと作るソロライブ！",
+	"desc": "今までとは違う自分らしさを見つけたい、とエマや愛に練習を手伝ってもらった希。みんなの力を借りて、ソロライブのステージへ向かう希が気づいたことは……。",
+	"character": ["Player", "Honoka", "Rin", "Nozomi", "Ai", "Emma"]
 },
 {
 	"type": "kizuna",
@@ -4130,6 +4404,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Hanayo",
+	"chapter": "キズナエピソード 小泉花陽 / ソロライブ編",
+	"title": "15話 私にできること♪",
+	"desc": "スクールアイドルが好きな小・中学生にアドバイスを続けていく花陽は、間違えてきてしまった彼方にも最高のアドバイスをする。そして、会場にはもう一人スクールアイドルが……？",
+	"character": ["Player", "Hanayo", "Ruby", "Kanata"]
+},
+{
+	"type": "kizuna",
 	"color": "Nico",
 	"chapter": "キズナエピソード 矢澤にこ",
 	"title": "1話 手伝いなんていらないっ！",
@@ -4239,6 +4521,14 @@ const StoryList = [
 	"chapter": "キズナエピソード 矢澤にこ / ソロライブ編",
 	"title": "14話 挑戦者へ贈る言葉",
 	"desc": "どっちのパフォーマンスがより優れているか、にことかすみがライブ対決をすることに！？　絶対勝ってみせる、と勝ち気のかすみに対して、にこの反応は……",
+	"character": ["Player", "Nico", "Kasumi"]
+},
+{
+	"type": "kizuna",
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ / ソロライブ編",
+	"title": "15話 ジョイントライブで対決！",
+	"desc": "かすみの挑戦者としての心意気を評価し、それに応えるためにも練習を重ねていくにこ。どちらの方が優れたパフォーマンスをできるのか、にことかすみのライブ対決が今はじまる！",
 	"character": ["Player", "Nico", "Kasumi"]
 },
 {
@@ -4356,107 +4646,131 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
-	"color": "Riko",
-	"chapter": "キズナエピソード 桜内梨子",
-	"title": "1話 ",
-	"desc": "",
-	"character": []
+	"color": "Chika",
+	"chapter": "キズナエピソード 高海千歌",
+	"title": "15話 千歌の力",
+	"desc": "間違った打ち合わせ場所を通知してしまい、途方に暮れるあなた達。このまま打ち合わせは中止になってしまうのか……？",
+	"character": ["Player", "Eli", "Rin", "Chika", "Hanamaru"]
 },
 {
 	"type": "kizuna",
 	"color": "Riko",
 	"chapter": "キズナエピソード 桜内梨子",
-	"title": "2話 ",
-	"desc": "",
-	"character": []
+	"title": "1話 コンサートホールにて",
+	"desc": "ピアノコンサートのポスターに興味を惹かれ、ホールを訪れたあなた。チケットを買い会場に入ると、そこで思いがけない人物と遭遇する。",
+	"character": ["Player", "Riko"]
 },
 {
 	"type": "kizuna",
 	"color": "Riko",
 	"chapter": "キズナエピソード 桜内梨子",
-	"title": "3話 ",
-	"desc": "",
-	"character": []
+	"title": "2話 弱日の旋律",
+	"desc": "コンサートに出演するピアニストは、なんと梨子がかつてピアノを習っていた人物だった。懐かしそうな梨子だが、どこか思いつめているようでもあり……。",
+	"character": ["Player", "Riko"]
 },
 {
 	"type": "kizuna",
 	"color": "Riko",
 	"chapter": "キズナエピソード 桜内梨子",
-	"title": "4話 ",
-	"desc": "",
-	"character": []
+	"title": "3話 スランプ発覚！？",
+	"desc": "沼津で梨子と再開したあなた。あなたは、梨子に先生とどんな話をしたのかたずねる。梨子が話したのは内浦での生活のこと、そして……。",
+	"character": ["Player", "Riko"]
 },
 {
 	"type": "kizuna",
 	"color": "Riko",
 	"chapter": "キズナエピソード 桜内梨子",
-	"title": "5話 ",
-	"desc": "",
-	"character": []
+	"title": "4話 Aqoursの曲",
+	"desc": "Aqoursのために良い曲を作るため、日々悩み試行錯誤していた梨子。なかなか納得いく成果をあげられないという彼女に、あなたはあるお願いをする。",
+	"character": ["Player", "Riko"]
 },
 {
 	"type": "kizuna",
 	"color": "Riko",
 	"chapter": "キズナエピソード 桜内梨子",
-	"title": "6話 ",
-	"desc": "",
-	"character": []
+	"title": "5話 自分のため、みんなのため",
+	"desc": "梨子のピアノを聴きたい、と２人で訪れた浦女の音楽室で、あなたがリクエストした曲は……。",
+	"character": ["Player", "Riko"]
 },
 {
 	"type": "kizuna",
 	"color": "Riko",
 	"chapter": "キズナエピソード 桜内梨子",
-	"title": "7話 ",
-	"desc": "",
-	"character": []
+	"title": "6話 踏み出した一歩",
+	"desc": "あなたのおかげで、曲作りに対して前向きになることが出来た梨子。すっかり調子が戻ったその姿に、あなたも安心するのだった。",
+	"character": ["Player", "Riko"]
 },
 {
 	"type": "kizuna",
 	"color": "Riko",
 	"chapter": "キズナエピソード 桜内梨子",
-	"title": "8話 ",
-	"desc": "",
-	"character": []
+	"title": "7話 生み出す喜び",
+	"desc": "9人グループの曲を作曲をする梨子と、9人分のソロ曲を作曲するあなた。身を置く状況は違えども、同じ作曲担当として2人には通じ合うものがあった。",
+	"character": ["Player", "Riko"]
 },
 {
 	"type": "kizuna",
 	"color": "Riko",
 	"chapter": "キズナエピソード 桜内梨子",
-	"title": "9話 ",
-	"desc": "",
-	"character": []
+	"title": "8話 練習、お邪魔します！",
+	"desc": "あなたからの誘いもあり、虹ヶ咲学園を訪れた梨子。同好会メンバーにも暖かく迎えられた梨子は、練習風景を見学することに……。",
+	"character": ["Player", "Riko", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "kizuna",
 	"color": "Riko",
 	"chapter": "キズナエピソード 桜内梨子",
-	"title": "10話 ",
-	"desc": "",
-	"character": []
+	"title": "9話 語らいの夜",
+	"desc": "ある日の夜、あなたのもとに梨子から電話がかかってきた。ちょうど梨子のことを考えていたあなたは……。",
+	"character": ["Player", "Riko"]
 },
 {
 	"type": "kizuna",
 	"color": "Riko",
 	"chapter": "キズナエピソード 桜内梨子",
-	"title": "11話 ",
-	"desc": "",
-	"character": []
+	"title": "10話 ほの暗い揺らぎ",
+	"desc": "ある夜、あなたは梨子に電話をかけた。他愛ない会話をする2人だったが、梨子はなにかを感じ取る。",
+	"character": ["Player", "Riko"]
 },
 {
 	"type": "kizuna",
 	"color": "Riko",
 	"chapter": "キズナエピソード 桜内梨子",
-	"title": "12話 ",
-	"desc": "",
-	"character": []
+	"title": "11話 沈む叫び",
+	"desc": "ニジガクのイベントが迫る中、あなたはひとり、ぼんやりと内浦の海を眺めていた。そんなあなたを見つけた梨子は……。",
+	"character": ["Player", "Riko"]
 },
 {
 	"type": "kizuna",
 	"color": "Riko",
 	"chapter": "キズナエピソード 桜内梨子",
-	"title": "13話 ",
-	"desc": "",
-	"character": []
+	"title": "12話 霧の中",
+	"desc": "梨子に連れられ、喫茶店へやって来た2人。そこでようやく落ち着きを取り戻したあなたに梨子は……。",
+	"character": ["Player", "Riko"]
+},
+{
+	"type": "kizuna",
+	"color": "Riko",
+	"chapter": "キズナエピソード 桜内梨子",
+	"title": "13話 和らぐ指先",
+	"desc": "喫茶店を出た梨子は、あなたを連れて、ある場所へ向かう。そこは……。",
+	"character": ["Player", "Riko"]
+},
+{
+	"type": "kizuna",
+	"color": "Riko",
+	"chapter": "キズナエピソード 桜内梨子",
+	"title": "14話 晴れやかな心で",
+	"desc": "イベント当日。調子を取り戻したあなたに安堵する同好会のメンバー達。本番を控えるメンバー達の前に、梨子が姿を現した。",
+	"character": ["Player", "Riko", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
+},
+{
+	"type": "kizuna",
+	"color": "Riko",
+	"chapter": "キズナエピソード 桜内梨子",
+	"title": "15話 素敵な曲の作り方",
+	"desc": "再びコンサートにやって来た梨子とあなた。晴れやかな気持ちでコンサートを楽しむあなたは……。",
+	"character": ["Player", "Riko"]
 },
 {
 	"type": "kizuna",
@@ -4572,6 +4886,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Kanan",
+	"chapter": "キズナエピソード 松浦果南",
+	"title": "15話 『好き』を行く道",
+	"desc": "お店の仕事を終え、一息ついたあなたと果南。生き生きと仕事をする果南を傍で見ていたあなたは……。",
+	"character": ["Player", "Kanan"]
+},
+{
+	"type": "kizuna",
 	"color": "Dia",
 	"chapter": "キズナエピソード 黒澤ダイヤ",
 	"title": "1話 見慣れぬ一面",
@@ -4681,6 +5003,14 @@ const StoryList = [
 	"chapter": "キズナエピソード 黒澤ダイヤ",
 	"title": "14話 パレードパニック",
 	"desc": "遊園地ではパレードも行われるらしい。観に行くことを決めたあなたとダイヤだが、パレードの前は人だかりができていて……。",
+	"character": ["Player", "Dia"]
+},
+{
+	"type": "kizuna",
+	"color": "Dia",
+	"chapter": "キズナエピソード 黒澤ダイヤ",
+	"title": "15話 楽しむならば最後まで",
+	"desc": "パレードの人混みのせいで、ダイヤとはぐれてしまったあなた。無事にダイヤと合流することはできるのか？",
 	"character": ["Player", "Dia"]
 },
 {
@@ -4799,211 +5129,252 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
-	"color": "Yoshiko",
-	"chapter": "キズナエピソード 津島善子",
-	"title": "1話 ",
-	"desc": "",
-	"character": []
+	"color": "You",
+	"chapter": "キズナエピソード 渡辺曜",
+	"title": "15話 さよなら横浜",
+	"desc": "思う存分氷川丸を堪能したあなたと曜。しかし、楽しい横浜巡りもそろそろ終盤。最後を締めくくるのは……",
+	"character": ["Player", "You"]
 },
 {
 	"type": "kizuna",
 	"color": "Yoshiko",
 	"chapter": "キズナエピソード 津島善子",
-	"title": "2話 ",
-	"desc": "",
-	"character": []
+	"title": "1話 ドロップアイテム",
+	"desc": "道端で奇妙な物体を拾ったあなた。交番に届けようと思った時、善子に声を掛けられる。",
+	"character": ["Player", "Yoshiko"]
 },
 {
 	"type": "kizuna",
 	"color": "Yoshiko",
 	"chapter": "キズナエピソード 津島善子",
-	"title": "3話 ",
-	"desc": "",
-	"character": []
+	"title": "2話 堕天使の側近",
+	"desc": "キーホルダーを直してくれたあなたに、善子は感謝の気持ちを込めて、堕天使ヨハネの側近の地位を与える。かくして新たなリトルデーモンが誕生した！",
+	"character": ["Player", "Yoshiko"]
 },
 {
 	"type": "kizuna",
 	"color": "Yoshiko",
 	"chapter": "キズナエピソード 津島善子",
-	"title": "4話 ",
-	"desc": "",
-	"character": []
+	"title": "3話 新たな試み",
+	"desc": "あなたは、善子から『リトルデーモン増員計画』と称した動画撮影に協力を求められる。撮影にあたり試したいことがあるという善子。一体何をするつもりなのか？",
+	"character": ["Player", "Yoshiko"]
 },
 {
 	"type": "kizuna",
 	"color": "Yoshiko",
 	"chapter": "キズナエピソード 津島善子",
-	"title": "5話 ",
-	"desc": "",
-	"character": []
+	"title": "4話 怖がり疑惑",
+	"desc": "動画撮影決行日。期待と緊張でそわそわするあなたとは対照的に、善子は憮然としている。どうやら動画内で実況するゲームに不満があるようだ。",
+	"character": ["Player", "Yoshiko"]
 },
 {
 	"type": "kizuna",
 	"color": "Yoshiko",
 	"chapter": "キズナエピソード 津島善子",
-	"title": "6話 ",
-	"desc": "",
-	"character": []
+	"title": "5話 ヨハネとお供のホラー実況",
+	"desc": "生配信が始まり、ヨハネモードの善子と共にゲームを開始するあなた。どんな配信内容となるかドキドキしたのもつかの間、善子の絶叫が響き渡る……。",
+	"character": ["Player", "Yoshiko"]
 },
 {
 	"type": "kizuna",
 	"color": "Yoshiko",
 	"chapter": "キズナエピソード 津島善子",
-	"title": "7話 ",
-	"desc": "",
-	"character": []
+	"title": "6話 堕天使ヨハネの招聘",
+	"desc": "動画撮影のため善子宅に向かおうとしたあなたに、善子本人から連絡が入る。「緊急事態！」と大慌ての善子。一体何があったのか！？",
+	"memo": "「<ruby>招聘<rt>しょうへい</rt><ruby>」は、「礼をつくして人を招く」という意味。",
+	"character": ["Player", "Yoshiko"]
 },
 {
 	"type": "kizuna",
 	"color": "Yoshiko",
 	"chapter": "キズナエピソード 津島善子",
-	"title": "8話 ",
-	"desc": "",
-	"character": []
+	"title": "7話 オフ会準備",
+	"desc": "オフ会参加を決意した善子。しかし、当日の服装や、どんなことを話せばいいのか、心配事は尽きない様子。あなたもアイデアを出しながら、1つずつ解決していく。",
+	"character": ["Player", "Yoshiko"]
 },
 {
 	"type": "kizuna",
 	"color": "Yoshiko",
 	"chapter": "キズナエピソード 津島善子",
-	"title": "9話 ",
-	"desc": "",
-	"character": []
+	"title": "8話 ヨハネとリトルデーモンの集い",
+	"desc": "オフ会当日。緊張を隠せない善子を連れてオフ会場所に向かうあなた。ボロを出さず、無事にオフ会を乗り切ることが出来るのか？",
+	"character": ["Player", "Yoshiko"]
 },
 {
 	"type": "kizuna",
 	"color": "Yoshiko",
 	"chapter": "キズナエピソード 津島善子",
-	"title": "10話 ",
-	"desc": "",
-	"character": []
+	"title": "9話 オフ会終幕",
+	"desc": "楽しいオフ会も終了の時間がやってきた。リトルデーモンの女の子達と別れた善子は、自分を応援してくれる人の存在を、改めて感じたのだった。",
+	"character": ["Player", "Yoshiko"]
 },
 {
 	"type": "kizuna",
 	"color": "Yoshiko",
 	"chapter": "キズナエピソード 津島善子",
-	"title": "11話 ",
-	"desc": "",
-	"character": []
+	"title": "10話 ヨハネパワー拡散中！",
+	"desc": "オフ会以降、動画のフォロワーが急増し、ご機嫌な善子。また新たに動画を撮ろうと計画する善子に、あなたが提案したのは……。",
+	"character": ["Player", "Yoshiko"]
 },
 {
 	"type": "kizuna",
 	"color": "Yoshiko",
 	"chapter": "キズナエピソード 津島善子",
-	"title": "12話 ",
-	"desc": "",
-	"character": []
+	"title": "11話 人間生活のルール",
+	"desc": "次の動画制作の相談をするあなたと善子。その途中、善子はまたも慌てて帰り支度を始めた。その様子を疑問に思ったあなたは、理由を尋ねる。",
+	"character": ["Player", "Yoshiko"]
 },
 {
 	"type": "kizuna",
 	"color": "Yoshiko",
 	"chapter": "キズナエピソード 津島善子",
-	"title": "13話 ",
-	"desc": "",
-	"character": []
+	"title": "12話 津島善子の顔",
+	"desc": "いつも堕天使ヨハネとして振舞っている善子。しかし、家ではどんな態度なのだろう？　気になったあなたは、善子に直接尋ねてみた。",
+	"character": ["Player", "Yoshiko"]
+},
+{
+	"type": "kizuna",
+	"color": "Yoshiko",
+	"chapter": "キズナエピソード 津島善子",
+	"title": "13話 悩むヨハネ",
+	"desc": "善子の動画制作を手伝うため善子宅に向かうあなたは、その道中で花丸とルビィに出会う。そこで２人からの「善子の様子がおかしい」という情報を得る。",
+	"character": ["Player", "Yoshiko", "Hanamaru", "Ruby"]
+},
+{
+	"type": "kizuna",
+	"color": "Yoshiko",
+	"chapter": "キズナエピソード 津島善子",
+	"title": "14話 複雑な娘心",
+	"desc": "堕天使の姿を見られたことで、母親との関係がぎくしゃくしてしまった善子。口では強がるものの、寂しそうな様子の善子に、あなたはなんとかしてあげたいと思い……。",
+	"character": ["Player", "Yoshiko"]
+},
+{
+	"type": "kizuna",
+	"color": "Yoshiko",
+	"chapter": "キズナエピソード 津島善子",
+	"title": "15話 仲直り大作戦",
+	"desc": "母親との仲直り方法を模索する善子とあなた。あなたはいくつかアイディアを出すものの、なかなか決められず……。",
+	"character": ["Player", "Yoshiko"]
 },
 {
 	"type": "kizuna",
 	"color": "Hanamaru",
 	"chapter": "キズナエピソード 国木田花丸",
-	"title": "1話 ",
-	"desc": "",
-	"character": []
+	"title": "1話 探し物",
+	"desc": "散歩の休憩を兼ねて、図書館を訪れたあなた。館内を歩いていると、どこからか聞き覚えのある声が……。",
+	"character": ["Player", "Hanamaru", "Ruby"]
 },
 {
 	"type": "kizuna",
 	"color": "Hanamaru",
 	"chapter": "キズナエピソード 国木田花丸",
-	"title": "2話 ",
-	"desc": "",
-	"character": []
+	"title": "2話 図書館アンソロジー",
+	"desc": "花丸の貸出し手続きを待つ間、あなたとルビィは図書館の掲示板を眺めていた。様々なお知らせが張り出されている中に、1つ目を引くものがある。それは……。",
+	"character": ["Player", "Hanamaru", "Ruby"]
 },
 {
 	"type": "kizuna",
 	"color": "Hanamaru",
 	"chapter": "キズナエピソード 国木田花丸",
-	"title": "3話 ",
-	"desc": "",
-	"character": []
+	"title": "3話 やりたいこと",
+	"desc": "図書館アンソロジーへの投稿に興味を抱きつつも、なかなか決心がつかない花丸。可能性を潰してほしくないとあなたとルビィは、花丸の背中を押す。",
+	"character": ["Player", "Hanamaru", "Ruby"]
 },
 {
 	"type": "kizuna",
 	"color": "Hanamaru",
 	"chapter": "キズナエピソード 国木田花丸",
-	"title": "4話 ",
-	"desc": "",
-	"character": []
+	"title": "4話 VS文明の利器",
+	"desc": "アンソロジーへの投稿を決意した花丸。あなたとルビィも応援するが、執筆するためには『ある問題』を乗り越えなければならなくて……。",
+	"character": ["Player", "Hanamaru", "Ruby"]
 },
 {
 	"type": "kizuna",
 	"color": "Hanamaru",
 	"chapter": "キズナエピソード 国木田花丸",
-	"title": "5話 ",
-	"desc": "",
-	"character": []
+	"title": "5話 心の言葉",
+	"desc": "図書館アンソロジーが発行される日、あなた・花丸・ルビィは図書館を訪れた。特設コーナーには、花丸が投稿したアンソロジーが展示してあり……。",
+	"character": ["Player", "Hanamaru", "Ruby"]
 },
 {
 	"type": "kizuna",
 	"color": "Hanamaru",
 	"chapter": "キズナエピソード 国木田花丸",
-	"title": "6話 ",
-	"desc": "",
-	"character": []
+	"title": "6話 紡ぐ喜び",
+	"desc": "自室で花丸と電話で話すあなた。図書館アンソロジーに投稿して以降、花丸は小説を書くことが増えたらしい。物語を書くことに、花丸は喜びを感じるようになっていた。",
+	"character": ["Player", "Hanamaru"]
 },
 {
 	"type": "kizuna",
 	"color": "Hanamaru",
 	"chapter": "キズナエピソード 国木田花丸",
-	"title": "7話 ",
-	"desc": "",
-	"character": []
+	"title": "7話 国木田先生への依頼",
+	"desc": "何やらしずくが困っている様子。事情を尋ねるあなたに、しずくが答えた内容は……。",
+	"character": ["Player", "Hanamaru", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Hanamaru",
 	"chapter": "キズナエピソード 国木田花丸",
-	"title": "8話 ",
-	"desc": "",
-	"character": []
+	"title": "8話 予定変更？",
+	"desc": "花丸に会うため、沼津を訪れたあなたとしずく。しかし、迎えに来てくれているはずの花丸が見当たらない。何かあったのだろうか？",
+	"character": ["Player", "Hanamaru", "Ruby", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Hanamaru",
 	"chapter": "キズナエピソード 国木田花丸",
-	"title": "9話 ",
-	"desc": "",
-	"character": []
+	"title": "9話 舞台女優・花丸！？",
+	"desc": "花丸のソロライブを見守るあなた・しずく・ルビィ。ライブを観たしずくは、花丸にある提案をする。",
+	"character": ["Player", "Hanamaru", "Ruby", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Hanamaru",
 	"chapter": "キズナエピソード 国木田花丸",
-	"title": "10話 ",
-	"desc": "",
-	"character": []
+	"title": "10話 テーマを決めよう！",
+	"desc": "劇の脚本について打ち合わせを開始した4人。物語好きの花丸としずくが盛り上がる中、テーマが3つに絞られる。",
+	"character": ["Player", "Hanamaru", "Ruby", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Hanamaru",
 	"chapter": "キズナエピソード 国木田花丸",
-	"title": "12話 ",
-	"desc": "",
-	"character": []
+	"title": "11話 沼津の名探偵",
+	"desc": "脚本のテーマを絞ったあなた達は、まずは１つ目、『ミステリー』から経験してみることに。しかし、どうすれば経験できるのだろう？",
+	"character": ["Player", "Hanamaru", "Ruby", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Hanamaru",
 	"chapter": "キズナエピソード 国木田花丸",
-	"title": "13話 ",
-	"desc": "",
-	"character": []
+	"title": "12話 海の町の冒険譚",
+	"desc": "ミステリーをクリアしたあなたたちは、次のテーマ『冒険』に挑戦。果たして内浦で冒険はできるのか？",
+	"character": ["Player", "Hanamaru", "Ruby", "Shizuku"]
 },
 {
 	"type": "kizuna",
 	"color": "Hanamaru",
 	"chapter": "キズナエピソード 国木田花丸",
-	"title": "11話 ",
-	"desc": "",
-	"character": []
+	"title": "13話 波間に恋の花が散る",
+	"desc": "最後のテーマ『恋愛』に挑むあなたたち。しかし、これこそどうやって経験すればいいのだろうか？　悩む花丸達に、あなたが提案した方法とは……。",
+	"character": ["Player", "Hanamaru", "Ruby", "Shizuku"]
+},
+{
+	"type": "kizuna",
+	"color": "Hanamaru",
+	"chapter": "キズナエピソード 国木田花丸",
+	"title": "14話 脚本テーマ、決定！",
+	"desc": "全てのテーマを経験し終え、改めてどのテーマで書くか話し合うあなた達。花丸が出した答えは……。",
+	"character": ["Player", "Hanamaru", "Ruby", "Shizuku"]
+},
+{
+	"type": "kizuna",
+	"color": "Hanamaru",
+	"chapter": "キズナエピソード 国木田花丸",
+	"title": "15話 羽ばたく舞台",
+	"desc": "遂に花丸が脚本を担当した劇の上演日がやって来た！　役者として舞台にも立つ花丸をあなたは応援する。そこで花丸は、自分の中にある想いをあなたに打ち明ける。",
+	"character": ["Player", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Shizuku"]
 },
 {
 	"type": "kizuna",
@@ -5119,6 +5490,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Mari",
+	"chapter": "キズナエピソード 小原鞠莉",
+	"title": "15話 閉じ込めていた不安",
+	"desc": "鞠莉の様子がおかしい。そう確信したあなたは、思い切って鞠莉の気持ちを尋ねる。真剣なあなたに、鞠莉も少しずつ本心を話し始めた。",
+	"character": ["Player", "Kanan", "Dia", "Mari"]
+},
+{
+	"type": "kizuna",
 	"color": "Ruby",
 	"chapter": "キズナエピソード 黒澤ルビィ",
 	"title": "1話 放課後の秘密",
@@ -5229,6 +5608,14 @@ const StoryList = [
 	"title": "14話 こぼれた本心",
 	"desc": "ルビィとの間に溝ができてしまい、重苦しい気持ちを抱えるあなた。しかし、あなたがいてくれることを喜ぶ同好会メンバーを見て、今までの自分の行動を思い返した。",
 	"character": ["Player", "Ruby", "Ayumu", "Kasumi", "Karin", "Ai", "Kanata", "Emma"]
+},
+{
+	"type": "kizuna",
+	"color": "Ruby",
+	"chapter": "キズナエピソード 黒澤ルビィ",
+	"title": "15話 支え合う信頼",
+	"desc": "ルビィに会うため、あなたは久しぶりに内浦を訪れた。そこであなたは、ルビィの本当の気持ちを知る。",
+	"character": ["Player", "Ruby"]
 },
 {
 	"type": "kizuna",
