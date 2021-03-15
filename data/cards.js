@@ -4033,7 +4033,6 @@ const RawCardList = [
 	"source": "reward",
 	"desc": "イベント「愛がたっぷり、バレンタイン♪」報酬 (1万位/10万位枠)"
 },
-
 {
 	"id": 402,
 	"name": "Ai",
@@ -4044,7 +4043,7 @@ const RawCardList = [
 	"cn2": "アイ♡ドール",
 	"date": "2021/02/14",
 	"source": "party",
-	"desc": "「メンバーピックアップガチャ」で追加"
+	"desc": "「パーティーガチャ」で追加"
 },
 {
 	"id": 403,
@@ -4056,7 +4055,7 @@ const RawCardList = [
 	"cn2": "KiRa-KiRa Sensation!",
 	"date": "2021/02/14",
 	"source": "none",
-	"desc": "「メンバーピックアップガチャ」で追加"
+	"desc": "「パーティーガチャ」で追加"
 },
 {
 	"id": 404,
@@ -4273,6 +4272,30 @@ const RawCardList = [
 	"date": "2021/03/07",
 	"source": "reward",
 	"desc": "イベント「思いよ届け、ホワイトデー」報酬 (1万位/10万位枠)"
+},
+{
+	"id": 422,
+	"name": "Dia",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "素晴らしいアイディアです！",
+	"cn2": "ホーリーダイヤモンド",
+	"date": "2021/03/15",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 423,
+	"name": "Umi",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Vo",
+	"cn1": "私もさっき来たところです",
+	"cn2": "KiRa-KiRa Sensation!",
+	"date": "2021/03/15",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
 }
 ];
 const LatestUpdate = "2021/03/07「思いよ届け、ホワイトデー」まで";
