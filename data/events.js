@@ -313,5 +313,14 @@ const EventList = [
 	"ended"   : new Date("2021-03-14T14:59:59+09:00"),
 	"UR" : ["Kotori", "Hanamaru", "Rina"],
 	"SR" : ["Nozomi", "You", "Emma"]
+},
+{
+	"id" : 36,
+	"name" : "レーザーサバイバル戦線！",
+	"type" : "story",
+	"started" : new Date("2021-03-23T15:00:00+09:00"),
+	"ended"   : new Date("2021-03-30T14:59:59+09:00"),
+	"UR" : ["Maki", "Ruby", "Ayumu"],
+	"SR" : ["Eli", "Mari", "Kasumi"]
 }
 ];
