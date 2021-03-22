@@ -4296,6 +4296,78 @@ const RawCardList = [
 	"date": "2021/03/15",
 	"source": "none",
 	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 424,
+	"name": "Ruby",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Vo",
+	"cn1": "逃げないって決めたのっ！！",
+	"cn2": "サイバーワールド",
+	"date": "2021/03/20",
+	"source": "gacha",
+	"desc": "「レーザーサバイバル戦線！ガチャ(前編)」で追加"
+},
+{
+	"id": 425,
+	"name": "Mari",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "うふっ、この瞬間を待ってたわ～",
+	"cn2": "MIRACLE WAVE",
+	"date": "2021/03/20",
+	"source": "gacha",
+	"desc": "「レーザーサバイバル戦線！ガチャ(前編)」で追加"
+},
+{
+	"id": 426,
+	"name": "Maki",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "じゃあね、かすみ♪",
+	"cn2": "サイバーワールド",
+	"date": "2021/03/23",
+	"source": "gacha",
+	"desc": "「レーザーサバイバル戦線！ガチャ(後編)」で追加"
+},
+{
+	"id": 427,
+	"name": "Ayumu",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "行きます、鞠莉さん！",
+	"cn2": "サイバーワールド",
+	"date": "2021/03/23",
+	"source": "reward",
+	"desc": "イベント「レーザーサバイバル戦線！」報酬"
+},
+{
+	"id": 428,
+	"name": "Eli",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Sk",
+	"cn1": "引っかかった私の負けだわ",
+	"cn2": "KiRa-KiRa Sensation!",
+	"date": "2021/03/23",
+	"source": "reward",
+	"desc": "イベント「レーザーサバイバル戦線！」報酬 (3000位/7万位枠)"
+},
+{
+	"id": 429,
+	"name": "Kasumi",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "とっておきの方法を考えました！",
+	"cn2": "虹色Passions！",
+	"date": "2021/03/23",
+	"source": "reward",
+	"desc": "イベント「レーザーサバイバル戦線！」報酬 (1万位/10万位枠)"
 }
 ];
-const LatestUpdate = "2021/03/07「思いよ届け、ホワイトデー」まで";
+const LatestUpdate = "2021/03/20「レーザーサバイバル戦線！」まで";
