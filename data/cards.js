@@ -2970,7 +2970,7 @@ const RawCardList = [
 	"name": "Hanamaru",
 	"rare": "UR",
 	"atr": "Smile",
-	"type": "Sp",
+	"type": "Gd",
 	"cn1": "よいしょ！よいしょ！",
 	"cn2": "オータムキッチン",
 	"date": "2020/09/18",
@@ -4368,6 +4368,54 @@ const RawCardList = [
 	"date": "2021/03/23",
 	"source": "reward",
 	"desc": "イベント「レーザーサバイバル戦線！」報酬 (1万位/10万位枠)"
-}
+},
+{
+	"id": 430,
+	"name": "Hanayo",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Gd",
+	"cn1": "今は我慢……節制……！",
+	"cn2": "イノセント・ヒーリング",
+	"date": "2021/03/26",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 431,
+	"name": "Ai",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "はい、にっこり～♪",
+	"cn2": "ロマンティック・ローズ",
+	"date": "2021/03/26",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 432,
+	"name": "Yoshiko",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "い、いつもはこんなことないのよ",
+	"cn2": "MIRACLE WAVE",
+	"date": "2021/03/26",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 433,
+	"name": "Setsuna",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "ぐすっ……何度見ても名作です！",
+	"cn2": "虹色Passions！",
+	"date": "2021/03/26",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
 ];
-const LatestUpdate = "2021/03/20「レーザーサバイバル戦線！」まで";
+const LatestUpdate = "2021/03/26「スクスタフェス」まで";
