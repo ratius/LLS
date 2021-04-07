@@ -4417,5 +4417,77 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
 },
+{
+	"id": 433,
+	"name": "Shizuku",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sp",
+	"cn1": "私にとって、大切な思い出",
+	"cn2": "Cherry brossom fairy",
+	"date": "2021/04/04",
+	"source": "gacha",
+	"desc": "「桜の精霊に会いにガチャ(前編)」で追加"
+},
+{
+	"id": 434,
+	"name": "Rina",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "いっぱい食べてね",
+	"cn2": "Just Believe!!!",
+	"date": "2021/04/04",
+	"source": "gacha",
+	"desc": "「桜の精霊に会いにガチャ(前編)」で追加"
+},
+{
+	"id": 435,
+	"name": "Dia",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Gd",
+	"cn1": "なんと美しいのでしょうか……",
+	"cn2": "Cherry brossom fairy",
+	"date": "2021/04/07",
+	"source": "gacha",
+	"desc": "「桜の精霊に会いにガチャ(後編)」で追加"
+},
+{
+	"id": 436,
+	"name": "Nico",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "まるで、夢の世界みたい♪",
+	"cn2": "Cherry brossom fairy",
+	"date": "2021/04/07",
+	"source": "reward",
+	"desc": "イベント「桜の精霊に会いに」報酬"
+},
+{
+	"id": 437,
+	"name": "Yoshiko",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Sk",
+	"cn1": "風よ、ヨハネに従いなさい！",
+	"cn2": "HAPPY PARTY TRAIN",
+	"date": "2021/04/07",
+	"source": "reward",
+	"desc": "イベント「桜の精霊に会いに」報酬 (3000位/7万位枠)"
+},
+{
+	"id": 438,
+	"name": "Nozomi",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "つぼみを見るだけでもウチは幸せ",
+	"cn2": "No brand girls",
+	"date": "2021/04/07",
+	"source": "reward",
+	"desc": "イベント「桜の精霊に会いに」報酬 (1万位/10万位枠)"
+}
 ];
-const LatestUpdate = "2021/03/26「スクスタフェス」まで";
+const LatestUpdate = "2021/04/04「桜の精霊に会いに」まで";

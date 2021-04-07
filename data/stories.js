@@ -659,142 +659,143 @@ const StoryList = [
 {
 	"type": "main",
 	"chapter": "メインストーリー / First Season / 第10章「新生徒会長の無理難題」",
-	"title": "第1話",
-	"desc": "",
-	"character": []
+	"title": "第1話 新生徒会長はどんな人？",
+	"desc": "生徒会長選挙に敗れ、落ち込むせつ菜だったが、本音を吐露し同好会に戻ってきた。無事にスクールアイドル同好会再始動！　かと思いきや栞子から「スクールアイドル同好会の廃部通告」を受ける……。",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
 },
 {
 	"type": "main",
 	"chapter": "メインストーリー / First Season / 第10章「新生徒会長の無理難題」",
-	"title": "第2話",
-	"desc": "",
-	"character": []
+	"title": "第2話 ああ言えばこう言う！",
+	"desc": "栞子から廃部を通告されたスクールアイドル同好会。廃部阻止のため、同好会メンバー一丸となって栞子に対抗することに！",
+	"character": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Nico", "Chika", "Riko", "Kanan", "Dia", "Yoshiko", "Kasumi", "Karin", "Ai", "Setsuna", "Emma", "Shioriko"]
 },
 {
 	"type": "main",
 	"chapter": "メインストーリー / First Season / 第10章「新生徒会長の無理難題」",
-	"title": "第3話",
-	"desc": "",
-	"character": []
+	"title": "第3話 助け合い、支え合い",
+	"desc": "μ'sとAqoursも一緒に栞子に同好会存続を訴える。同好会に対し、栞子が言い渡した存続の条件とは……次の中間テストで、ニジガクメンバー全員、全教科60点以上を取ること！",
+	"character": ["Shizuku", "Ai", "Kanata", "Rina"]
 },
 {
 	"type": "main",
 	"chapter": "メインストーリー / First Season / 第10章「新生徒会長の無理難題」",
-	"title": "第4話",
-	"desc": "",
-	"character": []
+	"title": "第4話 勉強も、練習も！",
+	"desc": "理数系苦手組のしずく・彼方には理系学科の愛と璃奈が数学を教えることに。愛と璃奈とわかりやすい説明に、しずくと彼方も俄然やる気に！　では、他のメンバーの様子は……？",
+	"character": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "main",
 	"chapter": "メインストーリー / First Season / 第10章「新生徒会長の無理難題」",
-	"title": "第5話",
-	"desc": "",
-	"character": []
+	"title": "第5話 合同勉強会！",
+	"desc": "μ's、Aqoursも、せっかくの機会なのでニジガクと一緒に次の中間テストで60点以上取るべく、一緒に勉強会を開催。でもそんな中でも毎日の練習は欠かさないのが、スクールアイドル！",
+	"character": ["Player", "Honoka", "Eli", "Nico", "Chika", "Kanan", "Dia", "You", "Hanamaru", "Ruby", "Shizuku", "Karin", "Emma", "Rina"]
 },
 {
 	"type": "main",
 	"chapter": "メインストーリー / First Season / 第10章「新生徒会長の無理難題」",
-	"title": "第6話",
-	"desc": "",
-	"character": []
+	"title": "第6話 おばか王に近しい者たち……",
+	"desc": "花丸、ルビィ、しずくは国語が苦手組のエマと璃奈に教えることに。エマと璃奈の独特な回答に、教える３人も大苦戦。うまく教えるべく闘志を燃やす。",
+	"character": ["Honoka", "Eli", "Umi", "Nico", "Kanan", "Dia", "Ayumu", "Kasumi", "Karin"]
 },
 {
 	"type": "main",
 	"chapter": "メインストーリー / First Season / 第10章「新生徒会長の無理難題」",
-	"title": "第7話",
-	"desc": "",
-	"character": []
+	"title": "第7話 いざ！　勝負の日！",
+	"desc": "全体的に成績が悪い人チームに入れられたかすみ、果林、穂乃果、にこ、果南。しっかり教えようとする絵里、海未、ダイヤだが、どうにか勉強から逃れようと理由をつける5人に、頭を抱える。果たして中間テスト、どうなる！？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "main",
 	"chapter": "メインストーリー / First Season / 第10章「新生徒会長の無理難題」",
-	"title": "第8話",
-	"desc": "",
-	"character": []
+	"title": "第8話 ふたりだけの勉強会",
+	"desc": "無事にテスト初日が終わったニジガクメンバー。初日が終わったことで気が緩みかけたメンバーたちだったが、愛の勉強に対する真面目な一面を見る……。",
+	"character": ["Player", "Ayumu"]
 },
 {
 	"type": "main",
 	"chapter": "メインストーリー / First Season / 第10章「新生徒会長の無理難題」",
-	"title": "第9話",
-	"desc": "",
-	"character": []
+	"title": "第9話 テスト！　終わり！",
+	"desc": "あなたの家で２人で勉強会をしたあなた。２人で勉強しながらお喋りをして楽しい時間を過ごすも、他の子からメッセがたくさん来るあなたを見て歩夢がちょっとやきもち？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "main",
 	"chapter": "メインストーリー / First Season / 第10章「新生徒会長の無理難題」",
-	"title": "第10話",
-	"desc": "",
-	"character": []
+	"title": "第10話 同好会廃止？　継続？",
+	"desc": "とうとう中間テストも全て終了！　みんな気が抜ける中でも、愛の勧めでテスト後の復習まできちんと行った。そしていよいよ運命の日、同好会は存続できるのか……！？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"],
+	"memo": "かすみとにこ、同点でおばか王になる。"
 },
 {
 	"type": "main",
 	"chapter": "メインストーリー / First Season / 第11章「目指せスクフェス！三校合同合宿！」",
-	"title": "第1話",
-	"desc": "",
-	"character": []
+	"title": "第1話 テストの後は……？",
+	"desc": "中間テスト返却日。勉強会の甲斐あって、見事全員60点以上を取ることができた！　条件をクリアしたため、一旦、同好会の存続を認めた栞子。ただニジガクメンバーはなぜ栞子がスコールアイドルへあんなに当たりが強いのかわからない。",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"type": "main",
 	"chapter": "メインストーリー / First Season / 第11章「目指せスクフェス！三校合同合宿！」",
-	"title": "第2話",
-	"desc": "",
-	"character": []
+	"title": "第2話 ワクワクトレイン！",
+	"desc": "栞子の考えはいまだにわからないが、栞子にも同好会に賛同してもらえるよう、みんなで引き続き頑張ることに。そんなとき穂乃果からニジガクメンバーに、スクールアイドルフェスティバル実行委員会のみんなで合宿をしないかとお誘いが来た。",
+	"character": ["Honoka", "Eli", "Kotori", "Nozomi", "Ayumu", "Karin", "Kanata", "Emma"]
 },
 {
 	"type": "main",
 	"chapter": "メインストーリー / First Season / 第11章「目指せスクフェス！三校合同合宿！」",
-	"title": "第3話",
-	"desc": "",
-	"character": []
+	"title": "第3話 お留守番でも寂しくないもん！",
+	"desc": "合宿先は沼津！　μ's、虹ヶ咲から選ばれしメンバーが参加することになった。みんなで沼津へ移動中も、わいわいと盛り上がるメンバー達。一方東京居残り組のかすみ、しずく、璃奈は3人でどこかに遊びに行く様子……。",
+	"character": ["Kasumi", "Shizuku", "Rina"]
 },
 {
 	"type": "main",
 	"chapter": "メインストーリー / First Season / 第11章「目指せスクフェス！三校合同合宿！」",
-	"title": "第4話",
-	"desc": "",
-	"character": []
+	"title": "第4話 三校合同合宿、開始！",
+	"desc": "水族館ではしゃぐかすみ、しずく、璃奈の東京居残り組の3人。一方、合宿のため沼津に到着したメンバーは……？",
+	"character": ["Player", "Honoka", "Eli", "Kotori", "Nozomi", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Karin", "Kanata", "Emma"]
 },
 {
 	"type": "main",
 	"chapter": "メインストーリー / First Season / 第11章「目指せスクフェス！三校合同合宿！」",
-	"title": "第5話",
-	"desc": "",
-	"character": []
+	"title": "第5話 お留守番チームの冒険",
+	"desc": "内浦に到着したメンバーは千歌の部屋でスクールアイドルフェスティバルに関する話し合いをすることに。そのころ、水族館で遊んでいたかすみ、しずく、璃奈たちは……？",
+	"character": ["Rin", "Hanayo", "Nico", "Kasumi", "Shizuku", "Rina"]
 },
 {
 	"type": "main",
 	"chapter": "メインストーリー / First Season / 第11章「目指せスクフェス！三校合同合宿！」",
-	"title": "第6話",
-	"desc": "",
-	"character": []
+	"title": "第6話 やりたいこといっぱい！",
+	"desc": "水族館やアニメショップを満喫していたかすみ、しずく、璃奈。そんな中、街中で凛、花陽、にこを見つけ、なぜか備考することに……。ところ変わって、スクールアイドルフェスティバルについて話し合い中のメンバーたちは……？",
+	"character": ["Player", "Honoka", "Eli", "Kotori", "Nozomi", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Karin", "Kanata", "Emma"]
 },
 {
 	"type": "main",
 	"chapter": "メインストーリー / First Season / 第11章「目指せスクフェス！三校合同合宿！」",
-	"title": "第7話",
-	"desc": "",
-	"character": []
+	"title": "第7話 スクールアイドル・フリーク",
+	"desc": "スクールアイドルフェスティバルをどんなイベントにしたいかみんなで案を出し合うが、色々な案が出すぎて悩むメンバー。イベントのイメージを考えるため、先にスローガンを考えることになった。一方、東京でにこ達を備考していたかすみ、しずく、璃奈は……。",
+	"character": ["Rin", "Hanayo", "Nico", "Kasumi", "Shizuku", "Rina"]
 },
 {
 	"type": "main",
 	"chapter": "メインストーリー / First Season / 第11章「目指せスクフェス！三校合同合宿！」",
-	"title": "第8話",
-	"desc": "",
-	"character": []
+	"title": "第8話 秘密の先にあったもの",
+	"desc": "にこ達の行き先は、スクールアイドルのライブだった。そこではスクールアイドルのライブをやっていた。他のスクール迂回ドルを応援するにこ、凛、花陽を見てμ'sのメンバーがどれだけスクールアイドルが大好きなのかを実感した3人。かすみ達も一緒にライブを見て盛り上がった。",
+	"character": ["Rin", "Hanayo", "Nico", "Kasumi", "Shizuku", "Rina", "Shioriko"]
 },
 {
 	"type": "main",
 	"chapter": "メインストーリー / First Season / 第11章「目指せスクフェス！三校合同合宿！」",
-	"title": "第9話",
-	"desc": "",
-	"character": []
+	"title": "第9話 これがスローガンの決め手！？",
+	"desc": "スクールアイドルのライブも終わり、幼児があるというにこの一言で解散になった。だがにこの幼児が気になるかすみ達はそのままにこの備考を続行する。たどり着いた先は児童館。そしてそこには栞子の姿が……。",
+	"character": ["Player", "Honoka", "Eli", "Kotori", "Nozomi", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Karin", "Kanata", "Emma"]
 },
 {
 	"type": "main",
 	"chapter": "メインストーリー / First Season / 第11章「目指せスクフェス！三校合同合宿！」",
-	"title": "第10話",
-	"desc": "",
-	"character": []
+	"title": "第10話 聞いて！　私たちの週末！",
+	"desc": "内浦合宿組のメンバーはいいスローガンの案が出せず、イベント運営の難しさを実現する。その夜、みんなで「スクールアイドルフェスティバルでやりたいこと」を各々言い合うと、自然とスローガンが浮かんできた。<br>「集え！　みんなの夢！」",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"],
 },
 {
 	"type": "main",
@@ -1652,73 +1653,143 @@ const StoryList = [
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / 2nd season / 愛さんプロデュース！合同イベント！　後編",
+	"chapter": "メインストーリー / 2nd season / 第24章「愛さんプロデュース！合同イベント！　後編」",
 	"title": "第1話 準備万端！　いきます！",
 	"desc": "愛プロデュース・合同イベントの対戦カードは、璃奈vs愛、しずくvsランジュ、かすみvs果林、せつ菜vs栞子に決まった。熱い戦いが繰り広げられるであろう日の朝は、静かに始まる……",
 	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Setsuna", "Rina", "Shioriko", "Lanzhu", "Mia"]
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / 2nd season / 愛さんプロデュース！合同イベント！　後編",
+	"chapter": "メインストーリー / 2nd season / 第24章「愛さんプロデュース！合同イベント！　後編」",
 	"title": "第2話 １回戦第１ステージ、開始！",
 	"desc": "愛プロデュース・合同イベントがついに始まった！　１回戦第１ステージのカードは璃奈vs愛！　愛と戦うにあたり、璃奈には秘密の作戦があり……？",
 	"character": ["Player", "Ayumu", "Ai", "Kanata", "Emma", "Rina", "Mia"]
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / 2nd season / 愛さんプロデュース！合同イベント！　後編",
+	"chapter": "メインストーリー / 2nd season / 第24章「愛さんプロデュース！合同イベント！　後編」",
 	"title": "第3話 １回戦第２ステージ、開始！",
 	"desc": "１回戦第１ステージ、璃奈vs愛の対決は、愛が勝利をおさめた。続く１回戦第２試合はしずくvsランジュ。部から戻ってきたしずくが、ランジュに挑む……！",
 	"character": ["Player", "Ayumu", "Shizuku", "Ai", "Kanata", "Emma", "Rina", "Lanzhu", "Mia"]
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / 2nd season / 愛さんプロデュース！合同イベント！　後編",
+	"chapter": "メインストーリー / 2nd season / 第24章「愛さんプロデュース！合同イベント！　後編」",
 	"title": "第4話 １回戦第３ステージ、開始！",
 	"desc": "１回戦第１ステージ、璃奈vs愛の対決は、愛が勝利をおさめ、第２ステージ、しずくvsランジュの対決は、ランジュが勝利をおさめた。続く１回戦第３ステージはかすみvs果林。正反対の個性を持つ２人の勝負の行方は！？",
 	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Kanata", "Emma", "Rina", "Secretary"]
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / 2nd season / 愛さんプロデュース！合同イベント！　後編",
+	"chapter": "メインストーリー / 2nd season / 第24章「愛さんプロデュース！合同イベント！　後編」",
 	"title": "第5話 ランチタイム、そして……",
 	"desc": "午前中に開催された１回戦が終わった。合同イベントは一旦ランチタイムを挟む。あなたたちは白熱の１回戦を振り返り……？",
 	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Mia", "Secretary"]
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / 2nd season / 愛さんプロデュース！合同イベント！　後編",
+	"chapter": "メインストーリー / 2nd season / 第24章「愛さんプロデュース！合同イベント！　後編」",
 	"title": "第6話 認めているの",
 	"desc": "同好会のランチタイムに乱入したランジュとミア。それなりに楽しい時間を過ごし、午後の準備のために部室に戻って来た。プロの本気のしに意図を求めるランジュが、生徒たち手作りの拙いイベントに文句ひとつ言わず参加していることを不思議に思ったミアは……？",
 	"character": ["Player", "Ayumu", "Kanata", "Emma", "Lanzhu", "Mia"]
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / 2nd season / 愛さんプロデュース！合同イベント！　後編",
+	"chapter": "メインストーリー / 2nd season / 第24章「愛さんプロデュース！合同イベント！　後編」",
 	"title": "第7話 魂のビッグバン",
 	"desc": "ついに合同イベント午後の部が始まる！　２回戦第１ステージはせつ菜vs愛。ずっとせつ菜と戦ってみたかった愛。ついにその願いが叶うときがきた。同好会から部に移ってまで自分を鍛え上げてきた愛が、せつ菜に挑む！",
 	"character": ["Player", "Ayumu", "Shizuku", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Lanzhu"]
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / 2nd season / 愛さんプロデュース！合同イベント！　後編",
+	"chapter": "メインストーリー / 2nd season / 第24章「愛さんプロデュース！合同イベント！　後編」",
 	"title": "第8話 私の最高のライバル！",
 	"desc": "２回戦第１ステージ、せつ菜vs愛。人を引きつける天性の魅力を武器に、プロレベルの演出を得て最高のパフォーマンスを行った愛。せつ菜は、愛とは正反対の静のパフォーマンス。派手な演出も動きもなく、ただ優木せつ菜という個性をこれでもかと表現した。結果は……",
 	"character": ["Player", "Ai", "Setsuna"]
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / 2nd season / 愛さんプロデュース！合同イベント！　後編",
+	"chapter": "メインストーリー / 2nd season / 第24章「愛さんプロデュース！合同イベント！　後編」",
 	"title": "第9話 いよいよ決勝戦！",
 	"desc": "愛vsせつ菜の対決は、お互いに相手を褒め称える素晴らしい対決になった。白熱した対決が続く中、ステージはいよいよ決勝戦を迎える……",
 	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Mia"]
 },
 {
 	"type": "main",
-	"chapter": "メインストーリー / 2nd season / 愛さんプロデュース！合同イベント！　後編",
+	"chapter": "メインストーリー / 2nd season / 第24章「愛さんプロデュース！合同イベント！　後編」",
 	"title": "第10話 トップの行方",
 	"desc": "せつ菜vsランジュの決勝戦。同好会メンバーの期待を一身に背負って立ち向かうせつ菜と、いつも通りワガママな姿勢を貫き通すランジュの勝負の決着がついた……",
 	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Mia"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第25章「私のままで、もっと高く」",
+	"title": "第1話 困惑・混乱・混迷",
+	"desc": "愛提案の合同イベントは無事終了。優勝はランジュだった。参加した全員が持てるだけのものをすべて出しきったステージに会場は盛り上がり、力を出し切ったメンバーも勝敗の差はあれど満足をしている。果林ひとりを除いては……。",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第25章「私のままで、もっと高く」",
+	"title": "第2話 私たちの会長は原石です！",
+	"desc": "合同イベントの余暇もおさまりつつある、とある午後。あなたとせつ菜は生徒会室に向かった。思いつめている様子の果林を間近で見ている栞子に様事を手伝いつつ、果林の近況を聞いていると、書紀の左月と右月が戻ってきて……？",
+	"character": ["Player", "Karin", "Setsuna", "Shioriko", "Lanzhu", "Mia", "Secretary"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第25章「私のままで、もっと高く」",
+	"title": "第3話 目指すものの違い",
+	"desc": "ランジュとの練習を通し、改めてランジュの完成度の高さを実感した果林。ランジュは遠いところにいる。しかし、それは頑張れば並ぶこともできる。合同イベントで優勝したランジュのやり方には、やはり説得力がある。そう思い、ますますのめり込んでいくのであった",
+	"character": ["Karin", "Emma"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第25章「私のままで、もっと高く」",
+	"title": "第4話 不甲斐ない自分",
+	"desc": "感情が高ぶり、わざわざ自分を訪ねてきてくれたエマを追い返してしまった果林。なぜあんなことをしてしまったのか、なぜあんなにも感情的になってしまったのか、後悔と困惑で学校を休んでしまっていた。そんな果林を心配して……？",
+	"character": ["Player", "Karin", "Kanata"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第25章「私のままで、もっと高く」",
+	"title": "第5話 そこにいること",
+	"desc": "果林を傷つけてしまったことを気に病むエマ。もっとうまい言い方があったのでは、でも果林に対してウソやごまかしはしたくないと思い悩む。そんなエマを見た彼方は……。",
+	"character": ["Kanata", "Emma"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第25章「私のままで、もっと高く」",
+	"title": "第6話 彼方、出動！",
+	"desc": "エマのスクールアイドルに対する熱意、果林に対する思いを知った彼方。エマと果林のために、ひと肌脱ぐことを決意した。その彼方がとった方法とは……？",
+	"character": ["Karin", "Kanata", "Haruka"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第25章「私のままで、もっと高く」",
+	"title": "第7話 ひだまりの公園で",
+	"desc": "彼方と一緒に遥のライブを楽しんだ果林。遥のライブを通して、あることに気づいてしまった。それは「独りよがりになっていたんじゃないか」ということ。そんな自分を恥じひとりになりたいという果林を、彼方が連れて行った先には……？",
+	"character": ["Karin", "Kanata", "Emma"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第25章「私のままで、もっと高く」",
+	"title": "第8話 私のエゴ",
+	"desc": "彼方に連れられて、エマの公園ライブを見た果林。小さな子供達の真ん中でおだやかに包み込むような歌声から自分を思いやる気持ちが痛いほど伝わってきて、思わず涙してしまう果林。そんな果林をエマはやさしく抱きしめるのだった",
+	"character": ["Karin", "Kanata", "Emma"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第25章「私のままで、もっと高く」",
+	"title": "第9話 私を一番にしてほしい",
+	"desc": "エマの公園ライブの後、語り合った果林、エマ、彼方。それぞれの理想や思い描くものをぶつけ合い、認めあった。ふっきれた果林が、次に起こした行動とは……？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
+},
+{
+	"type": "main",
+	"chapter": "メインストーリー / 2nd season / 第25章「私のままで、もっと高く」",
+	"title": "第10話 私が！！　で、いいの！",
+	"desc": "本らの気持ちを前面に出した果林のライブは大成功。飾らない果林の言葉やパフォーマンスをみたあなたは、また一段上に行った果林を目の当たりにして、改めて果林のファンであることを実感した。徐々に果林も部室やランチに顔を見せるようになり落ち着いた日々を過ごしていたところ、突然のニュースが舞い込んできて……！？",
+	"character": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Mia", "Kaoruko"]
 },
 {
 	"type": "event",
@@ -3402,7 +3473,7 @@ const StoryList = [
 	"title": "第1話",
 	"desc": "エマからバレンタインデーのチョコレートをもらった璃奈。そのお礼に何を贈るか、ことりと曜に相談する。",
 	"memo": "回想シーンで語られている通り、ヨーロッパのバレンタインデーの贈り物はチョコレートとは限らない。また、ホワイトデーの習慣は無い（日本が発祥であるため）。",
-	"character": ["Kotori", "You", "Rina"]
+	"character": ["Kotori", "You", "Emma", "Rina"]
 },
 {
 	"type": "event",
@@ -3445,6 +3516,56 @@ const StoryList = [
 	"title": "第7話",
 	"desc": "ゲーム大会で優勝し、賞品のぬいぐるみを手に入れた璃奈。バレンタインのお返しとして、そのぬいぐるみをエマにプレゼントする。",
 	"character": ["Kotori", "Nozomi", "You", "Hanamaru", "Emma", "Rina"]
+},
+
+{
+	"type": "event",
+	"chapter": "イベントエピソード「レーザーサバイバル戦線！」",
+	"title": "第1話",
+	"desc": "ルビィは、レーザー銃の光線が飛び交うサバイバルゲームの世界にいた。",
+	"character": ["Eli", "Maki", "Mari", "Ruby", "Ayumu", "Kasumi"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「レーザーサバイバル戦線！」",
+	"title": "第2話",
+	"desc": "2チームに分かれて行われているレーザーサバイバルゲーム。ルビィは、チームメイトの歩夢・かすみを探していると、どこからかかすみの声が……！",
+	"character": ["Eli", "Mari", "Ruby", "Kasumi"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「レーザーサバイバル戦線！」",
+	"title": "第3話",
+	"desc": "声がした先には、ゲームオーバー寸前のかすみと、それを追い詰めている絵里・鞠莉の姿があった。",
+	"character": ["Eli", "Maki", "Mari", "Ruby", "Kasumi"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「レーザーサバイバル戦線！」",
+	"title": "第4話",
+	"desc": "真姫の狙撃を受け脱落したかすみ。2対3と不利な状況になったルビィは、チームメイトの歩夢と合流する。",
+	"character": ["Eli", "Maki", "Mari", "Ruby", "Ayumu", "Kasumi"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「レーザーサバイバル戦線！」",
+	"title": "第5話",
+	"desc": "ルビィと歩夢のもとに、脱落したはずのかすみが現れた！ 負けず嫌いなかすみは、とっておきの作戦を二人に伝授する。",
+	"character": ["Ruby", "Ayumu", "Kasumi"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「レーザーサバイバル戦線！」",
+	"title": "第6話",
+	"desc": "かすみから聞いた作戦を実行に移す歩夢とルビィ。しかし、作戦会議の様子は鞠莉にバッチリ聞かれてしまっていた……！",
+	"character": ["Eli", "Maki", "Mari", "Ruby", "Ayumu", "Kasumi"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「レーザーサバイバル戦線！」",
+	"title": "第7話",
+	"desc": "かすみの「ずるい」行動で真姫が脱落した。残るプレイヤーは両チームともに2名ずつ。レーザーサバイバルゲームは、まもなく決着！",
+	"character": ["Eli", "Maki", "Mari", "Ruby", "Ayumu", "Kasumi"]
 },
 {
 	"type": "kizuna",
@@ -3570,6 +3691,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Honoka",
+	"chapter": "キズナエピソード 高坂穂乃果 / ユニットライブ編",
+	"title": "16話 みんなを助けたい！",
+	"desc": "やっぱり、みんなと一緒に歌を届けたい――　穂乃果の心が定まったことで、ソロ活動は一区切り。次はPrintempsのユニットライブに向けて、穂乃果はできることを探していく。",
+	"character": ["Player", "Honoka", "Kotori", "Hanayo"]
+},
+{
+	"type": "kizuna",
 	"color": "Eli",
 	"chapter": "キズナエピソード 絢瀬絵里",
 	"title": "1話 ステージ実現のために",
@@ -3687,6 +3816,14 @@ const StoryList = [
 	"title": "15話 アキバお掃除大作戦！！",
 	"desc": "一人でボランティア活動をしようとする絵里に対して、全員でやろうと説得するあなた。せっかくのボランティア活動、思いっきりお掃除しちゃおう！",
 	"character": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Ayumu", "Ai", "Setsuna", "Yukiho", "Arisa"]
+},
+{
+	"type": "kizuna",
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里ユニットライブ編",
+	"title": "16話 守りたいもの",
+	"desc": "みんなと力を合わせて、アキバお掃除大作戦を終えた絵里。次のBiBiユニットライブに向けて準備をはじめるが、絵里にはにこと真姫に思うことがあるようで……？",
+	"character": ["Player", "Eli", "Maki", "Nico"]
 },
 {
 	"type": "kizuna",
@@ -3810,6 +3947,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Kotori",
+	"chapter": "キズナエピソード 南ことり / ユニットライブ編",
+	"title": "16話 もっとすごい衣装を！",
+	"desc": "スクールアイドルのみんなに出演してもらって、ファッションショーは大成功！　ことりは、次のPrintempsのユニットライブでも、この経験を活かしたいと意気込む。",
+	"character": ["Player", "Honoka", "Kotori", "Hanayo"]
+},
+{
+	"type": "kizuna",
 	"color": "Umi",
 	"chapter": "キズナエピソード 園田海未",
 	"title": "1話 スクールアイドルへの想い",
@@ -3927,6 +4072,14 @@ const StoryList = [
 	"title": "15話 勇気を出して、また一歩",
 	"desc": "心を届けることを大切にすれば、きっと璃奈にも豊かな表現ができるはず、と璃奈に教えた海未。璃奈へ思いを伝えるうちに、海未には新たな感情が……？",
 	"character": ["Player", "Umi", "Rina"]
+},
+{
+	"type": "kizuna",
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未 / ユニットライブ編",
+	"title": "16話 断ち切れ、煩悩！",
+	"desc": "璃奈にアドバイスしていくうちに、自分自身の考え方を見つめ直すことができた海未。lily whiteのユニットライブが決定するも、希と凛はこれ以上海未がモテモテになったら困る、と焦りだして……！？",
+	"character": ["Player", "Honoka", "Kotori", "Umi", "Rin", "Nozomi", "Rina"]
 },
 {
 	"type": "kizuna",
@@ -4051,6 +4204,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Rin",
+	"chapter": "キズナエピソード 星空凛 / ユニットライブ編",
+	"title": "16話 もっと役に立ちたいっ",
+	"desc": "花丸とのジョイントライブを終え、自分ならではの「かわいい」を見つけた凛。次のlily whiteのユニットライブでは、心に決めていることがあるようで……？",
+	"character": ["Player", "Umi", "Rin", "Nozomi"]
+},
+{
+	"type": "kizuna",
 	"color": "Maki",
 	"chapter": "キズナエピソード 西木野真姫",
 	"title": "1話 返事しなくちゃいけない？",
@@ -4171,6 +4332,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Maki",
+	"chapter": "キズナエピソード 西木野真姫 / ユニットライブ編",
+	"title": "16話 勉強不足！？",
+	"desc": "ソロライブを終え、あなたとの仲も深まった真姫。BiBiのユニットライブに向けて、作曲をはじめようとした真姫だが……。",
+	"character": ["Player", "Eli", "Maki", "Nico"]
+},
+{
+	"type": "kizuna",
 	"color": "Nozomi",
 	"chapter": "キズナエピソード 東條希",
 	"title": "1話 パワーでお迎え♪",
@@ -4288,6 +4457,14 @@ const StoryList = [
 	"title": "15話 みんなと作るソロライブ！",
 	"desc": "今までとは違う自分らしさを見つけたい、とエマや愛に練習を手伝ってもらった希。みんなの力を借りて、ソロライブのステージへ向かう希が気づいたことは……。",
 	"character": ["Player", "Honoka", "Rin", "Nozomi", "Ai", "Emma"]
+},
+{
+	"type": "kizuna",
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希 / ユニットライブ編",
+	"title": "16話 心を感じて",
+	"desc": "ニジガクのみんなの力を借りて、自分をもっと表現してみたい、もっと楽しみたい、と感じるようになった希。lily whiteのユニットライブに向けて、自分ができることを考えることに。",
+	"character": ["Player", "Umi", "Rin", "Nozomi"]
 },
 {
 	"type": "kizuna",
@@ -4412,6 +4589,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Hanayo",
+	"chapter": "キズナエピソード  / ユニットライブ編",
+	"title": "16話 私がメイン！？",
+	"desc": "ネクストスクールアイドルフェアで自分のスクールアイドル愛を存分に発揮することができた花陽。次は、Printempsのユニットライブに向けて活動をはじめるが、今回のメインは花陽で……！？",
+	"character": ["Player", "Honoka", "Kotori", "Hanayo"]
+},
+{
+	"type": "kizuna",
 	"color": "Nico",
 	"chapter": "キズナエピソード 矢澤にこ",
 	"title": "1話 手伝いなんていらないっ！",
@@ -4530,6 +4715,14 @@ const StoryList = [
 	"title": "15話 ジョイントライブで対決！",
 	"desc": "かすみの挑戦者としての心意気を評価し、それに応えるためにも練習を重ねていくにこ。どちらの方が優れたパフォーマンスをできるのか、にことかすみのライブ対決が今はじまる！",
 	"character": ["Player", "Nico", "Kasumi"]
+},
+{
+	"type": "kizuna",
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ / ユニットライブ編",
+	"title": "16話 「かっこいい」を目指して",
+	"desc": "にことかすみのジョイントライブは大成功！　完成されたかわいさを手に入れたにこは、BiBiのユニットライブに挑むが……",
+	"character": ["Player", "Eli", "Maki", "Nico", "Kasumi"]
 },
 {
 	"type": "kizuna",

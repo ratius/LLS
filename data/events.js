@@ -322,5 +322,14 @@ const EventList = [
 	"ended"   : new Date("2021-03-30T14:59:59+09:00"),
 	"UR" : ["Maki", "Ruby", "Ayumu"],
 	"SR" : ["Eli", "Mari", "Kasumi"]
-}
+},
+{
+	"id" : 37,
+	"name" : "桜の精霊に会いに",
+	"type" : "exchange",
+	"started" : new Date("2021-04-07T15:00:00+09:00"),
+	"ended"   : new Date("2021-04-14T14:59:59+09:00"),
+	"UR" : ["Nico", "Dia", "Shizuku"],
+	"SR" : ["Nozomi", "Yoshiko", "Rina"]
+},
 ];
