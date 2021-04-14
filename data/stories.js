@@ -3568,6 +3568,55 @@ const StoryList = [
 	"character": ["Eli", "Maki", "Mari", "Ruby", "Ayumu", "Kasumi"]
 },
 {
+	"type": "event",
+	"chapter": "イベントエピソード「桜の精霊に会いに」",
+	"title": "第1話",
+	"desc": "次の演劇部の公演で桜の精霊の役を演じることになったしずく。抽象的でセリフも無い花の精霊をどう表現すれば良いのか悩んでいた。",
+	"character": ["Nozomi", "Nico", "Dia", "Yoshiko", "Shizuku", "Rina"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「桜の精霊に会いに」",
+	"title": "第2話",
+	"desc": "本物の桜を見て何かヒントを得られないかと、公園へやってきたしずく達。しかし、桜の開花はまだだった。",
+	"character": ["Nozomi", "Nico", "Dia", "Yoshiko", "Shizuku", "Rina"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「桜の精霊に会いに」",
+	"title": "第3話",
+	"desc": "練習を続けるしずくの元に、5人がまた集まった。ダイヤが「桜の精霊とはどんなイメージか？」と聞くと、それぞれが異なる姿の想像を語りだす。",
+	"character": ["Nozomi", "Nico", "Dia", "Yoshiko", "Shizuku", "Rina"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「桜の精霊に会いに」",
+	"title": "第4話",
+	"desc": "その後日、花見をすることになった6人。公園では、満開の桜が6人を出迎えてくれた。",
+	"character": ["Nozomi", "Nico", "Dia", "Yoshiko", "Shizuku", "Rina"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「桜の精霊に会いに」",
+	"title": "第5話",
+	"desc": "花見をしながら、璃奈お手製のお弁当を満喫した6人。強風で花びらが散っていく様子を見て、にこはしずくにあることを尋ねる。",
+	"character": ["Nozomi", "Nico", "Dia", "Yoshiko", "Shizuku", "Rina"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「桜の精霊に会いに」",
+	"title": "第6話",
+	"desc": "本物の桜を見て多くのヒントを得たしずくは、周りの様子も気にならないほどに、桜の精霊役を演じることに没頭していた。",
+	"character": ["Nozomi", "Nico", "Dia", "Yoshiko", "Shizuku", "Rina"]
+},
+{
+	"type": "event",
+	"chapter": "イベントエピソード「桜の精霊に会いに」",
+	"title": "第7話",
+	"desc": "公演は大好評！ 桜にお礼を言うために三度公園に足を運ぶしずく達だったが、もう桜は散ってしまいそうだった。",
+	"character": ["Nozomi", "Nico", "Dia", "Yoshiko", "Shizuku", "Rina"]
+},
+{
 	"type": "kizuna",
 	"color": "Honoka",
 	"chapter": "キズナエピソード 高坂穂乃果",
@@ -4847,6 +4896,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Chika",
+	"chapter": "キズナエピソード 高海千歌 / ユニットライブ編",
+	"title": "16話 CYaRon！をお手伝い",
+	"desc": "Aqoursのユニット・CYaRon！のライブが決まり、サポートのために千歌達の元を訪れたあなた。４人で力を合わせてライブ成功を目指そう！",
+	"character": ["Player", "Chika", "You", "Ruby"]
+},
+{
+	"type": "kizuna",
 	"color": "Riko",
 	"chapter": "キズナエピソード 桜内梨子",
 	"title": "1話 コンサートホールにて",
@@ -4964,6 +5021,14 @@ const StoryList = [
 	"title": "15話 素敵な曲の作り方",
 	"desc": "再びコンサートにやって来た梨子とあなた。晴れやかな気持ちでコンサートを楽しむあなたは……。",
 	"character": ["Player", "Riko"]
+},
+{
+	"type": "kizuna",
+	"color": "Riko",
+	"chapter": "キズナエピソード 桜内梨子 / ユニットライブ編",
+	"title": "16話 自由混迷ミーティング",
+	"desc": "Guilty Kissのライブに向けて打ち合わせをする梨子達とあなた。しかし鞠莉や善子の自由奔放な発言で、話し合いは迷走を繰り返す……",
+	"character": ["Player", "Riko", "Yoshiko", "Mari"]
 },
 {
 	"type": "kizuna",
@@ -5087,6 +5152,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Kanan",
+	"chapter": "キズナエピソード 松浦果南 / ユニットライブ編",
+	"title": "16話 頼れる可愛い果南ちゃん",
+	"desc": "ユニットでライブをすることになった。AZALEAとして張り切る果南は、Aqoursの時とは少し雰囲気が違う。そんな果南を新鮮に感じながら、あなた達はライブの話し合いを進める。",
+	"character": ["Player", "Kanan", "Dia", "Hanamaru"]
+},
+{
+	"type": "kizuna",
 	"color": "Dia",
 	"chapter": "キズナエピソード 黒澤ダイヤ",
 	"title": "1話 見慣れぬ一面",
@@ -5204,6 +5277,14 @@ const StoryList = [
 	"chapter": "キズナエピソード 黒澤ダイヤ",
 	"title": "15話 楽しむならば最後まで",
 	"desc": "パレードの人混みのせいで、ダイヤとはぐれてしまったあなた。無事にダイヤと合流することはできるのか？",
+	"character": ["Player", "Dia"]
+},
+{
+	"type": "kizuna",
+	"color": "Dia",
+	"chapter": "キズナエピソード 黒澤ダイヤ / ユニットライブ編",
+	"title": "16話 ユニットへの想い",
+	"desc": "ダイヤの家へ遊びに来たあなた。部屋でお茶を飲みながら、これまでの思い出やスクールアイドル活動のことなどを話す。",
 	"character": ["Player", "Dia"]
 },
 {
@@ -5330,6 +5411,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "You",
+	"chapter": "キズナエピソード 渡辺曜 / ユニットライブ編",
+	"title": "16話 CYaRon！始動、だけど？",
+	"desc": "ライブに向けて行動を開始するCYaRon！とあなた。しかし曜は今日はお休みらしい。その理由は……？",
+	"character": ["Player", "Chika", "You"]
+},
+{
+	"type": "kizuna",
 	"color": "Yoshiko",
 	"chapter": "キズナエピソード 津島善子",
 	"title": "1話 ドロップアイテム",
@@ -5448,6 +5537,14 @@ const StoryList = [
 	"title": "15話 仲直り大作戦",
 	"desc": "母親との仲直り方法を模索する善子とあなた。あなたはいくつかアイディアを出すものの、なかなか決められず……。",
 	"character": ["Player", "Yoshiko"]
+},
+{
+	"type": "kizuna",
+	"color": "Yoshiko",
+	"chapter": "キズナエピソード 津島善子 / ユニットライブ編",
+	"title": "16話 堕天使ヨハネの不調",
+	"desc": "Guilty Kissのライブで披露するダンスを練習する善子達。なかなか動きが揃わないが、特に善子の動きが悪いようで……",
+	"character": ["Player", "Riko", "Yoshiko", "Mari"]
 },
 {
 	"type": "kizuna",
@@ -5571,6 +5668,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Hanamaru",
+	"chapter": "キズナエピソード 国木田花丸 / ユニットライブ編",
+	"title": "16話 それぞれの場所で",
+	"desc": "Aqoursのユニットライブが決まった。花丸もルビィも善子も、それぞれのユニットで活動を開始する。",
+	"character": ["Player", "Yoshiko", "Hanamaru", "Ruby"]
+},
+{
+	"type": "kizuna",
 	"color": "Mari",
 	"chapter": "キズナエピソード 小原鞠莉",
 	"title": "1話 鞠莉との1日",
@@ -5691,6 +5796,14 @@ const StoryList = [
 },
 {
 	"type": "kizuna",
+	"color": "Mari",
+	"chapter": "キズナエピソード 小原鞠莉 / ユニットライブ編",
+	"title": "16話 ",
+	"desc": "ユニットライブの打ち合わせのため、浦女の部室に向かうあなたは、その途中で鞠莉の姿を見つける。楽しそうに鼻歌を歌う鞠莉。その理由は……",
+	"character": ["Player", "Mari"]
+},
+{
+	"type": "kizuna",
 	"color": "Ruby",
 	"chapter": "キズナエピソード 黒澤ルビィ",
 	"title": "1話 放課後の秘密",
@@ -5808,6 +5921,14 @@ const StoryList = [
 	"chapter": "キズナエピソード 黒澤ルビィ",
 	"title": "15話 支え合う信頼",
 	"desc": "ルビィに会うため、あなたは久しぶりに内浦を訪れた。そこであなたは、ルビィの本当の気持ちを知る。",
+	"character": ["Player", "Ruby"]
+},
+{
+	"type": "kizuna",
+	"color": "Ruby",
+	"chapter": "キズナエピソード 黒澤ルビィ / ユニットライブ編",
+	"title": "16話 自分にできることを",
+	"desc": "ルビィからCYaRon！のライブが決まったと聞いたあなた。みんなの力になれるように頑張りたいと言うルビィの話を、あなたは温かい気持ちで聞いていた。",
 	"character": ["Player", "Ruby"]
 },
 {

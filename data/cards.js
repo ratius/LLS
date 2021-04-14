@@ -3723,24 +3723,24 @@ const RawCardList = [
 },
 {
 	"id": 376,
-	"name": "Riko",
-	"rare": "SR",
-	"atr": "Elegant",
-	"type": "Sk",
-	"cn1": "家族になってくれて、ありがとう",
-	"cn2": "未体験HORIZON",
-	"date": "2020/12/26",
-	"source": "none",
-	"desc": "「スクスタフェス」で追加"
-},
-{
-	"id": 377,
 	"name": "Setsuna",
 	"rare": "SR",
 	"atr": "Pure",
 	"type": "Sp",
 	"cn1": "ま、漫画、隠さなくちゃ！",
 	"cn2": "LIKE IT！LOVE IT！",
+	"date": "2020/12/26",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 377,
+	"name": "Riko",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "家族になってくれて、ありがとう",
+	"cn2": "未体験HORIZON",
 	"date": "2020/12/26",
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
@@ -4488,6 +4488,30 @@ const RawCardList = [
 	"date": "2021/04/07",
 	"source": "reward",
 	"desc": "イベント「桜の精霊に会いに」報酬 (1万位/10万位枠)"
+},
+{
+	"id": 439,
+	"name": "Honoka",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sk",
+	"cn1": "す～……す～……",
+	"cn2": "キャプテン☆穂乃果",
+	"date": "2021/04/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 440,
+	"name": "Kanata",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Vo",
+	"cn1": "こっちにおいで",
+	"cn2": "Just Believe!!!",
+	"date": "2021/04/14",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
 }
 ];
-const LatestUpdate = "2021/04/04「桜の精霊に会いに」まで";
+const LatestUpdate = "2021/04/14「パーティーガチャ」まで";
