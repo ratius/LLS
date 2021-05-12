@@ -332,4 +332,22 @@ const EventList = [
 	"UR" : ["Nico", "Dia", "Shizuku"],
 	"SR" : ["Nozomi", "Yoshiko", "Rina"]
 },
+{
+	"id" : 38,
+	"name" : "あの木の下で逢いましょう",
+	"type" : "story",
+	"started" : new Date("2021-04-22T15:00:00+09:00"),
+	"ended"   : new Date("2021-04-29T14:59:59+09:00"),
+	"UR" : ["Rin", "Chika", "Karin"],
+	"SR" : ["Hanayo", "Ruby", "Kasumi"]
+},
+{
+	"id" : 39,
+	"name" : "あつまれ！　幼稚園ライブ！",
+	"type" : "exchange",
+	"started" : new Date("2021-05-07T15:00:00+09:00"),
+	"ended"   : new Date("2021-05-14T14:59:59+09:00"),
+	"UR" : ["Umi", "Kanan", "Rina"],
+	"SR" : ["Eli", "Mari", "Ayumu"]
+}
 ];

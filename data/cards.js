@@ -4418,7 +4418,7 @@ const RawCardList = [
 	"desc": "「スクスタフェス」で追加"
 },
 {
-	"id": 433,
+	"id": 434,
 	"name": "Shizuku",
 	"rare": "UR",
 	"atr": "Pure",
@@ -4430,7 +4430,7 @@ const RawCardList = [
 	"desc": "「桜の精霊に会いにガチャ(前編)」で追加"
 },
 {
-	"id": 434,
+	"id": 435,
 	"name": "Rina",
 	"rare": "SR",
 	"atr": "Elegant",
@@ -4442,7 +4442,7 @@ const RawCardList = [
 	"desc": "「桜の精霊に会いにガチャ(前編)」で追加"
 },
 {
-	"id": 435,
+	"id": 436,
 	"name": "Dia",
 	"rare": "UR",
 	"atr": "Natural",
@@ -4454,7 +4454,7 @@ const RawCardList = [
 	"desc": "「桜の精霊に会いにガチャ(後編)」で追加"
 },
 {
-	"id": 436,
+	"id": 437,
 	"name": "Nico",
 	"rare": "UR",
 	"atr": "Elegant",
@@ -4466,7 +4466,7 @@ const RawCardList = [
 	"desc": "イベント「桜の精霊に会いに」報酬"
 },
 {
-	"id": 437,
+	"id": 438,
 	"name": "Yoshiko",
 	"rare": "SR",
 	"atr": "Pure",
@@ -4478,7 +4478,7 @@ const RawCardList = [
 	"desc": "イベント「桜の精霊に会いに」報酬 (3000位/7万位枠)"
 },
 {
-	"id": 438,
+	"id": 439,
 	"name": "Nozomi",
 	"rare": "SR",
 	"atr": "Cool",
@@ -4490,7 +4490,7 @@ const RawCardList = [
 	"desc": "イベント「桜の精霊に会いに」報酬 (1万位/10万位枠)"
 },
 {
-	"id": 439,
+	"id": 430,
 	"name": "Honoka",
 	"rare": "UR",
 	"atr": "Pure",
@@ -4502,7 +4502,7 @@ const RawCardList = [
 	"desc": "「パーティーガチャ」で追加"
 },
 {
-	"id": 440,
+	"id": 441,
 	"name": "Kanata",
 	"rare": "SR",
 	"atr": "Elegant",
@@ -4512,6 +4512,199 @@ const RawCardList = [
 	"date": "2021/04/14",
 	"source": "none",
 	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 442,
+	"name": "Rin",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "ごろごろすると気持ちいいにゃー",
+	"cn2": "signs of spring",
+	"date": "2021/04/19",
+	"source": "gacha",
+	"desc": "「あの木の下で逢いましょうガチャ(前編)」で追加"
+},
+{
+	"id": 443,
+	"name": "Kasumi",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "かすみん、ただいま戻りました！",
+	"cn2": "Just Believe!!!",
+	"date": "2021/04/19",
+	"source": "gacha",
+	"desc": "「あの木の下で逢いましょうガチャ(前編)」で追加"
+},
+{
+	"id": 444,
+	"name": "Karin",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Gd",
+	"cn1": "花占い",
+	"cn2": "signs of spring",
+	"date": "2021/04/22",
+	"source": "gacha",
+	"desc": "「あの木の下で逢いましょうガチャ(後編)」で追加"
+},
+{
+	"id": 445,
+	"name": "Chika",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "逃げろ！",
+	"cn2": "signs of spring",
+	"date": "2021/04/22",
+	"source": "reward",
+	"desc": "イベント「あの木の下で逢いましょう」報酬"
+},
+{
+	"id": 446,
+	"name": "Hanayo",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Gd",
+	"cn1": "凛ちゃんの居場所、分かったかも",
+	"cn2": "No brand girls",
+	"date": "2021/04/22",
+	"source": "reward",
+	"desc": "イベント「あの木の下で逢いましょう」報酬 (3000位/7万位枠)"
+},
+{
+	"id": 447,
+	"name": "Ruby",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "はい、これでもう大丈夫！",
+	"cn2": "HAPPY PARTY TRAIN",
+	"date": "2021/04/22",
+	"source": "reward",
+	"desc": "イベント「あの木の下で逢いましょう」報酬 (1万位/10万位枠)"
+},
+{
+	"id": 448,
+	"name": "Emma",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "こ、ここがダガシヤさん……！",
+	"cn2": "Relaxing Lullaby",
+	"date": "2021/04/29",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 449,
+	"name": "Riko",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "うわああああああ！！",
+	"cn2": "ラブリー♡ナース",
+	"date": "2021/04/29",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 450,
+	"name": "Maki",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "……まだ来そうにないわね",
+	"cn2": "No brand girls",
+	"date": "2021/04/29",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 451,
+	"name": "Hanamaru",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "一緒に砂のお城を作るずら！",
+	"cn2": "HAPPY PARTY TRAIN",
+	"date": "2021/04/29",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+
+{
+	"id": 452,
+	"name": "Kanan",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "ジャジャーン。かぶとの完成！",
+	"cn2": "ドリーミー☆キッズランド",
+	"date": "2021/05/04",
+	"source": "gacha",
+	"desc": "「あつまれ！　幼稚園ライブガチャ」で追加"
+},
+{
+	"id": 453,
+	"name": "Rina",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "私はすっごく嬉しかった",
+	"cn2": "ドリーミー☆キッズランド",
+	"date": "2021/05/04",
+	"source": "gacha",
+	"desc": "「あつまれ！　幼稚園ライブガチャ」で追加"
+},
+{
+	"id": 454,
+	"name": "Eli",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Gd",
+	"cn1": "これをこうして、こうして……",
+	"cn2": "No brand girls",
+	"date": "2021/05/04",
+	"source": "gacha",
+	"desc": "「あつまれ！　幼稚園ライブガチャ」で追加"
+},
+{
+	"id": 455,
+	"name": "Umi",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Sk",
+	"cn1": "穂むらの餡は他とは全然違う",
+	"cn2": "ドリーミー☆キッズランド",
+	"date": "2021/05/07",
+	"source": "reward",
+	"desc": "イベント「あつまれ！　幼稚園ライブ」報酬"
+},
+{
+	"id": 456,
+	"name": "Ayumu",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "ジャジャーン。鯉のぼりでーす",
+	"cn2": "Just Believe!!!",
+	"date": "2021/05/07",
+	"source": "reward",
+	"desc": "イベント「あつまれ！　幼稚園ライブ」報酬 (ランキング枠)"
+},
+{
+	"id": 457,
+	"name": "Mari",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "璃奈ちゃんボードをプレゼント！",
+	"cn2": "HAPPY PARTY TRAIN",
+	"date": "2021/05/07",
+	"source": "reward",
+	"desc": "イベント「あつまれ！　幼稚園ライブ」報酬 (交換所枠)"
 }
 ];
-const LatestUpdate = "2021/04/14「パーティーガチャ」まで";
+const LatestUpdate = "2021/05/24 「あつまれ！　幼稚園ライブガチャ」まで";
