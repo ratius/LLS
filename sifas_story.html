@@ -57,7 +57,7 @@ p{
 }
 
 .StoryTable .LeftColumn {
-	width: 90px;
+	width: 80px;
 	text-align: center;
 }
 
@@ -112,10 +112,12 @@ p{
 <script><!--
 let TotalStoryNumber = 0;
 const CharLookUpTable = [
-	{"number":0,  "id": "main",     "name": "メイン", "r":122, "g":202, "b":223 },
-	{"number":1,  "id": "event",    "name": "イベント","r":255, "g":130, "b":127 },
-	{"number":2,  "id": "kizuna",   "name": "キズナ", "r":119, "g":191, "b":220 },
-	{"number":3,  "id": "special",  "name": "特殊", "r":240, "g":192, "b":128 },
+	{"number":-1,  "id": "main",    "name": "メイン", "r":122, "g":202, "b":223 },
+	{"number":-2, "id": "event",    "name": "イベント","r":255, "g":130, "b":127 },
+	{"number":-3, "id": "kizuna",   "name": "キズナ", "r":119, "g":191, "b":220 },
+	{"number":-4, "id": "special",  "name": "特殊",   "r":240, "g":192, "b":128 },
+	
+	{"number":-11,"id": "main2",    "name": "メイン", "r":160, "g":140, "b":240 },
 
 	{"number":10, "id": "Honoka",   "name": "穂乃果", "r":255, "g":163, "b": 54 },
 	{"number":11, "id": "Eli",      "name": "絵里",   "r":122, "g":238, "b":255 },
@@ -162,8 +164,6 @@ const CharLookUpTable = [
 	{"number":314,"id": "Secretary","name": "右月/左月","r":128, "g":112, "b": 80 }
 ];
 
-//	{"number":402,"id": "Kaoruko",  "name": "薫子",    "r":128, "g":112, "b": 80 },
-
 
 let Narrowed = []; //現在の絞り込み対象
 
@@ -189,8 +189,9 @@ function LookUp(id, data){
 function DrawNarrowingButtons(){
 	var Output = '<div>';
 	for(temp1 of CharLookUpTable){
+		if(temp1.number < -10){ continue;}
 		Output += DrawCharNameButton(temp1.id);
-		if(temp1.number == 3 || temp1.number == 18 || temp1.number == 28 || temp1.number == 38 || temp1.number == 201){
+		if(temp1.number == -4 || temp1.number == 18 || temp1.number == 28 || temp1.number == 38 || temp1.number == 201){
 			Output += '<br>';
 		}
 	}
@@ -203,12 +204,12 @@ function DrawEventList(){
 	var Output = '<div id="StoryArea">';
 	
 	for(temp1 of StoryList){
-		if(!temp1.character){continue;} //登場人物が設定されていない場合、描画しない
-		if(temp1.character.length == 0){continue;}
+		if(!temp1.tag){continue;} //タグが設定されていない場合、描画しない
+		if(temp1.tag.length == 0){continue;}
 		
-		Output += '<table class="StoryTable ' + temp1.type;
+		Output += '<table class="StoryTable ';
 		
-		for(temp2 of temp1.character){
+		for(temp2 of temp1.tag){
 			Output += ' ' + temp2;
 		}
 		Output += '"';
@@ -241,8 +242,10 @@ function DrawEventList(){
 
 		Output += '<tr><td class="LeftColumn">登場人物<\/td><td class="RightColumn">';
 		
-		for(temp2 of temp1.character){
-			Output += DrawCharName(temp2);
+		for(temp2 of temp1.tag){
+			if(LookUp(temp2,"number") >=0){ //負数(登場人物でないタグ)は表示しない
+				Output += DrawCharName(temp2);
+			}
 		}
 		
 		Output += '<\/td><\/tr>\n<\/tbody>\n<\/table>\n'
@@ -400,12 +403,12 @@ loadScript("data/stories.js", function() {
 	+ '<p>スクフェスALL STARSにおける「メインストーリー」「イベントエピソード」「キズナエピソード」の一覧です。<br>下記の「絞り込み用ボタン」をクリック/タップすることで、合致するストーリーを絞り込むことができます。<br>イベントストーリーは、公式によるあらすじが設定されていませんが、ネタバレにならない程度に独自にあらすじを加えてあります。<\/p>'
 	
 	+ '<p><span style="font-weight:bold;">実装済データ<\/span><\/p><ul>'
-	+ '<li>メインストーリー：第1～11・18～25章<\/li>'
-	+ '<li>イベントエピソード：「桜の精霊に会いに」までの37イベント<\/li>'
-	+ '<li>キズナエピソード：<b>2021年4月14日追加分まで掲載完了。<\/b><ul>'
+	+ '<li>メインストーリー：第1～14・18～26章<\/li>'
+	+ '<li>イベントエピソード：「あつまれ！　キッズライブ」までの39イベント<\/li>'
+	+ '<li>キズナエピソード：<b>2021年4月28日追加分まで掲載完了。<\/b><ul>'
 	+ '<li>μ&#39;s：各16話まで<\/li>'
 	+ '<li>Aqours：各16話まで<\/li>'
-	+ '<li>ニジガク：初期9人 (各23話まで)、栞子 (10話まで)<\/li>'
+	+ '<li>ニジガク：初期9人 (各24話まで)、栞子 (11話まで)<\/li>'
 	+ '<\/ul>'
 	+ '<li>アニメ連動ストーリー：<b>掲載完了</b><\/li>'
 	+ '<li>サイドエピソード：掲載予定なし<\/li>'
@@ -423,6 +426,16 @@ loadScript("data/stories.js", function() {
 <table class="history">
 <tbody>
 <tr>
+	<td>2021/05/12</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第12～14章、第26章</li>
+			<li>キズナエピソード：ニジガク初期9名(第24話まで)、栞子(第11話まで)</li>
+			<li>イベントエピソード：「あの木の下で会いましょう」「あつまれ！　キッズライブ」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
 	<td>2021/04/14</td>
 	<td><span class="new"></span>ストーリーを新たに掲載
 		<ul>
@@ -431,6 +444,7 @@ loadScript("data/stories.js", function() {
 		</ul>
 	</td>
 </tr>
+<!--
 <tr>
 	<td>2021/04/07</td>
 	<td><span class="new"></span>ストーリーを新たに掲載
