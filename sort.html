@@ -44,6 +44,7 @@ const ColSetu = "#f9a6aa";
 const ColEmma = "#c8edbe";
 const ColRina = "#cfd0e3";
 const ColShio = "#a1e8d2";
+const ColYu   = "#bbb";
 
 
 var MemberGroup = [
@@ -59,8 +60,8 @@ var MemberGroup = [
 	["┣","Aqoursキャスト",["AqoursCast"]],
 	["┣","Aqoursユニット",["AqoursUnit"]],
 	["┗","Aqoursカップリング",["AqoursCP"]],
-	[""  ,"虹ヶ咲学園スクールアイドル同好会",["Niji"]],
-	["┣","虹ヶ咲関係者",["Niji","Niji2"]],
+	[""  ,"虹ヶ咲学園スクールアイドル同好会",["Niji","NijiX"]],
+	["┣","虹ヶ咲関係者",["Niji","NijiX","Niji2"]],
 	["┣","虹ヶ咲キャスト",["NijiCast"]],
 	["┣","虹ヶ咲ユニット",["NijiUnit"]],
 	["┗","虹ヶ咲カップリング",["NijiCP"]],
@@ -265,6 +266,7 @@ var CharList = [
 	{name:"エマ・ヴェルデ", color:[ColEmma], group:{"Niji":1}},
 	{name:"天王寺璃奈",     color:[ColRina], group:{"Niji":1}},
 	{name:"三船栞子",       color:[ColShio], group:{"Niji":1}},
+	{name:"高咲侑",         color:[ColYu  ], group:{"NijiX":1}},
 
 	{name:"川本美里",       color:["#eee"], group:{"Niji2":1}},
 	{name:"近江遥",         color:["#eee"], group:{"Niji2":1}},
@@ -273,6 +275,8 @@ var CharList = [
 	{name:"鐘嵐珠",         color:["#eee"], group:{"Niji2":1}},
 	{name:"ミア・テイラー", color:["#eee"], group:{"Niji2":1}},
 	{name:"虹ヶ咲学園理事長", color:["#eee"], group:{"Niji2":1}},
+	{name:"右月/左月",      color:["#eee"], group:{"Niji2":1}},
+	{name:"はんぺん", subtext:"白い猫", color:["#eee"], group:{"Niji2":1}},
 	
 	{name:"大西亜玖璃", subtext:"上原歩夢 役",   color:[ColAyum], group:{"NijiCast":1}},
 	{name:"相良茉優", subtext:"中須かすみ 役",   color:[ColKasu], group:{"NijiCast":1}},
@@ -283,7 +287,8 @@ var CharList = [
 	{name:"楠木ともり", subtext:"優木せつ菜 役", color:[ColSetu], group:{"NijiCast":1}},
 	{name:"指出毬亜",   subtext:"エマ・ヴェルデ 役", color:[ColEmma], group:{"NijiCast":1}},
 	{name:"田中ちえ美", subtext:"天王寺璃奈 役", color:[ColRina], group:{"NijiCast":1}},
-	{name:"小泉萌香",   subtext:"三船栞子 役", color:[ColShio], group:{"NijiCast":1}},
+	{name:"小泉萌香",   subtext:"三船栞子 役",   color:[ColShio], group:{"NijiCast":1}},
+	{name:"矢野妃菜喜", subtext:"高咲侑 役",     color:[ColYu  ], group:{"NijiCast":1}},
 
 	{name:"虹ヶ咲学園1年生",  namealt:"虹ヶ咲学園<br>1年生",   color:["#ed9"], subtext:"中須かすみ<br>桜坂しずく<br>天王寺璃奈<br>三船栞子", group:{"NijiUnit":1}},
 	{name:"虹ヶ咲学園2年生",  namealt:"虹ヶ咲学園<br>2年生",   color:["#eaa"], subtext:"上原歩夢<br>宮下愛<br>優木せつ菜", group:{"NijiUnit":1}},
@@ -297,7 +302,8 @@ var CharList = [
 	{name:"スクフェススマイル組", namealt:"スクフェス<br>スマイル組", color:["#f9c"], subtext:"宮下愛<br>近江彼方<br>天王寺璃奈", group:{"NijiUnit":1}},
 	{name:"スクフェスピュア組",   namealt:"スクフェス<br>ピュア組",   color:["#9fb"], subtext:"上原歩夢<br>中須かすみ<br>エマ・ヴェルデ", group:{"NijiUnit":1}},
 	{name:"スクフェスクール組",   namealt:"スクフェス<br>クール組",   color:["#9df"], subtext:"桜坂しずく<br>朝香果林<br>優木せつ菜", group:{"NijiUnit":1}},
-	{name:"とみちーず",     color:["#fcb"], subtext:"朝香果林<br>優木せつ菜<br>天王寺璃奈", group:{"NijiUnit":1}},
+	{name:"とみちーず",     color:["#fdb"], subtext:"朝香果林<br>優木せつ菜<br>天王寺璃奈", group:{"NijiUnit":1}},
+	{name:"りりりーず",     color:["#fdb"], subtext:"桜坂しずく<br>近江彼方<br>優木せつ菜", group:{"NijiUnit":1}},
 
 	{name:"あゆかす",       color:[ColAyum, ColKasu], group:{"NijiCP":1}},
 	{name:"あゆしず",       color:[ColAyum, ColShiz], group:{"NijiCP":1}},
@@ -875,14 +881,18 @@ document.write('<\/select><\/form>');
 <table class="history" style="margin: auto;">
 <tbody>
 <tr>
+	<td>2021/05/31</td>
+	<td><span class="new"></span>アニメ虹ヶ咲関連、りりりーず(ユニット)、右月/左月、はんぺんを追加</td>
+</tr>
+<tr>
 	<td>2020/10/03</td>
-	<td><span class="new"></span>虹ヶ咲関係者に鐘嵐珠、ミア・テイラー、虹ヶ咲学園理事長を追加<br>
+	<td><span class="new"></span>鐘嵐珠、ミア・テイラー、虹ヶ咲学園理事長を追加<br>
 	<span class="new"></span>虹ヶ咲カップリングに三船栞子を含むカップリングを追加</td>
 </tr>
 <tr>
 	<td>2020/08/03</td>
 	<td><span class="new"></span>三船栞子をニジガクメインキャラクターに格上げ<br>
-	<span class="new"></span>虹ヶ咲関係者に三船薫子、夏川マイを追加</td>
+	<span class="new"></span>三船薫子、夏川マイを追加</td>
 </tr>
 <tr>
 	<td>2020/07/15</td>
