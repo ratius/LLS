@@ -4633,7 +4633,6 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
 },
-
 {
 	"id": 452,
 	"name": "Kanan",
@@ -4684,6 +4683,18 @@ const RawCardList = [
 },
 {
 	"id": 456,
+	"name": "Mari",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "璃奈ちゃんボードをプレゼント！",
+	"cn2": "HAPPY PARTY TRAIN",
+	"date": "2021/05/07",
+	"source": "reward",
+	"desc": "イベント「あつまれ！　幼稚園ライブ」報酬 (交換所枠)"
+},
+{
+	"id": 457,
 	"name": "Ayumu",
 	"rare": "SR",
 	"atr": "Cool",
@@ -4695,16 +4706,148 @@ const RawCardList = [
 	"desc": "イベント「あつまれ！　幼稚園ライブ」報酬 (ランキング枠)"
 },
 {
-	"id": 457,
-	"name": "Mari",
+	"id": 458,
+	"name": "Kanata",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "ドッキリ、だーいせーいこー",
+	"cn2": "ふわふわ♡おやすみタイム",
+	"date": "2021/05/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 459,
+	"name": "Kotori",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Vo",
+	"cn1": "海未ちゃんを思って作ったんだ",
+	"cn2": "No brand girls",
+	"date": "2021/05/14",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 460,
+	"name": "Yoshiko",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "ダークネスドクター！",
+	"cn2": "Around the World",
+	"date": "2021/05/19",
+	"source": "gacha",
+	"desc": "「心軽やかバケーション計画ガチャ」で追加"
+},
+{
+	"id": 461,
+	"name": "Kasumi",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "妖しげなかすみん",
+	"cn2": "Around the World",
+	"date": "2021/05/19",
+	"source": "gacha",
+	"desc": "「心軽やかバケーション計画ガチャ」で追加"
+},
+{
+	"id": 462,
+	"name": "You",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "降るような星空",
+	"cn2": "HAPPY PARTY TRAIN",
+	"date": "2021/05/19",
+	"source": "gacha",
+	"desc": "「心軽やかバケーション計画ガチャ」で追加"
+},
+{
+	"id": 463,
+	"name": "Maki",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Vo",
+	"cn1": "急がないと遅れるわね",
+	"cn2": "Around the World",
+	"date": "2021/05/22",
+	"source": "reward",
+	"desc": "イベント「心軽やかバケーション計画」報酬"
+},
+{
+	"id": 464,
+	"name": "Nico",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "私も歌いたくなっちゃうわ",
+	"cn2": "No brand girls",
+	"date": "2021/05/22",
+	"source": "reward",
+	"desc": "イベント「心軽やかバケーション計画」報酬 (イベントpt枠)"
+},
+{
+	"id": 465,
+	"name": "Emma",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Gd",
+	"cn1": "遠慮しないで、ア～ン",
+	"cn2": "Just Believe!!!",
+	"date": "2021/05/22",
+	"source": "reward",
+	"desc": "イベント「心軽やかバケーション計画」報酬 (ランキング枠)"
+},
+{
+	"id": 466,
+	"name": "Nozomi",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "思わぬ出会いがあるもんやね",
+	"cn2": "藤色美人",
+	"date": "2021/05/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 467,
+	"name": "Hanamaru",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Vo",
+	"cn1": "むー！　あがらないぃぃぃ……！",
+	"cn2": "不思議の国のマル",
+	"date": "2021/05/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 468,
+	"name": "Chika",
 	"rare": "SR",
 	"atr": "Active",
-	"type": "Vo",
-	"cn1": "璃奈ちゃんボードをプレゼント！",
+	"type": "Gd",
+	"cn1": "しいたけ待って～～！",
 	"cn2": "HAPPY PARTY TRAIN",
-	"date": "2021/05/07",
-	"source": "reward",
-	"desc": "イベント「あつまれ！　幼稚園ライブ」報酬 (交換所枠)"
+	"date": "2021/05/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 469,
+	"name": "Ai",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "ちゃんと気持ちを出せてるじゃん",
+	"cn2": "Just Believe!!!",
+	"date": "2021/05/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
 }
 ];
-const LatestUpdate = "2021/05/24 「あつまれ！　幼稚園ライブガチャ」まで";
+const LatestUpdate = "2021/05/30 「スクスタフェス」まで";

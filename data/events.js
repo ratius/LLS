@@ -349,5 +349,14 @@ const EventList = [
 	"ended"   : new Date("2021-05-14T14:59:59+09:00"),
 	"UR" : ["Umi", "Kanan", "Rina"],
 	"SR" : ["Eli", "Mari", "Ayumu"]
-}
+},
+{
+	"id" : 40,
+	"name" : "心軽やかバケーション計画",
+	"type" : "story",
+	"started" : new Date("2021-05-22T15:00:00+09:00"),
+	"ended"   : new Date("2021-05-30T14:59:59+09:00"),
+	"UR" : ["Maki", "Yoshiko", "Kasumi"],
+	"SR" : ["Nico", "You", "Emma"]
+},
 ];
