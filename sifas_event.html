@@ -63,9 +63,9 @@
 .PT-Top tr    { height: 28px; }
 .PT-Bottom    { overflow-x: scroll; height: calc(80vh - 30px);}
 .PT-Bottom tr { height: 59px; }
-.PT-Left      { overflow-y: hidden; width: 68px; border-right: 2px solid #973;}
-.PT-Left th   { width: 68px;}
-.PT-Right     { overflow-y: scroll; width: calc(100vw - 110px); margin-right: 0;}
+.PT-Left      { overflow-y: hidden; width: 62px; border-right: 2px solid #973;}
+.PT-Left th   { width: 60px;}
+.PT-Right     { overflow-y: scroll; width: calc(100vw - 102px); margin-right: 0;}
 .PT-Right td, div.PT-Right th { width: 74px; }
 
 .quarter-table {
@@ -137,9 +137,10 @@ td.bg_tp_white{
 
 const CharId = ['Honoka', 'Eli', 'Kotori', 'Umi', 'Rin', 'Maki', 'Nozomi', 'Hanayo', 'Nico',
 		'Chika', 'Riko', 'Kanan', 'Dia', 'You', 'Yoshiko', 'Hanamaru', 'Mari', 'Ruby',
-		'Ayumu', 'Kasumi', 'Shizuku', 'Karin', 'Ai', 'Kanata', 'Setsuna', 'Emma', 'Rina'];
+		'Ayumu', 'Kasumi', 'Shizuku', 'Karin', 'Ai', 'Kanata', 'Setsuna', 'Emma', 'Rina', 'Shioriko'];
 
 const CharLookUpTable = [
+	{"number":-1, "id": "",         "name": "",       "color": "white", "group": "M"},
 	{"number":0 , "id": "Honoka",   "name": "穂乃果", "color": "black", "group": "M"},
 	{"number":1 , "id": "Eli",      "name": "絵里",   "color": "black", "group": "M"},
 	{"number":2 , "id": "Kotori",   "name": "ことり", "color": "black", "group": "M"},
@@ -169,6 +170,8 @@ const CharLookUpTable = [
 	{"number":26, "id": "Rina",     "name": "璃奈",   "color": "black", "group": "N"},
 	{"number":27, "id": "Shioriko", "name": "栞子",   "color": "black", "group": "N"}
 ];
+
+const PairTableWidth = 100;
 
 //■■各種関数
 //■Date型を「YYYY/MM/DD (hh:mm)」という文字列に変換
@@ -311,37 +314,48 @@ function MakeTrioData(){
 function DrawSingleTable(CharList){
 	//■ヘッダー
 	var maxnumber = 0;
-	var Output = '<table class="Single-Table" style="width:100%">\n<thead>\n<tr>\n';
+	var Output = '<table class="Single-Table">\n<thead>\n<tr>\n';
 	for(x of CharList){
-		if(maxnumber < TrioHistory[x][0].length){ maxnumber = TrioHistory[x][0].length; }
-		
-		Output += '<th class="bg_' + CharId[x] + '" style="width:' + (100/CharList.length) + '%">'
-		+ '<strong class="shadowname">' + LookUp(CharId[x],"name") + '<\/strong><\/th>\n';
+		if(x>=0){ //空白でないなら
+			if(maxnumber < TrioHistory[x][0].length){ maxnumber = TrioHistory[x][0].length; }
+			Output += '<th class="bg_' + CharId[x] + '" style="width:' + (100/CharList.length) + '%">'
+			+ '<strong class="shadowname">' + LookUp(CharId[x],"name") + '<\/strong><\/th>\n';
+		} else {
+			Output += '<th style="width:' + (100/CharList.length) + '%"><\/th>\n';
+		}
 	}
 	Output += '<\/tr>\n<\/thead>\n<tr>';
 	
 	//■回数
 	for(x of CharList){
-		Output += '<td>'
-		+ TrioHistory[x][0].length + '回<br></td>';
+		if(x>=0){ //空白でないなら
+			Output += '<td>'
+			+ TrioHistory[x][0].length + '回<br></td>';
+		} else {
+			Output += '<td><\/td>'
+		}
 	}
 	Output += '<\/tr><tr>';
 	
 	//■ボタン
 	Output += '<\/tr>';
 	for(x of CharList){
-		var temp1 = TrioHistory[x][0];
-		Output += '<td class="bg_tp_white bg_' + CharId[x] + '">';
-		for(y of temp1){
-			Output += '<div class="EventBox bg_' + CharId[x] + '" title="'
-			+ LookUpEvent(y,"name") + '\n('
-			+ GetStringFromDate(LookUpEvent(y,"started"), false) + '～'
-			+ GetStringFromDate(LookUpEvent(y,"ended"), false) + ')'
-			+ '" style="color:' + LookUp(CharId[x],"color") + '">'
-			+ '<span>' + y + '<\/span><\/div>';
-			
+		if(x>=0){ //空白でないなら
+			var temp1 = TrioHistory[x][0];
+			Output += '<td class="bg_tp_white bg_' + CharId[x] + '">';
+			for(y of temp1){
+				Output += '<div class="EventBox bg_' + CharId[x] + '" title="'
+				+ LookUpEvent(y,"name") + '\n('
+				+ GetStringFromDate(LookUpEvent(y,"started"), false) + '～'
+				+ GetStringFromDate(LookUpEvent(y,"ended"), false) + ')'
+				+ '" style="color:' + LookUp(CharId[x],"color") + '">'
+				+ '<span>' + y + '<\/span><\/div>';
+				
+			}
+			Output += '<\/td>'
+		} else {
+			Output += '<td><\/td>'
 		}
-		Output += '<\/td>'
 	}
 	
 	Output += '<\/tbody>\n<\/table>';
@@ -350,6 +364,7 @@ function DrawSingleTable(CharList){
 
 // ■「ペア共演状況」テーブルの作成
 function DrawPairTable(){
+
 	//■親テーブル
 	var Output = '<table id="Pair-Table">\n<thead>\n<tr>\n';
 
@@ -358,7 +373,7 @@ function DrawPairTable(){
 
 		//■右上
 		Output += '<td><div class="PT-Top PT-Right" id="PT-TR">\n'
-		+ '<table class="quarter-table" style="width: ' + (CharId.length*75) + 'px">\n<thead>\n<tr>\n';
+		+ '<table class="quarter-table" style="width: ' + (CharId.length*PairTableWidth) + 'px">\n<thead>\n<tr>\n';
 		for(x of CharId){
 			//キャラクター名取得
 			Output += '<th class="bg_' + x + '"><strong class="shadowname">'
@@ -380,7 +395,7 @@ function DrawPairTable(){
 
 		//■右下
 		Output += '<td><div class="PT-Bottom PT-Right" id="PT-BR" onscroll="SyncScroll();">\n'
-		+ '<table class="quarter-table" style="width: ' + (CharId.length*75) + 'px">\n<tbody>\n';
+		+ '<table class="quarter-table" style="width: ' + (CharId.length*PairTableWidth) + 'px">\n<tbody>\n';
 		for(y of CharId){
 			Output += '<tr>\n';
 			for(x of CharId){
@@ -405,7 +420,7 @@ function DrawPairTable(){
 						+ '" style="color:' + LookUp(x,"color") + '">'
 						+ '<span>' + z + '<\/span><\/div>';
 						
-						if(++CirclesInRow == 3){ //改行処理
+						if(++CirclesInRow == 40){ //改行処理
 							Output += '<br>';
 							CirclesInRow = 0;
 						}
@@ -508,6 +523,7 @@ loadScript("data/events.js", function() {
 	+ DrawSingleTable([0,1,2,3,4,5,6,7,8])
 	+ DrawSingleTable([9,10,11,12,13,14,15,16,17])
 	+ DrawSingleTable([18,19,20,21,22,23,24,25,26])
+	+ DrawSingleTable([27,-1,-1,-1,-1,-1,-1,-1,-1])
 	
 	+ '<h3 class="niji">ペア共演状況<\/h3>'
 	+ DrawPairTable()
@@ -522,34 +538,39 @@ loadScript("data/events.js", function() {
 <table class="history">
 <tbody>
 <tr>
-	<td>2019/09/03 17:00頃</td>
+	<td>2021/06/02</td>
+	<td><span class="new"></span>栞子が表示可能になりました！<br>
+		<span class="fix"></span>「ペア共演状況」のレイアウト調整</td>
+</tr>
+<tr>
+	<td>2020/09/03</td>
 	<td><span class="new"></span>「トリオ重複状況」を追加</td>
 </tr>
 <tr>
-	<td>2019/08/02 23:30頃</td>
+	<td>2020/08/02</td>
 	<td><span class="new"></span>「イベント一覧」のテーブルに「参加キャラクター」を追加</td>
 </tr>
 <tr>
-	<td>2019/07/31 20:30頃</td>
+	<td>2020/07/31</td>
 	<td><span class="new"></span>「キャラクター登場状況」を追加</td>
 </tr>
 <tr>
-	<td>2019/07/07 8:30頃</td>
+	<td>2020/07/07</td>
 	<td><span class="fix"></span>一部環境でイベント日時が正しく表示されない不具合を修正</td>
 </tr>
 <tr>
-	<td rowspan="2">2019/07/05 19:30頃</td>
+	<td rowspan="2">2020/07/05</td>
 	<td><span class="new"></span>「イベント一覧」に情報を追加</td>
 </tr>
 <tr>
 	<td><span class="fix"></span>「ペア共演状況」の表</td>
 </tr>
 <tr>
-	<td>2019/07/05 19:00頃</td>
+	<td>2020/07/05</td>
 	<td><span class="fix"></span>レイアウト調整</td>
 </tr>
 <tr>
-	<td>2019/07/05 18:30頃</td>
+	<td>2020/07/05</td>
 	<td><span class="new"></span>公開</td>
 </tr>
 </tbody>
