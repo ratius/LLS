@@ -359,4 +359,13 @@ const EventList = [
 	"UR" : ["Maki", "Yoshiko", "Kasumi"],
 	"SR" : ["Nico", "You", "Emma"]
 },
+{
+	"id" : 41,
+	"name" : "雨の季節の贈り物",
+	"type" : "exchange",
+	"started" : new Date("2021-06-07T15:00:00+09:00"),
+	"ended"   : new Date("2021-06-14T14:59:59+09:00"),
+	"UR" : ["Eli", "Ruby", "Ayumu"],
+	"SR" : ["Honoka", "Riko", "Karin", "Shioriko"]
+}
 ];
