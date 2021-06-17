@@ -4069,6 +4069,7 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「メンバーピックアップガチャ」で追加"
 },
+{"id": -1, "name": "Shioriko", "rare": "SR", "offset":1 },
 {
 	"id": 405,
 	"name": "Eli",
@@ -4646,7 +4647,7 @@ const RawCardList = [
 	"desc": "「あつまれ！　幼稚園ライブガチャ」で追加"
 },
 {
-	"id": 453,
+	"id": 454,
 	"name": "Rina",
 	"rare": "UR",
 	"atr": "Pure",
@@ -4658,7 +4659,7 @@ const RawCardList = [
 	"desc": "「あつまれ！　幼稚園ライブガチャ」で追加"
 },
 {
-	"id": 454,
+	"id": 453,
 	"name": "Eli",
 	"rare": "SR",
 	"atr": "Natural",
@@ -4730,7 +4731,7 @@ const RawCardList = [
 	"desc": "「パーティーガチャ」で追加"
 },
 {
-	"id": 460,
+	"id": 462,
 	"name": "Yoshiko",
 	"rare": "UR",
 	"atr": "Smile",
@@ -4742,7 +4743,7 @@ const RawCardList = [
 	"desc": "「心軽やかバケーション計画ガチャ」で追加"
 },
 {
-	"id": 461,
+	"id": 460,
 	"name": "Kasumi",
 	"rare": "UR",
 	"atr": "Active",
@@ -4754,7 +4755,7 @@ const RawCardList = [
 	"desc": "「心軽やかバケーション計画ガチャ」で追加"
 },
 {
-	"id": 462,
+	"id": 461,
 	"name": "You",
 	"rare": "SR",
 	"atr": "Elegant",
@@ -4848,6 +4849,126 @@ const RawCardList = [
 	"date": "2021/05/30",
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
-}
+},
+{
+	"id": 470,
+	"name": "Ruby",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Sk",
+	"cn1": "カタツムリさんを見ているの",
+	"cn2": "雨に映える花",
+	"date": "2021/06/04",
+	"source": "gacha",
+	"desc": "「雨の季節の贈り物」で追加"
+},
+{
+	"id": 471,
+	"name": "Honoka",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "あーん！　お尻打ったー！",
+	"cn2": "No brand girls",
+	"date": "2021/06/04",
+	"source": "gacha",
+	"desc": "「雨の季節の贈り物」で追加"
+},
+{
+	"id": 472,
+	"name": "Ayumu",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "栞子ちゃん聞いて！",
+	"cn2": "雨に映える花",
+	"date": "2021/06/04",
+	"source": "gacha",
+	"desc": "「雨の季節の贈り物」で追加"
+},
+{
+	"id": 473,
+	"name": "Eli",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "たまには悪くないわね♪",
+	"cn2": "雨に映える花",
+	"date": "2021/06/07",
+	"source": "reward",
+	"desc": "イベント「雨の季節の贈り物」報酬"
+},
+{
+	"id": 474,
+	"name": "Riko",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "曲のイメージが湧いてきて……",
+	"cn2": "HAPPY PARTY TRAIN",
+	"date": "2021/06/07",
+	"source": "reward",
+	"desc": "イベント「雨の季節の贈り物」報酬 (交換所枠)"
+},
+{
+	"id": 475,
+	"name": "Karin",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "雨はあまり好きじゃないわね……",
+	"cn2": "Just Believe!!!",
+	"date": "2021/06/07",
+	"source": "reward",
+	"desc": "イベント「雨の季節の贈り物」報酬 (ランキング枠)"
+},
+{
+	"id": 476,
+	"name": "Shioriko",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Gd",
+	"cn1": "色が変わっていくんです",
+	"cn2": "Just Believe!!!",
+	"date": "2021/06/04",
+	"source": "gacha",
+	"desc": "「雨の季節の贈り物」で追加"
+},
+{
+	"id": 477,
+	"name": "Shioriko",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "おいしいですっ……！",
+	"cn2": "ハーモニック・ソング",
+	"date": "2021/06/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 478,
+	"name": "You",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "ねえ、すっごく気持ちいい風だね",
+	"cn2": "チアフル☆エール",
+	"date": "2021/06/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 479,
+	"name": "Umi",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "もう大丈夫です！",
+	"cn2": "No brand girls",
+	"date": "2021/06/14",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
+},
 ];
-const LatestUpdate = "2021/05/30 「スクスタフェス」まで";
+const LatestUpdate = "2021/06/14 「パーティーガチャ」まで";
