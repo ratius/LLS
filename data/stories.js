@@ -3380,43 +3380,43 @@ const StoryList = [
 	"chapter": "イベントエピソード「雨の季節の贈り物」",
 	"title": "第1話",
 	"desc": "スクールアイドルの野外ライブを楽しみにしていたルビィ達。しかし、当日の天気は雨で、ライブの中止を知らされて……",
-	"tag": ["event", "Honoka", "Eli", "Riko"", "Ruby", "Ayumu", "Karin", "Shioriko"]
+	"tag": ["event", "Honoka", "Eli", "Riko", "Ruby", "Ayumu", "Karin", "Shioriko"]
 },
 {
 	"chapter": "イベントエピソード「雨の季節の贈り物」",
 	"title": "第2話",
 	"desc": "雨で気分が落ち込む7人は、歩夢の提案で、アジサイがたくさん咲く庭園へとやってきた。",
-	"tag": ["event", "Honoka", "Eli", "Riko"", "Ruby", "Ayumu", "Karin", "Shioriko"]
+	"tag": ["event", "Honoka", "Eli", "Riko", "Ruby", "Ayumu", "Karin", "Shioriko"]
 },
 {
 	"chapter": "イベントエピソード「雨の季節の贈り物」",
 	"title": "第3話",
 	"desc": "庭園ではしゃいだ穂乃果が転んでしまうハプニングがあるも、大事にならずに済んだ。その後、ルビィが発見したものとは……？",
-	"tag": ["event", "Honoka", "Eli", "Riko"", "Ruby", "Ayumu", "Karin", "Shioriko"]
+	"tag": ["event", "Honoka", "Eli", "Riko", "Ruby", "Ayumu", "Karin", "Shioriko"]
 },
 {
 	"chapter": "イベントエピソード「雨の季節の贈り物」",
 	"title": "第4話",
 	"desc": "アジサイを眺めていた梨子は、急に曲のイメージが湧いてきて……。",
-	"tag": ["event", "Honoka", "Eli", "Riko"", "Ruby", "Ayumu", "Karin", "Shioriko"]
+	"tag": ["event", "Honoka", "Eli", "Riko", "Ruby", "Ayumu", "Karin", "Shioriko"]
 },
 {
 	"chapter": "イベントエピソード「雨の季節の贈り物」",
 	"title": "第5話",
 	"desc": "歩夢に連れられて、アジサイがたくさん咲いている場所へとやってきたみんな。素晴らしい光景を目の前にして、みんな自然とテンションが上がる。",
-	"tag": ["event", "Honoka", "Eli", "Riko"", "Ruby", "Ayumu", "Karin", "Shioriko"]
+	"tag": ["event", "Honoka", "Eli", "Riko", "Ruby", "Ayumu", "Karin", "Shioriko"]
 },
 {
 	"chapter": "イベントエピソード「雨の季節の贈り物」",
 	"title": "第6話",
 	"desc": "7人は、各々の思い思いの方法で、アジサイを満喫する。",
-	"tag": ["event", "Honoka", "Eli", "Riko"", "Ruby", "Ayumu", "Karin", "Shioriko"]
+	"tag": ["event", "Honoka", "Eli", "Riko", "Ruby", "Ayumu", "Karin", "Shioriko"]
 },
 {
 	"chapter": "イベントエピソード「雨の季節の贈り物」",
 	"title": "第7話",
 	"desc": "色とりどりのアジサイからスクールアイドルのライブを連想したみんな。穂乃果がパフォーマンスを披露しようとするが……？",
-	"tag": ["event", "Honoka", "Eli", "Riko"", "Ruby", "Ayumu", "Karin", "Shioriko"]
+	"tag": ["event", "Honoka", "Eli", "Riko", "Ruby", "Ayumu", "Karin", "Shioriko"]
 },
 {
 	"color": "Honoka",
