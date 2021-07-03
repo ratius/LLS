@@ -367,5 +367,23 @@ const EventList = [
 	"ended"   : new Date("2021-06-14T14:59:59+09:00"),
 	"UR" : ["Eli", "Ruby", "Ayumu"],
 	"SR" : ["Honoka", "Riko", "Karin", "Shioriko"]
-}
+},
+{
+	"id" : 42,
+	"name" : "宇宙ナンバーワン花嫁",
+	"type" : "story",
+	"started" : new Date("2021-06-22T15:00:00+09:00"),
+	"ended"   : new Date("2021-06-29T14:59:59+09:00"),
+	"UR" : ["Nico", "Mari", "Ai"],
+	"SR" : ["Rin", "Dia", "Setsuna"]
+},
+{
+	"id" : 43,
+	"name" : "七夕、かすみの願い事",
+	"type" : "exchange",
+	"started" : new Date("2021-07-07T15:00:00+09:00"),
+	"ended"   : new Date("2021-07-14T14:59:59+09:00"),
+	"UR" : ["Rin", "Riko", "Kasumi"],
+	"SR" : ["Nozomi", "Chika", "Rina"]
+},
 ];

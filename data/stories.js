@@ -264,7 +264,7 @@ const StoryList = [
 	"chapter": "メインストーリー / First Season / 第5章「μ'sの秘密を探れ！」",
 	"title": "第2話 μ'sに密着取材　-２年生-",
 	"desc": "スクールアイドルのファンサイトで応募した、μ's密着取材に当選したあなたは、期待に胸を膨らませ音ノ木坂学院に行った。実際にあったμ'sのメンバーはとても気さくで取材が楽しみなあなた。<br>最初の取材相手は……？",
-	"tag": ["main", "Player", "Honoka",  "Kotori", "Umi"]
+	"tag": ["main", "Player", "Honoka", "Kotori", "Umi"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第5章「μ'sの秘密を探れ！」",
@@ -493,7 +493,7 @@ const StoryList = [
 	"title": "第9話 新たな一歩",
 	"desc": "薫子からのメッセージを受け取ったあなた。<br>朝日の中、歩夢に話しているうちに新たな決意が固まる。薫子からのメッセージと共に、そのことをみんなに伝えると……？",
 	"memo": "ことりだけセリフ無し（立ち絵あり）。",
-	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia",  "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
+	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第8章「夢への一歩を抱きしめて」",
@@ -1684,6 +1684,66 @@ const StoryList = [
 	"title": "第10話 後半 目と目が合うとき",
 	"desc": "栞子から薫子へ。積年の想いをぶつけたステージ。それを見た薫子は……？",
 	"tag": ["main", "Player", "Kanata", "Setsuna", "Emma", "Shioriko", "Kaoruko"]
+},
+{
+	"chapter": "メインストーリー / 2nd season / 第28章「ランジュの想い」",
+	"title": "第1話 いつもと同じ景色",
+	"desc": "栞子のライブも成功し、薫子とのギクシャクした関係も少しずつ改善の兆しを見せ始めた。そのライブに姿を見せていなかったランジュは……？",
+	"tag": ["main", "Lanzhu"]
+},
+{
+	"chapter": "メインストーリー / 2nd season / 第28章「ランジュの想い」",
+	"title": "第2話 ランジュが選んだもの",
+	"desc": "ある決意を固めたランジュ。それを知らないメンバーは、校内オーディションに向けての練習を再開する。そんなとき、突然飛び込んできた知らせとは？",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Lanzhu", "Mia", "Rijicho"]
+},
+{
+	"chapter": "メインストーリー / 2nd season / 第28章「ランジュの想い」",
+	"title": "第3話 あの子のこと",
+	"desc": "いきなり部の解散宣言をしたランジュ。ランジュと連絡が取れず慌てた愛たちは同好会に助けを求めにきた。話すうちにだんだんと、自分たちはランジュのことをなにも知らなかったと気づくメンバー。本当のランジュって、どんな子！？",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia"]
+},
+{
+	"chapter": "メインストーリー / 2nd season / 第28章「ランジュの想い」",
+	"title": "第4話 思い描いていたもの",
+	"desc": "栞子たちがランジュを探していたころ、ランジュが街を彷徨っていた。ふと顔をあげるとそこにはファミレス。スクールアイドル部が正式に立ち上がる前、ランジュたちはこのファミレスでこれからを話し合っていた。そのころ思い描いていたものとは……？",
+	"tag": ["main", "Karin", "Ai", "Shioriko", "Lanzhu", "Mia"]
+},
+{
+	"chapter": "メインストーリー / 2nd season / 第28章「ランジュの想い」",
+	"title": "第5話 パーフェクト・ライブ",
+	"desc": "部の解散を決め、香港に帰ることにしたランジュ。学校にも行かないまま、自分を見せつけるための最後のライブに臨んだ。ライブが開かれていることを知ったメンバーは、すぐにランジュの元に駆けつける。そこで観たランジュのステージとは……！？",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Mia"]
+},
+{
+	"chapter": "メインストーリー / 2nd season / 第28章「ランジュの想い」",
+	"title": "第6話 このままは嫌！",
+	"desc": "藍綬の最後のライブを見て、ランジュの本当の気持ち、スクールアイドルとしての「声」を聞くことができたメンバー。改めて、ランジュと一緒に活動したいという思いを強くする。しかし、ランジュが香港に帰ってしまうという話が舞い込んできて……！？",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Shioriko", "Mia"]
+},
+{
+	"chapter": "メインストーリー / 2nd season / 第28章「ランジュの想い」",
+	"title": "第7話 ミアからの挑戦状",
+	"desc": "理事長に直談判し、ランジュを引き止めることを決めたメンバー。ランジュを思いとどまらせるため、ミアが考えた秘策とは？",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Mia", "Kaoruko"]
+},
+{
+	"chapter": "メインストーリー / 2nd season / 第28章「ランジュの想い」",
+	"title": "第8話 響け！　届け！",
+	"desc": "ランジュを思いとどまらせるためミアが考えた秘策、それはスクールアイドル部立ち上げの３人のための歌。新しい始まりになるような曲を作ることだった。いつもとは曲作りのセオリーが違うと言うミアは、あなたたちを集めてランジュとの思い出を聞き出す",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia"]
+},
+{
+	"chapter": "メインストーリー / 2nd season / 第28章「ランジュの想い」",
+	"title": "第9話 繋がれ！！！",
+	"desc": "ランジュ、ミア、栞子のための新曲を作り上げたものの、ランジュがそれを聴いてくれたような気配がない。相変わらず姿も見えず連絡もつかないランジュの動向に焦燥感を感じていたある日、突然今日ランジュが香港に帰ると聞かされたメンバー。新曲は？　ランジュは？",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Mia"]
+},
+{
+	"chapter": "メインストーリー / 2nd season / 第28章「ランジュの想い」",
+	"title": "第10話 タイフーン、再上陸！",
+	"desc": "ランジュを追いかけ、悪天候のなかようやく空港にたどり着いたメンバー。しかし、ランジュの乗った飛行機はすでに離陸していて……？",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Mia"]
 },
 {
 	"chapter": "イベントエピソード「秘密のパーティー！」",
@@ -3265,7 +3325,7 @@ const StoryList = [
 	"chapter": "イベントエピソード「あの木の下で逢いましょう」",
 	"title": "第3話",
 	"desc": "持ち場を離れた3人をよそ目に、ルビィ、花陽、果林の3人は、摘んだ花で花冠を作って遊ぶ。",
-	"tag": ["event",  "Hanayo", "Ruby", "Karin"]
+	"tag": ["event", "Hanayo", "Ruby", "Karin"]
 },
 {
 	"chapter": "イベントエピソード「あの木の下で逢いましょう」",
@@ -3419,6 +3479,48 @@ const StoryList = [
 	"tag": ["event", "Honoka", "Eli", "Riko", "Ruby", "Ayumu", "Karin", "Shioriko"]
 },
 {
+	"chapter": "イベントエピソード「宇宙ナンバーワン花嫁」",
+	"title": "第1話",
+	"desc": "部室へとやってきた凛。そこには、パソコンで調べ物をしているにこの姿が。",
+	"tag": ["event", "Rin", "Nico", "Mari"]
+},
+{
+	"chapter": "イベントエピソード「宇宙ナンバーワン花嫁」",
+	"title": "第2話",
+	"desc": "鞠莉のホテルで開かれるパーティーに参加することになった6人。それぞれが自分に似合うドレスを吟味していく。",
+	"tag": ["event", "Rin", "Nico", "Dia", "Mari", "Ai", "Setsuna"]
+},
+{
+	"chapter": "イベントエピソード「宇宙ナンバーワン花嫁」",
+	"title": "第3話",
+	"desc": "会場に着いた6人。パーティーが始まる前だが、他にも多くの招待客が集まっていた。ダイヤは、以前にもパーティーで会ったことのある女性を見つける。",
+	"tag": ["event", "Rin", "Nico", "Dia", "Mari", "Ai", "Setsuna"]
+},
+{
+	"chapter": "イベントエピソード「宇宙ナンバーワン花嫁」",
+	"title": "第4話",
+	"desc": "上品な振る舞いを見せたダイヤ。みんなはダイヤと一緒に写真撮影。そろそろパーティーが始まる頃だ。",
+	"tag": ["event", "Rin", "Nico", "Dia", "Mari", "Ai", "Setsuna"]
+},
+{
+	"chapter": "イベントエピソード「宇宙ナンバーワン花嫁」",
+	"title": "第5話",
+	"desc": "パーティーを満喫している皆。鞠莉が気づかない間に、蝶々が鞠莉の頭に止まって、まるで髪飾りのように。",
+	"tag": ["event", "Rin", "Nico", "Dia", "Mari", "Ai", "Setsuna"]
+},
+{
+	"chapter": "イベントエピソード「宇宙ナンバーワン花嫁」",
+	"title": "第6話",
+	"desc": "にこの頼みで、鞠莉は皆をチャペルへと案内する。",
+	"tag": ["event", "Rin", "Nico", "Dia", "Mari", "Ai", "Setsuna"]
+},
+{
+	"chapter": "イベントエピソード「宇宙ナンバーワン花嫁」",
+	"title": "第7話",
+	"desc": "にこは、「チャペルでスクールアイドルのライブをしてはどうか」という提案を出す。",
+	"tag": ["event", "Rin", "Nico", "Dia", "Mari", "Ai", "Setsuna"]
+},
+{
 	"color": "Honoka",
 	"chapter": "キズナエピソード 高坂穂乃果",
 	"title": "1話 一緒に前を向いて",
@@ -3540,6 +3642,14 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Honoka", "Kotori", "Hanayo"]
 },
 {
+	"color": "Honoka",
+	"chapter": "キズナエピソード 高坂穂乃果 / ユニットライブ編",
+	"title": "18話 すごいところ、大発見！",
+	"desc": "花陽ちゃんがすごくないなんてありえない！と思わず言い過ぎてしまった穂乃果。やってしまった……と反省した穂乃果は、あなたのアドバイスを受けて、もう一度話し合うことに。",
+	"tag": ["kizuna", "Player", "Honoka", "Kotori", "Hanayo"]
+},
+
+{
 	"color": "Eli",
 	"chapter": "キズナエピソード 絢瀬絵里",
 	"title": "1話 ステージ実現のために",
@@ -3646,17 +3756,24 @@ const StoryList = [
 },
 {
 	"color": "Eli",
-	"chapter": "キズナエピソード 絢瀬絵里ユニットライブ編",
+	"chapter": "キズナエピソード 絢瀬絵里 / ユニットライブ編",
 	"title": "16話 守りたいもの",
 	"desc": "みんなと力を合わせて、アキバお掃除大作戦を終えた絵里。次のBiBiユニットライブに向けて準備をはじめるが、絵里にはにこと真姫に思うことがあるようで……？",
 	"tag": ["kizuna", "Player", "Eli", "Maki", "Nico"]
 },
 {
 	"color": "Eli",
-	"chapter": "キズナエピソード 絢瀬絵里ユニットライブ編",
+	"chapter": "キズナエピソード 絢瀬絵里 / ユニットライブ編",
 	"title": "17話 輝かせてあげたい",
 	"desc": "BiBiのユニットライブに向けて、にこと真姫とは伸び伸びと活動してもらいたい――　絵里は二人に負担をかけないように、作業を進めるが……",
 	"tag": ["kizuna", "Player", "Eli", "Maki", "Nozomi", "Nico"]
+},
+{
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里 / ユニットライブ編",
+	"title": "18話 しずくからのアドバイス",
+	"desc": "絵里は一人で考えて過ぎてしまうからサポートしてあげてほしい、と希からアドバイスをもらったあなたは、絵里のために何ができるか考える。",
+	"tag": ["kizuna", "Player", "Eli", "Shizuku"]
 },
 {
 	"color": "Kotori",
@@ -3775,8 +3892,16 @@ const StoryList = [
 	"chapter": "キズナエピソード 南ことり / ユニットライブ編",
 	"title": "17話 大事なバランス",
 	"desc": "Printempsのユニットライブに向けて、素敵な衣装を作りたい！と話すことり。しかし、ファッションショーでの経験を上手く活かすことができなくて……",
-	"tag": ["kizuna", "Player",  "Kotori", "You", "Ruby"]
+	"tag": ["kizuna", "Player", "Kotori", "You", "Ruby"]
 },
+{
+	"color": "Kotori",
+	"chapter": "キズナエピソード 南ことり / ユニットライブ編",
+	"title": "18話 衣装に込められた想い",
+	"desc": "新しい衣装作りで行き詰まることり。気分転換に出かけた手芸屋さんで、曜とルビィに出会ったことりは、二人を音ノ木坂に招く。",
+	"tag": ["kizuna", "Player", "Kotori", "You", "Ruby"]
+},
+
 {
 	"color": "Umi",
 	"chapter": "キズナエピソード 園田海未",
@@ -3897,6 +4022,14 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Umi", "Rin", "Nozomi", "Hanamaru"]
 },
 {
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未 / ユニットライブ編",
+	"title": "18話 煩悩の意味",
+	"desc": "自分に芽生えた煩悩を断ち切るため、花丸のもとで修行をしていた海未。あなたたちは、海未を迎えに行くが、修行はまだ終わらないようで……。",
+	"tag": ["kizuna", "Player", "Umi", "Rin", "Nozomi", "Hanamaru"]
+},
+
+{
 	"color": "Rin",
 	"chapter": "キズナエピソード 星空凛",
 	"title": "1話 猫ちゃん大好き凛ちゃん",
@@ -4014,6 +4147,13 @@ const StoryList = [
 	"chapter": "キズナエピソード 星空凛 / ユニットライブ編",
 	"title": "17話 役に立ててる？",
 	"desc": "ユニットライブでは、海未と希の役に立ちたい！と話す凛。二人の役に立てるよう、凛が努力してみたものの……？",
+	"tag": ["kizuna", "Player", "Umi", "Rin", "Nozomi"]
+},
+{
+	"color": "Rin",
+	"chapter": "キズナエピソード 星空凛 / ユニットライブ編",
+	"title": "18話 揺れ動く心",
+	"desc": "ユニットライブでは希と海未の役に立つんだ！と張り切っていた凛。しかし、逆に迷惑をかけている気がしてきて、凛は悩み始はじめる……。",
 	"tag": ["kizuna", "Player", "Umi", "Rin", "Nozomi"]
 },
 {
@@ -4136,6 +4276,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Maki", "Mari", "Ai"]
 },
 {
+	"color": "Maki",
+	"chapter": "キズナエピソード 西木野真姫 / ユニットライブ編",
+	"title": "18話 好き……なのかも",
+	"desc": "鞠莉から、スクールアイドルを応援するためのうちわをもらった真姫。こんなの恥ずかしくて無理、と拒否する真姫だったが……？",
+	"tag": ["kizuna", "Player", "Maki"]
+},
+{
 	"color": "Nozomi",
 	"chapter": "キズナエピソード 東條希",
 	"title": "1話 パワーでお迎え♪",
@@ -4255,6 +4402,14 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Umi", "Rin", "Nozomi", "Chika", "Dia", "Mari"]
 },
 {
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希 / ユニットライブ編",
+	"title": "18話 パフォーマンス交換！",
+	"desc": "Aqoursのパフォーマンスを盗みに来た希たち。スパイ活動は早々にしてバレてしまったものの、一緒にパフォーマンスを交換することになり……！",
+	"tag": ["kizuna", "Player", "Umi", "Rin", "Nozomi", "Chika", "Dia", "You", "Yoshiko", "Mari"]
+},
+
+{
 	"color": "Hanayo",
 	"chapter": "キズナエピソード 小泉花陽",
 	"title": "1話 スクールアイドル大好き！",
@@ -4362,17 +4517,24 @@ const StoryList = [
 },
 {
 	"color": "Hanayo",
-	"chapter": "キズナエピソード  / ユニットライブ編",
+	"chapter": "キズナエピソード 小泉花陽 / ユニットライブ編",
 	"title": "16話 私がメイン！？",
 	"desc": "ネクストスクールアイドルフェアで自分のスクールアイドル愛を存分に発揮することができた花陽。次は、Printempsのユニットライブに向けて活動をはじめるが、今回のメインは花陽で……！？",
 	"tag": ["kizuna", "Player", "Honoka", "Kotori", "Hanayo"]
 },
 {
 	"color": "Hanayo",
-	"chapter": "キズナエピソード  / ユニットライブ編",
+	"chapter": "キズナエピソード 小泉花陽 / ユニットライブ編",
 	"title": "17話 花陽、インタビューを受ける！",
 	"desc": "Printempsの紹介冊子を作ることにした花陽。穂乃果とことりにインタビューをはじめるが、次第にインタビューされる側になり……！？",
 	"tag": ["kizuna", "Player", "Honoka", "Kotori", "Hanayo"]
+},
+{
+	"color": "Hanayo",
+	"chapter": "キズナエピソード 小泉花陽 / ユニットライブ編",
+	"title": "18話 理想とのギャップ",
+	"desc": "インタビューを受けるうちに、自分の高すぎる理想に不安になってしまった花陽。その悩みを解消するために、ダイヤとせつ菜に相談することに。",
+	"tag": ["kizuna", "Player", "Hanayo", "Dia", "Setsuna"]
 },
 {
 	"color": "Nico",
@@ -4493,6 +4655,13 @@ const StoryList = [
 	"title": "17話 だって、一人じゃない",
 	"desc": "BiBiのユニットライブに向けて、かっこいいパフォーマンスを練習しているにこ。しかし、絵里と真姫と違ってかっこよくない、とかすみには言われてしまい……",
 	"tag": ["kizuna", "Player", "Eli", "Maki", "Nico"]
+},
+{
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ / ユニットライブ編",
+	"title": "18話 持っていた、かっこよさ",
+	"desc": "もっとかっこいい自分でありたい、と苦心しているにこと、もっとにこの力になりたいと悩んでいるあなた。そんな二人の前に現れたのは……",
+	"tag": ["kizuna", "Player", "Nico", "Hanamaru"]
 },
 {
 	"color": "Chika",

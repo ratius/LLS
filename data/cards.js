@@ -4860,7 +4860,7 @@ const RawCardList = [
 	"cn2": "雨に映える花",
 	"date": "2021/06/04",
 	"source": "gacha",
-	"desc": "「雨の季節の贈り物」で追加"
+	"desc": "「雨の季節の贈り物ガチャ」で追加"
 },
 {
 	"id": 471,
@@ -4872,7 +4872,7 @@ const RawCardList = [
 	"cn2": "No brand girls",
 	"date": "2021/06/04",
 	"source": "gacha",
-	"desc": "「雨の季節の贈り物」で追加"
+	"desc": "「雨の季節の贈り物ガチャ」で追加"
 },
 {
 	"id": 472,
@@ -4884,7 +4884,7 @@ const RawCardList = [
 	"cn2": "雨に映える花",
 	"date": "2021/06/04",
 	"source": "gacha",
-	"desc": "「雨の季節の贈り物」で追加"
+	"desc": "「雨の季節の贈り物ガチャ」で追加"
 },
 {
 	"id": 473,
@@ -4932,7 +4932,7 @@ const RawCardList = [
 	"cn2": "Just Believe!!!",
 	"date": "2021/06/04",
 	"source": "gacha",
-	"desc": "「雨の季節の贈り物」で追加"
+	"desc": "「雨の季節の贈り物ガチャ」で追加"
 },
 {
 	"id": 477,
@@ -4970,5 +4970,196 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「パーティーガチャ」で追加"
 },
-];
-const LatestUpdate = "2021/06/14 「パーティーガチャ」まで";
+{
+	"id": 480,
+	"name": "Nico",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "みーんなのものなの！",
+	"cn2": "ドレスに思いを馳せて",
+	"date": "2021/06/19",
+	"source": "gacha",
+	"desc": "「宇宙ナンバーワン花嫁ガチャ」で追加"
+},
+{
+	"id": 481,
+	"name": "Dia",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "ちょっとご挨拶してきます",
+	"cn2": "HAPPY PARTY TRAIN",
+	"date": "2021/06/19",
+	"source": "gacha",
+	"desc": "「宇宙ナンバーワン花嫁ガチャ」で追加"
+},
+{
+	"id": 482,
+	"name": "Ai",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "なかなか上手いっしょ～",
+	"cn2": "ドレスに思いを馳せて",
+	"date": "2021/06/19",
+	"source": "gacha",
+	"desc": "「宇宙ナンバーワン花嫁ガチャ」で追加"
+},
+{
+	"id": 483,
+	"name": "Mari",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "たまには悪くないわね♪",
+	"cn2": "雨に映える花",
+	"date": "2021/06/22",
+	"source": "reward",
+	"desc": "イベント「宇宙ナンバーワン花嫁」報酬"
+},
+{
+	"id": 484,
+	"name": "Setsuna",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sk",
+	"cn1": "ここを歩いてみたいです！",
+	"cn2": "Just Believe!!!",
+	"date": "2021/06/22",
+	"source": "reward",
+	"desc": "イベント「宇宙ナンバーワン花嫁」報酬 (イベントpt枠)"
+},
+{
+	"id": 485,
+	"name": "Rin",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Vo",
+	"cn1": "待って～、ちょうちょさ～ん！",
+	"cn2": "No brand girls",
+	"date": "2021/06/22",
+	"source": "reward",
+	"desc": "イベント「宇宙ナンバーワン花嫁」報酬 (ランキング枠)"
+},
+{
+	"id": 486,
+	"name": "Kotori",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "あなたが結んでくれる？",
+	"cn2": "ことりの衣装室へようこそ♡",
+	"date": "2021/06/29",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 487,
+	"name": "Rina",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sp",
+	"cn1": "こんな感じかな？",
+	"cn2": "Check-mate",
+	"date": "2021/06/29",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 488,
+	"name": "Kanan",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "キミは、どこから来たのかな？",
+	"cn2": "HAPPY PARTY TRAIN",
+	"date": "2021/06/29",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 489,
+	"name": "Shizuku",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "続きを聞かせてください！",
+	"cn2": "Just Believe!!!",
+	"date": "2021/06/29",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 490,
+	"name": "Riko",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "うーん、美味しい！",
+	"cn2": "夜空のお姫様",
+	"date": "2021/07/04",
+	"source": "gacha",
+	"desc": "「七夕、かすみの願い事ガチャ」で追加"
+},
+{
+	"id": 491,
+	"name": "Nozomi",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Gd",
+	"cn1": "お待たせ",
+	"cn2": "Angelic Angel",
+	"date": "2021/07/04",
+	"source": "gacha",
+	"desc": "「七夕、かすみの願い事ガチャ」で追加"
+},
+{
+	"id": 492,
+	"name": "Rin",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Gd",
+	"cn1": "絶好の七夕日和",
+	"cn2": "夜空のお姫様",
+	"date": "2021/07/04",
+	"source": "gacha",
+	"desc": "「七夕、かすみの願い事ガチャ」で追加"
+},
+{
+	"id": 493,
+	"name": "Kasumi",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "かすみんのお願いは",
+	"cn2": "夜空のお姫様",
+	"date": "2021/07/07",
+	"source": "reward",
+	"desc": "イベント「七夕、かすみの願い事」報酬"
+},
+{
+	"id": 494,
+	"name": "Rina",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "気持ちを伝えられますように",
+	"cn2": "虹色の心",
+	"date": "2021/07/07",
+	"source": "reward",
+	"desc": "イベント「七夕、かすみの願い事」報酬 (交換所枠)"
+},
+{
+	"id": 495,
+	"name": "Chika",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "なんだか眠くなってきちゃった",
+	"cn2": "未熟DREAMER",
+	"date": "2021/07/07",
+	"source": "reward",
+	"desc": "イベント「七夕、かすみの願い事」報酬 (ランキング枠)"
+},];
+const LatestUpdate = "2021/07/07 イベント「七夕、かすみの願い事」まで";
