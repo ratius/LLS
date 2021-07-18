@@ -5161,5 +5161,30 @@ const RawCardList = [
 	"date": "2021/07/07",
 	"source": "reward",
 	"desc": "イベント「七夕、かすみの願い事」報酬 (ランキング枠)"
-},];
-const LatestUpdate = "2021/07/07 イベント「七夕、かすみの願い事」まで";
+},
+{
+	"id": 496,
+	"name": "Setsuna",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "あなたもどうぞ",
+	"cn2": "漆黒の魔法使い",
+	"date": "2021/07/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 497,
+	"name": "Mari",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "イェーイ♪　ストラーイク！",
+	"cn2": "未熟DREAMER",
+	"date": "2021/07/14",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
+},
+];
+const LatestUpdate = "2021/07/14 「パーティーガチャ」まで";

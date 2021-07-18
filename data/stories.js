@@ -869,63 +869,65 @@ const StoryList = [
 },
 {
 	"chapter": "メインストーリー / First Season / 第15章「みんなの夢のために―前編―」",
-	"title": "第1話",
-	"desc": "",
-	"tag": []
+	"title": "第1話 同志よ、きたれ！",
+	"desc": "虹ヶ咲学園でスクール売れどるフェスティバルを開催する条件として、期日までにボランティア1000人を集めることを栞子に約束したあなた。協力してくれる人を集めるため、ボランティア募集のホームページを作ることに。",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第15章「みんなの夢のために―前編―」",
-	"title": "第2話",
-	"desc": "",
-	"tag": []
+	"title": "第2話 広がる！　高まる！",
+	"desc": "着々とボランティア参加希望者から連絡があり喜ぶ同好会メンバー。この調子で目標人数までボランティアを集めようと意気込む。また、ボランティア希望者はニジガクだけでなく、音ノ木坂、浦女にも広がっていた。",
+	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Ai", "Kanata", "Setsuna", "Rina"],
+	"memo": "果林・エマの立ち絵・セリフ無し。"
 },
 {
 	"chapter": "メインストーリー / First Season / 第15章「みんなの夢のために―前編―」",
-	"title": "第3話",
-	"desc": "",
-	"tag": []
+	"title": "第3話 1000人の味方！",
+	"desc": "スクールアイドルフェスティバル開催のため、ボランティア集めにますます力が入るμ's、Aqours、ニジガクのメンバーたち。そんな中、ボランティア希望者の人数が気になり、部室でお昼を食べることにしたあなたは……？",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第15章「みんなの夢のために―前編―」",
-	"title": "第4話",
-	"desc": "",
-	"tag": []
+	"title": "第4話 信頼する、あなたへ",
+	"desc": "ホームページに応募してくれたボランティア希望者がとうとう栞子と約束した目標人数、1000人に達した！そのことを栞子に伝えると、栞子の反応は拍子抜けするほど冷静で……。",
+	"tag": ["main", "Ayumu", "Shioriko"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第15章「みんなの夢のために―前編―」",
-	"title": "第5話",
-	"desc": "",
-	"tag": []
+	"title": "第5話 ボランティア説明会に向けて！",
+	"desc": "あなたにプレゼントをしたいと考えた歩夢。栞子と一緒にプレゼントを探し、楽しい時間を過ごした。無事プレゼントも決まり、スクールアイドルフェスティバルに向けてもっと頑張る、と嬉しそうな歩夢を前に栞子は少し心配そうで……？",
+	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"],
+	"memo": "鞠莉のみ立ち絵・セリフ無し。"
 },
 {
 	"chapter": "メインストーリー / First Season / 第15章「みんなの夢のために―前編―」",
-	"title": "第6話",
-	"desc": "",
-	"tag": []
+	"title": "第6話 説明会が、見せたもの",
+	"desc": "ボランティア説明会の準備を行った、μ's、Aqours、ニジガク、1000人分の資料準備も、説明会本番への期待で苦にならずにみんな楽しんでいた。いよいよ説明会当日、気合が入るあなただが……。",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第15章「みんなの夢のために―前編―」",
-	"title": "第7話",
-	"desc": "",
-	"tag": []
+	"title": "第7話 本気？　やみくも？",
+	"desc": "ホームページで応募してくれた1000人のボランティア希望者を迎えるはずが、実際に説明会に来てくれた人は100人にも満たなかった。普段からボランティア活動を行っていた栞子が心配していたことが起こったのだった。",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第15章「みんなの夢のために―前編―」",
-	"title": "第8話",
-	"desc": "",
-	"tag": []
+	"title": "第8話 チリチリ、そわそわ",
+	"desc": "ボランティア説明会は参加者が目標人数に満たず終わってしまったが、落ち込んでいる暇はない。引き続き頑張ろうと話しつつも、ショックが隠せない同好会メンバー。中でも一番責任を感じている様子のあなたに、歩夢は不安を募らせる……。",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第15章「みんなの夢のために―前編―」",
-	"title": "第9話",
-	"desc": "",
-	"tag": []
+	"title": "第9話 思いがけない提案",
+	"desc": "ボランティア募集の仕事を一人で抱え込むあなたを同好会メンバーも心配している。歩夢は栞子に相談し、メッセージを書いたノートをプレゼントすることに。また、あなたの様子を聞いて、穂乃果や千歌も心配していた……。",
+	"tag": ["main", "Player", "Honoka", "Chika"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第15章「みんなの夢のために―前編―」",
-	"title": "第10話",
-	"desc": "",
-	"tag": []
+	"title": "第10話 衝突",
+	"desc": "穂乃果と千歌から、メインステージのトップバッターをニジガクのみんなに頼みたい、と言われ、ますますスクールアイドルフェスティバルの開催に向けて、強く責任を感じるあなた。そんなある日、あなたは栞子に呼び出されて……？",
+	"tag": ["main", "Player", "Ayumu", "Shioriko"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
@@ -3521,6 +3523,48 @@ const StoryList = [
 	"tag": ["event", "Rin", "Nico", "Dia", "Mari", "Ai", "Setsuna"]
 },
 {
+	"chapter": "イベントエピソード「七夕、かすみの願い事」",
+	"title": "第1話",
+	"desc": "天候にも恵まれた七夕当日。みんなは虹ヶ咲学園に集まって七夕パーティーをすることになった。",
+	"tag": ["event", "Rin", "Nozomi", "Chika", "Riko", "Kasumi", "Rina"]
+},
+{
+	"chapter": "イベントエピソード「七夕、かすみの願い事」",
+	"title": "第2話",
+	"desc": "かすみ達が七夕飾りを作っている間。希と璃奈は別の所で何か作業をしているようだ。",
+	"tag": ["event", "Rin", "Nozomi", "Chika", "Riko", "Kasumi", "Rina"]
+},
+{
+	"chapter": "イベントエピソード「七夕、かすみの願い事」",
+	"title": "第3話",
+	"desc": "希と璃奈が戻ってきた。二人が準備していたのは、流しそうめんだった！",
+	"tag": ["event", "Rin", "Nozomi", "Chika", "Riko", "Kasumi", "Rina"]
+},
+{
+	"chapter": "イベントエピソード「七夕、かすみの願い事」",
+	"title": "第4話",
+	"desc": "みんなは流しそうめんを満喫してお腹いっぱい。ふと七夕のルーツが気になったが、希がそれに答える。",
+	"tag": ["event", "Rin", "Nozomi", "Chika", "Riko", "Kasumi", "Rina"]
+},
+{
+	"chapter": "イベントエピソード「七夕、かすみの願い事」",
+	"title": "第5話",
+	"desc": "6人は、願い事を書いた短冊を順次笹に吊るしていく。願い事が決まらないかすみが悩んでいると、急に雲行きが怪しくなってきて……",
+	"tag": ["event", "Rin", "Nozomi", "Chika", "Riko", "Kasumi", "Rina"]
+},
+{
+	"chapter": "イベントエピソード「七夕、かすみの願い事」",
+	"title": "第6話",
+	"desc": "突然降ってきた雨で、七夕パーティーは一時中断。このままでは夜の天体観測も中止になってしまう……。",
+	"tag": ["event", "Rin", "Nozomi", "Chika", "Riko", "Kasumi", "Rina"]
+},
+{
+	"chapter": "イベントエピソード「七夕、かすみの願い事」",
+	"title": "第7話",
+	"desc": "かすみの願い事はもちろん、「今夜晴れますように」！",
+	"tag": ["event", "Rin", "Nozomi", "Chika", "Riko", "Kasumi", "Rina"]
+},
+{
 	"color": "Honoka",
 	"chapter": "キズナエピソード 高坂穂乃果",
 	"title": "1話 一緒に前を向いて",
@@ -4784,6 +4828,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Chika", "You", "Ruby"]
 },
 {
+	"color": "Chika",
+	"chapter": "キズナエピソード 高海千歌 / ユニットライブ編",
+	"title": "18話 陰る絆",
+	"desc": "あなたと同じ違和感を曜もルビィも感じていた。３人の今後を危ぶんだあなたは、曜とルビィにある提案をする。",
+	"tag": ["kizuna", "Player", "Chika", "You", "Ruby"]
+},
+{
 	"color": "Riko",
 	"chapter": "キズナエピソード 桜内梨子",
 	"title": "1話 コンサートホールにて",
@@ -4901,6 +4952,13 @@ const StoryList = [
 	"title": "17話 密かな決意",
 	"desc": "迷走と混乱の打ち合わせを終えた帰り道。重いため息を吐く梨子を励ますあなたは、梨子にあるアドバイスをする。",
 	"tag": ["kizuna", "Player", "Riko"]
+},
+{
+	"color": "Riko",
+	"chapter": "キズナエピソード 桜内梨子 / ユニットライブ編",
+	"title": "18話 梨子、覚醒！？",
+	"desc": "打ち合わせ２日目。梨子は、昨日までとは全く違う様子になっていた。あまりの豹変ぶりに驚くあなた達を気にすることなく、梨子が言い出したことは……",
+	"tag": ["kizuna", "Player", "Riko", "Yoshiko", "Mari"]
 },
 {
 	"color": "Kanan",
@@ -5022,6 +5080,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Kanan", "Dia", "Hanamaru"]
 },
 {
+	"color": "Kanan",
+	"chapter": "キズナエピソード 松浦果南 / ユニットライブ編",
+	"title": "18話 抜き打ちお休みチェック",
+	"desc": "連日のハードな練習に披露がたまっているAZALEA。しかし果南だけは変わらず元気。そんな彼女が少し心配になったダイヤ、花丸、あなたは、明日は練習をお休みにしようと提案して……",
+	"tag": ["kizuna", "Player", "Kanan", "Dia", "Hanamaru"]
+},
+{
 	"color": "Dia",
 	"chapter": "キズナエピソード 黒澤ダイヤ",
 	"title": "1話 見慣れぬ一面",
@@ -5139,6 +5204,13 @@ const StoryList = [
 	"chapter": "キズナエピソード 黒澤ダイヤ / ユニットライブ編",
 	"title": "17話 活動開始、のはずが……？",
 	"desc": "今日からAZALEAでの活動が開始。しかし、ダイヤは１人で生徒会室にいた。そこへあなた、果南、花丸が訪ねてくる。",
+	"tag": ["kizuna", "Player", "Kanan", "Dia", "Hanamaru"]
+},
+{
+	"color": "Dia",
+	"chapter": "キズナエピソード 黒澤ダイヤ / ユニットライブ編",
+	"title": "18話 微かな歪み",
+	"desc": "無事に生徒会の仕事を終えることができたAZALEAとあなた。これでユニットライブの打ち合わせを始められる！しかし、そこで下校時間を告げるチャイムが鳴ってしまい……",
 	"tag": ["kizuna", "Player", "Kanan", "Dia", "Hanamaru"]
 },
 {
@@ -5263,6 +5335,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Chika", "You", "Ruby"]
 },
 {
+	"color": "You",
+	"chapter": "キズナエピソード 渡辺曜 / ユニットライブ編",
+	"title": "18話 完璧の裏側",
+	"desc": "久々に千歌達の元へ顔を出した曜。完璧にダンスを仕上げてきた曜に感心する千歌達だが、無理をしているのではと心配になり……",
+	"tag": ["kizuna", "Player", "Chika", "You", "Ruby", "Shizuku"]
+},
+{
 	"color": "Yoshiko",
 	"chapter": "キズナエピソード 津島善子",
 	"title": "1話 ドロップアイテム",
@@ -5381,6 +5460,13 @@ const StoryList = [
 	"title": "17話 悩みの種は",
 	"desc": "白紙を前に苦悶する善子。頭を抱えながら思い出すのは、数日前に行ったライブの打ち合わせだった。",
 	"tag": ["kizuna", "Player", "Riko", "Yoshiko", "Mari"]
+},
+{
+	"color": "Yoshiko",
+	"chapter": "キズナエピソード 津島善子 / ユニットライブ編",
+	"title": "18話 秘密の電話",
+	"desc": "なかなか練習に来ない善子。心配したあなたは、鞠莉と梨子を残し、善子を探しに行く。無事に教室で善子を見つけるが、どこか様子がおかしくて……。",
+	"tag": ["kizuna", "Player", "Riko", "Yoshiko", "Mari", "Setsuna"]
 },
 {
 	"color": "Hanamaru",
@@ -5502,6 +5588,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Kanan", "Dia", "Hanamaru", "Shizuku"]
 },
 {
+	"color": "Hanamaru",
+	"chapter": "キズナエピソード 国木田花丸 / ユニットライブ編",
+	"title": "18話 このひと縫いが導くもの",
+	"desc": "今日は雨。外での練習ができないAZALEAは、部室で衣装作りを進めていた。花丸は、以前よりも衣装作りに対して強い想いを抱くようになったらしく……",
+	"tag": ["kizuna", "Player", "Kanan", "Dia", "Hanamaru"]
+},
+{
 	"color": "Mari",
 	"chapter": "キズナエピソード 小原鞠莉",
 	"title": "1話 鞠莉との1日",
@@ -5621,6 +5714,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Riko", "Yoshiko", "Mari"]
 },
 {
+	"color": "Mari",
+	"chapter": "キズナエピソード 小原鞠莉 / ユニットライブ編",
+	"title": "18話 ライブ鑑賞で大フィーバー！",
+	"desc": "久々の休日。鞠莉とあなたは、愛の誘いで音楽イベントを観に来ていた。わくわくしながら３人は会場へ向かう。",
+	"tag": ["kizuna", "Player", "Mari", "Ai"]
+},
+{
 	"color": "Ruby",
 	"chapter": "キズナエピソード 黒澤ルビィ",
 	"title": "1話 放課後の秘密",
@@ -5738,6 +5838,13 @@ const StoryList = [
 	"chapter": "キズナエピソード 黒澤ルビィ / ユニットライブ編",
 	"title": "17話 会いに行くよ！",
 	"desc": "スマホでルビィと話していると、かすみと璃奈がやってきた。ルビィのほうでも千歌と曜が会話に参加し、７人でお喋りすることに。",
+	"tag": ["kizuna", "Player", "Chika", "You", "Ruby", "Kasumi", "Rina"]
+},
+{
+	"color": "Ruby",
+	"chapter": "キズナエピソード 黒澤ルビィ / ユニットライブ編",
+	"title": "18話 久しぶり沼津",
+	"desc": "かすみ・璃奈と共に沼津へやってきたあなた。出迎えてくれたCYaRon！の３人と一緒に遊んだあと、一行はルビィの部屋を訪れる。",
 	"tag": ["kizuna", "Player", "Chika", "You", "Ruby", "Kasumi", "Rina"]
 },
 {
