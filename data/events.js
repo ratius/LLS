@@ -386,4 +386,13 @@ const EventList = [
 	"UR" : ["Rin", "Riko", "Kasumi"],
 	"SR" : ["Nozomi", "Chika", "Rina"]
 },
+{
+	"id" : 44,
+	"name" : "花火大会は波乱の予感？",
+	"type" : "story",
+	"started" : new Date("2021-07-23T15:00:00+09:00"),
+	"ended"   : new Date("2021-07-30T14:59:59+09:00"),
+	"UR" : ["Hanayo", "Yoshiko", "Karin"],
+	"SR" : ["Nico", "Hanamaru", "Kanata"]
+},
 ];

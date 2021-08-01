@@ -931,123 +931,127 @@ const StoryList = [
 },
 {
 	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
-	"title": "第1話",
-	"desc": "",
-	"tag": []
+	"title": "第1話 強い気持ちと足りない想い",
+	"desc": "ボランティア集めに必死なあなたと、忙しそうなあなたを心配する歩夢の気持ちはすれ違ってしまう。ボランティア集めも思うようにいかない中、久しぶりに部室に顔を出したあなたは……？",
+	"tag": ["main", "Player", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
-	"title": "第2話",
-	"desc": "",
-	"tag": []
+	"title": "第2話 心、ここにあらず",
+	"desc": "同好会メンバーから「もっと自分たちのことを頼ってほしい」と言われ、あなたは自分が周りを見られていなかったことに気づく。その日部室に来ていなかった歩夢にも、その気持ちを伝えようと決意した。",
+	"tag": ["main", "Ayumu", "Shioriko"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
-	"title": "第3話",
-	"desc": "",
-	"tag": []
+	"title": "第3話 バックアップは任せて！",
+	"desc": "あなたと喧嘩をしたことに落ち込み、学校を休んでしまった歩夢。心配した栞子は、気分転換に歩夢を外に連れ出した。一方、あなたも歩夢とどうやったら仲直りできるのか、頭を悩ませていた。",
+	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Shizuku", "Ai", "Kanata", "Setsuna", "Emma"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
-	"title": "第4話",
-	"desc": "",
-	"tag": []
+	"title": "第4話 ジリジリと",
+	"desc": "μ's、Aqoursと一緒に、改めてボランティア集めの方法を考え直す同好会メンバーとあなた。そして言い合いになった日以降、歩夢に会えていないあなたは、校内で栞子に会う……。",
+	"tag": ["main", "Player", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
-	"title": "第5話",
-	"desc": "",
-	"tag": []
+	"title": "第5話 後悔先に立たず",
+	"desc": "栞子との約束の日が近づいているが、ボランティア集めは上手くいっていない。改めてボランティア集めの大変さを実感するが、もう時間もない。もっと自分が行動していれば……と落ち込むあなたは……？",
+	"tag": ["main", "Player", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
-	"title": "第6話",
-	"desc": "",
-	"tag": []
+	"title": "第6話 嫌いなんて嘘、できないなんて嘘",
+	"desc": "みんなに心配されながら、一人部室に残ったあなた。そして歩夢が渡そうとしたプレゼントのノートに書いてあるメッセージを読み、初めて歩夢の気持ちに気づく。一方、部活に来なくなってしまった歩夢は……？",
+	"tag": ["main", "Player", "Ayumu"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
-	"title": "第7話",
-	"desc": "",
-	"tag": []
+	"title": "第7話 for you",
+	"desc": "部活に行かなくなっても、やはりスクールアイドルが気になってしまう歩夢。そこで、あなたの頑張りが多くの人に伝わっていないことを知り愕然とする。そして一緒に頑張ってきた仲間のことを思い出し、スクールアイドルフェスティバルを成功させたいという自分の中の想いに気がついた……。",
+	"tag": ["main", "Ayumu", "Shioriko"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
-	"title": "第8話",
-	"desc": "",
-	"tag": []
+	"title": "第8話 メッセージフロム……",
+	"desc": "栞子から、同好会メンバーは既にボランティアを1000人集めることを諦めた、と聞いた歩夢。諦めきれない歩夢の覚悟を聞いた栞子は、動画サイトで歩夢の今の気持ちを全世界に伝えることを提案する。",
+	"tag": ["main", "Player", "Honoka", "Ayumu"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
-	"title": "第9話",
-	"desc": "",
-	"tag": []
+	"title": "第9話 想いは、ひとつ！",
+	"desc": "歩夢のスクールアイドルに対する想い、スクールアイドルフェスティバルに対する想い。そしてあなたへの想い。今の素直な気持ちを生配信で訴えた歩夢。そして、その生配信を見たあなたは……？",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第16章「みんなの夢のために―後編―」",
-	"title": "第10話",
-	"desc": "",
-	"tag": []
+	"title": "第10話 この手が届く！",
+	"desc": "お互いに素直な気持ちを伝え、歩夢とあなたは仲直りすることができた。同好会メンバーも合流し、もう一度スクールアイドルフェスティバル開催のために挑戦することをきめる。「夢への一歩」にのせたみんなの想いは、全国の人に伝わるのか……？",
+	"memo": "ルビィ・しずく・果林・彼方・エマは個別セリフ無し。",
+	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第17章「スクールアイドルフェスティバル！」",
-	"title": "第1話",
-	"desc": "",
-	"tag": []
+	"title": "第1話 待ちきれない夜",
+	"desc": "歩夢の生配信の影響もあり、無事にボランティアに参加してくれる有志が1000人集まった。そしてスクールアイドルフェスティバル本番はいよいよ明日。同好会のみんなはいつの間にか屋上に集まっていた……。",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第17章「スクールアイドルフェスティバル！」",
-	"title": "第2話",
-	"desc": "",
-	"tag": []
+	"title": "第2話 さあ！",
+	"desc": "これまで同好会で起こった様々なことを思い出しながら、明日を楽しみにする同好会メンバーだった。そしてスクールアイドルフェスティバル当日、オープニングアクトが始まる……！",
+	"memo": "ことり・海未・せつ菜・栞子の立ち絵・セリフ無し。",
+	"tag": ["main", "Player", "Honoka", "Eli", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Emma", "Rina","Kaoruko"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第17章「スクールアイドルフェスティバル！」",
-	"title": "第3話",
-	"desc": "",
-	"tag": []
+	"title": "第3話 集え！　みんなの夢！",
+	"desc": "控室からオープニングアクトに向かう27人をステージに送り出したあなた。ステージを見守るあなたは、隣にいる栞子に先ほど会った薫子のことを尋ねる……",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第17章「スクールアイドルフェスティバル！」",
-	"title": "第4話",
-	"desc": "",
-	"tag": []
+	"title": "第4話 あれこれナンバーワン決定戦！",
+	"desc": "会場のみんなでスローガンをコールして、スクールアイドルフェスティバルは開幕した。まずはイベントステージ。果南とダイヤが司会をしている「スクールアイドルあれこれナンバーワン決定戦」とは……？",
+	"tag": ["main", "Eli", "Nozomi", "Kanan", "Dia", "Karin", "Kanata", "Haruka"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第17章「スクールアイドルフェスティバル！」",
-	"title": "第5話",
-	"desc": "",
-	"tag": []
+	"title": "第5話　Aqours SHOW TIME ！",
+	"desc": "「ダンス対決」と「平常心対決」、どちらも白熱した戦いとなった。勝った子も負けた子も、引き分けになった子も、みんなが笑顔の素敵な対決だった。そして次は、Aqoursのステージ！",
+	"memo": "梨子・曜は立ち絵のみでセリフ無し。",
+	"tag": ["main", "Player", "Honoka", "Kotori", "Umi", "Chika", "Riko", "You", "Ayumu", "Ai", "Rina"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第17章「スクールアイドルフェスティバル！」",
-	"title": "第6話",
-	"desc": "",
-	"tag": []
+	"title": "第6話 楽しいランチタイム",
+	"desc": "Aqoursのステージしの観た穂乃果たち。あらためてAqoursのパフォーマンスのすごさに感動し、Aqoursに負けないようみんなで全力で応援をしたのだった。そしてそろそろお昼の時間！",
+	"tag": ["main", "Rin", "Maki", "Riko", "You", "Yoshiko", "Mari", "Kasumi", "Shizuku"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第17章「スクールアイドルフェスティバル！」",
-	"title": "第7話",
-	"desc": "",
-	"tag": []
+	"title": "第7話 スクールアイドルプレゼン大会！",
+	"desc": "千歌や鞠莉、彼方が考案した料理もとっても美味しく、スクールアイドルフェスティバルのフードコーナーも大成功！　イベントステージでの次のコーナーは「スクールアイドルプレゼン大会」！",
+	"tag": ["main", "Hanayo", "Nico", "Chika", "Hanamaru", "Ruby", "Setsuna", "Emma"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第17章「スクールアイドルフェスティバル！」",
-	"title": "第8話",
-	"desc": "",
-	"tag": []
+	"title": "第8話 過去との再会",
+	"desc": "スクール売れどるへの愛を存分に語り合った、スクールアイドルプレゼン大会。順調にイベントが進行する中、裏方として動く栞子のもとにせつ菜がやって来て……。",
+	"tag": ["main", "Setsuna", "Shioriko", "Kaoruko"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第17章「スクールアイドルフェスティバル！」",
-	"title": "第9話",
-	"desc": "",
-	"tag": []
+	"title": "第9話 叶えよう、みんなで！",
+	"desc": "スクールアイドルフェスティバルの立ち上げメンバーの１人だった薫子は、栞子の姉だった。スクールアイドルフェスティバルもフィナーレへ！",
+	"memo": "ことり・花陽・せつ菜のみ個別セリフ無し。",
+	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
 },
 {
 	"chapter": "メインストーリー / First Season / 第17章「スクールアイドルフェスティバル！」",
-	"title": "第10話",
-	"desc": "",
-	"tag": []
+	"title": "第10話 新しい仲間と、新しい旅立ち！",
+	"desc": "同好会メンバーが背中を押して、とうとう栞子がスクールアイドルの仲間になった！　28人のアンコールを終えて、ついにスクールアイドルフェスティバルは幕を閉じたのだった。",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko"]
 },
 {
 	"color": "main2",
@@ -1746,6 +1750,66 @@ const StoryList = [
 	"title": "第10話 タイフーン、再上陸！",
 	"desc": "ランジュを追いかけ、悪天候のなかようやく空港にたどり着いたメンバー。しかし、ランジュの乗った飛行機はすでに離陸していて……？",
 	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Mia"]
+},
+{
+	"chapter": "メインストーリー / 2nd season / 第29章「これが私のスクールアイドル！」",
+	"title": "第1話 もう一度、最初から",
+	"desc": "ランジュ、ミア、栞子の３人のパフォーマンスを見た同好会メンバーとあなた。ほとばしる３人の熱意に当てられて、興奮が収まらない。そのまま３人のもとに駆けつけて……？",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Mia"]
+},
+{
+	"chapter": "メインストーリー / 2nd season / 第29章「これが私のスクールアイドル！」",
+	"title": "第2話 不思議なあの子",
+	"desc": "栞子たちとのライブから数日後、ランジュはひとり物思いにふけっていた。ライブのあと、真っ先に自分に抱きついて来たあなたのことがわからない。意地悪なことも言ったのに、なぜその笑顔は変わらないの？",
+	"tag": ["main", "Ayumu", "Lanzhu"]
+},
+{
+	"chapter": "メインストーリー / 2nd season / 第29章「これが私のスクールアイドル！」",
+	"title": "第3話 ごめんなさい",
+	"desc": "歩夢と話して、ますますあなたに興味を持ったランジュ。じっとしているのは性分ではないと、さっそくあなたに会いに来るが……？",
+	"tag": ["main", "Player", "Lanzhu"]
+},
+{
+	"chapter": "メインストーリー / 2nd season / 第29章「これが私のスクールアイドル！」",
+	"title": "第4話 スクールアイドル部、◯◯！？",
+	"desc": "歩夢とあなたと話、なにかが見えてきたランジュ。その予感を確かめるために、ライブの開催を決めた。会場は超満員。部の仲間たちとの新たな絆を確かめつつ立ったステージから見えたものは……？",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Mia"]
+},
+{
+	"chapter": "メインストーリー / 2nd season / 第29章「これが私のスクールアイドル！」",
+	"title": "第5話 新生・スクールアイドル同好会！",
+	"desc": "スクールアイドルとして本当に大切なことに気づけたランジュは、スクールアイドル部の廃部を決める。そして、改めて同好会のみんなのものを訪れる。そこで言い出したこととは……？",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Mia", "Kaoruko"]
+},
+{
+	"chapter": "メインストーリー / 2nd season / 第29章「これが私のスクールアイドル！」",
+	"title": "第6話 波紋",
+	"desc": "ランジュたちが同好会に正式加入！新たな同好会として再始動！　スクールアイドルエキシビジョンの校内オーディションに向けて、みんなが気持ちをひとつに動き出した。そんなとき、あなたはあることが気になってしまい……？",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Mia"]
+},
+{
+	"chapter": "メインストーリー / 2nd season / 第29章「これが私のスクールアイドル！」",
+	"title": "第7話 輪の中",
+	"desc": "校内オーディションに向けての準備を再開させたメンバー。ユニットごとのステージだが、結局みんなで相談し合うことになっている。同好会と部のいいところが混ざり合っている。そんな風景をみているあなたは……？",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Mia"]
+},
+{
+	"chapter": "メインストーリー / 2nd season / 第29章「これが私のスクールアイドル！」",
+	"title": "第8話 思い出した最初の一歩",
+	"desc": "自分はどうしてスクールアイドル活動をしたいと思わないのだろう？　それはみんなほどスクールアイドルが好きじゃないから？　そう悩むあなたは、ついに不安を歩夢に打ち明けた。それを聞いた歩夢はあなたを泊まりにさそって……？",
+	"tag": ["main", "Player", "Ayumu"]
+},
+{
+	"chapter": "メインストーリー / 2nd season / 第29章「これが私のスクールアイドル！」",
+	"title": "第9話 私にとって！",
+	"desc": "歩夢の熱い気持ちを受け取り、自分にとってのスクールアイドル活動について光が見えてきたあなた。一晩明け、このもやもやも解消できるこあになるはずと部室に行くと、同好会のみんなが勢ぞろいしていて……！？",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Mia"]
+},
+{
+	"chapter": "メインストーリー / 2nd season / 第29章「これが私のスクールアイドル！」",
+	"title": "第10話 校内オーディション、開催！",
+	"desc": "みんなの気持ちを聞き、自分のやってきたこともスクールアイドル活動だったのだと気づくことができたあなた。気分はすっきり晴れ渡っている。そして、ついに校内オーディション開催！　他校からも見学者が訪れていて……？",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Mia", "Kaoruko", "Secretary", "Misato", "Haruka", "Mai"]
 },
 {
 	"chapter": "イベントエピソード「秘密のパーティー！」",
@@ -3145,13 +3209,13 @@ const StoryList = [
 {
 	"chapter": "イベントエピソード「未来のラボは大騒ぎ」",
 	"title": "第1話",
-	"desc": "科学雑誌のライターである絵里は、「天王寺ラボ」の取材に来ていた。しかし璃奈は海外出張であいにくの不在だ。",
+	"desc": "科学雑誌のライターである絵里は、「天王寺ラボ」の取材に来ていた。しかし所長の璃奈は海外出張であいにくの不在だった。",
 	"tag": ["event", "Eli", "Chika", "Riko"]
 },
 {
 	"chapter": "イベントエピソード「未来のラボは大騒ぎ」",
 	"title": "第2話",
-	"desc": "ラボにやってきた絵里。絵里の目に入ってきたのは、厨房のような部屋だった。",
+	"desc": "ラボにやってきた絵里。絵里が見たその「ラボ」は、厨房のような部屋だった。",
 	"tag": ["event", "Eli", "Chika", "Riko", "Kanata"]
 },
 {
@@ -3163,25 +3227,25 @@ const StoryList = [
 {
 	"chapter": "イベントエピソード「未来のラボは大騒ぎ」",
 	"title": "第4話",
-	"desc": "ことりの開発した枕で微睡んでいると、突如、大きな爆発音が……！",
+	"desc": "ことりはいろいろな枕を開発していた。みんなその枕を使って微睡んでいると、突然、どこからか大きな爆発音が……！",
 	"tag": ["event", "Eli", "Kotori", "Chika", "Riko", "Kanata", "Setsuna"]
 },
 {
 	"chapter": "イベントエピソード「未来のラボは大騒ぎ」",
 	"title": "第5話",
-	"desc": "爆発音はせつ菜の実験によるものだった。絵里は本来の目的を思い出し、所長室へと行く。",
+	"desc": "爆発音はせつ菜の実験によるものだった。絵里は本来の目的を思い出し、所長室でみんなに取材を行う。",
 	"tag": ["event", "Eli", "Kotori", "Chika", "Riko", "Kanata", "Setsuna"]
 },
 {
 	"chapter": "イベントエピソード「未来のラボは大騒ぎ」",
 	"title": "第6話",
-	"desc": "所長室での取材中、ラボに警報が鳴り響く。そこは時間操作の研究室からだ！",
+	"desc": "所長室での取材中、ラボに警報が鳴り響く。時間操作の研究室へと駆けつけると、機械から次から次へとみかんが飛び出してくる！",
 	"tag": ["event", "Eli", "Kotori", "Chika", "Riko", "Kanata", "Setsuna"]
 },
 {
 	"chapter": "イベントエピソード「未来のラボは大騒ぎ」",
 	"title": "第7話",
-	"desc": "装置の暴走は、千歌がコンセントを引っこ抜いてなんとか収まった。",
+	"desc": "装置の暴走は、千歌がコンセントを引っこ抜いたおかげで終息した。しかし、溢れんばかりのみかんをどうにかしなければ……。",
 	"tag": ["event", "Eli", "Kotori", "Chika", "Riko", "Kanata", "Setsuna"]
 },
 {
@@ -3206,7 +3270,7 @@ const StoryList = [
 {
 	"chapter": "イベントエピソード「思いよ届け、ホワイトデー」",
 	"title": "第4話",
-	"desc": "花丸とエマは、希との待ち合わせにやってきた。「来る途中に曜と璃奈に会ったが、何だか慌てていた」と聞いた希がとった行動とは……。",
+	"desc": "花丸とエマは、待ち合わせをしている希に会いにきた。会話の中、「来る途中に曜と璃奈に会ったが、何だか慌てていた」と聞いた希がとった行動とは……。",
 	"tag": ["event", "Nozomi", "Hanamaru", "Emma"]
 },
 {
@@ -3218,7 +3282,7 @@ const StoryList = [
 {
 	"chapter": "イベントエピソード「思いよ届け、ホワイトデー」",
 	"title": "第6話",
-	"desc": "希・花丸・エマが璃奈たちのいる所へ駆けつけてきた！　ことりと曜は、璃奈を集中させてあげるため、そっと見守ってもらうように説得する。",
+	"desc": "希・花丸・エマが璃奈たちのいる所へ駆けつけてきた！　ことりと曜は、璃奈を集中させてあげるため、今はそっと見守っていてほしいと説得する。",
 	"tag": ["event", "Kotori", "Nozomi", "You", "Hanamaru", "Emma", "Rina"]
 },
 {
@@ -3563,6 +3627,48 @@ const StoryList = [
 	"title": "第7話",
 	"desc": "かすみの願い事はもちろん、「今夜晴れますように」！",
 	"tag": ["event", "Rin", "Nozomi", "Chika", "Riko", "Kasumi", "Rina"]
+},
+{
+	"chapter": "イベントエピソード「花火大会は波乱の予感？」",
+	"title": "第1話",
+	"desc": "忙しい日々から解放され、とても暇になった善子。そこへ、花丸がやってきて……",
+	"tag": ["event", "Hanamaru", "Yoshiko"]
+},
+{
+	"chapter": "イベントエピソード「花火大会は波乱の予感？」",
+	"title": "第2話",
+	"desc": "μ'sや虹ヶ咲のみんなを誘って花火大会に行くことにした善子。当日着る浴衣は、ニジガクのライフデザイン学科が作ってくれた。",
+	"tag": ["event", "Hanayo", "Nico", "Yoshiko", "Hanamaru", "Karin", "Kanata"]
+},
+{
+	"chapter": "イベントエピソード「花火大会は波乱の予感？」",
+	"title": "第3話",
+	"desc": "花火大会当日の夜。たくさん並んだ屋台を満喫しようとしようするも、早くも花丸と善子にハプニングが……？",
+	"tag": ["event", "Hanayo", "Nico", "Yoshiko", "Hanamaru", "Karin", "Kanata"]
+},
+{
+	"chapter": "イベントエピソード「花火大会は波乱の予感？」",
+	"title": "第4話",
+	"desc": "6人が見つけたのは、とても大きな綿あめ。写真を撮ったり、美味しそうに頬張ったり、人それぞれの楽しみ方をする。",
+	"tag": ["event", "Hanayo", "Nico", "Yoshiko", "Hanamaru", "Karin", "Kanata"]
+},
+{
+	"chapter": "イベントエピソード「花火大会は波乱の予感？」",
+	"title": "第5話",
+	"desc": "次にやってきたのは、輪投げと金魚すくい。彼方とにこは自分の妹のために、いつも以上に気合が入る。",
+	"tag": ["event", "Hanayo", "Nico", "Yoshiko", "Hanamaru", "Karin", "Kanata"]
+},
+{
+	"chapter": "イベントエピソード「花火大会は波乱の予感？」",
+	"title": "第6話",
+	"desc": "色々な食べ物を買ってきたメンバー。しかし、トラブルにトラブルが重なって……。",
+	"tag": ["event", "Hanayo", "Nico", "Yoshiko", "Hanamaru", "Karin", "Kanata"]
+},
+{
+	"chapter": "イベントエピソード「花火大会は波乱の予感？」",
+	"title": "第7話",
+	"desc": "不幸体質のせいで、近くにいるみんなに迷惑をかけていると思い、一人で逃げ出す善子。しかし、他のメンバーは善子のことを心配して追いかけてくる。",
+	"tag": ["event", "Hanayo", "Nico", "Yoshiko", "Hanamaru", "Karin", "Kanata"]
 },
 {
 	"color": "Honoka",
@@ -6025,6 +6131,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Ayumu"]
 },
 {
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢 / 校内フィルムフェスティバル編",
+	"title": "26話 わがまま、きいて！",
+ 	"desc": "SF研究部の映画のためのイメージソング作りを進めている歩夢とあなた。歌詞に「わがままさ」を詰め込みたいが「わがまま」がわからないという歩夢に練習を持ちかけてみたら……？",
+	"tag": ["kizuna", "Player", "Ayumu"]
+},
+{
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ",
 	"title": "1話 愛されかすかす",
@@ -6203,6 +6316,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Kasumi", "Shizuku", "Setsuna"]
 },
 {
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ / 校内フィルムフェスティバル編",
+	"title": "26話 求道者・かすみ",
+ 	"desc": "せつ菜としずくから借りたアニメや演劇の映像を見て、かわいいを目一杯浴びたかすみ。気分は無敵なのだが、頭の理解がいまいち追いつかず、歌詞を書くことができていない。そしてあなたに助けを求めて……？",
+	"tag": ["kizuna", "Player", "Kasumi"]
+},
+{
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく",
 	"title": "1話 物語の魅力",
@@ -6378,6 +6498,13 @@ const StoryList = [
 	"chapter": "キズナエピソード 桜坂しずく / 校内フィルムフェスティバル編",
 	"title": "25話 私で、いいの？",
  	"desc": "役作りのイメージが固まらないままのしずく。演劇部の稽古もイメージソング作りも、波に乗り切れずにいることが不安でたまらず、あなたに相談をしてきて……？",
+	"tag": ["kizuna", "Player", "Shizuku"]
+},
+{
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく / 校内フィルムフェスティバル編",
+	"title": "27話 たゆたうイメージを捕まえて！",
+ 	"desc": "どうして自分が大役を任されたのか、悩むしずく。そんなしずくの悩みを聞きつつ、あなたの中には曲のイメージが湧き上がってきた。その曲をしずくに聞かせると……？",
 	"tag": ["kizuna", "Player", "Shizuku"]
 },
 {
@@ -6559,6 +6686,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Karin", "Setsuna"]
 },
 {
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林 / 校内フィルムフェスティバル編",
+	"title": "26話 相乗効果は何十倍？",
+ 	"desc": "あなたが作った曲のイメージを聞いた果林。負けず嫌いが功を奏し、練習にも一層身が入る。しかし、まだ足りないと悩む果林は……？",
+	"tag": ["kizuna", "Player", "Karin", "Setsuna", "Emma"]
+},
+{
 	"color": "Ai",
 	"chapter": "キズナエピソード 宮下愛",
 	"title": "1話 愛の世界",
@@ -6735,6 +6869,13 @@ const StoryList = [
 	"chapter": "キズナエピソード 宮下愛 / 校内フィルムフェスティバル編",
 	"title": "25話 掴め！　妖艶さ！",
  	"desc": "アナログゲーム研究部が作る映画のテーマ曲の方向性が決まった。イメージは、悲恋の末に自分を失った妖艶な吸血鬼。いつもの自分とは違うパフォーマンスになるため、戸惑う愛だったが……？",
+	"tag": ["kizuna", "Player", "Shizuku", "Ai"]
+},
+{
+	"color": "Ai",
+	"chapter": "キズナエピソード 宮下愛 / 校内フィルムフェスティバル編",
+	"title": "26話 ホラーの精度？",
+ 	"desc": "しずくの特訓により、なんとか妖艶さは身につけることができた愛。曲も完成し、パフォーマンスに気持ちを込める段階まできていた。曲の持つ薄暗い雰囲気、ホラー感に苦戦している愛は……？",
 	"tag": ["kizuna", "Player", "Shizuku", "Ai"]
 },
 {
@@ -6915,6 +7056,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Kanata"]
 },
 {
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方 / 校内フィルムフェスティバル編",
+	"title": "26話 誰かのためなら！",
+ 	"desc": "漫画研究部の作る映画の主人公であるくノ一の気持ちになりたくて、色々なことを試してきた彼方。でも、何をやっても結局は自分のペースになってしまって……？",
+	"tag": ["kizuna", "Player", "Kanata"]
+},
+{
 	"color": "Setsuna",
 	"chapter": "キズナエピソード 優木せつ菜",
 	"title": "1話 せつ菜と菜々",
@@ -7090,6 +7238,13 @@ const StoryList = [
 	"title": "25話 掴め！　極意！",
  	"desc": "「萌え」のなんたるかを掴むため、かすみに教えてもらおうと思ったせつ菜とあなた。でもやり方を失敗してしまい、かすみに逃げられてしまった。そのことを謝ろうとしたが、あの日以降、かすみに避けられてしまい……？",
 	"tag": ["kizuna", "Player", "Kasumi", "Setsuna"]
+},
+{
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜 / 校内フィルムフェスティバル編",
+	"title": "26話 せつ菜のなりきり特訓！",
+ 	"desc": "「萌え」という気持ちをつかむことができたあなた。曲作りも順調に進み、ライトノベル研究部が作る映画のためのイメージソングが完成した。せつ菜はその曲を表現するためには自分にも特訓が必要だと言い出して……？",
+	"tag": ["kizuna", "Player", "Setsuna"]
 },
 {
 	"color": "Emma",
@@ -7268,6 +7423,13 @@ const StoryList = [
 	"title": "25話 ダメになっちゃう？",
  	"desc": "曲作りで悩んでいるあなたのため、突然メイドになってお仕えしますと宣言したエマ。その日から放課後はあなたの家でメイドさんごっこをしている。学園は安息の地のはずだったのに、お昼にエマが襲来してきて……？",
 	"tag": ["kizuna", "Player", "Karin", "Emma"]
+},
+{
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ / 校内フィルムフェスティバル編",
+	"title": "26話 思い合う心",
+ 	"desc": "エマのメイドさん大作戦が功を奏し……たかはわからないが、曲のイメージが掴めてきたあなた。ただ、今ひとつ物足りなさを感じていて……？",
+	"tag": ["kizuna", "Player", "Emma"]
 },
 {
 	"color": "Rina",
@@ -7449,6 +7611,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Kasumi", "Shizuku", "Rina", "Shioriko"]
 },
 {
+	"color": "Rina",
+	"chapter": "キズナエピソード 天王寺璃奈 / 校内フィルムフェスティバル編",
+	"title": "26話 璃奈のチャレンジ大作戦・その3",
+ 	"desc": "今まで尻込みしていたチャレンジを成功させることができた璃奈。映画のあの子のように、もっといろんなチャレンジをしたいとあなたに相談する。次のチャレンジは……？",
+	"tag": ["kizuna", "Player", "Ayumu", "Karin", "Ai", "Emma", "Rina"]
+},
+{
 	"color": "Shioriko",
 	"chapter": "キズナエピソード 三船栞子",
 	"title": "1話 新入部員のサダメ！？",
@@ -7532,6 +7701,13 @@ const StoryList = [
 	"title": "12話 栞子をプロデュース・右月編",
 	"desc": "校内フィルムフェスティバルに向けた生徒会のPR動画。栞子の魅力で生徒会をアピールすべく、左月に続いてもうひとりの書紀、右月が提案！",
 	"tag": ["kizuna", "Player", "Shioriko", "Secretary"]
+},
+{
+	"color": "Shioriko",
+	"chapter": "キズナエピソード 三船栞子 / 校内フィルムフェスティバル編",
+	"title": "13話 縁の下の力持ち",
+ 	"desc": "左月、右月による特訓で「キャラ作り」に励んでいた栞子。戸惑いつつも二人に感謝して映像に活かそうと試みている。だが、特訓に熱中していたせいで生徒会の仕事が溜まってしまっていて……？",
+	"tag": ["kizuna", "Player", "Shioriko"]
 },
 {
 	"color": "Ayumu",

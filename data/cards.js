@@ -5186,5 +5186,125 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「パーティーガチャ」で追加"
 },
+{
+	"id": 498,
+	"name": "Karin",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "お、思ったより、あつふへ……",
+	"cn2": "TWINKLE★STARRY☆NIGHT",
+	"date": "2021/07/20",
+	"source": "gacha",
+	"desc": "「花火大会は波乱の予感？ガチャ」で追加"
+},
+{
+	"id": 499,
+	"name": "Kanata",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "いきま～す、そりゃっ",
+	"cn2": "虹色の心",
+	"date": "2021/07/20",
+	"source": "gacha",
+	"desc": "「花火大会は波乱の予感？ガチャ」で追加"
+},
+{
+	"id": 500,
+	"name": "Hanayo",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "口に入れたらふわっととろけて",
+	"cn2": "TWINKLE★STARRY☆NIGHT",
+	"date": "2021/07/20",
+	"source": "gacha",
+	"desc": "「花火大会は波乱の予感？ガチャ」で追加"
+},
+{
+	"id": 501,
+	"name": "Yoshiko",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Vo",
+	"cn1": "ヨハネの行き着く先こそ正義",
+	"cn2": "TWINKLE★STARRY☆NIGHT",
+	"date": "2021/07/23",
+	"source": "reward",
+	"desc": "イベント「花火大会は波乱の予感？」報酬"
+},
+{
+	"id": 502,
+	"name": "Hanamaru",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Vo",
+	"cn1": "お、お財布が空っぽずら～～！！",
+	"cn2": "未熟DREAMER",
+	"date": "2021/07/23",
+	"source": "reward",
+	"desc": "イベント「花火大会は波乱の予感？」報酬 (イベントpt枠)"
+},
+{
+	"id": 503,
+	"name": "Nico",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "うわあっ！？",
+	"cn2": "Angelic Angel",
+	"date": "2021/07/23",
+	"source": "reward",
+	"desc": "イベント「花火大会は波乱の予感？」報酬 (ランキング枠)"
+},
+{
+	"id": 504,
+	"name": "Maki",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Sk",
+	"cn1": "ここの書斎が、特にお気に入り",
+	"cn2": "魅惑の司書",
+	"date": "2021/07/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 505,
+	"name": "Ruby",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "ん……むにゃむにゃ……",
+	"cn2": "sweet little angel",
+	"date": "2021/07/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 506,
+	"name": "Eli",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "身体を大きく動かして",
+	"cn2": "Angelic Angel",
+	"date": "2021/07/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 507,
+	"name": "Emma",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "果林ちゃーん！　起きてる～？",
+	"cn2": "虹色の心",
+	"date": "2021/07/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
 ];
-const LatestUpdate = "2021/07/14 「パーティーガチャ」まで";
+const LatestUpdate = "2021/07/30 「スクスタフェス」まで";
