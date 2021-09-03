@@ -44,6 +44,8 @@ const ColSetu = "#f9a6aa";
 const ColEmma = "#c8edbe";
 const ColRina = "#cfd0e3";
 const ColShio = "#a1e8d2";
+const ColLanz = "#F8C8C4";
+const ColMia  = "#D6D5CA";
 const ColYu   = "#bbb";
 
 
@@ -60,8 +62,8 @@ var MemberGroup = [
 	["┣","Aqoursキャスト",["AqoursCast"]],
 	["┣","Aqoursユニット",["AqoursUnit"]],
 	["┗","Aqoursカップリング",["AqoursCP"]],
-	[""  ,"虹ヶ咲学園スクールアイドル同好会",["Niji","NijiX"]],
-	["┣","虹ヶ咲関係者",["Niji","NijiX","Niji2"]],
+	[""  ,"虹ヶ咲学園スクールアイドル同好会",["Niji", "NijiX"]],
+	["┣","虹ヶ咲関係者",["Niji", "NijiX","Niji2"]],
 	["┣","虹ヶ咲キャスト",["NijiCast"]],
 	["┣","虹ヶ咲ユニット",["NijiUnit"]],
 	["┗","虹ヶ咲カップリング",["NijiCP"]],
@@ -266,16 +268,17 @@ var CharList = [
 	{name:"エマ・ヴェルデ", color:[ColEmma], group:{"Niji":1}},
 	{name:"天王寺璃奈",     color:[ColRina], group:{"Niji":1}},
 	{name:"三船栞子",       color:[ColShio], group:{"Niji":1}},
+	{name:"鐘嵐珠",         color:[ColLanz], group:{"Niji":1}},
+	{name:"ミア・テイラー", color:[ColMia ], group:{"Niji":1}},
 	{name:"高咲侑",         color:[ColYu  ], group:{"NijiX":1}},
 
 	{name:"川本美里",       color:["#eee"], group:{"Niji2":1}},
 	{name:"近江遥",         color:["#eee"], group:{"Niji2":1}},
 	{name:"三船薫子",       color:["#eee"], group:{"Niji2":1}},
 	{name:"夏川マイ",       color:["#eee"], group:{"Niji2":1}},
-	{name:"鐘嵐珠",         color:["#eee"], group:{"Niji2":1}},
-	{name:"ミア・テイラー", color:["#eee"], group:{"Niji2":1}},
 	{name:"虹ヶ咲学園理事長", color:["#eee"], group:{"Niji2":1}},
-	{name:"右月/左月",      color:["#eee"], group:{"Niji2":1}},
+	{name:"右月",           color:["#eee"], group:{"Niji2":1}},
+	{name:"左月",           color:["#eee"], group:{"Niji2":1}},
 	{name:"はんぺん", subtext:"白い猫", color:["#eee"], group:{"Niji2":1}},
 	
 	{name:"大西亜玖璃", subtext:"上原歩夢 役",   color:[ColAyum], group:{"NijiCast":1}},
@@ -296,9 +299,10 @@ var CharList = [
 	{name:"スクフェス分室",     namealt:"スクフェス<br>分室", color:["#eee"], subtext:"桜坂しずく<br>近江彼方<br>エマ・ヴェルデ", group:{"NijiUnit":1}},
 	{name:"ファミ通App分室",    namealt:"ファミ通App<br>分室", color:["#eee"], subtext:"上原歩夢<br>宮下愛<br>天王寺璃奈", group:{"NijiUnit":1}},
 	{name:"電撃オンライン分室", namealt:"電撃オンライン<br>分室", color:["#eee"], subtext:"中須かすみ<br>朝香果林<br>優木せつ菜", group:{"NijiUnit":1}},
-	{name:"DiverDiva",        color:['#9bf'], subtext:"宮下愛<br>朝香果林", group:{"NijiUnit":1,"AllUnit":1}},
+	{name:"DiverDiva",        color:['#9cf'], subtext:"宮下愛<br>朝香果林", group:{"NijiUnit":1,"AllUnit":1}},
 	{name:"A・ZU・NA",        color:['#fad'], subtext:"上原歩夢<br>桜坂しずく<br>優木せつ菜", group:{"NijiUnit":1,"AllUnit":1}},
 	{name:"QU4RTZ",           color:['#fda'], subtext:"中須かすみ<br>近江彼方<br>エマ・ヴェルデ<br>天王寺璃奈", group:{"NijiUnit":1,"AllUnit":1}},
+	{name:"R3BIRTH",          color:['#abf'], subtext:"三船栞子<br>鐘嵐珠<br>ミア・テイラー", group:{"NijiUnit":1,"AllUnit":1}},
 	{name:"スクフェススマイル組", namealt:"スクフェス<br>スマイル組", color:["#f9c"], subtext:"宮下愛<br>近江彼方<br>天王寺璃奈", group:{"NijiUnit":1}},
 	{name:"スクフェスピュア組",   namealt:"スクフェス<br>ピュア組",   color:["#9fb"], subtext:"上原歩夢<br>中須かすみ<br>エマ・ヴェルデ", group:{"NijiUnit":1}},
 	{name:"スクフェスクール組",   namealt:"スクフェス<br>クール組",   color:["#9df"], subtext:"桜坂しずく<br>朝香果林<br>優木せつ菜", group:{"NijiUnit":1}},
@@ -880,6 +884,12 @@ document.write('<\/select><\/form>');
 <h3 class="niji">更新履歴</h3>
 <table class="history" style="margin: auto;">
 <tbody>
+<tr>
+	<td>2021/09/03</td>
+	<td><span class="new"></span>鐘嵐珠、ミア・テイラーをニジガクメインキャラクターに格上げ<br>
+		<span class="new"></span>虹ヶ咲ユニットにR3BIRTHを追加<br>
+		<span class="fix"></span>右月・左月を分割</td>
+</tr>
 <tr>
 	<td>2021/05/31</td>
 	<td><span class="new"></span>アニメ虹ヶ咲関連、りりりーず(ユニット)、右月/左月、はんぺんを追加</td>
