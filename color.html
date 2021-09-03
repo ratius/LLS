@@ -345,6 +345,48 @@ const CharData = [
 		official: {r: 55, g:180, b:132},
 		sifas:    {r: 36, g:189, b:139},
 		sifas_s1: {r: 54, g:180, b:130},
+	},
+
+	{ id:'Lanzhu', name:'鐘 嵐珠',
+		official: {r:248, g:200, b:196},
+		sifas:    {r:248, g:200, b:196},
+		sifas_s1: {r:246, g:153, b:146},
+	},
+
+	{ id:'Mia', name:'ミア・テイラー',
+		official: {r:214, g:213, b:202},
+		sifas:    {r:214, g:213, b:202},
+		sifas_s1: {r:169, g:168, b:154},
+	},
+
+	{ id:'Kanon', name:'渋谷かのん',
+		official: {r:255, g:127, b: 39},
+		llsif:    {r:255, g:197, b:157},
+		llsif2:   {r:255, g:243, b:235},
+	},
+
+	{ id:'Keke', name:'唐可可',
+		official: {r:160, g:255, b:249},
+		llsif:    {r:174, g:255, b:250},
+		llsif2:   {r:239, g:255, b:254},
+	},
+
+	{ id:'Chisato', name:'嵐千砂都',
+		official: {r:255, g:110, b:144},
+		llsif:    {r:255, g:202, b:214},
+		llsif2:   {r:255, g:244, b:247},
+	},
+
+	{ id:'Sumire', name:'平安名すみれ',
+		official: {r:116, g:244, b:102},
+		llsif:    {r:195, g:255, b:188},
+		llsif2:   {r:243, g:255, b:242},
+	},
+
+	{ id:'Ren', name:'葉月恋',
+		official: {r:  0, g:  0, b:160},
+		llsif:    {r:192, g:203, b:255},
+		llsif2:   {r:244, g:245, b:255},
 	}
 
 ];
@@ -407,7 +449,7 @@ function CreateColorListTable(Idol, col, tablecol){
 	+ '<thead>\n<tr><th style="width: 110px; background-color:' + tablecol + '">→キャラクター<br>↓媒体<\/th>';
 	//■ヘッダーのキャラ名
 	for(x of Idol){
-		Output += '<th class="' + CharData[x].id + '" style="width:' + (90/Idol.length) + '%">'
+		Output += '<th class="' + CharData[x].id + '" style="width:' + (92/Idol.length) + '%">'
 		+ CharData[x].name + '<\/th>\n';
 	}
 	Output += '<\/tr>\n<\/thead>\n';
@@ -459,7 +501,9 @@ document.getElementById("MainArea").innerHTML =
 	+ '<h3 class="aqours">Aqoursメンバーの色<\/h3>'
 	+ CreateColorListTable([9,10,11,12,13,14,15,16,17], ['official', 'sifas', 'sifas_s1', 'puchi', 'llsif', 'llsif2', 'sifac', 'vote2nd', 'vote3rd', 'vote4th','duotrio'], '#00a0ea')
 	+ '<h3 class="niji">ニジガクメンバーの色<\/h3>'
-	+ CreateColorListTable([18,19,20,21,22,23,24,25,26,27], ['official', 'sifas', 'sifas_s1', 'llsif', 'llsif2', 'monthly', 'nijiyon'], '#f29600');
+	+ CreateColorListTable([18,19,20,21,22,23,24,25,26,27,28,29], ['official', 'sifas', 'sifas_s1', 'llsif', 'llsif2', 'monthly', 'nijiyon'], '#f29600')
+	+ '<h3 class="liella">Liella!メンバーの色<\/h3>'
+	+ CreateColorListTable([30,31,32,33,34], ['official', 'llsif', 'llsif2'], '#e451d3');
 
 --></script>
 
@@ -467,19 +511,24 @@ document.getElementById("MainArea").innerHTML =
 <table class="history">
 <tbody>
 <tr>
-	<td>2020/08/03 14:00頃</td>
+	<td>2021/09/03</td>
+	<td><span class="new"></span>「鐘嵐珠」「ミア・テイラー」の列を追加<br>
+		<span class="new"></span>Liella!メンバーのテーブルを追加</td>
+</tr>
+<tr>
+	<td>2020/08/03</td>
 	<td><span class="new"></span>「三船栞子」の列を追加</td>
 </tr>
 <tr>
-	<td>2020/01/22 17:00頃</td>
+	<td>2020/01/22</td>
 	<td><span class="new"></span>「ぷちぐる」「アケフェス」の行を追加</td>
 </tr>
 <tr>
-	<td>2020/01/06 17:00頃</td>
+	<td>2020/01/06</td>
 	<td><span class="new"></span>スクスタ公式Webの色を追加</td>
 </tr>
 <tr>
-	<td>2019/12/17 17:30頃</td>
+	<td>2019/12/17</td>
 	<td><span class="new"></span>公開</td>
 </tr>
 </tbody>
