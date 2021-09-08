@@ -108,6 +108,8 @@ td:hover .tool-tip {
 .Emma    { background-color: rgb(143, 218, 121); font-size: 80%;}
 .Rina    { background-color: rgb(208, 206, 225);}
 .Shioriko{ background-color: rgb( 36, 189, 139);}
+.Mia     { background-color: rgb(214, 213, 202); font-size: 80%;}
+.Lanzhu  { background-color: rgb(248, 200, 196);}
 
 --></style>
 <script><!--
@@ -115,16 +117,16 @@ td:hover .tool-tip {
 const CharId = [
 	'Honoka', 'Eli', 'Kotori', 'Umi', 'Rin', 'Maki', 'Nozomi', 'Hanayo', 'Nico',
 	'Chika', 'Riko', 'Kanan', 'Dia', 'You', 'Yoshiko', 'Hanamaru', 'Mari', 'Ruby',
-	'Ayumu', 'Kasumi', 'Shizuku', 'Karin', 'Ai', 'Kanata', 'Setsuna', 'Emma', 'Rina', 'Shioriko'
+	'Ayumu', 'Kasumi', 'Shizuku', 'Karin', 'Ai', 'Kanata', 'Setsuna', 'Emma', 'Rina', 'Shioriko', "Mia", "Lanzhu"
 ];
 const CharName = [
 	'高坂 穂乃果', '絢瀬 絵里', '南 ことり', '園田 海未', '星空 凛', '西木野 真姫', '東條 希', '小泉 花陽', '矢澤 にこ',
 	'高海 千歌', '桜内 梨子', '松浦 果南', '黒澤 ダイヤ', '渡辺 曜', '津島 善子', '国木田 花丸', '小原 鞠莉', '黒澤 ルビィ',
-	'上原 歩夢', '中須 かすみ', '桜坂 しずく', '朝香 果林', '宮下 愛', '近江 彼方', '優木 せつ菜', 'エマ・ヴェルデ', '天王寺 璃奈', '三船 栞子'
+	'上原 歩夢', '中須 かすみ', '桜坂 しずく', '朝香 果林', '宮下 愛', '近江 彼方', '優木 せつ菜', 'エマ・ヴェルデ', '天王寺 璃奈', '三船 栞子', 'ミア・テイラー', '鐘 嵐珠'
 ];
 const ListMuse = [0,1,2,3,4,5,6,7,8];
 const ListAqours = [9,10,11,12,13,14,15,16,17];
-const ListNiji = [18,19,20,21,22,23,24,25,26,27];
+const ListNiji = [18,19,20,21,22,23,24,25,26,27,28,29];
 const ToolTipSource = {'gacha':'Ｅ特効', 'reward':'Ｅ報酬', 'fes':'フェス', 'party':'ﾊﾟｰﾃｨｰ', 'none':'非イベ', 'release':'初期'};
 
 // ■生データから新たなデータを作成
@@ -274,6 +276,10 @@ loadScript("data/cards.js", function() {
 <h3 class="niji">更新履歴 (カード追加以外)</h3>
 <table class="history">
 <tbody>
+<tr>
+	<td>2021/09/08</td>
+	<td><span class="new"></span>「ミア・テイラー」「鐘嵐珠」の列を追加</td>
+</tr>
 <tr>
 	<td>2021/02/13</td>
 	<td><span class="new"></span>「パーティーガチャ限定」が表示可能になりました</td>
