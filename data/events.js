@@ -395,4 +395,31 @@ const EventList = [
 	"UR" : ["Hanayo", "Yoshiko", "Karin"],
 	"SR" : ["Nico", "Hanamaru", "Kanata"]
 },
+{
+	"id" : 45,
+	"name" : "アロハ！リゾートバカンス",
+	"type" : "exchange",
+	"started" : new Date("2021-08-07T15:00:00+09:00"),
+	"ended"   : new Date("2021-08-14T14:59:59+09:00"),
+	"UR" : ["Honoka", "Kanan", "Kanata"],
+	"SR" : ["Rin", "Ruby", "Kasumi"]
+},
+{
+	"id" : 46,
+	"name" : "特別な夏フェス！",
+	"type" : "story",
+	"started" : new Date("2021-08-22T15:00:00+09:00"),
+	"ended"   : new Date("2021-08-30T14:59:59+09:00"),
+	"UR" : ["Nozomi", "You", "Ayumu"],
+	"SR" : ["Umi", "Riko", "Karin"]
+},
+{
+	"id" : 47,
+	"name" : "月夜のフェアリーテイル",
+	"type" : "exchange",
+	"started" : new Date("2021-09-07T15:00:00+09:00"),
+	"ended"   : new Date("2021-09-13T14:59:59+09:00"),
+	"UR" : ["Eli", "Mari", "Ai"],
+	"SR" : ["Honoka", "Yoshiko", "Setsuna"]
+},
 ];
