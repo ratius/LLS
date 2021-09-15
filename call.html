@@ -268,14 +268,16 @@ const CharData = [
 		Shioriko:'栞子ちゃん', Lanzhu:'ランジュちゃん<span class="memo" title="20～29章">ランジュさん</span>', Mia:'ミアちゃん',
 		Haruka:'遥ちゃん', Arisa:'亜里沙ちゃん', Kaoruko:'薫子さん', Satsuki:'左月さん', Uzuki:'右月さん'},
 
+	{ id:'Mia', name:'ミア・テイラー', r:214, g:213, b:202,
+		Kotori:'ことり',
+		Kasumi:'かすみ', Shizuku:'しずく', Ai:'愛', Setsuna:'せつ菜', Rina:'璃奈',
+		Shioriko:'栞子', Lanzhu:'ランジュ', Mia:'ボク', Player:'ベイビーちゃん'
+		},
 	{ id:'Lanzhu', name:'鐘 嵐珠', r:248, g:200, b:196, 
+		Kotori:'ことり',
 		Ayumu:'歩夢', Kasumi:'かすみ', Shizuku:'しずく', Karin:'果林', Ai:'愛', 
 		Kanata:'彼方', Setsuna:'せつ菜', Emma:'エマ', Rina:'璃奈', Shioriko:'栞子',
 		Lanzhu:'アタシ<br>ランジュ', Mia:'ミア', Kaoruko:'薫子', Player:'アナタ'
-		},
-	{ id:'Mia', name:'ミア・テイラー', r:214, g:213, b:202, 
-		Kasumi:'かすみ', Shizuku:'しずく', Ai:'愛', Setsuna:'せつ菜', Rina:'璃奈',
-		Shioriko:'栞子', Lanzhu:'ランジュ', Mia:'ボク', Player:'ベイビーちゃん'
 		},
 
 	{ id:'Haruka'  , name:'近江 遥', Player:'あなた', 
@@ -413,7 +415,7 @@ document.getElementById("MainArea").innerHTML =
 	+ '<h3 class="muse">μ’sの呼ばれ方<\/h3>\n' + CreateTable(ListMuse.concat(["Player"]), ListAS.concat(["Yukiho", "Arisa"]))
 	+ '<h3 class="aqours">Aqoursの呼ばれ方<\/h3>\n' + CreateTable(ListAqours.concat(["Player"]), ListAS)
 	+ '<h3 class="niji">ニジガクの呼ばれ方(1)<\/h3>\n' + CreateTable(ListNiji.concat(["Player"]), ListAS.concat(["Haruka", "Misato", "Satsuki"]))
-	+ '<h3 class="niji">ニジガクの呼ばれ方(2)<\/h3>\n' + CreateTable(["Shioriko", "Lanzhu", "Mia", "Kaoruko", "Haruka", "Uzuki", "Satsuki"], ListAS.concat(["Kaoruko", "Haruka", "Uzuki", "Satsuki", "Misato", "Rijicho"]))
+	+ '<h3 class="niji">ニジガクの呼ばれ方(2)<\/h3>\n' + CreateTable(["Shioriko", "Mia", "Lanzhu", "Kaoruko", "Haruka", "Uzuki", "Satsuki"], ListAS.concat(["Kaoruko", "Haruka", "Uzuki", "Satsuki", "Misato", "Rijicho"]))
 	+ '<h3 class="niji">その他の呼ばれ方<\/h3>\n'
 	+ CreateTable(["Yukiho", "Arisa", "Cocoa", "Cocoro", "Cotaro", "Mito", "Shima", "Sarah", "Leah", "Misato"],
 	 ["Honoka", "Eli", "Nico", "Chika", "Hanamaru", "Ruby", "Ai", "Player",

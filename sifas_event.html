@@ -194,15 +194,16 @@ function GetStringFromDate(date,hm){
 
 //■キャラクター用のルックアップテーブル (ID, データ種)
 function LookUp(id, data){
-	var temp = CharLookUpTable.filter((u)=>{return(u.id === id);})[0][data];
-	if(temp === undefined){ //データが見つからなかった場合
+	var temp = CharLookUpTable.filter((u)=>{return(u.id === id);});
+	if(temp.length == 0){ //データが見つからず、空配列を返した場合
+		console.log("キャラクターID " + id + " は見つかりません");
 		if(data === "number"){
 			return -1;
 		} else {
 			return "";
 		}
 	} else {
-		return temp;
+		return temp[0][data];
 	}
 }
 
@@ -293,16 +294,24 @@ function MakeTrioData(){
 		}
 		temp2 = temp2.sort(function(a,b){return a-b}); //イベント参加者のIDを昇順に並べ替えて
 		
+		while(temp2[0] == -1){
+			if(temp2.length < 3){ break;}
+			temp2 = temp2.slice(1);
+		}
+		if(temp2.length < 3){ //トリオも生成できない場合、無かったことにする
+			continue;
+		}
+		
 		//そこからソロ・ペア・トリオのデータを生成
-		for(var c1=0; c1<temp1.length; c1++){
+		for(var c1=0; c1<temp2.length; c1++){
 			TrioHistory[temp2[c1]][0].push(EventList[i].id);
 			if(c1>temp1.length-2){ break; }
 
-			for(var c2=c1+1; c2<temp1.length; c2++){
+			for(var c2=c1+1; c2<temp2.length; c2++){
 				TrioHistory[temp2[c1]][temp2[c2]-temp2[c1]][0].push(EventList[i].id);
 				if(c2>temp1.length-1){ break; }
 
-				for(var c3=c2+1; c3<temp1.length; c3++){
+				for(var c3=c2+1; c3<temp2.length; c3++){
 					TrioHistory[temp2[c1]][temp2[c2]-temp2[c1]][temp2[c3]-temp2[c2]].push(EventList[i].id);
 				}
 			}
