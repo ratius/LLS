@@ -5404,7 +5404,6 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「パーティーガチャ」で追加"
 },
-
 {
 	"id": 516,
 	"name": "Nozomi",
@@ -5621,5 +5620,101 @@ const RawCardList = [
 	"source": "reward",
 	"desc": "イベント「月夜のフェアリーテイル」報酬 (ランキング枠)"
 },
+{
+	"id": 538,
+	"name": "Emma",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "いくらでも歩けちゃいそうだね～",
+	"cn2": "癒しをお届け♡エマ郵便",
+	"date": "2021/09/13",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 539,
+	"name": "Kanan",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Vo",
+	"cn1": "か、風の音かな～",
+	"cn2": "未熟DREAMER",
+	"date": "2021/09/13",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 540,
+	"name": "Nico",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sk",
+	"cn1": "あの幻の映画じゃない！",
+	"cn2": "ウェザー☆コントローラー",
+	"date": "2021/09/16",
+	"source": "gacha",
+	"desc": "「秋雨クラブガチャ」で追加"
+},
+{
+	"id": 541,
+	"name": "Shizuku",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Sp",
+	"cn1": "しっ！　静かに",
+	"cn2": "虹色の心",
+	"date": "2021/09/16",
+	"source": "gacha",
+	"desc": "「秋雨クラブガチャ」で追加"
+},
+{
+	"id": 542,
+	"name": "Hanamaru",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "ここはまるで天国ずら～",
+	"cn2": "ウェザー☆コントローラー",
+	"date": "2021/09/16",
+	"source": "gacha",
+	"desc": "「秋雨クラブガチャ」で追加"
+},
+{
+	"id": 543,
+	"name": "Rina",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "懐中電灯にもできる",
+	"cn2": "ウェザー☆コントローラー",
+	"date": "2021/09/19",
+	"source": "reward",
+	"desc": "イベント「秋雨クラブ」報酬"
+},
+{
+	"id": 544,
+	"name": "You",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "なんだか嵐の海を行く船みたい",
+	"cn2": "未熟DREAMER",
+	"date": "2021/09/19",
+	"source": "reward",
+	"desc": "イベント「秋雨クラブ」報酬 (イベントpt枠)"
+},
+{
+	"id": 545,
+	"name": "Maki",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "リクエストがあるなら聞くわ",
+	"cn2": "Angelic Angel",
+	"date": "2021/09/19",
+	"source": "reward",
+	"desc": "イベント「秋雨クラブ」報酬 (ランキング枠)"
+}
 ];
-const LatestUpdate = "2021/09/07 イベント「月夜のフェアリーテイル」まで";
+const LatestUpdate = "2021/09/19 イベント「秋雨クラブ」まで";

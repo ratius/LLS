@@ -422,4 +422,13 @@ const EventList = [
 	"UR" : ["Eli", "Mari", "Ai"],
 	"SR" : ["Honoka", "Yoshiko", "Setsuna"]
 },
+{
+	"id" : 48,
+	"name" : "秋雨クラブ",
+	"type" : "story",
+	"started" : new Date("2021-09-19T15:00:00+09:00"),
+	"ended"   : new Date("2021-09-25T14:59:59+09:00"),
+	"UR" : ["Nico", "Hanamaru", "Rina"],
+	"SR" : ["Maki", "You", "Shizuku"]
+}
 ];
