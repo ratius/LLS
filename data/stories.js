@@ -1872,6 +1872,76 @@ const StoryList = [
 	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu", "Kaoruko"]
 },
 {
+	"color": "main2",
+	"chapter": "メインストーリー / Intermission / 第31章「新しい日常」",
+	"title": "第1話 今日も一日、張り切って",
+	"desc": "ランジュとミアが加わり、以前にも増して賑やかな日々を送るスクールアイドル同好会。今日も一日頑張ろう！そんな気持ちで部室に着いたあなたは、突然ランジュに呼び止められて……",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+},
+{
+	"color": "main2",
+	"chapter": "メインストーリー / Intermission / 第31章「新しい日常」",
+	"title": "第2話 相乗効果は逆効果？",
+	"desc": "全員が揃い、練習しの開始した同好会メンバー達。間近で見るランジュのハイレベルなトレーニング風景に、メンバー達の士気も俄然高まるのだった。しかし、そのせいで思わぬトラブルも起こってしまい……",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+},
+{
+	"color": "main2",
+	"chapter": "メインストーリー / Intermission / 第31章「新しい日常」",
+	"title": "第3話 スペシャルトレーニング",
+	"desc": "ランジュの練習が気になり、ペースを見出してしまう同好会メンバー達。そんなメンバー達のため、あなたはランジュと相談し、スクールアイドル部仕様の新たなトレーニングメニューを考案する。",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+},
+{
+	"color": "main2",
+	"chapter": "メインストーリー / Intermission / 第31章「新しい日常」",
+	"title": "第4話 ノートに隠した願い",
+	"desc": "苛烈なトレーニングにダウンするメンバー達。みんなのレベルに合わせたものにしたはずなのに、と首をひねりながらノートをめくるランジュ。そのノートは、以前、あなたにも見せた特製練習ノートだった。",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+},
+{
+	"color": "main2",
+	"chapter": "メインストーリー / Intermission / 第31章「新しい日常」",
+	"title": "第5話 みんなでおでかけ！",
+	"desc": "ランジュがノートに書いていた願いを知ったメンバー達は、全員でショッピングモールにやってきた。ランジュはみんなとのお出かけに大興奮。ミアは相変わらずクールな態度だが、同好会のために買い物に参加するのだった。",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+},
+{
+	"color": "main2",
+	"chapter": "メインストーリー / Intermission / 第31章「新しい日常」",
+	"title": "第6話 大満足なお買い物",
+	"desc": "存分に買い物を楽しんだ同好会メンバー達は、それぞれ買ったものや買い物の時の様子などを楽しく報告し合う。そんなメンバー達が次に向かうのは……",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+},
+{
+	"color": "main2",
+	"chapter": "メインストーリー / Intermission / 第31章「新しい日常」",
+	"title": "第7話 みんなで食べれば１００倍美味しい！",
+	"desc": "休憩も兼ねてやってきたのは、レストランフロアにあるファミレス。にぎやかに食事をする同好会メンバー達の元に、ドリンクバーでオリジナルドリンクを作ったかすみが戻ってきた。摩訶不思議な色をしたその味は、果たして！？",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+},
+{
+	"color": "main2",
+	"chapter": "メインストーリー / Intermission / 第31章「新しい日常」",
+	"title": "第8話 ライブ・イン・カラオケ",
+	"desc": "食事の次に一行が向かったのはカラオケボックス。早々に起こるマイクの取り合い、勝手に決まる歌の順番。賑やかに時間が進む中、ランジュが不満を漏らす。",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+},
+{
+	"color": "main2",
+	"chapter": "メインストーリー / Intermission / 第31章「新しい日常」",
+	"title": "第9話 もんじゃは語る",
+	"desc": "思い切り歌ったことで、小腹が空いた同好会メンバー達。そこで愛は、実家のもんじゃ焼き店に向かうことを提案。ランジュとミア、人生初のもんじゃ焼き体験！",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+},
+{
+	"color": "main2",
+	"chapter": "メインストーリー / Intermission / 第31章「新しい日常」",
+	"title": "第10話 虹の光のように",
+	"desc": "買い物や食事を済ませ、帰途に就くメンバー達。楽し気におしゃべりをしながら歩く仲間達の姿を、ランジュは後方で微笑みながら見守っていた。そんなランジュに、あなたはお礼を告げる。",
+	"tag": ["main", "Player"]
+},
+{
 	"chapter": "イベントエピソード「秘密のパーティー！」",
 	"title": "第1話",
 	"desc": "Aqoursやニジガクの皆との親睦を深めようと考えた穂乃果は、サプライズパーティーを計画する。",
@@ -3857,6 +3927,48 @@ const StoryList = [
 	"tag": ["event", "Honoka", "Eli", "Yoshiko", "Mari", "Ai", "Setsuna"]
 },
 {
+	"chapter": "イベントエピソード「秋雨クラブ」",
+	"title": "第1話",
+	"desc": "天気の悪い日。曜と花丸は一足早く沼津へ帰ろうとしたが、そこに急に土砂降りが……。",
+	"tag": ["event", "Maki", "Nico", "You", "Hanamaru", "Shizuku", "Rina"]
+},
+{
+	"chapter": "イベントエピソード「秋雨クラブ」",
+	"title": "第2話",
+	"desc": "曜と花丸がびしょ濡れで戻ってきた。なんと、大雨で電車が止まってしまったという。",
+	"tag": ["event", "Maki", "Nico", "You", "Hanamaru", "Shizuku", "Rina"]
+},
+{
+	"chapter": "イベントエピソード「秋雨クラブ」",
+	"title": "第3話",
+	"desc": "みんな、雨宿りのために学園に残ることになった。しずくは見せたいものがあると言うが…？",
+	"tag": ["event", "Maki", "Nico", "You", "Hanamaru", "Shizuku", "Rina"]
+},
+{
+	"chapter": "イベントエピソード「秋雨クラブ」",
+	"title": "第4話",
+	"desc": "しずくが見せたかったものは珍しいビデオテープ。そのビデオの鑑賞会をしようとしたその時、停電になってしまった！ ",
+	"tag": ["event", "Maki", "Nico", "You", "Hanamaru", "Shizuku", "Rina"]
+},
+{
+	"chapter": "イベントエピソード「秋雨クラブ」",
+	"title": "第5話",
+	"desc": "しずくの提案で、校内を探索することにした6人。みんな、しずくの突飛な行動に振り回されて……？",
+	"tag": ["event", "Maki", "Nico", "You", "Hanamaru", "Shizuku", "Rina"]
+},
+{
+	"chapter": "イベントエピソード「秋雨クラブ」",
+	"title": "第6話",
+	"desc": "成り行きでしずくが向かった先は音楽室。しずくは、真姫にピアノを弾いてほしいと言う。",
+	"tag": ["event", "Maki", "Nico", "You", "Hanamaru", "Shizuku", "Rina"]
+},
+{
+	"chapter": "イベントエピソード「秋雨クラブ」",
+	"title": "第7話",
+	"desc": "気がつけば雨も上がり、ようやく電気も復旧した。",
+	"tag": ["event", "Maki", "Nico", "You", "Hanamaru", "Shizuku", "Rina"]
+},
+{
 	"color": "Honoka",
 	"chapter": "キズナエピソード 高坂穂乃果",
 	"title": "1話 一緒に前を向いて",
@@ -3992,6 +4104,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Honoka"]
 },
 {
+	"color": "Honoka",
+	"chapter": "キズナエピソード 高坂穂乃果 / ユニットライブ編",
+	"title": "20話 新しい景色",
+	"desc": "何があっても、助けてくれる仲間がいる。大切な仲間と支え合える幸せをかみしめる穂乃果。自信を持って、いざユニットライブ本番へ！",
+	"tag": ["kizuna", "Player", "Honoka", "Kotori", "Hanayo"]
+},
+{
 	"color": "Eli",
 	"chapter": "キズナエピソード 絢瀬絵里",
 	"title": "1話 ステージ実現のために",
@@ -4122,6 +4241,13 @@ const StoryList = [
 	"chapter": "キズナエピソード 絢瀬絵里 / ユニットライブ編",
 	"title": "19話 だって、BiBiだから",
 	"desc": "仲間なんだから、もっと気軽に相談してほしい――。しずくへのアドバイスが、そのまま自分自身にも当てはまることに気づいた絵里は、急いでにこと真姫のもとへ戻る。",
+	"tag": ["kizuna", "Player", "Eli", "Maki", "Nico"]
+},
+{
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里 / ユニットライブ編",
+	"title": "20話 乗り越えた、その先に",
+	"desc": "にこと巻に想いを正直に打ち明けた絵里は、自分が一歩引いていては前に進めないことを知る。全員で主役になるために、絵里はライブの準備を進める。",
 	"tag": ["kizuna", "Player", "Eli", "Maki", "Nico"]
 },
 {
@@ -4258,6 +4384,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Kotori"]
 },
 {
+	"color": "Kotori",
+	"chapter": "キズナエピソード 南ことり / ユニットライブ編",
+	"title": "20話 スクールアイドル、大好き！",
+	"desc": "自分たちの曲や個性にあわせて作るのが、スクールアイドルの衣装作り。大事なことを思い出したことりは、一気に衣装を作り上げて……！",
+	"tag": ["kizuna", "Player", "Honoka", "Kotori", "Hanayo", "You", "Ruby"]
+},
+{
 	"color": "Umi",
 	"chapter": "キズナエピソード 園田海未",
 	"title": "1話 スクールアイドルへの想い",
@@ -4389,6 +4522,13 @@ const StoryList = [
 	"title": "19話 煩悩？　それとも……",
 	"desc": "自分の中にある煩悩を断ち切るため、修行をしてきた海未。しかし、煩悩を断ち切ることに意味はあるのかと問われ、再び思いを巡らせることに……。",
 	"tag": ["kizuna", "Player", "Umi", "Rin", "Nozomi", "Hanamaru"]
+},
+{
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未 / ユニットライブ編",
+	"title": "20話 それでも、前を向いて",
+	"desc": "今の自分には、修行よりも大切にしたいことがある――。自分の気持に気づいた海未は、ユニットライブに向けて、前進する！",
+	"tag": ["kizuna", "Player", "Umi", "Rin", "Nozomi", "Hanamaru", "Rina"]
 },
 {
 	"color": "Rin",
@@ -4525,6 +4665,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Umi", "Rin", "Nozomi"]
 },
 {
+	"color": "Rin",
+	"chapter": "キズナエピソード 星空凛 / ユニットライブ編",
+	"title": "20話 だって、一人じゃない！",
+	"desc": "海と希は、自分を信頼してくれていた……！　二人の想いを知った凛は、ユニットライブの練習にも熱が入る。ユニットライブ当日、凛が気づいたこととは――",
+	"tag": ["kizuna", "Player", "Umi", "Rin", "Nozomi"]
+},
+{
 	"color": "Maki",
 	"chapter": "キズナエピソード 西木野真姫",
 	"title": "1話 返事しなくちゃいけない？",
@@ -4658,6 +4805,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Maki", "Mari", "Ai"]
 },
 {
+	"color": "Maki",
+	"chapter": "キズナエピソード 西木野真姫 / ユニットライブ編",
+	"title": "20話 想いを告げるとき",
+	"desc": "真姫が作ったのは、BiBiを応援するうちわ。そのうちわとは、絵里とにこを応援するだけではなく、自分自身を応援するものでもあって……！",
+	"tag": ["kizuna", "Player", "Eli", "Maki", "Nico", "Mari", "Ai"]
+},
+{
 	"color": "Nozomi",
 	"chapter": "キズナエピソード 東條希",
 	"title": "1話 パワーでお迎え♪",
@@ -4789,6 +4943,13 @@ const StoryList = [
 	"title": "19話 誰もいない海で",
 	"desc": "リリホワのスパイ活動……あらため、パフォーマンス交換は大成功！　みんなにとって、有意義な練習の時間となった。そして、あなたと希の帰り道。そこは誰もいない海で――",
 	"tag": ["kizuna", "Player", "Nozomi"]
+},
+{
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希 / ユニットライブ編",
+	"title": "20話 大事な我が家",
+	"desc": "μ'sだけではなくて、ニジガクのみんなも、Aqoursのみんなも、どんどん大切になっていく……。希の想いを込めたユニットライブが、今はじまる。",
+	"tag": ["kizuna", "Player", "Umi", "Rin", "Nozomi", "Chika", "Riko", "Dia", "Mari"]
 },
 {
 	"color": "Hanayo",
@@ -4925,6 +5086,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Honoka", "Kotori", "Hanayo"]
 },
 {
+	"color": "Hanayo",
+	"chapter": "キズナエピソード 小泉花陽 /ユニットライブ編",
+	"title": "20話 想いを込めて、届けよう！",
+	"desc": "読んでくれる人のためにも、自分の正直な気持ちを冊子に載せることが大事だと気づいた花陽。理想の自分に近づくためにも、ユニットライブを成功させようと意気込む。",
+	"tag": ["kizuna", "Player", "Honoka", "Kotori", "Hanayo", "Dia", "Setsuna"]
+},
+{
 	"color": "Nico",
 	"chapter": "キズナエピソード 矢澤にこ",
 	"title": "1話 手伝いなんていらないっ！",
@@ -5057,6 +5225,13 @@ const StoryList = [
 	"title": "19話 理想の姿を求めて",
 	"desc": "パフォーマンスに悩む花丸に、的確なアドバイスをしていくにこ。花丸に「かっこいい」と言われ、驚いたにこだったが……。",
 	"tag": ["kizuna", "Player", "Nico"]
+},
+{
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ / ユニットライブ編",
+	"title": "20話 最高に、かっこよく！",
+	"desc": "理想のかっこよさを探していたにこだったが、そのかっこよさは既ににこが持っていたものだった。あなたの助言を得て、にこは自信を持ってステージへ向かう。",
+	"tag": ["kizuna", "Player", "Eli", "Maki", "Nico", "Hanamaru", "Kasumi"]
 },
 {
 	"color": "Chika",

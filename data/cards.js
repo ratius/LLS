@@ -4071,7 +4071,6 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「メンバーピックアップガチャ」で追加"
 },
-{"id": -1, "name": "Shioriko", "rare": "SR", "offset":1 },
 {
 	"id": 405,
 	"name": "Eli",
@@ -5715,6 +5714,66 @@ const RawCardList = [
 	"date": "2021/09/19",
 	"source": "reward",
 	"desc": "イベント「秋雨クラブ」報酬 (ランキング枠)"
+},
+{
+	"id": 546,
+	"name": "Umi",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "ううっ……難しい……",
+	"cn2": "乙女の純情",
+	"date": "2021/09/26",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 547,
+	"name": "Dia",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "だんだんコツが掴めてきましたわ",
+	"cn2": "ダイヤ◆イリュージョン",
+	"date": "2021/09/26",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 548,
+	"name": "Kotori",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "こんな感じはどうかな？",
+	"cn2": "Angelic Angel",
+	"date": "2021/09/26",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 549,
+	"name": "Ayumu",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "こんな感じはどうかな？",
+	"cn2": "……どうですか？",
+	"date": "2021/09/26",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 550,
+	"name": "Shioriko",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "こんな感じはどうかな？",
+	"cn2": "もう大丈夫ですよ",
+	"date": "2021/09/26",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
 }
 ];
-const LatestUpdate = "2021/09/19 イベント「秋雨クラブ」まで";
+const LatestUpdate = "2021/09/26 「スクスタガチャ」まで";

@@ -430,5 +430,14 @@ const EventList = [
 	"ended"   : new Date("2021-09-25T14:59:59+09:00"),
 	"UR" : ["Nico", "Hanamaru", "Rina"],
 	"SR" : ["Maki", "You", "Shizuku"]
+},
+{
+	"id" : 49,
+	"name" : "私が選んだ服を着て♪",
+	"type" : "exchange",
+	"started" : new Date("2021-10-08T15:00:00+09:00"),
+	"ended"   : new Date("2021-10-14T14:59:59+09:00"),
+	"UR" : ["Maki", "Yoshiko", "Kasumi"],
+	"SR" : ["Hanamaru", "Emma", "Mia"]
 }
 ];
