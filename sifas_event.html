@@ -85,6 +85,8 @@
 }
 .quarter-table td { color: #999; }
 
+.bg_Lanzhu{ font-size:10pt;}
+
 #Trio-Border{
 	overflow-y: scroll;
 	border: solid 3px rgb(226,6,126);
@@ -106,7 +108,7 @@
 
 .shadowname {
 	color: white;
-	filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
+	filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.7));
 }
 
 td.bg_tp_white{
@@ -137,7 +139,7 @@ td.bg_tp_white{
 
 const CharId = ['Honoka', 'Eli', 'Kotori', 'Umi', 'Rin', 'Maki', 'Nozomi', 'Hanayo', 'Nico',
 		'Chika', 'Riko', 'Kanan', 'Dia', 'You', 'Yoshiko', 'Hanamaru', 'Mari', 'Ruby',
-		'Ayumu', 'Kasumi', 'Shizuku', 'Karin', 'Ai', 'Kanata', 'Setsuna', 'Emma', 'Rina', 'Shioriko'];
+		'Ayumu', 'Kasumi', 'Shizuku', 'Karin', 'Ai', 'Kanata', 'Setsuna', 'Emma', 'Rina', 'Shioriko', 'Mia', 'Lanzhu'];
 
 const CharLookUpTable = [
 	{"number":-1, "id": "",         "name": "",       "color": "white", "group": "M"},
@@ -168,7 +170,9 @@ const CharLookUpTable = [
 	{"number":24, "id": "Setsuna",  "name": "せつ菜", "color": "white", "group": "N"},
 	{"number":25, "id": "Emma",     "name": "エマ",   "color": "black", "group": "N"},
 	{"number":26, "id": "Rina",     "name": "璃奈",   "color": "black", "group": "N"},
-	{"number":27, "id": "Shioriko", "name": "栞子",   "color": "black", "group": "N"}
+	{"number":27, "id": "Shioriko", "name": "栞子",   "color": "black", "group": "N"},
+	{"number":28, "id": "Mia",      "name": "ミア",   "color": "black", "group": "N"},
+	{"number":29, "id": "Lanzhu",   "name": "ランジュ","color": "black", "group": "N"}
 ];
 
 const PairTableWidth = 100;
@@ -532,7 +536,7 @@ loadScript("data/events.js", function() {
 	+ DrawSingleTable([0,1,2,3,4,5,6,7,8])
 	+ DrawSingleTable([9,10,11,12,13,14,15,16,17])
 	+ DrawSingleTable([18,19,20,21,22,23,24,25,26])
-	+ DrawSingleTable([27,-1,-1,-1,-1,-1,-1,-1,-1])
+	+ DrawSingleTable([27,28,29,-1,-1,-1,-1,-1,-1])
 	
 	+ '<h3 class="niji">ペア共演状況<\/h3>'
 	+ DrawPairTable()
@@ -546,6 +550,10 @@ loadScript("data/events.js", function() {
 <h3 class="niji">更新履歴</h3>
 <table class="history">
 <tbody>
+<tr>
+	<td>2021/10/09</td>
+	<td><span class="new"></span>ミア・ランジュが表示可能になりました！</td>
+</tr>
 <tr>
 	<td>2021/06/02</td>
 	<td><span class="new"></span>栞子が表示可能になりました！<br>
