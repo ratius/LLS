@@ -1939,7 +1939,7 @@ const StoryList = [
 	"chapter": "メインストーリー / Intermission / 第31章「新しい日常」",
 	"title": "第10話 虹の光のように",
 	"desc": "買い物や食事を済ませ、帰途に就くメンバー達。楽し気におしゃべりをしながら歩く仲間達の姿を、ランジュは後方で微笑みながら見守っていた。そんなランジュに、あなたはお礼を告げる。",
-	"tag": ["main", "Player"]
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
 },
 {
 	"chapter": "イベントエピソード「秘密のパーティー！」",
@@ -3969,6 +3969,48 @@ const StoryList = [
 	"tag": ["event", "Maki", "Nico", "You", "Hanamaru", "Shizuku", "Rina"]
 },
 {
+	"chapter": "イベントエピソード「私が選んだ服を着て♪」",
+	"title": "第1話",
+	"desc": "東京のショッピングモールへやってきた6人。かすみは今「かわいいの秋」というが……？",
+	"tag": ["event", "Maki", "Yoshiko", "Hanamaru", "Kasumi", "Emma", "Mia"]
+},
+{
+	"chapter": "イベントエピソード「私が選んだ服を着て♪」",
+	"title": "第2話",
+	"desc": "真姫の提案で、二人ずつのペアになり、お互いの服のコーディネートをするというゲームが始まった。花丸の相手はミア！",
+	"tag": ["event", "Hanamaru", "Mia"]
+},
+{
+	"chapter": "イベントエピソード「私が選んだ服を着て♪」",
+	"title": "第3話",
+	"desc": "2組目のペアはかすみとエマ。「かわいい」に関しては誰よりも自信のあるかすみが、エマのために服を選ぶ。",
+	"tag": ["event", "Kasumi", "Emma"]
+},
+{
+	"chapter": "イベントエピソード「私が選んだ服を着て♪」",
+	"title": "第4話",
+	"desc": "最後のペアは真姫と善子。真姫は善子が着るための服を選ぶが、善子は納得いかない様子で……？",
+	"tag": ["event", "Maki", "Yoshiko"]
+},
+{
+	"chapter": "イベントエピソード「私が選んだ服を着て♪」",
+	"title": "第5話",
+	"desc": "みんな集合。6人はコーディネートされた花丸やミアの写真を見て盛り上がる。",
+	"tag": ["event", "Maki", "Yoshiko", "Hanamaru", "Kasumi", "Emma", "Mia"]
+},
+{
+	"chapter": "イベントエピソード「私が選んだ服を着て♪」",
+	"title": "第6話",
+	"desc": "次はエマとかすみのチームのお披露目。いつも通りいつもどおりの",
+	"tag": ["event", "Maki", "Yoshiko", "Hanamaru", "Kasumi", "Emma", "Mia"]
+},
+{
+	"chapter": "イベントエピソード「私が選んだ服を着て♪」",
+	"title": "第7話",
+	"desc": "そして最後は善子と真姫。善子はあまり気に入っていなかった様子だが、他チームからの評価は……？",
+	"tag": ["event", "Maki", "Yoshiko", "Hanamaru", "Kasumi", "Emma", "Mia"]
+},
+{
 	"color": "Honoka",
 	"chapter": "キズナエピソード 高坂穂乃果",
 	"title": "1話 一緒に前を向いて",
@@ -5368,6 +5410,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Chika", "You", "Ruby"]
 },
 {
+	"color": "Chika",
+	"chapter": "キズナエピソード 高海千歌 / ユニットライブ編",
+	"title": "20話 ４人で創るライブ",
+	"desc": "ライブ当日。アラームの音で飛び起きたあなた。遅刻だと焦るあなたを宥めたのは、先に起きていた千歌だった。",
+	"tag": ["kizuna", "Player", "Chika"]
+},
+{
 	"color": "Riko",
 	"chapter": "キズナエピソード 桜内梨子",
 	"title": "1話 コンサートホールにて",
@@ -5501,6 +5550,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Riko", "Yoshiko", "Mari"]
 },
 {
+	"color": "Riko",
+	"chapter": "キズナエピソード 桜内梨子 / ユニットライブ編",
+	"title": "20話 いつでも私の中に",
+	"desc": "Guilty Kissライブ当日。本番に向けて準備を進める梨子に変わった様子は見られない。けれど、やはりどこか善子や鞠莉を真似ていた名残りが見える。",
+	"tag": ["kizuna", "Player", "Riko", "Yoshiko", "Mari"]
+},
+{
 	"color": "Kanan",
 	"chapter": "キズナエピソード 松浦果南",
 	"title": "1話 淡島初上陸！",
@@ -5631,6 +5687,13 @@ const StoryList = [
 	"chapter": "キズナエピソード 松浦果南 / ユニットライブ編",
 	"title": "19話 未来へのステップ",
 	"desc": "ダンスが完成し、早めに練習を終えたAZALEA。夕方、あなたは買い物に行く途中で練習着姿の果南を見かける。",
+	"tag": ["kizuna", "Player", "Kanan", "Dia", "Hanamaru"]
+},
+{
+	"color": "Kanan",
+	"chapter": "キズナエピソード 松浦果南 / ユニットライブ編",
+	"title": "20話 最高のユニット",
+	"desc": "ライブ本番当日。待ち合わせ場所で合流したあなたとAZALEA。歌もダンスも全て完璧に仕上げたAZALEAは、本番に胸を踊らせる。",
 	"tag": ["kizuna", "Player", "Kanan", "Dia", "Hanamaru"]
 },
 {
@@ -5768,6 +5831,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Kanan", "Dia", "Hanamaru"]
 },
 {
+	"color": "Dia",
+	"chapter": "キズナエピソード 黒澤ダイヤ / ユニットライブ編",
+	"title": "20話 今度こそ正しく",
+	"desc": "果南の悲痛な訴えに、これまで自分がやってきたことにようやく気づいたダイヤ。ダイヤは果南を追いかけ中庭へ向かう。",
+	"tag": ["kizuna", "Player", "Kanan", "Dia", "Hanamaru"]
+},
+{
 	"color": "You",
 	"chapter": "キズナエピソード 渡辺曜",
 	"title": "1話 沼津巡り！",
@@ -5900,7 +5970,14 @@ const StoryList = [
 	"chapter": "キズナエピソード 渡辺曜 / ユニットライブ編",
 	"title": "19話 ひとりきりの本音",
 	"desc": "曜を気遣った千歌の提案で、今日はライブ準備を休むことに。しかし曜は今日も水泳部。改めて休養日を設定するためにも、あなたたちは曜に会うためプールを目指す。",
-	"tag": ["kizuna", "Player"]
+	"tag": ["kizuna", "Player", "Chika", "You", "Ruby"]
+},
+{
+	"color": "You",
+	"chapter": "キズナエピソード 渡辺曜 / ユニットライブ編",
+	"title": "20話 みんなと同じ場所で",
+	"desc": "ライブ当日。会場の様子に興奮を抑えられない曜。すっかり元気だが、あなた達はまだ不安な様子。あれこれ心配され、曜は呆れ顔になるのだった。",
+	"tag": ["kizuna", "Player", "Chika", "You", "Ruby"]
 },
 {
 	"color": "Yoshiko",
@@ -6037,6 +6114,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Riko", "Yoshiko", "Mari"]
 },
 {
+	"color": "Yoshiko",
+	"chapter": "キズナエピソード 津島善子 / ユニットライブ編",
+	"title": "20話 ヨハネ復活！",
+	"desc": "あなた達の気遣いもあり、元気になった善子。無事に衣装も完成し、本番に向けての練習にも熱が入る。",
+	"tag": ["kizuna", "Player", "Riko", "Yoshiko", "Mari", "Setsuna"]
+},
+{
 	"color": "Hanamaru",
 	"chapter": "キズナエピソード 国木田花丸",
 	"title": "1話 探し物",
@@ -6168,6 +6252,13 @@ const StoryList = [
 	"title": "19話 AZALEAの花丸",
 	"desc": "ライブ前日。本番への期待に胸を膨らませるあなた達を、花丸は寄り道に誘う。",
 	"tag": ["kizuna", "Player", "Kanan", "Dia", "Hanamaru"]
+},
+{
+	"color": "Hanamaru",
+	"chapter": "キズナエピソード 国木田花丸 / ユニットライブ編",
+	"title": "20話 応援を胸に",
+	"desc": "会場へ向かうあなたとAZALEA。互いに緊張をほぐし合っていると、意外な人物がやってきた。",
+	"tag": ["kizuna", "Player", "Kanan", "Dia", "Hanamaru", "Shizuku"]
 },
 {
 	"color": "Mari",
@@ -6303,6 +6394,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Riko", "Yoshiko", "Mari"]
 },
 {
+	"color": "Mari",
+	"chapter": "キズナエピソード 小原鞠莉 / ユニットライブ編",
+	"title": "20話 次はもっと楽しく",
+	"desc": "無事にライブを終えたGuilty Kiss。実現できなかった演出は次回に持ち越しとなった。次に向けて鞠莉達は進み続ける。",
+	"tag": ["kizuna", "Player", "Riko", "Yoshiko", "Mari"]
+},
+{
 	"color": "Ruby",
 	"chapter": "キズナエピソード 黒澤ルビィ",
 	"title": "1話 放課後の秘密",
@@ -6434,6 +6532,13 @@ const StoryList = [
 	"chapter": "キズナエピソード 黒澤ルビィ / ユニットライブ編",
 	"title": "19話 いつの未来もあなたと",
 	"desc": "たくさん遊び、時刻は夕方。東京へ帰るあなた達を駅まで送るルビィ達。６人は今日一日の思い出を語り合いながら歩いて行く。",
+	"tag": ["kizuna", "Player", "Chika", "You", "Ruby", "Kasumi", "Rina"]
+},
+{
+	"color": "Ruby",
+	"chapter": "キズナエピソード 黒澤ルビィ / ユニットライブ編",
+	"title": "20話 私の全てを込めて",
+	"desc": "CYaRon!のライブ当日。応援に来たあなた・かすみ・璃奈は、会場入りする前のルビィ達に出会う。素晴らしいライブになる、と言う３人に、期待を膨らませるあなた達だった。",
 	"tag": ["kizuna", "Player", "Chika", "You", "Ruby", "Kasumi", "Rina"]
 },
 {

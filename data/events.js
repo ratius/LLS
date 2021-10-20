@@ -439,5 +439,14 @@ const EventList = [
 	"ended"   : new Date("2021-10-14T14:59:59+09:00"),
 	"UR" : ["Maki", "Yoshiko", "Kasumi"],
 	"SR" : ["Hanamaru", "Emma", "Mia"]
+},
+{
+	"id" : 50,
+	"name" : "モンスターハロウィン！",
+	"type" : "story",
+	"started" : new Date("2021-10-23T15:00:00+09:00"),
+	"ended"   : new Date("2021-10-30T14:59:59+09:00"),
+	"UR" : ["Rin", "Riko", "Shioriko"],
+	"SR" : ["Eli", "Mari", "Ai"]
 }
 ];

@@ -5357,24 +5357,24 @@ const RawCardList = [
 },
 {
 	"id": 512,
-	"name": "Rin",
-	"rare": "SR",
-	"atr": "Active",
-	"type": "Sp",
-	"cn1": "難しいにゃ～！",
-	"cn2": "Angelic Angel",
-	"date": "2021/08/07",
-	"source": "reward",
-	"desc": "イベント「アロハ！リゾートバカンス」報酬 (交換所枠)"
-},
-{
-	"id": 513,
 	"name": "Kasumi",
 	"rare": "SR",
 	"atr": "Smile",
 	"type": "Sk",
 	"cn1": "こっちもいいと思います！",
 	"cn2": "虹色の心",
+	"date": "2021/08/07",
+	"source": "reward",
+	"desc": "イベント「アロハ！リゾートバカンス」報酬 (交換所枠)"
+},
+{
+	"id": 513,
+	"name": "Rin",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "難しいにゃ～！",
+	"cn2": "Angelic Angel",
 	"date": "2021/08/07",
 	"source": "reward",
 	"desc": "イベント「アロハ！リゾートバカンス」報酬 (ランキング枠)"
@@ -5453,24 +5453,24 @@ const RawCardList = [
 },
 {
 	"id": 520,
-	"name": "Riko",
-	"rare": "SR",
-	"atr": "Cool",
-	"type": "Sk",
-	"cn1": "ジャンプ！！",
-	"cn2": "未熟DREAMER",
-	"date": "2021/08/22",
-	"source": "reward",
-	"desc": "イベント「特別な夏フェス！」報酬 (イベントpt枠)"
-},
-{
-	"id": 521,
 	"name": "Umi",
 	"rare": "SR",
 	"atr": "Elegant",
 	"type": "Gd",
 	"cn1": "きちんと水分補給してくださいね",
 	"cn2": "Angelic Angel",
+	"date": "2021/08/22",
+	"source": "reward",
+	"desc": "イベント「特別な夏フェス！」報酬 (イベントpt枠)"
+},
+{
+	"id": 521,
+	"name": "Riko",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "ジャンプ！！",
+	"cn2": "未熟DREAMER",
 	"date": "2021/08/22",
 	"source": "reward",
 	"desc": "イベント「特別な夏フェス！」報酬 (ランキング枠)"
@@ -5597,24 +5597,24 @@ const RawCardList = [
 },
 {
 	"id": 536,
-	"name": "Yoshiko",
-	"rare": "SR",
-	"atr": "Active",
-	"type": "Gd",
-	"cn1": "哀れでか弱き妖精よ",
-	"cn2": "未熟DREAMER",
-	"date": "2021/09/07",
-	"source": "reward",
-	"desc": "イベント「月夜のフェアリーテイル」報酬 (交換所枠)"
-},
-{
-	"id": 537,
 	"name": "Setsuna",
 	"rare": "SR",
 	"atr": "Smile",
 	"type": "Sp",
 	"cn1": "無事にお屋敷を出られたんですね",
 	"cn2": "虹色の心",
+	"date": "2021/09/07",
+	"source": "reward",
+	"desc": "イベント「月夜のフェアリーテイル」報酬 (交換所枠)"
+},
+{
+	"id": 537,
+	"name": "Yoshiko",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "哀れでか弱き妖精よ",
+	"cn2": "未熟DREAMER",
 	"date": "2021/09/07",
 	"source": "reward",
 	"desc": "イベント「月夜のフェアリーテイル」報酬 (ランキング枠)"
@@ -5693,18 +5693,6 @@ const RawCardList = [
 },
 {
 	"id": 544,
-	"name": "You",
-	"rare": "SR",
-	"atr": "Cool",
-	"type": "Vo",
-	"cn1": "なんだか嵐の海を行く船みたい",
-	"cn2": "未熟DREAMER",
-	"date": "2021/09/19",
-	"source": "reward",
-	"desc": "イベント「秋雨クラブ」報酬 (イベントpt枠)"
-},
-{
-	"id": 545,
 	"name": "Maki",
 	"rare": "SR",
 	"atr": "Active",
@@ -5714,6 +5702,18 @@ const RawCardList = [
 	"date": "2021/09/19",
 	"source": "reward",
 	"desc": "イベント「秋雨クラブ」報酬 (ランキング枠)"
+},
+{
+	"id": 545,
+	"name": "You",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "なんだか嵐の海を行く船みたい",
+	"cn2": "未熟DREAMER",
+	"date": "2021/09/19",
+	"source": "reward",
+	"desc": "イベント「秋雨クラブ」報酬 (イベントpt枠)"
 },
 {
 	"id": 546,
@@ -5774,6 +5774,174 @@ const RawCardList = [
 	"date": "2021/09/26",
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
-}
+},{
+	"id": 551,
+	"name": "Yoshiko",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "ちょっと、真姫ー！",
+	"cn2": "おしゃれマジック☆",
+	"date": "2021/10/05",
+	"source": "gacha",
+	"desc": "「私が選んだ服を着て♪ガチャ」で追加"
+},
+{
+	"id": 552,
+	"name": "Mia",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "……うーん、どうかな？",
+	"cn2": "L！L！L！ (Love the Life We Live)",
+	"date": "2021/10/05",
+	"source": "gacha",
+	"desc": "「私が選んだ服を着て♪ガチャ」で追加"
+},
+{
+	"id": 553,
+	"name": "Kasumi",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "最高にかわいいでしょ～～～？",
+	"cn2": "おしゃれマジック☆",
+	"date": "2021/10/05",
+	"source": "gacha",
+	"desc": "「私が選んだ服を着て♪ガチャ」で追加"
+},
+{
+	"id": 554,
+	"name": "Maki",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "なっ、なによこれ……っ！？",
+	"cn2": "おしゃれマジック☆",
+	"date": "2021/10/08",
+	"source": "reward",
+	"desc": "イベント「私が選んだ服を着て♪」報酬"
+},
+{
+	"id": 555,
+	"name": "Emma",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "見てみて！　どうかなあ？",
+	"cn2": "L！L！L！ (Love the Life We Live)",
+	"date": "2021/10/08",
+	"source": "reward",
+	"desc": "イベント「私が選んだ服を着て♪」報酬 (交換所枠)"
+},
+{
+	"id": 556,
+	"name": "Hanamaru",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "すてきずら～！！",
+	"cn2": "WATER BLUE NEW WORLD",
+	"date": "2021/10/08",
+	"source": "reward",
+	"desc": "イベント「私が選んだ服を着て♪」報酬 (ランキング枠)"
+},
+{
+	"id": 557,
+	"name": "Kanan",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "綺麗に色づいてるね",
+	"cn2": "Autumn Colors",
+	"date": "2021/10/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 558,
+	"name": "Lanzhu",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "もっと盛り上がるわよ～！",
+	"cn2": "L！L！L！ (Love the Life We Live)",
+	"date": "2021/10/14",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
+},
+
+{
+	"id": 540,
+	"name": "Rin",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "怖ーい狼人間だぞー、がおー！",
+	"cn2": "ドレスアップ♡ハロウィン",
+	"date": "2021/10/20",
+	"source": "gacha",
+	"desc": "「モンスターハロウィン！ガチャ」で追加"
+},
+{
+	"id": 541,
+	"name": "Mari",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Gd",
+	"cn1": "みんなどうだったかしら～？",
+	"cn2": "WATER NEW BLUE WORLD",
+	"date": "2021/10/20",
+	"source": "gacha",
+	"desc": "「モンスターハロウィン！ガチャ」で追加"
+},
+{
+	"id": 542,
+	"name": "Riko",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Gd",
+	"cn1": "実は私も悪戯を考えてたの",
+	"cn2": "ドレスアップ♡ハロウィン",
+	"date": "2021/10/20",
+	"source": "gacha",
+	"desc": "「モンスターハロウィン！ガチャ」で追加"
+},
+{
+	"id": 543,
+	"name": "Shioriko",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "とっても楽しみです！",
+	"cn2": "ドレスアップ♡ハロウィン",
+	"date": "2021/10/23",
+	"source": "reward",
+	"desc": "イベント「モンスターハロウィン！」報酬"
+},
+{
+	"id": 544,
+	"name": "Eli",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "リクエストがあるなら聞くわ",
+	"cn2": 'もぎゅっと"love"で接近中！',
+	"date": "2021/10/23",
+	"source": "reward",
+	"desc": "イベント「モンスターハロウィン！」報酬 (???枠)"
+},
+{
+	"id": 545,
+	"name": "Ai",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "おかしーね！　お菓子だけに♪",
+	"cn2": "L！L！L！ (Love the Life We Live)",
+	"date": "2021/10/23",
+	"source": "reward",
+	"desc": "イベント「モンスターハロウィン！」報酬 (???枠)"
+},
 ];
-const LatestUpdate = "2021/09/26 「スクスタガチャ」まで";
+const LatestUpdate = "2021/10/23 イベント「モンスターハロウィン！」まで";
