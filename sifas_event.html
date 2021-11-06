@@ -40,11 +40,16 @@
 	border: solid 1px #ccc;
 }
 
-.Single-Table {
+#Single-Table {
 	width: 100%;
 	text-align: center;
 	border-collapse: collapse;
 	border: 2px solid #00a0ea;
+}
+
+td.sttd {
+	border-right: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
 }
 
 #Pair-Table {
@@ -166,11 +171,11 @@ const CharLookUpTable = [
 	{"number":20, "id": "Shizuku",  "name": "しずく", "color": "black", "group": "N"},
 	{"number":21, "id": "Karin",    "name": "果林",   "color": "white", "group": "N"},
 	{"number":22, "id": "Ai",       "name": "愛",     "color": "black", "group": "N"},
-	{"number":23, "id": "Kanata",   "name": "彼方",   "color": "black", "group": "N"},
+	{"number":23, "id": "Kanata",   "name": "彼方",   "color": "white", "group": "N"},
 	{"number":24, "id": "Setsuna",  "name": "せつ菜", "color": "white", "group": "N"},
 	{"number":25, "id": "Emma",     "name": "エマ",   "color": "black", "group": "N"},
 	{"number":26, "id": "Rina",     "name": "璃奈",   "color": "black", "group": "N"},
-	{"number":27, "id": "Shioriko", "name": "栞子",   "color": "black", "group": "N"},
+	{"number":27, "id": "Shioriko", "name": "栞子",   "color": "white", "group": "N"},
 	{"number":28, "id": "Mia",      "name": "ミア",   "color": "black", "group": "N"},
 	{"number":29, "id": "Lanzhu",   "name": "ランジュ","color": "black", "group": "N"}
 ];
@@ -327,7 +332,7 @@ function MakeTrioData(){
 function DrawSingleTable(CharList){
 	//■ヘッダー
 	var maxnumber = 0;
-	var Output = '<table class="Single-Table">\n<thead>\n<tr>\n';
+	var Output = '<table id="Single-Table">\n<thead>\n<tr>\n';
 	for(x of CharList){
 		if(x>=0){ //空白でないなら
 			if(maxnumber < TrioHistory[x][0].length){ maxnumber = TrioHistory[x][0].length; }
@@ -342,8 +347,7 @@ function DrawSingleTable(CharList){
 	//■回数
 	for(x of CharList){
 		if(x>=0){ //空白でないなら
-			Output += '<td>'
-			+ TrioHistory[x][0].length + '回<br></td>';
+			Output += '<td class="sttd">' + TrioHistory[x][0].length + '回<br></td>';
 		} else {
 			Output += '<td><\/td>'
 		}
@@ -355,7 +359,7 @@ function DrawSingleTable(CharList){
 	for(x of CharList){
 		if(x>=0){ //空白でないなら
 			var temp1 = TrioHistory[x][0];
-			Output += '<td class="bg_tp_white bg_' + CharId[x] + '">';
+			Output += '<td class="sttd bg_tp_white bg_' + CharId[x] + '">';
 			for(y of temp1){
 				Output += '<div class="EventBox bg_' + CharId[x] + '" title="'
 				+ LookUpEvent(y,"name") + '\n('
@@ -550,6 +554,10 @@ loadScript("data/events.js", function() {
 <h3 class="niji">更新履歴</h3>
 <table class="history">
 <tbody>
+<tr>
+	<td>2021/11/06</td>
+	<td><span class="fix"></span>「キャラクター登場状況」の表のレイアウトを調整</td>
+</tr>
 <tr>
 	<td>2021/10/09</td>
 	<td><span class="new"></span>ミア・ランジュが表示可能になりました！</td>
