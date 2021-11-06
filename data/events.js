@@ -448,5 +448,14 @@ const EventList = [
 	"ended"   : new Date("2021-10-30T14:59:59+09:00"),
 	"UR" : ["Rin", "Riko", "Shioriko"],
 	"SR" : ["Eli", "Mari", "Ai"]
-}
+},
+{
+	"id" : 51,
+	"name" : "学校祭でおもてなし",
+	"type" : "exchange",
+	"started" : new Date("2021-10-07T15:00:00+09:00"),
+	"ended"   : new Date("2021-10-14T14:59:59+09:00"),
+	"UR" : ["Kotori", "Dia", "Shizuku"],
+	"SR" : ["Maki", "Riko", "Ayumu"]
+},
 ];

@@ -4011,6 +4011,48 @@ const StoryList = [
 	"tag": ["event", "Maki", "Yoshiko", "Hanamaru", "Kasumi", "Emma", "Mia"]
 },
 {
+	"chapter": "イベントエピソード「モンスターハロウィン！」",
+	"title": "第1話",
+	"desc": "愛たちがスクールアイドル同好会の部室へやってくると、そこにはハロウィンの仮装をした凛がいた。",
+	"tag": ["event", "Eli", "Rin", "Riko", "Ai", "Mari", "Shioriko"]
+},
+{
+	"chapter": "イベントエピソード「モンスターハロウィン！」",
+	"title": "第2話",
+	"desc": "ハロウィンパーティーをしたことが無いと言う栞子。鞠莉は、μ's・Aqours・ニジガクのみんなを誘ってハロウィンパーティーをしようと提案する。",
+	"tag": ["event", "Eli", "Rin", "Riko", "Ai", "Mari", "Shioriko"]
+},
+{
+	"chapter": "イベントエピソード「モンスターハロウィン！」",
+	"title": "第3話",
+	"desc": "凛は梨子と栞子と秘密裏に協力して、ハロウィンパーティーのリハーサル前に、絵里たちにちょっとしたイタズラを仕掛けようと計画する。",
+	"tag": ["event", "Eli", "Rin", "Riko", "Ai", "Mari", "Shioriko"]
+},
+{
+	"chapter": "イベントエピソード「モンスターハロウィン！」",
+	"title": "第4話",
+	"desc": "梨子や栞子だけでなく、絵里・鞠莉・愛もお菓子を持ってきて、栞子のためにパーティーを盛り上げようとしている。",
+	"tag": ["event", "Eli", "Riko", "Ai", "Mari", "Shioriko"]
+},
+{
+	"chapter": "イベントエピソード「モンスターハロウィン！」",
+	"title": "第5話",
+	"desc": "パーティーが盛り上がっている中、5人は、凛の姿が見当たらないことに気づく。そんな中、突然部屋の明かりが消え……！",
+	"tag": ["event", "Eli", "Rin", "Riko", "Ai", "Mari", "Shioriko"]
+},
+{
+	"chapter": "イベントエピソード「モンスターハロウィン！」",
+	"title": "第6話",
+	"desc": "今度はどこかから梨子の悲鳴が！ みんなが駆けつけて音楽室へとやってきたものの、そこには不気味な人形が並んでいて……",
+	"tag": ["event", "Eli", "Ai", "Mari", "Shioriko"]
+},
+{
+	"chapter": "イベントエピソード「モンスターハロウィン！」",
+	"title": "第7話",
+	"desc": "二度の停電で、栞子のもとから全員が消えてしまった！ 不安の中、部室に戻った栞子だったが……？",
+	"tag": ["event", "Eli", "Rin", "Riko", "Ai", "Mari", "Shioriko"]
+},
+{
 	"color": "Honoka",
 	"chapter": "キズナエピソード 高坂穂乃果",
 	"title": "1話 一緒に前を向いて",
@@ -6734,6 +6776,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Ayumu", "Kasumi", "Kanata", "Shioriko"]
 },
 {
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢",
+	"title": "28話 ソワソワな夜！",
+ 	"desc": "校内フィルムフェスティバル前夜祭ライブも無事終了！そんな歩夢とあなたには楽しみなことが！",
+	"tag": ["kizuna", "Player", "Ayumu"]
+},
+{
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ",
 	"title": "1話 愛されかすかす",
@@ -6925,6 +6974,13 @@ const StoryList = [
  	"desc": "かわいいの摂取過多により混乱していたかすみも、無事イメージソングを作り上げることができた。生徒会の計らいで催されることになった「校内フィルムフェスティバル前夜祭」で、同好会のライブが始まる！",
 	"memo": "このサイドエピソードを読むことで、ライブ楽曲「TO BE YOURSELF」が解禁される。",
 	"tag": ["kizuna", "Player", "Kasumi", "Shizuku", "Setsuna"]
+},
+{
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ",
+	"title": "28話 断トツレベルアップ！",
+ 	"desc": "校内フィルムフェスティバル前夜祭ライブも無事終了し一安心。そんな中かすみは大変なことに気づく……。",
+	"tag": ["kizuna", "Player", "Kasumi", "Shizuku", "Rina", "Shioriko"]
 },
 {
 	"color": "Shizuku",
@@ -7120,6 +7176,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Kasumi", "Shizuku", "Rina", "Shioriko"]
 },
 {
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく",
+	"title": "28話 ローマの休日？",
+ 	"desc": "校内フィルムフェスティバル前夜祭も終了。ある日、しずくからあなたにお願いがあるというのだが……。",
+	"tag": ["kizuna", "Player", "Shizuku"]
+},
+{
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林",
 	"title": "1話 果林のお仕事",
@@ -7310,6 +7373,13 @@ const StoryList = [
 	"title": "27話 ハレの舞台！",
  	"desc": "猛練習を積んだ果林。そして、ついに始まった校内フィルムフェスティバル前夜祭。そこでは、また新たな挑戦が！？",
 	"memo": "このサイドエピソードを読むことで、ライブ楽曲「Turn it Up!」が解禁される。",
+	"tag": ["kizuna", "Player", "Karin"]
+},
+{
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林",
+	"title": "28話 果林のアルバム",
+ 	"desc": "校内フィルムフェスティバルも終わり、果林が部屋の片付けをしていると、あるものを見つけた。それは……？",
 	"tag": ["kizuna", "Player", "Karin"]
 },
 {
@@ -7507,6 +7577,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Shizuku", "Ai", "Secretary"]
 },
 {
+	"color": "Ai",
+	"chapter": "キズナエピソード 宮下愛",
+	"title": "28話 おねーちゃんのサプライズ",
+ 	"desc": "校内フィルムフェスティバルの前夜祭ライブも無事終了。ある日愛とあなた、そして美里の3人で電車に揺られていた。",
+	"tag": ["kizuna", "Player", "Chika", "Riko", "You", "Ai", "Misato"]
+},
+{
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方",
 	"title": "1話 眠り姫・彼方",
@@ -7696,6 +7773,13 @@ const StoryList = [
 	"title": "27話 くノ一・彼方ちゃん！",
  	"desc": "ようやく、くノ一の子のことを理解できた彼方。そこから曲も順調に仕上がり、ついに校内フィルムフェスティバル前夜祭が始まった！",
 	"memo": "このサイドエピソードを読むことで、ライブ楽曲「Silent Blaze」が解禁される。",
+	"tag": ["kizuna", "Player", "Kanata"]
+},
+{
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方",
+	"title": "28話 睡眠環境の質？",
+ 	"desc": "校内フィルムフェスティバルも無事終了。ある日彼方の手作り弁当をご馳走になっていたときに、彼方から気になっていたことを尋ねられる……。",
 	"tag": ["kizuna", "Player", "Kanata"]
 },
 {
@@ -7891,6 +7975,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Kasumi", "Setsuna"]
 },
 {
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜",
+	"title": "28話 熱血PRしたい！",
+ 	"desc": "校内フィルムフェスティバルの前夜祭ライブも無事大成功。ある日せつ菜がやってみたいことがある、とあなたに相談してきて……？",
+	"tag": ["kizuna", "Player", "Setsuna"]
+},
+{
 	"color": "Emma",
 	"chapter": "キズナエピソード エマ・ヴェルデ",
 	"title": "1話 日本に来た理由",
@@ -8082,6 +8173,13 @@ const StoryList = [
  	"desc": "ご主人様とメイドさんの心の繋がりに気づくことができたあなた。すぐに曲を書き上げ、エマに託した。そしてついに、校内フィルムフェスティバル前夜祭の幕が上がる……！",
 	"memo": "このサイドエピソードを読むことで、ライブ楽曲「いつだってfor you!」が解禁される。",
 	"tag": ["kizuna", "Player", "Karin", "Kanata", "Emma"]
+},
+{
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ",
+	"title": "28話 ニジガク寮のランチ会",
+ 	"desc": "校内フィルムフェスティバルも無事終了し、ニジガク寮ランチ会の準備をするエマは……？",
+	"tag": ["kizuna", "Player", "Karin", "Emma", "Mia", "Lanzhu"]
 },
 {
 	"color": "Rina",
@@ -8278,6 +8376,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Rina"]
 },
 {
+	"color": "Rina",
+	"chapter": "キズナエピソード 天王寺璃奈",
+	"title": "28話 ゲームは負けられない！",
+	"desc": "校内フィルムフェスティバルも無事終了したある日、璃奈とあなたはジョイポリスに遊びに来ていた！",
+	"tag": ["kizuna", "Player", "Rina"]
+},
+{
 	"color": "Shioriko",
 	"chapter": "キズナエピソード 三船栞子",
 	"title": "1話 新入部員のサダメ！？",
@@ -8378,6 +8483,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Ayumu", "Kanata", "Shioriko", "Secretary"]
 },
 {
+	"color": "Shioriko",
+	"chapter": "キズナエピソード 三船栞子",
+	"title": "15話 ゆったり時間…？",
+ 	"desc": "生徒会の代表としてステージに逢った校内フィルムフェスティバルの前夜祭も無事終了。ある日栞子とあなたは動物園に来ていた……。",
+	"tag": ["kizuna", "Player", "Shioriko", "Kaoruko"]
+},
+{
 	"color": "Mia",
 	"chapter": "キズナエピソード ミア・テイラー",
 	"title": "1話 ボクの完璧なステージ",
@@ -8419,6 +8531,13 @@ const StoryList = [
 	"title": "6話 ボクがボクであるための歌",
 	"desc": "自分が歌う最高の曲を作りたい、歌うための準備も完璧にしたい、それができるまでは歌わないと決めていたミア。でも、あなたと過ごすことで、「最高な曲」の見え方が変わってきて……？",
 	"memo": "このサイドエピソードを読むことで、ライブ楽曲「Toy Doll」が解禁される。",
+	"tag": ["kizuna", "Player", "Mia"]
+},
+{
+	"color": "Mia",
+	"chapter": "キズナエピソード ミア・テイラー",
+	"title": "7話 愛するベースボール！",
+	"desc": "あなたの前で歌い、「歌うことの楽しさ」に気づくことができたミア。ある日あなたはミアと待ち合わせをしていたが……？",
 	"tag": ["kizuna", "Player", "Mia"]
 },
 {
@@ -8464,6 +8583,13 @@ const StoryList = [
 	"desc": "エマに生活力を心配され、依然やる気になるランジュ。まだまだ覚えることが多いが、少しずつ自分でできることを増やしている。今日も果林に洋服のたたみ方を教えてもらい……？",
 	"memo": "このサイドエピソードを読むことで、ライブ楽曲「夜明珠（イエミンジュ）」が解禁される。",
 	"tag": ["kizuna", "Player", "Karin", "Emma", "Shioriko", "Mia", "Lanzhu"]
+},
+{
+	"color": "Lanzhu",
+	"chapter": "キズナエピソード 鐘嵐珠",
+	"title": "7話 新しいノート",
+	"desc": "ニジガク寮に引っ越し、友達と過ごす楽しさを実感するランジュ。ある朝、ランジュの「みんなとやりたいことノート」の最新版を見たあなたは……？",
+	"tag": ["kizuna", "Player", "Lanzhu"]
 },
 {
 	"color": "Ayumu",
