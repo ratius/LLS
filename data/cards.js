@@ -5871,7 +5871,6 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「パーティーガチャ」で追加"
 },
-
 {
 	"id": 559,
 	"name": "Rin",
@@ -6007,10 +6006,10 @@ const RawCardList = [
 },
 {
 	"id": 570,
-	"name": "Mia",
+	"name": "Riko",
 	"rare": "SR",
-	"atr": "Active",
-	"type": "Vo",
+	"atr": "Pure",
+	"type": "Gd",
 	"cn1": "綺麗な旋律",
 	"cn2": "WATER BLUE NEW WORLD",
 	"date": "2021/11/04",
@@ -6051,7 +6050,7 @@ const RawCardList = [
 	"cn2": 'もぎゅっと"love"で接近中！',
 	"date": "2021/11/07",
 	"source": "reward",
-	"desc": "イベント「学校祭でおもてなし」報酬 (???枠)"
+	"desc": "イベント「学校祭でおもてなし」報酬 (ランキング枠)"
 },
 {
 	"id": 574,
@@ -6063,7 +6062,31 @@ const RawCardList = [
 	"cn2": "L！L！L！ (Love the Life We Live)",
 	"date": "2021/11/07",
 	"source": "reward",
-	"desc": "イベント「学校祭でおもてなし」報酬 (???枠)"
+	"desc": "イベント「学校祭でおもてなし」報酬 (交換所枠)"
+},
+{
+	"id": 575,
+	"name": "Hanamaru",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "よかったら、どうぞ",
+	"cn2": "花丸◎物語",
+	"date": "2021/11/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 576,
+	"name": "Kasumi",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "「かすみかん」って呼んでください",
+	"cn2": "L！L！L！ (Love the Life We Live)",
+	"date": "2021/11/14",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
 },
 ];
-const LatestUpdate = "2021/11/07 イベント「学校祭でおもてなし」まで";
+const LatestUpdate = "2021/11/14 「パーティーガチャ」まで";
