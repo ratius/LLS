@@ -458,4 +458,13 @@ const EventList = [
 	"UR" : ["Kotori", "Dia", "Shizuku"],
 	"SR" : ["Maki", "Riko", "Ayumu"]
 },
+{
+	"id" : 52,
+	"name" : "日本流サンクスギビングデー",
+	"type" : "story",
+	"started" : new Date("2021-11-23T15:00:00+09:00"),
+	"ended"   : new Date("2021-11-30T14:59:59+09:00"),
+	"UR" : ["Nozomi", "Ruby", "Mia"],
+	"SR" : ["Honoka", "Chika", "Rina"]
+},
 ];

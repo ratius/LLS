@@ -1784,7 +1784,7 @@ const StoryList = [
 {
 	"chapter": "メインストーリー / 2nd season / 第29章「これが私のスクールアイドル！」",
 	"title": "第6話 波紋",
-	"desc": "ランジュたちが同好会に正式加入！新たな同好会として再始動！　スクールアイドルエキシビジョンの校内オーディションに向けて、みんなが気持ちをひとつに動き出した。そんなとき、あなたはあることが気になってしまい……？",
+	"desc": "ランジュたちが同好会に正式加入！新たな同好会として再始動！　スクールアイドルエキシビションの校内オーディションに向けて、みんなが気持ちをひとつに動き出した。そんなとき、あなたはあることが気になってしまい……？",
 	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
 },
 {
@@ -1814,7 +1814,7 @@ const StoryList = [
 {
 	"chapter": "メインストーリー / 2nd season / 第30章「私たち、みんな！」",
 	"title": "第1話 これまでの日々、これからの日々",
-	"desc": "スクールアイドルエキシビジョンの校内オーディションは、思った以上にニジガク全体を盛り上げていた。その空気に触れ、自分のスクールアイドル愛……活動に自信を持ったあなた。あらためて、これまでのことを思い返してみる。いろいろなつまづきはあったけど、どれもこれも乗り越えた先にあったものはトキメキに溢れていた！",
+	"desc": "スクールアイドルエキシビションの校内オーディションは、思った以上にニジガク全体を盛り上げていた。その空気に触れ、自分のスクールアイドル愛……活動に自信を持ったあなた。あらためて、これまでのことを思い返してみる。いろいろなつまづきはあったけど、どれもこれも乗り越えた先にあったものはトキメキに溢れていた！",
 	"tag": ["main", "Player", "Ayumu"]
 },
 {
@@ -1862,7 +1862,7 @@ const StoryList = [
 {
 	"chapter": "メインストーリー / 2nd season / 第30章「私たち、みんな！」",
 	"title": "第9話 ニジガクの流儀！",
-	"desc": "あなたの作った曲を聞いて、スクール迂回ドルエキシビジョンにはこの曲しかないと決めたメンバー。薫子のルールからは外れるため、失格になるだろうことは覚悟の上。それでも自分たちなりの想いを伝えたいと、徹底的にやることに！",
+	"desc": "あなたの作った曲を聞いて、スクール迂回ドルエキシビションにはこの曲しかないと決めたメンバー。薫子のルールからは外れるため、失格になるだろうことは覚悟の上。それでも自分たちなりの想いを伝えたいと、徹底的にやることに！",
 	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu", "Kaoruko"]
 },
 {
@@ -1940,6 +1940,127 @@ const StoryList = [
 	"title": "第10話 虹の光のように",
 	"desc": "買い物や食事を済ませ、帰途に就くメンバー達。楽し気におしゃべりをしながら歩く仲間達の姿を、ランジュは後方で微笑みながら見守っていた。そんなランジュに、あなたはお礼を告げる。",
 	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第32章「教えて！　μ's！　前編」",
+	"title": "第1話 ヒントを探しに",
+	"desc": "ランジュたちともすっかり親しくなった同好会メンバー。体力づくりもレベルアップもスクールアイドルエキシビションのPVのためなのに、肝心のPVのアイディアは出てこないまま。話し合って出てこないなら、外に探しに行っちゃう！？",
+	"tag": ["main", "Player", "Ayuwu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第32章「教えて！　μ's！　前編」",
+	"title": "第2話 μ'sのお悩み相談！？",
+	"desc": "PV作りのヒントを探しに、スクールアイドルファンサイトの企画を手伝うことになったあなた。頼まれた仕事はμ'sへの企画依頼。久しぶりに音ノ木坂を訪れて……？",
+	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第32章「教えて！　μ's！　前編」",
+	"title": "第3話 山のようなお悩みメール",
+	"desc": "スクールアイドルファンサイトの企画「μ'sのお悩み相談室」が始まった。お悩みメールの募集を開始した途端、数え切れないほどのメールがきて……？",
+	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Kasumi", "Shizuku", "Ai", "Shioriko"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第32章「教えて！　μ's！　前編」",
+	"title": "第4話 いろんな悩み",
+	"desc": "ファンサイトを通して送られてきたたくさんのお悩みメールに目を通すμ'sのメンバー。たくさんの人がいろんな悩みを抱えていて、それはひとつひとつがとても重いものなのだと感じる",
+	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第32章「教えて！　μ's！　前編」",
+	"title": "第5話 初めてのギモン",
+	"desc": "休日、穂乃果たちとゲームセンターに遊びにいったあなたと歩夢と栞子。ニジガクであった色々なことを話、結局は楽しいことをしていると報告する。そんななか、今日の穂乃果はちょっと元気がなくて……？",
+	"tag": ["main", "Player", "Honoka", "Kotori", "Umi", "Ayumu", "Shioriko"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第32章「教えて！　μ's！　前編」",
+	"title": "第6話 背を向けていたころ",
+	"desc": "ものすごい量のメールがきたμ'sのお悩み相談室への回答も、いくつか気になる相談もあるようだがだんだんと進んできた。ある日いつものように音ノ木坂をおとずれたところ、そこには真姫しかいなくて……？",
+	"tag": ["main", "Player", "Maki", "Ayuwu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第32章「教えて！　μ's！　前編」",
+	"title": "第7話 キモチにウソはつけない",
+	"desc": "「漫画家を目指している」というこから受けた相談に、真剣に悩む真姫。それはかつての自分と似た状況におかれた子だったから。回答に悩む真姫は……？",
+	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第32章「教えて！　μ's！　前編」",
+	"title": "第8話 もしもあなたと離れたら？",
+	"desc": "「μ'sのお悩み相談室」への返事も順調に作られている。μ'sから託された返事を元に書き上げた記事を持って音ノ木坂に訪れたあなた。ひとつの相談に、苦悩している凛がいて……？",
+	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第32章「教えて！　μ's！　前編」",
+	"title": "第9話 離れても、ずっと！",
+	"desc": "思いがけないにこの言葉に動揺した凛。凛のフォローに行こうとする花陽について行ったあなたが見たものは……？",
+	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第32章「教えて！　μ's！　前編」",
+	"title": "第10話 好きな理由",
+	"desc": "自分にとってもむずかしい相談に向き合って答えを出すことができた凛。そんな凛を見て、穂乃果は気づいたことがあり……？",
+	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第33章「教えて！　μ's！　後編」",
+	"title": "第1話 １曲なんて選べない！",
+	"desc": "スクールアイドルファンサイトの企画「μ'sのお悩み相談室」は大好評で、送られてくる相談は増えるばかり。その一方、スクールアイドルエキシビション用のPVをどうするかはなかなか決まらないμ's。どの曲にも思い入れがありすぎて……？",
+	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第33章「教えて！　μ's！　後編」",
+	"title": "第2話 学校は「楽しい」？",
+	"desc": "久しぶりに同好会に顔を出したあなた。あなたがいない間、同好会のメンバーはそれぞれ個別に練習を積んでいた。ふと思いついて、ニジガクのメンバーに学校の楽しさを聞いてみたが……？",
+	"tag": ["main", "Player", "Ayuwu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第33章「教えて！　μ's！　後編」",
+	"title": "第3話 憧れの絵里さん！？",
+	"desc": "「どうして学校が好きなのか？」の答えはまだ出そうにない。答えが出るまでの間、他のいろいろな相談への返事を書くことになったμ'sの面々。そんなとき「絵里のようにクールで大人になるためにはどうすればいいか」という質問がきて……？",
+	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第33章「教えて！　μ's！　後編」",
+	"title": "第4話 素顔を追え！",
+	"desc": "学校では完璧な姿を見せる絵里。しかし、絵里の魅力はもっと他にあると言う希の提案で、休日の絵里を探ることに！？　極秘取材で絵里の魅力を暴けるか！？",
+	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第33章「教えて！　μ's！　後編」",
+	"title": "第5話 楽しいものは楽しいの！",
+	"desc": "ファンサイトの企画が盛り上がりを見せ、ついににこが立ち上がる！　いまこそ自分が最高の回答をして、最高の人気をさらう時！　しかしそこで相談を投げかけてきたのは穂乃果だった！？",
+	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第33章「教えて！　μ's！　後編」",
+	"title": "第6話 はじまりの想いを伝えたい！",
+	"desc": "思わぬにこの熱い想いを知った穂乃果たち。そのまま変えることもできず、公園にたたずんでいる。そこで吐露された穂乃果の考えとは……？",
+	"tag": ["main", "Player", "Honoka", "Kotori", "Umi"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第33章「教えて！　μ's！　後編」",
+	"title": "第7話 過去から繋がる今！",
+	"desc": "ずっと悩んでた相談への回答とPVが一気に解決したμ's。ここからは全力でPV作り！これまで何度も歌ってきた大好きな曲が、さらに大切でかけがえのないものに生まれ変わる！",
+	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第33章「教えて！　μ's！　後編」",
+	"title": "第8話 μ'sの背中",
+	"desc": "初めての特別な曲で、目一杯の想いを込めたPVがついに完成！　μ'sの過去、現在、これから……全てが詰まったPVを見たあなたの胸に湧き上がるものは……？",
+	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第33章「教えて！　μ's！　後編」",
+	"title": "第9話 伝播する心",
+	"desc": "スクールアイドルエキシビションのサイトに、全ての想いを込めたPVをアップしたμ's。果たして、その想いは相談者の子に届くのか！？",
+	"memo": "ことりの出番はスチルのみで、セリフ・ボイス無し。",
+	"tag": ["main", "Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第33章「教えて！　μ's！　後編」",
+	"title": "第10話 続け！　進め！",
+	"desc": "スクールアイドルエキシビションのサイトにアップされたμ'sのPVを見て大はしゃぎのニジガクメンバー。この姿に憧れて、この背中を追いかけて自分たちもやってきた。やっぱりμ'sの与えてくれるパワーってすごい。自分たちも負けてはいられない！",
+	"tag": ["main", "Player", "Ayuwu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
 },
 {
 	"chapter": "イベントエピソード「秘密のパーティー！」",
@@ -4053,6 +4174,90 @@ const StoryList = [
 	"tag": ["event", "Eli", "Rin", "Riko", "Ai", "Mari", "Shioriko"]
 },
 {
+	"chapter": "イベントエピソード「学校祭でおもてなし」",
+	"title": "第1話",
+	"desc": "浦の星女学院の学校祭にやってきた4人。ダイヤから、「急な用事ができたので遅れる」というメッセージが届く。",
+	"tag": ["event", "Kotori", "Maki", "Dia", "Ayumu", "Shizuku"]
+},
+{
+	"chapter": "イベントエピソード「学校祭でおもてなし」",
+	"title": "第2話",
+	"desc": "学校祭を見て回っていると、突如「ぶっぶーですわ！」というダイヤの声が。その声が聞こえた教室で行われていたことは……？",
+	"tag": ["event", "Kotori", "Maki", "Riko", "Dia", "Ayumu", "Shizuku"]
+},
+{
+	"chapter": "イベントエピソード「学校祭でおもてなし」",
+	"title": "第3話",
+	"desc": "メイド喫茶が賑わう中、てきぱきと接客をこなしていくことり。歩夢は、ことりに言われて手伝いをすることになった。",
+	"tag": ["event", "Kotori", "Ayumu"]
+},
+{
+	"chapter": "イベントエピソード「学校祭でおもてなし」",
+	"title": "第4話",
+	"desc": "一方、真姫としずくは、演劇部の公演を見に行くことにした。そこで梨子がやってきて……",
+	"tag": ["event", "Maki", "Riko", "Shizuku"]
+},
+{
+	"chapter": "イベントエピソード「学校祭でおもてなし」",
+	"title": "第5話",
+	"desc": "梨子が言うには、電車が止まったせいで出張中の演劇部が戻ってこれないという。それを聞いたしずくは、ある提案をする。",
+	"tag": ["event", "Maki", "Riko", "Dia", "Shizuku"]
+},
+{
+	"chapter": "イベントエピソード「学校祭でおもてなし」",
+	"title": "第6話",
+	"desc": "演劇部の同意を得た上で、代わりに別の出し物をすることになった4人。しずくとダイヤは演技を、真姫とピアノによるBGMを担当する。",
+	"tag": ["event", "Maki", "Riko", "Dia", "Shizuku"]
+},
+{
+	"chapter": "イベントエピソード「学校祭でおもてなし」",
+	"title": "第7話",
+	"desc": "ぶっつけ本番の代替公演も大成功。メイド喫茶も大賑わい。閉会式が終わり、6人はまた合流する。",
+	"tag": ["event", "Kotori", "Maki", "Riko", "Dia", "Ayumu", "Shizuku"]
+},
+{
+	"chapter": "イベントエピソード「日本流サンクスギビングデー」",
+	"title": "第1話",
+	"desc": "6人は虹ヶ咲学園の部室に集まり、秋の味覚について話していた。",
+	"tag": ["event", "Honoka", "Nozomi", "Chika", "Ruby", "Rina", "Mia"]
+},
+{
+	"chapter": "イベントエピソード「日本流サンクスギビングデー」",
+	"title": "第2話",
+	"desc": "ミアの話から、みんなサンクスギビングデーに興味津々。6人はパーティーを開くことになり、そのための買い出しに向かう。",
+	"tag": ["event", "Honoka", "Nozomi", "Chika", "Ruby", "Rina", "Mia"]
+},
+{
+	"chapter": "イベントエピソード「日本流サンクスギビングデー」",
+	"title": "第3話",
+	"desc": "買い物を終えた6人。ルビィは焼き芋の屋台を見つける。",
+	"tag": ["event", "Honoka", "Nozomi", "Chika", "Ruby", "Rina", "Mia"]
+},
+{
+	"chapter": "イベントエピソード「日本流サンクスギビングデー」",
+	"title": "第4話",
+	"desc": "戻ってきて料理に取り掛かる6人。ルビィはマッシュポテトを作ろうとするが、なかなか力の要る仕事だ。",
+	"tag": ["event", "Honoka", "Nozomi", "Chika", "Ruby", "Rina", "Mia"]
+},
+{
+	"chapter": "イベントエピソード「日本流サンクスギビングデー」",
+	"title": "第5話",
+	"desc": "料理の準備も一段落。肉やパイが焼き上がるまでの間、6人は日本とアメリカの休日について語り合う。",
+	"tag": ["event", "Honoka", "Nozomi", "Chika", "Ruby", "Rina", "Mia"]
+},
+{
+	"chapter": "イベントエピソード「日本流サンクスギビングデー」",
+	"title": "第6話",
+	"desc": "話をしていると、ミアは「ホットアップルサイダー」を作ることをすっかり忘れていたという。璃奈とミアは、再び買い出しに向かう。",
+	"tag": ["event", "Honoka", "Chika", "Ruby", "Rina", "Mia"]
+},
+{
+	"chapter": "イベントエピソード「日本流サンクスギビングデー」",
+	"title": "第7話",
+	"desc": "準備も終わり、パーティーは大成功。ミアは日本でたくさんの友達ができたことを嬉しく思っていた。",
+	"tag": ["event", "Honoka", "Nozomi", "Chika", "Ruby", "Rina", "Mia"]
+},
+{
 	"color": "Honoka",
 	"chapter": "キズナエピソード 高坂穂乃果",
 	"title": "1話 一緒に前を向いて",
@@ -4195,6 +4400,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Honoka", "Kotori", "Hanayo"]
 },
 {
+	"color": "Honoka",
+	"chapter": "キズナエピソード 高坂穂乃果",
+	"title": "21話 海へのあこがれ？",
+	"desc": "仲間と支え合うことで、Printempsのユニットライブは大成功。新しい景色を見つけることができた穂乃果。ひとときの休息、穂乃果は海へ向かっていた。",
+	"tag": ["kizuna", "Player", "Honoka", "Chika", "Mari", "Ayumu"]
+},
+{
 	"color": "Eli",
 	"chapter": "キズナエピソード 絢瀬絵里",
 	"title": "1話 ステージ実現のために",
@@ -4333,6 +4545,13 @@ const StoryList = [
 	"title": "20話 乗り越えた、その先に",
 	"desc": "にこと巻に想いを正直に打ち明けた絵里は、自分が一歩引いていては前に進めないことを知る。全員で主役になるために、絵里はライブの準備を進める。",
 	"tag": ["kizuna", "Player", "Eli", "Maki", "Nico"]
+},
+{
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里",
+	"title": "21話 スクールアイドル新聞を作ろう！",
+	"desc": "BiBiのユニットライブを大成功させた絵里は、せつ菜、ダイヤと共にスクールアイドル新聞を作ることに。興味を持ってもらうためにどうすればいいのか、絵里は想いを巡らせる。",
+	"tag": ["kizuna", "Player", "Honoka", "Eli", "Nico", "Dia", "Setsuna"]
 },
 {
 	"color": "Kotori",
@@ -4475,6 +4694,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Honoka", "Kotori", "Hanayo", "You", "Ruby"]
 },
 {
+	"color": "Kotori",
+	"chapter": "キズナエピソード 南ことり",
+	"title": "21話 ことりの女神さま",
+	"desc": "スクールアイドルの衣装への想いを取り戻して、Printempsのユニットライブを大成功させたことり。幼なじみの穂乃果、海未と一緒の練習は、とてもはかどったようで……。",
+	"tag": ["kizuna", "Player", "Honoka", "Kotori", "Umi"]
+},
+{
 	"color": "Umi",
 	"chapter": "キズナエピソード 園田海未",
 	"title": "1話 スクールアイドルへの想い",
@@ -4613,6 +4839,13 @@ const StoryList = [
 	"title": "20話 それでも、前を向いて",
 	"desc": "今の自分には、修行よりも大切にしたいことがある――。自分の気持に気づいた海未は、ユニットライブに向けて、前進する！",
 	"tag": ["kizuna", "Player", "Umi", "Rin", "Nozomi", "Hanamaru", "Rina"]
+},
+{
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未",
+	"title": "21話 働き者海未ちゃん",
+	"desc": "自分の気持ちに素直になれた海未は、ついにユニットライブを無事成功させることができた。日々の練習を怠らない海未は、今日もエマと……",
+	"tag": ["kizuna", "Player", "Umi", "Emma"]
 },
 {
 	"color": "Rin",
@@ -4756,6 +4989,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Umi", "Rin", "Nozomi"]
 },
 {
+	"color": "Rin",
+	"chapter": "キズナエピソード 星空凛",
+	"title": "21話 テスト前の憂鬱",
+	"desc": "lily whiteの3人が支え合うことで、ユニットライブは大成功！　しかし、今度は学校のテストが待ち構えていて……。",
+	"tag": ["kizuna", "Player", "Rin", "Ai"]
+},
+{
 	"color": "Maki",
 	"chapter": "キズナエピソード 西木野真姫",
 	"title": "1話 返事しなくちゃいけない？",
@@ -4896,6 +5136,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Eli", "Maki", "Nico", "Mari", "Ai"]
 },
 {
+	"color": "Maki",
+	"chapter": "キズナエピソード 西木野真姫",
+	"title": "21話 自分で作っちゃおう！",
+	"desc": "ユニットライブを成功させ、日に日にスクールアイドルへの思い入れが強くなってくる真姫。穂乃果と千歌が考えている計画を聞いた真姫は……。",
+	"tag": ["kizuna", "Player", "Honoka", "Maki", "Chika"]
+},
+{
 	"color": "Nozomi",
 	"chapter": "キズナエピソード 東條希",
 	"title": "1話 パワーでお迎え♪",
@@ -5034,6 +5281,13 @@ const StoryList = [
 	"title": "20話 大事な我が家",
 	"desc": "μ'sだけではなくて、ニジガクのみんなも、Aqoursのみんなも、どんどん大切になっていく……。希の想いを込めたユニットライブが、今はじまる。",
 	"tag": ["kizuna", "Player", "Umi", "Rin", "Nozomi", "Chika", "Riko", "Dia", "Mari"]
+},
+{
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希",
+	"title": "21話 運命の人、襲来！？",
+	"desc": "lily whiteのユニットライブは大成功！　大切な仲間が増えていく日々に感謝している希。「たまには自分を占ってみたら？」の言葉で、自分自身を占うことになり……。",
+	"tag": ["kizuna", "Player", "Eli", "Rin", "Maki", "Nozomi", "Kanan"]
 },
 {
 	"color": "Hanayo",
@@ -5177,6 +5431,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Honoka", "Kotori", "Hanayo", "Dia", "Setsuna"]
 },
 {
+	"color": "Hanayo",
+	"chapter": "キズナエピソード 小泉花陽",
+	"title": "21話 アドバイザー花陽、再び！",
+	"desc": "自分の気持ちをしっかりと届けたい。花陽の強い意志もあって、Printempsのユニットライブは大成功！　そして、花陽からアドバイスをもらいたい人が、また一人……？",
+	"tag": ["kizuna", "Player", "Hanayo", "Shioriko"]
+},
+{
 	"color": "Nico",
 	"chapter": "キズナエピソード 矢澤にこ",
 	"title": "1話 手伝いなんていらないっ！",
@@ -5316,6 +5577,13 @@ const StoryList = [
 	"title": "20話 最高に、かっこよく！",
 	"desc": "理想のかっこよさを探していたにこだったが、そのかっこよさは既ににこが持っていたものだった。あなたの助言を得て、にこは自信を持ってステージへ向かう。",
 	"tag": ["kizuna", "Player", "Eli", "Maki", "Nico", "Hanamaru", "Kasumi"]
+},
+{
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ",
+	"title": "21話 セクシーの達人へ、挑戦！",
+	"desc": "自分の中にある「かっこいい」に気づいたにこは、BiBiのユニットライブを大成功させた。そんなにこが、次に手に入れるのは……「セクシー」！？",
+	"tag": ["kizuna", "Player", "Nico", "Karin"]
 },
 {
 	"color": "Chika",
@@ -8486,7 +8754,7 @@ const StoryList = [
 	"color": "Shioriko",
 	"chapter": "キズナエピソード 三船栞子",
 	"title": "15話 ゆったり時間…？",
- 	"desc": "生徒会の代表としてステージに逢った校内フィルムフェスティバルの前夜祭も無事終了。ある日栞子とあなたは動物園に来ていた……。",
+ 	"desc": "生徒会の代表としてステージに立った校内フィルムフェスティバルの前夜祭も無事終了。ある日栞子とあなたは動物園に来ていた……。",
 	"tag": ["kizuna", "Player", "Shioriko", "Kaoruko"]
 },
 {

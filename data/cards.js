@@ -1,7 +1,9 @@
 const RawCardList = [
 {"id": -1, "name": "Shioriko", "rare": "UR", "offset":3 },
 {"id": -1, "name": "Shioriko", "rare": "SR", "offset":4 },
+{"id": -1, "name": "Mia", "rare": "UR", "offset":8 },
 {"id": -1, "name": "Mia", "rare": "SR", "offset":4 },
+{"id": -1, "name": "Lanzhu", "rare": "UR", "offset":8 },
 {"id": -1, "name": "Lanzhu", "rare": "SR", "offset":4 },
 {
 	"id": 3,
@@ -5701,7 +5703,7 @@ const RawCardList = [
 	"cn2": "Angelic Angel",
 	"date": "2021/09/19",
 	"source": "reward",
-	"desc": "イベント「秋雨クラブ」報酬 (ランキング枠)"
+	"desc": "イベント「秋雨クラブ」報酬 (イベントpt枠)"
 },
 {
 	"id": 545,
@@ -5713,7 +5715,7 @@ const RawCardList = [
 	"cn2": "未熟DREAMER",
 	"date": "2021/09/19",
 	"source": "reward",
-	"desc": "イベント「秋雨クラブ」報酬 (イベントpt枠)"
+	"desc": "イベント「秋雨クラブ」報酬 (ランキング枠)"
 },
 {
 	"id": 546,
@@ -5921,18 +5923,6 @@ const RawCardList = [
 },
 {
 	"id": 563,
-	"name": "Eli",
-	"rare": "SR",
-	"atr": "Smile",
-	"type": "Sp",
-	"cn1": "リクエストがあるなら聞くわ",
-	"cn2": 'もぎゅっと"love"で接近中！',
-	"date": "2021/10/23",
-	"source": "reward",
-	"desc": "イベント「モンスターハロウィン！」報酬 (ランキング枠)"
-},
-{
-	"id": 564,
 	"name": "Ai",
 	"rare": "SR",
 	"atr": "Active",
@@ -5942,6 +5932,18 @@ const RawCardList = [
 	"date": "2021/10/23",
 	"source": "reward",
 	"desc": "イベント「モンスターハロウィン！」報酬 (イベントpt枠)"
+},
+{
+	"id": 564,
+	"name": "Eli",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "リクエストがあるなら聞くわ",
+	"cn2": 'もぎゅっと"love"で接近中！',
+	"date": "2021/10/23",
+	"source": "reward",
+	"desc": "イベント「モンスターハロウィン！」報酬 (ランキング枠)"
 },
 {
 	"id": 565,
@@ -5991,7 +5993,6 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
 },
-
 {
 	"id": 569,
 	"name": "Shizuku",
@@ -6042,18 +6043,6 @@ const RawCardList = [
 },
 {
 	"id": 573,
-	"name": "Maki",
-	"rare": "SR",
-	"atr": "Smile",
-	"type": "Vo",
-	"cn1": "はぐれないでよ、歩夢",
-	"cn2": 'もぎゅっと"love"で接近中！',
-	"date": "2021/11/07",
-	"source": "reward",
-	"desc": "イベント「学校祭でおもてなし」報酬 (ランキング枠)"
-},
-{
-	"id": 574,
 	"name": "Ayumu",
 	"rare": "SR",
 	"atr": "Elegant",
@@ -6063,6 +6052,18 @@ const RawCardList = [
 	"date": "2021/11/07",
 	"source": "reward",
 	"desc": "イベント「学校祭でおもてなし」報酬 (交換所枠)"
+},
+{
+	"id": 574,
+	"name": "Maki",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "はぐれないでよ、歩夢",
+	"cn2": 'もぎゅっと"love"で接近中！',
+	"date": "2021/11/07",
+	"source": "reward",
+	"desc": "イベント「学校祭でおもてなし」報酬 (ランキング枠)"
 },
 {
 	"id": 575,
@@ -6088,5 +6089,125 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「パーティーガチャ」で追加"
 },
+{
+	"id": 577,
+	"name": "Nozomi",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "うわぁ、すごいご馳走！",
+	"cn2": "Autumn☆Thanksgiving",
+	"date": "2021/11/20",
+	"source": "gacha",
+	"desc": "「日本流サンクスギビングデーガチャ」で追加"
+},
+{
+	"id": 578,
+	"name": "Rina",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "ミアちゃんの力になりたい",
+	"cn2": "L！L！L！ (Love the Life We Live)",
+	"date": "2021/11/20",
+	"source": "gacha",
+	"desc": "「日本流サンクスギビングデーガチャ」で追加"
+},
+{
+	"id": 579,
+	"name": "Mia",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "賑やかなのも、案外悪くないかも",
+	"cn2": "Autumn☆Thanksgiving",
+	"date": "2021/11/20",
+	"source": "gacha",
+	"desc": "「日本流サンクスギビングデーガチャ」で追加"
+},
+{
+	"id": 580,
+	"name": "Ruby",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "ルビィに任せて！",
+	"cn2": "Autumn☆Thanksgiving",
+	"date": "2021/10/23",
+	"source": "reward",
+	"desc": "イベント「日本流サンクスギビングデー」報酬"
+},
+{
+	"id": 581,
+	"name": "Honoka",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "穂むらの秋限定の和菓子",
+	"cn2": 'もぎゅっと"love"で接近中！',
+	"date": "2021/10/23",
+	"source": "reward",
+	"desc": "イベント「日本流サンクスギビングデー」報酬 (イベントpt枠)"
+},
+{
+	"id": 582,
+	"name": "Chika",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "これも買って帰ろうよ！",
+	"cn2": "WATER NEW BLUE WORLD",
+	"date": "2021/10/23",
+	"source": "reward",
+	"desc": "イベント「日本流サンクスギビングデー」報酬 (ランキング枠)"
+},
+{
+	"id": 583,
+	"name": "Kanata",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "おかしいな、違うのかな……",
+	"cn2": "イッツ・ショータイム☆",
+	"date": "2021/11/29",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 584,
+	"name": "Setsuna",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "厳しくチェックしてくださいね！",
+	"cn2": "緑風のティターニア",
+	"date": "2021/11/29",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 585,
+	"name": "Yoshiko",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Vo",
+	"cn1": "魔界に生きる上で必要な情報",
+	"cn2": "WATER BLUE NEW WORLD",
+	"date": "2021/11/29",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 586,
+	"name": "Umi",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "なんていい景色",
+	"cn2": 'もぎゅっと"love"で接近中！',
+	"date": "2021/11/29",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
 ];
-const LatestUpdate = "2021/11/14 「パーティーガチャ」まで";
+const LatestUpdate = "2021/11/29 「スクスタフェス」まで";
