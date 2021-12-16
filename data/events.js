@@ -453,8 +453,8 @@ const EventList = [
 	"id" : 51,
 	"name" : "学校祭でおもてなし",
 	"type" : "exchange",
-	"started" : new Date("2021-10-07T15:00:00+09:00"),
-	"ended"   : new Date("2021-10-14T14:59:59+09:00"),
+	"started" : new Date("2021-11-07T15:00:00+09:00"),
+	"ended"   : new Date("2021-11-14T14:59:59+09:00"),
 	"UR" : ["Kotori", "Dia", "Shizuku"],
 	"SR" : ["Maki", "Riko", "Ayumu"]
 },
@@ -466,5 +466,14 @@ const EventList = [
 	"ended"   : new Date("2021-11-30T14:59:59+09:00"),
 	"UR" : ["Nozomi", "Ruby", "Mia"],
 	"SR" : ["Honoka", "Chika", "Rina"]
+},
+{
+	"id" : 53,
+	"name" : "ホワイト・シティ・ライツ",
+	"type" : "exchange",
+	"started" : new Date("2021-12-07T15:00:00+09:00"),
+	"ended"   : new Date("2021-12-14T14:59:59+09:00"),
+	"UR" : ["Hanayo", "You", "Rina"],
+	"SR" : ["Nico", "Kanan", "Kanata"]
 },
 ];

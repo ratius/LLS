@@ -1945,7 +1945,7 @@ const StoryList = [
 	"chapter": "メインストーリー / 3rd Season / 第32章「教えて！　μ's！　前編」",
 	"title": "第1話 ヒントを探しに",
 	"desc": "ランジュたちともすっかり親しくなった同好会メンバー。体力づくりもレベルアップもスクールアイドルエキシビションのPVのためなのに、肝心のPVのアイディアは出てこないまま。話し合って出てこないなら、外に探しに行っちゃう！？",
-	"tag": ["main", "Player", "Ayuwu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
 },
 {
 	"chapter": "メインストーリー / 3rd Season / 第32章「教えて！　μ's！　前編」",
@@ -1975,7 +1975,7 @@ const StoryList = [
 	"chapter": "メインストーリー / 3rd Season / 第32章「教えて！　μ's！　前編」",
 	"title": "第6話 背を向けていたころ",
 	"desc": "ものすごい量のメールがきたμ'sのお悩み相談室への回答も、いくつか気になる相談もあるようだがだんだんと進んできた。ある日いつものように音ノ木坂をおとずれたところ、そこには真姫しかいなくて……？",
-	"tag": ["main", "Player", "Maki", "Ayuwu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+	"tag": ["main", "Player", "Maki", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
 },
 {
 	"chapter": "メインストーリー / 3rd Season / 第32章「教えて！　μ's！　前編」",
@@ -2011,7 +2011,7 @@ const StoryList = [
 	"chapter": "メインストーリー / 3rd Season / 第33章「教えて！　μ's！　後編」",
 	"title": "第2話 学校は「楽しい」？",
 	"desc": "久しぶりに同好会に顔を出したあなた。あなたがいない間、同好会のメンバーはそれぞれ個別に練習を積んでいた。ふと思いついて、ニジガクのメンバーに学校の楽しさを聞いてみたが……？",
-	"tag": ["main", "Player", "Ayuwu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
 },
 {
 	"chapter": "メインストーリー / 3rd Season / 第33章「教えて！　μ's！　後編」",
@@ -2060,7 +2060,7 @@ const StoryList = [
 	"chapter": "メインストーリー / 3rd Season / 第33章「教えて！　μ's！　後編」",
 	"title": "第10話 続け！　進め！",
 	"desc": "スクールアイドルエキシビションのサイトにアップされたμ'sのPVを見て大はしゃぎのニジガクメンバー。この姿に憧れて、この背中を追いかけて自分たちもやってきた。やっぱりμ'sの与えてくれるパワーってすごい。自分たちも負けてはいられない！",
-	"tag": ["main", "Player", "Ayuwu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
 },
 {
 	"chapter": "イベントエピソード「秘密のパーティー！」",
@@ -4258,6 +4258,48 @@ const StoryList = [
 	"tag": ["event", "Honoka", "Nozomi", "Chika", "Ruby", "Rina", "Mia"]
 },
 {
+	"chapter": "イベントエピソード「ホワイト・シティ・ライツ」",
+	"title": "第1話",
+	"desc": "花陽たちは、ライトアップされた夜の冬の街に来ていた。今日は、クリアすると特別なショーが見られる宝探しイベントが開催されているという。",
+	"tag": ["event", "Hanayo", "Nico", "Kanan", "You", "Kanata", "Rina"]
+},
+{
+	"chapter": "イベントエピソード「ホワイト・シティ・ライツ」",
+	"title": "第2話",
+	"desc": "受付で宝探しイベントの最初のカードをもらった6人。2枚目のカードの在り処のヒントは……「木」？。",
+	"tag": ["event", "Hanayo", "Nico", "Kanan", "You", "Kanata", "Rina"]
+},
+{
+	"chapter": "イベントエピソード「ホワイト・シティ・ライツ」",
+	"title": "第3話",
+	"desc": "2枚目のカードは、一番大きなシンボルツリーのところで配られていた。次のカードのヒントは「ライオン」だ！",
+	"tag": ["event", "Hanayo", "Nico", "Kanan", "You", "Kanata", "Rina"]
+},
+{
+	"chapter": "イベントエピソード「ホワイト・シティ・ライツ」",
+	"title": "第4話",
+	"desc": "3枚目のカードを無事ゲットすることができた。一旦休憩のため、6人はお店に立ち寄る。",
+	"tag": ["event", "Hanayo", "Nico", "Kanan", "You", "Kanata", "Rina"]
+},
+{
+	"chapter": "イベントエピソード「ホワイト・シティ・ライツ」",
+	"title": "第5話",
+	"desc": "4枚目のカードは、立ち寄ったお店のコースターだった！残るカードはあと2枚。ヒントは「花」！",
+	"tag": ["event", "Hanayo", "Nico", "Kanan", "You", "Kanata", "Rina"]
+},
+{
+	"chapter": "イベントエピソード「ホワイト・シティ・ライツ」",
+	"title": "第6話",
+	"desc": "璃奈の洞察力のおかげで、無事に5枚目のカードを手に入れられた。しかし、彼方ちゃんは眠いようで……？",
+	"tag": ["event", "Hanayo", "Nico", "Kanan", "You", "Kanata", "Rina"]
+},
+{
+	"chapter": "イベントエピソード「ホワイト・シティ・ライツ」",
+	"title": "第7話",
+	"desc": "最後のカードは彼方が見つけてくれた。全てのカードを集めたみんなは、もうすぐ始まるショーの始まりを心待ちにする。",
+	"tag": ["event", "Hanayo", "Nico", "Kanan", "You", "Kanata", "Rina"]
+},
+{
 	"color": "Honoka",
 	"chapter": "キズナエピソード 高坂穂乃果",
 	"title": "1話 一緒に前を向いて",
@@ -5727,6 +5769,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Chika"]
 },
 {
+	"color": "Chika",
+	"chapter": "キズナエピソード 高海千歌",
+	"title": "21話 千歌のサプライズ",
+	"desc": "下校しようとしていたあなたに、千歌から電話が掛かってきた。相談したいことがある、と千歌。Aqoursのメンバーにプレゼントをしたいらしく……",
+	"tag": ["kizuna", "Player", "Chika"]
+},
+{
 	"color": "Riko",
 	"chapter": "キズナエピソード 桜内梨子",
 	"title": "1話 コンサートホールにて",
@@ -5865,6 +5914,13 @@ const StoryList = [
 	"title": "20話 いつでも私の中に",
 	"desc": "Guilty Kissライブ当日。本番に向けて準備を進める梨子に変わった様子は見られない。けれど、やはりどこか善子や鞠莉を真似ていた名残りが見える。",
 	"tag": ["kizuna", "Player", "Riko", "Yoshiko", "Mari"]
+},
+{
+	"color": "Riko",
+	"chapter": "キズナエピソード 桜内梨子",
+	"title": "21話 遊びにおいで",
+	"desc": "梨子と電話で話しながら、沼津に行く時はいつも何かしら理由があったことに気づくあなた。理由が無くても行っていいのだろうか？　その問いに梨子の答えは……",
+	"tag": ["kizuna", "Player", "Riko"]
 },
 {
 	"color": "Kanan",
@@ -6007,6 +6063,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Kanan", "Dia", "Hanamaru"]
 },
 {
+	"color": "Kanan",
+	"chapter": "キズナエピソード 松浦果南",
+	"title": "21話 果南先輩は今日も元気",
+	"desc": "果南のトレーニングをサポートするため、一緒にランニングをするあなた。元気な果南のペースになかなかついて行けず……",
+	"tag": ["kizuna", "Player", "Umi", "Kanan"]
+},
+{
 	"color": "Dia",
 	"chapter": "キズナエピソード 黒澤ダイヤ",
 	"title": "1話 見慣れぬ一面",
@@ -6146,6 +6209,13 @@ const StoryList = [
 	"title": "20話 今度こそ正しく",
 	"desc": "果南の悲痛な訴えに、これまで自分がやってきたことにようやく気づいたダイヤ。ダイヤは果南を追いかけ中庭へ向かう。",
 	"tag": ["kizuna", "Player", "Kanan", "Dia", "Hanamaru"]
+},
+{
+	"color": "Dia",
+	"chapter": "キズナエピソード 黒澤ダイヤ",
+	"title": "21話 お返しはどうしましょう？",
+	"desc": "ダイヤと電話でお喋りをするあなた。しかし、ダイヤはどこか上の空。事情を聞くと、あることで悩んでいるらしく……",
+	"tag": ["kizuna", "Player", "Dia"]
 },
 {
 	"color": "You",
@@ -6290,6 +6360,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Chika", "You", "Ruby"]
 },
 {
+	"color": "You",
+	"chapter": "キズナエピソード 渡辺曜",
+	"title": "21話 水泳部見学",
+	"desc": "練習のサポート日を間違えて、曜が水泳部の日に浦女に来てしまったあなた。プールに様子を見に行くと、曜から水泳部を見学していくように誘われて……",
+	"tag": ["kizuna", "Player", "You"]
+},
+{
 	"color": "Yoshiko",
 	"chapter": "キズナエピソード 津島善子",
 	"title": "1話 ドロップアイテム",
@@ -6429,6 +6506,13 @@ const StoryList = [
 	"title": "20話 ヨハネ復活！",
 	"desc": "あなた達の気遣いもあり、元気になった善子。無事に衣装も完成し、本番に向けての練習にも熱が入る。",
 	"tag": ["kizuna", "Player", "Riko", "Yoshiko", "Mari", "Setsuna"]
+},
+{
+	"color": "Yoshiko",
+	"chapter": "キズナエピソード 津島善子",
+	"title": "21話 新作動画について",
+	"desc": "善子と共に、次回配信する動画の内容を考えるあなた。これまでの制作過程を振り返ったり、人気の動画を調べたりして話し合う。その中であなたが思い付いたことは……",
+	"tag": ["kizuna", "Player", "Yoshiko"]
 },
 {
 	"color": "Hanamaru",
@@ -6571,6 +6655,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Kanan", "Dia", "Hanamaru", "Shizuku"]
 },
 {
+	"color": "Hanamaru",
+	"chapter": "キズナエピソード 国木田花丸",
+	"title": "21話 些細な違和感",
+	"desc": "エマ、花陽とランチビュッフェに行く計画を立てているあなた。そこに花丸も誘おうと連絡を取るが、なかなか返事が返ってこず……",
+	"tag": ["kizuna", "Player", "Hanayo", "Hanamaru", "Emma"]
+},
+{
 	"color": "Mari",
 	"chapter": "キズナエピソード 小原鞠莉",
 	"title": "1話 鞠莉との1日",
@@ -6709,6 +6800,13 @@ const StoryList = [
 	"title": "20話 次はもっと楽しく",
 	"desc": "無事にライブを終えたGuilty Kiss。実現できなかった演出は次回に持ち越しとなった。次に向けて鞠莉達は進み続ける。",
 	"tag": ["kizuna", "Player", "Riko", "Yoshiko", "Mari"]
+},
+{
+	"color": "Mari",
+	"chapter": "キズナエピソード 小原鞠莉",
+	"title": "21話 助けて鞠莉さん！",
+	"desc": "ある悩みを解決するため、あなたと栞子は鞠莉に助けを求める。２人から話しを聞いた鞠莉の答えは……",
+	"tag": ["kizuna", "Player", "Mari", "Shioriko"]
 },
 {
 	"color": "Ruby",
@@ -6850,6 +6948,13 @@ const StoryList = [
 	"title": "20話 私の全てを込めて",
 	"desc": "CYaRon!のライブ当日。応援に来たあなた・かすみ・璃奈は、会場入りする前のルビィ達に出会う。素晴らしいライブになる、と言う３人に、期待を膨らませるあなた達だった。",
 	"tag": ["kizuna", "Player", "Chika", "You", "Ruby", "Kasumi", "Rina"]
+},
+{
+	"color": "Ruby",
+	"chapter": "キズナエピソード 黒澤ルビィ",
+	"title": "21話 衣装デザインを考えながら",
+	"desc": "ルビィと一緒に自宅でAqoursの衣装のデザインを考えるあなた。一緒に悩みながら作業を続け、どうにか数枚描き上げた２人は、気分転換に外へ出ることに。",
+	"tag": ["kizuna", "Player", "Kotori", "Ruby"]
 },
 {
 	"color": "Ayumu",
@@ -7048,6 +7153,13 @@ const StoryList = [
 	"chapter": "キズナエピソード 上原歩夢",
 	"title": "28話 ソワソワな夜！",
  	"desc": "校内フィルムフェスティバル前夜祭ライブも無事終了！そんな歩夢とあなたには楽しみなことが！",
+	"tag": ["kizuna", "Player", "Ayumu"]
+},
+{
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢",
+	"title": "29話 下調べは誰のため？",
+ 	"desc": "楽しシミにしていた歩夢の家族とあなたの家族との合同旅行。行先は横浜！",
 	"tag": ["kizuna", "Player", "Ayumu"]
 },
 {
@@ -7251,6 +7363,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Kasumi", "Shizuku", "Rina", "Shioriko"]
 },
 {
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ",
+	"title": "29話 秘密のダイエット！",
+ 	"desc": "みんなにナイショでダイエットに励もうとするかすみ。元気がないように見えるかすみを心配したあなたは……？",
+	"tag": ["kizuna", "Player", "Kasumi", "Shizuku", "Rina", "Shioriko"]
+},
+{
 	"color": "Shizuku",
 	"chapter": "キズナエピソード 桜坂しずく",
 	"title": "1話 物語の魅力",
@@ -7451,6 +7570,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Shizuku"]
 },
 {
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく",
+	"title": "29話 横浜に降り立ったお姫様",
+ 	"desc": "演劇部の次の公演で、世間知らずのお姫様を演じることになっているしずく。気持ちが掴めないと相談されたあなたは、実際にお姫様になりきってお出かけしてみようと誘う。",
+	"tag": ["kizuna", "Player", "Shizuku"]
+},
+{
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林",
 	"title": "1話 果林のお仕事",
@@ -7648,6 +7774,13 @@ const StoryList = [
 	"chapter": "キズナエピソード 朝香果林",
 	"title": "28話 果林のアルバム",
  	"desc": "校内フィルムフェスティバルも終わり、果林が部屋の片付けをしていると、あるものを見つけた。それは……？",
+	"tag": ["kizuna", "Player", "Karin"]
+},
+{
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林",
+	"title": "29話 初めて見た顔",
+ 	"desc": "果林の思わぬ素顔を知ってしまったあなた。とある休日、果林に誘われてやってきたのは海。ここでの果林はいつもと違って……？",
 	"tag": ["kizuna", "Player", "Karin"]
 },
 {
@@ -7852,6 +7985,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Chika", "Riko", "You", "Ai", "Misato"]
 },
 {
+	"color": "Ai",
+	"chapter": "キズナエピソード 宮下愛",
+	"title": "29話 愛トモ作戦会議！？",
+ 	"desc": "千歌たちとも合流し、水族館を楽しんだ愛、美里、あなた。宿泊先は十千万！",
+	"tag": ["kizuna", "Player", "Ai", "Misato"]
+},
+{
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方",
 	"title": "1話 眠り姫・彼方",
@@ -8048,6 +8188,13 @@ const StoryList = [
 	"chapter": "キズナエピソード 近江彼方",
 	"title": "28話 睡眠環境の質？",
  	"desc": "校内フィルムフェスティバルも無事終了。ある日彼方の手作り弁当をご馳走になっていたときに、彼方から気になっていたことを尋ねられる……。",
+	"tag": ["kizuna", "Player", "Kanata"]
+},
+{
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方",
+	"title": "29話 枕ハンター！",
+ 	"desc": "あなたの寝不足開所うのお手伝いをしてくれることになった彼方。今日はあなたにぴったりな枕を探しにお出かけ！",
 	"tag": ["kizuna", "Player", "Kanata"]
 },
 {
@@ -8250,6 +8397,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Setsuna"]
 },
 {
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜",
+	"title": "29話 挽回です！",
+ 	"desc": "自分のPR動画として「熱血大陸」風の映像を撮りたいせつ菜。撮影前夜に張り切りすぎて、朝日を背にするシーンの撮影に失敗して落ち込んでいる。さあ、挽回の時間だ！",
+	"tag": ["kizuna", "Player", "Setsuna"]
+},
+{
 	"color": "Emma",
 	"chapter": "キズナエピソード エマ・ヴェルデ",
 	"title": "1話 日本に来た理由",
@@ -8447,6 +8601,13 @@ const StoryList = [
 	"chapter": "キズナエピソード エマ・ヴェルデ",
 	"title": "28話 ニジガク寮のランチ会",
  	"desc": "校内フィルムフェスティバルも無事終了し、ニジガク寮ランチ会の準備をするエマは……？",
+	"tag": ["kizuna", "Player", "Karin", "Emma", "Mia", "Lanzhu"]
+},
+{
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ",
+	"title": "29話 次のニジガク寮ランチ会は……？",
+ 	"desc": "エマの愛情たっぷりなサンドイッチが楽しみなニジガク寮ランチ会。次の予定は……？",
 	"tag": ["kizuna", "Player", "Karin", "Emma", "Mia", "Lanzhu"]
 },
 {
@@ -8651,6 +8812,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Rina"]
 },
 {
+	"color": "Rina",
+	"chapter": "キズナエピソード 天王寺璃奈",
+	"title": "29話 本格ハンバーガーを作ろう！",
+	"desc": "璃奈が難しい顔をして唸っている。聞けば、ミアのために本格ハンバーガーを作ってあげたいとのこと。それならばと手伝うことにしたあなたは……？",
+	"tag": ["kizuna", "Player", "Rina"]
+},
+{
 	"color": "Shioriko",
 	"chapter": "キズナエピソード 三船栞子",
 	"title": "1話 新入部員のサダメ！？",
@@ -8758,6 +8926,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Shioriko", "Kaoruko"]
 },
 {
+	"color": "Shioriko",
+	"chapter": "キズナエピソード 三船栞子",
+	"title": "16話 安息はどこに！？",
+ 	"desc": "途中から栞子、薫子、あなたで回ることになった動物園。二人で回るはずだったのに、と少し残念そうな栞子だったが……。",
+	"tag": ["kizuna", "Player", "Shioriko", "Lanzhu"]
+},
+{
 	"color": "Mia",
 	"chapter": "キズナエピソード ミア・テイラー",
 	"title": "1話 ボクの完璧なステージ",
@@ -8858,6 +9033,13 @@ const StoryList = [
 	"title": "7話 新しいノート",
 	"desc": "ニジガク寮に引っ越し、友達と過ごす楽しさを実感するランジュ。ある朝、ランジュの「みんなとやりたいことノート」の最新版を見たあなたは……？",
 	"tag": ["kizuna", "Player", "Lanzhu"]
+},
+{
+	"color": "Lanzhu",
+	"chapter": "キズナエピソード 鐘嵐珠",
+	"title": "8話 魔法のノート？",
+	"desc": "ランジュが見せてくれたのは、ランジュがみんなとやりたいことを記したノート。そこには、ランジュがどれだけ同好会のみんなを慕っているかが表れていた。そこに書かれたことを叶えてあげたいと思ったあなたは……？",
+	"tag": ["kizuna", "Player", "Kasumi", "Kanata", "Setsuna", "Lanzhu"]
 },
 {
 	"color": "Ayumu",

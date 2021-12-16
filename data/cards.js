@@ -1639,24 +1639,24 @@ const RawCardList = [
 },
 {
 	"id": 191,
-	"name": "Mari",
-	"rare": "SR",
-	"atr": "Elegant",
-	"type": "Sp",
-	"cn1": "はい♪　聞いてみて",
-	"cn2": "青空Jumping Heart",
-	"date": "2020/03/16",
-	"source": "none",
-	"desc": "「ピックアップガチャ」で追加"
-},
-{
-	"id": 192,
 	"name": "Karin",
 	"rare": "UR",
 	"atr": "Elegant",
 	"type": "Vo",
 	"cn1": "きみをドキッとさせちゃった？",
 	"cn2": "セレブリティ・ブルー",
+	"date": "2020/03/16",
+	"source": "none",
+	"desc": "「ピックアップガチャ」で追加"
+},
+{
+	"id": 192,
+	"name": "Mari",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "はい♪　聞いてみて",
+	"cn2": "青空Jumping Heart",
 	"date": "2020/03/16",
 	"source": "none",
 	"desc": "「ピックアップガチャ」で追加"
@@ -5287,24 +5287,24 @@ const RawCardList = [
 },
 {
 	"id": 506,
-	"name": "Eli",
-	"rare": "SR",
-	"atr": "Natural",
-	"type": "Sk",
-	"cn1": "身体を大きく動かして",
-	"cn2": "Angelic Angel",
-	"date": "2021/07/30",
-	"source": "none",
-	"desc": "「スクスタフェス」で追加"
-},
-{
-	"id": 507,
 	"name": "Emma",
 	"rare": "SR",
 	"atr": "Elegant",
 	"type": "Sp",
 	"cn1": "果林ちゃーん！　起きてる～？",
 	"cn2": "虹色の心",
+	"date": "2021/07/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 507,
+	"name": "Eli",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "身体を大きく動かして",
+	"cn2": "Angelic Angel",
 	"date": "2021/07/30",
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
@@ -6209,5 +6209,101 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
 },
+{
+	"id": 593,
+	"name": "Eli",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "熱々のうちに召し上がれ",
+	"cn2": "スノーファンタジー",
+	"date": "2021/11/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 587,
+	"name": "You",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "歩き回って疲れた体にしみるなー",
+	"cn2": "ルミナス♡ナイト",
+	"date": "2021/11/04",
+	"source": "gacha",
+	"desc": "「ホワイト・シティ・ライツガチャ」で追加"
+},
+{
+	"id": 588,
+	"name": "Kanan",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "まいったなぁ",
+	"cn2": "WATER BLUE NEW WORLD",
+	"date": "2021/11/04",
+	"source": "gacha",
+	"desc": "「ホワイト・シティ・ライツガチャ」で追加"
+},
+{
+	"id": 589,
+	"name": "Rina",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "光のお花畑",
+	"cn2": "ルミナス♡ナイト",
+	"date": "2021/11/04",
+	"source": "gacha",
+	"desc": "「ホワイト・シティ・ライツガチャ」で追加"
+},
+{
+	"id": 590,
+	"name": "Hanayo",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "ありがとう、みんな！",
+	"cn2": "ルミナス♡ナイト",
+	"date": "2021/11/07",
+	"source": "reward",
+	"desc": "イベント「ホワイト・シティ・ライツ」報酬"
+},
+{
+	"id": 591,
+	"name": "Nico",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Sk",
+	"cn1": "最高の瞬間を切り取って！",
+	"cn2": 'もぎゅっと"love"で接近中！',
+	"date": "2021/12/07",
+	"source": "reward",
+	"desc": "イベント「ホワイト・シティ・ライツ」報酬 (交換所枠)"
+},
+{
+	"id": 592,
+	"name": "Kanata",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "枕も持ってくればよかったなぁ～",
+	"cn2": "L！L！L！ (Love the Life We Live)",
+	"date": "2021/12/07",
+	"source": "reward",
+	"desc": "イベント「ホワイト・シティ・ライツ」報酬 (ランキング枠)"
+},
+{
+	"id": 594,
+	"name": "Karin",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "ここ、さっきも通ったような……",
+	"cn2": "L！L！L！ (Love the Life We Live)",
+	"date": "2021/11/14",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
+}
 ];
-const LatestUpdate = "2021/11/29 「スクスタフェス」まで";
+const LatestUpdate = "2021/12/14 「パーティーガチャ」まで";
