@@ -476,4 +476,22 @@ const EventList = [
 	"UR" : ["Hanayo", "You", "Rina"],
 	"SR" : ["Nico", "Kanan", "Kanata"]
 },
+{
+	"id" : 54,
+	"name" : "X’masはゴージャスに",
+	"type" : "story",
+	"started" : new Date("2021-12-21T15:00:00+09:00"),
+	"ended"   : new Date("2021-12-28T14:59:59+09:00"),
+	"UR" : ["Umi", "Chika", "Lanzhu"],
+	"SR" : ["Rin", "Dia", "Shioriko"]
+},
+{
+	"id" : 55,
+	"name" : "わくわく！新年女子会！",
+	"type" : "exchange",
+	"started" : new Date("2022-01-07T15:00:00+09:00"),
+	"ended"   : new Date("2022-01-14T14:59:59+09:00"),
+	"UR" : ["Nico", "Ai", "Emma"],
+	"SR" : ["Hanayo", "Ruby", "Setsuna"]
+},
 ];

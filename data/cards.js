@@ -1,10 +1,7 @@
 const RawCardList = [
 {"id": -1, "name": "Shioriko", "rare": "UR", "offset":3 },
-{"id": -1, "name": "Shioriko", "rare": "SR", "offset":4 },
 {"id": -1, "name": "Mia", "rare": "UR", "offset":8 },
-{"id": -1, "name": "Mia", "rare": "SR", "offset":4 },
 {"id": -1, "name": "Lanzhu", "rare": "UR", "offset":8 },
-{"id": -1, "name": "Lanzhu", "rare": "SR", "offset":4 },
 {
 	"id": 3,
 	"name": "Honoka",
@@ -2657,6 +2654,7 @@ const RawCardList = [
 	"source": "release",
 	"desc": "「ニジガクフェス」で追加"
 },
+{"id": -1, "name": "Shioriko", "rare": "SR", "offset":3 },
 {
 	"id": 287,
 	"name": "Mari",
@@ -4073,6 +4071,7 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「メンバーピックアップガチャ」で追加"
 },
+{"id": -1, "name": "Shioriko", "rare": "SR", "offset":2 },
 {
 	"id": 405,
 	"name": "Eli",
@@ -5537,6 +5536,7 @@ const RawCardList = [
 	"source": "release",
 	"desc": "「ミア&ランジュ ウェルカムガチャ」で追加"
 },
+{"id": -1, "name": "Mia", "rare": "SR", "offset":8 },
 {
 	"id": 531,
 	"name": "Lanzhu",
@@ -5549,6 +5549,7 @@ const RawCardList = [
 	"source": "release",
 	"desc": "「ミア&ランジュ ウェルカムガチャ」で追加"
 },
+{"id": -1, "name": "Lanzhu", "rare": "SR", "offset":8 },
 {
 	"id": 532,
 	"name": "Mari",
@@ -5998,7 +5999,7 @@ const RawCardList = [
 	"name": "Shizuku",
 	"rare": "UR",
 	"atr": "Smile",
-	"type": "Gd",
+	"type": "Vo",
 	"cn1": "内容はすべて頭に入りました",
 	"cn2": "アオハル☆カーニバル",
 	"date": "2021/11/04",
@@ -6133,7 +6134,7 @@ const RawCardList = [
 	"type": "Vo",
 	"cn1": "ルビィに任せて！",
 	"cn2": "Autumn☆Thanksgiving",
-	"date": "2021/10/23",
+	"date": "2021/11/23",
 	"source": "reward",
 	"desc": "イベント「日本流サンクスギビングデー」報酬"
 },
@@ -6145,7 +6146,7 @@ const RawCardList = [
 	"type": "Sk",
 	"cn1": "穂むらの秋限定の和菓子",
 	"cn2": 'もぎゅっと"love"で接近中！',
-	"date": "2021/10/23",
+	"date": "2021/11/23",
 	"source": "reward",
 	"desc": "イベント「日本流サンクスギビングデー」報酬 (イベントpt枠)"
 },
@@ -6157,7 +6158,7 @@ const RawCardList = [
 	"type": "Sp",
 	"cn1": "これも買って帰ろうよ！",
 	"cn2": "WATER NEW BLUE WORLD",
-	"date": "2021/10/23",
+	"date": "2021/11/23",
 	"source": "reward",
 	"desc": "イベント「日本流サンクスギビングデー」報酬 (ランキング枠)"
 },
@@ -6210,18 +6211,6 @@ const RawCardList = [
 	"desc": "「スクスタフェス」で追加"
 },
 {
-	"id": 593,
-	"name": "Eli",
-	"rare": "UR",
-	"atr": "Natural",
-	"type": "Sk",
-	"cn1": "熱々のうちに召し上がれ",
-	"cn2": "スノーファンタジー",
-	"date": "2021/11/14",
-	"source": "party",
-	"desc": "「パーティーガチャ」で追加"
-},
-{
 	"id": 587,
 	"name": "You",
 	"rare": "UR",
@@ -6229,7 +6218,7 @@ const RawCardList = [
 	"type": "Vo",
 	"cn1": "歩き回って疲れた体にしみるなー",
 	"cn2": "ルミナス♡ナイト",
-	"date": "2021/11/04",
+	"date": "2021/12/04",
 	"source": "gacha",
 	"desc": "「ホワイト・シティ・ライツガチャ」で追加"
 },
@@ -6241,7 +6230,7 @@ const RawCardList = [
 	"type": "Sp",
 	"cn1": "まいったなぁ",
 	"cn2": "WATER BLUE NEW WORLD",
-	"date": "2021/11/04",
+	"date": "2021/12/04",
 	"source": "gacha",
 	"desc": "「ホワイト・シティ・ライツガチャ」で追加"
 },
@@ -6253,7 +6242,7 @@ const RawCardList = [
 	"type": "Sp",
 	"cn1": "光のお花畑",
 	"cn2": "ルミナス♡ナイト",
-	"date": "2021/11/04",
+	"date": "2021/12/04",
 	"source": "gacha",
 	"desc": "「ホワイト・シティ・ライツガチャ」で追加"
 },
@@ -6265,7 +6254,7 @@ const RawCardList = [
 	"type": "Sk",
 	"cn1": "ありがとう、みんな！",
 	"cn2": "ルミナス♡ナイト",
-	"date": "2021/11/07",
+	"date": "2021/12/07",
 	"source": "reward",
 	"desc": "イベント「ホワイト・シティ・ライツ」報酬"
 },
@@ -6294,6 +6283,18 @@ const RawCardList = [
 	"desc": "イベント「ホワイト・シティ・ライツ」報酬 (ランキング枠)"
 },
 {
+	"id": 593,
+	"name": "Eli",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "熱々のうちに召し上がれ",
+	"cn2": "スノーファンタジー",
+	"date": "2021/12/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
 	"id": 594,
 	"name": "Karin",
 	"rare": "SR",
@@ -6301,9 +6302,201 @@ const RawCardList = [
 	"type": "Vo",
 	"cn1": "ここ、さっきも通ったような……",
 	"cn2": "L！L！L！ (Love the Life We Live)",
-	"date": "2021/11/14",
+	"date": "2021/12/14",
 	"source": "none",
 	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 595,
+	"name": "Lanzhu",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "うわぁ、すごいご馳走！",
+	"cn2": "Luxury Christmas",
+	"date": "2021/12/18",
+	"source": "gacha",
+	"desc": "「X'masはゴージャスにガチャ」で追加"
+},
+{
+	"id": 596,
+	"name": "Dia",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "悩んでしまいますわね",
+	"cn2": "WATER NEW BLUE WORLD",
+	"date": "2021/12/18",
+	"source": "gacha",
+	"desc": "「X'masはゴージャスにガチャ」で追加"
+},
+{
+	"id": 597,
+	"name": "Chika",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "動画とか見て勉強したんだ～",
+	"cn2": "Luxury Christmas",
+	"date": "2021/12/18",
+	"source": "gacha",
+	"desc": "「X'masはゴージャスにガチャ」で追加"
+},
+{
+	"id": 598,
+	"name": "Umi",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "毎年すごくワクワクするんです",
+	"cn2": "Luxury Christmas",
+	"date": "2021/12/21",
+	"source": "reward",
+	"desc": "イベント「X'masはゴージャスに」報酬 (ランキング枠)"
+},
+{
+	"id": 599,
+	"name": "Shioriko",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "これで間違いないはず……",
+	"cn2": "L！L！L！ (Love the Life We Live)",
+	"date": "2021/12/21",
+	"source": "reward",
+	"desc": "イベント「X'masはゴージャスに」報酬 (イベントpt枠)"
+},
+{
+	"id": 600,
+	"name": "Rin",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "かわいくておいしいなんて最高",
+	"cn2": 'もぎゅっと"love"で接近中！',
+	"date": "2021/12/21",
+	"source": "reward",
+	"desc": "イベント「X'masはゴージャスに」報酬 (ランキング枠)"
+},
+{
+	"id": 601,
+	"name": "Ayumu",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "うん、待ってて！",
+	"cn2": "祝福のともしび",
+	"date": "2021/12/28",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 602,
+	"name": "Mari",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "楽しいドライブの始まりよ～！",
+	"cn2": "魅惑の怪盗マリー",
+	"date": "2021/12/28",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 603,
+	"name": "Kotori",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "はむっ。ん～、美味しい！",
+	"cn2": 'もぎゅっと"love"で接近中！',
+	"date": "2021/12/28",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 604,
+	"name": "Shizuku",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "ふふっ、雪ウサギです！",
+	"cn2": "L！L！L！ (Love the Life We Live)",
+	"date": "2021/12/28",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 605,
+	"name": "Nico",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "作るものも可愛くなくっちゃね",
+	"cn2": "晴れ晴れ新春",
+	"date": "2022/01/04",
+	"source": "gacha",
+	"desc": "「わくわく！新年女子会！ガチャ」で追加"
+},
+{
+	"id": 606,
+	"name": "Ruby",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Gd",
+	"cn1": "お姉ちゃんから教わったから",
+	"cn2": "WATER BLUE NEW WORLD",
+	"date": "2022/01/04",
+	"source": "gacha",
+	"desc": "「わくわく！新年女子会！ガチャ」で追加"
+},
+{
+	"id": 607,
+	"name": "Ai",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "絶品のおしるこなの、推しだけに",
+	"cn2": "晴れ晴れ新春",
+	"date": "2022/01/04",
+	"source": "gacha",
+	"desc": "「わくわく！新年女子会！ガチャ」で追加"
+},
+{
+	"id": 608,
+	"name": "Emma",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "緊張するけど頑張って書こう！",
+	"cn2": "晴れ晴れ新春",
+	"date": "2022/01/07",
+	"source": "reward",
+	"desc": "イベント「わくわく！新年女子会！」報酬"
+},
+{
+	"id": 609,
+	"name": "Setsuna",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "あとちょっとだったのに！",
+	"cn2": "L！L！L！ (Love the Life We Live)",
+	"date": "2022/01/07",
+	"source": "reward",
+	"desc": "イベント「わくわく！新年女子会！」報酬"
+},
+{
+	"id": 610,
+	"name": "Hanayo",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "稲穂を編み込んでみたの",
+	"cn2": 'もぎゅっと"love"で接近中！',
+	"date": "2022/01/07",
+	"source": "reward",
+	"desc": "イベント「わくわく！新年女子会！」報酬"
 }
 ];
-const LatestUpdate = "2021/12/14 「パーティーガチャ」まで";
+const LatestUpdate = "2021/01/07 イベント「わくわく！新年女子会！」まで";

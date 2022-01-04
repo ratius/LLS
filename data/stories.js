@@ -2063,6 +2063,66 @@ const StoryList = [
 	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
 },
 {
+	"chapter": "メインストーリー / 3rd Season / 第34章「教えて！　Aqours！　前編」",
+	"title": "第1話 いつもの風景",
+	"desc": "スクールアイドルファンサイトで実施が決まったAqoursのための企画。それをAqoursに伝えるため、あなたは内浦に向かった。しかし部室には……",
+	"tag": ["main", "Player", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "456"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第34章「教えて！　Aqours！　前編」",
+	"title": "第2話 Aqoursチャレンジ！",
+	"desc": "千歌の部屋に場所を移しておしゃべりタイム。そこであなたは内浦にきた理由を説明する。それは、スクールアイドルファンサイトがAqoursにやってほしい企画。それは……？",
+	"tag": ["main", "Player", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第34章「教えて！　Aqours！　前編」",
+	"title": "第3話 秘めていた想い！",
+	"desc": "Aqoursチャレンジをすると決めたAqoursのメンバー。その日は解散となり、あなたはそのまま千歌の部屋に泊めてもらうことに。その日の夜、目を覚ますと千歌がいない。どうやら外に出ていったようで……？",
+	"tag": ["main", "Player", "Chika", "Riko", "You"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第34章「教えて！　Aqours！　前編」",
+	"title": "第4話",
+	"desc": "「AqoursのPVが一番だったよ」と言ってもらいたい！　Aqoursチャレンジの内容を決めた千歌は、早速学校で「Aqoursチャレンジ」の話をする。聞いたみんなも盛り上がって、宣伝の手伝いを申し出てくれた",
+	"tag": ["main", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "456"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第34章「教えて！　Aqours！　前編」",
+	"title": "第5話 私が弱点？",
+	"desc": "千歌のAqoursチャレンジ宣言に驚きつつも刺激を受けたAqoursメンバー。それぞれが千歌のAqoursチャレンジのためには自分のパワーアップが必要だと感じ、ますます練習に打ち込む。そんなみんなを眺めながら花丸が思うこととは……？",
+	"tag": ["main", "Rin", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第34章「教えて！　Aqours！　前編」",
+	"title": "第6話 染め上げる世界",
+	"desc": "スクールアイドルとしてパワーアップする、というチャレンジをするため東京に来た花丸。磨くべきところは花丸の得意なことなのではと凛に言われ、困惑する。その日あなたの家に泊まった花丸は、昼間の出来事を話して……？",
+	"tag": ["main", "Player", "Hanamaru", "Shizuku"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第34章「教えて！　Aqours！　前編」",
+	"title": "第7話 残してきたもの",
+	"desc": "千歌提案のAqoursチャレンジ達成のため、厳しい練習を重ねているAqoursメンバー。３年生は鞠莉の部屋に集まって秘密の相談！？",
+	"tag": ["main", "Kanan", "Dia", "Mari"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第34章「教えて！　Aqours！　前編」",
+	"title": "第8話 リトライ！",
+	"desc": "自分たちのAqoursチャレンジを見つけた３年生。毎日の練習のあと、３人だけで秘密の特訓を重ねることに。ハードなトレーニングとともに、そこには笑顔があった",
+	"tag": ["main", "Chika", "Kanan", "Dia", "Mari"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第34章「教えて！　Aqours！　前編」",
+	"title": "第9話 迎えにきたよ！",
+	"desc": "スクールアイドルの大会を翌日に控え、鞠莉たちは東京に向かう。ニジガクにも立ち寄り、３年生同士、話に花を咲かせた。そんな大会前夜を過ごす３人は……？",
+	"tag": ["main", "Player", "Kanan", "Dia", "Mari", "Karin", "Kanata", "Emma"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第34章「教えて！　Aqours！　前編」",
+	"title": "第10話 私たちの、今！",
+	"desc": "東京大会で優勝を果たした３年生たち。それぞれが残してきた想いを抱えて、千歌たちのもとに戻る。そこでまた始まるいつもの日々も、なんだかほんの少し違って見えて……？",
+	"tag": ["main", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby"]
+},
+{
 	"chapter": "イベントエピソード「秘密のパーティー！」",
 	"title": "第1話",
 	"desc": "Aqoursやニジガクの皆との親睦を深めようと考えた穂乃果は、サプライズパーティーを計画する。",
@@ -4300,6 +4360,48 @@ const StoryList = [
 	"tag": ["event", "Hanayo", "Nico", "Kanan", "You", "Kanata", "Rina"]
 },
 {
+	"chapter": "イベントエピソード「X’masはゴージャスに」",
+	"title": "第1話",
+	"desc": "クリスマスシーズンが到来し、街もすっかりクリスマスムードに染まっている。ランジュは、皆をさそってクリスマスパーティーを開きたいようだ。",
+	"tag": ["event", "Umi", "Rin", "Chika", "Dia", "Shioriko", "Lanzhu"]
+},
+{
+	"chapter": "イベントエピソード「X’masはゴージャスに」",
+	"title": "第2話",
+	"desc": "ランジュはパーティーの準備に一流のスタッフを呼ぶつもりだったが、栞子の提言により、クリスマスパーティーは自分たちで準備することになった。今日はそのための買い出しだ。",
+	"tag": ["event", "Umi", "Rin", "Chika", "Dia", "Shioriko", "Lanzhu"]
+},
+{
+	"chapter": "イベントエピソード「X’masはゴージャスに」",
+	"title": "第3話",
+	"desc": "パーティーの会場は栞子の部屋だ。栞子は、ダイヤと海未に、他のメンバーよりも早く来るようにと言ったようだが……？",
+	"tag": ["event", "Umi", "Rin", "Chika", "Dia", "Shioriko", "Lanzhu"]
+},
+{
+	"chapter": "イベントエピソード「X’masはゴージャスに」",
+	"title": "第4話",
+	"desc": "他のみんなもやってきた。千歌はダイヤに見守られながらケーキの飾り付けを、ランジュは栞子の指示の下で料理の盛り付けを担当することになった。",
+	"tag": ["event", "Chika", "Dia", "Shioriko", "Lanzhu"]
+},
+{
+	"chapter": "イベントエピソード「X’masはゴージャスに」",
+	"title": "第5話",
+	"desc": "「飾り付け隊長」を自称する凛は、海未と協力しながら部屋の飾りつけをしていく。パーティーの準備が完了までもう少し！",
+	"tag": ["event", "Umi", "Rin", "Chika", "Dia", "Shioriko", "Lanzhu"]
+},
+{
+	"chapter": "イベントエピソード「X’masはゴージャスに」",
+	"title": "第6話",
+	"desc": "全ての準備が終わり、ランジュの掛け声でクリスマスパーティーが始まった。",
+	"tag": ["event", "Umi", "Rin", "Chika", "Dia", "Shioriko", "Lanzhu"]
+},
+{
+	"chapter": "イベントエピソード「X’masはゴージャスに」",
+	"title": "第7話",
+	"desc": "クリスマスパーティーの食事は大好評。そしてお待ちかねのプレゼント交換会の時間！",
+	"tag": ["event", "Umi", "Rin", "Chika", "Dia", "Shioriko", "Lanzhu"]
+},
+{
 	"color": "Honoka",
 	"chapter": "キズナエピソード 高坂穂乃果",
 	"title": "1話 一緒に前を向いて",
@@ -4446,6 +4548,13 @@ const StoryList = [
 	"chapter": "キズナエピソード 高坂穂乃果",
 	"title": "21話 海へのあこがれ？",
 	"desc": "仲間と支え合うことで、Printempsのユニットライブは大成功。新しい景色を見つけることができた穂乃果。ひとときの休息、穂乃果は海へ向かっていた。",
+	"tag": ["kizuna", "Player", "Honoka", "Chika", "Mari", "Ayumu"]
+},
+{
+	"color": "Honoka",
+	"chapter": "キズナエピソード 高坂穂乃果",
+	"title": "22話 アキバの海",
+	"desc": "千歌たちと共に、内浦とお台場で海を満喫した穂乃果。さわやかな潮風に穂乃果も満足そう……と思いきや、アキバにも海がほしいと言いだして……！？",
 	"tag": ["kizuna", "Player", "Honoka", "Chika", "Mari", "Ayumu"]
 },
 {
@@ -4596,6 +4705,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Honoka", "Eli", "Nico", "Dia", "Setsuna"]
 },
 {
+	"color": "Eli",
+	"chapter": "キズナエピソード 絢瀬絵里",
+	"title": "22話 心惹かれるもの",
+	"desc": "スクールアイドルに興味を持ってもらうための、新聞を作成することになった絵里たち。スクールアイドルの華やかな写真を見て、絵里は何か違和感を覚えたようで……。",
+	"tag": ["kizuna", "Player", "Eli", "Ayumu", "Karin"]
+},
+{
 	"color": "Kotori",
 	"chapter": "キズナエピソード 南ことり",
 	"title": "1話 ケンカするほど仲が良い？",
@@ -4743,6 +4859,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Honoka", "Kotori", "Umi"]
 },
 {
+	"color": "Kotori",
+	"chapter": "キズナエピソード 南ことり",
+	"title": "22話 出会えた奇跡",
+	"desc": "あなたと歩夢が幼なじみだったように、ことりも幼い頃からいつも穂乃果と海未と一緒だった。あなたの話を聞いたことりは、Aqoursにも幼なじみチームがいることを思い出し……。",
+	"tag": ["kizuna", "Player", "Kotori", "Umi"]
+},
+{
 	"color": "Umi",
 	"chapter": "キズナエピソード 園田海未",
 	"title": "1話 スクールアイドルへの想い",
@@ -4887,6 +5010,13 @@ const StoryList = [
 	"chapter": "キズナエピソード 園田海未",
 	"title": "21話 働き者海未ちゃん",
 	"desc": "自分の気持ちに素直になれた海未は、ついにユニットライブを無事成功させることができた。日々の練習を怠らない海未は、今日もエマと……",
+	"tag": ["kizuna", "Player", "Umi", "Emma"]
+},
+{
+	"color": "Umi",
+	"chapter": "キズナエピソード 園田海未",
+	"title": "22話 のんびり大会！？",
+	"desc": "勉強に部活に、休む暇もなく活動している海未。のんびりする時間がもったいない気がしてしまう、と話す海未に対して、エマはのんびり大会の開催を宣言！？",
 	"tag": ["kizuna", "Player", "Umi", "Emma"]
 },
 {
@@ -5038,6 +5168,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Rin", "Ai"]
 },
 {
+	"color": "Rin",
+	"chapter": "キズナエピソード 星空凛",
+	"title": "22話 楽しいの準備",
+	"desc": "テスト勉強をしなくちゃいけないし、次のライブも決まっていないし、つまらない！！　凛の言葉が、負の連鎖を起こしてしまったことにショックを受けてしまった凛。負の連鎖ではなく、楽しいの連鎖を起こすために、相談することに。",
+	"tag": ["kizuna", "Player", "Rin", "Ai"]
+},
+{
 	"color": "Maki",
 	"chapter": "キズナエピソード 西木野真姫",
 	"title": "1話 返事しなくちゃいけない？",
@@ -5182,6 +5319,13 @@ const StoryList = [
 	"chapter": "キズナエピソード 西木野真姫",
 	"title": "21話 自分で作っちゃおう！",
 	"desc": "ユニットライブを成功させ、日に日にスクールアイドルへの思い入れが強くなってくる真姫。穂乃果と千歌が考えている計画を聞いた真姫は……。",
+	"tag": ["kizuna", "Player", "Honoka", "Maki", "Chika"]
+},
+{
+	"color": "Maki",
+	"chapter": "キズナエピソード 西木野真姫",
+	"title": "22話 なんでもカンペキ！？",
+	"desc": "新しいイベントを計画中の穂乃果と千歌。周囲を巻き込んで盛り上げていく二人の姿を、あこがれのまなざしで見つめる真姫に、自分でイベントしの作ることを提案したあなただが……。",
 	"tag": ["kizuna", "Player", "Honoka", "Maki", "Chika"]
 },
 {
@@ -5332,6 +5476,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Eli", "Rin", "Maki", "Nozomi", "Kanan"]
 },
 {
+	"color": "Nozomi",
+	"chapter": "キズナエピソード 東條希",
+	"title": "22話 頑張る子の味方！",
+	"desc": "希が自分をあまり占わないのは、自分よりも誰かの助けになりたいから。そんな希が自分のことを占うと、今すぐ運命の人が現れるという結果が出て……！？",
+	"tag": ["kizuna", "Player", "Rin", "Maki", "Nozomi", "Kanan"]
+},
+{
 	"color": "Hanayo",
 	"chapter": "キズナエピソード 小泉花陽",
 	"title": "1話 スクールアイドル大好き！",
@@ -5480,6 +5631,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Hanayo", "Shioriko"]
 },
 {
+	"color": "Hanayo",
+	"chapter": "キズナエピソード 小泉花陽",
+	"title": "22話 チケットの壁",
+	"desc": "アドバイスをもらいたい、と花陽のもとを訪れた栞子。花陽は、栞子にスクールアイドルの魅力をもっと知ってもらうため、おすすめのスクールアイドルを紹介することに。しかし、そこには思わぬ障壁が……。",
+	"tag": ["kizuna", "Player", "Hanayo", "Shioriko"]
+},
+{
 	"color": "Nico",
 	"chapter": "キズナエピソード 矢澤にこ",
 	"title": "1話 手伝いなんていらないっ！",
@@ -5625,6 +5783,13 @@ const StoryList = [
 	"chapter": "キズナエピソード 矢澤にこ",
 	"title": "21話 セクシーの達人へ、挑戦！",
 	"desc": "自分の中にある「かっこいい」に気づいたにこは、BiBiのユニットライブを大成功させた。そんなにこが、次に手に入れるのは……「セクシー」！？",
+	"tag": ["kizuna", "Player", "Nico", "Karin"]
+},
+{
+	"color": "Nico",
+	"chapter": "キズナエピソード 矢澤にこ",
+	"title": "22話 セクシー対決！？",
+	"desc": "次は「セクシー」を手に入れる！と意気込んだにこだが、セクシーさを身につける必要はないのでは？と果林に言われてしまう。落ち込んだ様子のにこを心配して、あなたははげましの声をかけるが……。",
 	"tag": ["kizuna", "Player", "Nico", "Karin"]
 },
 {
@@ -8981,6 +9146,13 @@ const StoryList = [
 	"chapter": "キズナエピソード ミア・テイラー",
 	"title": "7話 愛するベースボール！",
 	"desc": "あなたの前で歌い、「歌うことの楽しさ」に気づくことができたミア。ある日あなたはミアと待ち合わせをしていたが……？",
+	"tag": ["kizuna", "Player", "Mia"]
+},
+{
+	"color": "Mia",
+	"chapter": "キズナエピソード ミア・テイラー",
+	"title": "8話 初めての野球観戦",
+	"desc": "ミアに野球のことを教わるうちに興味が出てきたあなた。今日はミアと野球観戦！",
 	"tag": ["kizuna", "Player", "Mia"]
 },
 {
