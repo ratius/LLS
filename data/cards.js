@@ -6476,18 +6476,6 @@ const RawCardList = [
 },
 {
 	"id": 609,
-	"name": "Setsuna",
-	"rare": "SR",
-	"atr": "Elegant",
-	"type": "Sk",
-	"cn1": "あとちょっとだったのに！",
-	"cn2": "L！L！L！ (Love the Life We Live)",
-	"date": "2022/01/07",
-	"source": "reward",
-	"desc": "イベント「わくわく！新年女子会！」報酬"
-},
-{
-	"id": 610,
 	"name": "Hanayo",
 	"rare": "SR",
 	"atr": "Cool",
@@ -6496,7 +6484,43 @@ const RawCardList = [
 	"cn2": 'もぎゅっと"love"で接近中！',
 	"date": "2022/01/07",
 	"source": "reward",
-	"desc": "イベント「わくわく！新年女子会！」報酬"
+	"desc": "イベント「わくわく！新年女子会！」報酬 (交換所枠)"
+},
+{
+	"id": 610,
+	"name": "Setsuna",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "あとちょっとだったのに！",
+	"cn2": "L！L！L！ (Love the Life We Live)",
+	"date": "2022/01/07",
+	"source": "reward",
+	"desc": "イベント「わくわく！新年女子会！」報酬 (ランキング枠)"
+},
+{
+	"id": 611,
+	"name": "Rina",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "私、今すごく幸せ",
+	"cn2": "Rina♡Cat",
+	"date": "2022/01/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 612,
+	"name": "Honoka",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "すっごくいい感じだった！",
+	"cn2": "僕らは今のなかで",
+	"date": "2022/01/14",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
 }
 ];
-const LatestUpdate = "2021/01/07 イベント「わくわく！新年女子会！」まで";
+const LatestUpdate = "2021/01/14 「パーティーガチャ」まで";

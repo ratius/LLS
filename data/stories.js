@@ -4402,6 +4402,48 @@ const StoryList = [
 	"tag": ["event", "Umi", "Rin", "Chika", "Dia", "Shioriko", "Lanzhu"]
 },
 {
+	"chapter": "イベントエピソード「わくわく！新年女子会！」",
+	"title": "第1話",
+	"desc": "エマは、日本の正月の文化について興味津々な様子。",
+	"tag": ["event", "Ai", "Setsuna", "Emma"]
+},
+{
+	"chapter": "イベントエピソード「わくわく！新年女子会！」",
+	"title": "第2話",
+	"desc": "新年会は愛の部屋で行われることになった。そして当日、ルビィは振り袖についての知識を披露する。",
+	"tag": ["event", "Hanayo", "Nico", "Ruby", "Ai", "Setsuna", "Emma"]
+},
+{
+	"chapter": "イベントエピソード「わくわく！新年女子会！」",
+	"title": "第3話",
+	"desc": "お腹が空いて仕方ない様子の花陽を見て、にこは料理に精を出す。振る舞ったのは……鍋料理！",
+	"tag": ["event", "Hanayo", "Nico", "Ruby", "Ai", "Setsuna", "Emma"]
+},
+{
+	"chapter": "イベントエピソード「わくわく！新年女子会！」",
+	"title": "第4話",
+	"desc": "花陽は、この日のためにしめ縄キットを持ってきた。みんなは思い思いのしめ縄を作る。出来たしめ縄を撮影しようとしたところ、チャイムが鳴り……？",
+	"tag": ["event", "Hanayo", "Nico", "Ruby", "Ai", "Setsuna", "Emma"]
+},
+{
+	"chapter": "イベントエピソード「わくわく！新年女子会！」",
+	"title": "第5話",
+	"desc": "チャイムの音は、愛が頼んでいたおしるこの配達だった。愛が子供の頃から食べていたというおしるこを、みんなは気に入るだろうか？",
+	"tag": ["event", "Hanayo", "Nico", "Ruby", "Ai", "Setsuna", "Emma"]
+},
+{
+	"chapter": "イベントエピソード「わくわく！新年女子会！」",
+	"title": "第6話",
+	"desc": "ついつい食べすぎてしまった6人。せつ菜は、みんなで遊べる「体を動かすゲーム」を持ってきた。負けたら罰ゲームで顔に墨を塗られてしまう！",
+	"tag": ["event", "Hanayo", "Nico", "Ruby", "Ai", "Setsuna", "Emma"]
+},
+{
+	"chapter": "イベントエピソード「わくわく！新年女子会！」",
+	"title": "第7話",
+	"desc": "「墨」からエマが連想したのは書き初め。ゲームは中断して、みんなで今年の抱負を書くことにした。",
+	"tag": ["event", "Hanayo", "Nico", "Ruby", "Ai", "Setsuna", "Emma"]
+},
+{
 	"color": "Honoka",
 	"chapter": "キズナエピソード 高坂穂乃果",
 	"title": "1話 一緒に前を向いて",
@@ -5941,6 +5983,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Chika"]
 },
 {
+	"color": "Chika",
+	"chapter": "キズナエピソード 高海千歌",
+	"title": "22話 楽しいお買い物！",
+	"desc": "休日。Aqoursメンバーへのプレゼントを用意するため、あなたは彼方に助力を頼んだ。千歌と３人で美味しいプレゼントを作ろう！",
+	"tag": ["kizuna", "Player", "Chika", "Kanata"]
+},
+{
 	"color": "Riko",
 	"chapter": "キズナエピソード 桜内梨子",
 	"title": "1話 コンサートホールにて",
@@ -6088,6 +6137,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Riko"]
 },
 {
+	"color": "Riko",
+	"chapter": "キズナエピソード 桜内梨子",
+	"title": "22話 サプライズ同行者",
+	"desc": "沼津に遊びにきたあなたは、あるサプライズを用意して梨子の元に向かう。しかし、梨子に不審そうな顔で見つめられてしまい……",
+	"tag": ["kizuna", "Player", "Riko", "Ai"]
+},
+{
 	"color": "Kanan",
 	"chapter": "キズナエピソード 松浦果南",
 	"title": "1話 淡島初上陸！",
@@ -6232,6 +6288,13 @@ const StoryList = [
 	"chapter": "キズナエピソード 松浦果南",
 	"title": "21話 果南先輩は今日も元気",
 	"desc": "果南のトレーニングをサポートするため、一緒にランニングをするあなた。元気な果南のペースになかなかついて行けず……",
+	"tag": ["kizuna", "Player", "Umi", "Kanan"]
+},
+{
+	"color": "Kanan",
+	"chapter": "キズナエピソード 松浦果南",
+	"title": "22話 海未の相談",
+	"desc": "相談がある、と果南を訪ねてきたのはμ'sの海未。あなたも加わり、果南と共に海未の事情を聞く。解決策は見つかるのか？",
 	"tag": ["kizuna", "Player", "Umi", "Kanan"]
 },
 {
@@ -6383,6 +6446,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Dia"]
 },
 {
+	"color": "Dia",
+	"chapter": "キズナエピソード 黒澤ダイヤ",
+	"title": "22話 悩める姉達",
+	"desc": "ルビィへのプレゼントを選ぶため、あなたはダイヤと共に買い物にやってきた。そこにもうひとり、ダイヤの気持ちを理解する頼もしい助っ人も合流。３人でプレゼント選びへ。",
+	"tag": ["kizuna", "Player", "Eli", "Dia"]
+},
+{
 	"color": "You",
 	"chapter": "キズナエピソード 渡辺曜",
 	"title": "1話 沼津巡り！",
@@ -6530,6 +6600,13 @@ const StoryList = [
 	"title": "21話 水泳部見学",
 	"desc": "練習のサポート日を間違えて、曜が水泳部の日に浦女に来てしまったあなた。プールに様子を見に行くと、曜から水泳部を見学していくように誘われて……",
 	"tag": ["kizuna", "Player", "You"]
+},
+{
+	"color": "You",
+	"chapter": "キズナエピソード 渡辺曜",
+	"title": "22話 聖地巡礼",
+	"desc": "浦女の水泳部見学のことをせつ菜に話したあなた。それを聞いたせつ菜は、自分も見学に行きたいと言い出す。その理由はなんとも彼女らしい内容だった。",
+	"tag": ["kizuna", "Player", "You", "Setsuna"]
 },
 {
 	"color": "Yoshiko",
@@ -6680,6 +6757,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Yoshiko"]
 },
 {
+	"color": "Yoshiko",
+	"chapter": "キズナエピソード 津島善子",
+	"title": "22話 リトルデーモン招集",
+	"desc": "第２回動画制作会議のために善子の部屋に集まったのは、あなたとしずく、そして凛。次回の動画はこの４人で作ることになった。早速会議を始めるあなた達。内容は無事に決まるのか？",
+	"tag": ["kizuna", "Player", "Rin", "Yoshiko", "Shizuku"]
+},
+{
 	"color": "Hanamaru",
 	"chapter": "キズナエピソード 国木田花丸",
 	"title": "1話 探し物",
@@ -6824,6 +6908,13 @@ const StoryList = [
 	"chapter": "キズナエピソード 国木田花丸",
 	"title": "21話 些細な違和感",
 	"desc": "エマ、花陽とランチビュッフェに行く計画を立てているあなた。そこに花丸も誘おうと連絡を取るが、なかなか返事が返ってこず……",
+	"tag": ["kizuna", "Player", "Hanayo", "Hanamaru", "Emma"]
+},
+{
+	"color": "Hanamaru",
+	"chapter": "キズナエピソード 国木田花丸",
+	"title": "21話 お疲れ様ランチビュッフェ",
+	"desc": "待ちに待ったランチビュッフェ当日。美味しい料理を思う存分食べる４人は、幸せな気持ちに包まれるのだった。",
 	"tag": ["kizuna", "Player", "Hanayo", "Hanamaru", "Emma"]
 },
 {
@@ -6974,6 +7065,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Mari", "Shioriko"]
 },
 {
+	"color": "Mari",
+	"chapter": "キズナエピソード 小原鞠莉",
+	"title": "22話 沼津のマリーにおまかせ！",
+	"desc": "鞠莉から良いパフォーマンスの秘訣を教えてもらうべく、沼津にやって来たあなたと栞子。鞠莉は２人に何を教えるつもりなのか？",
+	"tag": ["kizuna", "Player", "Mari", "Shioriko"]
+},
+{
 	"color": "Ruby",
 	"chapter": "キズナエピソード 黒澤ルビィ",
 	"title": "1話 放課後の秘密",
@@ -7119,6 +7217,13 @@ const StoryList = [
 	"chapter": "キズナエピソード 黒澤ルビィ",
 	"title": "21話 衣装デザインを考えながら",
 	"desc": "ルビィと一緒に自宅でAqoursの衣装のデザインを考えるあなた。一緒に悩みながら作業を続け、どうにか数枚描き上げた２人は、気分転換に外へ出ることに。",
+	"tag": ["kizuna", "Player", "Kotori", "Ruby"]
+},
+{
+	"color": "Ruby",
+	"chapter": "キズナエピソード 黒澤ルビィ",
+	"title": "22話 ことりと一緒",
+	"desc": "あなたとルビィに声を掛けてきたのは、μ'sのことりだった。偶然にも同じ目的を持つ３人は、一緒に手芸店に向かうことに。",
 	"tag": ["kizuna", "Player", "Kotori", "Ruby"]
 },
 {
@@ -7324,7 +7429,7 @@ const StoryList = [
 	"color": "Ayumu",
 	"chapter": "キズナエピソード 上原歩夢",
 	"title": "29話 下調べは誰のため？",
- 	"desc": "楽しシミにしていた歩夢の家族とあなたの家族との合同旅行。行先は横浜！",
+ 	"desc": "楽しみにしていた歩夢の家族とあなたの家族との合同旅行。行先は横浜！",
 	"tag": ["kizuna", "Player", "Ayumu"]
 },
 {
