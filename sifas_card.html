@@ -15,6 +15,22 @@
 <link rel="stylesheet" href="main.css">
 <style><!--
 
+#legend {
+	border-collapse: collapse;
+	border: solid 2px #f29600;
+}
+
+#legend thead {
+	background-color: #ffefd6;
+}
+
+#legend td, #legend th {
+	padding: 4px 12px;
+	border-top: solid 1px #ccc;
+	border-right: solid 1px #ccc;
+}
+
+
 table.cardlist {
 	text-align: center;
 }
@@ -48,6 +64,7 @@ table.cardlist {
 	width: 100px;
 	height: 40px;
 	font-size: 80%;
+	padding: 3px;
 }
 .cardlist td img {
 	vertical-align: bottom;
@@ -56,7 +73,6 @@ table.cardlist {
 td:hover .tool-tip {
   display: block;
 }
-
 
 .UR > th {
 	background-image: url(img/UR.png);
@@ -70,13 +86,13 @@ td:hover .tool-tip {
 .cap { font-size: 120%; }
 .sleep { color: #999; }
 
-.gacha  { background-color: #adf; padding: 3px;}
-.reward { background-color: #abf; padding: 3px;}
-.fes    { background-color: #fac; padding: 3px;}
-.release{ background-color: #eee; padding: 3px;}
-.party  { background-color: #fd8; padding: 3px;}
-.none   { background-color: #ddd; padding: 3px;}
-.na     { background-color: #fff8f0; padding: 1px; border: solid 2px #ecb; color: #ba9;}
+.gacha  { background-color: #adf;}
+.reward { background-color: #abf;}
+.fes    { background-color: #fac;}
+.release{ background-color: #eee;}
+.party  { background-color: #ed8;}
+.none   { background-color: #ddd;}
+.na     { background-color: #ffefe7; padding: 1px; border: solid 2px #ecb; color: #ba9;}
 
 .Honoka  { background-color: rgb(255, 163,  54);}
 .Eli     { background-color: rgb(122, 238, 255);}
@@ -127,7 +143,7 @@ const CharName = [
 const ListMuse = [0,1,2,3,4,5,6,7,8];
 const ListAqours = [9,10,11,12,13,14,15,16,17];
 const ListNiji = [18,19,20,21,22,23,24,25,26,27,28,29];
-const ToolTipSource = {'gacha':'Ｅ特効', 'reward':'Ｅ報酬', 'fes':'フェス', 'party':'ﾊﾟｰﾃｨｰ', 'none':'非イベ', 'release':'初期　'};
+const ToolTipSource = {'gacha':'Ｅ特効', 'reward':'Ｅ報酬', 'fes':'Ｆ限定', 'party':'Ｐ限定', 'none':'非イベ', 'release':'初期　'};
 const urlParam = location.search.substring(1);
 
 // ■生データから新たなデータを作成
@@ -154,8 +170,24 @@ function LoadRawData(){
 	}
 }
 
-// ■テーブルを作るための関数
-function DrawTable(group){
+// ■凡例を作成
+function DrawLegend(){
+	var Output =
+	  '<table id="legend"><thead><th>表記<\/th><th>解説<\/th><\/thead><tbody>'
+	+ '<tr><th class="release">'+ ToolTipSource['release']+ '<\/th><td>恒常。そのキャラクターの実装と同時に登場したカード<\/td><\/tr>'
+	+ '<tr><th class="none">'   + ToolTipSource['none']   + '<\/th><td>恒常。初期実装分でなく、イベントとも無関係なカード<\/td><\/tr>'
+	+ '<tr><th class="gacha">'  + ToolTipSource['gacha']  + '<\/th><td>恒常。イベントガチャで登場<\/td><\/tr>'
+	+ '<tr><th class="reward">' + ToolTipSource['reward'] + '<\/th><td>イベント報酬として登場<\/td><\/tr>'
+	+ '<tr><th class="fes">'    + ToolTipSource['fes']    + '<\/th><td><b>フェス限定<\/b>。特定のガチャから排出<\/td><\/tr>'
+	+ '<tr><th class="party">'  + ToolTipSource['party']  + '<\/th><td><b>パーティーガチャ限定<\/b>。特定のガチャから排出<\/td><\/tr>'
+	+ '<\/tbody><\/table>';
+
+	return Output;
+}
+
+
+// ■テーブルを作成
+function DrawTable(group, groupsub){
 	var Output = '<div class="card-box">\n<table class="cardlist" style="min-width: ' + (100+group.length*108) + 'px">\n';
 
 	//■ヘッダー
@@ -174,7 +206,13 @@ function DrawTable(group){
 		Rarity = ['UR','SR'][z];
 		OutputTmp = '';
 		blank = 0; //仕込み
-		OutputTmp += '<tr class="' + Rarity +'"><th><span class="cap">' + Rarity + ' ' + (y+1) + '枚目<\/span><\/th>\n';
+		OutputTmp += '<tr class="' + Rarity +'"><th><span class="cap">' + Rarity + ' ' + (y+1) + '枚目<\/span>';
+		if(z==1){ //SRの場合、衣装名も出す
+			if(y < OutfitList[groupsub].length){
+				OutputTmp += '<br><span style="font-weight:normal">(' + OutfitList[groupsub][y] + ')<\/span>';
+			}
+		}
+		OutputTmp +=  '<\/th>\n';
 		
 		for(x=0; x<group.length; x++){
 			if(y < CardList[group[x] + z*CharId.length].length){ //あるならば
@@ -184,7 +222,7 @@ function DrawTable(group){
 					continue;
 				}
 				if(ListTmp.id === -1){
-					OutputTmp += '<td class="na" rowspan="' + ListTmp.offset +'">N/A<\/td>\n';
+					OutputTmp += '<td class="na" rowspan="' + ListTmp.offset +'"><\/td>\n';
 				} else {
 					ToolTipTmp = (ListTmp.id ? 'No.' + ListTmp.id : '') + ' ' + ListTmp.desc;
 					
@@ -263,14 +301,18 @@ loadScript("data/cards.js", function() {
 
 	document.getElementById("MainArea").innerHTML =
 	  '<h3 style="background-color:#ddd; color:#777; border-color:#999;">まえがき<\/h3>'
-	+ '<p>スクフェスALL STARSにおける、UR・SRの追加日時のまとめです。<br>PCで閲覧している場合、セルにカーソルを当てることで詳しい情報のツールチップが出現します。'
-	+ '<br>最終更新：' + LatestUpdate + '<\/p>'
+	+ '<p>スクフェスALL STARSにおける、UR・SRの追加日時のまとめです。<br>'
+	+ '追加メンバーの「○枚目」は、URはゲーム内のパラメータの合計値を、SRは衣装セットを基準に設定しています。<br>'
+	+ 'PCで閲覧している場合、セルにカーソルを当てることで詳しい情報のツールチップが出現します。'
+	+ '<br>掲載データ範囲：' + LatestUpdate + '<\/p>'
+	+ '<h3 class="liella">凡例<\/h3>'
+	+ DrawLegend()
 	+ '<h3 class="muse">μ’s<\/h3>'
-	+ DrawTable(ListMuse)
+	+ DrawTable(ListMuse, 0)
 	+ '<h3 class="aqours">Aqours<\/h3>'
-	+ DrawTable(ListAqours)
+	+ DrawTable(ListAqours, 1)
 	+ '<h3 class="niji">ニジガク<\/h3>'
-	+ DrawTable(ListNiji);
+	+ DrawTable(ListNiji, 2);
 });
 --></script>
 
@@ -278,8 +320,10 @@ loadScript("data/cards.js", function() {
 <table class="history">
 <tbody>
 <tr>
-	<td>2021/09/26</td>
-	<td><span class="new"></span>SR三船栞子（ナチュラルGd）を8枚目→7枚目に変更</td>
+	<td>2021/01/19</td>
+	<td><span class="new"></span>凡例を追加<br>
+		<span class="new"></span>SRの行にセット名を明記<br>
+		<span class="fix"></span>栞子・ランジュ・ミアの欠損値のデザインを変更</td>
 </tr>
 <tr>
 	<td>2021/09/08</td>
