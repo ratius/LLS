@@ -1,3 +1,9 @@
+const OutfitList = [
+	["初期", "スノハレ", "ぼららら", "それ僕", "WR", "ユメトビ", "キラセン", "ノーブラ", "AA", "もぎゅ", "僕今"],
+	["初期", "君ここ", "青ジャン", "ブラメロ", "恋アク", "未ホラ", "ミラウェ", "HPT", "未ドリ", "WBNW", "MY舞"],
+	["初期", "アニマル", "ローズ", "マーチング", "LUMF", "3rdソロ", "虹パ", "JB!!!", "虹色の心", "L！L！L！", "ワルツ"]
+];
+
 const RawCardList = [
 {"id": -1, "name": "Shioriko", "rare": "UR", "offset":3 },
 {"id": -1, "name": "Mia", "rare": "UR", "offset":8 },
@@ -5940,8 +5946,8 @@ const RawCardList = [
 	"rare": "SR",
 	"atr": "Smile",
 	"type": "Sp",
-	"cn1": "リクエストがあるなら聞くわ",
-	"cn2": 'もぎゅっと"love"で接近中！',
+	"cn1": "うぅ、梨子と凛を助けなきゃ！",
+	"cn2": "もぎゅっと”love”で接近中！",
 	"date": "2021/10/23",
 	"source": "reward",
 	"desc": "イベント「モンスターハロウィン！」報酬 (ランキング枠)"
@@ -5989,7 +5995,7 @@ const RawCardList = [
 	"atr": "Natural",
 	"type": "Vo",
 	"cn1": "あと半分だよ。頑張って",
-	"cn2": 'もぎゅっと"love"で接近中！',
+	"cn2": "もぎゅっと”love”で接近中！",
 	"date": "2021/10/30",
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
@@ -6061,7 +6067,7 @@ const RawCardList = [
 	"atr": "Smile",
 	"type": "Vo",
 	"cn1": "はぐれないでよ、歩夢",
-	"cn2": 'もぎゅっと"love"で接近中！',
+	"cn2": "もぎゅっと”love”で接近中！",
 	"date": "2021/11/07",
 	"source": "reward",
 	"desc": "イベント「学校祭でおもてなし」報酬 (ランキング枠)"
@@ -6145,7 +6151,7 @@ const RawCardList = [
 	"atr": "Smile",
 	"type": "Sk",
 	"cn1": "穂むらの秋限定の和菓子",
-	"cn2": 'もぎゅっと"love"で接近中！',
+	"cn2": "もぎゅっと”love”で接近中！",
 	"date": "2021/11/23",
 	"source": "reward",
 	"desc": "イベント「日本流サンクスギビングデー」報酬 (イベントpt枠)"
@@ -6205,7 +6211,7 @@ const RawCardList = [
 	"atr": "Cool",
 	"type": "Sk",
 	"cn1": "なんていい景色",
-	"cn2": 'もぎゅっと"love"で接近中！',
+	"cn2": "もぎゅっと”love”で接近中！",
 	"date": "2021/11/29",
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
@@ -6265,7 +6271,7 @@ const RawCardList = [
 	"atr": "Pure",
 	"type": "Sk",
 	"cn1": "最高の瞬間を切り取って！",
-	"cn2": 'もぎゅっと"love"で接近中！',
+	"cn2": "もぎゅっと”love”で接近中！",
 	"date": "2021/12/07",
 	"source": "reward",
 	"desc": "イベント「ホワイト・シティ・ライツ」報酬 (交換所枠)"
@@ -6352,7 +6358,7 @@ const RawCardList = [
 	"cn2": "Luxury Christmas",
 	"date": "2021/12/21",
 	"source": "reward",
-	"desc": "イベント「X'masはゴージャスに」報酬 (ランキング枠)"
+	"desc": "イベント「X'masはゴージャスに」報酬"
 },
 {
 	"id": 599,
@@ -6373,7 +6379,7 @@ const RawCardList = [
 	"atr": "Pure",
 	"type": "Vo",
 	"cn1": "かわいくておいしいなんて最高",
-	"cn2": 'もぎゅっと"love"で接近中！',
+	"cn2": "もぎゅっと”love”で接近中！",
 	"date": "2021/12/21",
 	"source": "reward",
 	"desc": "イベント「X'masはゴージャスに」報酬 (ランキング枠)"
@@ -6409,7 +6415,7 @@ const RawCardList = [
 	"atr": "Active",
 	"type": "Gd",
 	"cn1": "はむっ。ん～、美味しい！",
-	"cn2": 'もぎゅっと"love"で接近中！',
+	"cn2": "もぎゅっと”love”で接近中！",
 	"date": "2021/12/28",
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
@@ -6481,7 +6487,7 @@ const RawCardList = [
 	"atr": "Cool",
 	"type": "Vo",
 	"cn1": "稲穂を編み込んでみたの",
-	"cn2": 'もぎゅっと"love"で接近中！',
+	"cn2": "もぎゅっと”love”で接近中！",
 	"date": "2022/01/07",
 	"source": "reward",
 	"desc": "イベント「わくわく！新年女子会！」報酬 (交換所枠)"
@@ -6521,6 +6527,78 @@ const RawCardList = [
 	"date": "2022/01/14",
 	"source": "none",
 	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 613,
+	"name": "Karin",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "ん～、トラちゃんどこ～……",
+	"cn2": "寅ユニット結成！！",
+	"date": "2021/01/20",
+	"source": "gacha",
+	"desc": "「迷子の子猫ちゃんガチャ」で追加"
+},
+{
+	"id": 614,
+	"name": "Ayumu",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Vo",
+	"cn1": "ふふっ、かわいい～",
+	"cn2": "虹色のワルツ",
+	"date": "2021/01/20",
+	"source": "gacha",
+	"desc": "「迷子の子猫ちゃんガチャ」で追加"
+},
+{
+	"id": 615,
+	"name": "Kotori",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "いくよ～、えいっ！",
+	"cn2": "寅ユニット結成！！",
+	"date": "2021/01/20",
+	"source": "gacha",
+	"desc": "「迷子の子猫ちゃんガチャ」で追加"
+},
+{
+	"id": 616,
+	"name": "Hanamaru",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "おーいトラちゃーん！",
+	"cn2": "寅ユニット結成！！",
+	"date": "2021/01/23",
+	"source": "reward",
+	"desc": "イベント「迷子の子猫ちゃん」報酬"
+},
+{
+	"id": 617,
+	"name": "Chika",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "モデルは動いちゃだめだよ～",
+	"cn2": "MY舞☆TONIGHT",
+	"date": "2021/01/23",
+	"source": "reward",
+	"desc": "イベント「迷子の子猫ちゃん」報酬 (イベントpt枠)"
+},
+{
+	"id": 618,
+	"name": "Maki",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Sk",
+	"cn1": "よしよし、いい子ね…",
+	"cn2": "僕らは今のなかで",
+	"date": "2021/01/23",
+	"source": "reward",
+	"desc": "イベント「迷子の子猫ちゃん」報酬 (ランキング枠)"
 }
 ];
-const LatestUpdate = "2021/01/14 「パーティーガチャ」まで";
+const LatestUpdate = "2021/01/23 イベント「迷子の子猫ちゃん」まで";

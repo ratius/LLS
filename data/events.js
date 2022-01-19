@@ -494,4 +494,13 @@ const EventList = [
 	"UR" : ["Nico", "Ai", "Emma"],
 	"SR" : ["Hanayo", "Ruby", "Setsuna"]
 },
+{
+	"id" : 56,
+	"name" : "迷子の子猫ちゃん",
+	"type" : "story",
+	"started" : new Date("2022-01-23T15:00:00+09:00"),
+	"ended"   : new Date("2022-01-30T14:59:59+09:00"),
+	"UR" : ["Kotori", "Hanamaru", "Karin"],
+	"SR" : ["Maki", "Chika", "Ayumu"]
+},
 ];
