@@ -6599,6 +6599,126 @@ const RawCardList = [
 	"date": "2021/01/23",
 	"source": "reward",
 	"desc": "イベント「迷子の子猫ちゃん」報酬 (ランキング枠)"
-}
+},
+{
+	"id": 619,
+	"name": "Mia",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "いきなりこんなのは無理だもん！",
+	"cn2": "I'm here",
+	"date": "2022/01/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 620,
+	"name": "Kanan",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Vo",
+	"cn1": "ここは伸びやかに歌う、っと",
+	"cn2": "Grand blue fairy",
+	"date": "2022/01/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 621,
+	"name": "Rin",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Gd",
+	"cn1": "見て見てー！　雪だよー！",
+	"cn2": "僕らは今のなかで",
+	"date": "2022/01/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 622,
+	"name": "Kasumi",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "う、嬉しいよぉ……",
+	"cn2": "虹色のワルツ",
+	"date": "2022/01/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 623,
+	"name": "Yoshiko",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "チョ、チョコがーっ！",
+	"cn2": "ロゼ♡スイート",
+	"date": "2022/02/04",
+	"source": "gacha",
+	"desc": "「乙女のフラワーバレンタインガチャ」で追加"
+},
+{
+	"id": 624,
+	"name": "Nico",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "百本、作っていくんだからね！",
+	"cn2": "僕らは今のなかで",
+	"date": "2022/02/04",
+	"source": "gacha",
+	"desc": "「乙女のフラワーバレンタインガチャ」で追加"
+},
+{
+	"id": 625,
+	"name": "Maki",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "もう！　からかわないで！",
+	"cn2": "ロゼ♡スイート",
+	"date": "2022/02/04",
+	"source": "gacha",
+	"desc": "「乙女のフラワーバレンタインガチャ」で追加"
+},
+{
+	"id": 626,
+	"name": "Kanata",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "バラ型のチョコを作ったの！",
+	"cn2": "ロゼ♡スイート",
+	"date": "2022/02/07",
+	"source": "reward",
+	"desc": "イベント「乙女のフラワーバレンタイン」報酬"
+},
+{
+	"id": 627,
+	"name": "Mari",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Vo",
+	"cn1": "最高にシャイニーよ！",
+	"cn2": "MY舞☆TONIGHT",
+	"date": "2022/02/07",
+	"source": "reward",
+	"desc": "イベント「乙女のフラワーバレンタイン」報酬"
+},
+{
+	"id": 628,
+	"name": "Emma",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "このバラが一番ピッタリだと思う",
+	"cn2": "虹色のワルツ",
+	"date": "2022/02/07",
+	"source": "reward",
+	"desc": "イベント「乙女のフラワーバレンタイン」報酬"
+},
 ];
-const LatestUpdate = "2021/01/23 イベント「迷子の子猫ちゃん」まで";
+const LatestUpdate = "2021/02/07 イベント「乙女のフラワーバレンタイン」まで";
