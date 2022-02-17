@@ -442,19 +442,17 @@ function CreateTable(charCalled, charCalling){
 document.getElementById("MainArea").innerHTML =
 	'<h2>スクフェスALL STARS 呼称表<\/h2>'
 	+ '<p>「ラブライブ！スクールアイドルフェスティバルALL STARS」内におけるキャラクターの呼び方のまとめです。<br>'
-	+ '打ち解ける前だと思しき呼び方は掲載していません。<br>'
-	+ 'スクスタもリリースから1年が経過し、誕生日限定ボイスで初期メンバー27人分は全て埋まりました。<\/p>'
+	+ '打ち解ける前だと思しき呼び方は掲載しないか、注釈つきで掲載します。<\/p>'
 	+ '<h3 class="muse">μ’sの呼ばれ方<\/h3>\n' + CreateTable(ListMuse.concat(["Player"]), ListAS.concat(["Yukiho", "Arisa"]))
 	+ '<h3 class="aqours">Aqoursの呼ばれ方<\/h3>\n' + CreateTable(ListAqours.concat(["Player"]), ListAS)
 	+ '<h3 class="niji">ニジガクの呼ばれ方(1)<\/h3>\n' + CreateTable(ListNiji.concat(["Player"]), ListAS.concat(["Haruka", "Misato", "Mai", "Satsuki"]))
-	+ '<h3 class="niji">ニジガクの呼ばれ方(2)<\/h3>\n' + CreateTable(["Shioriko", "Mia", "Lanzhu", "Kaoruko", "Haruka", "Uzuki", "Satsuki"], ListAS.concat(["Kaoruko", "Haruka", "Uzuki", "Satsuki", "Misato", "Rijicho"]))
-	+ '<h3 class="niji">その他キャラクターの呼ばれ方(1)<\/h3>\n'
+	+ '<h3 class="niji">ニジガクの呼ばれ方(2)<\/h3>\n'
+	+ CreateTable(["Shioriko", "Mia", "Lanzhu", "Kaoruko", "Haruka", "Misato", "Mai", "Uzuki", "Satsuki"],
+	  ListAS.concat(["Kaoruko", "Haruka", "Misato", "Mai", "Uzuki", "Satsuki", "Rijicho"]))
+	+ '<h3 class="niji">その他キャラクターの呼ばれ方<\/h3>\n'
 	+ CreateTable(["Yukiho", "Arisa", "Cocoa", "Cocoro", "Cotaro", "Mito", "Shima", "Sarah", "Leah"],
 	 ["Honoka", "Eli", "Nico", "Chika", "Dia", "Hanamaru", "Ruby", "Player",
 	 "Yukiho", "Arisa"])
-	+ '<h3 class="niji">その他キャラクターの呼ばれ方(2)<\/h3>\n'
-	+ CreateTable(["Misato", "Mai", "Uzuki", "Satsuki"],
-	 ["Ai", "Emma", "Player", "Misato", "Mai", "Uzuki", "Satsuki"])
 	;
 
 --></script>
@@ -462,6 +460,10 @@ document.getElementById("MainArea").innerHTML =
 <h3 class="niji">更新履歴 (呼び方の追加以外で)</h3>
 <table class="history">
 <tbody>
+<tr>
+	<td>2022/02/17</td>
+	<td><span class="fix"></span>「その他キャラクターの呼ばれ方(2)」をニジガクに統合</td>
+</tr>
 <tr>
 	<td>2022/01/14</td>
 	<td><span class="new"></span>「その他キャラクターの呼ばれ方」を分割</td>
