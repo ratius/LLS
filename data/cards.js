@@ -6536,7 +6536,7 @@ const RawCardList = [
 	"type": "Vo",
 	"cn1": "ん～、トラちゃんどこ～……",
 	"cn2": "寅ユニット結成！！",
-	"date": "2021/01/20",
+	"date": "2022/01/20",
 	"source": "gacha",
 	"desc": "「迷子の子猫ちゃんガチャ」で追加"
 },
@@ -6548,7 +6548,7 @@ const RawCardList = [
 	"type": "Vo",
 	"cn1": "ふふっ、かわいい～",
 	"cn2": "虹色のワルツ",
-	"date": "2021/01/20",
+	"date": "2022/01/20",
 	"source": "gacha",
 	"desc": "「迷子の子猫ちゃんガチャ」で追加"
 },
@@ -6560,7 +6560,7 @@ const RawCardList = [
 	"type": "Gd",
 	"cn1": "いくよ～、えいっ！",
 	"cn2": "寅ユニット結成！！",
-	"date": "2021/01/20",
+	"date": "2022/01/20",
 	"source": "gacha",
 	"desc": "「迷子の子猫ちゃんガチャ」で追加"
 },
@@ -6572,7 +6572,7 @@ const RawCardList = [
 	"type": "Sk",
 	"cn1": "おーいトラちゃーん！",
 	"cn2": "寅ユニット結成！！",
-	"date": "2021/01/23",
+	"date": "2022/01/23",
 	"source": "reward",
 	"desc": "イベント「迷子の子猫ちゃん」報酬"
 },
@@ -6584,7 +6584,7 @@ const RawCardList = [
 	"type": "Sp",
 	"cn1": "モデルは動いちゃだめだよ～",
 	"cn2": "MY舞☆TONIGHT",
-	"date": "2021/01/23",
+	"date": "2022/01/23",
 	"source": "reward",
 	"desc": "イベント「迷子の子猫ちゃん」報酬 (イベントpt枠)"
 },
@@ -6596,7 +6596,7 @@ const RawCardList = [
 	"type": "Sk",
 	"cn1": "よしよし、いい子ね…",
 	"cn2": "僕らは今のなかで",
-	"date": "2021/01/23",
+	"date": "2022/01/23",
 	"source": "reward",
 	"desc": "イベント「迷子の子猫ちゃん」報酬 (ランキング枠)"
 },
@@ -6694,7 +6694,7 @@ const RawCardList = [
 	"cn2": "ロゼ♡スイート",
 	"date": "2022/02/07",
 	"source": "reward",
-	"desc": "イベント「乙女のフラワーバレンタイン」報酬"
+	"desc": "イベント「乙女のフラワーバレンタイン」報酬 (交換所枠)"
 },
 {
 	"id": 627,
@@ -6706,7 +6706,7 @@ const RawCardList = [
 	"cn2": "MY舞☆TONIGHT",
 	"date": "2022/02/07",
 	"source": "reward",
-	"desc": "イベント「乙女のフラワーバレンタイン」報酬"
+	"desc": "イベント「乙女のフラワーバレンタイン」報酬 (ランキング枠)"
 },
 {
 	"id": 628,
@@ -6720,5 +6720,101 @@ const RawCardList = [
 	"source": "reward",
 	"desc": "イベント「乙女のフラワーバレンタイン」報酬"
 },
+{
+	"id": 629,
+	"name": "Lanzhu",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "決まりね！　早くいくわよ！",
+	"cn2": "Like a Doll",
+	"date": "2022/02/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 630,
+	"name": "Umi",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Sp",
+	"cn1": "す口にクリームがついてますよ",
+	"cn2": "僕らは今のなかで",
+	"date": "2022/02/14",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 631,
+	"name": "Ai",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "そのまま……、動かないでね～",
+	"cn2": "♡猫日和♡",
+	"date": "2022/02/17",
+	"source": "gacha",
+	"desc": "「ようこそ！　癒しの空間へガチャ」で追加"
+},
+{
+	"id": 632,
+	"name": "Ruby",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sk",
+	"cn1": "",
+	"cn2": "MY舞☆TONIGHT",
+	"date": "2022/02/17",
+	"source": "gacha",
+	"desc": "「ようこそ！　癒しの空間へガチャ」で追加"
+},
+{
+	"id": 633,
+	"name": "Dia",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "リボンの好きな黒猫ちゃ～ん",
+	"cn2": "♡猫日和♡",
+	"date": "2022/02/17",
+	"source": "gacha",
+	"desc": "「ようこそ！　癒しの空間へガチャ」で追加"
+},
+{
+	"id": 634,
+	"name": "Nozomi",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sk",
+	"cn1": "店長さんからお礼だって",
+	"cn2": "♡猫日和♡",
+	"date": "2022/02/20",
+	"source": "reward",
+	"desc": "イベント「ようこそ！　癒しの空間へ」報酬"
+},
+{
+	"id": 635,
+	"name": "Karin",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "ふふっ、くすぐったい",
+	"cn2": "虹色のワルツ",
+	"date": "2022/02/20",
+	"source": "reward",
+	"desc": "イベント「ようこそ！　癒しの空間へ」報酬"
+},
+{
+	"id": 636,
+	"name": "Kotori",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "あ！　このしっぽ！",
+	"cn2": "僕らは今のなかで",
+	"date": "2022/02/20",
+	"source": "reward",
+	"desc": "イベント「ようこそ！　癒しの空間へ」報酬"
+},
 ];
-const LatestUpdate = "2021/02/07 イベント「乙女のフラワーバレンタイン」まで";
+const LatestUpdate = "2021/02/14 「パーティーガチャ」まで";

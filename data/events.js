@@ -511,5 +511,14 @@ const EventList = [
 	"ended"   : new Date("2022-02-14T14:59:59+09:00"),
 	"UR" : ["Maki", "Yoshiko", "Kanata"],
 	"SR" : ["Nico", "Mari", "Emma"]
+},
+{
+	"id" : 58,
+	"name" : "ようこそ！　癒しの空間へ",
+	"type" : "story",
+	"started" : new Date("2022-02-20T15:00:00+09:00"),
+	"ended"   : new Date("2022-02-27T14:59:59+09:00"),
+	"UR" : ["Nozomi", "Dia", "Ai"],
+	"SR" : ["Kotori", "Ruby", "Karin"]
 }
 ];
