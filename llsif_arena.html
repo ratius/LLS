@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@ratius55">
+<meta name="twitter:creator" content="@ratius55">
+<meta name="twitter:title" content="スクフェス ライブ♪アリーナまとめ">
+<meta name="twitter:description" content="スクフェスにおける、ライブ♪アリーナのセリフ集です。">
+<meta name="twitter:image" content="">
+
+<title>スクフェス ライブ♪アリーナまとめ</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+<link rel="stylesheet" href="main.css">
+<style><!--
+
+#info-box {
+	width: 700px;
+	height: 90px;
+	border-style: solid;
+	border-color: #333;
+	border-width: 2px 2px 0;
+	overflow: hidden;
+}
+#info-table {
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+	background-color: #446;
+	color: white;
+}
+#ButtonLeft, #ButtonRight {
+	width: 100px;
+	user-select:none;
+}
+.button-enable { 
+	color: black;
+	background-color: hsl(330, 30%, 90%);
+	cursor: pointer;
+}
+.button-disable {
+	color: #556;
+	background-color: #889;
+	cursor: not-allowed;
+}
+
+#message-box {
+	width: 700px;
+	height: calc(100vh - 150px);
+	overflow-y: scroll;
+	border: solid 2px #333;
+}
+#message-table {
+	width: 100%;
+	border-collapse: collapse;
+	color: white;
+}
+
+#message-table tbody th, #message-table tbody td {
+	padding: 7px 0;
+	border-bottom: solid 2px #eee;
+	color: #eee;
+}
+
+#sub-title, #date {
+	color: #ccc;
+	font-size: small;
+}
+#main-title {
+	font-weight: bold;
+	font-size: x-large;
+}
+
+#message-table tr:nth-child(odd){ background-color: hsl(333, 50%, 60%);}
+#message-table tr:nth-child(even){ background-color: hsl(333, 40%, 50%);}
+
+.OpponentName {
+	color: #fff;
+	font-weight: bold;
+}
+
+.face {
+	display: block;
+	margin: auto;
+	width: 64px;
+	height: 64px;
+	background-image: url(img/students.png);
+	background-repeat: no-repeat;
+}
+
+--></style>
+<script><!--
+
+const OpponentLookUpTable = [
+	{'id': 'Shizuku', 'Name': '桜坂しずく',    'x':1, 'y':0},
+	{'id': 'Marika',  'Name': '一之瀬マリカ',  'x':2, 'y':0},
+	{'id': 'Minami',  'Name': '永山みなみ',    'x':3, 'y':0},
+	{'id': 'Aya',     'Name': '杉崎亜矢',      'x':4, 'y':0},
+	{'id': 'Ayumi',   'Name': '鳥居歩美',      'x':5, 'y':0},
+	{'id': 'Seira',   'Name': '九条聖来',      'x':6, 'y':0},
+	{'id': 'Sachiko', 'Name': '田中さち子',    'x':7, 'y':0},
+	{'id': 'Akiru',   'Name': '篠宮あきる',    'x':8, 'y':0},
+	{'id': 'Yumi',    'Name': '藤城悠弓',      'x':9, 'y':0},
+	{'id': 'Coco',    'Name': '宮下ココ',      'x':1, 'y':1},
+	{'id': 'Sana',    'Name': '結城紗菜',      'x':2, 'y':1},
+	{'id': 'Christina','Name': 'クリスティーナ','x':3, 'y':1},
+	{'id': 'Yuri',    'Name': '御堂優理',      'x':4, 'y':1},
+	{'id': 'Rika',    'Name': '神谷理華',      'x':5, 'y':1},
+	{'id': 'Kanata',  'Name': '近江彼方',      'x':6, 'y':1},
+	{'id': 'Haruka',  'Name': '近江遥',        'x':7, 'y':1},
+	{'id': 'Kasane',  'Name': '支倉かさね',    'x':8, 'y':1},
+	{'id': 'Mizuki',  'Name': '吉川瑞希',      'x':9, 'y':1},
+
+	{'id': 'Yu',      'Name': '逢沢遊宇',      'x':1, 'y':2},
+	{'id': 'Fumie',   'Name': '西村文絵',      'x':2, 'y':2},
+	{'id': 'Akemi',   'Name': '菊池朱美',      'x':3, 'y':2},
+	{'id': 'Iruka',   'Name': '須田いるか',    'x':4, 'y':2},
+	{'id': 'Reine',   'Name': '佐伯麗音',      'x':5, 'y':2},
+	{'id': 'Nanaka',  'Name': '森嶋ななか',    'x':6, 'y':2},
+	{'id': 'Saki',    'Name': '下園咲',        'x':7, 'y':2},
+	{'id': 'Ru',      'Name': '多々良るう',    'x':8, 'y':2},
+	{'id': 'Nagi',    'Name': '白木凪',        'x':9, 'y':2},
+	{'id': 'Shun',    'Name': '黒崎隼',        'x':1, 'y':3},
+	{'id': 'Fumi',    'Name': '設楽ふみ',      'x':2, 'y':3},
+	{'id': 'Tsurugi', 'Name': '門田剣',        'x':3, 'y':3},
+	{'id': 'Yuuka',   'Name': '桐原優香',      'x':4, 'y':3},
+	{'id': 'Fuu',     'Name': '斉木風',        'x':5, 'y':3},
+	{'id': 'Misaki',  'Name': '紫藤美咲',      'x':6, 'y':3},
+	{'id': 'Himeno',  'Name': '綾小路姫乃',    'x':7, 'y':3},
+	{'id': 'Koyuki',  'Name': '白瀬小雪',      'x':8, 'y':3},
+	{'id': 'Ryo',     'Name': '相川涼',        'x':9, 'y':3},
+	{'id': 'Mikoto',  'Name': '福原命',        'x':1, 'y':4},
+	{'id': 'Chiduko', 'Name': '坂巻千鶴子',    'x':2, 'y':4},
+	{'id': 'Hitomi',  'Name': '志賀仁美',      'x':3, 'y':4},
+	{'id': 'Akira',   'Name': '鬼崎アキラ',    'x':4, 'y':4},
+	{'id': 'Yuka',    'Name': '月島結架',      'x':5, 'y':4},
+	{'id': 'Sayuri',  'Name': '兵藤さゆり',    'x':6, 'y':4},
+	{'id': 'Sakura',  'Name': '黒羽咲良',      'x':7, 'y':4},
+	{'id': 'Sakuya',  'Name': '黒羽咲夜',      'x':8, 'y':4},
+	{'id': 'Mutsuki', 'Name': '高天原睦月',    'x':9, 'y':4},
+	{'id': 'Ranpha',  'Name': '蘭花',          'x':1, 'y':5},
+	{'id': 'Rakshata','Name': 'ラクシャータ',  'x':2, 'y':5},
+	{'id': 'Rebecca', 'Name': 'レベッカ',      'x':3, 'y':5},
+	{'id': 'Isabella','Name': 'イザベラ',      'x':4, 'y':5},
+	{'id': 'Emma',    'Name': 'エマ・ヴェルデ','x':5, 'y':5},
+	{'id': 'Jennifer','Name': 'ジェニファー',  'x':6, 'y':5},
+	{'id': 'Maria',   'Name': 'マリア',        'x':7, 'y':5},
+	{'id': 'Leo',     'Name': 'レオ',          'x':8, 'y':5},
+	{'id': 'Yukari',  'Name': '早乙女紫',      'x':9, 'y':5},
+	{'id': 'P3',      'Name': 'ペルソナ3',     'x':0, 'y':3},
+	{'id': 'P4',      'Name': 'ペルソナ4',     'x':0, 'y':4},
+	{'id': 'P5',      'Name': 'ペルソナ5',     'x':0, 'y':5}
+];
+const IconSize = 64;
+var CurrentPage = 0;
+
+//■キャラクター用のルックアップテーブル (ID, データ種)
+function LookUp(id, key){
+	var temp = OpponentLookUpTable.filter((u)=>{return(u.id === id);});
+	if(temp.length){
+		return temp[0][key];
+	} else {
+		console.log("キャラクターID " + id + " は見つかりません");
+		if(key === "school"){
+			return -1;
+		} else {
+			return "";
+		}
+	}
+}
+
+//■セリフ一覧の描画
+function WriteMessage(set) {
+	CurrentPage = set;
+	document.getElementById("sub-title").innerHTML = ('title1' in ArenaData[set] ? ArenaData[set].title1 : "");
+	document.getElementById("main-title").innerHTML = ('title2' in ArenaData[set] ? ArenaData[set].title2 : "");
+	document.getElementById("date").innerHTML = ('date' in ArenaData[set] ? ArenaData[set].date : "");
+	
+	var Output = "";
+	var MessageNumber = 1;
+	for(i=0; i<ArenaData[set].Opponent.length; i++){
+		j = ArenaData[set].Opponent[i];
+		Output += '<tr><th style="width: 40px">'
+			+ ('num' in j ? j.num : MessageNumber++) + '<\/th>';
+			
+			if('name' in j){ //名前があるなら立ち絵も表示させる
+				Output += '<th style="width:80px"><div class="face" style="background-position: '
+				+ 'right -' + (9-LookUp(j.name, "x"))*IconSize + 'px bottom -' + (5-LookUp(j.name, "y"))*IconSize + 'px">'
+				+ '<\/div><\/th><td>'
+				+ '<span class="OpponentName">'
+				+ ('namealt' in j ? j.namealt : LookUp(j.name, "Name")) + '<\/span><br>';
+			}else {
+				Output += '<td><\/td><td>';
+			}			
+			Output += j.text + '<\/td><\/tr>';
+	}
+	document.getElementById("message-list").innerHTML = Output;
+	document.getElementById("message-box").scrollTop = 0;
+
+	//左ボタンの設定変更
+	if(set > 0) {
+		document.getElementById('ButtonLeft').classList.add('button-enable');
+		document.getElementById('ButtonLeft').classList.remove('button-disable');
+		document.getElementById('ButtonLeft').setAttribute('onclick', 'WriteMessage(' + (set-1) + ')');
+	} else {
+		document.getElementById('ButtonLeft').classList.add('button-disable');
+		document.getElementById('ButtonLeft').classList.remove('button-enable');
+		document.getElementById('ButtonLeft').onclick = '';
+	}
+
+	//右ボタンの設定変更
+	if(set+1 < ArenaData.length) {
+		document.getElementById('ButtonRight').classList.add('button-enable');
+		document.getElementById('ButtonRight').classList.remove('button-disable');
+		document.getElementById('ButtonRight').setAttribute('onclick', 'WriteMessage(' + (set+1) + ')');
+	} else {
+		document.getElementById('ButtonRight').classList.add('button-disable');
+		document.getElementById('ButtonRight').classList.remove('button-enable');
+		document.getElementById('ButtonRight').onclick = '';
+	}
+}
+
+--></script>
+
+</head>
+
+<body>
+
+<div id="MainArea">
+	<div style="text-align:center; margin-top: 40px;">
+	<span style="font-size: 150%; font-weight: bold;">よみこみちゅう…</span><br>
+	このコンテンツはJavaScriptを使用しています。<br>
+	いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
+	お手数ですが、JavaScriptの実行を許可した上でページを読み込み直してください。<br>
+	</div>
+</div>
+
+<script><!--
+
+function loadScript(src, callback) {
+    var done = false;
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.src = src;
+    head.appendChild(script);
+    // Attach handlers for all browsers
+    script.onload = script.onreadystatechange = function() {
+        if ( !done && (!this.readyState ||
+                this.readyState === "loaded" || this.readyState === "complete") ) {
+            done = true;
+            callback();
+            // Handle memory leak in IE
+            script.onload = script.onreadystatechange = null;
+            if ( head && script.parentNode ) {
+                head.removeChild( script );
+            }
+        }
+    };
+}
+
+loadScript("data/arena.js", function() {
+	var CardList = [];
+
+	document.getElementById("MainArea").innerHTML =
+	  '<h3 style="background-color:#ddd; color:#777; border-color:#999;">まえがき<\/h3>'
+	+ '<p>スクフェスにおける、「ライブ♪アリーナ」のセリフのまとめです。<br>'
+	+ 'ボックス左上・右上にある「前回」「次回」ボタンを押すか、<br>'
+	+ '（PCなら）セリフ一覧にフォーカスを当てた状態でカーソルキーの左・右を押すことで表示回を切り替えることができます。<\/p>'
+	+ '<h3 class="muse">セリフ一覧<\/h3>'
+	+ '<div id="info-box"><table id="info-table"><tbody><tr>'
+	+ '<th id="ButtonLeft" onclick="false"><span style="font-size:30px">&#x2b05;<\/span><br>前回<\/th>'
+	+ '<th><span id="sub-title"><\/span><br><span id="main-title"><\/span><br><span id="date"><\/span><\/th>'
+	+ '<th id="ButtonRight" onclick="false"><span style="font-size:30px">&#x2b95;<\/span><br>次回<\/th>'
+	+ '<\/tbody><\/table><\/div>'
+	+ '<div id="message-box" tabindex="1">' 
+	+ '<table id="message-table"><tbody id="message-list"><\/tbody><\/table><\/div>';
+	
+	WriteMessage(0);
+	
+	document.addEventListener('keydown', function(){
+		act = document.activeElement.toString();
+		if(act === '[object HTMLDivElement]'){
+			if(event.code == 'ArrowLeft'){
+				if(CurrentPage > 0){
+					WriteMessage(CurrentPage-1);
+				}
+			}
+			if(event.code == 'ArrowRight'){
+				if(CurrentPage < ArenaData.length-1){
+					WriteMessage(CurrentPage+1);
+				}
+			}
+		}
+	});
+});
+--></script>
+
+<h3 class="niji">更新履歴 </h3>
+<table class="history">
+<tbody>
+<tr>
+	<td>2022/02/XX</td>
+	<td><span class="new"></span>プレビュー公開<br>（テキスト補完に協力していただいた皆様、ありがとうございました）</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<a href="index.html">トップページに戻る。</a>
+</p>
+
+</body>
+</html>
