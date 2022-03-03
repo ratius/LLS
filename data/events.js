@@ -520,5 +520,14 @@ const EventList = [
 	"ended"   : new Date("2022-02-27T14:59:59+09:00"),
 	"UR" : ["Nozomi", "Dia", "Ai"],
 	"SR" : ["Kotori", "Ruby", "Karin"]
-}
+},
+{
+	"id" : 59,
+	"name" : "繋がり感じるホワイトデー",
+	"type" : "exchange",
+	"started" : new Date("2022-03-07T15:00:00+09:00"),
+	"ended"   : new Date("2022-03-14T14:59:59+09:00"),
+	"UR" : ["Honoka", "Setsuna", "Shioriko"],
+	"SR" : ["Hanayo", "Hanamaru", "Ai"]
+},
 ];

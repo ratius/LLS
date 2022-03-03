@@ -1,7 +1,7 @@
 const OutfitList = [
 	["初期", "スノハレ", "ぼららら", "それ僕", "WR", "ユメトビ", "キラセン", "ノーブラ", "AA", "もぎゅ", "僕今"],
 	["初期", "君ここ", "青ジャン", "ブラメロ", "恋アク", "未ホラ", "ミラウェ", "HPT", "未ドリ", "WBNW", "MY舞"],
-	["初期", "アニマル", "ローズ", "マーチング", "LUMF", "3rdソロ", "虹パ", "JB!!!", "虹色の心", "L！L！L！", "ワルツ"]
+	["初期", "アニマル", "ローズ", "マーチング", "LUMF", "3rdソロ", "虹パ", "JB!!!", "虹色の心", "L！L！L！", "ワルツ他"]
 ];
 
 const RawCardList = [
@@ -4077,7 +4077,6 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「メンバーピックアップガチャ」で追加"
 },
-{"id": -1, "name": "Shioriko", "rare": "SR", "offset":2 },
 {
 	"id": 405,
 	"name": "Eli",
@@ -4174,6 +4173,7 @@ const RawCardList = [
 	"source": "fes",
 	"desc": "「スクスタフェス」で追加"
 },
+{"id": -1, "name": "Shioriko", "rare": "UR", "offset":1 },
 {
 	"id": 413,
 	"name": "Shioriko",
@@ -4930,6 +4930,7 @@ const RawCardList = [
 	"source": "reward",
 	"desc": "イベント「雨の季節の贈り物」報酬 (ランキング枠)"
 },
+{"id": -1, "name": "Shioriko", "rare": "SR", "offset":2 },
 {
 	"id": 476,
 	"name": "Shioriko",
@@ -5542,7 +5543,6 @@ const RawCardList = [
 	"source": "release",
 	"desc": "「ミア&ランジュ ウェルカムガチャ」で追加"
 },
-{"id": -1, "name": "Mia", "rare": "SR", "offset":8 },
 {
 	"id": 531,
 	"name": "Lanzhu",
@@ -5555,7 +5555,6 @@ const RawCardList = [
 	"source": "release",
 	"desc": "「ミア&ランジュ ウェルカムガチャ」で追加"
 },
-{"id": -1, "name": "Lanzhu", "rare": "SR", "offset":8 },
 {
 	"id": 532,
 	"name": "Mari",
@@ -5796,6 +5795,7 @@ const RawCardList = [
 	"source": "gacha",
 	"desc": "「私が選んだ服を着て♪ガチャ」で追加"
 },
+{"id": -1, "name": "Mia", "rare": "SR", "offset":8 },
 {
 	"id": 552,
 	"name": "Mia",
@@ -5868,6 +5868,7 @@ const RawCardList = [
 	"source": "party",
 	"desc": "「パーティーガチャ」で追加"
 },
+{"id": -1, "name": "Lanzhu", "rare": "SR", "offset":8 },
 {
 	"id": 558,
 	"name": "Lanzhu",
@@ -6694,10 +6695,22 @@ const RawCardList = [
 	"cn2": "ロゼ♡スイート",
 	"date": "2022/02/07",
 	"source": "reward",
-	"desc": "イベント「乙女のフラワーバレンタイン」報酬 (交換所枠)"
+	"desc": "イベント「乙女のフラワーバレンタイン」報酬"
 },
 {
 	"id": 627,
+	"name": "Emma",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "このバラが一番ピッタリだと思う",
+	"cn2": "虹色のワルツ",
+	"date": "2022/02/07",
+	"source": "reward",
+	"desc": "イベント「乙女のフラワーバレンタイン」報酬 (交換所枠)"
+},
+{
+	"id": 628,
 	"name": "Mari",
 	"rare": "SR",
 	"atr": "Elegant",
@@ -6707,18 +6720,6 @@ const RawCardList = [
 	"date": "2022/02/07",
 	"source": "reward",
 	"desc": "イベント「乙女のフラワーバレンタイン」報酬 (ランキング枠)"
-},
-{
-	"id": 628,
-	"name": "Emma",
-	"rare": "SR",
-	"atr": "Active",
-	"type": "Gd",
-	"cn1": "このバラが一番ピッタリだと思う",
-	"cn2": "虹色のワルツ",
-	"date": "2022/02/07",
-	"source": "reward",
-	"desc": "イベント「乙女のフラワーバレンタイン」報酬"
 },
 {
 	"id": 629,
@@ -6802,7 +6803,7 @@ const RawCardList = [
 	"cn2": "虹色のワルツ",
 	"date": "2022/02/20",
 	"source": "reward",
-	"desc": "イベント「ようこそ！　癒しの空間へ」報酬"
+	"desc": "イベント「ようこそ！　癒しの空間へ」報酬（イベントpt枠）"
 },
 {
 	"id": 636,
@@ -6814,7 +6815,127 @@ const RawCardList = [
 	"cn2": "僕らは今のなかで",
 	"date": "2022/02/20",
 	"source": "reward",
-	"desc": "イベント「ようこそ！　癒しの空間へ」報酬"
+	"desc": "イベント「ようこそ！　癒しの空間へ」報酬（ランキング枠）"
+},
+{
+	"id": 637,
+	"name": "Shizuku",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "なにか言ってくださいよー～！！",
+	"cn2": "Nostalgic Scene",
+	"date": "2022/02/26",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 638,
+	"name": "Eli",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Gd",
+	"cn1": "あら、恥ずかしがってる？",
+	"cn2": "リラックス＆リフレッシュ",
+	"date": "2022/02/26",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 639,
+	"name": "You",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "はむっ……	",
+	"cn2": "MY舞☆TONIGHT",
+	"date": "2022/02/26",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 640,
+	"name": "Shioriko",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "しっかり学びたいので",
+	"cn2": "翠いカナリア",
+	"date": "2022/02/26",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 641,
+	"name": "Shioriko",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "シュシュを作っていきましょう！",
+	"cn2": "Colorful♡Knitting",
+	"date": "2022/03/04",
+	"source": "gacha",
+	"desc": "「繋がり感じるホワイトデーガチャ」で追加"
+},
+{
+	"id": 642,
+	"name": "Hanayo",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "可愛いチャームがいっぱい",
+	"cn2": "僕らは今のなかで",
+	"date": "2022/03/04",
+	"source": "gacha",
+	"desc": "「繋がり感じるホワイトデーガチャ」で追加"
+},
+{
+	"id": 643,
+	"name": "Honoka",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Vo",
+	"cn1": "できたー！",
+	"cn2": "Colorful♡Knitting",
+	"date": "2022/03/04",
+	"source": "gacha",
+	"desc": "「繋がり感じるホワイトデーガチャ」で追加"
+},
+{
+	"id": 644,
+	"name": "Setsuna",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "このシュシュとっても可愛いです",
+	"cn2": "Colorful♡Knitting",
+	"date": "2022/03/07",
+	"source": "reward",
+	"desc": "イベント「繋がり感じるホワイトデー」報酬"
+},
+{
+	"id": 645,
+	"name": "Hanamaru",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "困ったことがあったら言ってね",
+	"cn2": "MY舞☆TONIGHT",
+	"date": "2022/03/07",
+	"source": "reward",
+	"desc": "イベント「繋がり感じるホワイトデー」報酬 (交換所枠)"
+},
+{
+	"id": 646,
+	"name": "Ai",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "で～きた！",
+	"cn2": "虹色のワルツ",
+	"date": "2022/03/07",
+	"source": "reward",
+	"desc": "イベント「繋がり感じるホワイトデー」報酬 (ランキング枠)"
 },
 ];
-const LatestUpdate = "2021/02/14 「パーティーガチャ」まで";
+const LatestUpdate = "2021/03/07 イベント「繋がり感じるホワイトデー」まで";
