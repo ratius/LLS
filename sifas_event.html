@@ -40,6 +40,11 @@
 	border: solid 1px #ccc;
 }
 
+#EventList .group_M { background-color: #ffdbef; }
+#EventList .group_A { background-color: #dbf4ff; }
+#EventList .group_N { background-color: #ffefd6; }
+
+
 #Single-Table {
 	width: 100%;
 	text-align: center;
@@ -254,7 +259,7 @@ function WriteEventList(){
 
 		if(y["UR"]){
 			for(z=0; z<y.UR.length; z++){
-				Output += LookUp(y.UR[z], 'name');
+				Output += '<span class="group_' + LookUp(y.UR[z], 'group') + '">' +  LookUp(y.UR[z], 'name') + '</span>' ;
 				if(z < y.UR.length-1){ Output += '、';}
 			}
 		}
@@ -262,7 +267,7 @@ function WriteEventList(){
 		
 		if(y["SR"]){
 			for(z=0; z<y.SR.length; z++){
-				Output += LookUp(y.SR[z], 'name');
+				Output += '<span class="group_' + LookUp(y.SR[z], 'group') + '">' +  LookUp(y.SR[z], 'name') + '</span>' ;
 				if(z < y.SR.length-1){ Output += '、';}
 			}
 		}
@@ -554,6 +559,10 @@ loadScript("data/events.js", function() {
 <h3 class="niji">更新履歴</h3>
 <table class="history">
 <tbody>
+<tr>
+	<td>2022/02/25</td>
+	<td><span class="fix"></span>「参加キャラクター」に背景色を付与</td>
+</tr>
 <tr>
 	<td>2021/11/06</td>
 	<td><span class="fix"></span>「キャラクター登場状況」の表のレイアウトを調整</td>
