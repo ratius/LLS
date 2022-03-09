@@ -37,6 +37,10 @@
 	user-select: none;
 }
 
+#HeaderUpper {
+	height: 55px;
+}
+
 .button-enable { 
 	color: black;
 	background-color: hsl(330, 30%, 90%);
@@ -49,12 +53,11 @@
 }
 
 #select-box {
-	display: block;
-	width: calc(100% - 30px);
-	margin: auto;
+	width: 560px;
+	margin: 8px auto 0;
 	background-color: #557;
 	border: solid 1px #ccc;
-	font-size: 120%;
+	font-size: 115%;
 	text-align: center;
 	padding: 8px;
 	color: #fff;
@@ -88,13 +91,9 @@
 	color: #eee;
 }
 
-#sub-title, #date {
-	color: #bbb;
+#sub {
+	color: #ccc;
 	font-size: small;
-}
-#main-title {
-	font-weight: bold;
-	font-size: x-large;
 }
 
 #message-table tr:nth-child(odd){ background-color: hsl(333, 50%, 60%);}
@@ -113,6 +112,12 @@
 	background-image: url(img/students.png);
 	background-repeat: no-repeat;
 }
+
+.tips {
+	font-size:small;
+	color: #c8e0d8;
+}
+
 
 --></style>
 <script><!--
@@ -136,7 +141,6 @@ const OpponentLookUpTable = [
 	{'id': 'Haruka',  'Name': '近江遥',        'x':7, 'y':1},
 	{'id': 'Kasane',  'Name': '支倉かさね',    'x':8, 'y':1},
 	{'id': 'Mizuki',  'Name': '吉川瑞希',      'x':9, 'y':1},
-
 	{'id': 'Yu',      'Name': '逢沢遊宇',      'x':1, 'y':2},
 	{'id': 'Fumie',   'Name': '西村文絵',      'x':2, 'y':2},
 	{'id': 'Akemi',   'Name': '菊池朱美',      'x':3, 'y':2},
@@ -173,6 +177,12 @@ const OpponentLookUpTable = [
 	{'id': 'Maria',   'Name': 'マリア',        'x':7, 'y':5},
 	{'id': 'Leo',     'Name': 'レオ',          'x':8, 'y':5},
 	{'id': 'Yukari',  'Name': '早乙女紫',      'x':9, 'y':5},
+
+	{'id': 'Tsubasa', 'Name': '綺羅ツバサ',    'x':1, 'y':6},
+	{'id': 'Anju',    'Name': '優木あんじゅ',  'x':2, 'y':6},
+	{'id': 'Erena',   'Name': '統堂英玲奈',    'x':3, 'y':6},
+	{'id': 'Leah',    'Name': '鹿角理亞',      'x':4, 'y':6},
+	{'id': 'Sarah',   'Name': '鹿角聖良',      'x':5, 'y':6},
 	{'id': 'P3',      'Name': 'ペルソナ3',     'x':0, 'y':3},
 	{'id': 'P4',      'Name': 'ペルソナ4',     'x':0, 'y':4},
 	{'id': 'P5',      'Name': 'ペルソナ5',     'x':0, 'y':5}
@@ -201,9 +211,7 @@ function WriteMessage(set) {
 	if(set === undefined){ set = document.getElementById('select-box').selectedIndex; }
 	
 	CurrentPage = set;
-	//document.getElementById("sub-title").innerHTML = ('title1' in ArenaData[set] ? ArenaData[set].title1 : "");
-	//document.getElementById("main-title").innerHTML = ('title2' in ArenaData[set] ? ArenaData[set].title2 : "");
-	document.getElementById("date").innerHTML = ('date' in ArenaData[set] ? "開催："+ArenaData[set].date : "");
+	document.getElementById("sub").innerHTML = ('sub' in ArenaData[set] ? ArenaData[set].sub : "");
 	
 	var Output = "";
 	var MessageNumber = 1;
@@ -214,7 +222,7 @@ function WriteMessage(set) {
 			
 			if('name' in j){ //名前があるなら立ち絵も表示させる
 				Output += '<th style="width:80px"><div class="face" style="background-position: '
-				+ 'right -' + (9-LookUp(j.name, "x"))*IconSize + 'px bottom -' + (5-LookUp(j.name, "y"))*IconSize + 'px">'
+				+ 'right -' + (9-LookUp(j.name, "x"))*IconSize + 'px bottom -' + (6-LookUp(j.name, "y"))*IconSize + 'px">'
 				+ '<\/div><\/th><td>'
 				+ '<span class="OpponentName">'
 				+ ('namealt' in j ? j.namealt : LookUp(j.name, "Name")) + '<\/span><br>';
@@ -294,25 +302,29 @@ loadScript("data/arena.js", function() {
 	var Output = "";
 	Output += 
 	  '<h3 style="background-color:#ddd; color:#777; border-color:#999;">まえがき<\/h3>'
-	+ '<p>スクフェスにおける、「ライブ♪アリーナ」のセリフのまとめです。<br>以下のいずれかを行うことで、表示回を切り替えることができます。</p>'
-	+ '<ul><li>上部のセレクトボックスで、表示したい回を選択する<\/li>'
+	+ '<p>スクフェスにおける、「ライブ♪アリーナ」のまとめです。<br>'
+	+ '現在はまだ仮公開。<\/p>';
+	
+	Output += 
+	  '<h3 class="muse">過去のテキスト<\/h3>'
+	+ '<p>以下のいずれかを行うことで、表示回を切り替えることができます。</p>'
+	+ '<ul><li>上部のタイトル部分のセレクトボックスで、表示したい回を選択する<\/li>'
 	+ '<li>上部の「前回」「次回」ボタンを押す<\/li>'
-	+ '<li>セリフ部分にフォーカスを当てた状態で、キーボードのカーソルキーの左右を押す<\/li><\/ul>'
-	+ '<h3 class="muse">セリフ一覧<\/h3>'
+	+ '<li>テキスト部分にフォーカスを当てた状態で、キーボードのカーソルキーの左右を押す<\/li><\/ul>'
 	+ '<div id="info-box"><table id="info-table"><tbody><tr>'
-	+ '<th id="ButtonLeft" onclick="false"><span style="font-size:35px">&#x2b05;<\/span><br>前回<\/th>'
-	+ '<th>';
+	+ '<th id="ButtonLeft" rowspan="2" onclick="false"><span style="font-size:35px">&#x2b05;<\/span><br>前回<\/th>'
+	+ '<th id="HeaderUpper">';
 	
 	//■セレクトボックス
 	Output += '<select id="select-box" onchange="WriteMessage()">';
 	for(i=0; i<ArenaData.length; i++){
 		Output += '<option>' + ArenaData[i].title + '<\/option>\n';
 	}
-	Output += '<\/select>';
 
 	//■セリフ表示用ボックス
-	Output += '<span id="date"><\/span><\/th>'
-	+ '<th id="ButtonRight" onclick="false"><span style="font-size:35px">&#x2b95;<\/span><br>次回<\/th>'
+	Output += '<\/select><\/th>'
+	+ '<th id="ButtonRight" rowspan="2" onclick="false"><span style="font-size:35px">&#x2b95;<\/span><br>次回<\/th><\/tr>'
+	+ '<tr><th><span id="sub"><\/span></th><\/tr>'
 	+ '<\/tbody><\/table><\/div>'
 	+ '<div id="message-box" tabindex="1">' 
 	+ '<table id="message-table"><tbody id="message-list"><\/tbody><\/table><\/div>';
@@ -341,6 +353,10 @@ loadScript("data/arena.js", function() {
 <h3 class="niji">更新履歴 </h3>
 <table class="history">
 <tbody>
+<tr>
+	<td>2022/03/xx</td>
+	<td><span class="new"></span>閲覧可能なテキストを追加<br>（第8～11回、藤黄学園、Y.G.国際学園、ドリームセッション）</td>
+</tr>
 <tr>
 	<td>2022/03/06</td>
 	<td><span class="new"></span>閲覧可能なテキストを追加（第6回、第7回）<br>
