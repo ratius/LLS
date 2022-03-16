@@ -273,7 +273,7 @@ const CharData = [
 		Ayumu:'歩夢さん', Kasumi:'かすみちゃん', Shizuku:'しずくちゃん', Karin:'果林さん', Ai:'愛さん',
 		Kanata:'彼方さん', Setsuna:'せつ菜さん', Emma:'エマさん', Rina:'私',
 		Shioriko:'栞子ちゃん', Mia:'ミアさん', Lanzhu:'ランジュさん', 
-		Player:'あなた'},
+		Player:'あなた', Asagi:'浅希ちゃん'},
 	{ id:'Shioriko', name:'三船 栞子', r:36, g:189, b:139, 
 		Honoka:'穂乃果さん', Eli:'絵里さん', Kotori:'ことりさん', Umi:'海未さん', Rin:'凛さん', 
 		Maki:'真姫さん', Nozomi:'希さん', Hanayo:'花陽さん', Nico:'にこさん',
@@ -346,6 +346,8 @@ const CharData = [
 		},
 	{ id:'Satsuki', name:'左月', Player:'部長さん',
 		Kasumi:'中須かすみさん', Shizuku:'桜坂しずくさん', Setsuna:'優木せつ菜さん', Shioriko:'会長', Uzuki:'右月', Satsuki:'私'
+		},
+	{ id:'Asagi', name:'浅希',
 	}
 ];
 for(x of CharData){
@@ -447,7 +449,7 @@ document.getElementById("MainArea").innerHTML =
 	+ '<h3 class="aqours">Aqoursの呼ばれ方<\/h3>\n' + CreateTable(ListAqours.concat(["Player"]), ListAS)
 	+ '<h3 class="niji">ニジガクの呼ばれ方(1)<\/h3>\n' + CreateTable(ListNiji.concat(["Player"]), ListAS.concat(["Haruka", "Misato", "Mai", "Satsuki"]))
 	+ '<h3 class="niji">ニジガクの呼ばれ方(2)<\/h3>\n'
-	+ CreateTable(["Shioriko", "Mia", "Lanzhu", "Kaoruko", "Haruka", "Misato", "Mai", "Uzuki", "Satsuki"],
+	+ CreateTable(["Shioriko", "Mia", "Lanzhu", "Kaoruko", "Haruka", "Misato", "Mai", "Uzuki", "Satsuki", "Asagi"],
 	  ListAS.concat(["Kaoruko", "Haruka", "Misato", "Mai", "Uzuki", "Satsuki", "Rijicho"]))
 	+ '<h3 class="niji">その他キャラクターの呼ばれ方<\/h3>\n'
 	+ CreateTable(["Yukiho", "Arisa", "Cocoa", "Cocoro", "Cotaro", "Mito", "Shima", "Sarah", "Leah"],
