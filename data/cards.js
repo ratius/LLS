@@ -6126,7 +6126,7 @@ const RawCardList = [
 	"name": "Mia",
 	"rare": "UR",
 	"atr": "Cool",
-	"type": "Sp",
+	"type": "Sk",
 	"cn1": "賑やかなのも、案外悪くないかも",
 	"cn2": "Autumn☆Thanksgiving",
 	"date": "2021/11/20",
@@ -6389,8 +6389,8 @@ const RawCardList = [
 	"id": 601,
 	"name": "Ayumu",
 	"rare": "UR",
-	"atr": "Smile",
-	"type": "Sp",
+	"atr": "Pure",
+	"type": "Vo",
 	"cn1": "うん、待ってて！",
 	"cn2": "祝福のともしび",
 	"date": "2021/12/28",
@@ -6739,7 +6739,7 @@ const RawCardList = [
 	"rare": "SR",
 	"atr": "Pure",
 	"type": "Sp",
-	"cn1": "す口にクリームがついてますよ",
+	"cn1": "口にクリームがついてますよ",
 	"cn2": "僕らは今のなかで",
 	"date": "2022/02/14",
 	"source": "none",
@@ -6937,5 +6937,29 @@ const RawCardList = [
 	"source": "reward",
 	"desc": "イベント「繋がり感じるホワイトデー」報酬 (ランキング枠)"
 },
+{
+	"id": 647,
+	"name": "Umi",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "わあ、綺麗……",
+	"cn2": "Spring Breeze",
+	"date": "2022/03/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 648,
+	"name": "Yoshiko",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "ふふっ、こっちが優勢よ",
+	"cn2": "MY舞☆TONIGHT",
+	"date": "2022/03/14",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
+},
 ];
-const LatestUpdate = "2021/03/07 イベント「繋がり感じるホワイトデー」まで";
+const LatestUpdate = "2021/03/14 パーティーガチャまで";
