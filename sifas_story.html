@@ -158,11 +158,14 @@ const CharLookUpTable = [
 	{"number":300,"id": "Haruka",   "name": "遥",      "r":128, "g":112, "b": 80 },
 	{"number":301,"id": "Misato",   "name": "美里",    "r":128, "g":112, "b": 80 },
 	{"number":302,"id": "Mai",      "name": "マイ",    "r":128, "g":112, "b": 80 },
-	{"number":303,"id": "Hanpen",   "name": "はんぺん","r":128, "g":112, "b": 80 },
-	{"number":304,"id": "Kaoruko",  "name": "薫子",    "r":128, "g":112, "b": 80 },
-	{"number":311,"id": "Rijicho",  "name": "理事長",  "r":128, "g":112, "b": 80 },
-	{"number":312,"id": "Secretary","name": "右月/左月","r":128, "g":112, "b": 80 },
-	{"number":312,"id": "Asagi",    "name": "浅希",    "r":128, "g":112, "b": 80 }
+	{"number":303,"id": "Kaoruko",  "name": "薫子",    "r":128, "g":112, "b": 80 },
+	{"number":305,"id": "Uzuki",    "name": "右月",    "r":128, "g":112, "b": 80 },
+	{"number":306,"id": "Satsuki",  "name": "左月",    "r":128, "g":112, "b": 80 },
+	{"number":311,"id": "Hanpen",   "name": "はんぺん","r":128, "g":112, "b": 80 },
+	{"number":312,"id": "Rijicho",  "name": "理事長",  "r":128, "g":112, "b": 80 },
+	{"number":313,"id": "Asagi",    "name": "浅希",    "r":128, "g":112, "b": 80 },
+	{"number":314,"id": "Acting",   "name": "演劇部部長","r":128, "g":112, "b": 80 },
+	{"number":315,"id": "Basketball","name": "バスケ部部長","r":128, "g":112, "b": 80 },
 ];
 
 
@@ -192,7 +195,7 @@ function DrawNarrowingButtons(){
 	for(temp1 of CharLookUpTable){
 		if(temp1.number < -10){ continue;}
 		Output += DrawCharNameButton(temp1.id);
-		if(temp1.number == -4 || temp1.number == 9 || temp1.number == 18 || temp1.number == 27 || temp1.number == 50 || temp1.number == 201){
+		if(temp1.number == -4 || temp1.number == 9 || temp1.number == 18 || temp1.number == 27 || temp1.number == 50 || temp1.number == 302){
 			Output += '<br>';
 		}
 	}
@@ -268,7 +271,9 @@ function DrawCharNameButton(character, onclick){
 	+ Math.floor((LookUp(character, "b")+510)/3) + '); border-color: rgb('
 	+ LookUp(character, "r") + ','
 	+ LookUp(character, "g") + ','
-	+ LookUp(character, "b") + ');" onclick="Narrowing(' + "'" + character + "'" + ')">'
+	+ LookUp(character, "b") + ')'
+	+ ((LookUp(character, "name").length>=5) ? '; font-size: 75%' : '')
+	+ ';" onclick="Narrowing(' + "'" + character + "'" + ')">'
 	+ LookUp(character, "name") + '<\/div>\n';
 	return Output;
 }
@@ -404,12 +409,12 @@ loadScript("data/stories.js", function() {
 	+ '<p>スクフェスALL STARSに収録されている「メインストーリー」「イベントエピソード」「キズナエピソード」の一覧です。<br>下記の「絞り込み用ボタン」をクリック/タップすることで、合致するストーリーを絞り込むことができます。<br>イベントストーリーは、公式によるあらすじが設定されていませんが、ネタバレにならない程度に独自にあらすじを加えてあります。<\/p>'
 	
 	+ '<p><span style="font-weight:bold;">実装済データ<\/span><\/p><ul>'
-	+ '<li>メインストーリー：<b>2021年2月28日追加分まで掲載完了。<\/b>第35章まで<\/li>'
-	+ '<li>イベントエピソード：「ようこそ！　癒しの空間へ！」までの58イベント<\/li>'
-	+ '<li>キズナエピソード：<b>2022年2月28日追加分まで掲載完了。<\/b><ul>'
-	+ '<li>μ&#39;s：各23話まで<\/li>'
+	+ '<li>メインストーリー：<b>2021年3月30日追加分まで掲載完了。<\/b>第37章まで<\/li>'
+	+ '<li>イベントエピソード：「ストロベリー・ドリーム」までの60イベント<\/li>'
+	+ '<li>キズナエピソード：<b>2022年3月30日追加分まで掲載完了。<\/b><ul>'
+	+ '<li>μ&#39;s：各24話まで<\/li>'
 	+ '<li>Aqours：各23話まで<\/li>'
-	+ '<li>ニジガク：初期9人 (各30話まで)、栞子 (17話まで)、ミア/ランジュ (9話まで)<\/li>'
+	+ '<li>ニジガク：初期9人 (各31話まで)、栞子 (18話まで)、ミア/ランジュ (10話まで)<\/li>'
 	+ '<\/ul>'
 	+ '<li>アニメ連動ストーリー：<b>掲載完了</b><\/li>'
 	+ '<li>サイドエピソード：掲載予定なし<\/li>'
@@ -427,6 +432,17 @@ loadScript("data/stories.js", function() {
 <table class="history">
 <tbody>
 <tr>
+	<td>2022/03/04</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第37章</li>
+			<li>キズナエピソード：μ's(第24話まで)</li>
+			<li>イベントエピソード：「ストロベリー・ドリーム」</li>
+		</ul>
+		<span class="new"></span>絞り込み用ボタンに「右月」「左月」「演劇部部長」「バスケ部部長」を追加
+	</td>
+</tr>
+<tr>
 	<td>2022/03/16</td>
 	<td><span class="new"></span>ストーリーを新たに掲載
 		<ul>
@@ -435,6 +451,7 @@ loadScript("data/stories.js", function() {
 		</ul>
 	</td>
 </tr>
+<!--
 <tr>
 	<td>2022/03/04</td>
 	<td><span class="new"></span>ストーリーを新たに掲載
@@ -445,7 +462,6 @@ loadScript("data/stories.js", function() {
 		</ul>
 	</td>
 </tr>
-<!--
 <tr>
 	<td>2022/02/17</td>
 	<td><span class="new"></span>ストーリーを新たに掲載
