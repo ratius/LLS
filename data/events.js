@@ -530,4 +530,22 @@ const EventList = [
 	"UR" : ["Honoka", "Setsuna", "Shioriko"],
 	"SR" : ["Hanayo", "Hanamaru", "Ai"]
 },
+{
+	"id" : 60,
+	"name" : "ストロベリー・ドリーム",
+	"type" : "story",
+	"started" : new Date("2022-03-23T15:00:00+09:00"),
+	"ended"   : new Date("2022-03-30T14:59:59+09:00"),
+	"UR" : ["Nico", "Mari", "Ruby"],
+	"SR" : ["Riko", "Shizuku", "Mia"]
+},
+{
+	"id" : 61,
+	"name" : "春宵一刻　夜桜見物",
+	"type" : "exchange",
+	"started" : new Date("2022-04-07T15:00:00+09:00"),
+	"ended"   : new Date("2022-04-14T14:59:59+09:00"),
+	"UR" : ["Riko", "Ayumu", "Emma"],
+	"SR" : ["Nozomi", "Kanan", "Kanata"]
+},
 ];

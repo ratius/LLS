@@ -3143,18 +3143,6 @@ const RawCardList = [
 },
 {
 	"id": 327,
-	"name": "Kanan",
-	"rare": "SR",
-	"atr": "Natural",
-	"type": "Sp",
-	"cn1": "おしょうゆをつけて、っと",
-	"cn2": "未体験HORIZON",
-	"date": "2020/10/07",
-	"source": "reward",
-	"desc": "イベント「月のウサギと女神様」報酬 (3000位/7万位枠)"
-},
-{
-	"id": 328,
 	"name": "Emma",
 	"rare": "SR",
 	"atr": "Pure",
@@ -3164,6 +3152,18 @@ const RawCardList = [
 	"date": "2020/10/07",
 	"source": "reward",
 	"desc": "イベント「月のウサギと女神様」報酬 (1万位/10万位枠)"
+},
+{
+	"id": 328,
+	"name": "Kanan",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "おしょうゆをつけて、っと",
+	"cn2": "未体験HORIZON",
+	"date": "2020/10/07",
+	"source": "reward",
+	"desc": "イベント「月のウサギと女神様」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 329,
@@ -3239,18 +3239,6 @@ const RawCardList = [
 },
 {
 	"id": 335,
-	"name": "Kotori",
-	"rare": "SR",
-	"atr": "Cool",
-	"type": "Sk",
-	"cn1": "頑張って作ったお話",
-	"cn2": "ユメノトビラ",
-	"date": "2020/10/22",
-	"source": "reward",
-	"desc": "イベント「楽しいハロウィンパーティー」報酬 (3000位/7万位枠)"
-},
-{
-	"id": 336,
 	"name": "Chika",
 	"rare": "SR",
 	"atr": "Elegant",
@@ -3260,6 +3248,18 @@ const RawCardList = [
 	"date": "2020/10/22",
 	"source": "reward",
 	"desc": "イベント「楽しいハロウィンパーティー」報酬 (1万位/10万位枠)"
+},
+{
+	"id": 336,
+	"name": "Kotori",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "頑張って作ったお話",
+	"cn2": "ユメノトビラ",
+	"date": "2020/10/22",
+	"source": "reward",
+	"desc": "イベント「楽しいハロウィンパーティー」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 337,
@@ -3359,18 +3359,6 @@ const RawCardList = [
 },
 {
 	"id": 345,
-	"name": "Nozomi",
-	"rare": "SR",
-	"atr": "Pure",
-	"type": "Vo",
-	"cn1": "なんとかなったみたいやね",
-	"cn2": "ユメノトビラ",
-	"date": "2020/11/08",
-	"source": "reward",
-	"desc": "イベント「駆け抜けろランウェイ」報酬 (3000位/7万位枠)"
-},
-{
-	"id": 346,
 	"name": "Shizuku",
 	"rare": "SR",
 	"atr": "Elegant",
@@ -3380,6 +3368,18 @@ const RawCardList = [
 	"date": "2020/11/08",
 	"source": "reward",
 	"desc": "イベント「駆け抜けろランウェイ」報酬 (1万位/10万位枠)"
+},
+{
+	"id": 346,
+	"name": "Nozomi",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "なんとかなったみたいやね",
+	"cn2": "ユメノトビラ",
+	"date": "2020/11/08",
+	"source": "reward",
+	"desc": "イベント「駆け抜けろランウェイ」報酬 (3000位/7万位枠)"
 },
 {
 	"id": 347,
@@ -5077,24 +5077,24 @@ const RawCardList = [
 },
 {
 	"id": 488,
-	"name": "Kanan",
-	"rare": "SR",
-	"atr": "Smile",
-	"type": "Gd",
-	"cn1": "キミは、どこから来たのかな？",
-	"cn2": "HAPPY PARTY TRAIN",
-	"date": "2021/06/29",
-	"source": "none",
-	"desc": "「スクスタフェス」で追加"
-},
-{
-	"id": 489,
 	"name": "Shizuku",
 	"rare": "SR",
 	"atr": "Natural",
 	"type": "Sp",
 	"cn1": "続きを聞かせてください！",
 	"cn2": "Just Believe!!!",
+	"date": "2021/06/29",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 489,
+	"name": "Kanan",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "キミは、どこから来たのかな？",
+	"cn2": "HAPPY PARTY TRAIN",
 	"date": "2021/06/29",
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
@@ -6521,7 +6521,7 @@ const RawCardList = [
 	"id": 612,
 	"name": "Honoka",
 	"rare": "SR",
-	"atr": "Cool",
+	"atr": "Pure",
 	"type": "Sp",
 	"cn1": "すっごくいい感じだった！",
 	"cn2": "僕らは今のなかで",
@@ -6763,7 +6763,7 @@ const RawCardList = [
 	"rare": "SR",
 	"atr": "Active",
 	"type": "Sk",
-	"cn1": "",
+	"cn1": "みんなリボンに夢中になってる！",
 	"cn2": "MY舞☆TONIGHT",
 	"date": "2022/02/17",
 	"source": "gacha",
@@ -6961,5 +6961,197 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「パーティーガチャ」で追加"
 },
+{
+	"id": 649,
+	"name": "Ruby",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "もぐもぐ……もぐ",
+	"cn2": "ラブリー♡ベリー♡",
+	"date": "2022/03/20",
+	"source": "gacha",
+	"desc": "「ストロベリー・ドリームガチャ」で追加"
+},
+{
+	"id": 650,
+	"name": "Riko",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "あーん！　お尻打ったー！",
+	"cn2": "MY舞☆TONIGHT",
+	"date": "2022/03/20",
+	"source": "gacha",
+	"desc": "「ストロベリー・ドリームガチャ」で追加"
+},
+{
+	"id": 651,
+	"name": "Nico",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "ケーキ作りならニコに任せなさい",
+	"cn2": "ラブリー♡ベリー♡",
+	"date": "2022/03/20",
+	"source": "gacha",
+	"desc": "「ストロベリー・ドリームガチャ」で追加"
+},
+{
+	"id": 652,
+	"name": "Mari",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "シャイニーストロベリーミルクよ",
+	"cn2": "ラブリー♡ベリー♡",
+	"date": "2022/03/23",
+	"source": "reward",
+	"desc": "イベント「ストロベリー・ドリーム」報酬"
+},
+{
+	"id": 653,
+	"name": "Shizuku",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "品種名も覚えているので",
+	"cn2": "虹色のワルツ",
+	"date": "2022/03/23",
+	"source": "reward",
+	"desc": "イベント「ストロベリー・ドリーム」報酬（イベントpt枠）"
+},
+{
+	"id": 654,
+	"name": "Mia",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "できた！　いちご、取れたよ",
+	"cn2": "虹色のワルツ",
+	"date": "2022/03/23",
+	"source": "reward",
+	"desc": "イベント「ストロベリー・ドリーム」報酬（ランキング枠）"
+},
+{
+	"id": 655,
+	"name": "You",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "なんだかロマンチック♪",
+	"cn2": "マジカル☆YELL",
+	"date": "2022/03/26",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 656,
+	"name": "Kasumi",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "どっちのほうがかわいいですか？",
+	"cn2": "ファンシー☆ピクシー",
+	"date": "2022/03/26",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 657,
+	"name": "Eli",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "私のももう少しでできるわ",
+	"cn2": "僕らは今のなかで",
+	"date": "2022/03/26",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 658,
+	"name": "Dia",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Gd",
+	"cn1": "仕方ありませんわね",
+	"cn2": "MY舞☆TONIGHT",
+	"date": "2022/03/26",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 659,
+	"name": "Emma",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Vo",
+	"cn1": "春を感じてる",
+	"cn2": "夜桜乙女",
+	"date": "2022/04/04",
+	"source": "gacha",
+	"desc": "「春宵一刻　夜桜見物ガチャ」で追加"
+},
+{
+	"id": 660,
+	"name": "Nozomi",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "お花見にはぴったりでしょ？",
+	"cn2": "僕らは今のなかで",
+	"date": "2022/04/04",
+	"source": "gacha",
+	"desc": "「春宵一刻　夜桜見物ガチャ」で追加"
+},
+{
+	"id": 661,
+	"name": "Ayumu",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "ごめん、遅くなって",
+	"cn2": "夜桜乙女",
+	"date": "2022/04/04",
+	"source": "gacha",
+	"desc": "「春宵一刻　夜桜見物ガチャ」で追加"
+},
+{
+	"id": 662,
+	"name": "Riko",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "今なら、書ける気がするの！",
+	"cn2": "夜桜乙女",
+	"date": "2022/04/07",
+	"source": "reward",
+	"desc": "イベント「春宵一刻　夜桜見物」報酬"
+},
+{
+	"id": 663,
+	"name": "Kanata",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "こっちの方が楽かも～",
+	"cn2": "虹色のワルツ",
+	"date": "2022/04/07",
+	"source": "reward",
+	"desc": "イベント「春宵一刻　夜桜見物」報酬 (???枠)"
+},
+{
+	"id": 664,
+	"name": "Kanan",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "ほら、あそこに北斗七星があるの",
+	"cn2": "MY舞☆TONIGHT",
+	"date": "2022/04/07",
+	"source": "reward",
+	"desc": "イベント「春宵一刻　夜桜見物」報酬 (???枠)"
+}
 ];
-const LatestUpdate = "2021/03/14 パーティーガチャまで";
+const LatestUpdate = "2021/04/07 イベント「春宵一刻　夜桜見物」まで";
