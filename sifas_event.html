@@ -15,11 +15,25 @@
 <link rel="stylesheet" href="color_sifas.css">
 <style><!--
 
-#EventList, #Trio-Table {
-	margin: 10px;
+@media (min-width:1200px){
+	#Event-Border{ width: 1165px; }
+}
+@media (max-width:1199px){
+	#Event-Border{ width: 100%;}
+}
+
+#Event-Border, #Trio-Border{
+	overflow-y: scroll;
 	border: solid 3px rgb(226,6,126);
+	height: calc(80vh - 30px);
+	background-color: rgba(226,126,176,0.1);
+}
+
+#EventList{
+	width: 100%;
 	border-collapse: collapse;
 }
+
 
 #EventList thead, #Trio-Table thead{
 	padding: 2px 5px;
@@ -100,8 +114,13 @@ td.sttd {
 #Trio-Border{
 	overflow-y: scroll;
 	border: solid 3px rgb(226,6,126);
-	height: calc(70vh - 30px);
+	height: calc(80vh - 30px);
 	background-color: rgba(226,126,176,0.1);
+}
+
+#Trio-Table {
+	width: 100%;
+	border-collapse: collapse;
 }
 
 #Trio-Table tbody th{
@@ -114,6 +133,10 @@ td.sttd {
 	font-size: small;
 	border-top: solid 1px #aaa;
 	border-right: solid 1px #aaa;
+}
+
+.trioname {
+	width: 65px;
 }
 
 .shadowname {
@@ -230,7 +253,7 @@ function LookUpEvent(id, data){
 //■■描画用関数
 //■イベントリスト
 function WriteEventList(){
-	var Output = '<table id="EventList">\n';
+	var Output = '<div id="Event-Border"><table id="EventList">\n';
 
 	//■ヘッダー
 	Output += '<thead>\n<tr class="header-top">\n'
@@ -273,7 +296,7 @@ function WriteEventList(){
 		}
 		Output +=  '<\/td><\/tr>';
 	}
-	Output += '<\/tbody>\n<\/table>\n';
+	Output += '<\/tbody>\n<\/table>\n<\/div>\n';
 	return Output;
 }
 
@@ -460,23 +483,27 @@ function DrawPairTable(){
 // ■「トリオ重複状況」テーブルの作成
 function DrawDuplicatedTrioList(){
 	var Output = '<div id="Trio-Border"><table id="Trio-Table">\n'
-	+ '<thead>\n<tr>\n<th colspan="3">重複トリオ<\/th><th>参加イベント<\/th><\/tr><\/thead>\n<tbody>'
+	+ '<thead>\n<tr>\n<th colspan="3">重複トリオ<\/th><th>回数<\/th><th>参加イベント<\/th><\/tr><\/thead>\n<tbody>'
 
 	for(temp1=0; temp1<TrioHistory.length; temp1++){
 		for(temp2=1; temp2<TrioHistory[temp1].length; temp2++){
 			for(temp3=1; temp3<TrioHistory[temp1][temp2].length; temp3++){
 				if(TrioHistory[temp1][temp2][temp3].length > 1){
 					Output += '<tr>'
-					+ '<th class="bg_' + CharId[temp1] + '"><span class="shadowname">'
+					+ '<th class="bg_' + CharId[temp1] + ' trioname"><span class="shadowname">'
 					+ LookUp(CharId[temp1],"name") + '<\/span><\/th>'
-					+ '<th class="bg_' + CharId[temp1+temp2] + '"><span class="shadowname">'
+					+ '<th class="bg_' + CharId[temp1+temp2] + ' trioname"><span class="shadowname">'
 					+ LookUp(CharId[temp1+temp2],"name") + '<\/span><\/th>'
-					+ '<th class="bg_' + CharId[temp1+temp2+temp3] + '"><span class="shadowname">'
+					+ '<th class="bg_' + CharId[temp1+temp2+temp3] + ' trioname"><span class="shadowname">'
 					+ LookUp(CharId[temp1+temp2+temp3],"name") + '<\/span><\/th>'
+					+ '<th style="width: 30px; background-color: hsl('
+					+ (TrioHistory[temp1][temp2][temp3].length*50-60)
+					+ 'deg 90% ' + (100-TrioHistory[temp1][temp2][temp3].length*7) + '%)">'
+					+ TrioHistory[temp1][temp2][temp3].length + '<\/th>'
 					+ '<td style="background-color: white;">';
 					
 					for(temp4 of TrioHistory[temp1][temp2][temp3]){
-						Output += LookUpEvent(temp4,"name") + '<br>';
+						Output += "「" + LookUpEvent(temp4,"name") + "」";
 					}
 					Output += '<\/td><\/tr>\n';
 				}
@@ -559,6 +586,10 @@ loadScript("data/events.js", function() {
 <h3 class="niji">更新履歴</h3>
 <table class="history">
 <tbody>
+<tr>
+	<td>2022/04/17</td>
+	<td><span class="fix"></span>「イベント一覧」「トリオ重複状況」のレイアウトを調整</td>
+</tr>
 <tr>
 	<td>2022/03/04</td>
 	<td><span class="fix"></span>「参加キャラクター」に背景色を付与</td>

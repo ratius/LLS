@@ -218,7 +218,7 @@ function WriteMessage(set) {
 	var MessageNumber = 1;
 	for(i=0; i<ArenaData[set].Opponent.length; i++){
 		j = ArenaData[set].Opponent[i];
-		Output += '<tr><th style="width: 40px">'
+		Output += '<tr><th style="width: 60px">'
 			+ ('num' in j ? j.num : MessageNumber++) + '<\/th>';
 			
 			if('name' in j){ //名前があるなら立ち絵も表示させる
@@ -355,9 +355,14 @@ loadScript("data/arena.js", function() {
 <table class="history">
 <tbody>
 <tr>
-	<td>2022/04/03</td>
-	<td><span class="new"></span>閲覧可能なテキストを追加<br>（第15回、第18回前半戦(未完成)、東雲学院(未完成)、千歳橋高校）</td>
+	<td>2022/04/18</td>
+	<td><span class="new"></span>閲覧可能なテキストを追加<br>（第15回、第18回後半戦）</td>
 </tr>
+<tr>
+	<td>2022/04/03</td>
+	<td><span class="new"></span>閲覧可能なテキストを追加<br>（第15回、第18回前半戦、東雲学院(未完成)、千歳橋高校）</td>
+</tr>
+<!--
 <tr>
 	<td>2022/03/18</td>
 	<td><span class="new"></span>閲覧可能なテキストを追加<br>（第12回、第14回、青藍高校、紫苑女学院）</td>
@@ -366,7 +371,6 @@ loadScript("data/arena.js", function() {
 	<td>2022/03/10</td>
 	<td><span class="new"></span>閲覧可能なテキストを追加<br>（第8～11回、藤黄学園、Y.G.国際学園、ドリームセッション）</td>
 </tr>
-<!--
 <tr>
 	<td>2022/03/06</td>
 	<td><span class="new"></span>閲覧可能なテキストを追加（第6～7回）<br>
