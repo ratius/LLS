@@ -7139,7 +7139,7 @@ const RawCardList = [
 	"cn2": "虹色のワルツ",
 	"date": "2022/04/07",
 	"source": "reward",
-	"desc": "イベント「春宵一刻　夜桜見物」報酬 (???枠)"
+	"desc": "イベント「春宵一刻　夜桜見物」報酬 (交換所枠)"
 },
 {
 	"id": 664,
@@ -7151,7 +7151,31 @@ const RawCardList = [
 	"cn2": "MY舞☆TONIGHT",
 	"date": "2022/04/07",
 	"source": "reward",
-	"desc": "イベント「春宵一刻　夜桜見物」報酬 (???枠)"
+	"desc": "イベント「春宵一刻　夜桜見物」報酬 (ランキング枠)"
+},
+{
+	"id": 665,
+	"name": "Rin",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "どうかにゃ？",
+	"cn2": "いま誓いを果たす時",
+	"date": "2022/04/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 666,
+	"name": "Setsuna",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Gd",
+	"cn1": "次のライブのための研究です！",
+	"cn2": "虹色のワルツ",
+	"date": "2022/04/14",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
 }
 ];
-const LatestUpdate = "2021/04/07 イベント「春宵一刻　夜桜見物」まで";
+const LatestUpdate = "2022/04/14 「パーティーガチャ」まで";
