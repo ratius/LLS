@@ -1,7 +1,7 @@
 const OutfitList = [
-	["初期", "スノハレ", "ぼららら", "それ僕", "WR", "ユメトビ", "キラセン", "ノーブラ", "AA", "もぎゅ", "僕今"],
-	["初期", "君ここ", "青ジャン", "ブラメロ", "恋アク", "未ホラ", "ミラウェ", "HPT", "未ドリ", "WBNW", "MY舞"],
-	["初期", "アニマル", "ローズ", "マーチング", "LUMF", "3rdソロ", "虹パ", "JB!!!", "虹色の心", "L！L！L！", "ワルツ他"]
+	["初期", "スノハレ", "ぼららら", "それ僕", "WR", "ユメトビ", "キラセン", "ノーブラ", "AA", "もぎゅ", "僕今", "ゆゆゆ"],
+	["初期", "君ここ", "青ジャン", "ブラメロ", "恋アク", "未ホラ", "ミラウェ", "HPT", "未ドリ", "WBNW", "MY舞", "みら僕"],
+	["初期", "アニマル", "ローズ", "マーチング", "LUMF", "3rdソロ", "虹パ", "JB!!!", "虹色の心", "L！L！L！", "ワルツ他", "CDCS"]
 ];
 
 const RawCardList = [
@@ -4442,8 +4442,8 @@ const RawCardList = [
 	"id": 435,
 	"name": "Rina",
 	"rare": "SR",
-	"atr": "Elegant",
-	"type": "Sk",
+	"atr": "Natural",
+	"type": "Gd",
 	"cn1": "いっぱい食べてね",
 	"cn2": "Just Believe!!!",
 	"date": "2021/04/04",
@@ -7176,6 +7176,198 @@ const RawCardList = [
 	"date": "2022/04/14",
 	"source": "none",
 	"desc": "「パーティーガチャ」で追加"
-}
+},
+{
+	"id": 667,
+	"name": "Hanayo",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "ん～！　美味し～～！！",
+	"cn2": "Happy♡Sweet♡Easter",
+	"date": "2022/04/19",
+	"source": "gacha",
+	"desc": "「たまごに込められた想いガチャ」で追加"
+},
+{
+	"id": 668,
+	"name": "Lanzhu",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "それじゃあ、行ってくるわね！",
+	"cn2": "虹色のワルツ",
+	"date": "2022/04/19",
+	"source": "gacha",
+	"desc": "「たまごに込められた想いガチャ」で追加"
+},
+{
+	"id": 669,
+	"name": "Chika",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "って、わああっ！",
+	"cn2": "Happy♡Sweet♡Easter",
+	"date": "2022/04/19",
+	"source": "gacha",
+	"desc": "「たまごに込められた想いガチャ」で追加"
+},
+{
+	"id": 670,
+	"name": "Shizuku",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "見つけられて本当によかったです",
+	"cn2": "Happy♡Sweet♡Easter",
+	"date": "2022/04/22",
+	"source": "reward",
+	"desc": "イベント「たまごに込められた想い」報酬"
+},
+{
+	"id": 671,
+	"name": "Rina",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Sp",
+	"cn1": "「ぴょんぴょん」",
+	"cn2": "虹色のワルツ",
+	"date": "2022/04/22",
+	"source": "reward",
+	"desc": "イベント「たまごに込められた想い」報酬（イベントpt枠）"
+},
+{
+	"id": 672,
+	"name": "Umi",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "丁寧に貼って……っと",
+	"cn2": "A song for You! You? You!!",
+	"date": "2022/04/22",
+	"source": "reward",
+	"desc": "イベント「たまごに込められた想い」報酬（ランキング枠）"
+},
+{
+	"id": 673,
+	"name": "Nico",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "あ、足がしびれて、もうだめ……",
+	"cn2": "パンキッシュ☆にこ",
+	"date": "2022/04/29",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 674,
+	"name": "Ai",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "これくらい余裕余裕♪",
+	"cn2": "月夜のいざない",
+	"date": "2022/04/29",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 675,
+	"name": "Mia",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "今のみた？？　すごい！！",
+	"cn2": "Colorful Dreams! Colorful Smiles!",
+	"date": "2022/04/29",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 676,
+	"name": "Hanamaru",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "あっという間だったずら",
+	"cn2": "未来の僕らは知ってるよ",
+	"date": "2022/04/29",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 677,
+	"name": "Honoka",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Gd",
+	"cn1": "私、お医者さんだから！",
+	"cn2": "ミラクルスペシャリスト",
+	"date": "2022/05/04",
+	"source": "gacha",
+	"desc": "「未来に輝く素敵なお仕事ガチャ」で追加"
+},
+{
+	"id": 678,
+	"name": "Karin",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sk",
+	"cn1": "今のみた？？　すごい！！",
+	"cn2": "Colorful Dreams! Colorful Smiles!",
+	"date": "2022/05/04",
+	"source": "gacha",
+	"desc": "「未来に輝く素敵なお仕事ガチャ」で追加"
+},
+{
+	"id": 679,
+	"name": "Dia",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "燃えているのは２階です！",
+	"cn2": "ミラクルスペシャリスト",
+	"date": "2022/05/04",
+	"source": "gacha",
+	"desc": "「未来に輝く素敵なお仕事ガチャ」で追加"
+},
+{
+	"id": 680,
+	"name": "Ayumu",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Gd",
+	"cn1": "働くのって楽しいな",
+	"cn2": "ミラクルスペシャリスト",
+	"date": "2022/05/07",
+	"source": "reward",
+	"desc": "イベント「未来に輝く素敵なお仕事」報酬"
+},
+{
+	"id": 681,
+	"name": "Eli",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "麺棒を使って、薄く、まぁるく",
+	"cn2": "A song for You! You? You!!",
+	"date": "2022/05/07",
+	"source": "reward",
+	"desc": "イベント「未来に輝く素敵なお仕事」報酬 (交換所枠)"
+},
+{
+	"id": 682,
+	"name": "Yoshiko",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "お荷物をお届けに参りました",
+	"cn2": "未来の僕らは知ってるよ",
+	"date": "2022/05/07",
+	"source": "reward",
+	"desc": "イベント「未来に輝く素敵なお仕事」報酬 (ランキング枠)"
+},
 ];
-const LatestUpdate = "2022/04/14 「パーティーガチャ」まで";
+const LatestUpdate = "2022/05/07 イベント「未来に輝く素敵なお仕事」まで";

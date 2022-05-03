@@ -548,4 +548,22 @@ const EventList = [
 	"UR" : ["Riko", "Ayumu", "Emma"],
 	"SR" : ["Nozomi", "Kanan", "Kanata"]
 },
+{
+	"id" : 62,
+	"name" : "たまごに込められた想い",
+	"type" : "story",
+	"started" : new Date("2022-04-22T15:00:00+09:00"),
+	"ended"   : new Date("2022-04-29T14:59:59+09:00"),
+	"UR" : ["Hanayo", "Chika", "Shizuku"],
+	"SR" : ["Umi", "Rina", "Lanzhu"]
+},
+{
+	"id" : 63,
+	"name" : "未来に輝く素敵なお仕事",
+	"type" : "exchange",
+	"started" : new Date("2022-04-07T15:00:00+09:00"),
+	"ended"   : new Date("2022-04-14T14:59:59+09:00"),
+	"UR" : ["Honoka", "Dia", "Ayumu"],
+	"SR" : ["Eli", "Yoshiko", "Karin"]
+},
 ];

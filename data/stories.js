@@ -2304,6 +2304,66 @@ const StoryList = [
 	"tag": ["main", "Player", "Ayumu"]
 },
 {
+	"chapter": "メインストーリー / 3rd Season / 第38章「聞かせて！　ニジガク！　後編」",
+	"title": "第1話 お見通し！？",
+	"desc": "歩夢と話すことでモヤモヤした気持ちを整理できたあなた。もっとニジガクらしい最高のPVを作りたい、そのことをみんなに伝えようとするが……？",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu", "Basketball"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第38章「聞かせて！　ニジガク！　後編」",
+	"title": "第2話 ３年生は観劇に夢中！",
+	"desc": "夢に見た理想のPVのことをなんとか思い出そうとしているあなた。そんなあなたを見つけた３年生が話しかけてきたこととは……？",
+	"tag": ["main", "Player", "Karin", "Kanata", "Emma", "Mia", "Acting"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第38章「聞かせて！　ニジガク！　後編」",
+	"title": "第3話 見えてきた輪郭",
+	"desc": "ファンサイト企画の動画撮影も兼ねて、３年生と観劇に行ったあなた。すばらしい舞台を見て、夢心地で……？",
+	"tag": ["main", "Player", "Karin", "Kanata", "Emma", "Mia", "Acting"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第38章「聞かせて！　ニジガク！　後編」",
+	"title": "第4話 欠片の煌めき",
+	"desc": "ミュージカルを観に行ったことがきっかけで、本当に作りたいものの輪郭が見えてきたあなた。その輪郭をもっとはっきりさせるため、過去の映像を観ていて……？",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第38章「聞かせて！　ニジガク！　後編」",
+	"title": "第5話 集めた欠片",
+	"desc": "ようやく作りたいものの輪郭が見えたあなた。それを実現させるため、改めて各部、各委員会へお願いに！",
+	"tag": ["main", "Player", "Ai", "Kanata", "Rina", "Shioriko", "Basketball"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第38章「聞かせて！　ニジガク！　後編」",
+	"title": "第6話 自慢の武器！",
+	"desc": "ダンスパートの撮り直しのため、練習を積んでいる果林。いつだって全力でパフォーマンスしてきた果林の頼もしい相棒とは……？",
+	"tag": ["main", "Player", "Kasumi", "Karin", "Emma", "Lanzhu"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第38章「聞かせて！　ニジガク！　後編」",
+	"title": "第7話 一途な想い",
+	"desc": "PVの再撮影をしているメンバー。今日は休日だけど、集まれるメンバーでの再撮影。とってもいいお天気で……？",
+	"tag": ["main", "Player", "Ai", "Kanata", "Emma", "Rina", "Mia"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第38章「聞かせて！　ニジガク！　後編」",
+	"title": "第8話 今の自分にできること",
+	"desc": "PVの再撮影をしているメンバー。それぞれがそれぞれを助け合い、着々と映像ができあがっている。今日はランジュとミアの撮影で……？",
+	"tag": ["main", "Player", "Rina", "Lanzhu", "Mia"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第38章「聞かせて！　ニジガク！　後編」",
+	"title": "第9話 わがまま気ままを叶えたい！",
+	"desc": "再撮影も終わりに近づいてきたが、彼方はいつも他の子を優先させてしまう。そのことが気になるあなただったが、彼方には考えがあって……？",
+	"tag": ["main", "Player", "Shizuku", "Kanata", "Setsuna", "Rina"]
+},
+{
+	"chapter": "メインストーリー / 3rd Season / 第38章「聞かせて！　ニジガク！　後編」",
+	"title": "第10話 瞬く星を集めて！",
+	"desc": "再撮影も終わり、各部活、委員会からの映像と合わせて編集作業を続けるあなた。あなたの思い描くニジガクならではのPVは完成するのか！？",
+	"tag": ["main", "Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+},
+{
 	"chapter": "イベントエピソード「秘密のパーティー！」",
 	"title": "第1話",
 	"desc": "Aqoursやニジガクの皆との親睦を深めようと考えた穂乃果は、サプライズパーティーを計画する。",
@@ -4878,6 +4938,48 @@ const StoryList = [
 	"title": "第7話",
 	"desc": "みんなで「風が吹くおまじない」をすると、偶然か必然か、本当に風が吹いてきた。そして空にはきれいな月が！",
 	"tag": ["event", "Nozomi", "Riko", "Kanan", "Ayumu", "Kanata", "Emma"]
+},
+{
+	"chapter": "イベントエピソード「たまごに込められた想い」",
+	"title": "第1話",
+	"desc": "授業で「世界の行事を調べる」という課題を出されたしずく。しずくは、イースターという行事について調べようとしていた。",
+	"tag": ["event", "Shizuku", "Rina", "Lanzhu"]
+},
+{
+	"chapter": "イベントエピソード「たまごに込められた想い」",
+	"title": "第2話",
+	"desc": "ランジュの提案もあり、イースターを知るために自らイースターパーティーを開くことにしたしずく。今日はパーティーの準備だ。",
+	"tag": ["event", "Umi", "Hanayo", "Chika", "Shizuku", "Rina", "Lanzhu"]
+},
+{
+	"chapter": "イベントエピソード「たまごに込められた想い」",
+	"title": "第3話",
+	"desc": "パーティーの前日、飾りつけは順調に進んでいる。ランジュの一工夫で、パーティーがもっと賑やかになりそうだ。",
+	"tag": ["event", "Umi", "Hanayo", "Chika", "Shizuku", "Rina", "Lanzhu"]
+},
+{
+	"chapter": "イベントエピソード「たまごに込められた想い」",
+	"title": "第4話",
+	"desc": "当日探すためのイースターエッグの準備も着々と仕上がっていく。花陽が持ってきたのは……卵型のおにぎり！？",
+	"tag": ["event", "Umi", "Hanayo", "Chika", "Shizuku", "Rina", "Lanzhu"]
+},
+{
+	"chapter": "イベントエピソード「たまごに込められた想い」",
+	"title": "第5話",
+	"desc": "出来た卵を隠しに行こうとした千歌がまさかの転倒！　卵が中庭じゅうに転がってしまい……",
+	"tag": ["event", "Umi", "Hanayo", "Chika", "Shizuku", "Rina", "Lanzhu"]
+},
+{
+	"chapter": "イベントエピソード「たまごに込められた想い」",
+	"title": "第6話",
+	"desc": "みんなで手分けしたおかげで卵は回収できた。しかし、千歌の一番のお気に入りの卵だけが見つからない……！",
+	"tag": ["event", "Umi", "Hanayo", "Chika", "Shizuku", "Rina", "Lanzhu"]
+},
+{
+	"chapter": "イベントエピソード「たまごに込められた想い」",
+	"title": "第7話",
+	"desc": "通り雨で卵探しは一時中断するトラブルがあったが、無事に最後の卵が見つかった。千歌のお気に入りの卵はどんな柄だったのだろうか？",
+	"tag": ["event", "Umi", "Hanayo", "Chika", "Shizuku", "Rina", "Lanzhu"]
 },
 {
 	"color": "Honoka",
@@ -8135,6 +8237,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Ayumu"]
 },
 {
+	"color": "Ayumu",
+	"chapter": "キズナエピソード 上原歩夢",
+	"title": "32話 もしも私が？",
+ 	"desc": "VTuberにハマってしまっている歩夢。その楽しさをあなたにも教えようと一緒に動画を見ることに……？",
+	"tag": ["kizuna", "Player", "Ayumu"]
+},
+{
 	"color": "Kasumi",
 	"chapter": "キズナエピソード 中須かすみ",
 	"title": "1話 愛されかすかす",
@@ -8354,6 +8463,13 @@ const StoryList = [
 	"title": "31話 大好きな街！",
  	"desc": "かすみの地元でお祭りが開催されるらしい。それに出たいかすみは、あなたに相談を持ちかけて……",
 	"tag": ["kizuna", "Player", "Kasumi"]
+},
+{
+	"color": "Kasumi",
+	"chapter": "キズナエピソード 中須かすみ",
+	"title": "32話 目指せホームアイドル！",
+ 	"desc": "地域を盛り上げるホームアイドルになりたいかすみ。そのためには地域のお祭りのコンテストで優勝しなければならない。コンテストに向けて特訓を開始するが……？",
+	"tag": ["kizuna", "Player", "Kasumi", "Shioriko"]
 },
 {
 	"color": "Shizuku",
@@ -8577,6 +8693,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Shizuku"]
 },
 {
+	"color": "Shizuku",
+	"chapter": "キズナエピソード 桜坂しずく",
+	"title": "32話 引き込まれた一人芝居",
+ 	"desc": "あなたとしずくが部で必要なものの買い出しに出掛けた先で、偶然目に入ったパフォーマンス。それは……？",
+	"tag": ["kizuna", "Player", "Shizuku", "Acting"]
+},
+{
 	"color": "Karin",
 	"chapter": "キズナエピソード 朝香果林",
 	"title": "1話 果林のお仕事",
@@ -8796,6 +8919,13 @@ const StoryList = [
 	"title": "31話 遠い憧れ",
  	"desc": "学食でぼんやりしている果林。手元にあるのは果林が読者モデルをしている雑誌で……？",
 	"tag": ["kizuna", "Player", "Karin"]
+},
+{
+	"color": "Karin",
+	"chapter": "キズナエピソード 朝香果林",
+	"title": "32話 果林の体当たり修行・１",
+ 	"desc": "読者モデルコンテストに出ることを決めた果林。出るからには１番を目指したい！　そのためには精神修行から！？",
+	"tag": ["kizuna", "Player", "Umi", "Karin"]
 },
 {
 	"color": "Ai",
@@ -9020,6 +9150,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Ai"]
 },
 {
+	"color": "Ai",
+	"chapter": "キズナエピソード 宮下愛",
+	"title": "32話 追求したい！",
+ 	"desc": "愛トモのみんなに喜んでもらうため、ダジャレの新境地を開こうとしていた愛だったが、あることに気が付いたようで……",
+	"tag": ["kizuna", "Player", "Ai", "Rina", "Mia"]
+},
+{
 	"color": "Kanata",
 	"chapter": "キズナエピソード 近江彼方",
 	"title": "1話 眠り姫・彼方",
@@ -9237,6 +9374,13 @@ const StoryList = [
 	"chapter": "キズナエピソード 近江彼方",
 	"title": "31話 アルバイトがしたい！",
  	"desc": "欲しいものがあり、アルバイトを探している彼方。でもなかなか見つからない。そんなとき……？",
+	"tag": ["kizuna", "Player", "Kotori", "Kanata"]
+},
+{
+	"color": "Kanata",
+	"chapter": "キズナエピソード 近江彼方",
+	"title": "32話 キッチンならお任せ！",
+ 	"desc": "ことりのいるメイド喫茶でアルバイトをすることになった彼方。任されたのは厨房。料理が得意な彼方はすぐに仕事を覚えたが……？",
 	"tag": ["kizuna", "Player", "Kotori", "Kanata"]
 },
 {
@@ -9460,6 +9604,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Setsuna"]
 },
 {
+	"color": "Setsuna",
+	"chapter": "キズナエピソード 優木せつ菜",
+	"title": "32話 秘密の漫画家セット",
+ 	"desc": "雑誌の付録で漫画家セットを手に入れたせつ菜。それを使って漫画に挑戦してみたい。でも、なかなか描きたいものがまとまらず……？",
+	"tag": ["kizuna", "Player", "Kasumi", "Setsuna"]
+},
+{
 	"color": "Emma",
 	"chapter": "キズナエピソード エマ・ヴェルデ",
 	"title": "1話 日本に来た理由",
@@ -9678,6 +9829,13 @@ const StoryList = [
 	"chapter": "キズナエピソード エマ・ヴェルデ",
 	"title": "31話 マイからのエマージェンシー",
  	"desc": "ある日エマに送られてきたマイからのメッセージ。それを見たエマはいてもたってもいられない",
+	"tag": ["kizuna", "Player", "Emma", "Mai"]
+},
+{
+	"color": "Emma",
+	"chapter": "キズナエピソード エマ・ヴェルデ",
+	"title": "32話 誰もがみんな",
+ 	"desc": "マイが見つけた写真を見せてもらったあなたとエマ。それは夏川写真館の宝である素晴らしい写真。自分の実力不足を感じ不安になったマイは……",
 	"tag": ["kizuna", "Player", "Emma", "Mai"]
 },
 {
@@ -9903,6 +10061,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Rina", "Asagi"]
 },
 {
+	"color": "Rina",
+	"chapter": "キズナエピソード 天王寺璃奈",
+	"title": "32話 科学はハッピーを作る！",
+	"desc": "調子が悪くなってしまった璃奈ちゃんボードを浅希に預けた璃奈。いつもの部活中、璃奈ちゃんボードの話になって……？",
+	"tag": ["kizuna", "Player", "Rina"]
+},
+{
 	"color": "Shioriko",
 	"chapter": "キズナエピソード 三船栞子",
 	"title": "1話 新入部員のサダメ！？",
@@ -10031,6 +10196,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Kasumi", "Shizuku", "Rina", "Shioriko"]
 },
 {
+	"color": "Shioriko",
+	"chapter": "キズナエピソード 三船栞子",
+	"title": "19話 なにがしたい？",
+ 	"desc": "ファンクラブに興味が出た栞子。もしも自分が作るなら、どんなことをしてみたい？",
+	"tag": ["kizuna", "Player", "Shioriko"]
+},
+{
 	"color": "Mia",
 	"chapter": "キズナエピソード ミア・テイラー",
 	"title": "1話 ボクの完璧なステージ",
@@ -10103,6 +10275,13 @@ const StoryList = [
 	"tag": ["kizuna", "Player", "Mia"]
 },
 {
+	"color": "Mia",
+	"chapter": "キズナエピソード ミア・テイラー",
+	"title": "11話 ミアvsにこ！？",
+	"desc": "ミアがイベントを予定していると聞いたにこと花陽がやってくる。イベントの話に花が咲くと思いきや……？",
+	"tag": ["kizuna", "Player", "Hanayo", "Nico", "Mia"]
+},
+{
 	"color": "Lanzhu",
 	"chapter": "キズナエピソード 鐘嵐珠",
 	"title": "1話 ランジュの新生活！？",
@@ -10173,6 +10352,13 @@ const StoryList = [
 	"title": "10話 ランジュの拾い物",
 	"desc": "ある日、ランニングに出かけたランジュが大慌てで部室に戻ってきた。ランニング中、大変なものを見つけてしまったとかで……？",
 	"tag": ["kizuna", "Player", "Lanzhu"]
+},
+{
+	"color": "Lanzhu",
+	"chapter": "キズナエピソード 鐘嵐珠",
+	"title": "11話 ランジュがママになるの！",
+	"desc": "ランニングの最中、怪我をした雛鳥を見つけたランジュ。しばらく見守っていても親鳥が来る気配もなく保護することに。",
+	"tag": ["kizuna", "Player", "Ai", "Lanzhu"]
 },
 {
 	"color": "Ayumu",
@@ -10281,5 +10467,19 @@ const StoryList = [
 	"title": "応援があれば！　なんだって！",
 	"desc": "しずくからあるお願いをされたあなた。お願いの内容は「バレーボールの練習」……！？",
 	"tag": ["special", "Player", "Shizuku"]
+},
+{
+	"color": "Karin",
+	"chapter": "TVアニメ「ラブライブ！虹ヶ咲学園スクールアイドル同好会」2期放送記念スペシャルキズナエピソード",
+	"title": "秘密のスナップ",
+	"desc": "果林が読者モデルとして出ている雑誌で「あなたの大切な人との記念写真」という企画をすることになった。その果林の「大切な人」に選ばれたのは……！",
+	"tag": ["special", "Player", "Karin"]
+},
+{
+	"color": "Ai",
+	"chapter": "TVアニメ「ラブライブ！虹ヶ咲学園スクールアイドル同好会」2期放送記念スペシャルキズナエピソード",
+	"title": "見たことのない景色",
+	"desc": "前日の愛のライブの余韻が抜けないあなた。愛のライブではいつも「最高に楽しい」を更新してくれるんだ、と愛に伝えると……",
+	"tag": ["special", "Player", "Ai"]
 }
 ];
