@@ -561,8 +561,8 @@ const EventList = [
 	"id" : 63,
 	"name" : "未来に輝く素敵なお仕事",
 	"type" : "exchange",
-	"started" : new Date("2022-04-07T15:00:00+09:00"),
-	"ended"   : new Date("2022-04-14T14:59:59+09:00"),
+	"started" : new Date("2022-05-07T15:00:00+09:00"),
+	"ended"   : new Date("2022-05-14T14:59:59+09:00"),
 	"UR" : ["Honoka", "Dia", "Ayumu"],
 	"SR" : ["Eli", "Yoshiko", "Karin"]
 },
