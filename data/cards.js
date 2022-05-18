@@ -7369,5 +7369,100 @@ const RawCardList = [
 	"source": "reward",
 	"desc": "イベント「未来に輝く素敵なお仕事」報酬 (ランキング枠)"
 },
+{
+	"id": 683,
+	"name": "Mari",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sp",
+	"cn1": "乗ってみたくなったかしら？",
+	"cn2": "パッションステージ",
+	"date": "2022/05/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 684,
+	"name": "Setsuna",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "おまけですっ！　えいっ！",
+	"cn2": "Colorful Dreams! Colorful Smiles!",
+	"date": "2022/05/14",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
+},{
+	"id": 685,
+	"name": "You",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Gd",
+	"cn1": "やっほー。お目覚めかな？",
+	"cn2": "ゆめかわ♡ワンダーランド",
+	"date": "2022/05/19",
+	"source": "gacha",
+	"desc": "「カワイイ☆ワンダーランドガチャ」で追加"
+},
+{
+	"id": 686,
+	"name": "Chika",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Gd",
+	"cn1": "ふああ……とろけちゃう～",
+	"cn2": "未来の僕らは知ってるよ",
+	"date": "2022/05/19",
+	"source": "gacha",
+	"desc": "「カワイイ☆ワンダーランドガチャ」で追加"
+},
+{
+	"id": 687,
+	"name": "Kasumi",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Gd",
+	"cn1": "プリンセスになれるんですね！",
+	"cn2": "ゆめかわ♡ワンダーランド",
+	"date": "2022/05/19",
+	"source": "gacha",
+	"desc": "「カワイイ☆ワンダーランドガチャ」で追加"
+},
+{
+	"id": 688,
+	"name": "Rin",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "お花の冠？　かわいいにゃ……",
+	"cn2": "ゆめかわ♡ワンダーランド",
+	"date": "2022/05/22",
+	"source": "reward",
+	"desc": "イベント「カワイイ☆ワンダーランド」報酬"
+},
+{
+	"id": 689,
+	"name": "Nozomi",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "気に入っちゃった♪",
+	"cn2": "A song for You! You? You!!",
+	"date": "2022/05/22",
+	"source": "reward",
+	"desc": "イベント「カワイイ☆ワンダーランド」報酬 (交換所枠)"
+},
+{
+	"id": 690,
+	"name": "Shioriko",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "かわいいです……",
+	"cn2": "Colorful Dreams! Colorful Smiles!",
+	"date": "2022/05/22",
+	"source": "reward",
+	"desc": "イベント「カワイイ☆ワンダーランド」報酬 (ランキング枠)"
+},
 ];
-const LatestUpdate = "2022/05/07 イベント「未来に輝く素敵なお仕事」まで";
+const LatestUpdate = "2022/05/22 イベント「カワイイ☆ワンダーランド」まで";

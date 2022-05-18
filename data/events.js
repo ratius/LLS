@@ -566,4 +566,13 @@ const EventList = [
 	"UR" : ["Honoka", "Dia", "Ayumu"],
 	"SR" : ["Eli", "Yoshiko", "Karin"]
 },
+{
+	"id" : 64,
+	"name" : "カワイイ☆ワンダーランド",
+	"type" : "story",
+	"started" : new Date("2022-05-22T15:00:00+09:00"),
+	"ended"   : new Date("2022-05-30T14:59:59+09:00"),
+	"UR" : ["Rin", "You", "Kasumi"],
+	"SR" : ["Nozomi", "Chika", "Shioriko"]
+},
 ];
