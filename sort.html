@@ -53,6 +53,10 @@ const ColKeke = "#AEFFFA";
 const ColChis = "#FFCAD6";
 const ColSumi = "#C3FFBC";
 const ColRen  = "#C0CBFF";
+const ColKina = "#fffaa3";
+const ColMei  = "#ff9999";
+const ColShik = "#dbfff0";
+const ColNats = "#ffa8e2";
 
 
 var MemberGroup = [
@@ -395,15 +399,22 @@ var CharList = [
 	{name:"しおりな",       color:[ColShio, ColRina], group:{"NijiCP":1}},
 	{name:"りなミア",       color:[ColRina, ColMia ], group:{"NijiCP":1}},
 	{name:"りなラン",       color:[ColRina, ColLanz], group:{"NijiCP":1}},
+	{name:"ゆうしお",       color:[ColYu  , ColShio], group:{"NijiCP":1}},
 	{name:"しおミア",       color:[ColAi  , ColMia ], group:{"NijiCP":1}},
 	{name:"ランしお",       color:[ColLanz, ColShio], group:{"NijiCP":1}},
+	{name:"ゆうラン",       color:[ColYu  , ColLanz], group:{"NijiCP":1}},
 	{name:"ランミア",       color:[ColLanz, ColMia ], group:{"NijiCP":1}},
+	{name:"ゆうミア",       color:[ColYu  , ColMia ], group:{"NijiCP":1}},
 
 	{name:"澁谷かのん",     color:[ColKano], group:{"Liella":1}},
 	{name:"唐可可",         color:[ColKeke], group:{"Liella":1}},
 	{name:"嵐千砂都",       color:[ColChis], group:{"Liella":1}},
 	{name:"平安名すみれ",   color:[ColSumi], group:{"Liella":1}},
 	{name:"葉月恋",         color:[ColRen ], group:{"Liella":1}},
+	{name:"桜小路きな子",   color:[ColKina], group:{"Liella":1}},
+	{name:"米女メイ",       color:[ColMei ], group:{"Liella":1}},
+	{name:"若菜四季",       color:[ColShik], group:{"Liella":1}},
+	{name:"鬼塚夏美",       color:[ColNats], group:{"Liella":1}},
 
 	{name:"柊摩央",     subtext:"Sunny Passion", color:["#ed8"], group:{"Liella2":1}},
 	{name:"聖澤悠奈",   subtext:"Sunny Passion", color:["#cbe"], group:{"Liella2":1}},
@@ -422,17 +433,48 @@ var CharList = [
 	{name:"岬なこ",        subtext:"嵐千砂都 役",     color:[ColChis], group:{"LiellaCast":1}},
 	{name:"ペイトン尚未",  subtext:"平安名すみれ 役", color:[ColSumi], group:{"LiellaCast":1}},
 	{name:"青山なぎさ",    subtext:"葉月恋 役",       color:[ColRen ], group:{"LiellaCast":1}},
+	{name:"鈴原希実",      subtext:"桜小路きな子 役", color:[ColKina], group:{"LiellaCast":1}},
+	{name:"薮島朱音",      subtext:"米女メイ 役",     color:[ColMei ], group:{"LiellaCast":1}},
+	{name:"大熊和奏",      subtext:"若菜四季 役",     color:[ColShik], group:{"LiellaCast":1}},
+	{name:"絵森彩",        subtext:"鬼塚夏美 役",     color:[ColNats], group:{"LiellaCast":1}},
 
 	{name:"かのクゥ",  color:[ColKano, ColKeke], group:{"LiellaCP":1}},
 	{name:"かのちさ",  color:[ColKano, ColChis], group:{"LiellaCP":1}},
 	{name:"かのすみ",  color:[ColKano, ColSumi], group:{"LiellaCP":1}},
 	{name:"れんかの",  color:[ColRen , ColKano], group:{"LiellaCP":1}},
+	{name:"かのきな",  color:[ColKano, ColKina], group:{"LiellaCP":1}},
+	{name:"かのメイ",  color:[ColKano, ColMei ], group:{"LiellaCP":1}},
+	{name:"かのしき",  color:[ColKano, ColShik], group:{"LiellaCP":1}},
+	{name:"かのなつ",  color:[ColKano, ColNats], group:{"LiellaCP":1}},
 	{name:"ちさクゥ",  color:[ColChis, ColKeke], group:{"LiellaCP":1}},
 	{name:"クゥすみ",  color:[ColKeke, ColSumi], group:{"LiellaCP":1}},
 	{name:"クゥれん",  color:[ColKeke, ColRen ], group:{"LiellaCP":1}},
+	{name:"クゥきな",  color:[ColKeke, ColKina], group:{"LiellaCP":1}},
+	{name:"クゥメイ",  color:[ColKeke, ColMei ], group:{"LiellaCP":1}},
+	{name:"クゥしき",  color:[ColKeke, ColShik], group:{"LiellaCP":1}},
+	{name:"クゥなつ",  color:[ColKeke, ColNats], group:{"LiellaCP":1}},
 	{name:"ちさすみ",  color:[ColChis, ColSumi], group:{"LiellaCP":1}},
 	{name:"ちされん",  color:[ColChis, ColRen ], group:{"LiellaCP":1}},
+	{name:"ちさきな",  color:[ColChis, ColKina], group:{"LiellaCP":1}},
+	{name:"ちさメイ",  color:[ColChis, ColMei ], group:{"LiellaCP":1}},
+	{name:"ちさしき",  color:[ColChis, ColShik], group:{"LiellaCP":1}},
+	{name:"ちさなつ",  color:[ColChis, ColNats], group:{"LiellaCP":1}},
 	{name:"すみれん",  color:[ColSumi, ColRen ], group:{"LiellaCP":1}},
+	{name:"すみきな",  color:[ColSumi, ColKina], group:{"LiellaCP":1}},
+	{name:"すみメイ",  color:[ColSumi, ColMei ], group:{"LiellaCP":1}},
+	{name:"すみしき",  color:[ColSumi, ColShik], group:{"LiellaCP":1}},
+	{name:"すみなつ",  color:[ColSumi, ColNats], group:{"LiellaCP":1}},
+	{name:"れんきな",  color:[ColRen , ColKina], group:{"LiellaCP":1}},
+	{name:"れんメイ",  color:[ColRen , ColMei ], group:{"LiellaCP":1}},
+	{name:"れんしき",  color:[ColRen , ColShik], group:{"LiellaCP":1}},
+	{name:"れんなつ",  color:[ColRen , ColNats], group:{"LiellaCP":1}},
+	{name:"きなメイ",  color:[ColKina, ColMei ], group:{"LiellaCP":1}},
+	{name:"きなしき",  color:[ColKina, ColShik], group:{"LiellaCP":1}},
+	{name:"きななつ",  color:[ColKina, ColNats], group:{"LiellaCP":1}},
+	{name:"メイしき",  color:[ColMei , ColShik], group:{"LiellaCP":1}},
+	{name:"メイなつ",  color:[ColMei , ColNats], group:{"LiellaCP":1}},
+	{name:"しきなつ",  color:[ColShik, ColNats], group:{"LiellaCP":1}},
+
 
 	{name:"桜坂しずく",    color:["#acf"], group:{"Seiran":1}},
 	{name:"一之瀬マリカ",  color:["#acf"], group:{"Seiran":1}},
@@ -828,6 +870,10 @@ body {
 	background-color: #eee;
 }
 
+#CharacterSelect{
+	font-size: large;
+}
+
 #mainTable{
 	font-size: 16px;
 	font-family: 'ＭＳ Ｐゴシック',sans-serif;
@@ -896,6 +942,18 @@ body {
 	color: white;
 	font-size: 120%;
 }
+@media (max-width:959px){
+	#history { width: calc(100vw - 60px); }
+}
+@media (min-width:960px){
+	#history { width: 900px; }
+}
+#history {
+	margin: auto;
+	height:calc(70vh - 60px);
+	overflow-y: scroll;
+	border: solid 4px #f8b656;
+}
 
 --></style>
 </head>
@@ -905,11 +963,12 @@ body {
 	<img src="logo.png" width="600" height="120" alt="キャラソート！">
 
 <script><!--
-document.write('<form name="starter"><select name="CharacterSelect" onchange="initList()"><option selected>▼ソート対象を選択<\/option>');
+document.write('<form name="starter"><select id="CharacterSelect" name="CharacterSelect" onchange="initList()"><option selected>▼ソート対象を選択<\/option>');
 
 for(i=0; i<MemberGroup.length; i++){
 	document.write("<option>" + MemberGroup[i][0] + MemberGroup[i][1] + " (" + Member[i].length + ")"
-	+ (Member[i].length>=30 ? "【長い】" : "") + "<\/option>");
+	+ (Member[i].length>=50 ? "【超長い】" : (Member[i].length>=30 ? "【長い】" : ""))
+	+ "<\/option>");
 }
 document.write('<\/select><\/form>');
 --></script>
@@ -954,9 +1013,18 @@ document.write('<\/select><\/form>');
 	【注意】ソート対象の要素数が20以上のものは、結果が出るまでに時間がかかります。暇な時にどうぞ。<br>
 	下位だと思ったもの同士の比較は中央（引き分けorどっちも興味無い）を押すことで時間短縮可能です。
 </p>
+</div>
+
 <h3 class="niji">更新履歴</h3>
-<table class="history" style="margin: auto;">
+<div id="history">
+<table class="history" style="width: 100%">
 <tbody>
+<tr>
+	<td>2022/05/18</td>
+	<td><span class="new"></span>Liella!二期生を追加<br>
+		<span class="fix"></span>更新履歴のレイアウトを調整<br>
+		<span class="fix"></span>結果表示時、更新履歴が消えないように調整</td>
+</tr>
 <tr>
 	<td>2022/04/17</td>
 	<td><span class="new"></span>虹ヶ咲関係者に演劇部部長、バスケ部部長を追加<br>
@@ -1039,7 +1107,6 @@ document.write('<\/select><\/form>');
 </tr>
 </tbody>
 </table>
-
 </div>
 
 <p>
