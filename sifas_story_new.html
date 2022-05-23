@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta charset="utf-8">
+
+<meta property="og:url" content="https://ratius.github.io/LLS/sifas_story_new.html">
+<meta property="og:title" content="スクフェスALL STARS ストーリー便覧 [改]">
+<meta property="og:type" content="website">
+<meta property="og:description" content="スクスタの各種ストーリーのあらすじ・登場人物のまとめ。">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@ratius55">
+<meta name="twitter:creator" content="@ratius55">
+<meta name="twitter:title" content="スクフェスALL STARS ストーリー便覧 [改]">
+<meta name="twitter:description" content="スクスタの各種ストーリーのあらすじ・登場人物のまとめ。">
+
+<title>スクフェスALL STARS ストーリー便覧 [改]</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+<link rel="stylesheet" href="main.css">
+<style><!--
+
+p{
+	margin: 15px 10px;
+}
+
+#N1, #N2 {
+	border: solid 2px #b9a;
+	font-size: x-large;
+	font-weight: bold;
+	padding: 5px;
+	margin-right: 10px;
+}
+
+#N2 {
+	width: 600px;
+}
+
+#OutputArea {
+	background-color: #ddd;
+	border: solid 2px #a89;
+	padding: 4px;
+	width: min( calc(100% - 12px) , 900px);
+	height: calc(90vh - 120px);
+	overflow-y: scroll;
+}
+
+.StoryTable {
+	width: calc(100% - 10px);
+	border-collapse: collapse;
+	border-width: 2px;
+	border-style: solid;
+	margin: 5px 5px 15px;
+}
+
+.StoryTable thead td{
+	position: relative;
+	padding: 0;
+	height: 45px;
+	border: 2px;
+	border-style: solid;
+	border-color: inherit;
+}
+
+.StoryTable tbody td {
+	padding: 5px 10px;
+	line-height: 165%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: inherit;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.StoryTable .LeftColumn {
+	width: 80px;
+	text-align: center;
+}
+
+.StoryTable .RightColumn {
+	background-color: white;
+}
+
+.story-title {
+	font-size: 140%;
+	font-weight: bold;
+	background:linear-gradient(90deg, rgba(255,255,255,0)0%, rgba(255,255,255,0.25) 100%);
+}
+.story-title span {
+	margin-left: 15px;
+}
+
+
+.RoundButton {
+	display: inline-block;
+	margin: 1px auto;
+	padding: 0px 7px;
+	height: 24px;
+	border: 2px solid;
+	border-radius: 13px;
+}
+
+.history ul{
+	margin: 5px 0 5px 0;
+	color: #444;
+	font-size: small;
+	list-style-type: none;
+	padding-inline-start: 20px;
+	line-height: 180%;
+}
+.history li:before { content:"▶ "; color:#b95;}
+--></style>
+<script><!--
+const CharLookUpTable = [
+	{"number":-99,"id": "none",     "name": "欠損値", "r":160, "g":160, "b":160 },
+	{"number":-1, "id": "main",     "name": "メイン", "r":122, "g":202, "b":223 },
+	{"number":-2, "id": "event",   "name": "イベント","r":255, "g":130, "b":127 },
+	{"number":-3, "id": "kizuna",   "name": "キズナ", "r":119, "g":191, "b":220 },
+	{"number":-4, "id": "special",  "name": "特殊",   "r":240, "g":192, "b":128 },
+	
+	{"number":-11,"id": "main2",    "name": "メイン", "r":160, "g":140, "b":240 },
+
+	{"number":1 , "id": "Honoka",   "name": "穂乃果", "r":255, "g":163, "b": 54 },
+	{"number":2 , "id": "Eli",      "name": "絵里",   "r":122, "g":238, "b":255 },
+	{"number":3 , "id": "Kotori",   "name": "ことり", "r":206, "g":191, "b":191 },
+	{"number":4 , "id": "Umi",      "name": "海未",   "r": 23, "g":105, "b":255 },
+	{"number":5 , "id": "Rin",      "name": "凛",     "r":219, "g":212, "b": 30 },
+	{"number":6 , "id": "Maki",     "name": "真姫",   "r":255, "g": 80, "b": 62 },
+	{"number":7 , "id": "Nozomi",   "name": "希",     "r":196, "g": 85, "b":246 },
+	{"number":8 , "id": "Hanayo",   "name": "花陽",   "r":106, "g":230, "b":115 },
+	{"number":9 , "id": "Nico",     "name": "にこ",   "r":255, "g": 79, "b":145 },
+	{"number":10, "id": "Chika",    "name": "千歌",   "r":255, "g":149, "b": 71 },
+	{"number":11, "id": "Riko",     "name": "梨子",   "r":255, "g":158, "b":172 },
+	{"number":12, "id": "Kanan",    "name": "果南",   "r": 39, "g":193, "b":183 },
+	{"number":13, "id": "Dia",      "name": "ダイヤ", "r":219, "g":  8, "b": 57 },
+	{"number":14, "id": "You",      "name": "曜",     "r":102, "g":192, "b":255 },
+	{"number":15, "id": "Yoshiko",  "name": "善子",   "r":193, "g":202, "b":212 },
+	{"number":16, "id": "Hanamaru", "name": "花丸",   "r":255, "g":208, "b": 16 },
+	{"number":17, "id": "Mari",     "name": "鞠莉",   "r":194, "g": 82, "b":198 },
+	{"number":18, "id": "Ruby",     "name": "ルビィ", "r":255, "g":111, "b":190 },
+	{"number":19, "id": "Ayumu",    "name": "歩夢",   "r":255, "g":191, "b":224 },
+	{"number":20, "id": "Kasumi",   "name": "かすみ", "r":213, "g":222, "b":112 },
+	{"number":21, "id": "Shizuku",  "name": "しずく", "r":187, "g":237, "b":255 },
+	{"number":22, "id": "Karin",    "name": "果林",   "r": 74, "g": 47, "b":237 },
+	{"number":23, "id": "Ai",       "name": "愛",     "r":255, "g":130, "b": 70 },
+	{"number":24, "id": "Kanata",   "name": "彼方",   "r":190, "g":130, "b":255 },
+	{"number":25, "id": "Setsuna",  "name": "せつ菜", "r":246, "g": 14, "b": 14 },
+	{"number":26, "id": "Emma",     "name": "エマ",   "r":143, "g":218, "b":121 },
+	{"number":27, "id": "Rina",     "name": "璃奈",   "r":208, "g":206, "b":225 },
+	{"number":28, "id": "Shioriko", "name": "栞子",   "r": 36, "g":189, "b":139 },
+	{"number":29, "id": "Mia",      "name": "ミア",   "r":214, "g":213, "b":202 },
+	{"number":30, "id": "Lanzhu",   "name": "ランジュ","r":248,"g":200, "b":196 },
+	{"number":50, "id": "Player",   "name": "あなた", "r":160, "g":192, "b":160 },
+
+	{"number":100,"id": "Yukiho",   "name": "雪穂",    "r":128, "g": 80, "b": 96 },
+	{"number":101,"id": "Arisa",    "name": "亜里沙",  "r":128, "g": 80, "b": 96 },
+	{"number":200,"id": "456",      "name": "よいつむ","r": 80, "g":112, "b":128 },
+	{"number":201,"id": "Mito",     "name": "美渡",    "r": 80, "g":112, "b":128 },
+	{"number":300,"id": "Haruka",   "name": "遥",      "r":128, "g":112, "b": 80 },
+	{"number":301,"id": "Misato",   "name": "美里",    "r":128, "g":112, "b": 80 },
+	{"number":302,"id": "Mai",      "name": "マイ",    "r":128, "g":112, "b": 80 },
+	{"number":303,"id": "Kaoruko",  "name": "薫子",    "r":128, "g":112, "b": 80 },
+	{"number":305,"id": "Uzuki",    "name": "右月",    "r":128, "g":112, "b": 80 },
+	{"number":306,"id": "Satsuki",  "name": "左月",    "r":128, "g":112, "b": 80 },
+	{"number":311,"id": "Hanpen",   "name": "はんぺん","r":128, "g":112, "b": 80 },
+	{"number":312,"id": "Rijicho",  "name": "理事長",  "r":128, "g":112, "b": 80 },
+	{"number":313,"id": "Asagi",    "name": "浅希",    "r":128, "g":112, "b": 80 },
+	{"number":314,"id": "Acting",   "name": "演劇部部長","r":128, "g":112, "b": 80 },
+	{"number":315,"id": "Basketball","name": "バスケ部部長","r":128, "g":112, "b": 80 },
+];
+
+//■キャラクター用のルックアップテーブル (ID, データ種)
+function LookUp(id, data){
+	var temp = CharLookUpTable.filter((u)=>{return(u.id === id);});
+	if(temp.length){
+		return temp[0][data];
+	} else {
+		console.log("キャラクターID " + id + " は見つかりません");
+		if(data === "number" || data === "r" || data === "g" || data === "b"){
+			return -1;
+		} else {
+			return "";
+		}
+	}
+}
+
+//■キャラクター名のボタン
+function DrawCharNameButton(character, onclick){
+	if(LookUp(character, "id") === ""){ return "";} //存在しないキャラクターなら描画しない
+
+	var Output = '<div class="SquareButton off button-' + character
+	+ '" style="background-color:rgb('
+	+ Math.floor((LookUp(character, "r")+510)/3) + ','
+	+ Math.floor((LookUp(character, "g")+510)/3) + ','
+	+ Math.floor((LookUp(character, "b")+510)/3) + '); border-color: rgb('
+	+ LookUp(character, "r") + ','
+	+ LookUp(character, "g") + ','
+	+ LookUp(character, "b") + ')'
+	+ ((LookUp(character, "name").length>=5) ? '; font-size: 75%' : '')
+	+ ';" onclick="Narrowing(' + "'" + character + "'" + ')">'
+	+ LookUp(character, "name") + '<\/div>\n';
+	return Output;
+}
+function DrawCharName(character){
+	if(LookUp(character, "id") === ""){ return "";} //存在しないキャラクターなら描画しない
+
+	var Output = '<span class="RoundButton" style="background-color:rgb('
+	+ Math.floor((LookUp(character, "r")+510)/3) + ','
+	+ Math.floor((LookUp(character, "g")+510)/3) + ','
+	+ Math.floor((LookUp(character, "b")+510)/3) + '); border-color: rgb('
+	+ LookUp(character, "r") + ','
+	+ LookUp(character, "g") + ','
+	+ LookUp(character, "b") + ');">'
+	+ LookUp(character, "name") + '<\/span>\n';
+	return Output;
+}
+
+//■絞り込みメニューの描画
+function drawNarrower(){
+	Output = '<div style="margin-bottom: 10px;">'
+	+ '<select id="N1" onChange="NarrowerEvent(1)">\n<option>(カテゴリを選択)<\/option>';
+	for(i=0; i<StoryList.length; i++){
+		Output += '<option>' + StoryList[i].name + '<\/option>\n';
+	}
+	Output += '<\/select><select id="N2" onChange="NarrowerEvent(2)" style="display: none;"><\/select></\div>';
+	return Output;
+}
+
+function NarrowerEvent(changed){
+	temp1 = document.getElementById('N1');
+	temp1index = temp1.selectedIndex -1;
+	temp2 = document.getElementById('N2');
+	temp2index = temp2.selectedIndex-1;
+
+	switch (changed){
+		case 1:
+		if (temp1index < 0){
+			temp2.style.display ="none";
+		} else {
+			temp2.style.display ="inline-block";
+			temp2.selectedIndex = 0;
+			temp2.length = StoryList[temp1index].part.length +1;
+			
+			temp2.options[0].innerHTML = "(" + ["章","イベント","キャラクター","区分"][temp1index] + "を選択)";
+			for(i=0; i<StoryList[temp1index].part.length; i++){
+				temp2.options[i+1].innerHTML = StoryList[temp1index].part[i].name;
+			}
+		}
+		return false;
+
+		case 2:
+		if (temp2index < 0){
+			return;
+		} else {
+			//アウトプットエリアに出力
+			var Output = '';
+			for(i of StoryList[temp1index].part[temp2index].part){
+				Output += '<table class="StoryTable"';
+
+				//親階層から順に色指定を見ていく。無い場合は初期値の"none"が参照される
+				var coltemp = "none";
+				if(StoryList[temp1index].color){ coltemp = StoryList[temp1index].color;}
+				if(StoryList[temp1index].part[temp2index].color){ coltemp = StoryList[temp1index].part[temp2index].color;}
+	
+				if(i.color){coltemp = i.color}
+				Output += ' style="background-color:rgb('
+				+ Math.floor((LookUp(coltemp, "r")+255)/2) + ','
+				+ Math.floor((LookUp(coltemp, "g")+255)/2) + ','
+				+ Math.floor((LookUp(coltemp, "b")+255)/2) + '); '
+				
+				+ 'border-color:rgb('
+				+ Math.floor((LookUp(coltemp, "r")*2+300)/5) + ','
+				+ Math.floor((LookUp(coltemp, "g")*2+300)/5) + ','
+				+ Math.floor((LookUp(coltemp, "b")*2+300)/5) + ');"'
+
+				Output += '>\n<thead>\n'
+				+ '<tr><td colspan="2" class="story-title"><span>' + i.title + '<\/span><\/td><\/tr>'
+				+ '<\/thead>\n'
+				
+				+ '<tbody>\n';
+				
+				if(i.desc){ //あらすじが有るなら
+					Output += '<tr><td class="LeftColumn">あらすじ<\/td>'
+					+ '<td class="RightColumn">' + i.desc + '<\/td><\/tr>\n';
+				}
+				if(i.memo){ //メモが有るなら
+					Output += '<tr><td class="LeftColumn">メモ<\/td>'
+					+ '<td class="RightColumn">' + i.memo + '<\/td><\/tr>\n';
+				}
+
+				Output += '<tr><td class="LeftColumn">登場人物<\/td><td class="RightColumn">';
+				
+				for(j of i.tag){
+					Output += DrawCharName(j);
+				}
+				Output += '<\/td><\/tr>\n<\/tbody>\n<\/table>\n'
+			}
+			document.getElementById("OutputArea").innerHTML = Output;
+			document.getElementById("OutputArea").scrollTop = 0;
+		}
+		return false;
+	}
+}
+
+--></script>
+
+</head>
+
+<body>
+
+<div id="MainArea">
+	<div style="text-align:center; margin-top: 40px;">
+	<span style="font-size: 150%; font-weight: bold;">よみこみちゅう…</span><br>
+	このコンテンツはJavaScriptを使用しています。<br>
+	いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
+	お手数ですが、JavaScriptの実行を許可した上でページを読み込み直してください。<br>
+	</div>
+</div>
+
+<script><!--
+
+function loadScript(src, callback) {
+    var done = false;
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.src = src;
+    head.appendChild(script);
+    // Attach handlers for all browsers
+    script.onload = script.onreadystatechange = function() {
+        if ( !done && (!this.readyState ||
+                this.readyState === "loaded" || this.readyState === "complete") ) {
+            done = true;
+            callback();
+            // Handle memory leak in IE
+            script.onload = script.onreadystatechange = null;
+            if ( head && script.parentNode ) {
+                head.removeChild( script );
+            }
+        }
+    };
+}
+
+loadScript("data/story_new.js", function() {
+
+	document.getElementById("MainArea").innerHTML =
+	'<h2>スクフェスALL STARS ストーリー便覧[改]<\/h2>'
+	+ '<h3 style="background-color:#ddd; color:#777; border-color:#999;">まえがき<\/h3>'
+	+ '<p>スクフェスALL STARSに収録されている「メインストーリー」「イベントエピソード」「キズナエピソード」の一覧です。<br>'
+	+ 'イベントストーリーは、公式によるあらすじが設定されていませんが、ネタバレにならない程度に独自にあらすじを加えてあります。<\/p>'
+	
+	+ '<p><span style="font-weight:bold;">実装済データ<\/span><\/p><ul>'
+	+ '<li>メインストーリー：<b>2022年5月14日追加分まで掲載完了。<\/b>第38章まで<\/li>'
+	+ '<li>イベントエピソード：「未来に輝く素敵なお仕事」までの63イベント<\/li>'
+	+ '<li>キズナエピソード：<b>2022年5月14日追加分まで掲載完了。<\/b><ul>'
+	+ '<li>μ&#39;s：各25話まで<\/li>'
+	+ '<li>Aqours：各24話まで<\/li>'
+	+ '<li>ニジガク：初期9人 (各32話まで)、栞子 (19話まで)、ミア/ランジュ (11話まで)<\/li>'
+	+ '<\/ul>'
+	+ '<li>アニメ連動ストーリー：<b>1期は全て掲載完了。</b>2期は第7話まで<\/li>'
+	+ '<li>サイドエピソード：掲載予定なし<\/li>'
+	+ '<\/ul>'
+	
+	+ '<h3 class="muse">便覧<\/h3>'
+	+ drawNarrower()
+	+ '<div id="OutputArea"><div style="margin:10px; font-size: 120%; color:#666;">(上のプルダウンメニューから、見たいストーリーを選んでください)<\/div><\/div>';
+});
+--></script>
+
+<h3 class="niji">更新履歴</h3>
+<table class="history">
+<tbody>
+<tr>
+	<td>2022/05/23</td>
+	<td><span class="new"></span>リニューアルしました！</td>
+</tr>
+<tr>
+	<td>2022/05/18</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>キズナエピソード：μ's(第25話まで)</li>
+			<li>イベントエピソード：「未来に輝く素敵なお仕事」</li>
+			<li>TVアニメ2期特別ストーリー：彼方、せつ菜</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2022/05/03</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第38章</li>
+			<li>キズナエピソード：ニジガク初期9名(第32話まで)、栞子(第19話まで)、ミア・ランジュ(第11話まで)</li>
+			<li>イベントエピソード：「たまごに込められた想い」</li>
+			<li>TVアニメ2期特別ストーリー：果林、愛</li>
+		</ul>
+	</td>
+</tr>
+<!--
+<tr>
+	<td>2022/04/17</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>キズナエピソード：Aqours(第24話まで)</li>
+			<li>イベントエピソード：「春宵一刻　夜桜見物」</li>
+			<li>TVアニメ2期特別ストーリー：かすみ、しずく</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2022/04/04</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第37章</li>
+			<li>キズナエピソード：μ's(第24話まで)</li>
+			<li>イベントエピソード：「ストロベリー・ドリーム」</li>
+			<li>TVアニメ2期特別ストーリー：歩夢</li>
+		</ul>
+		<span class="new"></span>絞り込み用ボタンに「右月」「左月」「演劇部部長」「バスケ部部長」を追加
+	</td>
+</tr>
+<tr>
+	<td>2022/03/16</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>キズナエピソード：ニジガク初期9名(第31話まで)、栞子(第18話まで)、ミア・ランジュ(第10話まで)</li>
+			<li>イベントエピソード：「繋がり感じるホワイトデー」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2022/03/04</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第36章</li>
+			<li>キズナエピソード：Aqours(第23話まで)</li>
+			<li>イベントエピソード：「ようこそ！　癒しの空間へ！」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2022/02/17</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>キズナエピソード：μ's(第23話まで)</li>
+			<li>イベントエピソード：「乙女のフラワーバレンタイン」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2022/02/06</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第35章</li>
+			<li>キズナエピソード：ニジガク初期9名(第30話まで)、栞子(第17話まで)、ミア・ランジュ(第9話まで)</li>
+			<li>イベントエピソード：「迷子の子猫ちゃん」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2022/01/14</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>キズナエピソード：Aqours(第22話まで)</li>
+			<li>イベントエピソード：「わくわく！新年女子会！」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2022/01/05</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第34章</li>
+			<li>キズナエピソード：μ's(第22話まで)、ミア(第8話まで)</li>
+			<li>イベントエピソード：「X’masはゴージャスに」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2021/12/17</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>キズナエピソード：Aqours(第21話まで)、ニジガク初期9名(第29話まで)、栞子(第16話まで)、ランジュ(第8話まで)</li>
+			<li>イベントエピソード：「ホワイト・シティ・ライツ」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2021/11/30</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第32章・第33章</li>
+			<li>キズナエピソード：μ's(第21話まで)</li>
+			<li>イベントエピソード：「学校祭でおもてなし」「日本流サンクスギビングデー」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2021/11/06</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>キズナエピソード：ニジガク初期9名(第28話まで)、栞子(第15話まで)、ミア/ランジュ(第7話まで)</li>
+			<li>イベントエピソード：「モンスターハロウィン！」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2021/10/20</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>キズナエピソード：Aqours(第20話まで)</li>
+			<li>イベントエピソード：「私が選んだ服を着て♪」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2021/10/02</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第31章</li>
+			<li>キズナエピソード：μ's(第20話まで)</li>
+			<li>イベントエピソード：「秋雨クラブ」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2021/09/15</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>キズナエピソード：ニジガク初期9名(第27話まで)、栞子(第14話まで)、ミア/ランジュ(第6話まで)</li>
+			<li>イベントエピソード：「月夜のフェアリーテイル」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2021/09/08</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第30章</li>
+			<li>キズナエピソード：μ's全メンバー(第19話)、Aqours全メンバー(第19話)</li>
+			<li>イベントエピソード：「アロハ！リゾートバカンス」「特別な夏フェス！」</li>
+		</ul>
+	</td>
+</tr>
+-->
+<tr>
+	<td>2021/08/01</td>
+	<td><span class="new"></span>正式公開</td>
+</tr>
+<!--
+<tr>
+	<td>2021/07/18</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第15章</li>
+			<li>キズナエピソード：Aqours全メンバー(第18話まで)</li>
+			<li>イベントエピソード：「七夕、かすみの願い事」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2021/07/03</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第28章</li>
+			<li>キズナエピソード：μ's全メンバー(第18話まで)</li>
+			<li>イベントエピソード：「宇宙ナンバーワン花嫁」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2021/06/18</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>キズナエピソード：ニジガク初期9名(第25話まで)、栞子(第12話まで)</li>
+			<li>イベントエピソード：「雨の季節の贈り物」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2021/05/31</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第27章</li>
+			<li>キズナエピソード：Aqours全メンバー(第17話まで)</li>
+			<li>イベントエピソード：「心軽やかバケーション計画」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2021/05/12</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第12～14章、第26章</li>
+			<li>キズナエピソード：ニジガク初期9名(第24話まで)、栞子(第11話まで)</li>
+			<li>イベントエピソード：「あの木の下で会いましょう」「あつまれ！　幼稚園ライブ」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2021/04/14</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>キズナエピソード：Aqours全メンバー(第16話まで)</li>
+			<li>イベントエピソード：「桜の精霊に会いに」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2021/04/07</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第11章、第25章</li>
+			<li>キズナエピソード：μ's全メンバー(第16話まで)、ニジガク初期9名(第23話まで)、栞子(第10話まで)</li>
+			<li>イベントエピソード：「レーザーサバイバル戦線！」</li>
+		</ul>
+		<span class="new"></span>絞り込み用ボタンに「薫子」を追加
+	</td>
+</tr>
+<!--
+<tr>
+	<td>2021/03/15</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>キズナエピソード：ニジガク初期9名(第23話まで)、栞子(第10話まで)</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2021/03/12</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第24章</li>
+			<li>キズナエピソード：Aqours全メンバー(第15話まで)</li>
+			<li>イベントエピソード：「未来のラボは大騒ぎ」「心をこめて、ホワイトデー」</li>
+		</ul>
+		<span class="new"></span>絞り込み用ボタンに「右月/左月」を追加
+	</td>
+</tr>
+<tr>
+	<td>2021/02/14</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>キズナエピソード：μ's(第15話まで)</li>
+			<li>イベントエピソード：「愛がたっぷり、バレンタイン♪」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2021/01/31</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第23章</li>
+			<li>キズナエピソード：ニジガク初期9名(第22話まで)、栞子(第9話まで)</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2021/01/28</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>キズナエピソード：千歌・ダイヤ・曜・鞠莉・ルビィ(14話)、果南(1～14話)</li>
+			<li>イベントエピソード：「あけまして、浦の星流初詣」「新年丑年特別エクササイズ」</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2020/12/29</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第22章</li>
+			<li>キズナエピソード：μ's全メンバー (第14話まで)</li>
+			<li>イベントエピソード：「１番のクリスマスプレゼント」「イルミネーションナイト」</li>
+			<li>TVアニメ連動ストーリー：全話</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2020/11/30</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第21章</li>
+			<li>キズナエピソード：千歌・ダイヤ・曜・鞠莉・ルビィ・栞子 (全話)</li>
+			<li>TVアニメ連動ストーリー：果林</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2020/11/24</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第8章・第9章</li>
+			<li>イベントエピソード：「最高の遊園地攻略法！？」</li>
+			<li>キズナエピソード：絵里・真姫・千歌 (全話)</li>
+			<li>TVアニメ連動ストーリー：璃奈、彼方、しずく</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2020/11/01</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第20章</li>
+			<li>キズナエピソード：穂乃果・ことり・凛・花陽 (13話)、しずく・果林・彼方 (全話)</li>
+			<li>TVアニメ連動ストーリー：エマ</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2020/10/25</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第19章</li>
+			<li>イベントエピソード：「楽しいハロウィンパーティー」まで全イベント</li>
+			<li>キズナエピソード：鞠莉 (全話)</li>
+			<li>TVアニメ連動ストーリー：せつ菜、愛</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2020/10/11</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>キズナエピソード：かすみ (全話)</li>
+			<li>TVアニメ連動ストーリー：かすみ</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2020/10/05</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第5～7章</li>
+			<li>キズナエピソード：ダイヤ・歩夢 (全話)、曜・ルビィ (最新話)</li>
+			<li>TVアニメ連動ストーリー：歩夢</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2020/09/24</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>イベントエピソード：「下町巡り珍道中」～「マジカル・タイム！」</li>
+			<li>キズナエピソード：花陽・曜・せつ菜・エマ (全話)</li>
+		</ul>
+		<span class="fix"></span>絞り込みボタンの機能改善
+	</td>
+</tr>
+<tr>
+	<td>2020/09/21</td>
+	<td><span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第18章</li>
+			<li>キズナエピソード：ことり・凛・ルビィ (全話)</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>2020/09/16</td>
+	<td><span class="new"></span>テスト公開
+		<ul>
+			<li>メインストーリー：第1～4章</li>
+			<li>イベントエピソード：「和装モデルはお任せあれ！」まで</li>
+			<li>キズナエピソード：穂乃果・愛・璃奈・栞子 (全話)</li>
+		</ul>
+	</td>
+</tr>
+-->
+<tr>
+	<td>2020/09/16</td>
+	<td><span class="new"></span>テスト公開
+	</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<a href="index.html">トップページに戻る。</a>
+</p>
+
+</body>
+</html>
