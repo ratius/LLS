@@ -43,7 +43,7 @@
 
 .button-enable { 
 	color: black;
-	background-color: hsl(330, 30%, 90%);
+	background-color: hsl(330, 40%, 90%);
 	cursor: pointer;
 }
 .button-disable {
@@ -114,8 +114,9 @@
 }
 
 .tips {
+	background: rgba(32, 32, 32, 0.25);
 	font-size:small;
-	color: #c8e0d8;
+	color: #ddd;
 }
 
 
@@ -134,7 +135,7 @@ const OpponentLookUpTable = [
 	{'id': 'Yumi',    'Name': '藤城悠弓',      'x':9, 'y':0},
 	{'id': 'Coco',    'Name': '宮下ココ',      'x':1, 'y':1},
 	{'id': 'Sana',    'Name': '結城紗菜',      'x':2, 'y':1},
-	{'id': 'Christina','Name': 'クリスティーナ','x':3, 'y':1},
+	{'id': 'Christina','Name':'クリスティーナ','x':3, 'y':1},
 	{'id': 'Yuri',    'Name': '御堂優理',      'x':4, 'y':1},
 	{'id': 'Rika',    'Name': '神谷理華',      'x':5, 'y':1},
 	{'id': 'Kanata',  'Name': '近江彼方',      'x':6, 'y':1},
@@ -304,7 +305,7 @@ loadScript("data/arena.js", function() {
 	Output += 
 	  '<h3 style="background-color:#ddd; color:#777; border-color:#999;">まえがき<\/h3>'
 	+ '<p>スクフェスにおける、「ライブ♪アリーナ」のまとめです。<br>'
-	+ '現在はまだ仮公開。<\/p>';
+	+ '「第19回」までのテキストを保管しています。<\/p>';
 	
 	Output += 
 	  '<h3 class="muse">過去のテキスト<\/h3>'
@@ -355,14 +356,20 @@ loadScript("data/arena.js", function() {
 <table class="history">
 <tbody>
 <tr>
+	<td>2022/05/28</td>
+	<td><span class="new"></span><b>正式公開</b><br>
+		<span class="new"></span>閲覧可能なテキストを追加<br>（第17回、第19回）
+		<span class="fix"></span>注釈のデザインを変更</td>
+</tr>
+<!--
+<tr>
 	<td>2022/04/18</td>
-	<td><span class="new"></span>閲覧可能なテキストを追加<br>（第15回、第18回後半戦）</td>
+	<td><span class="new"></span>閲覧可能なテキストを追加<br>（第16回、第18回後半戦）</td>
 </tr>
 <tr>
 	<td>2022/04/03</td>
 	<td><span class="new"></span>閲覧可能なテキストを追加<br>（第15回、第18回前半戦、東雲学院(未完成)、千歳橋高校）</td>
 </tr>
-<!--
 <tr>
 	<td>2022/03/18</td>
 	<td><span class="new"></span>閲覧可能なテキストを追加<br>（第12回、第14回、青藍高校、紫苑女学院）</td>
