@@ -7464,5 +7464,54 @@ const RawCardList = [
 	"source": "reward",
 	"desc": "イベント「カワイイ☆ワンダーランド」報酬 (ランキング枠)"
 },
+
+{
+	"id": 691,
+	"name": "Lanzhu",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "最っ高のドリンクの完成よ！",
+	"cn2": "悠々スクランブル",
+	"date": "2022/05/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 692,
+	"name": "Kotori",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "えへへ、柔軟は得意なんだ！",
+	"cn2": "エレガントないとパーティー",
+	"date": "2022/05/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 693,
+	"name": "Emma",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Vo",
+	"cn1": "順番に全部読んじゃおう！",
+	"cn2": "Colorful Dreams! Colorful Smiles!",
+	"date": "2022/05/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 694,
+	"name": "Kanan",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Sp",
+	"cn1": "さあプリンセス、なんてね♪",
+	"cn2": "未来の僕らは知ってるよ",
+	"date": "2022/05/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
 ];
-const LatestUpdate = "2022/05/22 イベント「カワイイ☆ワンダーランド」まで";
+const LatestUpdate = "2022/05/30 「スクスタフェス」まで";
