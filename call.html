@@ -219,7 +219,7 @@ const CharData = [
 		Ayumu:'歩夢さん', Kasumi:'かすみさん', Shizuku:'私', Karin:'果林さん', Ai:'愛さん',
 		Kanata:'彼方さん', Setsuna:'せつ菜さん', Emma:'エマさん', Rina:'璃奈さん',
 		Shioriko:'栞子さん', Mia:'ミアさん', Lanzhu:'ランジュさん',
-		Player:'先輩' },
+		Player:'先輩', Acting:'部長' },
 	{ id:'Karin'   , name:'朝香 果林'     , r:074, g:047, b:237,
 		Honoka:'穂乃果ちゃん', Eli:'絵里ちゃん', Kotori:'ことりちゃん', Umi:'海未ちゃん<br>(海未)', Rin:'凛ちゃん',
 		Maki:'真姫ちゃん', Nozomi:'希ちゃん', Hanayo:'花陽ちゃん', Nico:'にこちゃん',
@@ -299,7 +299,7 @@ const CharData = [
 	{ id:'Lanzhu', name:'鐘 嵐珠', r:248, g:200, b:196, 
 		Eli:'絵里', Kotori:'ことり', Umi:'海未', Rin:'凛', Maki:'真姫', Hanayo:'花陽', 
 		Chika:'千歌', Riko:'梨子', Kanan:'果南', Dia:'ダイヤ', You:'曜',
-		Mari:'鞠莉', Ruby:'ルビィ',
+		Yoshiko:'善子', Mari:'鞠莉', Ruby:'ルビィ',
 		Ayumu:'歩夢', Kasumi:'かすみ', Shizuku:'しずく', Karin:'果林', Ai:'愛', 
 		Kanata:'彼方', Setsuna:'せつ菜', Emma:'エマ', Rina:'璃奈',
 		Shioriko:'栞子', Mia:'ミア', Lanzhu:'アタシ<br>ランジュ',
@@ -356,9 +356,9 @@ const CharData = [
 		Kasumi:'中須かすみさん', Shizuku:'桜坂しずくさん', Setsuna:'優木せつ菜さん', Shioriko:'会長', Uzuki:'右月', Satsuki:'私'
 		},
 	{ id:'Basketball', name:'バスケ部部長',
-		Kasumi:'かすみちゃん', Lanzhu:'ランジュちゃん', Player:'キミ', Basketball:'私'},
+		Kasumi:'かすみちゃん', Ai:'愛', Lanzhu:'ランジュちゃん', Player:'キミ', Basketball:'私'},
 	{ id:'Acting', name:'演劇部部長',
-		Emma:'エマ', Mia:'ミア'},
+		Shizuku:'しずく', Emma:'エマ', Mia:'ミア', Acting:'私'},
 	{ id:'Asagi', name:'浅希',
 		},
 ];
@@ -465,7 +465,7 @@ document.getElementById("MainArea").innerHTML =
 	  ListAS.concat(["Kaoruko", "Haruka", "Misato", "Mai", "Uzuki", "Satsuki", "Rijicho", "Basketball", "Acting"]))
 	+ '<h3 class="niji">ニジガクの呼ばれ方(3)<\/h3>\n'
 	+ CreateTable(["Misato", "Uzuki", "Satsuki", "Asagi", "Basketball", "Acting"],
-	  ["Ai", "Rina", "Misato", "Uzuki", "Satsuki", "Asagi", "Basketball", "Acting"])
+	  ["Shizuku", "Ai", "Rina", "Misato", "Uzuki", "Satsuki", "Asagi", "Basketball", "Acting"])
 	+ '<h3 class="niji">その他キャラクターの呼ばれ方<\/h3>\n'
 	+ CreateTable(["Yukiho", "Arisa", "Cocoa", "Cocoro", "Cotaro", "Mito", "Shima", "Sarah", "Leah"],
 	 ["Honoka", "Eli", "Nico", "Chika", "Dia", "Hanamaru", "Ruby", "Player",
