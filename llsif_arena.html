@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
 <meta charset="utf-8">
+
+<meta property="og:url" content="https://ratius.github.io/LLS/llsif_arena.html">
+<meta property="og:title" content="スクフェス ライブ♪アリーナまとめ">
+<meta property="og:type" content="website">
+<meta property="og:description" content="スクフェスにおける、ライブ♪アリーナのセリフ集です。">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@ratius55">
@@ -309,7 +314,7 @@ loadScript("data/arena.js", function() {
 	
 	Output += 
 	  '<h3 class="muse">過去のテキスト<\/h3>'
-	+ '<p>以下のいずれかを行うことで、表示回を切り替えることができます。</p>'
+	+ '<p>以下のいずれかを行うことで、表示回を切り替えることができます。<\/p>'
 	+ '<ul><li>上部のタイトル部分のセレクトボックスで、表示したい回を選択する<\/li>'
 	+ '<li>上部の「前回」「次回」ボタンを押す<\/li>'
 	+ '<li>テキスト部分にフォーカスを当てた状態で、キーボードのカーソルキーの左右を押す<\/li><\/ul>'
@@ -326,7 +331,7 @@ loadScript("data/arena.js", function() {
 	//■セリフ表示用ボックス
 	Output += '<\/select><\/th>'
 	+ '<th id="ButtonRight" rowspan="2" onclick="false"><span style="font-size:35px">&#x2b95;<\/span><br>次回<\/th><\/tr>'
-	+ '<tr><th><span id="sub"><\/span></th><\/tr>'
+	+ '<tr><th><span id="sub"><\/span><\/th><\/tr>'
 	+ '<\/tbody><\/table><\/div>'
 	+ '<div id="message-box" tabindex="1">' 
 	+ '<table id="message-table"><tbody id="message-list"><\/tbody><\/table><\/div>';
