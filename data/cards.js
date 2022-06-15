@@ -7392,7 +7392,8 @@ const RawCardList = [
 	"date": "2022/05/14",
 	"source": "none",
 	"desc": "「パーティーガチャ」で追加"
-},{
+},
+{
 	"id": 685,
 	"name": "You",
 	"rare": "UR",
@@ -7513,5 +7514,100 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
 },
+{
+	"id": 695,
+	"name": "Kanata",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "遥ちゃんが大好きなのだ～♪",
+	"cn2": "Powerful☆Rock Girls",
+	"date": "2022/06/04",
+	"source": "gacha",
+	"desc": "「響け、魂の歌声！ガチャ」で追加"
+},
+{
+	"id": 696,
+	"name": "Mari",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "ロックは熱い魂の叫び！",
+	"cn2": "未来の僕らは知ってるよ",
+	"date": "2022/06/04",
+	"source": "gacha",
+	"desc": "「響け、魂の歌声！ガチャ」で追加"
+},
+{
+	"id": 697,
+	"name": "Eli",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "握る時はあまり力を入れずに……",
+	"cn2": "Powerful☆Rock Girls",
+	"date": "2022/06/04",
+	"source": "gacha",
+	"desc": "「響け、魂の歌声！ガチャ」で追加"
+},
+{
+	"id": 698,
+	"name": "Karin",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "今から聴かせてあげる",
+	"cn2": "Powerful☆Rock Girls",
+	"date": "2022/06/07",
+	"source": "reward",
+	"desc": "イベント「響け、魂の歌声！」報酬"
+},
+{
+	"id": 699,
+	"name": "Dia",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "こんな感じはどうでしょう",
+	"cn2": "未来の僕らは知ってるよ",
+	"date": "2022/06/07",
+	"source": "reward",
+	"desc": "イベント「響け、魂の歌声！」報酬 (交換所枠)"
+},
+{
+	"id": 700,
+	"name": "Honoka",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Gd",
+	"cn1": "じゃーん！ギターの穂乃果です！",
+	"cn2": "A song for You! You? You!!",
+	"date": "2022/06/07",
+	"source": "reward",
+	"desc": "イベント「響け、魂の歌声！」報酬 (ランキング枠)"
+},{
+	"id": 701,
+	"name": "Riko",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Vo",
+	"cn1": "だーめ。まだ途中だからあとでね",
+	"cn2": "Forest Symphony",
+	"date": "2022/06/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 702,
+	"name": "Kotori",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "今度また一緒に行こうよ！",
+	"cn2": "A song for You! You? You!!",
+	"date": "2022/06/14",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
+},
 ];
-const LatestUpdate = "2022/05/30 「スクスタフェス」まで";
+const LatestUpdate = "2022/06/14 「パーティーガチャ」まで";
