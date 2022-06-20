@@ -7465,7 +7465,6 @@ const RawCardList = [
 	"source": "reward",
 	"desc": "イベント「カワイイ☆ワンダーランド」報酬 (ランキング枠)"
 },
-
 {
 	"id": 691,
 	"name": "Lanzhu",
@@ -7609,5 +7608,77 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「パーティーガチャ」で追加"
 },
+{
+	"id": 703,
+	"name": "Chika",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "ほら、あそこ！",
+	"cn2": "マリッジ♡アプローチ",
+	"date": "2022/06/19",
+	"source": "gacha",
+	"desc": "「想い伝えるウエディングガチャ」で追加"
+},
+{
+	"id": 704,
+	"name": "Rin",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "わあ、すっごく綺麗……！",
+	"cn2": "A song for You! You? You!!",
+	"date": "2022/06/19",
+	"source": "gacha",
+	"desc": "「想い伝えるウエディングガチャ」で追加"
+},
+{
+	"id": 705,
+	"name": "Maki",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sk",
+	"cn1": "こっちまで幸せな気分よ",
+	"cn2": "マリッジ♡アプローチ",
+	"date": "2022/06/19",
+	"source": "gacha",
+	"desc": "「想い伝えるウエディングガチャ」で追加"
+},
+{
+	"id": 706,
+	"name": "Mia",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "ボクの歌を歌わせてもらうね",
+	"cn2": "マリッジ♡アプローチ",
+	"date": "2022/06/22",
+	"source": "reward",
+	"desc": "イベント「想い伝えるウエディング」報酬"
+},
+{
+	"id": 707,
+	"name": "Ayumu",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Sk",
+	"cn1": "いつか私も、大切な人と",
+	"cn2": "Colorful Dreams! Colorful Smiles!",
+	"date": "2022/06/22",
+	"source": "reward",
+	"desc": "イベント「想い伝えるウエディング」報酬 (交換所枠)"
+},
+{
+	"id": 708,
+	"name": "You",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "ん～！　おいし～！",
+	"cn2": "未来の僕らは知ってるよ",
+	"date": "2022/06/22",
+	"source": "reward",
+	"desc": "イベント「想い伝えるウエディング」報酬 (ランキング枠)"
+},
 ];
-const LatestUpdate = "2022/06/14 「パーティーガチャ」まで";
+const LatestUpdate = "2022/06/22 イベント「想い伝えるウエディング」まで";

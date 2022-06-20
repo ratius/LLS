@@ -575,4 +575,22 @@ const EventList = [
 	"UR" : ["Rin", "You", "Kasumi"],
 	"SR" : ["Nozomi", "Chika", "Shioriko"]
 },
+{
+	"id" : 65,
+	"name" : "響け、魂の歌声！",
+	"type" : "exchange",
+	"started" : new Date("2022-06-07T15:00:00+09:00"),
+	"ended"   : new Date("2022-06-14T14:59:59+09:00"),
+	"UR" : ["Eli", "Karin", "Kanata"],
+	"SR" : ["Honoka", "Dia", "Mari"]
+},
+{
+	"id" : 66,
+	"name" : "想い伝えるウエディング",
+	"type" : "story",
+	"started" : new Date("2022-06-22T15:00:00+09:00"),
+	"ended"   : new Date("2022-06-29T14:59:59+09:00"),
+	"UR" : ["Maki", "Chika", "Mia"],
+	"SR" : ["Rin", "You", "Ayumu"]
+},
 ];
