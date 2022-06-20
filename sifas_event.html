@@ -9,18 +9,13 @@
 <meta name="twitter:title" content="スクフェスALL STARS 過去のイベントまとめ">
 <meta name="twitter:description" content="スクスタのイベントストーリーで開催されたイベント、および共演したペアのまとめです。">
 
-<title>スクフェスALL STARS 過去のイベントまとめ</title>
+<title>スクフェスALL STARS 過去のイベントまとめ | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="color_sifas.css">
 <style><!--
 
-@media (min-width:1200px){
-	#Event-Border{ width: 1165px; }
-}
-@media (max-width:1199px){
-	#Event-Border{ width: 100%;}
-}
+#Event-Border{ width: min(100%, 1200px);}
 
 #Event-Border, #Trio-Border{
 	overflow-y: scroll;
@@ -157,7 +152,7 @@ td.bg_tp_white{
 	height: 18px;
 	line-height: 18px;
 	border: 1px solid #666;
-	border-radius: 10px;
+	border-radius: 50%;
 	margin: 0 1px;
 }
 
@@ -282,7 +277,7 @@ function WriteEventList(){
 
 		if(y["UR"]){
 			for(z=0; z<y.UR.length; z++){
-				Output += '<span class="group_' + LookUp(y.UR[z], 'group') + '">' +  LookUp(y.UR[z], 'name') + '</span>' ;
+				Output += '<span class="group_' + LookUp(y.UR[z], 'group') + '">' +  LookUp(y.UR[z], 'name') + '<\/span>' ;
 				if(z < y.UR.length-1){ Output += '、';}
 			}
 		}
@@ -290,7 +285,7 @@ function WriteEventList(){
 		
 		if(y["SR"]){
 			for(z=0; z<y.SR.length; z++){
-				Output += '<span class="group_' + LookUp(y.SR[z], 'group') + '">' +  LookUp(y.SR[z], 'name') + '</span>' ;
+				Output += '<span class="group_' + LookUp(y.SR[z], 'group') + '">' +  LookUp(y.SR[z], 'name') + '<\/span>' ;
 				if(z < y.SR.length-1){ Output += '、';}
 			}
 		}
@@ -375,7 +370,7 @@ function DrawSingleTable(CharList){
 	//■回数
 	for(x of CharList){
 		if(x>=0){ //空白でないなら
-			Output += '<td class="sttd">' + TrioHistory[x][0].length + '回<br></td>';
+			Output += '<td class="sttd">' + TrioHistory[x][0].length + '回<br><\/td>';
 		} else {
 			Output += '<td><\/td>'
 		}
@@ -524,14 +519,14 @@ function SyncScroll() {
 
 </head>
 <body>
-<div id="MainArea">
+<main id="MainArea">
 	<div style="text-align:center; margin-top: 40px;">
 	<span style="font-size: 150%; font-weight: bold;">よみこみちゅう…</span><br>
 	このコンテンツはJavaScriptを使用しています。<br>
 	いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
 	お手数ですが、JavaScriptの実行を許可した上でページを読み込み直してください。<br>
 	</div>
-</div>
+</main>
 
 <script><!--
 
@@ -562,27 +557,33 @@ loadScript("data/events.js", function() {
 
 	document.getElementById("MainArea").innerHTML =
 	'<h2>スクフェスALL STARS 過去のイベントまとめ<\/h2>'
-	+ '<h3 style="background-color:#ddd; color:#777; border-color:#999;">まえがき<\/h3>'
+	+ '<section><h3 class="foreword">まえがき<\/h3>'
 	+ '<p>スクフェスALL STARSのイベントストーリーおける、各ペアの共演状況です。<br>PCで閲覧している場合、イベント番号の書かれた丸にカーソルを当てることで詳しい情報のツールチップが出現します。<\/p>'
+	+ '<\/section>'
 	
-	+ '<h3 class="muse">イベント一覧<\/h3>'
+	+ '<section><h3 class="muse">イベント一覧<\/h3>'
 	+ WriteEventList()
+	+ '<\/section>'
 
-	+ '<h3 class="aqours">キャラクター登場状況<\/h3>'
+	+ '<section><h3 class="aqours">キャラクター登場状況<\/h3>'
 	+ DrawSingleTable([0,1,2,3,4,5,6,7,8])
 	+ DrawSingleTable([9,10,11,12,13,14,15,16,17])
 	+ DrawSingleTable([18,19,20,21,22,23,24,25,26])
 	+ DrawSingleTable([27,28,29,-1,-1,-1,-1,-1,-1])
+	+ '<\/section>'
 	
-	+ '<h3 class="niji">ペア共演状況<\/h3>'
+	+ '<section><h3 class="niji">ペア共演状況<\/h3>'
 	+ DrawPairTable()
+	+ '<\/section>'
 	
-	+ '<h3 class="muse">トリオ重複状況<\/h3>'
+	+ '<section><h3 class="muse">トリオ重複状況<\/h3>'
 	+ DrawDuplicatedTrioList()
+	+ '<\/section>'
 	;
 });
 --></script>
 
+<section>
 <h3 class="niji">更新履歴</h3>
 <table class="history">
 <tbody>
@@ -640,10 +641,11 @@ loadScript("data/events.js", function() {
 </tr>
 </tbody>
 </table>
+</section>
 
-<p>
-<a href="index.html">トップページに戻る。</a>
-</p>
+<nav>
+<p><a href="index.html">トップページに戻る。</a></p>
+</nav>
 
 </body>
 </html>

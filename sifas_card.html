@@ -6,11 +6,11 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@ratius55">
 <meta name="twitter:creator" content="@ratius55">
-<meta name="twitter:title" content="スクスタALL STARS カード実装状況">
+<meta name="twitter:title" content="スクスタ カード実装状況 | ラブライブ！ストレージ">
 <meta name="twitter:description" content="スクフェスALL STARSにおける、UR・SRの追加日時のまとめです。">
 <meta name="twitter:image" content="https://ratius.github.io/LLS/img/card_list.png">
 
-<title>スクスタALL STARS カード実装状況</title>
+<title>スクスタ カード実装状況 | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main.css">
 <style><!--
@@ -75,9 +75,9 @@ td:hover .tool-tip {
 }
 
 .UR > th {
-	background-image: url(img/UR.png);
-	background-size: 100% 100%;
+	background:linear-gradient(45deg, rgb(255,255,192)0%, rgb(255,208,208)25%, rgb(255,192,255)50%, rgb(208,208,255)75%,  rgb(192,255,255) 100%);
 }
+
 .SR > th {
 	background-color: #ccc;
 }
@@ -178,7 +178,7 @@ function DrawLegend(){
 	+ '<tr><th class="none">'   + ToolTipSource['none']   + '<\/th><td>恒常。初期実装分でなく、イベントとも無関係なカード<\/td><\/tr>'
 	+ '<tr><th class="gacha">'  + ToolTipSource['gacha']  + '<\/th><td>恒常。イベントガチャで登場<\/td><\/tr>'
 	+ '<tr><th class="reward">' + ToolTipSource['reward'] + '<\/th><td>イベント報酬として登場<\/td><\/tr>'
-	+ '<tr><th class="fes">'    + ToolTipSource['fes']    + '<\/th><td><b>フェス限定<\/b>。特定のガチャから排出<\/td><\/tr>'
+	+ '<tr><th class="fes">'    + ToolTipSource['fes']    + '<\/th><td><b>スクスタフェス限定<\/b>。特定のガチャから排出<\/td><\/tr>'
 	+ '<tr><th class="party">'  + ToolTipSource['party']  + '<\/th><td><b>パーティーガチャ限定<\/b>。特定のガチャから排出<\/td><\/tr>'
 	+ '<\/tbody><\/table>';
 
@@ -222,7 +222,7 @@ function DrawTable(group, groupsub){
 					continue;
 				}
 				if(ListTmp.id === -1){
-					OutputTmp += '<td class="na" rowspan="' + ListTmp.offset +'"><\/td>\n';
+					OutputTmp += '<td class="na" style="width: 96px;" rowspan="' + ListTmp.offset +'"><\/td>\n';
 				} else {
 					ToolTipTmp = (ListTmp.id ? 'No.' + ListTmp.id : '') + ' ' + ListTmp.desc;
 					
@@ -300,17 +300,21 @@ loadScript("data/cards.js", function() {
 	xx=1;
 
 	document.getElementById("MainArea").innerHTML =
-	  '<h3 style="background-color:#ddd; color:#777; border-color:#999;">まえがき<\/h3>'
-	+ '<p>スクフェスALL STARSにおける、UR・SRの追加日時のまとめです。<br>'
+	  '<h2>スクスタ カード実装状況<\/h2>'
+	+ '<h3 class="foreword">まえがき<\/h3>'
+	+ '<p>「ラブライブ！スクールアイドルフェスティバルALL STARS」で実装されているUR・SRのまとめです。<br>'
 	+ '追加メンバーの「○枚目」は、URはゲーム内のパラメータの合計値を、SRは衣装セットを基準に設定しています。<br>'
 	+ 'PCで閲覧している場合、セルにカーソルを当てることで詳しい情報のツールチップが出現します。'
 	+ '<br>掲載データ範囲：' + LatestUpdate + '<\/p>'
 	+ '<h3 class="liella">凡例<\/h3>'
 	+ DrawLegend()
+
 	+ '<h3 class="muse">μ’s<\/h3>'
-	+ DrawTable(ListMuse, 0)
+	+ DrawTable(ListMuse, 0) + '<\/figure>'
+
 	+ '<h3 class="aqours">Aqours<\/h3>'
-	+ DrawTable(ListAqours, 1)
+	+ DrawTable(ListAqours, 1) + '<\/figure>'
+
 	+ '<h3 class="niji">ニジガク<\/h3>'
 	+ DrawTable(ListNiji, 2);
 });
