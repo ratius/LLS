@@ -11,17 +11,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@ratius55">
 <meta name="twitter:creator" content="@ratius55">
-<meta name="twitter:title" content="スクフェスALL STARS ストーリー便覧 [改]">
+<meta name="twitter:title" content="スクフェスALL STARS ストーリー便覧">
 <meta name="twitter:description" content="スクスタの各種ストーリーのあらすじ・登場人物のまとめ。">
+<meta name="description" content="スクスタの各種ストーリーのあらすじ・登場人物のまとめ。">
 
 <title>スクフェスALL STARS ストーリー便覧</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main.css">
 <style><!--
-
-p{
-	margin: 15px 10px;
-}
 
 #N1, #N2 {
 	border: solid 2px #b9a;
@@ -97,15 +94,6 @@ p{
 	border-radius: 50vh;
 }
 
-.history ul{
-	margin: 5px 0 5px 0;
-	color: #444;
-	font-size: small;
-	list-style-type: none;
-	padding-inline-start: 20px;
-	line-height: 180%;
-}
-.history li:before { content:"▶ "; color:#b95;}
 --></style>
 <script><!--
 const CharLookUpTable = [
@@ -202,7 +190,7 @@ function drawNarrower(){
 	for(i=0; i<StoryList.length; i++){
 		Output += '<option>' + StoryList[i].name + '<\/option>\n';
 	}
-	Output += '<\/select><select id="N2" onChange="NarrowerEvent(2)" style="display: none;"><\/select></\div>';
+	Output += '<\/select><select id="N2" onChange="NarrowerEvent(2)" style="display: none;"><\/select><\/div>';
 	return Output;
 }
 
@@ -323,8 +311,7 @@ function loadScript(src, callback) {
 loadScript("data/story.js", function() {
 
 	document.getElementById("MainArea").innerHTML =
-	'<h2>スクフェスALL STARS ストーリー便覧'
-	+ '<span style="padding-left: 10px; color:#bbb; font-size:small;">version 2.0.0<\/span><\/h2>'
+	'<h2>スクフェスALL STARS ストーリー便覧<\/h2>'
 	+ '<h3 style="background-color:#ddd; color:#777; border-color:#999;">まえがき<\/h3>'
 	+ '<p>スクフェスALL STARSに収録されている「メインストーリー」「イベントエピソード」「キズナエピソード」の一覧です。<br>'
 	+ 'イベントストーリーは、公式によるあらすじが設定されていませんが、ネタバレにならない程度に独自にあらすじを加えてあります。<\/p>'
@@ -350,12 +337,25 @@ loadScript("data/story.js", function() {
 });
 --></script>
 
+<section>
 <h3 class="niji">更新履歴</h3>
-<table class="history">
-<tbody>
-<tr>
-	<td>2022/05/31</td>
-	<td><span class="new"></span>リニューアルしました！<br>
+<div id="history2">
+<details open>
+	<summary><span class="date">2022/06/21</span></summary>
+	<div>
+		<span class="new"></span>更新履歴をリニューアル<br>
+		<span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>キズナエピソード：ニジガク初期9名(第33話まで)、栞子(第20話まで)、ミア・ランジュ(第12話まで)</li>
+			<li>イベントエピソード：「響け、魂の歌声！」</li>
+			<li>TVアニメ2期特別ストーリー：栞子、ミア、ランジュ</li>
+		</ul>
+	</div>
+</details>
+<details>
+	<summary class="important"><span class="date">2022/05/31</span> - 大改装</summary>
+	<div>
+		<span class="new"></span>リニューアルしました！<br>
 		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第39章</li>
@@ -363,410 +363,448 @@ loadScript("data/story.js", function() {
 			<li>イベントエピソード：「カワイイ☆ワンダーランド」</li>
 			<li>TVアニメ2期特別ストーリー：エマ、璃奈</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2022/05/18</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2022/05/18</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>キズナエピソード：μ's(第25話まで)</li>
 			<li>イベントエピソード：「未来に輝く素敵なお仕事」</li>
 			<li>TVアニメ2期特別ストーリー：彼方、せつ菜</li>
 		</ul>
-	</td>
-</tr>
-<!--
-<tr>
-	<td>2022/05/03</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2022/05/03</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第38章</li>
 			<li>キズナエピソード：ニジガク初期9名(第32話まで)、栞子(第19話まで)、ミア・ランジュ(第11話まで)</li>
 			<li>イベントエピソード：「たまごに込められた想い」</li>
 			<li>TVアニメ2期特別ストーリー：果林、愛</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2022/04/17</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2022/04/17</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>キズナエピソード：Aqours(第24話まで)</li>
 			<li>イベントエピソード：「春宵一刻　夜桜見物」</li>
 			<li>TVアニメ2期特別ストーリー：かすみ、しずく</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2022/04/04</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2022/04/04</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第37章</li>
 			<li>キズナエピソード：μ's(第24話まで)</li>
 			<li>イベントエピソード：「ストロベリー・ドリーム」</li>
 			<li>TVアニメ2期特別ストーリー：歩夢</li>
 		</ul>
-		<span class="new"></span>絞り込み用ボタンに「右月」「左月」「演劇部部長」「バスケ部部長」を追加
-	</td>
-</tr>
-<tr>
-	<td>2022/03/16</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+		<span class="new"></span><del>絞り込み用ボタンに「右月」「左月」「演劇部部長」「バスケ部部長」を追加</del>
+	</div>
+</details>
+<details>
+	<summary><span class="date">2022/03/16</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>キズナエピソード：ニジガク初期9名(第31話まで)、栞子(第18話まで)、ミア・ランジュ(第10話まで)</li>
 			<li>イベントエピソード：「繋がり感じるホワイトデー」</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2022/03/04</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2022/03/04</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第36章</li>
 			<li>キズナエピソード：Aqours(第23話まで)</li>
 			<li>イベントエピソード：「ようこそ！　癒しの空間へ！」</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2022/02/17</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2022/02/17</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>キズナエピソード：μ's(第23話まで)</li>
 			<li>イベントエピソード：「乙女のフラワーバレンタイン」</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2022/02/06</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2022/02/06</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第35章</li>
 			<li>キズナエピソード：ニジガク初期9名(第30話まで)、栞子(第17話まで)、ミア・ランジュ(第9話まで)</li>
 			<li>イベントエピソード：「迷子の子猫ちゃん」</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2022/01/14</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2022/01/14</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>キズナエピソード：Aqours(第22話まで)</li>
 			<li>イベントエピソード：「わくわく！新年女子会！」</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2022/01/05</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2022/01/05</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第34章</li>
 			<li>キズナエピソード：μ's(第22話まで)、ミア(第8話まで)</li>
 			<li>イベントエピソード：「X’masはゴージャスに」</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2021/12/17</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2021/12/17</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>キズナエピソード：Aqours(第21話まで)、ニジガク初期9名(第29話まで)、栞子(第16話まで)、ランジュ(第8話まで)</li>
 			<li>イベントエピソード：「ホワイト・シティ・ライツ」</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2021/11/30</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2021/11/30</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第32章・第33章</li>
 			<li>キズナエピソード：μ's(第21話まで)</li>
 			<li>イベントエピソード：「学校祭でおもてなし」「日本流サンクスギビングデー」</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2021/11/06</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2021/11/06</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>キズナエピソード：ニジガク初期9名(第28話まで)、栞子(第15話まで)、ミア/ランジュ(第7話まで)</li>
 			<li>イベントエピソード：「モンスターハロウィン！」</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2021/10/20</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2021/10/20</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>キズナエピソード：Aqours(第20話まで)</li>
 			<li>イベントエピソード：「私が選んだ服を着て♪」</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2021/10/02</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2021/10/02</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第31章</li>
 			<li>キズナエピソード：μ's(第20話まで)</li>
 			<li>イベントエピソード：「秋雨クラブ」</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2021/09/15</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2021/09/15</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>キズナエピソード：ニジガク初期9名(第27話まで)、栞子(第14話まで)、ミア/ランジュ(第6話まで)</li>
 			<li>イベントエピソード：「月夜のフェアリーテイル」</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2021/09/08</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2021/09/08</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第30章</li>
 			<li>キズナエピソード：μ's全メンバー(第19話)、Aqours全メンバー(第19話)</li>
 			<li>イベントエピソード：「アロハ！リゾートバカンス」「特別な夏フェス！」</li>
 		</ul>
-	</td>
-</tr>
--->
-<tr>
-	<td>2021/08/01</td>
-	<td><span class="new"></span>正式公開</td>
-</tr>
-<!--
-<tr>
-	<td>2021/07/18</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary class="important"><span class="date">2021/08/01</span> - 正式公開</summary>
+	<div>
+		<span class="new"></span>正式公開しました！<br>
+		<span class="new"></span>ストーリーを新たに掲載
+		<ul>
+			<li>メインストーリー：第16～18章、第29章</li>
+			<li>キズナエピソード：ニジガク初期9名(第26話まで)、栞子(第13話まで)</li>
+			<li>イベントエピソード：「花火大会は波乱の予感？」</li>
+		</ul>
+	</div>
+</details>
+<details>
+	<summary><span class="date">2021/07/18</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第15章</li>
 			<li>キズナエピソード：Aqours全メンバー(第18話まで)</li>
 			<li>イベントエピソード：「七夕、かすみの願い事」</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2021/07/03</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2021/07/3</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第28章</li>
 			<li>キズナエピソード：μ's全メンバー(第18話まで)</li>
 			<li>イベントエピソード：「宇宙ナンバーワン花嫁」</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2021/06/18</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2021/06/18</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>キズナエピソード：ニジガク初期9名(第25話まで)、栞子(第12話まで)</li>
 			<li>イベントエピソード：「雨の季節の贈り物」</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2021/05/31</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2021/05/31</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第27章</li>
 			<li>キズナエピソード：Aqours全メンバー(第17話まで)</li>
 			<li>イベントエピソード：「心軽やかバケーション計画」</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2021/05/12</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2021/05/12</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第12～14章、第26章</li>
 			<li>キズナエピソード：ニジガク初期9名(第24話まで)、栞子(第11話まで)</li>
 			<li>イベントエピソード：「あの木の下で会いましょう」「あつまれ！　幼稚園ライブ」</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2021/04/14</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2021/04/14</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>キズナエピソード：Aqours全メンバー(第16話まで)</li>
 			<li>イベントエピソード：「桜の精霊に会いに」</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2021/04/07</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2021/04/07</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第11章、第25章</li>
 			<li>キズナエピソード：μ's全メンバー(第16話まで)、ニジガク初期9名(第23話まで)、栞子(第10話まで)</li>
 			<li>イベントエピソード：「レーザーサバイバル戦線！」</li>
 		</ul>
-		<span class="new"></span>絞り込み用ボタンに「薫子」を追加
-	</td>
-</tr>
-<!--
-<tr>
-	<td>2021/03/15</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+		<span class="new"></span><del>絞り込み用ボタンに「薫子」を追加</del>
+	</div>
+</details>
+<details>
+	<summary><span class="date">2021/03/15</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>キズナエピソード：ニジガク初期9名(第23話まで)、栞子(第10話まで)</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2021/03/12</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2021/03/12</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第24章</li>
 			<li>キズナエピソード：Aqours全メンバー(第15話まで)</li>
 			<li>イベントエピソード：「未来のラボは大騒ぎ」「心をこめて、ホワイトデー」</li>
 		</ul>
-		<span class="new"></span>絞り込み用ボタンに「右月/左月」を追加
-	</td>
-</tr>
-<tr>
-	<td>2021/02/14</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+		<span class="new"></span><del>絞り込み用ボタンに「右月/左月」を追加</del>
+	</div>
+</details>
+<details>
+	<summary><span class="date">2021/02/14</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>キズナエピソード：μ's(第15話まで)</li>
 			<li>イベントエピソード：「愛がたっぷり、バレンタイン♪」</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2021/01/31</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2021/01/31</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第23章</li>
 			<li>キズナエピソード：ニジガク初期9名(第22話まで)、栞子(第9話まで)</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2021/01/28</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2021/01/28</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>キズナエピソード：千歌・ダイヤ・曜・鞠莉・ルビィ(14話)、果南(1～14話)</li>
 			<li>イベントエピソード：「あけまして、浦の星流初詣」「新年丑年特別エクササイズ」</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2020/12/29</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2020/12/29</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第22章</li>
 			<li>キズナエピソード：μ's全メンバー (第14話まで)</li>
 			<li>イベントエピソード：「１番のクリスマスプレゼント」「イルミネーションナイト」</li>
-			<li>TVアニメ連動ストーリー：全話</li>
+			<li>TVアニメ連動ストーリー：第10～13話</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2020/11/30</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2020/11/30</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第21章</li>
 			<li>キズナエピソード：千歌・ダイヤ・曜・鞠莉・ルビィ・栞子 (全話)</li>
-			<li>TVアニメ連動ストーリー：果林</li>
+			<li>TVアニメ連動ストーリー：第9話 (果林)</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2020/11/24</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2020/11/24</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第8章・第9章</li>
 			<li>イベントエピソード：「最高の遊園地攻略法！？」</li>
 			<li>キズナエピソード：絵里・真姫・千歌 (全話)</li>
-			<li>TVアニメ連動ストーリー：璃奈、彼方、しずく</li>
+			<li>TVアニメ連動ストーリー：第6～8話 (璃奈、彼方、しずく)</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2020/11/01</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2020/11/01</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第20章</li>
 			<li>キズナエピソード：穂乃果・ことり・凛・花陽 (13話)、しずく・果林・彼方 (全話)</li>
-			<li>TVアニメ連動ストーリー：エマ</li>
+			<li>TVアニメ連動ストーリー：第5話 (エマ)</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2020/10/25</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2020/10/25</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第19章</li>
 			<li>イベントエピソード：「楽しいハロウィンパーティー」まで全イベント</li>
 			<li>キズナエピソード：鞠莉 (全話)</li>
-			<li>TVアニメ連動ストーリー：せつ菜、愛</li>
+			<li>TVアニメ連動ストーリー：第3～4話 (せつ菜、愛)</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2020/10/11</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2020/10/11</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>キズナエピソード：かすみ (全話)</li>
-			<li>TVアニメ連動ストーリー：かすみ</li>
+			<li>TVアニメ連動ストーリー：第2話 (かすみ)</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2020/10/05</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2020/10/05</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第5～7章</li>
 			<li>キズナエピソード：ダイヤ・歩夢 (全話)、曜・ルビィ (最新話)</li>
-			<li>TVアニメ連動ストーリー：歩夢</li>
+			<li>TVアニメ連動ストーリー：第1話 (歩夢)</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2020/09/24</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2020/09/24</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>イベントエピソード：「下町巡り珍道中」～「マジカル・タイム！」</li>
 			<li>キズナエピソード：花陽・曜・せつ菜・エマ (全話)</li>
 		</ul>
-		<span class="fix"></span>絞り込みボタンの機能改善
-	</td>
-</tr>
-<tr>
-	<td>2020/09/21</td>
-	<td><span class="new"></span>ストーリーを新たに掲載
+	</div>
+</details>
+<details>
+	<summary><span class="date">2020/09/21</span></summary>
+	<div>
+		<span class="new"></span>ストーリーを新たに掲載
 		<ul>
 			<li>メインストーリー：第18章</li>
 			<li>キズナエピソード：ことり・凛・ルビィ (全話)</li>
 		</ul>
-	</td>
-</tr>
-<tr>
-	<td>2020/09/16</td>
-	<td><span class="new"></span>テスト公開
+	</div>
+</details>
+<details>
+	<summary class="important"><span class="date">2020/09/16</span> - テスト公開</summary>
+	<div>
+		<span class="new"></span>テスト公開<br>
+		<span class="new"></span>以下のストーリーを掲載：
 		<ul>
 			<li>メインストーリー：第1～4章</li>
 			<li>イベントエピソード：「和装モデルはお任せあれ！」まで</li>
 			<li>キズナエピソード：穂乃果・愛・璃奈・栞子 (全話)</li>
 		</ul>
-	</td>
-</tr>
--->
-<tr>
-	<td>2020/09/16</td>
-	<td><span class="new"></span>テスト公開
-	</td>
-</tr>
-</tbody>
-</table>
+	</div>
+</details>
+<p>[ここまで]</p>
+</div>
+</section>
 
-<p>
-<a href="index.html">トップページに戻る。</a>
-</p>
+<nav>
+<p><a href="index.html">トップページに戻る。</a></p>
+</nav>
 
 </body>
 </html>

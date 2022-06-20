@@ -24,20 +24,17 @@
 #caution {
 	display:block;
 	margin: auto;
-	width: 500px;
-	height: 80px;
+	width: 600px;
+	height: 120px;
 	background-color: #fcc;
 	border: 2px solid black;
 	overflow: hidden;
 }
 
 #caution td {
-}
-
-#caution td {
 	display: table-cell;
 	position: relative;
-	top: -100px;
+	top: -90px;
 	width: 80px;
 	height: 280px;
 	vertical-align: middle;
@@ -89,24 +86,26 @@
 --></style>
 </head>
 
-<body style="background:url('img/bg.png')">
-<div style="text-align:center;">
+<body style="background:url('img/bg.png'); text-align: center;">
 
 <img src="img/title_logo.png" alt="ラブライブ！ストレージ タイトルロゴ">
+
+<section>
 <table id="caution">
 <tbody>
 <tr>
 	<td>
-		<span style="font-size: 80px">⚠</span>
+		<span style="font-size: 80px">⚠️</span>
 	</td>
-	<td style="width: 400px; font-size: small; text-align: left;">
+	<td style="width: 500px; text-align: left;">
 		<strong>JavaScriptの設定を確認してね！</strong><br>
-		このWebサイトはJavaScriptを使用しているため、<br>
-		コンテンツが正しく表示されない可能性があります。<br>
+		このWebサイトはJavaScriptを多用しているため、<br>
+		多くのコンテンツが正しく表示されない可能性があります。
 	</td>
 </tr>
 </tbody>
 </table>
+</section>
 
 <nav>
 <table id="main">
@@ -192,8 +191,11 @@
 		</td>
 
 		<td class="panel">
-			<div class="glass" style="background-color: rgba(255, 209, 243, 0.3); border-color:#FF4F91;">
-				<strong style="color:#aaa">Coming Soon...</strong>
+			<div class="glass" style="background-color: rgba(255, 209, 243, 0.8); border-color:#FF4F91;">
+				<strong>スクスタ<br>毎日劇場便覧</strong>
+				<hr style="background-color:#FF4F91;">
+				スクフェスの毎日劇場の一覧です。現在はテスト公開中。
+				<a href="sifas_theater.html"></a>
 			</div>
 		</td>
 	</tr>
@@ -201,11 +203,10 @@
 </table>
 </nav>
 
-<p style="color:#666">
-	何かあったら <a href="https://twitter.com/ratius55">作者のTwitterまで</a>
-</p>
+<address style="color:#666; margin-bottom: 30px;">
+	ご意見・データの間違い報告などは<a href="https://twitter.com/ratius55">作者のTwitterまで</a>
+</address>
 
-</div>
 <script><!--
 	document.getElementById('caution').style.display = 'none';
 --></script>
