@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 
 <meta property="og:url" content="https://ratius.github.io/LLS/sifas_theater.html">
-<meta property="og:title" content="スクフェスALL STARS 毎日劇場便覧">
+<meta property="og:title" content="スクスタ 毎日劇場便覧 | ラブライブ！ストレージ">
 <meta property="og:type" content="website">
 <meta property="og:description" content="スクスタの毎日劇場のまとめ。">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@ratius55">
 <meta name="twitter:creator" content="@ratius55">
-<meta name="twitter:title" content="スクフェスALL STARS 毎日劇場便覧">
+<meta name="twitter:title" content="スクスタ 毎日劇場便覧 | ラブライブ！ストレージ">
 <meta name="twitter:description" content="スクスタの毎日劇場のまとめ。">
 
-<title>スクフェスALL STARS 毎日劇場便覧</title>
+<title>スクスタ 毎日劇場便覧 | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main.css">
 <style><!--
@@ -23,7 +23,7 @@ p{
 	margin: 15px 10px;
 }
 
-#N1 {
+#Narrower {
 	border: solid 2px #b9a;
 	font-size: x-large;
 	font-weight: bold;
@@ -32,8 +32,8 @@ p{
 }
 
 #OutputArea {
-	border: solid 2px #a89;
-	width: min(100%, 1200px);
+	border: solid 3px #a89;
+	width: min(calc(100% - 10px), 1200px);
 	height: calc(90vh - 120px);
 	overflow-y: scroll;
 }
@@ -47,7 +47,7 @@ p{
 	padding: 4px 10px;
 }
 
-.date{
+#OutputTable .date{
 	width: 100px;
 	font-size: 95%;
 	background-color: #eee;
@@ -55,23 +55,33 @@ p{
 	border-right: solid 1px #999;
 }
 
-.title{
+#OutputTable .title{
 	width: 320px;
 	color: #403038;
 	text-align: left;
 	border-right: dotted 3px #c0b0b8;
 }
 
-.memo{
+#OutputTable .memo{
 	font-size: small;
 	color: #666;
 }
 
-.title, .memo {
+#OutputTable .title,
+#OutputTable .memo {
 	background-color: #fde;
 	border-bottom: solid 1px #c0b0b8;
 }
-.date, .tag { border-bottom: solid 2px #999;}
+#OutputTable .date, #OutputTable .tag {
+	border-bottom: solid 2px #999;
+}
+
+#OutputTable .date, #OutputTable .tag {
+	border-bottom: solid 2px #999;
+}
+#OutputTable .memo, #OutputTable .tag {
+	border-right: solid 1px #999;
+}
 
 .RoundButton {
 	display: inline-block;
@@ -89,98 +99,59 @@ p{
 	height: 22px;
 	border: 2px solid;
 }
-
-.history ul{
-	margin: 5px 0 5px 0;
-	color: #444;
-	font-size: small;
-	list-style-type: none;
-	padding-inline-start: 20px;
-	line-height: 180%;
-}
-.history li:before { content:"▶ "; color:#b95;}
 --></style>
 <script><!--
-const CharLookUpTable = [
-	{"id": "Honoka",   "name": "穂乃果",  "r":255, "g":163, "b": 54, "style": true},
-	{"id": "Eli",      "name": "絵里",    "r":122, "g":238, "b":255, "style": true},
-	{"id": "Kotori",   "name": "ことり",  "r":206, "g":191, "b":191, "style": true},
-	{"id": "Umi",      "name": "海未",    "r": 23, "g":105, "b":255, "style": true},
-	{"id": "Rin",      "name": "凛",      "r":219, "g":212, "b": 30, "style": true},
-	{"id": "Maki",     "name": "真姫",    "r":255, "g": 80, "b": 62, "style": true},
-	{"id": "Nozomi",   "name": "希",      "r":196, "g": 85, "b":246, "style": true},
-	{"id": "Hanayo",   "name": "花陽",    "r":106, "g":230, "b":115, "style": true},
-	{"id": "Nico",     "name": "にこ",    "r":255, "g": 79, "b":145, "style": true},
-	{"id": "Chika",    "name": "千歌",    "r":255, "g":149, "b": 71, "style": true},
-	{"id": "Riko",     "name": "梨子",    "r":255, "g":158, "b":172, "style": true},
-	{"id": "Kanan",    "name": "果南",    "r": 39, "g":193, "b":183, "style": true},
-	{"id": "Dia",      "name": "ダイヤ",  "r":219, "g":  8, "b": 57, "style": true},
-	{"id": "You",      "name": "曜",      "r":102, "g":192, "b":255, "style": true},
-	{"id": "Yoshiko",  "name": "善子",    "r":193, "g":202, "b":212, "style": true},
-	{"id": "Hanamaru", "name": "花丸",    "r":255, "g":208, "b": 16, "style": true},
-	{"id": "Mari",     "name": "鞠莉",    "r":194, "g": 82, "b":198, "style": true},
-	{"id": "Ruby",     "name": "ルビィ",  "r":255, "g":111, "b":190, "style": true},
-	{"id": "Ayumu",    "name": "歩夢",    "r":255, "g":191, "b":224, "style": true},
-	{"id": "Kasumi",   "name": "かすみ",  "r":213, "g":222, "b":112, "style": true},
-	{"id": "Shizuku",  "name": "しずく",  "r":187, "g":237, "b":255, "style": true},
-	{"id": "Karin",    "name": "果林",    "r": 74, "g": 47, "b":237, "style": true},
-	{"id": "Ai",       "name": "愛",      "r":255, "g":130, "b": 70, "style": true},
-	{"id": "Kanata",   "name": "彼方",    "r":190, "g":130, "b":255, "style": true},
-	{"id": "Setsuna",  "name": "せつ菜",  "r":246, "g": 14, "b": 14, "style": true},
-	{"id": "Emma",     "name": "エマ",    "r":143, "g":218, "b":121, "style": true},
-	{"id": "Rina",     "name": "璃奈",    "r":208, "g":206, "b":225, "style": true},
-	{"id": "Shioriko", "name": "栞子",    "r": 36, "g":189, "b":139, "style": true},
-	{"id": "Mia",      "name": "ミア",    "r":214, "g":213, "b":202, "style": true},
-	{"id": "Lanzhu",   "name": "ランジュ","r":248, "g":200, "b":196, "style": true},
+//■■各種データ定義
+//■タグデータ
+const TagData = {
+	"Honoka":     {"name": "穂乃果",  "r":255, "g":163, "b": 54, "style": "Round"},
+	"Eli":        {"name": "絵里",    "r":122, "g":238, "b":255, "style": "Round"},
+	"Kotori":     {"name": "ことり",  "r":206, "g":191, "b":191, "style": "Round"},
+	"Umi":        {"name": "海未",    "r": 23, "g":105, "b":255, "style": "Round"},
+	"Rin":        {"name": "凛",      "r":219, "g":212, "b": 30, "style": "Round"},
+	"Maki":       {"name": "真姫",    "r":255, "g": 80, "b": 62, "style": "Round"},
+	"Nozomi":     {"name": "希",      "r":196, "g": 85, "b":246, "style": "Round"},
+	"Hanayo":     {"name": "花陽",    "r":106, "g":230, "b":115, "style": "Round"},
+	"Nico":       {"name": "にこ",    "r":255, "g": 79, "b":145, "style": "Round"},
+	"Chika":      {"name": "千歌",    "r":255, "g":149, "b": 71, "style": "Round"},
+	"Riko":       {"name": "梨子",    "r":255, "g":158, "b":172, "style": "Round"},
+	"Kanan":      {"name": "果南",    "r": 39, "g":193, "b":183, "style": "Round"},
+	"Dia":        {"name": "ダイヤ",  "r":219, "g":  8, "b": 57, "style": "Round"},
+	"You":        {"name": "曜",      "r":102, "g":192, "b":255, "style": "Round"},
+	"Yoshiko":    {"name": "善子",    "r":193, "g":202, "b":212, "style": "Round"},
+	"Hanamaru":   {"name": "花丸",    "r":255, "g":208, "b": 16, "style": "Round"},
+	"Mari":       {"name": "鞠莉",    "r":194, "g": 82, "b":198, "style": "Round"},
+	"Ruby":       {"name": "ルビィ",  "r":255, "g":111, "b":190, "style": "Round"},
+	"Ayumu":      {"name": "歩夢",    "r":255, "g":191, "b":224, "style": "Round"},
+	"Kasumi":     {"name": "かすみ",  "r":213, "g":222, "b":112, "style": "Round"},
+	"Shizuku":    {"name": "しずく",  "r":187, "g":237, "b":255, "style": "Round"},
+	"Karin":      {"name": "果林",    "r": 74, "g": 47, "b":237, "style": "Round"},
+	"Ai":         {"name": "愛",      "r":255, "g":130, "b": 70, "style": "Round"},
+	"Kanata":     {"name": "彼方",    "r":190, "g":130, "b":255, "style": "Round"},
+	"Setsuna":    {"name": "せつ菜",  "r":246, "g": 14, "b": 14, "style": "Round"},
+	"Emma":       {"name": "エマ",    "r":143, "g":218, "b":121, "style": "Round"},
+	"Rina":       {"name": "璃奈",    "r":208, "g":206, "b":225, "style": "Round"},
+	"Shioriko":   {"name": "栞子",    "r": 36, "g":189, "b":139, "style": "Round"},
+	"Mia":        {"name": "ミア",    "r":214, "g":213, "b":202, "style": "Round"},
+	"Lanzhu":     {"name": "ランジュ","r":248, "g":200, "b":196, "style": "Round"},
 	
-	{"id": "Season",   "name": "季節の行事", "r":100, "g":140, "b":160},
-	{"id": "Birthday", "name": "誕生日",     "r":100, "g":140, "b":160},
-	{"id": "Live",     "name": "ライブ",     "r":100, "g":140, "b":160},
+	"Season":     {"name": "季節の行事", "r":100, "g":140, "b":160, "style": "Square"},
+	"Birthday":   {"name": "誕生日",     "r":100, "g":140, "b":160, "style": "Square"},
+	"Live":       {"name": "ライブ",     "r":100, "g":140, "b":160, "style": "Square"},
 
-	{"id": "Yohane",   "name": "堕天使ヨハネ",         "r":180, "g":160, "b":80},
-	{"id": "Dokkiri",  "name": "穂乃果と愛のドッキリ", "r":180, "g":160, "b":80},
-	{"id": "Triathlon","name": "地獄のトライアスロン", "r":180, "g":160, "b":80},
-	{"id": "Broadcast","name": "善子のゲーム配信",     "r":180, "g":160, "b":80},
-	{"id": "Washi",    "name": "わしわしの秘密",       "r":180, "g":160, "b":80},
-	{"id": "Monodomo", "name": "者どもの森",           "r":180, "g":160, "b":80},
-	{"id": "Calorie",  "name": "絵里のカロリー事情",   "r":180, "g":160, "b":80},
-	{"id": "Pool",     "name": "プールのステージ",     "r":180, "g":160, "b":80},
-	{"id": "Helicopter","name": "小原家のヘリコプター","r":180, "g":160, "b":80},
-	{"id": "25252",    "name": "にっこにっこにー",     "r":180, "g":160, "b":80},
-];
+	"Yohane":     {"name": "堕天使ヨハネ",         "r":180, "g":160, "b":80, "style": "Square"},
+	"Dokkiri":    {"name": "穂乃果と愛のドッキリ", "r":180, "g":160, "b":80, "style": "Square"},
+	"Triathlon":  {"name": "地獄のトライアスロン", "r":180, "g":160, "b":80, "style": "Square"},
+	"Broadcast":  {"name": "善子のゲーム配信",     "r":180, "g":160, "b":80, "style": "Square"},
+	"Washi":      {"name": "わしわしの秘密",       "r":180, "g":160, "b":80, "style": "Square"},
+	"Monodomo":   {"name": "者どもの森",           "r":180, "g":160, "b":80, "style": "Square"},
+	"Calorie":    {"name": "絵里のカロリー事情",   "r":180, "g":160, "b":80, "style": "Square"},
+	"Pool":       {"name": "プールのステージ",     "r":180, "g":160, "b":80, "style": "Square"},
+	"Helicopter": {"name": "小原家のヘリコプター", "r":180, "g":160, "b":80, "style": "Square"},
+	"25252":      {"name": "にっこにっこにー",     "r":180, "g":160, "b":80, "style": "Square"},
+};
 
-//■キャラクター用のルックアップテーブル (ID, データ種)
-function LookUp(id, data){
-	var temp = CharLookUpTable.filter((u)=>{return(u.id === id);});
-	if(temp.length){
-		return temp[0][data];
-	} else {
-		console.log("キャラクターID " + id + " は見つかりません");
-		if(data === "r" || data === "g" || data === "b"){
-			return -1;
-		} else {
-			return "";
-		}
-	}
-}
-
-//■キャラクター名のボタン
-function DrawCharName(character){
-	if(LookUp(character, "id") === ""){return "";} //存在しないキャラクターなら描画しない
-
-	var Output = '<span class="'
-	+ (LookUp(character, "style") ? "RoundButton" : "SquareButton")
-	+ '" style="background-color:rgb('
-	+ Math.floor((LookUp(character, "r")+510)/3) + ','
-	+ Math.floor((LookUp(character, "g")+510)/3) + ','
-	+ Math.floor((LookUp(character, "b")+510)/3) + '); border-color: rgb('
-	+ LookUp(character, "r") + ','
-	+ LookUp(character, "g") + ','
-	+ LookUp(character, "b") + ');">'
-	+ LookUp(character, "name") + '<\/span>\n';
-	return Output;
-}
-
+//■ソート対象
 const SortTarget = [
 {"name": "2020年", "tag": "year-2020"},
 {"name": "2021年", "tag": "year-2021"},
@@ -230,64 +201,103 @@ const SortTarget = [
 {"name": "シリーズ：にっこにっこにー", "tag": "25252"},
 ];
 
-//■絞り込みメニューの描画
-function drawNarrower(){
-	Output = '<div style="margin-bottom: 10px;">'
-	+ '<select id="N1" onChange="DrawStoryList(this.value)">\n<option value="undefined">(見たいカテゴリを選択)<\/option>';
-	for(i=0; i<SortTarget.length; i++){
-		Output += '<option value="'
-		+ (SortTarget[i].tag ? SortTarget[i].tag : 'undefined') + '">'
-		+ SortTarget[i].name + '<\/option>\n';
+//■■関数
+//■キャラクター名のボタン
+function DrawCharName(character){
+	if(character in TagData){
+		const temp = TagData[character];
+		let Output = '<span class="' + temp.style + 'Button" '
+		+ 'style="background-color:rgb('
+		+ Math.floor((temp.r + 510)/3) + ','
+		+ Math.floor((temp.g + 510)/3) + ','
+		+ Math.floor((temp.b + 510)/3) + '); '
+		+ ' border-color: rgb(' + temp.r + ',' + temp.g + ',' + temp.b + ');">'
+		+ temp.name + '<\/span>';
+		return Output;
+	} else { //存在しないなら
+		console.log("キャラクターID " + character + " は存在しません");
+		return false;
 	}
-	Output += '<\/select><\/div>\n';
-	return Output;
 }
 
-//■条件に合致するストーリーを描画
+//■条件に合致するストーリーを抜き出して描画する
 function DrawStoryList(tag){
 	Output = "";
-	result = [];
+	result = new Array();
 	if(tag === "undefined"){
 		return;
 	} else if(tag.substring(0,5) === "year-"){ //「年」が選択された場合
-		result = TheaterLog.filter(temp => temp.date.substring(0,4) == tag.substring(5));
+		result = TheaterLog.filter(temp => temp.date.substring(0,4) === tag.substring(5));
 	} else {
 		result = TheaterLog.filter(temp => temp.tag.indexOf(tag) != -1);
 	}
 	for(temp1 of result){
-		Output += '<tr><th class="date" rowspan="2">' + temp1.date + '<\/th>'
-		+ '<th class="title">' + temp1.title + '<\/th>'
-		+ '<td class="memo">' + (temp1.memo ? temp1.memo : '') + '<\/td><\/tr>\n'
-		+ '\n<tr><td colspan="2" class="tag">';
+		Output += '<tr>\n\t<th class="date" rowspan="2">' + temp1.date + '<\/th>\n'
+		+ '\t<th class="title">' + temp1.title + '<\/th>\n'
+		+ '\t<td class="memo">' + (temp1.memo ? temp1.memo : '') + '<\/td>\n<\/tr>\n'
+		+ '\n<tr>\n\t<td colspan="2" class="tag">\n';
 		for(temp2 of temp1.tag){
-			Output += DrawCharName(temp2);
+			Output += '\t\t' + DrawCharName(temp2) + '\n';
 		}		
-		Output += '<\/td><\/tr>';
+		Output += '\t<\/td>\n<\/tr>\n';
 	}
 	document.getElementById("OutputField").innerHTML = Output;
 }
 
 --></script>
-
 </head>
-
 <body>
+<header>
+	<h2>スクスタ 毎日劇場便覧</h2>
+</header>
 
-<div id="MainArea">
-	<div style="text-align:center; margin-top: 40px;">
-	<span style="font-size: 150%; font-weight: bold;">よみこみちゅう…</span><br>
+<section>
+	<h3 class="foreword">まえがき</h3>
+	<p>
+		スクフェスALL STARSで配信されている「毎日劇場」のまとめです。<br>
+		下部のプルダウンメニューから見たいカテゴリを選択すると、該当するストーリーが表示されます。
+	</p>
+</section>
+
+<div id="Loading">
+	<h4>Now Loading...</h4>
 	このコンテンツはJavaScriptを使用しています。<br>
 	いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
-	お手数ですが、JavaScriptの実行を許可した上でページを読み込み直してください。<br>
-	</div>
+	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
 </div>
 
-<script><!--
+<section id="StoryViewer" style="display: none;">
+	<h3 class="muse">便覧</h3>
+</section>
 
+<section>
+<h3 class="niji">更新履歴</h3>
+<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
+<div id="history2">
+	<details open>
+		<summary><span class="date">2022/06/15</span> - 更新履歴リニューアル</summary>
+		<div>
+			<span class="fix"></span>更新履歴をリニューアル（他ページ同様、折りたたみ式に変更）
+		</div>
+	</details>
+	<details>
+		<summary class="important"><span class="date">2022/06/15</span> - テスト公開</summary>
+		<div>
+			<span class="new"></span>テスト公開
+		</div>
+	</details>
+</div>
+</section>
+
+<nav>
+<p><a href="index.html">トップページに戻る。</a></p>
+</nav>
+
+<script><!--
 function loadScript(src, callback) {
-    var done = false;
-    var head = document.getElementsByTagName('head')[0];
-    var script = document.createElement('script');
+    let done = false;
+    let head = document.getElementsByTagName('head')[0];
+    let script = document.createElement('script');
     script.src = src;
     head.appendChild(script);
     // Attach handlers for all browsers
@@ -306,35 +316,23 @@ function loadScript(src, callback) {
 }
 
 loadScript("data/theater.js", function() {
-
-	document.getElementById("MainArea").innerHTML =
-	'<h2>スクフェスALL STARS 毎日劇場便覧'
-	+ '<span class="version">Version 1.0.0<\/span><\/h2>'
-	+ '<h3 style="background-color:#ddd; color:#777; border-color:#999;">まえがき<\/h3>'
-	+ '<p>スクフェスALL STARSで配信されている「毎日劇場」のまとめです。<br>'
-	+ '下部のプルダウンメニューから見たいカテゴリを選択すると、該当するストーリーが表示されます。'
-	+ '<\/p>'
-	
-	+ '<h3 class="muse">便覧<\/h3>'
-	+ drawNarrower()
+	let Output =
+	//◆絞り込みボタン
+	  '<div style="margin-bottom: 10px;">'
+	+ '<select id="Narrower" onChange="DrawStoryList(this.value)">\n<option value="undefined">(見たいカテゴリを選択)<\/option>';
+	for(i=0; i<SortTarget.length; i++){
+		Output += '<option value="'
+		+ (SortTarget[i].tag ? SortTarget[i].tag : 'undefined') + '">'
+		+ SortTarget[i].name + '<\/option>\n';
+	}
+	Output += '<\/select><\/div>\n'
 	+ '<div id="OutputArea"><table id="OutputTable"><tbody id="OutputField"><\/tbody><\/table><\/div>';
+	document.getElementById("StoryViewer").innerHTML += Output;
+	document.getElementById("StoryViewer").style.display = "block";
+	
+	//◆「Now Loading...」解除
+	document.getElementById("Loading").style.display = "none";
 });
 --></script>
-
-<h3 class="niji">更新履歴</h3>
-<table class="history">
-<tbody>
-<tr>
-	<td>2022/06/15</td>
-	<td><span class="new"></span>限定公開
-	</td>
-</tr>
-</tbody>
-</table>
-
-<p>
-<a href="index.html">トップページに戻る。</a>
-</p>
-
 </body>
 </html>

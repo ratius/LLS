@@ -5,11 +5,11 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@ratius55">
 <meta name="twitter:creator" content="@ratius55">
-<meta name="twitter:title" content="虹ヶ咲学園スクールアイドル同好会 マンスリーランキングまとめ">
+<meta name="twitter:title" content="虹ヶ咲 マンスリーランキングまとめ">
 <meta name="twitter:description" content="「虹ヶ咲学園スクールアイドル　マンスリーランキング」データの非公式保管所です。">
 <meta name="twitter:image" content="./card.png">
 
-<title>虹ヶ咲学園スクールアイドル同好会 マンスリーランキングまとめ</title>
+<title>マンスリーランキングまとめ | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main.css">
 <style><!--
@@ -43,13 +43,15 @@ table.result tbody td{
 	border: solid 1px #ccc;
 }
 
-table.result tbody th,td {
-}
-
-#MainArea_1 {
-	text-align:center;
-}
-
+.bg_Ayumu  { background-color: rgb(237, 197, 206); }
+.bg_Kasumi { background-color: rgb(232, 224, 137); }
+.bg_Shizuku{ background-color: rgb(190, 224, 237); }
+.bg_Karin  { background-color: rgb(192, 202, 250); }
+.bg_Ai     { background-color: rgb(253, 183, 146); }
+.bg_Kanata { background-color: rgb(211, 184, 229); }
+.bg_Setsuna{ background-color: rgb(249, 166, 170); }
+.bg_Emma   { background-color: rgb(200, 237, 190); }
+.bg_Rina   { background-color: rgb(207, 208, 227); }
 
 --></style>
 <script><!--
@@ -87,27 +89,27 @@ const RankingData = [
 ];
 
 const CharData = [
-	{ id:'ayumu'  , name:'歩夢'  , color:'rgb(237, 197, 206)' },
-	{ id:'kasumi' , name:'かすみ', color:'rgb(232, 224, 137)' },
-	{ id:'shizuku', name:'しずく', color:'rgb(190, 224, 237)' },
-	{ id:'karin'  , name:'果林'  , color:'rgb(192, 202, 250)' },
-	{ id:'ai'     , name:'愛'    , color:'rgb(253, 183, 146)' },
-	{ id:'kanata' , name:'彼方'  , color:'rgb(211, 184, 229)' },
-	{ id:'setsuna', name:'せつ菜', color:'rgb(249, 166, 170)' },
-	{ id:'emma'   , name:'エマ'  , color:'rgb(200, 237, 190)' },
-	{ id:'rina'   , name:'璃奈'  , color:'rgb(207, 208, 227)' }
+	{ id:'Ayumu'  , name:'歩夢'  , color:'rgb(237, 197, 206)' },
+	{ id:'Kasumi' , name:'かすみ', color:'rgb(232, 224, 137)' },
+	{ id:'Shizuku', name:'しずく', color:'rgb(190, 224, 237)' },
+	{ id:'Karin'  , name:'果林'  , color:'rgb(192, 202, 250)' },
+	{ id:'Ai'     , name:'愛'    , color:'rgb(253, 183, 146)' },
+	{ id:'Kanata' , name:'彼方'  , color:'rgb(211, 184, 229)' },
+	{ id:'Setsuna', name:'せつ菜', color:'rgb(249, 166, 170)' },
+	{ id:'Emma'   , name:'エマ'  , color:'rgb(200, 237, 190)' },
+	{ id:'Rina'   , name:'璃奈'  , color:'rgb(207, 208, 227)' }
 ];
 
 const MatchResultData = [[],[],[],[],[],[],[],[],[]];
 const TotalRank = [[],[],[],[],[],[],[],[],[]];
 let MostFrequent = 0;
 function CreateMatchResult(){
-	for(member=0; member<9; member++){ //キャラ
+	for(let member=0; member<9; member++){ //キャラ
 		MatchResultData[member] = [0,0,0,0,0,0,0,0,0,0]; //初期化
 		TotalRank[member] = [0,0,0,0,0,0,0,0,0,0]; //初期化
-		for(month=0; month<RankingData.length; month++){ //月
+		for(let month=0; month<RankingData.length; month++){ //月
 			var TargetMemberRank = 999;
-			for(rank=0; rank<9; rank++){
+			for(let rank=0; rank<9; rank++){
 				if(RankingData[month][rank] == member){
 					TargetMemberRank = rank;
 					TotalRank[member][rank] ++;
@@ -128,7 +130,7 @@ function CreateMatchResult(){
 }
 
 CreateMatchResult();
-var CharHighlighted = [1,1,1,1,1,1,1,1,1];
+let CharHighlighted = [1,1,1,1,1,1,1,1,1];
 function SetBGColor(z){
 	switch(z){
 		case -1:
@@ -139,7 +141,7 @@ function SetBGColor(z){
 		return 0;
 
 		default:
-		var ClassToChange = document.getElementsByClassName(CharData[z].id);
+		let ClassToChange = document.getElementsByClassName(CharData[z].id);
 		CharHighlighted[z] = 1-CharHighlighted[z];
 		for(j=0; j<ClassToChange.length; j++){
 			ClassToChange[j].style.opacity = (CharHighlighted[z] ? 1 : 0.25);
@@ -152,79 +154,141 @@ function SetBGColor(z){
 
 </head>
 <body>
+<header>
+	<h2>虹ヶ咲学園スクールアイドル同好会 マンスリーランキングまとめ</h2>
+</header>
 
-<div id="MainArea">
-	<div style="text-align:center">
-	<span style="font-size: 150%">よみこみちゅう…</span><br>
+<section style="display: none">
+	<h3 class="foreword">まえがき</h3>
+</section>
+
+<div id="Loading">
+	<h4>Now Loading...</h4>
 	このコンテンツはJavaScriptを使用しています。<br>
 	いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
-	お手数ですが、JavaScriptの実行を許可した上でページを読み込み直してください。<br>
-	</div>
+	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
 </div>
 
+<section id="RankList1">
+	<h3 class="niji">過去の順位一覧</h3>
+</section>
+
+<section id="RankList2">
+	<h3 class="niji">順位経験回数</h3>
+</section>
+
+<section id="RankList3">
+	<h3 class="niji">勝敗表</h3>
+</section>
+
+<section>
+<h3 class="niji">更新履歴</h3>
+<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
+<div id="history2">
+	<details open>
+		<summary><span class="date">2022/06/25</span> - レイアウト調整</summary>
+		<div>
+			<span class="fix"></span>更新履歴をリニューアル（他ページ同様、折りたたみ式に変更）<br>
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2019/12/17</span> - レイアウト調整</summary>
+		<div>
+			<span class="fix"></span>レイアウト変更
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2019/08/11</span> - 「順位経験回数」実装</summary>
+		<div>
+			<span class="new"></span>「順位経験回数」の節を追加
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2019/07/13</span> - 「勝敗表」実装</summary>
+		<div>
+			<span class="new"></span>「勝敗表」の節を追加<br>
+			<span class="new"></span>JavaScriptが実行できない時のメッセージを追加
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2019/03/20</span> - 機能改修</summary>
+		<div>
+			<span class="fix"></span>「セルをクリック/タップ」は、各項目ごとにトグルになるように変更</td>
+		</div>
+	</details>
+	<details>
+		<summary class="important"><span class="date">2019/03/08</span> - 公開</summary>
+		<div>
+			<span class="new"></span>公開
+		</div>
+	</details>
+</div>
+</section>
+
+<nav>
+<p><a href="index.html">トップページに戻る。</a></p>
+</nav>
+
 <script><!-- 
-//■■ 順位結果 ■■
-//■ ヘッダー
-Output = '\n<div id="MonthlyRanking">\n<h3 class="niji">過去の順位一覧<\/h3>\n'
-	+ '<table id="ranking" class="result">\n<thead onClick="SetBGColor(-1)">\n'
-	+ '<tr><th>日時/順位<\/th>';
+//■過去の順位一覧
+//◆ヘッダー
+let Output = '\n<table id="ranking" class="result">\n<thead onClick="SetBGColor(-1)">\n'
+	+ '<tr>\n\t<th>日時/順位<\/th>\n';
 	for(i=0; i<9; i++){
-		Output += '<td>' + (i+1) + '位<\/td>';
+		Output += '\t<td>' + (i+1) + '位<\/td>\n';
 	}
 Output += '<\/tr>\n<\/thead>\n';
 
-//■ マンスリーランキング
+//◆メイン
 Output += '<tbody>\n';
 for(i in RankingData){
-	var CharID = 0;
-	Output += '<tr><th onClick="SetBGColor(-1)">' + RankingData[i][9] + '<\/th>';
+	let CharID = 0;
+	Output += '<tr>\n\t<th onClick="SetBGColor(-1)">' + RankingData[i][9] + '<\/th>\n';
 	for(j=0; j<9; j++){
 		CharID = RankingData[i][j];
-		Output += '<td class="' + CharData[CharID].id
-		+ '" style="background-color:' + CharData[CharID].color
-		+ ';" onClick="SetBGColor(' + CharID + ')">' + CharData[CharID].name + '<\/td>';
+		Output += '\t<td class="' + CharData[CharID].id + ' bg_' + CharData[CharID].id
+		+ '" onClick="SetBGColor(' + CharID + ')">' + CharData[CharID].name + '<\/td>\n';
 	}
 	Output += '<\/tr>\n'
 }
 Output += '<\/tbody>\n<\/table\n>'
 	+ '<p>キャラクター名のセルをクリック/タップすると、そのキャラクター色の表示/非表示を切り替えます。<br>'
-	+ 'キャラクター以外のセルをクリック/タップするとリセット。<\/p><\/div>\n'
+	+ 'キャラクター以外のセルをクリック/タップするとリセット。<\/p>\n'
 
+document.getElementById("RankList1").innerHTML += Output;
 
-
-//■■ 順位経験回数 ■■
-//■ ヘッダー
-Output += '<div id="AcquiredRank">\n<h3 class="niji">順位経験回数<\/h3>\n'
-	+ '<table id="AcquiredRankTable" class="result">\n<thead>\n<tr><th style="width:60px;">順位<\/th>';
+//■順位経験回数
+//◆ヘッダー
+Output = '\n<table id="AcquiredRankTable" class="result">\n<thead>\n<tr>\n\t<th style="width:60px;">順位<\/th>\n';
 
 for(x=0; x<9; x++){
-	Output += '<td style="width:50px; background-color:'
+	Output += '\t<td style="width:50px; background-color:'
 	+ (x<3 ? ['#fd5', '#bbb', '#ca9'][x] : '#fde') + '">' + (x+1) + '位<\/td>\n';
 }
 Output += '<th style="width:70px;">平均順位<\/th><\/tr>\n<\/thead>\n<tbody>\n';
 
-//■ メイン
+//◆メイン
 for(y=0; y<9; y++){
-	Output += '<tr><td class="caption_' + CharData[y].id +'" style="width:50px; background-color: '
-	+ CharData[y].color + '">'	+ CharData[y].name + '<\/td>';
+	Output += '<tr>\n\t<th class="caption_' + CharData[y].id +'" style="width:50px; background-color: '
+	+ CharData[y].color + '">'	+ CharData[y].name + '<\/td>\n';
 
 	for(x=0; x<9; x++){
-		Output += '<td style="background-color:'
+		Output += '\t<td style="background-color:'
 		+ 'hsl(' + (TotalRank[y][x]*150/MostFrequent) + ',100%,'
-		+ (98-TotalRank[y][x]*60/MostFrequent) + '%)">' + TotalRank[y][x] + '<\/td>';
+		+ (98-TotalRank[y][x]*60/MostFrequent) + '%)">' + TotalRank[y][x] + '<\/td>\n';
 	}
-	Output += '<th style="background-color:' + CharData[y].color + '">'
-	+ (9-(MatchResultData[y][9] / RankingData.length)).toFixed(2) + '<\/th><\/tr>\n';
+	Output += '\t<th style="background-color:' + CharData[y].color + '">'
+	+ (9-(MatchResultData[y][9] / RankingData.length)).toFixed(2) + '<\/th>\n<\/tr>\n';
 }
 Output += '<\/tbody>\n<\/table\n>'
 	+ '<p>メンバー別の、獲得した順位の回数です。<\/p>\n'
 
+document.getElementById("RankList2").innerHTML += Output;
 
 
 //■■ 勝敗表 ■■
 //■ ヘッダー
-Output += '<div id="MatchResult">\n<h3 class="niji">勝敗表<\/h3>\n'
-	+ '<table id="MatchTable" class="result">\n<thead>\n<tr><th style="width:60px;">勝敗表<\/th>';
+Output = '\n<table id="MatchTable" class="result">\n<thead>\n<tr><th style="width:60px;">勝敗表<\/th>';
 
 for(x=0; x<9; x++){
 	Output += '<td class="caption_' + CharData[x].id +'" style="width:50px; background-color: '
@@ -234,52 +298,22 @@ Output += '<th style="width:70px;">勝数合計<\/th><\/tr>\n<\/thead>\n<tbody>\
 
 //■ メイン
 for(y=0; y<9; y++){
-	Output += '<tr><td class="caption_' + CharData[y].id +'" style="width: 50px; background-color: '
-	+ CharData[y].color + '">'	+ CharData[y].name + '<\/td>';
+	Output += '<tr>\n\t<th class="caption_' + CharData[y].id +'" style="width: 50px; background-color: '
+	+ CharData[y].color + '">'	+ CharData[y].name + '<\/td>\n';
 
 	for(x=0; x<9; x++){
-		Output += '<td style="background-color:'
+		Output += '\t<td style="background-color: '
 		+ (x==y ? ' #999">' : 'hsl(' + (MatchResultData[y][x]*150/RankingData.length) + ',100%,'
-		+ (98-MatchResultData[y][x]*60/RankingData.length) + '%)">' + MatchResultData[y][x]) + '<\/td>';
+		+ (98-MatchResultData[y][x]*60/RankingData.length) + '%)">' + MatchResultData[y][x]) + '<\/td>\n';
 	}
-	Output += '<th style="background-color:' + CharData[y].color + '">' + MatchResultData[y][9] + '<\/th>\n';
+	Output += '\t<th style="background-color:' + CharData[y].color + '">' + MatchResultData[y][9] + '<\/th>\n<\/tr>';
 }
-Output += '<\/tbody>\n<\/table\n>'
+Output += '<\/tbody>\n<\/table>\n'
 	+ '<p>メンバー同士の比較です。数字は対象メンバーよりも上位になった回数。<\/p>\n'
 
-document.getElementById("MainArea").innerHTML = Output;
+document.getElementById("RankList3").innerHTML += Output;
+
+document.getElementById("Loading").style.display = "none";
 --></script>
-
-<h3 class="niji">更新履歴（ランキング反映以外）</h3>
-<table class="history">
-<tbody>
-<tr>
-	<td>2019/12/17 12:00頃</td>
-	<td><span class="fix"></span>レイアウト変更</td>
-</tr>
-<tr>
-	<td>2019/08/11 01:00頃</td>
-	<td><span class="new"></span>「順位経験回数」を追加</td>
-</tr>
-<tr>
-	<td>2019/07/13 01:00頃</td>
-	<td><span class="new"></span>「勝敗表」を追加<br>
-		<span class="new"></span>JavaScriptが実行できない時のメッセージを追加</td>
-</tr>
-<tr>
-	<td>2019/03/20 20:30頃</td>
-	<td><span class="fix"></span>「セルをクリック/タップ」でトグルするように仕様変更</td>
-</tr>
-<tr>
-	<td>2019/03/18 17:30頃</td>
-	<td><span class="new"></span>公開</td>
-</tr>
-</tbody>
-</table>
-
-<p>
-<a href="index.html">トップページに戻る。</a>
-</p>
-
 </body>
 </html>

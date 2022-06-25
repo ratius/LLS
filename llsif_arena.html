@@ -4,18 +4,18 @@
 <meta charset="utf-8">
 
 <meta property="og:url" content="https://ratius.github.io/LLS/llsif_arena.html">
-<meta property="og:title" content="スクフェス ライブ♪アリーナまとめ">
+<meta property="og:title" content="ライブ♪アリーナまとめ">
 <meta property="og:type" content="website">
 <meta property="og:description" content="スクフェスにおける、ライブ♪アリーナのセリフ集です。">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@ratius55">
 <meta name="twitter:creator" content="@ratius55">
-<meta name="twitter:title" content="スクフェス ライブ♪アリーナまとめ">
+<meta name="twitter:title" content="ライブ♪アリーナまとめ">
 <meta name="twitter:image" content="https://ratius.github.io/LLS/img/card_arena.png">
 <meta name="twitter:description" content="スクフェスにおける、ライブ♪アリーナのセリフ集です。">
 
-<title>スクフェス ライブ♪アリーナまとめ</title>
+<title>ライブ♪アリーナまとめ | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main.css">
 <style><!--
@@ -127,90 +127,75 @@
 
 --></style>
 <script><!--
+//■対戦相手のデータ
+const TagData = {
+	'Shizuku':  {'name': '桜坂しずく',    'x':1, 'y':0},
+	'Marika':   {'name': '一之瀬マリカ',  'x':2, 'y':0},
+	'Minami':   {'name': '永山みなみ',    'x':3, 'y':0},
+	'Aya':      {'name': '杉崎亜矢',      'x':4, 'y':0},
+	'Ayumi':    {'name': '鳥居歩美',      'x':5, 'y':0},
+	'Seira':    {'name': '九条聖来',      'x':6, 'y':0},
+	'Sachiko':  {'name': '田中さち子',    'x':7, 'y':0},
+	'Akiru':    {'name': '篠宮あきる',    'x':8, 'y':0},
+	'Yumi':     {'name': '藤城悠弓',      'x':9, 'y':0},
+	'Coco':     {'name': '宮下ココ',      'x':1, 'y':1},
+	'Sana':     {'name': '結城紗菜',      'x':2, 'y':1},
+	'Christina':{'name':'クリスティーナ', 'x':3, 'y':1},
+	'Yuri':     {'name': '御堂優理',      'x':4, 'y':1},
+	'Rika':     {'name': '神谷理華',      'x':5, 'y':1},
+	'Kanata':   {'name': '近江彼方',      'x':6, 'y':1},
+	'Haruka':   {'name': '近江遥',        'x':7, 'y':1},
+	'Kasane':   {'name': '支倉かさね',    'x':8, 'y':1},
+	'Mizuki':   {'name': '吉川瑞希',      'x':9, 'y':1},
+	'Yu':       {'name': '逢沢遊宇',      'x':1, 'y':2},
+	'Fumie':    {'name': '西村文絵',      'x':2, 'y':2},
+	'Akemi':    {'name': '菊池朱美',      'x':3, 'y':2},
+	'Iruka':    {'name': '須田いるか',    'x':4, 'y':2},
+	'Reine':    {'name': '佐伯麗音',      'x':5, 'y':2},
+	'Nanaka':   {'name': '森嶋ななか',    'x':6, 'y':2},
+	'Saki':     {'name': '下園咲',        'x':7, 'y':2},
+	'Ru':       {'name': '多々良るう',    'x':8, 'y':2},
+	'Nagi':     {'name': '白木凪',        'x':9, 'y':2},
+	'Shun':     {'name': '黒崎隼',        'x':1, 'y':3},
+	'Fumi':     {'name': '設楽ふみ',      'x':2, 'y':3},
+	'Tsurugi':  {'name': '門田剣',        'x':3, 'y':3},
+	'Yuuka':    {'name': '桐原優香',      'x':4, 'y':3},
+	'Fuu':      {'name': '斉木風',        'x':5, 'y':3},
+	'Misaki':   {'name': '紫藤美咲',      'x':6, 'y':3},
+	'Himeno':   {'name': '綾小路姫乃',    'x':7, 'y':3},
+	'Koyuki':   {'name': '白瀬小雪',      'x':8, 'y':3},
+	'Ryo':      {'name': '相川涼',        'x':9, 'y':3},
+	'Mikoto':   {'name': '福原命',        'x':1, 'y':4},
+	'Chiduko':  {'name': '坂巻千鶴子',    'x':2, 'y':4},
+	'Hitomi':   {'name': '志賀仁美',      'x':3, 'y':4},
+	'Akira':    {'name': '鬼崎アキラ',    'x':4, 'y':4},
+	'Yuka':     {'name': '月島結架',      'x':5, 'y':4},
+	'Sayuri':   {'name': '兵藤さゆり',    'x':6, 'y':4},
+	'Sakura':   {'name': '黒羽咲良',      'x':7, 'y':4},
+	'Sakuya':   {'name': '黒羽咲夜',      'x':8, 'y':4},
+	'Mutsuki':  {'name': '高天原睦月',    'x':9, 'y':4},
+	'Ranpha':   {'name': '蘭花',          'x':1, 'y':5},
+	'Rakshata': {'name': 'ラクシャータ',  'x':2, 'y':5},
+	'Rebecca':  {'name': 'レベッカ',      'x':3, 'y':5},
+	'Isabella': {'name': 'イザベラ',      'x':4, 'y':5},
+	'Emma':     {'name': 'エマ・ヴェルデ','x':5, 'y':5},
+	'Jennifer': {'name': 'ジェニファー',  'x':6, 'y':5},
+	'Maria':    {'name': 'マリア',        'x':7, 'y':5},
+	'Leo':      {'name': 'レオ',          'x':8, 'y':5},
+	'Yukari':   {'name': '早乙女紫',      'x':9, 'y':5},
 
-const OpponentLookUpTable = [
-	{'id': 'Shizuku', 'Name': '桜坂しずく',    'x':1, 'y':0},
-	{'id': 'Marika',  'Name': '一之瀬マリカ',  'x':2, 'y':0},
-	{'id': 'Minami',  'Name': '永山みなみ',    'x':3, 'y':0},
-	{'id': 'Aya',     'Name': '杉崎亜矢',      'x':4, 'y':0},
-	{'id': 'Ayumi',   'Name': '鳥居歩美',      'x':5, 'y':0},
-	{'id': 'Seira',   'Name': '九条聖来',      'x':6, 'y':0},
-	{'id': 'Sachiko', 'Name': '田中さち子',    'x':7, 'y':0},
-	{'id': 'Akiru',   'Name': '篠宮あきる',    'x':8, 'y':0},
-	{'id': 'Yumi',    'Name': '藤城悠弓',      'x':9, 'y':0},
-	{'id': 'Coco',    'Name': '宮下ココ',      'x':1, 'y':1},
-	{'id': 'Sana',    'Name': '結城紗菜',      'x':2, 'y':1},
-	{'id': 'Christina','Name':'クリスティーナ','x':3, 'y':1},
-	{'id': 'Yuri',    'Name': '御堂優理',      'x':4, 'y':1},
-	{'id': 'Rika',    'Name': '神谷理華',      'x':5, 'y':1},
-	{'id': 'Kanata',  'Name': '近江彼方',      'x':6, 'y':1},
-	{'id': 'Haruka',  'Name': '近江遥',        'x':7, 'y':1},
-	{'id': 'Kasane',  'Name': '支倉かさね',    'x':8, 'y':1},
-	{'id': 'Mizuki',  'Name': '吉川瑞希',      'x':9, 'y':1},
-	{'id': 'Yu',      'Name': '逢沢遊宇',      'x':1, 'y':2},
-	{'id': 'Fumie',   'Name': '西村文絵',      'x':2, 'y':2},
-	{'id': 'Akemi',   'Name': '菊池朱美',      'x':3, 'y':2},
-	{'id': 'Iruka',   'Name': '須田いるか',    'x':4, 'y':2},
-	{'id': 'Reine',   'Name': '佐伯麗音',      'x':5, 'y':2},
-	{'id': 'Nanaka',  'Name': '森嶋ななか',    'x':6, 'y':2},
-	{'id': 'Saki',    'Name': '下園咲',        'x':7, 'y':2},
-	{'id': 'Ru',      'Name': '多々良るう',    'x':8, 'y':2},
-	{'id': 'Nagi',    'Name': '白木凪',        'x':9, 'y':2},
-	{'id': 'Shun',    'Name': '黒崎隼',        'x':1, 'y':3},
-	{'id': 'Fumi',    'Name': '設楽ふみ',      'x':2, 'y':3},
-	{'id': 'Tsurugi', 'Name': '門田剣',        'x':3, 'y':3},
-	{'id': 'Yuuka',   'Name': '桐原優香',      'x':4, 'y':3},
-	{'id': 'Fuu',     'Name': '斉木風',        'x':5, 'y':3},
-	{'id': 'Misaki',  'Name': '紫藤美咲',      'x':6, 'y':3},
-	{'id': 'Himeno',  'Name': '綾小路姫乃',    'x':7, 'y':3},
-	{'id': 'Koyuki',  'Name': '白瀬小雪',      'x':8, 'y':3},
-	{'id': 'Ryo',     'Name': '相川涼',        'x':9, 'y':3},
-	{'id': 'Mikoto',  'Name': '福原命',        'x':1, 'y':4},
-	{'id': 'Chiduko', 'Name': '坂巻千鶴子',    'x':2, 'y':4},
-	{'id': 'Hitomi',  'Name': '志賀仁美',      'x':3, 'y':4},
-	{'id': 'Akira',   'Name': '鬼崎アキラ',    'x':4, 'y':4},
-	{'id': 'Yuka',    'Name': '月島結架',      'x':5, 'y':4},
-	{'id': 'Sayuri',  'Name': '兵藤さゆり',    'x':6, 'y':4},
-	{'id': 'Sakura',  'Name': '黒羽咲良',      'x':7, 'y':4},
-	{'id': 'Sakuya',  'Name': '黒羽咲夜',      'x':8, 'y':4},
-	{'id': 'Mutsuki', 'Name': '高天原睦月',    'x':9, 'y':4},
-	{'id': 'Ranpha',  'Name': '蘭花',          'x':1, 'y':5},
-	{'id': 'Rakshata','Name': 'ラクシャータ',  'x':2, 'y':5},
-	{'id': 'Rebecca', 'Name': 'レベッカ',      'x':3, 'y':5},
-	{'id': 'Isabella','Name': 'イザベラ',      'x':4, 'y':5},
-	{'id': 'Emma',    'Name': 'エマ・ヴェルデ','x':5, 'y':5},
-	{'id': 'Jennifer','Name': 'ジェニファー',  'x':6, 'y':5},
-	{'id': 'Maria',   'Name': 'マリア',        'x':7, 'y':5},
-	{'id': 'Leo',     'Name': 'レオ',          'x':8, 'y':5},
-	{'id': 'Yukari',  'Name': '早乙女紫',      'x':9, 'y':5},
-
-	{'id': 'Tsubasa', 'Name': '綺羅ツバサ',    'x':1, 'y':6},
-	{'id': 'Anju',    'Name': '優木あんじゅ',  'x':2, 'y':6},
-	{'id': 'Erena',   'Name': '統堂英玲奈',    'x':3, 'y':6},
-	{'id': 'Leah',    'Name': '鹿角理亞',      'x':4, 'y':6},
-	{'id': 'Sarah',   'Name': '鹿角聖良',      'x':5, 'y':6},
-	{'id': 'P3',      'Name': 'ペルソナ3',     'x':0, 'y':3},
-	{'id': 'P4',      'Name': 'ペルソナ4',     'x':0, 'y':4},
-	{'id': 'P5',      'Name': 'ペルソナ5',     'x':0, 'y':5},
-	{'id': 'geass',   'Name': 'コードギアス',  'x':0, 'y':6}
-];
+	'Tsubasa':  {'name': '綺羅ツバサ',    'x':1, 'y':6},
+	'Anju':     {'name': '優木あんじゅ',  'x':2, 'y':6},
+	'Erena':    {'name': '統堂英玲奈',    'x':3, 'y':6},
+	'Leah':     {'name': '鹿角理亞',      'x':4, 'y':6},
+	'Sarah':    {'name': '鹿角聖良',      'x':5, 'y':6},
+	'P3':       {'name': 'ペルソナ3',     'x':0, 'y':3},
+	'P4':       {'name': 'ペルソナ4',     'x':0, 'y':4},
+	'P5':       {'name': 'ペルソナ5',     'x':0, 'y':5},
+	'geass':    {'name': 'コードギアス',  'x':0, 'y':6}
+};
 const IconSize = 64;
 var CurrentPage = 0;
-
-//■キャラクター用のルックアップテーブル (ID, データ種)
-function LookUp(id, key){
-	var temp = OpponentLookUpTable.filter((u)=>{return(u.id === id);});
-	if(temp.length){
-		return temp[0][key];
-	} else {
-		console.log("キャラクターID " + id + " は見つかりません");
-		if(key === "school"){
-			return -1;
-		} else {
-			return "";
-		}
-	}
-}
 
 //■セリフ一覧の描画
 function WriteMessage(set) {
@@ -220,23 +205,36 @@ function WriteMessage(set) {
 	CurrentPage = set;
 	document.getElementById("sub").innerHTML = ('sub' in ArenaData[set] ? ArenaData[set].sub : "");
 	
-	var Output = "";
-	var MessageNumber = 1;
-	for(i=0; i<ArenaData[set].Opponent.length; i++){
-		j = ArenaData[set].Opponent[i];
-		Output += '<tr><th style="width: 60px">'
-			+ ('num' in j ? j.num : MessageNumber++) + '<\/th>';
+	let Output = "";
+	let MessageNumber = 1;
+	for(temp1 of ArenaData[set].Opponent){
+		Output += '\n<tr>\n\t<th style="width: 60px">'
+			+ ('num' in temp1 ? temp1.num : MessageNumber++) + '<\/th>\n';
 			
-			if('name' in j){ //名前があるなら立ち絵も表示させる
-				Output += '<th style="width:80px"><div class="face" style="background-position: '
-				+ 'right -' + (9-LookUp(j.name, "x"))*IconSize + 'px bottom -' + (6-LookUp(j.name, "y"))*IconSize + 'px">'
-				+ '<\/div><\/th><td>'
-				+ '<span class="OpponentName">'
-				+ ('namealt' in j ? j.namealt : LookUp(j.name, "Name")) + '<\/span><br>';
+			if('name' in temp1){ //名前があるなら立ち絵も表示させる
+				if(temp1.name in TagData){
+					let temp2 = TagData[temp1.name];
+			
+					Output += '\t<th style="width:80px"><div class="face" style="background-position: '
+					+ 'right -' + (9 - temp2.x)*IconSize + 'px bottom -' + (6 - temp2.y)*IconSize + 'px">'
+					+ '<\/div><\/th>\n\t<td>'
+					+ '<span class="OpponentName">'
+					+ ('namealt' in temp1 ? temp1.namealt : temp2.name) + '<\/span><br>';
+				} else { //名前が正しくない
+					Output += '\n\t<th>Error<\/th>\n\t<td>';
+					
+					if(location.search === "?debug"){
+						alert('不明なキャラクターID');
+						console.log('[Error] 不明なキャラクター名: ' + temp1.name + '\n'
+						+ 'set: ' + set + '\n'
+						+ 'MessageNumber: ' + MessageNumber + '\n'
+						+ 'temp1:\n' + CreateDebugLog(temp1));
+					}
+				}
 			}else {
-				Output += '<td><\/td><td>';
+				Output += '\n\t<td><\/td>\n\t<td>';
 			}			
-			Output += j.text + '<\/td><\/tr>';
+			Output += temp1.text + '<\/td>\n<\/tr>\n';
 	}
 	document.getElementById("message-list").innerHTML = Output;
 	document.getElementById("message-box").scrollTop = 0;
@@ -267,27 +265,111 @@ function WriteMessage(set) {
 	document.getElementById("select-box").selectedIndex = set;
 }
 
+//■デバック用ログ
+function CreateDebugLog(obj){
+	let temp;
+	let ErrorLog = "";
+	for(temp in obj){
+		ErrorLog += '\t' + temp + ': ' + obj[temp] + '\n';
+	}
+	return ErrorLog;
+}
+
 --></script>
-
 </head>
-
 <body>
+<header>
+	<h2 id="MainTitle">スクフェス ライブ♪アリーナまとめ</h2>
+</header>
 
-<div id="MainArea">
-	<div style="text-align:center; margin-top: 40px;">
-	<span style="font-size: 150%; font-weight: bold;">よみこみちゅう…</span><br>
+<section>
+	<h3 class="foreword">まえがき</h3>
+	<p>
+		スクフェスにおける、「ライブ♪アリーナ」のまとめです。<br>
+		「第20回」までのテキストを保管しています。
+	</p>
+</section>
+
+<div id="Loading">
+	<h4>Now Loading...</h4>
 	このコンテンツはJavaScriptを使用しています。<br>
 	いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
-	お手数ですが、JavaScriptの実行を許可した上でページを読み込み直してください。<br>
-	</div>
+	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
 </div>
+
+<section id="StoryViewer" style="display: none;">
+	<h3 class="muse">過去のテキスト</h3>
+</section>
+
+<section>
+<h3 class="niji">更新履歴</h3>
+<p>下のボックス内の、色つきの日付の行をクリックすると展開/折りたたみされます。</p>
+<div id="history2">
+	<details open>
+		<summary><span class="date">2022/06/25</span> - 更新履歴リニューアル</summary>
+		<div>
+			<span class="new"></span>閲覧可能なテキストを追加（第20回）<br>
+			<span class="fix"></span>更新履歴をリニューアル（他のページ同様、折りたたみ式に変更）
+		</div>
+	</details>
+	<details>
+		<summary class="important"><span class="date">2022/05/28</span> - 正式公開</summary>
+		<div>
+			<span class="new"></span><b>正式公開</b><br>
+			<span class="new"></span>閲覧可能なテキストを追加（第17回、第19回）<br>
+			<span class="fix"></span>注釈のデザインを変更
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2022/04/18</span></summary>
+		<div>
+			<span class="new"></span>閲覧可能なテキストを追加（第16回、第18回後半戦）
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2022/04/03</span></summary>
+		<div>
+			<span class="new"></span>閲覧可能なテキストを追加（第15回、第18回前半戦、東雲学院未完成、千歳橋高校）
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2022/03/18</span></summary>
+		<div>
+			<span class="new"></span>閲覧可能なテキストを追加（第12回、第14回、青藍高校、紫苑女学院）
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2022/03/10</span></summary>
+		<div>
+			<span class="new"></span>閲覧可能なテキストを追加（第8～11回、藤黄学園、Y.G.国際学園、ドリームセッション）
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2022/03/06</span></summary>
+		<div>
+			<span class="new"></span>閲覧可能なテキストを追加（第6～7回）<br>
+			<span class="new"></span>セレクトボックスを追加
+		</div>
+	</details>
+	<details>
+		<summary class="important"><span class="date">2022/02/18</span> - プレビュー公開</summary>
+		<div>
+			<span class="new"></span><b>プレビュー公開</b>（テキスト補完に協力していただいた皆様、ありがとうございました）
+		</div>
+	</details>
+</div>
+</section>
+
+<nav>
+<p><a href="index.html">トップページに戻る。</a></p>
+</nav>
 
 <script><!--
 
 function loadScript(src, callback) {
-    var done = false;
-    var head = document.getElementsByTagName('head')[0];
-    var script = document.createElement('script');
+    let done = false;
+    let head = document.getElementsByTagName('head')[0];
+    let script = document.createElement('script');
     script.src = src;
     head.appendChild(script);
     // Attach handlers for all browsers
@@ -306,39 +388,43 @@ function loadScript(src, callback) {
 }
 
 loadScript("data/arena.js", function() {
-	var Output = "";
-	Output += 
-	  '<h3 style="background-color:#ddd; color:#777; border-color:#999;">まえがき<\/h3>'
-	+ '<p>スクフェスにおける、「ライブ♪アリーナ」のまとめです。<br>'
-	+ '「第19回」までのテキストを保管しています。<\/p>';
-	
-	Output += 
-	  '<h3 class="muse">過去のテキスト<\/h3>'
-	+ '<p>以下のいずれかを行うことで、表示回を切り替えることができます。<\/p>'
-	+ '<ul><li>上部のタイトル部分のセレクトボックスで、表示したい回を選択する<\/li>'
-	+ '<li>上部の「前回」「次回」ボタンを押す<\/li>'
-	+ '<li>テキスト部分にフォーカスを当てた状態で、キーボードのカーソルキーの左右を押す<\/li><\/ul>'
-	+ '<div id="info-box"><table id="info-table"><tbody><tr>'
-	+ '<th id="ButtonLeft" rowspan="2" onclick="false"><span style="font-size:35px">&#x2b05;<\/span><br>前回<\/th>'
-	+ '<th id="HeaderUpper">';
-	
-	//■セレクトボックス
-	Output += '<select id="select-box" onchange="WriteMessage()">';
-	for(i=0; i<ArenaData.length; i++){
-		Output += '<option>' + ArenaData[i].title + '<\/option>\n';
-	}
+	let Output = 
+	  '<p>以下のいずれかを行うことで、表示回を切り替えることができます。<\/p>\n'
+	+ '<ul>\n\t<li>上部のタイトル部分のセレクトボックスで、表示したい回を選択する<\/li>\n'
+	+ '\t<li>上部の「前回」「次回」ボタンを押す<\/li>\n'
+	+ '\t<li>テキスト部分にフォーカスを当てた状態で、キーボードのカーソルキーの左右を押す<\/li>\n<\/ul>\n'
 
-	//■セリフ表示用ボックス
-	Output += '<\/select><\/th>'
-	+ '<th id="ButtonRight" rowspan="2" onclick="false"><span style="font-size:35px">&#x2b95;<\/span><br>次回<\/th><\/tr>'
-	+ '<tr><th><span id="sub"><\/span><\/th><\/tr>'
-	+ '<\/tbody><\/table><\/div>'
-	+ '<div id="message-box" tabindex="1">' 
-	+ '<table id="message-table"><tbody id="message-list"><\/tbody><\/table><\/div>';
+	//◆ボックス上部
+	+ '<div id="info-box">\n<table id="info-table">\n<tbody>\n<tr>\n'
 	
-	document.getElementById("MainArea").innerHTML = Output;
+	//○左
+	+ '<th id="ButtonLeft" rowspan="2" onclick="false"><span style="font-size:35px">&#x2b05;<\/span><br>前回<\/th>\n'
+	
+	//○上
+	+ '<th id="HeaderUpper">'
+	+ '\n<select id="select-box" onchange="WriteMessage()">\n';
+	for(i=0; i<ArenaData.length; i++){
+		Output += '\t<option>' + ArenaData[i].title + '<\/option>\n';
+	}
+	Output += '<\/select>\n<\/th>\n'
+
+	//○右
+	+ '<th id="ButtonRight" rowspan="2" onclick="false"><span style="font-size:35px">&#x2b95;<\/span><br>次回<\/th>\n<\/tr>\n'
+
+	//○下
+	+ '<tr>\n<th><span id="sub"><\/span><\/th>\n<\/tr>\n'
+	+ '<\/tbody>\n<\/table>\n<\/div>\n'
+
+	//◆ボックス下部
+	+ '<div id="message-box" tabindex="1">\n'
+	+ '<table id="message-table">\n<tbody id="message-list">\n<\/tbody>\n<\/table>\n<\/div>\n';
+	
+	document.getElementById("StoryViewer").innerHTML += Output;
 	WriteMessage(0);
+	document.getElementById("StoryViewer").style.display = "block";
 	
+	document.getElementById("Loading").style.display = "none";
+
 	document.addEventListener('keydown', function(){
 		act = document.activeElement.toString();
 		if(act === '[object HTMLDivElement]'){
@@ -354,51 +440,12 @@ loadScript("data/arena.js", function() {
 			}
 		}
 	});
+	
+	//■デバック用
+	if(location.search === "?debug") {
+		document.getElementById("MainTitle").innerHTML += " [デバッグ]";
+	}
 });
 --></script>
-
-<h3 class="niji">更新履歴 </h3>
-<table class="history">
-<tbody>
-<tr>
-	<td>2022/05/28</td>
-	<td><span class="new"></span><b>正式公開</b><br>
-		<span class="new"></span>閲覧可能なテキストを追加（第17回、第19回）<br>
-		<span class="fix"></span>注釈のデザインを変更</td>
-</tr>
-<!--
-<tr>
-	<td>2022/04/18</td>
-	<td><span class="new"></span>閲覧可能なテキストを追加<br>（第16回、第18回後半戦）</td>
-</tr>
-<tr>
-	<td>2022/04/03</td>
-	<td><span class="new"></span>閲覧可能なテキストを追加<br>（第15回、第18回前半戦、東雲学院(未完成)、千歳橋高校）</td>
-</tr>
-<tr>
-	<td>2022/03/18</td>
-	<td><span class="new"></span>閲覧可能なテキストを追加<br>（第12回、第14回、青藍高校、紫苑女学院）</td>
-</tr>
-<tr>
-	<td>2022/03/10</td>
-	<td><span class="new"></span>閲覧可能なテキストを追加<br>（第8～11回、藤黄学園、Y.G.国際学園、ドリームセッション）</td>
-</tr>
-<tr>
-	<td>2022/03/06</td>
-	<td><span class="new"></span>閲覧可能なテキストを追加（第6～7回）<br>
-		<span class="new"></span>セレクトボックスを追加</td>
-</tr>
--->
-<tr>
-	<td>2022/02/19</td>
-	<td><span class="new"></span>プレビュー公開<br>（テキスト補完に協力していただいた皆様、ありがとうございました）</td>
-</tr>
-</tbody>
-</table>
-
-<p>
-<a href="index.html">トップページに戻る。</a>
-</p>
-
 </body>
 </html>

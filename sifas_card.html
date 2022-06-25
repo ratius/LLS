@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
 <meta charset="utf-8">
+
+<meta property="og:url" content="https://ratius.github.io/LLS/sifas_card.html">
+<meta property="og:title" content="スクスタ カード実装状況">
+<meta property="og:type" content="website">
+<meta property="og:description" content="スクフェスALL STARSにおける、UR・SRの追加日時のまとめです。">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@ratius55">
 <meta name="twitter:creator" content="@ratius55">
-<meta name="twitter:title" content="スクスタ カード実装状況 | ラブライブ！ストレージ">
+<meta name="twitter:title" content="スクスタ カード実装状況">
 <meta name="twitter:description" content="スクフェスALL STARSにおける、UR・SRの追加日時のまとめです。">
 <meta name="twitter:image" content="https://ratius.github.io/LLS/img/card_list.png">
 
@@ -15,16 +20,16 @@
 <link rel="stylesheet" href="main.css">
 <style><!--
 
-#legend {
+#Legend table{
 	border-collapse: collapse;
 	border: solid 2px #f29600;
 }
 
-#legend thead {
+#Legend thead {
 	background-color: #ffefd6;
 }
 
-#legend td, #legend th {
+#Legend td, #Legend th {
 	padding: 4px 12px;
 	border-top: solid 1px #ccc;
 	border-right: solid 1px #ccc;
@@ -172,8 +177,8 @@ function LoadRawData(){
 
 // ■凡例を作成
 function DrawLegend(){
-	var Output =
-	  '<table id="legend"><thead><th>表記<\/th><th>解説<\/th><\/thead><tbody>'
+ 	var Output = '\n'
+	+ '<table><thead><th>表記<\/th><th>解説<\/th><\/thead><tbody>'
 	+ '<tr><th class="release">'+ ToolTipSource['release']+ '<\/th><td>恒常。そのキャラクターの実装と同時に登場したカード<\/td><\/tr>'
 	+ '<tr><th class="none">'   + ToolTipSource['none']   + '<\/th><td>恒常。初期実装分でなく、イベントとも無関係なカード<\/td><\/tr>'
 	+ '<tr><th class="gacha">'  + ToolTipSource['gacha']  + '<\/th><td>恒常。イベントガチャで登場<\/td><\/tr>'
@@ -181,7 +186,6 @@ function DrawLegend(){
 	+ '<tr><th class="fes">'    + ToolTipSource['fes']    + '<\/th><td><b>スクスタフェス限定<\/b>。特定のガチャから排出<\/td><\/tr>'
 	+ '<tr><th class="party">'  + ToolTipSource['party']  + '<\/th><td><b>パーティーガチャ限定<\/b>。特定のガチャから排出<\/td><\/tr>'
 	+ '<\/tbody><\/table>';
-
 	return Output;
 }
 
@@ -257,22 +261,107 @@ function DrawTable(group, groupsub){
 }
 
 --></script>
-
 </head>
-
 <body>
 
-<div id="MainArea">
-	<div style="text-align:center; margin-top: 40px;">
-	<span style="font-size: 150%; font-weight: bold;">よみこみちゅう…</span><br>
+<header>
+	<h2>スクスタ カード実装状況</h2>
+</header>
+
+<section>
+	<h3 class="foreword">まえがき</h3>
+	<p>
+		「ラブライブ！スクールアイドルフェスティバルALL STARS」で実装されているUR・SRのまとめです。<br>
+		追加メンバーの「○枚目」は、URはゲーム内のパラメータの合計値を、SRは衣装セットを基準に設定しています。<br>
+		PCで閲覧している場合、セルにカーソルを当てることで詳しい情報のツールチップが出現します。<br>
+	</p>
+	<p id="RecordedData"></p>
+</section>
+
+<div id="Loading">
+	<h4>Now Loading...</h4>
 	このコンテンツはJavaScriptを使用しています。<br>
 	いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
-	お手数ですが、JavaScriptの実行を許可した上でページを読み込み直してください。<br>
-	</div>
+	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
 </div>
 
-<script><!--
+<section id="Legend">
+	<h3 class="foreword">凡例</h3>
+</section>
 
+<section>
+	<h3 class="liella">カード一覧</h3>
+	<section id="Muse">
+		<h4 class="muse">μ's</h4>
+	</section>
+
+	<section id="Aqours">
+		<h4 class="aqours">Aqours</h4>
+	</section>
+
+	<section id="Niji">
+		<h4 class="niji">ニジガク</h4>
+	</section>	
+</section>
+
+<section>
+<h3 class="niji">更新履歴 (カード追加以外)</h3>
+<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
+<div id="history2">
+	<details open>
+		<summary><span class="date">2022/06/25</span></summary>
+		<div>
+			<span class="fix"></span>「UR ○枚目」の背景を、背景画像を用いない方法に変更<br>
+			<span class="fix"></span>更新履歴をリニューアル（他ページ同様、折りたたみ式に変更）
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2022/01/19</span></summary>
+		<div>
+			<span class="new"></span>凡例を追加<br>
+			<span class="new"></span>SRの行にセット名を記載<br>
+			<span class="fix"></span>栞子・ランジュ・ミアの欠損値のデザインを変更
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2021/09/08</span> - ミア・ランジュ実装に伴う調整</summary>
+		<div>
+			<span class="new"></span>「ミア・テイラー」「鐘嵐珠」の列を追加
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2021/02/13</span> - パーティーガチャ登場に伴う調整</summary>
+		<div>
+			<span class="new"></span>「パーティーガチャ限定」の表示に対応
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2021/08/05</span> - 栞子実装に伴う調整</summary>
+		<div>
+			<span class="new"></span>「三船栞子」の列を追加
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2021/03/19</span></summary>
+		<div>
+			<span class="new"></span>属性・タイプの表示を追加
+		</div>
+	</details>
+	<details>
+		<summary class="important"><span class="date">2021/03/15</span> - 公開</summary>
+		<div>
+			<span class="new"></span>公開
+		</div>
+	</details>
+</div>
+</section>
+
+<nav>
+<p><a href="index.html">トップページに戻る。</a></p>
+</nav>
+
+
+<script><!--
 function loadScript(src, callback) {
     var done = false;
     var head = document.getElementsByTagName('head')[0];
@@ -297,64 +386,18 @@ function loadScript(src, callback) {
 loadScript("data/cards.js", function() {
 	var CardList = [];
 	LoadRawData();
-	xx=1;
 
-	document.getElementById("MainArea").innerHTML =
-	  '<h2>スクスタ カード実装状況<\/h2>'
-	+ '<h3 class="foreword">まえがき<\/h3>'
-	+ '<p>「ラブライブ！スクールアイドルフェスティバルALL STARS」で実装されているUR・SRのまとめです。<br>'
-	+ '追加メンバーの「○枚目」は、URはゲーム内のパラメータの合計値を、SRは衣装セットを基準に設定しています。<br>'
-	+ 'PCで閲覧している場合、セルにカーソルを当てることで詳しい情報のツールチップが出現します。'
-	+ '<br>掲載データ範囲：' + LatestUpdate + '<\/p>'
-	+ '<h3 class="liella">凡例<\/h3>'
-	+ DrawLegend()
+	document.getElementById("RecordedData").innerHTML = '掲載データ範囲：' + LatestUpdate + '';
 
-	+ '<h3 class="muse">μ’s<\/h3>'
-	+ DrawTable(ListMuse, 0) + '<\/figure>'
+	document.getElementById("Legend").innerHTML += DrawLegend();
 
-	+ '<h3 class="aqours">Aqours<\/h3>'
-	+ DrawTable(ListAqours, 1) + '<\/figure>'
+	document.getElementById("Muse").innerHTML   += '\n' + DrawTable(ListMuse, 0);
+	document.getElementById("Aqours").innerHTML += '\n' + DrawTable(ListAqours, 1);
+	document.getElementById("Niji").innerHTML   += '\n' + DrawTable(ListNiji, 2);
 
-	+ '<h3 class="niji">ニジガク<\/h3>'
-	+ DrawTable(ListNiji, 2);
+	document.getElementById("Loading").style.display = "none";
 });
 --></script>
-
-<h3 class="niji">更新履歴 (カード追加以外)</h3>
-<table class="history">
-<tbody>
-<tr>
-	<td>2021/01/19</td>
-	<td><span class="new"></span>凡例を追加<br>
-		<span class="new"></span>SRの行にセット名を明記<br>
-		<span class="fix"></span>栞子・ランジュ・ミアの欠損値のデザインを変更</td>
-</tr>
-<tr>
-	<td>2021/09/08</td>
-	<td><span class="new"></span>「ミア・テイラー」「鐘嵐珠」の列を追加</td>
-</tr>
-<tr>
-	<td>2021/02/13</td>
-	<td><span class="new"></span>「パーティーガチャ限定」が表示可能になりました</td>
-</tr>
-<tr>
-	<td>2020/08/05</td>
-	<td><span class="new"></span>「三船栞子」の列を追加</td>
-</tr>
-<tr>
-	<td>2020/03/19</td>
-	<td><span class="new"></span>属性・タイプを掲載</td>
-</tr>
-<tr>
-	<td>2020/03/15</td>
-	<td><span class="new"></span>公開</td>
-</tr>
-</tbody>
-</table>
-
-<p>
-<a href="index.html">トップページに戻る。</a>
-</p>
 
 </body>
 </html>

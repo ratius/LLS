@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
 <meta charset="utf-8">
+
+<meta property="og:url" content="https://ratius.github.io/LLS/sort.html">
+<meta property="og:title" content="ラブライブ！なんでもソート">
+<meta property="og:type" content="website">
+<meta property="og:description" content="「ラブライブ！」シリーズの色々なものをソートできます。">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@ratius55">
 <meta name="twitter:creator" content="@ratius55">
 <meta name="twitter:title" content="ラブライブ！なんでもソート">
-<meta name="twitter:description" content="「ラブライブ!」シリーズの色々なものをソートできます。上のプルダウンメニューからソートしたい対象を選んだ後、より好きなキャラの名前をクリックしていってください。">
+<meta name="twitter:description" content="「ラブライブ！」シリーズの色々なものをソートできます。">
 <meta name="twitter:image" content="https://ratius.github.io/LLS/img/card_sort.png">
 
-<title>ラブライブ！なんでもソート</title>
+<title>ラブライブ！なんでもソート | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <script><!--
 
@@ -572,9 +577,9 @@ var SortingGroup;
 
 //変数の初期化+++++++++++++++++++++++++++++++++++++++++++++
 function initList(){
-	if(document.starter.CharacterSelect.selectedIndex == 0){ return;} //「選択してください」の場合は無し
+	if(document.getElementById("CharacterSelect").selectedIndex == 0){ return;} //「選択してください」の場合は無し
 	
-	SortingGroup = document.starter.CharacterSelect.selectedIndex-1;
+	SortingGroup = document.getElementById("CharacterSelect").selectedIndex-1;
 	var n = 0;
 	var mid;
 	var i;
@@ -762,20 +767,20 @@ function showResult() {
 	var sameRank = 1;
 	var str = "";
 	var num = 0;
-	var temp0 = MemberGroup[document.starter.CharacterSelect.selectedIndex-1][1] + " をソートしたよ！\n";
+	var temp0 = MemberGroup[document.getElementById("CharacterSelect").selectedIndex-1][1] + " をソートしたよ！\n";
 	var temp1 = 7;
 	var i;
 	//ヘッダー
 	str += '<table class="resultTable" align="center"><tr>'
-	+ '<td class="result"; style="text-align:center;">順位<\/td>'
-	+ '<td class="result"; style="text-align:center;">名前<\/td><\/tr>';
+	+ '<td class="result" style="width:20%;">順位<\/td>'
+	+ '<td class="result">名前<\/td><\/tr>';
 
 	for (i=0; i<Member[SortingGroup].length; i++) {
 		num = Member[SortingGroup][lstMember[0][i]];
 		str += 
 		'<tr><td class="result"; style="background-color:'
 		+ ('coloralt' in CharList[num] ? CharList[num].coloralt : CharList[num].color[0])
-		+ '; text-align:right; padding-right:5px;">' +ranking+ '<\/td>'
+		+ ';">' +ranking+ '<\/td>'
 		+ '<td class="result"; style="background-color:'
 		+ ('coloralt' in CharList[num] ? CharList[num].coloralt : CharList[num].color[CharList[num].color.length-1])
 		+ '; padding-left:5px;">' + CharList[num].name + '<\/td><\/tr>';
@@ -866,37 +871,34 @@ function shuffle(array) {
  表のスタイルを変更する場合はここを編集してください。
 
 **********************************************************/
-body {
-	background-color: #eee;
-}
 
 #CharacterSelect{
-	font-size: large;
+	font-size: x-large;
+	margin: 10px;
 }
 
 #mainTable{
-	font-size: 16px;
+	font-size: 24px;
 	font-family: 'ＭＳ Ｐゴシック',sans-serif;
 	text-align: center;
 	vertical-align: middle;
-	width: 440px;
-	margin-left: auto;
-	margin-right: auto;
+	width: 700px;
+	margin: auto;
 	border-collapse: separate;
-	border-spacing: 10px 5px;
+	border-spacing: 10px 10px;
 	border:1px solid #e4007f;
 	background-color: #eee;
 }
 #leftField, #rightField{
 	position: relative;
-	width: 130px;
-	height: 150px;
+	width: 200px;
+	height: 300px;
 	border:1px solid #aaa;
 }
 
 .middleField{
-	width: 130px;
-	height: 70px;
+	width: 200px;
+	height: 140px;
 	border:1px solid #aaa;
 	background-color: #e4e4e4;
 }
@@ -904,7 +906,7 @@ body {
 .CPcolor{
 	position: absolute;
 	top: 0px;
-	height: 152px;
+	height: 302px;
 	border:none;
 	z-index: 2;
 }
@@ -913,12 +915,18 @@ body {
 }
 
 .resultTable{
-	width: 200px;
-	font-size:12px;
-	line-height:120%;
+	width: 300px;
+	font-size: large;
 	margin: 10px auto;
 	border:1px solid #ccc;
 	border-collapse:collapse;
+}
+.resultTable tr {
+	height: 28px;
+}
+
+.resultTable td {
+	text-align: center;
 }
 
 .ShownText{
@@ -928,9 +936,10 @@ body {
 }
 
 .note{
-	font-size: small;
+	font-size: medium;
 	width: 100%;
-	margin: 10px 0px;
+	margin-top: 20px;
+	line-height: 150%;
 }
 
 #tweet-button{
@@ -942,37 +951,24 @@ body {
 	color: white;
 	font-size: 120%;
 }
-@media (max-width:959px){
-	#history { width: calc(100vw - 60px); }
-}
-@media (min-width:960px){
-	#history { width: 900px; }
-}
-#history {
-	margin: auto;
-	height:calc(70vh - 60px);
-	overflow-y: scroll;
-	border: solid 4px #f8b656;
-}
 
 --></style>
 </head>
-
 <body>
-<div style="text-align:center;">
+<header style="text-align:center;">
 	<img src="logo.png" width="600" height="120" alt="キャラソート！">
+</header>
 
-<script><!--
-document.write('<form name="starter"><select id="CharacterSelect" name="CharacterSelect" onchange="initList()"><option selected>▼ソート対象を選択<\/option>');
+<div id="Loading">
+	<h4>Now Loading...</h4>
+	このコンテンツはJavaScriptを使用しています。<br>
+	いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
+	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
+</div>
 
-for(i=0; i<MemberGroup.length; i++){
-	document.write("<option>" + MemberGroup[i][0] + MemberGroup[i][1] + " (" + Member[i].length + ")"
-	+ (Member[i].length>=50 ? "【超長い】" : (Member[i].length>=30 ? "【長い】" : ""))
-	+ "<\/option>");
-}
-document.write('<\/select><\/form>');
---></script>
-
+<div style="text-align:center;">
+<div id="Selector">
+</div>
 <table id="mainTable">
 	<tr>
 		<td id="battleNumber" colspan="3" style="height: 30px; padding-bottom: 10px;">
@@ -1014,106 +1010,158 @@ document.write('<\/select><\/form>');
 	下位だと思ったもの同士の比較は中央（引き分けorどっちも興味無い）を押すことで時間短縮可能です。
 </p>
 </div>
+</div>
 
+<section>
 <h3 class="niji">更新履歴</h3>
-<div id="history">
-<table class="history" style="width: 100%">
-<tbody>
-<tr>
-	<td>2022/05/18</td>
-	<td><span class="new"></span>Liella!二期生を追加<br>
-		<span class="fix"></span>更新履歴のレイアウトを調整<br>
-		<span class="fix"></span>結果表示時、更新履歴が消えないように調整</td>
-</tr>
-<tr>
-	<td>2022/04/17</td>
-	<td><span class="new"></span>虹ヶ咲関係者に演劇部部長、バスケ部部長を追加<br>
-		<span class="new"></span>虹ヶ咲ユニットにぴーなっちゅを追加<br>
-</tr>
-<tr>
-	<td>2022/01/05</td>
-	<td><span class="new"></span>「μ’s～Liella!」モードを追加</td>
-</tr>
-<tr>
-	<td>2021/10/02</td>
-	<td><span class="new"></span>虹ヶ咲キャストに渡辺秀(ミア・テイラー役)、法本明菜(鐘嵐珠役)を追加<br>
-		<span class="new"></span>虹ヶ咲カップリングに侑・ミア・ランジュ関連を追加<br>
-		<span class="new"></span>Liella!の各種サブモードを追加</td>
-</tr>
-<tr>
-	<td>2021/09/03</td>
-	<td><span class="new"></span>鐘嵐珠、ミア・テイラーをニジガクメインキャラクターに格上げ<br>
-		<span class="new"></span>虹ヶ咲ユニットにR3BIRTHを追加<br>
-		<span class="fix"></span>右月・左月を分割</td>
-</tr>
-<tr>
-	<td>2021/05/31</td>
-	<td><span class="new"></span>アニメ虹ヶ咲関連、りりりーず(ユニット)、右月/左月、はんぺんを追加</td>
-</tr>
-<tr>
-	<td>2020/10/03</td>
-	<td><span class="new"></span>鐘嵐珠、ミア・テイラー、虹ヶ咲学園理事長を追加<br>
-	<span class="new"></span>虹ヶ咲カップリングに三船栞子を含むカップリングを追加</td>
-</tr>
-<tr>
-	<td>2020/08/03</td>
-	<td><span class="new"></span>三船栞子をニジガクメインキャラクターに格上げ<br>
-	<span class="new"></span>三船薫子、夏川マイを追加</td>
-</tr>
-<tr>
-	<td>2020/07/15</td>
-	<td><span class="new"></span>「ラブライブ!スーパースター!!」を追加</td>
-</tr>
-<tr>
-	<td>2020/02/06</td>
-	<td><span class="new"></span>「虹ヶ咲関係者」モードを追加</td>
-</tr>
-<tr>
-	<td>2020/01/23</td>
-	<td><span class="fix"></span>誤字があったため修正</td>
-</tr>
-<tr>
-	<td>2019/12/17</td>
-	<td><span class="fix"></span>ツイートボタンのリンクを更新</td>
-</tr>
-<tr>
-	<td>2019/09/24</td>
-	<td><span class="fix"></span>環境によってレイアウトが崩れる場合があったのを修正</td>
-</tr>
-<tr>
-	<td>2019/07/06</td>
-	<td><span class="new"></span>「μ’sキャスト」「Aqoursキャスト」「虹ヶ咲キャスト」モードを追加</td>
-</tr>
-<tr>
-	<td>2019/07/05</td>
-	<td><span class="new"></span>結果をツイートする機能を追加<br>
-		<span class="new"></span>「虹ヶ咲ユニット」「虹ヶ咲カップリング」モードを追加</td>
-</tr>
-<tr>
-	<td>2018/10/17</td>
-	<td><span class="new"></span>「μ’sユニット」「Aqoursユニット」モードを追加</td>
-</tr>
-<tr>
-	<td>2018/09/22</td>
-	<td><span class="new"></span>「μ’sカップリング」「Aqoursカップリング」モードを追加</td>
-</tr>
-<tr>
-	<td>2018/02/26</td>
-	<td><span class="fix"></span>穂乃果の父、女性シンガー、saint snowを追加（実装忘れ）</td>
-</tr>
-<tr>
-	<td>2018/02/25</td>
-	<td><span class="new"></span>公開</td>
-</tr>
-</tbody>
-</table>
+<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
+<div id="history2">
+	<details open>
+		<summary><span class="date">2022/06/25</span> - 大幅リニューアル</summary>
+		<div>
+			<span class="new"></span>リニューアルしました！　見やすくなりました！<br>
+			<span class="fix"></span>更新履歴をリニューアル
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2022/05/18</span> - Liella!二期生参戦に伴う更新</summary>
+		<div>
+			<span class="new"></span>Liella!二期生と、そのキャストを追加<br>
+			<span class="fix"></span>更新履歴のレイアウトを調整<br>
+			<span class="fix"></span>結果表示時、更新履歴が消えないように調整
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2022/04/17</span> - ソート対象追加</summary>
+		<div>
+			<span class="new"></span>「演劇部部長」「バスケ部部長」「ぴーなっちゅ」を追加<br>
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2022/01/05</span> - ソート対象追加</summary>
+		<div>
+			<span class="new"></span>ソート対象に「μ’s～Liella!」モードを追加
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2021/10/02</span> - ランジュ・ミア参戦に伴う更新(2)</summary>
+		<div>
+			<span class="new"></span>「渡辺秀(ミア・テイラー役)」「法本明菜(鐘嵐珠役)」を追加<br>
+			<span class="new"></span>虹ヶ咲カップリングに侑・ミア・ランジュ関連を追加<br>
+			<span class="new"></span>Liella!の各種サブモードを追加
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2021/09/03</span> - ランジュ・ミア参戦に伴う更新(1)</summary>
+		<div>
+			<span class="fix"></span>「ミア・テイラー」「鐘嵐珠」をメインキャラクターに格上げ<br>
+			<span class="new"></span>虹ヶ咲ユニットに「R3BIRTH」を追加<br>
+			<span class="fix"></span>「右月」「左月」を分割（個別のキャラとして個性が立ち始めてきたため）
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2022/05/31</span> - ソート対象追加</summary>
+		<div>
+			<span class="new"></span>「りりりーず(虹ヶ咲ユニット)」、各種虹ヶ咲関連キャラクターを追加
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2020/10/03</span> - ソート対象追加</summary>
+		<div>
+			<span class="new"></span>「鐘嵐珠」「ミア・テイラー」「虹ヶ咲学園理事長」を追加<br>
+			<span class="new"></span>三船栞子を含むカップリングを追加
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2020/08/03</span> - 栞子参戦に伴う更新</summary>
+		<div>
+			<span class="fix"></span>三船栞子をニジガクメインキャラクターに格上げ<br>
+			<span class="new"></span>「三船薫子」「夏川マイ」を追加
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2020/07/15</span> - 「ラブライブ！スーパースター!!」始動に伴う更新</summary>
+		<div>
+			<span class="new"></span>「ラブライブ！スーパースター!!」を追加
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2020/02/06</span> - ソート対象追加</summary>
+		<div>
+			<span class="new"></span>「虹ヶ咲関係者」モードを追加
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2019/12/07</span> - ツイート機能の更新</summary>
+		<div>
+			<span class="fix"></span>ツイートボタンのリンクを更新
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2019/09/24</span> - レイアウト調整</summary>
+		<div>
+			<span class="fix"></span>レイアウトを調整（環境によってレイアウトが大きく崩れる場合があったため）
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2019/07/06</span> - キャストのソートを実装</summary>
+		<div>
+			<span class="fix"></span>「μ’sキャスト」「Aqoursキャスト」「虹ヶ咲キャスト」モードを追加
+		</div>
+	</details>
+	<details>
+		<summary class="important"><span class="date">2019/07/05</span> - ツイート機能実装</summary>
+		<div>
+			<span class="new"></span>結果をツイートする機能を追加<br>
+			<span class="new"></span>「虹ヶ咲ユニット」「虹ヶ咲カップリング」モードを追加
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2018/10/17</span> - ユニットモード実装</summary>
+		<div>
+			<span class="new"></span>「μ’sユニット」「Aqoursユニット」モードを追加
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2018/09/22</span> - カップリングモード実装</summary>
+		<div>
+			<span class="new"></span>「μ’sカップリング」「Aqoursカップリング」モードを追加
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2018/02/26</span> - ソート対象追加</summary>
+		<div>
+			<span class="new"></span>「穂乃果の父」「女性シンガー」「saint snow」を追加
+		</div>
+	</details>
+	<details>
+		<summary class="important"><span class="date">2018/02/25</span> - 公開</summary>
+		<div>
+			<span class="new"></span>公開
+		</div>
+	</details>
 </div>
-
-<p>
-<a href="index.html">トップページに戻る。</a>
-</p>
+</section>
 
 
-</div>
+<nav>
+<p><a href="index.html">トップページに戻る。</a></p>
+</nav>
+
+<script><!--
+var Output = 
+  '<select id="CharacterSelect" name="CharacterSelect" onchange="initList()">'
++ '<option selected>▼ソート対象を選択してスタート<\/option>';
+
+for(i=0; i<MemberGroup.length; i++){
+	Output += '<option>' + MemberGroup[i][0] + MemberGroup[i][1] + ' (' + Member[i].length + ')'
+	+ (Member[i].length>=50 ? "【超長い】" : (Member[i].length>=30 ? "【長い】" : ""))
+	+ '<\/option>\n';
+}
+document.getElementById("Selector").innerHTML = Output;
+
+document.getElementById("Loading").style.display = "none";
+--></script>
+
 </body>
 </html>

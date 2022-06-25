@@ -18,7 +18,7 @@
 
 <title>ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="Menu.css">
 <style><!--
 
 #caution {
@@ -40,30 +40,47 @@
 	vertical-align: middle;
 }
 
-#main {
+#Menu table{
+	border-collapse: separate;
+	border-spacing: 7px;
 	margin: 15px auto;
-	border: 2px solid #999;
-	border-spacing: 3px;
 }
 
-.panel {
-	padding: 0;
-}
-
-.glass{
-	display: table-cell;
+#Menu td {
 	position: relative;
-	width: 230px;
-	height: 190px;
-	border: 2px solid #999;
+	z-index: 1;
+	padding: 5px;
 	text-align: center;
 	vertical-align: middle;
-	padding: 5px;
-	color: #888;
-	z-index: 1;
+	border-style: solid;
+	color: #777;
 }
 
-.panel a {
+#Menu td:not(.closed) {
+	border-width: 3px;
+	width: 230px;
+	height: 190px;
+}
+
+#Menu td.closed {
+	border-width: 1px;
+	width: 234px;
+	height: 194px;
+	opacity: 0.4;
+}
+
+#Menu td > strong {
+	font-size: 130%;
+	color: #666;
+}
+
+#Menu td > hr {
+	width: 90%;
+	height: 0px;
+	border-width: 0 0 3px 0;
+}
+
+#Menu td > a {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -73,16 +90,70 @@
 	z-index: 2;
 }
 
-.panel strong {
-	font-size: 130%;
-	color: #666;
+#Menu th {
+	background: linear-gradient(0deg, rgba(208, 224, 192, 0.9) 0%, rgba(224, 240, 208, 0.9) 100%);
+	border-style: solid;
+	border-color: #ab8;
 }
 
-.panel hr {
-	width: 90%;
-	height: 3px;
-	border: none;
+#Menu th.left {
+	width: 50px;
+	letter-spacing: 2px;
+	border-width: 3px 0 3px 3px;
+	border-radius: 25px 0 0 25px;
+	overflow: auto;
+	
+	writing-mode: vertical-rl;
+	text-orientation: sideways;
+	font-size: 140%;
+	font-weight: bold;
+	color: rgb(120, 128, 112);
+	letter-spacing: 8px;
 }
+
+#Menu th.right {
+	width: 25px;
+	border-width: 3px 3px 3px 0;
+	border-radius: 0 25px 25px 0;
+}
+
+#Menu tr.separator {
+	height: 20px;
+}
+
+/* 色指定。背景色はスクフェス、線の色はスクスタ準拠 */
+.col_Ms01 { background: rgba(255, 214, 165, 0.7); border-color: #FFA32C;}
+.col_Ms02 { background: rgba(196, 237, 250, 0.7); border-color: #7AEEFF;}
+.col_Ms03 { background: rgba(231, 218, 218, 0.7); border-color: #CEBFBF;}
+.col_Ms04 { background: rgba(205, 223, 252, 0.7); border-color: #1769FF;}
+.col_Ms05 { background: rgba(255, 253, 177, 0.7); border-color: #DBD41E;}
+.col_Ms06 { background: rgba(255, 195, 183, 0.7); border-color: #FF503E;}
+.col_Ms07 { background: rgba(228, 214, 242, 0.7); border-color: #C455F6;}
+.col_Ms08 { background: rgba(203, 245, 206, 0.7); border-color: #6AE673;}
+.col_Ms09 { background: rgba(255, 209, 243, 0.7); border-color: #FF4F91;}
+
+.col_Aq01 { background: rgba(255, 205, 183, 0.7); border-color: #FF9547;}
+.col_Aq02 { background: rgba(255, 200, 210, 0.7); border-color: #FF9EAC;}
+.col_Aq03 { background: rgba(182, 234, 231, 0.7); border-color: #27C1B7;}
+.col_Aq04 { background: rgba(253, 194, 199, 0.7); border-color: #DB0739;}
+.col_Aq05 { background: rgba(196, 229, 254, 0.7); border-color: #66C0FF;}
+.col_Aq06 { background: rgba(217, 223, 240, 0.7); border-color: #C1CAD4;}
+.col_Aq07 { background: rgba(245, 235, 156, 0.7); border-color: #FFD00F;}
+.col_Aq08 { background: rgba(236, 209, 243, 0.7); border-color: #C252C6;}
+.col_Aq09 { background: rgba(251, 206, 235, 0.7); border-color: #FF6FBE;}
+
+.col_Nj01 { background: rgba(254, 186, 203, 0.7); border-color: #ED7D95;}
+.col_Nj02 { background: rgba(245, 252, 164, 0.7); border-color: #E7D600;}
+.col_Nj03 { background: rgba(178, 223, 238, 0.7); border-color: #3FA4C6;}
+.col_Nj04 { background: rgba(176, 204, 251, 0.7); border-color: #495EC6;}
+.col_Nj05 { background: rgba(255, 213, 151, 0.7); border-color: #FF5800;}
+.col_Nj06 { background: rgba(225, 209, 246, 0.7); border-color: #B365AE;}
+.col_Nj07 { background: rgba(255, 175, 175, 0.7); border-color: #D81C2F;}
+.col_Nj08 { background: rgba(211, 250, 211, 0.7); border-color: #7DC62B;}
+.col_Nj09 { background: rgba(214, 225, 227, 0.7); border-color: #969FB5;}
+.col_Nj10 { background: rgba(255, 255, 255, 0.7); border-color: #36B482;}
+.col_Nj11 { background: rgba(255, 255, 255, 0.7); border-color: #A9A89A;}
+.col_Nj12 { background: rgba(255, 255, 255, 0.7); border-color: #F69992;}
 --></style>
 </head>
 
@@ -90,8 +161,8 @@
 
 <img src="img/title_logo.png" alt="ラブライブ！ストレージ タイトルロゴ">
 
-<section>
-<table id="caution">
+<div id="caution">
+<table>
 <tbody>
 <tr>
 	<td>
@@ -105,98 +176,194 @@
 </tr>
 </tbody>
 </table>
-</section>
+</div>
 
-<nav>
-<table id="main">
-<caption style="font-size: x-large; color:#666">
+<nav id="Menu">
+<table>
+<caption style="font-size: 160%; color:#666">
 	↓ 見たいパネルを選んでね ↓
 </caption>
 <tbody>
+	<!-- 便利系 色：μ's -->
 	<tr>
-		<td class="panel">
-			<div class="glass" style="background-color: rgba(255, 214, 165, 0.8); border-color:#FFA32C;">
-				<strong>キャラソート</strong>
-				<hr style="background-color:#FFA32C">
-				スクールアイドル、ユニット、キャスト等を好きな順に並べ替えてみよう。ツイートボタンも付いてるよ。
-				<a href="sort.html"></a>
-			</div>
+		<th class="left" rowspan="2">総合</th>
+		<td class="col_Ms01">
+			<strong>イメージカラー<br>まとめ</strong>
+			<hr class="col_Ms01">
+			各キャラクターのイメージカラーを、色々な媒体から集めてみました。
+			<a href="color.html"></a>
 		</td>
 
-		<td class="panel">
-			<div class="glass" style="background-color: rgba(196, 237, 250, 0.8); border-color:#7AEEFF;">
-				<strong>虹ヶ咲学園<br>マンスリーランキング</strong>
-				<hr style="background-color:#7AEEFF;">
-				毎月行われていたランキングの結果を、集計・分析してみました。
-				<a href="niji_ranking.html"></a>
-			</div>
+		<td class="col_Ms02">
+			<strong>虹ヶ咲学園<br>マンスリーランキング</strong>
+			<hr class="col_Ms02">
+			毎月行われていたランキングの結果を、集計・分析してみました。
+			<a href="niji_ranking.html"></a>
 		</td>
 
-		<td class="panel">
-			<div class="glass" style="background-color: rgba(231, 218, 218, 0.8); border-color:#CEBFBF;">
-				<strong>イメージカラー<br>まとめ</strong>
-				<hr style="background-color:#CEBFBF;">
-				各キャラクターのイメージカラーを、色々な媒体から集めてみました。
-				<a href="color.html"></a>
-			</div>
+		<td class="col_Ms03">
+			<strong>虹ヶ咲学園<br>マンスリーアンケート</strong>
+			<hr class="col_Ms03">
+			毎月行われているアンケートの集計や、便利リンクを掲載しています。
+			<a href="niji_enquete.html"></a>
+		</td>
+		<th class="right" rowspan="2"></th>
+	</tr>
+	
+	<tr>
+		<td class="col_Ms04">
+			<strong>キャラソート</strong>
+			<hr class="col_Ms04">
+			スクールアイドル、ユニット、キャスト等を好きな順に並べ替えてみよう。ツイートボタンも付いてるよ。
+			<a href="sort.html"></a>
+		</td>
+
+		<td class="col_Ms05 closed">
+			<strong>Coming Soon...</strong>
+		</td>
+
+		<td class="col_Ms06 closed">
+			<strong>Coming Soon...</strong>
 		</td>
 	</tr>
-	<tr>
-
-		<td class="panel">
-			<div class="glass" style="background-color: rgba(205, 223, 252, 0.8); border-color:#1369FF;">
-				<strong>スクスタ<br>メンバー呼称表</strong>
-				<hr style="background-color:#1369FF;">
-				３０人のスクールアイドルとあなたは、お互いのことをどう呼び合っでいる？
-				<a href="call.html"></a>
-			</div>
+	
+	<tr style="display: none;">
+		<td class="col_Ms07 closed">
+			<strong>Coming Soon...</strong>
 		</td>
 
-		<td class="panel">
-			<div class="glass" style="background-color: rgba(255, 253, 177, 0.8); border-color:#DBD418;">
-				<strong>スクスタ<br>カード実装状況</strong>
-				<hr style="background-color:#DBD418;">
-				スクスタにおいて、キャラ別のカードがどれくらいあるかを確認できます。
-				<a href="sifas_card.html"></a>
-			</div>
+		<td class="col_Ms08 closed">
+			<strong>Coming Soon...</strong>
 		</td>
 
-		<td class="panel">
-			<div class="glass" style="background-color: rgba(255, 195, 183, 0.8); border-color:#FF5032;">
-				<strong>スクスタ<br>イベントまとめ</strong>
-				<hr style="background-color:#FF5032;">
-				スクスタのイベントストーリーで開催されたイベント、および共演したペアのまとめです。
-				<a href="sifas_event.html"></a>
-			</div>
+		<td class="col_Ms09 closed">
+			<strong>Coming Soon...</strong>
 		</td>
 	</tr>
+
+	<tr class="separator"></tr>	
+
+	<!-- スクフェス関連 色:Aqours -->
 	<tr>
-
-		<td class="panel">
-			<div class="glass" style="background-color: rgba(228, 214, 242, 0.8); border-color:#C455F6;">
-				<strong>スクスタ<br>ストーリー便覧</strong>
-				<hr style="background-color:#C455F6;">
-				スクスタの各種ストーリーのあらすじと登場キャラを、ひとまとめにしてみました。
-				<a href="sifas_story.html"></a>
-			</div>
+		<th class="left" rowspan="1">スクフェス</th>
+		<td class="col_Aq01">
+			<strong>ライブ♪アリーナ<br>まとめ</strong>
+			<hr class="col_Aq01">
+			今までに開催された、ライブ♪アリーナのテキストを保管しています。
+			<a href="llsif_arena.html"></a>
 		</td>
 
-		<td class="panel">
-			<div class="glass" style="background-color: rgba(203, 245, 206, 0.8); border-color:#6AE673;">
-				<strong>ライブ♪アリーナ<br>セリフまとめ</strong>
-				<hr style="background-color:#6AE673;">
-				スクフェスのライブ♪アリーナのセリフを保管しています。
-				<a href="llsif_arena.html"></a>
-			</div>
+		<td class="col_Aq02 closed">
+			<strong>Coming Soon...</strong>
+		</td>
+		
+		<td class="col_Aq03 closed">
+			<strong>Coming Soon...</strong>
+		</td>
+		<th class="right" rowspan="1"></th>
+	</tr>
+
+	<tr style="display: none;">
+		<td class="col_Aq04 closed">
+			<strong>Coming Soon...</strong>
+		</td>
+		
+		<td class="col_Aq05 closed">
+			<strong>Coming Soon...</strong>
+		</td>
+		
+		<td class="col_Aq06 closed">
+			<strong>Coming Soon...</strong>
+		</td>
+	</tr>
+	
+	<tr style="display: none;">
+		<td class="col_Aq07 closed">
+			<strong>Coming Soon...</strong>
+		</td>
+		
+		<td class="col_Aq08 closed">
+			<strong>Coming Soon...</strong>
+		</td>
+		
+		<td class="col_Aq09 closed">
+			<strong>Coming Soon...</strong>
+		</td>
+	</tr>
+	
+	<tr class="separator"></tr>	
+	
+	<!-- スクスタ 色：虹ヶ咲 -->
+	<tr>
+		<th class="left" rowspan="2">スクスタ</th>
+		<td class="col_Nj01">
+			<strong>呼称表</strong>
+			<hr class="col_Nj01">
+			３０人のスクールアイドルとあなたは、お互いのことをどう呼び合っでいる？
+			<a href="call.html"></a>
 		</td>
 
-		<td class="panel">
-			<div class="glass" style="background-color: rgba(255, 209, 243, 0.8); border-color:#FF4F91;">
-				<strong>スクスタ<br>毎日劇場便覧</strong>
-				<hr style="background-color:#FF4F91;">
-				スクフェスの毎日劇場の一覧です。現在はテスト公開中。
-				<a href="sifas_theater.html"></a>
-			</div>
+		<td class="col_Nj02">
+			<strong>カード実装状況</strong>
+			<hr class="col_Nj02">
+			スクスタにおいて、キャラ別のカードがどれくらいあるかを確認できます。
+			<a href="sifas_card.html"></a>
+		</td>
+
+		<td class="col_Nj03">
+			<strong>過去のイベント<br>まとめ</strong>
+			<hr class="col_Nj03">
+			スクスタのイベントストーリーで開催されたイベント、および共演したペアのまとめです。
+			<a href="sifas_event.html"></a>
+		</td>
+		<th class="right" rowspan="2"></th>
+	</tr>
+
+	<tr>
+		<td class="col_Nj04">
+			<strong>ストーリー便覧</strong>
+			<hr class="col_Nj04">
+			スクスタの各種ストーリーのあらすじと登場キャラを、ひとまとめにしてみました。
+			<a href="sifas_story.html"></a>
+		</td>
+
+		<td class="col_Nj05">
+			<strong>毎日劇場便覧</strong>
+			<hr class="col_Nj05">
+			スクフェスの毎日劇場の一覧です。現在はテスト公開中。
+			<a href="sifas_theater.html"></a>
+		</td>
+
+		<td class="col_Nj06 closed">
+			<strong>Coming Soon...</strong>
+		</td>
+	</tr>
+	
+	<tr style="display: none;">
+		<td class="col_Nj07 closed">
+			<strong>Coming Soon...</strong>
+		</td>
+		
+		<td class="col_Nj08 closed">
+			<strong>Coming Soon...</strong>
+		</td>
+		
+		<td class="col_Nj09 closed">
+			<strong>Coming Soon...</strong>
+		</td>
+	</tr>
+	
+	<tr style="display: none;">
+		<td class="col_Nj10 closed">
+			<strong>Coming Soon...</strong>
+		</td>
+		
+		<td class="col_Nj11 closed">
+			<strong>Coming Soon...</strong>
+		</td>
+		
+		<td class="col_Nj12 closed">
+			<strong>Coming Soon...</strong>
 		</td>
 	</tr>
 </tbody>
