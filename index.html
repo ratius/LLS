@@ -18,7 +18,7 @@
 
 <title>ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
-<link rel="stylesheet" href="Menu.css">
+<link rel="stylesheet" href="main.css">
 <style><!--
 
 #caution {
@@ -376,6 +376,17 @@
 
 <script><!--
 	document.getElementById('caution').style.display = 'none';
+	
+	//■デバック用
+	if(location.search === "?debug") {
+		document.title = '[debug]' + document.title;
+	
+		//◆メニュー内のURLに「?debug」を付与
+		for(temp of document.getElementById("Menu").getElementsByTagName("a")){
+			temp.href += "?debug";
+		}
+	}
+	
 --></script>
 </body>
 </html>
