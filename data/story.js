@@ -273,7 +273,7 @@ const StoryList = [
 		{
 			"title": "第7話 美味しい対決！",
 			"desc": "虹ヶ咲学園スクールアイドル同好会に戻って来たあなた。なりゆきでμ'sと9番勝負をすることになったと報告！<br>驚くメンバーだが、これに勝ったらμ'sの虎の巻を見せてもらえると聞いてやる気が出てくる。絶対に勝って虎の巻を手に入れるぞ！",
-			"tag": ["		Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma"]
+			"tag": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma"]
 		},
 		{
 			"title": "第8話 心を動かすもの",
@@ -4789,37 +4789,37 @@ const StoryList = [
 		{
 			"title": "第1話",
 			"desc": "ニジガクの軽音部のゲストボーカルを頼まれた果林は、期待に応えられるかどうか不安だった。それを見抜いた彼方が提案したこととは……？",
-			"tag": ["Honoka", "Eli", "Dia"," Mari", "Karin", "Kanata"]
+			"tag": ["Honoka", "Eli", "Dia", "Mari", "Karin", "Kanata"]
 		},
 		{
 			"title": "第2話",
 			"desc": "彼方の提案で向かった先はライブハウスへ行く。歌や演奏に魅入られ、終わった頃にはもう夜だ。",
-			"tag": ["Honoka", "Eli", "Dia"," Mari", "Karin", "Kanata"]
+			"tag": ["Honoka", "Eli", "Dia", "Mari", "Karin", "Kanata"]
 		},
 		{
 			"title": "第3話",
 			"desc": "また別の日。果林の歌は着実に良くなっているようだが、それでも果林は満足していないようで……？",
-			"tag": ["Honoka", "Eli", "Dia"," Mari", "Karin", "Kanata"]
+			"tag": ["Honoka", "Eli", "Dia", "Mari", "Karin", "Kanata"]
 		},
 		{
 			"title": "第4話",
 			"desc": "ダイヤの提案で、マイクパフォーマンスも組み込むことにした。一緒にリハーサルする軽音部からも好評の様子だ。",
-			"tag": ["Honoka", "Eli", "Dia"," Mari", "Karin", "Kanata"]
+			"tag": ["Honoka", "Eli", "Dia", "Mari", "Karin", "Kanata"]
 		},
 		{
 			"title": "第5話",
 			"desc": "合同発表会の前日、講堂に楽器や機材を運び込む6人。しかし、「延長コードを取ってくる」と言って出ていった果林がなかなか戻ってこない！",
-			"tag": ["Honoka", "Eli", "Dia"," Mari", "Karin", "Kanata"]
+			"tag": ["Honoka", "Eli", "Dia", "Mari", "Karin", "Kanata"]
 		},
 		{
 			"title": "第6話",
 			"desc": "本番を完璧にしようと意気込むあまり、とても切羽詰まっていた果林。好きなようにギターを演奏する彼方の姿を見て、果林は大切なことを忘れていたことに気がつく。",
-			"tag": ["Honoka", "Eli", "Dia"," Mari", "Karin", "Kanata"]
+			"tag": ["Honoka", "Eli", "Dia", "Mari", "Karin", "Kanata"]
 		},
 		{
 			"title": "第7話",
 			"desc": "ついに軽音部、そして果林の出番が来た。「楽しむ」気持ちを思い出した果林のパフォーマンスは、大評判、大成功！",
-			"tag": ["Honoka", "Eli", "Dia"," Mari", "Karin", "Kanata"]
+			"tag": ["Honoka", "Eli", "Dia", "Mari", "Karin", "Kanata"]
 		}
 		]
 	},
