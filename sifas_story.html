@@ -96,6 +96,12 @@
 
 --></style>
 <script><!--
+//■デバッグモード判定
+let isDebugMode = false;
+const Parameter = location.search.substring(1).split('&');
+if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
+
+//■各種データ
 const TagData = {
 	"none":       {"name": "欠損値",  "r":160, "g":160, "b":160 },
 	"main":       {"name": "メイン",  "r":122, "g":202, "b":223 },
@@ -166,11 +172,11 @@ function DrawCharName(character){
 		+ temp.name + '<\/span>';
 		return Output;
 	} else { //存在しないなら
-		console.log("キャラクターID " + character + " は存在しません");
-		return false;
+		return "";
 	}
 }
 
+//■プルダウンメニューを操作した時の処理
 function NarrowerEvent(changed){
 	temp1 = document.getElementById('N1');
 	temp1index = temp1.selectedIndex -1;
@@ -192,21 +198,22 @@ function NarrowerEvent(changed){
 			}
 		}
 		return false;
-
+		
 		case 2:
 		if (temp2index < 0){
 			return;
 		} else {
-			//アウトプットエリアに出力
+			//◆出力します
+			const TimeOutputStart = performance.now();
+			
 			let Output = '';
 			for(i of StoryList[temp1index].part[temp2index].part){
 				Output += '<table class="StoryTable"';
 
 				//親階層から順に色指定を見ていく。無い場合は初期値の"none"が参照される
 				let coltemp = "none";
-				if(StoryList[temp1index].color){ coltemp = StoryList[temp1index].color;}
-				if(StoryList[temp1index].part[temp2index].color){ coltemp = StoryList[temp1index].part[temp2index].color;}
-
+				if('color' in StoryList[temp1index]){ coltemp = StoryList[temp1index].color;}
+				if('color' in StoryList[temp1index].part[temp2index]){ coltemp = StoryList[temp1index].part[temp2index].color;}
 				if('color' in i){coltemp = i.color}
 				coltemp2 = TagData[coltemp];
 				
@@ -226,25 +233,33 @@ function NarrowerEvent(changed){
 				
 				+ '<tbody>\n';
 				
-				if(i.desc){ //あらすじが有るなら
+				if('desc' in i){ //あらすじ
 					Output += '<tr>\n\t<td class="LeftColumn">あらすじ<\/td>\n'
 					+ '\t<td class="RightColumn">' + i.desc + '<\/td>\n<\/tr>\n';
 				}
-				if(i.memo){ //メモが有るなら
+				if('memo' in i){ //メモ
 					Output += '<tr><td class="LeftColumn">メモ<\/td>'
 					+ '<td class="RightColumn">' + i.memo + '<\/td><\/tr>\n';
 				}
-
-				Output += '<tr>\n\t<td class="LeftColumn">登場人物<\/td>\n'
-				+ '\t<td class="RightColumn">\n';
-				
-				for(j of i.tag){
-					Output += '\t\t' + DrawCharName(j) + '\n';
+				if('tag' in i){ //登場人物
+					Output += '<tr>\n\t<td class="LeftColumn">登場人物<\/td>\n'
+					+ '\t<td class="RightColumn">\n';
+					for(j of i.tag){
+						Output += '\t\t' + DrawCharName(j) + '\n';
+					}
+					Output += '\t<\/td>\n<\/tr>\n';
 				}
-				Output += '\t<\/td>\n<\/tr>\n<\/tbody>\n<\/table>\n'
+				
+				Output += '<\/tbody>\n<\/table>\n'
 			}
 			document.getElementById("OutputArea").innerHTML = Output;
 			document.getElementById("OutputArea").scrollTop = 0;
+			
+			const TimeOutputEnd = performance.now();
+			if(isDebugMode){
+				console.log(document.getElementById('N1').value + ' - ' + document.getElementById('N2').value + '\n'
+				+ '描画処理時間: ' + (TimeOutputEnd - TimeOutputStart) + ' ミリ秒');
+			}
 		}
 		return false;
 	}
@@ -254,7 +269,7 @@ function NarrowerEvent(changed){
 </head>
 <body>
 <header>
-	<h2>スクスタ ストーリー便覧</h2>
+	<h2 id="MainTitle">スクスタ ストーリー便覧</h2>
 </header>
 
 <section id="Foreword">
@@ -278,8 +293,21 @@ function NarrowerEvent(changed){
 
 <section>
 <h3 class="niji">更新履歴</h3>
+<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2022/07/02</span></summary>
+		<div>
+			<span class="new"></span>ストーリーを新たに掲載
+			<ul>
+				<li>メインストーリー：第40章</li>
+				<li>キズナエピソード：μ's(第26話まで)</li>
+				<li>イベントエピソード：「想い伝えるウエディング」</li>
+				<li>TVアニメ2期特別ストーリー：13話</li>
+			</ul>
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2022/06/25</span> - 不具合修正</summary>
 		<div>
 			<span class="fix"></span>一部ストーリーの「登場人物」の誤りを修正
@@ -748,7 +776,7 @@ function NarrowerEvent(changed){
 </section>
 
 <nav>
-<p><a href="index.html">トップページに戻る。</a></p>
+<p><a id="BackToMain" href="index.html">トップページに戻る。</a></p>
 </nav>
 
 <script><!--
@@ -775,6 +803,8 @@ function loadScript(src, callback) {
 }
 
 loadScript("data/story.js", function() {
+	const TimeOutputStart = performance.now();
+
 	document.getElementById("Foreword").innerHTML +=
 	  '<h4 class="foreword">概要を確認可能なストーリー<\/h4>\n'
 	+ '<ul id="recorded">'
@@ -788,7 +818,7 @@ loadScript("data/story.js", function() {
 	+ '栞子 (' + StoryList[2].part[27].part.length +'話まで)、'
 	+ 'ミア/ランジュ (' + StoryList[2].part[28].part.length+ '話まで)<\/li>'
 	+ '<\/ul>'
-	+ '<li>アニメ連動ストーリー：1期は全て掲載完了。2期は第12話まで<\/li>';
+	+ '<li>アニメ連動ストーリー：1期・2期ともに掲載完了<\/li>';
 	+ '<li>サイドエピソード：掲載予定なし<\/li>'
 	+ '<\/ul>';
 	
@@ -805,6 +835,63 @@ loadScript("data/story.js", function() {
 	document.getElementById("StoryViewer").style.display = "block";
 
 	document.getElementById("Loading").style.display = "none";
+	
+	//■デバックモード時の処理
+	if(isDebugMode) {
+		//◆デバッグモードであることを表示
+		document.title = '[debug]' + document.title;
+		document.bgColor = '#dce';
+		
+		document.getElementById("MainTitle").innerHTML += "*";
+		document.getElementById("BackToMain").href += "?debug";
+		
+		//◆描画時間の出力
+		const TimeOutputEnd = performance.now();
+		console.log('スクスタ ストーリー便覧\n初期描画処理: ' + (TimeOutputEnd - TimeOutputStart) + ' ミリ秒');
+		
+		//◆データの不具合チェック
+		let isError = 0;
+
+		for(let temp1 of StoryList){
+			for(let temp2 of temp1.part){
+				
+				if(!('name' in temp2)){ //●タイトルが無い
+					console.log('[Error] 区分タイトルが未設定:\n\tLocation: ' + temp1.name);
+					isError++;
+					break;
+				}
+				
+				for(let temp3 of temp2.part){
+					
+					if(!('title' in temp3)){ //●タイトルが無い
+						console.log('[Error] タイトルが未設定:\n\tLocation: ' + temp1.name + ' - ' + temp2.name);
+						isError++;
+						break;
+					}
+					const StoryLocation = '\tLocation: ' + temp1.name + ' - ' + temp2.name + ' - ' + temp3.title;
+					
+					if(!('desc' in temp3)){ //●あらすじが無い
+						console.log('[Error] あらすじが未設定:\n' + StoryLocation);
+						isError++;
+					}
+					if('tag' in temp3){
+						for(let temp4 of temp3.tag){
+							if(!(temp4 in TagData)){ //●登場人物が不正
+								console.log('[Error] 登場人物が不正 (' + temp4 + '):\n' + StoryLocation);
+								isError++;
+							}
+						}
+					} else { //●登場人物が未設定
+						console.log('[Error] 登場人物が未設定:\n' + StoryLocation);
+						isError++;
+					}
+				}
+			}
+		}
+		if(isError > 0){
+			alert('' + isError + '件のエラーが見つかりました。コンソールを確認してください。');
+		}
+	}
 });
 --></script>
 

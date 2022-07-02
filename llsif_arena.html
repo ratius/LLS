@@ -118,15 +118,30 @@
 	background-repeat: no-repeat;
 }
 
-.tips {
-	background: rgba(32, 32, 32, 0.25);
+.ul { /*下線*/
+	text-decoration: underline dashed #ddd;
+	text-underline-offset: 20%;
+    text-decoration-thickness: 1.5px;
+}
+
+div.note { /*注釈*/
+	margin: 8px 8px 0 8px;
+	padding: 4px 6px;
+	line-height: 150%;
+	background: rgba(32, 64, 48, 0.4);
+	border: solid 1px #333;
 	font-size:small;
-	color: #ddd;
+	color: #eee;
 }
 
 
 --></style>
 <script><!--
+//■デバッグモード判定
+let isDebugMode = false;
+const Parameter = location.search.substring(1).split('&');
+if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
+
 //■対戦相手のデータ
 const TagData = {
 	'Shizuku':  {'name': '桜坂しずく',    'x':1, 'y':0},
@@ -207,34 +222,32 @@ function WriteMessage(set) {
 	
 	let Output = "";
 	let MessageNumber = 1;
-	for(temp1 of ArenaData[set].Opponent){
-		Output += '\n<tr>\n\t<th style="width: 60px">'
-			+ ('num' in temp1 ? temp1.num : MessageNumber++) + '<\/th>\n';
-			
-			if('name' in temp1){ //名前があるなら立ち絵も表示させる
-				if(temp1.name in TagData){
-					let temp2 = TagData[temp1.name];
-			
-					Output += '\t<th style="width:80px"><div class="face" style="background-position: '
-					+ 'right -' + (9 - temp2.x)*IconSize + 'px bottom -' + (6 - temp2.y)*IconSize + 'px">'
-					+ '<\/div><\/th>\n\t<td>'
-					+ '<span class="OpponentName">'
-					+ ('namealt' in temp1 ? temp1.namealt : temp2.name) + '<\/span><br>';
-				} else { //名前が正しくない
-					Output += '\n\t<th>Error<\/th>\n\t<td>';
-					
-					if(location.search === "?debug"){
-						alert('不明なキャラクターID');
-						console.log('[Error] 不明なキャラクター名: ' + temp1.name + '\n'
-						+ 'set: ' + set + '\n'
-						+ 'MessageNumber: ' + MessageNumber + '\n'
-						+ 'temp1:\n' + CreateDebugLog(temp1));
-					}
-				}
-			}else {
-				Output += '\n\t<td><\/td>\n\t<td>';
-			}			
-			Output += temp1.text + '<\/td>\n<\/tr>\n';
+	for(const temp1 of ArenaData[set].Opponent){
+		Output += '\n<tr>\n\t<th style="width: 60px">';
+		if('num' in temp1){
+			Output += '' + temp1.num + '<\/th>\n';
+			if(Number(temp1.num) === temp1.num){ //数値型の場合、カウントを上書き
+				MessageNumber = temp1.num + 1;
+			}
+		}else { 
+			Output += '' + MessageNumber++  + '<\/th>\n';
+		}
+		if('name' in temp1){ //名前があるなら立ち絵も表示させる
+			if(temp1.name in TagData){
+				let temp2 = TagData[temp1.name];
+		
+				Output += '\t<th style="width:80px"><div class="face" style="background-position: '
+				+ 'right -' + (9 - temp2.x)*IconSize + 'px bottom -' + (6 - temp2.y)*IconSize + 'px">'
+				+ '<\/div><\/th>\n\t<td>'
+				+ '<span class="OpponentName">'
+				+ ('namealt' in temp1 ? temp1.namealt : temp2.name) + '<\/span><br>';
+			} else { //名前が正しくない
+				Output += '\n\t<th>Error<\/th>\n\t<td>';
+			}
+		}else {
+			Output += '\n\t<td><\/td>\n\t<td>';
+		}			
+		Output += temp1.text + '<\/td>\n<\/tr>\n';
 	}
 	document.getElementById("message-list").innerHTML = Output;
 	document.getElementById("message-box").scrollTop = 0;
@@ -306,6 +319,14 @@ function CreateDebugLog(obj){
 <p>下のボックス内の、色つきの日付の行をクリックすると展開/折りたたみされます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2022/07/02</span></summary>
+		<div>
+			<span class="fix"></span>「ペルソナ」シリーズコラボのキャラクター名に読み仮名を付与<br>
+			<span class="fix"></span>注釈のデザインを変更<br>
+			<span class="fix"></span>一部テキストの誤りを修正
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2022/06/25</span> - 更新履歴リニューアル</summary>
 		<div>
 			<span class="new"></span>閲覧可能なテキストを追加（第20回）<br>
@@ -361,7 +382,7 @@ function CreateDebugLog(obj){
 </section>
 
 <nav>
-<p><a href="index.html">トップページに戻る。</a></p>
+<p><a id="BackToMain" href="index.html">トップページに戻る。</a></p>
 </nav>
 
 <script><!--
@@ -388,6 +409,9 @@ function loadScript(src, callback) {
 }
 
 loadScript("data/arena.js", function() {
+	const TimeOutputStart = performance.now();
+	
+	//◆描画
 	let Output = 
 	  '<p>以下のいずれかを行うことで、表示回を切り替えることができます。<\/p>\n'
 	+ '<ul>\n\t<li>上部のタイトル部分のセレクトボックスで、表示したい回を選択する<\/li>\n'
@@ -422,8 +446,6 @@ loadScript("data/arena.js", function() {
 	document.getElementById("StoryViewer").innerHTML += Output;
 	WriteMessage(0);
 	document.getElementById("StoryViewer").style.display = "block";
-	
-	document.getElementById("Loading").style.display = "none";
 
 	document.addEventListener('keydown', function(){
 		act = document.activeElement.toString();
@@ -441,9 +463,21 @@ loadScript("data/arena.js", function() {
 		}
 	});
 	
+	//◆「Now Loading...」解除
+	document.getElementById("Loading").style.display = "none";
+	
 	//■デバック用
-	if(location.search === "?debug") {
-		document.getElementById("MainTitle").innerHTML += " [デバッグ]";
+	if(isDebugMode) {
+		//◆デバッグモードであることを表示
+		document.title = '[debug]' + document.title;
+		document.bgColor = '#dce';
+		
+		document.getElementById("MainTitle").innerHTML += "*";
+		document.getElementById("BackToMain").href += "?debug";
+		
+		//◆描画時間の出力
+		const TimeOutputEnd = performance.now();
+		console.log('ライブ♪アリーナまとめ\n初期描画処理: ' + (TimeOutputEnd - TimeOutputStart) + ' ミリ秒');
 	}
 });
 --></script>
