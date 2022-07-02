@@ -1701,18 +1701,6 @@ const RawCardList = [
 	"desc": "「マジカル・タイム！ガチャ(後半)」で追加"
 },
 {
-	"id": 196,
-	"name": "Kasumi",
-	"rare": "UR",
-	"atr": "Natural",
-	"type": "Vo",
-	"cn1": "あなたにご覧にいれましょう！",
-	"cn2": "マジカル☆フィーバー",
-	"date": "2020/03/23",
-	"source": "reward",
-	"desc": "イベント「マジカル・タイム！」報酬"
-},
-{
 	"id": 195,
 	"name": "Kotori",
 	"rare": "SR",
@@ -1723,6 +1711,18 @@ const RawCardList = [
 	"date": "2020/03/23",
 	"source": "reward",
 	"desc": "イベント「マジカル・タイム！」報酬 (3000位/7万位枠)"
+},
+{
+	"id": 196,
+	"name": "Kasumi",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Vo",
+	"cn1": "あなたにご覧にいれましょう！",
+	"cn2": "マジカル☆フィーバー",
+	"date": "2020/03/23",
+	"source": "reward",
+	"desc": "イベント「マジカル・タイム！」報酬"
 },
 {
 	"id": 198,
@@ -4499,7 +4499,7 @@ const RawCardList = [
 	"desc": "イベント「桜の精霊に会いに」報酬 (1万位/10万位枠)"
 },
 {
-	"id": 430,
+	"id": 440,
 	"name": "Honoka",
 	"rare": "UR",
 	"atr": "Pure",
@@ -4655,18 +4655,6 @@ const RawCardList = [
 	"desc": "「あつまれ！　幼稚園ライブガチャ」で追加"
 },
 {
-	"id": 454,
-	"name": "Rina",
-	"rare": "UR",
-	"atr": "Pure",
-	"type": "Vo",
-	"cn1": "私はすっごく嬉しかった",
-	"cn2": "ドリーミー☆キッズランド",
-	"date": "2021/05/04",
-	"source": "gacha",
-	"desc": "「あつまれ！　幼稚園ライブガチャ」で追加"
-},
-{
 	"id": 453,
 	"name": "Eli",
 	"rare": "SR",
@@ -4674,6 +4662,18 @@ const RawCardList = [
 	"type": "Gd",
 	"cn1": "これをこうして、こうして……",
 	"cn2": "No brand girls",
+	"date": "2021/05/04",
+	"source": "gacha",
+	"desc": "「あつまれ！　幼稚園ライブガチャ」で追加"
+},
+{
+	"id": 454,
+	"name": "Rina",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "私はすっごく嬉しかった",
+	"cn2": "ドリーミー☆キッズランド",
 	"date": "2021/05/04",
 	"source": "gacha",
 	"desc": "「あつまれ！　幼稚園ライブガチャ」で追加"
@@ -4739,18 +4739,6 @@ const RawCardList = [
 	"desc": "「パーティーガチャ」で追加"
 },
 {
-	"id": 462,
-	"name": "Yoshiko",
-	"rare": "UR",
-	"atr": "Smile",
-	"type": "Sk",
-	"cn1": "ダークネスドクター！",
-	"cn2": "Around the World",
-	"date": "2021/05/19",
-	"source": "gacha",
-	"desc": "「心軽やかバケーション計画ガチャ」で追加"
-},
-{
 	"id": 460,
 	"name": "Kasumi",
 	"rare": "UR",
@@ -4770,6 +4758,18 @@ const RawCardList = [
 	"type": "Sk",
 	"cn1": "降るような星空",
 	"cn2": "HAPPY PARTY TRAIN",
+	"date": "2021/05/19",
+	"source": "gacha",
+	"desc": "「心軽やかバケーション計画ガチャ」で追加"
+},
+{
+	"id": 462,
+	"name": "Yoshiko",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "ダークネスドクター！",
+	"cn2": "Around the World",
 	"date": "2021/05/19",
 	"source": "gacha",
 	"desc": "「心軽やかバケーション計画ガチャ」で追加"
@@ -7315,7 +7315,7 @@ const RawCardList = [
 	"rare": "SR",
 	"atr": "Active",
 	"type": "Sk",
-	"cn1": "今のみた？？　すごい！！",
+	"cn1": "こっちも似合ってるかしら？",
 	"cn2": "Colorful Dreams! Colorful Smiles!",
 	"date": "2022/05/04",
 	"source": "gacha",
@@ -7484,7 +7484,7 @@ const RawCardList = [
 	"atr": "Pure",
 	"type": "Vo",
 	"cn1": "えへへ、柔軟は得意なんだ！",
-	"cn2": "エレガントないとパーティー",
+	"cn2": "エレガントナイトパーティー",
 	"date": "2022/05/30",
 	"source": "fes",
 	"desc": "「スクスタフェス」で追加"
@@ -7612,7 +7612,7 @@ const RawCardList = [
 	"id": 703,
 	"name": "Chika",
 	"rare": "UR",
-	"atr": "Smile",
+	"atr": "Active",
 	"type": "Gd",
 	"cn1": "ほら、あそこ！",
 	"cn2": "マリッジ♡アプローチ",
@@ -7680,5 +7680,53 @@ const RawCardList = [
 	"source": "reward",
 	"desc": "イベント「想い伝えるウエディング」報酬 (ランキング枠)"
 },
+{
+	"id": 709,
+	"name": "Ruby",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "ルビィの気持ち、届いたかな？",
+	"cn2": "→←↓↑アドベンチャー",
+	"date": "2022/06/28",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 710,
+	"name": "Rina",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "璃奈ちゃんボード「ムムム」",
+	"cn2": "らぶ♡▽♡りな",
+	"date": "2022/06/28",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 711,
+	"name": "Nico",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "まったく子供ってこれだからね～",
+	"cn2": "A song for You! You? You!!",
+	"date": "2022/06/28",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 712,
+	"name": "Hanayo",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "あ、凛ちゃん！",
+	"cn2": "A song for You! You? You!!",
+	"date": "2022/06/28",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+}
 ];
 const LatestUpdate = "2022/06/22 イベント「想い伝えるウエディング」まで";
