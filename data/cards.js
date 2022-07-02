@@ -7729,4 +7729,4 @@ const RawCardList = [
 	"desc": "「スクスタフェス」で追加"
 }
 ];
-const LatestUpdate = "2022/06/22 イベント「想い伝えるウエディング」まで";
+const LatestUpdate = "2022/06/29 「スクスタフェス」まで";
