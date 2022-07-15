@@ -7584,7 +7584,8 @@ const RawCardList = [
 	"date": "2022/06/07",
 	"source": "reward",
 	"desc": "イベント「響け、魂の歌声！」報酬 (ランキング枠)"
-},{
+},
+{
 	"id": 701,
 	"name": "Riko",
 	"rare": "UR",
@@ -7687,7 +7688,7 @@ const RawCardList = [
 	"atr": "Elegant",
 	"type": "Sk",
 	"cn1": "ルビィの気持ち、届いたかな？",
-	"cn2": "→←↓↑アドベンチャー",
+	"cn2": "⇨⇦⇩⇧アドベンチャー",
 	"date": "2022/06/28",
 	"source": "fes",
 	"desc": "「スクスタフェス」で追加"
@@ -7727,6 +7728,102 @@ const RawCardList = [
 	"date": "2022/06/28",
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
-}
+},
+{
+	"id": 713,
+	"name": "Setsuna",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "最高の友なのですから！！",
+	"cn2": "スターシーカー",
+	"date": "2022/07/04",
+	"source": "gacha",
+	"desc": "「越えて繋がる天の川！ガチャ」で追加"
+},
+{
+	"id": 714,
+	"name": "Kanata",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "見て見て！浴衣だよ～！",
+	"cn2": "Colorful Dreams! Colorful Smiles!",
+	"date": "2022/07/04",
+	"source": "gacha",
+	"desc": "「越えて繋がる天の川！ガチャ」で追加"
+},
+{
+	"id": 715,
+	"name": "Umi",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "見てください、この空を",
+	"cn2": "スターシーカー",
+	"date": "2022/07/04",
+	"source": "gacha",
+	"desc": "「越えて繋がる天の川！ガチャ」で追加"
+},
+{
+	"id": 716,
+	"name": "Yoshiko",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "できないことなんてないの！",
+	"cn2": "スターシーカー",
+	"date": "2022/07/07",
+	"source": "reward",
+	"desc": "イベント「越えて繋がる天の川！」報酬"
+},
+{
+	"id": 717,
+	"name": "Lanzhu",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Gd",
+	"cn1": "ランジュたちお揃いね！",
+	"cn2": "Colorful Dreams! Colorful Smiles!",
+	"date": "2022/07/07",
+	"source": "reward",
+	"desc": "イベント「越えて繋がる天の川！」報酬 (交換所枠)"
+},
+{
+	"id": 718,
+	"name": "Ruby",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "衣装をみんなに見てもらいたい！",
+	"cn2": "未来の僕らは知ってるよ",
+	"date": "2022/07/07",
+	"source": "reward",
+	"desc": "イベント「越えて繋がる天の川！」報酬 (ランキング枠)"
+},
+{
+	"id": 719,
+	"name": "Hanayo",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "光の雪が降ってるみたい",
+	"cn2": "カラフルストリ➡ト",
+	"date": "2022/07/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 720,
+	"name": "Shizuku",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "いっぱいもらってきちゃいました",
+	"cn2": "Colorful Dreams! Colorful Smiles!",
+	"date": "2022/07/14",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
+},
 ];
-const LatestUpdate = "2022/06/29 「スクスタフェス」まで";
+const LatestUpdate = "2022/07/14 「パーティーガチャ」まで";
