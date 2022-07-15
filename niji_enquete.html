@@ -30,6 +30,7 @@
 	width: 100%;
 	border-collapse: separate;
 	border-spacing: 0;
+	background-color: white;
 }
 
 #EnqueteList thead th {
@@ -40,6 +41,7 @@
 	border-bottom: solid 3px #e2067e;
 	border-right: solid 1px #e2067e;
 }
+
 
 #EnqueteList tbody > tr > td {
 	padding: 2px 5px;
@@ -71,6 +73,11 @@
 
 --></style>
 <script><!--
+//■デバッグモード判定
+let isDebugMode = false;
+const Parameter = location.search.substring(1).split('&');
+if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
+
 //■アンケートのデータ
 const EnqueteList = [
 {
@@ -482,7 +489,7 @@ function DrawEnqueteList(){
 </head>
 <body>
 <header>
-	<h2>虹ヶ咲学園スクールアイドル同好会 マンスリーアンケートまとめ</h2>
+	<h2 id="MainTitle">虹ヶ咲学園スクールアイドル同好会 マンスリーアンケートまとめ</h2>
 </header>
 
 <section>
@@ -514,7 +521,7 @@ function DrawEnqueteList(){
 </section>
 
 <nav>
-<p><a href="index.html">トップページに戻る。</a></p>
+<p><a id="BackToMain" href="index.html">トップページに戻る。</a></p>
 </nav>
 
 <script><!--
@@ -523,6 +530,15 @@ function DrawEnqueteList(){
 	+ '<p>下表の右にある矢印をクリックすると、結果発表ページを開きます。<\/p>\n'
 	+ DrawEnqueteList();
 
+	//■デバックモード時の処理
+	if(isDebugMode) {
+		//◆デバッグモードであることを表示
+		document.title = '[debug]' + document.title;
+		document.bgColor = '#dce';
+		
+		document.getElementById("MainTitle").innerHTML += "*";
+		document.getElementById("BackToMain").href += "?debug";
+	}
 --></script>
 
 </body>

@@ -42,6 +42,7 @@ table.cardlist {
 
 .card-box {
 	width: 100%;
+	background-color: white;
 	overflow-x: auto;
 	white-space: nowrap;
 	-webkit-overflow-scrolling: touch;
@@ -134,41 +135,62 @@ td:hover .tool-tip {
 
 --></style>
 <script><!--
+//■デバッグモード判定
+let isDebugMode = false;
+const Parameter = location.search.substring(1).split('&');
+if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
 
-const CharId = [
-	'Honoka', 'Eli', 'Kotori', 'Umi', 'Rin', 'Maki', 'Nozomi', 'Hanayo', 'Nico',
-	'Chika', 'Riko', 'Kanan', 'Dia', 'You', 'Yoshiko', 'Hanamaru', 'Mari', 'Ruby',
-	'Ayumu', 'Kasumi', 'Shizuku', 'Karin', 'Ai', 'Kanata', 'Setsuna', 'Emma', 'Rina', 'Shioriko', "Mia", "Lanzhu"
-];
-const CharName = [
-	'高坂 穂乃果', '絢瀬 絵里', '南 ことり', '園田 海未', '星空 凛', '西木野 真姫', '東條 希', '小泉 花陽', '矢澤 にこ',
-	'高海 千歌', '桜内 梨子', '松浦 果南', '黒澤 ダイヤ', '渡辺 曜', '津島 善子', '国木田 花丸', '小原 鞠莉', '黒澤 ルビィ',
-	'上原 歩夢', '中須 かすみ', '桜坂 しずく', '朝香 果林', '宮下 愛', '近江 彼方', '優木 せつ菜', 'エマ・ヴェルデ', '天王寺 璃奈', '三船 栞子', 'ミア・テイラー', '鐘 嵐珠'
-];
-const ListMuse = [0,1,2,3,4,5,6,7,8];
-const ListAqours = [9,10,11,12,13,14,15,16,17];
-const ListNiji = [18,19,20,21,22,23,24,25,26,27,28,29];
+//■各種データ
+const TagData = {
+	"Honoka":   {"number":0 , "name": "高坂 穂乃果",   "r":255, "g":163, "b": 54 },
+	"Eli":      {"number":1 , "name": "絢瀬 絵里",     "r":122, "g":238, "b":255 },
+	"Kotori":   {"number":2 , "name": "南 ことり",     "r":206, "g":191, "b":191 },
+	"Umi":      {"number":3 , "name": "園田 海未",     "r": 23, "g":105, "b":255 },
+	"Rin":      {"number":4 , "name": "星空 凛",       "r":219, "g":212, "b": 30 },
+	"Maki":     {"number":5 , "name": "西木野 真姫",   "r":255, "g": 80, "b": 62 },
+	"Nozomi":   {"number":6 , "name": "東條 希",       "r":196, "g": 85, "b":246 },
+	"Hanayo":   {"number":7 , "name": "小泉 花陽",     "r":106, "g":230, "b":115 },
+	"Nico":     {"number":8 , "name": "矢澤 にこ",     "r":255, "g": 79, "b":145 },
+	"Chika":    {"number":9 , "name": "高海 千歌",     "r":255, "g":149, "b": 71 },
+	"Riko":     {"number":10, "name": "桜内 梨子",     "r":255, "g":158, "b":172 },
+	"Kanan":    {"number":11, "name": "松浦 果南",     "r": 39, "g":193, "b":183 },
+	"Dia":      {"number":12, "name": "黒澤 ダイヤ",   "r":219, "g":  8, "b": 57 },
+	"You":      {"number":13, "name": "渡辺 曜",       "r":102, "g":192, "b":255 },
+	"Yoshiko":  {"number":14, "name": "津島 善子",     "r":193, "g":202, "b":212 },
+	"Hanamaru": {"number":15, "name": "国木田 花丸",   "r":255, "g":208, "b": 16 },
+	"Mari":     {"number":16, "name": "小原 鞠莉",     "r":194, "g": 82, "b":198 },
+	"Ruby":     {"number":17, "name": "黒澤 ルビィ",   "r":255, "g":111, "b":190 },
+	"Ayumu":    {"number":18, "name": "上原 歩夢",     "r":255, "g":191, "b":224 },
+	"Kasumi":   {"number":19, "name": "中須 かすみ",   "r":213, "g":222, "b":112 },
+	"Shizuku":  {"number":20, "name": "桜坂 しずく",   "r":187, "g":237, "b":255 },
+	"Karin":    {"number":21, "name": "朝香 果林",     "r": 74, "g": 47, "b":237 },
+	"Ai":       {"number":22, "name": "宮下 愛",       "r":255, "g":130, "b": 70 },
+	"Kanata":   {"number":23, "name": "近江 彼方",     "r":190, "g":130, "b":255 },
+	"Setsuna":  {"number":24, "name": "優木 せつ菜",   "r":246, "g": 14, "b": 14 },
+	"Emma":     {"number":25, "name": "エマ・ヴェルデ","r":143, "g":218, "b":121 },
+	"Rina":     {"number":26, "name": "天王寺 璃奈",   "r":208, "g":206, "b":225 },
+	"Shioriko": {"number":27, "name": "三船 栞子",     "r": 36, "g":189, "b":139 },
+	"Mia":      {"number":28, "name": "ミア・テイラー","r":214, "g":213, "b":202 },
+	"Lanzhu":   {"number":29, "name": "鐘 嵐珠"       ,"r":248, "g":200, "b":196 }
+};
+const numCharacters = Object.keys(TagData).length;
+
 const ToolTipSource = {'gacha':'Ｅ特効', 'reward':'Ｅ報酬', 'fes':'Ｆ限定', 'party':'Ｐ限定', 'none':'非イベ', 'release':'初期　'};
-const urlParam = location.search.substring(1);
+
+// カードリスト。UR・SRを分けて格納するため、キャラ数の2倍の要素数の配列を用意
+let CardList = new Array(numCharacters * 2);
+for(i=0; i<numCharacters * 2; i++) {
+	CardList[i] = new Array();
+}
 
 // ■生データから新たなデータを作成
 function LoadRawData(){
-	// UR・SRを分けて格納するため、キャラ数の2倍の要素数の配列を用意
-	CardList = new Array(CharId.length * 2);
-	for(i=0; i<CharId.length * 2; i++) {
-		CardList[i] = new Array();
-	}
-	for(i=0; i<RawCardList.length; i++) {
-		if(CharId.indexOf(RawCardList[i].name) == -1){
-			console.log("警告：不明なキャラクターID (" + RawCardList[i].name + ")");
-			break;
-		} //存在しなければ飛ばす
-		var key = CharId.indexOf(RawCardList[i].name); // キャラ番号を確認
-		
-		if(RawCardList[i].rare == 'SR') { key += CharId.length;}
-		CardList[key].push(RawCardList[i]);
-		if(RawCardList[i].id === -1){ // 欠番扱いならoffsetの枚数だけ、「id:-2」というデータをコピー
-			for(j=0; j<RawCardList[i].offset-1; j++){
+	for(let temp of RawCardList) {
+		let key = TagData[temp.name].number;
+		if(temp.rare == 'SR') { key += numCharacters;}
+		CardList[key].push(temp);
+		if(temp.id === -1){ // 欠番扱いならoffsetの枚数だけ、「id:-2」というデータをコピー
+			for(j=0; j<temp.offset-1; j++){
 				CardList[key].push({"id": -2});
 			}
 		}
@@ -191,36 +213,36 @@ function DrawLegend(){
 
 
 // ■テーブルを作成
-function DrawTable(group, groupsub){
+function DrawTable(group, GroupNumber){
 	var Output = '<div class="card-box">\n<table class="cardlist" style="min-width: ' + (100+group.length*108) + 'px">\n';
 
 	//■ヘッダー
 	Output += '<thead>\n<tr class="header-top">\n<th><\/th>\n';
-	for(x=0; x<group.length; x++){
-		Output += '<th class="' + CharId[group[x]] + '"><strong class="shadowname">'
-		+ CharName[group[x]] + '<\/strong><\/th>\n';
+	for(const CharTemp of group){
+		Output += '<th class="' + CharTemp + '"><strong class="shadowname">'
+		+ TagData[CharTemp].name + '<\/strong><\/th>\n';
 	}
-
 	Output += '<\/tr>\n<\/thead>\n<tbody>\n';
-	var y=0;
-	var z=0;
 
 	//■メイン
-	while(z<=1){
-		Rarity = ['UR','SR'][z];
+	let TempY=0;
+	let TempZ=0;
+	while(TempZ <= numCharacters){
+		Rarity = (TempZ==0 ? 'UR' : 'SR');
 		OutputTmp = '';
 		blank = 0; //仕込み
-		OutputTmp += '<tr class="' + Rarity +'"><th><span class="cap">' + Rarity + ' ' + (y+1) + '枚目<\/span>';
-		if(z==1){ //SRの場合、衣装名も出す
-			if(y < OutfitList[groupsub].length){
-				OutputTmp += '<br><span style="font-weight:normal">(' + OutfitList[groupsub][y] + ')<\/span>';
+		OutputTmp += '<tr class="' + Rarity +'"><th><span class="cap">' + Rarity + ' ' + (TempY+1) + '枚目<\/span>';
+		if(TempZ == numCharacters){ //SRの場合、衣装名も出す
+			if(TempY < OutfitList[GroupNumber].length){
+				OutputTmp += '<br><span style="font-weight:normal">(' + OutfitList[GroupNumber][TempY] + ')<\/span>';
 			}
 		}
 		OutputTmp +=  '<\/th>\n';
 		
-		for(x=0; x<group.length; x++){
-			if(y < CardList[group[x] + z*CharId.length].length){ //あるならば
-				ListTmp = CardList[group[x] + z*CharId.length][y]
+		for(x of group){
+			const TempX = TagData[x].number;
+			if(TempY < CardList[TempX + TempZ].length){ //あるならば
+				ListTmp = CardList[TempX + TempZ][TempY]
 
 				if(ListTmp.id === -2){
 					continue;
@@ -240,7 +262,7 @@ function DrawTable(group, groupsub){
 					+ '<strong>' + ToolTipSource[ListTmp.source] + '<\/strong>'
 					+ (ListTmp.atr ? ' <img src="img/atr_' + ListTmp.atr.toLowerCase() + '.png" width="24" height="24" alt="' +  ListTmp.atr.toLowerCase() + '">' : '')
 					+ (ListTmp.type ? '<img src="img/type_' + ListTmp.type.toLowerCase() + '.png" width="24" height="24" alt="' + ListTmp.type.toLowerCase() + '">' : '')
-					+ (urlParam ? '' : '<br>' + ListTmp.date)
+					+ '<br>' + ListTmp.date
 					+ '<\/td>\n';
 				}
 			}else{
@@ -248,11 +270,11 @@ function DrawTable(group, groupsub){
 				blank++;
 			}
 		}
-		if(blank == group.length || y >= 30){ //全部が空マスか、リストが長くなりすぎたら中断
-			y=0;
-			z++;
+		if(blank == group.length || TempY >= 30){ //全部が空マスか、リストが長くなりすぎたら中断
+			TempY = 0;
+			TempZ += numCharacters;
 		} else { 
-			y++;
+			TempY++;
 			Output += OutputTmp;
 		}
 	}
@@ -265,7 +287,7 @@ function DrawTable(group, groupsub){
 <body>
 
 <header>
-	<h2>スクスタ カード実装状況</h2>
+	<h2 id="MainTitle">スクスタ カード実装状況</h2>
 </header>
 
 <section>
@@ -357,9 +379,8 @@ function DrawTable(group, groupsub){
 </section>
 
 <nav>
-<p><a href="index.html">トップページに戻る。</a></p>
+<p><a id="BackToMain" href="index.html">トップページに戻る。</a></p>
 </nav>
-
 
 <script><!--
 function loadScript(src, callback) {
@@ -384,18 +405,70 @@ function loadScript(src, callback) {
 }
 
 loadScript("data/cards.js", function() {
-	var CardList = [];
+	const TimeOutputStart = performance.now();
+
+	let CardList = [];
 	LoadRawData();
 
 	document.getElementById("RecordedData").innerHTML = '掲載データ範囲：' + LatestUpdate + '';
 
 	document.getElementById("Legend").innerHTML += DrawLegend();
 
-	document.getElementById("Muse").innerHTML   += '\n' + DrawTable(ListMuse, 0);
-	document.getElementById("Aqours").innerHTML += '\n' + DrawTable(ListAqours, 1);
-	document.getElementById("Niji").innerHTML   += '\n' + DrawTable(ListNiji, 2);
-
+	document.getElementById("Muse").innerHTML   += '\n' + DrawTable(["Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"], 0);
+	document.getElementById("Aqours").innerHTML   += '\n' + DrawTable(["Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby"], 1);
+	document.getElementById("Niji").innerHTML   += '\n' + DrawTable(["Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"], 2);
+	
+	//◆「Now Loading...」解除
 	document.getElementById("Loading").style.display = "none";
+
+	//■デバックモード時の処理
+	if(isDebugMode) {
+		//◆デバッグモードであることを表示
+		document.title = '[debug]' + document.title;
+		document.bgColor = '#dce';
+		
+		document.getElementById("MainTitle").innerHTML += "*";
+		document.getElementById("BackToMain").href += "?debug";
+		
+		//◆描画時間の出力
+		const TimeOutputEnd = performance.now();
+		console.log('スクスタ カード実装状況\n初期描画処理: ' + (TimeOutputEnd - TimeOutputStart) + ' ミリ秒');
+
+		//◆データの不具合チェック
+		let isError = 0;
+		let CurrentId = -1;
+		let CurrentDate = new Date("2019/01/01");
+		for(const CardTemp of RawCardList){
+			if(CardTemp.id == -1){ continue; }
+			
+			if(CardTemp.id < CurrentId) { //●前のカードより小さいID番号
+				console.log('[Error] カードNo.の順序ミス: \n'
+				+ ('name' in CardTemp ? '\tName: ' + CardTemp.name + '\n' : '')
+				+ ('cn1' in CardTemp ? '\tcn1: ' + CardTemp.cn1 + '\n' : '')
+				+ ('cn2' in CardTemp ? '\tcn2: ' + CardTemp.cn2 + '\n' : '')
+				);
+				isError++;
+			} else {
+				CurrentId = CardTemp.id;
+			}
+			
+			if(Math.round(CurrentDate - new Date(CardTemp.date)) > 432000000 ) { //●前のカードより5日以上早い場合
+				console.log('[Error] 日付の順序ミス: \n'
+				+ ('id' in CardTemp ? '\tid: ' + CardTemp.id + '\n' : '')
+				+ ('name' in CardTemp ? '\tName: ' + CardTemp.name + '\n' : '')
+				+ ('cn1' in CardTemp ? '\tcn1: ' + CardTemp.cn1 + '\n' : '')
+				+ ('cn2' in CardTemp ? '\tcn2: ' + CardTemp.cn2 + '\n' : '')
+				);
+				isError++;
+			} else {
+				 CurrentDate = new Date(CardTemp.date);
+			}
+		}
+		if(isError > 0){
+			alert('' + isError + '件のエラーが見つかりました。コンソールを確認してください。');
+		}
+	}
+
 });
 --></script>
 

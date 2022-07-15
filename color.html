@@ -32,9 +32,8 @@ table.call {
 
 th.Emma, th.Mia { font-size: 80%;}
 
-table.call tr:nth-child(2n) {
-	background-color: #ddd;
-}
+table.call tr:nth-child(even) { background-color: #ddd;}
+table.call tr:nth-child(odd) { background-color: #fff;}
 
 .call td {
 	padding: 4px 2px;
@@ -48,7 +47,12 @@ table.call tr:nth-child(2n) {
 
 --></style>
 <script><!--
+//■デバッグモード判定
+let isDebugMode = false;
+const Parameter = location.search.substring(1).split('&');
+if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
 
+//■色データ
 const CharData = [
 	{ id:'Honoka', name:'高坂 穂乃果',
 		llsif:    {r:255, g:214, b:165},
@@ -341,6 +345,7 @@ const CharData = [
 		nijiyon:  {r:220, g:152, b:166},
 		logo1st:  {r:244, g:180, b:201},
 		logo3rd:  {r:242, g:160, b:185},
+		logosf:   {r:244, g:180, b:201},
 		logo4th:  {r:234, g: 96, b:158},
 		logo5th:  {r:234, g: 96, b:158},
 		logounit: {r:226, g: 60, b:103}
@@ -356,6 +361,7 @@ const CharData = [
 		nijiyon:  {r:202, g:188, b: 53},
 		logo1st:  {r:255, g:245, b:121},
 		logo3rd:  {r:255, g:245, b:121},
+		logosf:   {r:242, g:226, b: 60},
 		logo4th:  {r:255, g:241, b:  0},
 		logo5th:  {r:255, g:241, b:  0},
 		logounit: {r:255, g:245, b:127}
@@ -371,6 +377,7 @@ const CharData = [
 		nijiyon:  {r:143, g:197, b:220},
 		logo1st:  {r:143, g:207, b:227},
 		logo3rd:  {r:168, g:219, b:239},
+		logosf:   {r:143, g:207, b:227},
 		logo4th:  {r: 77, g:183, b:225},
 		logo5th:  {r: 77, g:183, b:225},
 		logounit: {r:  0, g:164, b:198}
@@ -386,6 +393,7 @@ const CharData = [
 		nijiyon:  {r:145, g:160, b:245},
 		logo1st:  {r:117, g:158, b:211},
 		logo3rd:  {r:  0, g:113, b:190},
+		logosf:   {r:117, g:158, b:211},
 		logo4th:  {r: 89, g: 71, b:154},
 		logo5th:  {r: 89, g: 71, b:154},
 		logounit: {r: 70, g: 75, b:152}
@@ -401,6 +409,7 @@ const CharData = [
 		nijiyon:  {r:251, g:134, b: 84},
 		logo1st:  {r:246, g:174, b: 93},
 		logo3rd:  {r:245, g:162, b:  0},
+		logosf:   {r:246, g:174, b: 93},
 		logo4th:  {r:236, g:104, b: 53},
 		logo5th:  {r:236, g:104, b: 53},
 		logounit: {r:232, g: 57, b: 40}
@@ -416,6 +425,7 @@ const CharData = [
 		nijiyon:  {r:173, g:133, b:206},
 		logo1st:  {r:195, g:119, b:174},
 		logo3rd:  {r:194, g:108, b:168},
+		logosf:   {r:172, g:134, b:187},
 		logo4th:  {r:212, g:182, b:214},
 		logo5th:  {r:212, g:182, b:214},
 		logounit: {r:218, g:180, b:212}
@@ -431,6 +441,7 @@ const CharData = [
 		nijiyon:  {r:243, g:108, b:113},
 		logo1st:  {r:237, g:119, b:135},
 		logo3rd:  {r:233, g: 81, b:111},
+		logosf:   {r:237, g:119, b:135},
 		logo4th:  {r:203, g: 39, b: 47},
 		logo5th:  {r:203, g: 39, b: 47},
 		logounit: {r:184, g: 28, b: 37}
@@ -448,6 +459,7 @@ const CharData = [
 		nijiyon:  {r:157, g:220, b:142},
 		logo1st:  {r:181, g:215, b:136},
 		logo3rd:  {r:148, g:199, b: 76},
+		logosf:   {r:181, g:215, b:136},
 		logo4th:  {r:196, g:219, b:112},
 		logo5th:  {r:196, g:219, b:112},
 		logounit: {r:203, g:226, b:163}
@@ -463,15 +475,19 @@ const CharData = [
 		nijiyon:  {r:168, g:170, b:202},
 		logo1st:  {r:226, g:241, b:235},
 		logo3rd:  {r:236, g:236, b:247},
+		logosf:   {r:219, g:220, b:239},
 		logo4th:  {r:174, g:175, b:194},
 		logo5th:  {r:174, g:175, b:194},
 		logounit: {r:255, g:254, b:254}
 	},
 
 	{ id:'Shioriko', name:'三船 栞子',
+		llsif:    {r:192, g:237, b:222},
+		llsif2:   {r:242, g:251, b:248},
 		official: {r: 55, g:180, b:132},
 		sifas:    {r: 36, g:189, b:139},
 		sifas_s1: {r: 54, g:180, b:130},
+		logosf:   {r: 99, g:189, b:147},
 		logo4th:  {r: 89, g:187, b:141},
 		logo5th:  {r: 89, g:187, b:141},
 		logounit: {r: 22, g:178, b:134}
@@ -479,6 +495,8 @@ const CharData = [
 
 	{ id:'Mia', name:'ミア・テイラー',
 		official: {r:214, g:213, b:202},
+		llsif:    {r:218, g:217, b:210},
+		llsif2:   {r:248, g:247, b:246},
 		sifas:    {r:214, g:213, b:202},
 		sifas_s1: {r:169, g:168, b:154},
 		logo4th:  {r:208, g:208, b:199},
@@ -488,6 +506,8 @@ const CharData = [
 
 	{ id:'Lanzhu', name:'鐘 嵐珠',
 		official: {r:248, g:200, b:196},
+		llsif:    {r:252, g:222, b:220},
+		llsif2:   {r:254, g:248, b:248},
 		sifas:    {r:248, g:200, b:196},
 		sifas_s1: {r:246, g:153, b:146},
 		logo4th:  {r:245, g:208, b:210},
@@ -548,18 +568,26 @@ const CharData = [
 
 	{ id:'Kinako', name:'桜小路 きな子',
 		official: {r:255, g:244, b: 66},
+		llsif:    {r:255, g:247, b:203},
+		llsif2:   {r:245, g:253, b:245},
 	},
 
 	{ id:'Mei', name:'米女 メイ',
 		official: {r:255, g: 53, b: 53},
+		llsif:    {r:255, g:195, b:195},
+		llsif2:   {r:255, g:243, b:243},
 	},
 
 	{ id:'Shiki', name:'若菜 四季',
 		official: {r:178, g:255, b:221},
+		llsif:    {r:219, g:255, b:239},
+		llsif2:   {r:248, g:255, b:252},
 	},
 
 	{ id:'Natsumi', name:'鬼塚 夏美',
 		official: {r:255, g: 81, b:196},
+		llsif:    {r:255, g:203, b:237},
+		llsif2:   {r:255, g:245, b:251},
 	}
 
 ];
@@ -584,6 +612,7 @@ const LabelName = {
 	logo2nd_a: '2ndライブ<br>ロゴ(濃)',
 	logo2nd_b: '2ndライブ<br>ロゴ(薄)',
 	logo3rd: '3rdライブ<br>ロゴ',
+	logosf:  '校内S.F.<br>ロゴ',
 	logo4th: '4thライブ<br>ロゴ',
 	logo5th: '5thライブ<br>ロゴ',
 	logo6th: '6thライブ<br>ロゴ',
@@ -669,7 +698,7 @@ function CreateColorListTable(Idol, col, tablecol){
 </head>
 <body>
 <header>
-	<h2>ラブライブ！シリーズ イメージカラーまとめ</h2>
+	<h2 id="MainTitle">ラブライブ！シリーズ イメージカラーまとめ</h2>
 </header>
 
 <section>
@@ -709,6 +738,12 @@ function CreateColorListTable(Idol, col, tablecol){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2022/07/16</span> - スクフェスの色を追加</summary>
+		<div>
+			<span class="new"></span>「スクフェス」のミア、ランジュ、Liella!2期生の色を追加
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2022/06/25</span> - 更新履歴リニューアル</summary>
 		<div>
 			<span class="fix"></span>更新履歴をリニューアル（他ページ同様、折りたたみ式に変更）
@@ -765,23 +800,33 @@ function CreateColorListTable(Idol, col, tablecol){
 </section>
 
 <nav>
-<p><a href="index.html">トップページに戻る。</a></p>
+<p><a id="BackToMain" href="index.html">トップページに戻る。</a></p>
 </nav>
 
 <script><!-- 
-document.getElementById("Color_Muse").innerHTML += '\n'
-+ CreateColorListTable([0,1,2,3,4,5,6,7,8], ['sifas', 'sifas_s1', 'puchi', 'llsif', 'llsif2', 'sifac', 'logofinal'], '#e50080');
+	document.getElementById("Color_Muse").innerHTML += '\n'
+	+ CreateColorListTable([0,1,2,3,4,5,6,7,8], ['sifas', 'sifas_s1', 'puchi', 'llsif', 'llsif2', 'sifac', 'logofinal'], '#e50080');
 
-document.getElementById("Color_Aqours").innerHTML += '\n'
-+ CreateColorListTable([9,10,11,12,13,14,15,16,17], ['official', 'sifas', 'sifas_s1', 'puchi', 'llsif', 'llsif2', 'sifac', 'vote2nd', 'vote3rd', 'vote4th', 'duotrio', 'logomovie', 'logo1st', 'logo2nd', 'logo4th', 'logo5th', 'logo6th', 'logounit'], '#19b1f6');
+	document.getElementById("Color_Aqours").innerHTML += '\n'
+	+ CreateColorListTable([9,10,11,12,13,14,15,16,17], ['official', 'sifas', 'sifas_s1', 'puchi', 'llsif', 'llsif2', 'sifac', 'vote2nd', 'vote3rd', 'vote4th', 'duotrio', 'logomovie', 'logo1st', 'logo2nd', 'logo4th', 'logo5th', 'logo6th', 'logounit'], '#19b1f6');
 
-document.getElementById("Color_Niji").innerHTML += '\n'
-+ CreateColorListTable([18,19,20,21,22,23,24,25,26,27,28,29,30], ['official', 'sifas', 'sifas_s1', 'llsif', 'llsif2', 'monthly', 'nijiyon', 'logo1st', 'logo3rd', 'logo4th', 'logo5th', 'logounit'], '#f8b656');
+	document.getElementById("Color_Niji").innerHTML += '\n'
+	+ CreateColorListTable([18,19,20,21,22,23,24,25,26,27,28,29,30], ['official', 'sifas', 'sifas_s1', 'llsif', 'llsif2', 'monthly', 'nijiyon', 'logo1st', 'logo3rd', 'logosf', 'logo4th', 'logo5th', 'logounit'], '#f8b656');
 
-document.getElementById("Color_Liella").innerHTML += '\n'
-+ CreateColorListTable([31,32,33,34,35,36,37,38,39], ['official', 'llsif', 'llsif2', 'logo1st', 'logo2nd_a', 'logo2nd_b'], '#da57d8');
+	document.getElementById("Color_Liella").innerHTML += '\n'
+	+ CreateColorListTable([31,32,33,34,35,36,37,38,39], ['official', 'llsif', 'llsif2', 'logo1st', 'logo2nd_a', 'logo2nd_b'], '#da57d8');
 
-document.getElementById("Loading").style.display = "none";
+	document.getElementById("Loading").style.display = "none";
+
+
+	//■デバックモード時の処理
+	if(isDebugMode) {
+		//◆デバッグモードであることを表示
+		document.title = '[debug]' + document.title;
+		document.bgColor = '#dce';
+		
+		document.getElementById("MainTitle").innerHTML += "*";
+		document.getElementById("BackToMain").href += "?debug";
+	}
 --></script>
-</body>
 </html>

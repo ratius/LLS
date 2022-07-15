@@ -101,6 +101,11 @@ p{
 }
 --></style>
 <script><!--
+//■デバッグモード判定
+let isDebugMode = false;
+const Parameter = location.search.substring(1).split('&');
+if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
+
 //■■各種データ定義
 //■タグデータ
 const TagData = {
@@ -248,7 +253,7 @@ function DrawStoryList(tag){
 </head>
 <body>
 <header>
-	<h2>スクスタ 毎日劇場便覧</h2>
+	<h2 id="MainTitle">スクスタ 毎日劇場便覧</h2>
 </header>
 
 <section>
@@ -290,7 +295,7 @@ function DrawStoryList(tag){
 </section>
 
 <nav>
-<p><a href="index.html">トップページに戻る。</a></p>
+<p><a id="BackToMain" href="index.html">トップページに戻る。</a></p>
 </nav>
 
 <script><!--
@@ -316,6 +321,8 @@ function loadScript(src, callback) {
 }
 
 loadScript("data/theater.js", function() {
+	const TimeOutputStart = performance.now();
+	
 	let Output =
 	//◆絞り込みボタン
 	  '<div style="margin-bottom: 10px;">'
@@ -332,6 +339,20 @@ loadScript("data/theater.js", function() {
 	
 	//◆「Now Loading...」解除
 	document.getElementById("Loading").style.display = "none";
+	
+	//■デバックモード時の処理
+	if(isDebugMode) {
+		//◆デバッグモードであることを表示
+		document.title = '[debug]' + document.title;
+		document.bgColor = '#dce';
+		
+		document.getElementById("MainTitle").innerHTML += "*";
+		document.getElementById("BackToMain").href += "?debug";
+		
+		//◆描画時間の出力
+		const TimeOutputEnd = performance.now();
+		console.log('スクスタ 毎日劇場便覧\n初期描画処理: ' + (TimeOutputEnd - TimeOutputStart) + ' ミリ秒');
+	}
 });
 --></script>
 </body>
