@@ -593,4 +593,22 @@ const EventList = [
 	"UR" : ["Maki", "Chika", "Mia"],
 	"SR" : ["Rin", "You", "Ayumu"]
 },
+{
+	"id" : 67,
+	"name" : "越えて繋がる天の川！",
+	"type" : "exchange",
+	"started" : new Date("2022-07-07T15:00:00+09:00"),
+	"ended"   : new Date("2022-07-14T14:59:59+09:00"),
+	"UR" : ["Umi", "Yoshiko", "Setsuna"],
+	"SR" : ["Ruby", "Kanata", "Lanzhu"]
+},
+{
+	"id" : 68,
+	"name" : "夏だ、海だ、合宿だYeah!!",
+	"type" : "story",
+	"started" : new Date("2022-07-22T15:00:00+09:00"),
+	"ended"   : new Date("2022-07-30T14:59:59+09:00"),
+	"UR" : ["Kanan", "Hanamaru", "Shioriko"],
+	"SR" : ["Maki", "Kasumi", "Ai"]
+},
 ];
