@@ -539,7 +539,6 @@ function DrawMostVoted(){
 	for(const CharTemp in NameFromID){
 		Output += '<tr><th class="bg_' + CharTemp + '">' + NameFromID[CharTemp] + '<\/th><td>';
 		for(const EventTemp of EnqueteList){
-			console.log(CharTemp + ',' + EventTemp["winner1"]);
 			if(CharTemp === EventTemp["winner1"]){
 				Output += '<span class="underline" title="' + EventTemp["theme"] + '">'
 				+ '第' + EventTemp["id"] + '回<\/span>「'
@@ -589,9 +588,9 @@ function DrawMostVoted(){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
-		<summary class="important"><span class="date">2022/07/28</span> - </summary>
+		<summary><span class="date">2022/07/28</span></summary>
 		<div>
-			<span class="new"></span>第30回の結果を追加<br>
+			<span class="new"></span>第30回の結果を掲載<br>
 			<span class="new"></span>「キャラ別最多得票」の節を追加
 		</div>
 	</details>
