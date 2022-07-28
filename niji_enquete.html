@@ -26,7 +26,14 @@
 	background-color: rgba(226,126,176,0.1);
 }
 
-#EnqueteList table {
+#MostVotedList {
+	border: solid 3px #19b1f6;
+	height: calc(80vh - 30px);
+	overflow-y: scroll;
+	background-color: rgba(25,177,246,0.1);
+}
+
+#EnqueteList table, #MostVotedList table{
 	width: 100%;
 	border-collapse: separate;
 	border-spacing: 0;
@@ -42,14 +49,22 @@
 	border-right: solid 1px #e2067e;
 }
 
+#MostVotedList thead th {
+	position: sticky;
+	top: 0;
+	padding: 2px 5px;
+	background-color: #75d0f9;
+	border-bottom: solid 3px #19b1f6;
+	border-right: solid 1px #19b1f6;
+}
 
-#EnqueteList tbody > tr > td {
+tbody td, tbody th {
 	padding: 2px 5px;
 	border-right: solid 1px #ccc;
 	border-bottom: solid 1px #bbb;
 }
 
-#EnqueteList tbody > tr > td:last-child {
+tbody td:last-child {
 	border-right: solid 1px #bbb;
 }
 
@@ -57,6 +72,21 @@
 	font-size: 190%;
 	text-decoration: none;
 }
+
+.underline:hover {
+	font-weight: bold;
+	background-color: #fc9;
+}
+.underline {
+	width: 70px;
+	text-align: center;
+	display: inline-block;
+	background-color: #fed;
+	border: solid 2px #975;
+	border-radius: 50vh;
+	margin: 1px 4px;
+}
+
 
 .bg_Ayumu    { background: rgba(237, 125, 149, 0.4);}
 .bg_Kasumi   { background: rgba(231, 214,   0, 0.4);}
@@ -296,7 +326,7 @@ const EnqueteList = [
 	"ended"   : new Date("2021-08-18T23:59:59+09:00"),
 	"theme" : "おでかけするなら、アクティブにハイキング？ゆったりと美術館？",
 	"option1" : "アクティブにハイキング",
-	"option2" : "ゆったりと美術館？",
+	"option2" : "ゆったりと美術館",
 	"winner1" : "Setsuna",
 	"winner2" : "Shioriko",
 },
@@ -407,6 +437,17 @@ const EnqueteList = [
 	"theme" : "もし野球選手かサッカー選手になるなら、それぞれぴったりなメンバーは？",
 	"option1" : "野球選手",
 	"option2" : "サッカー選手",
+	"winner1" : "Mia",
+	"winner2" : "Ai"
+},
+{
+	"id": 31,
+	"url" : "https://lovelive-as.bushimo.jp/selects/q202207/",
+	"started" : new Date("2022-07-28T21:15:00+09:00"),
+	"ended"   : new Date("2022-08-03T23:59:59+09:00"),
+	"theme" : "もし動物園か水族館の飼育員になるなら、それぞれぴったりなメンバーは？",
+	"option1" : "動物園",
+	"option2" : "水族館",
 	"winner1" : "",
 	"winner2" : ""
 },
@@ -446,13 +487,13 @@ function GetStringFromDate(date,hm){
 	return temp2;
 }
 
-//■アンケート一覧の表を出力
+//■マンスリーアンケート一覧
 function DrawEnqueteList(){
-	var Output = '<div id="EnqueteList"><table>';
+	let Output = '<div id="EnqueteList"><table>';
 	
 	//◆ヘッダー
 	Output += '<thead><th>No.<\/th><th>投票期間<\/th><th>お題<\/th>'
-	+ '<th colspan="2">最多得票キャラクター<\/th><th style=" white-space: nowrap;">リンク<\/th><\/tr><\/thead>';
+	+ '<th colspan="2">最多得票キャラクター<\/th><th style="white-space: nowrap;">リンク<\/th><\/tr><\/thead>';
 	
 	//◆メイン
 	Output += '<tbody>'
@@ -485,6 +526,37 @@ function DrawEnqueteList(){
 	return Output;
 }
 
+//■キャラ別最多得票
+function DrawMostVoted(){
+	let Output = '<div id="MostVotedList"><table>';
+	
+	//◆ヘッダー
+	Output += '<thead><th style="width: 150px;">キャラクター<\/th><th>最多得票<\/th><\/tr><\/thead>';
+	
+	//◆メイン
+	Output += '<tbody>'
+	
+	for(const CharTemp in NameFromID){
+		Output += '<tr><th class="bg_' + CharTemp + '">' + NameFromID[CharTemp] + '<\/th><td>';
+		for(const EventTemp of EnqueteList){
+			console.log(CharTemp + ',' + EventTemp["winner1"]);
+			if(CharTemp === EventTemp["winner1"]){
+				Output += '<span class="underline" title="' + EventTemp["theme"] + '">'
+				+ '第' + EventTemp["id"] + '回<\/span>「'
+				+ EventTemp["option1"] + '」1位<br>';
+			}		
+			if(CharTemp === EventTemp["winner2"]){
+				Output += '<span class="underline" title="' + EventTemp["theme"] + '">'
+				+ '第' + EventTemp["id"] + '回<\/span>「'
+				+ EventTemp["option2"] + '」1位<br>';
+			}		
+		}
+		Output += '<\/td><\/tr>\n';
+	}
+	Output += '<\/tbody>\n<\/table>\n<\/div>'
+	return Output;
+}
+
 --></script>
 </head>
 <body>
@@ -497,14 +569,19 @@ function DrawEnqueteList(){
 	<p>投票企画「<a href="https://lovelive-as.bushimo.jp/selects/">虹ヶ咲学園スクールアイドル同好会 マンスリーアンケート</a>」のまとめです。</p>
 </section>
 
+<div id="Loading">
+	<h4>Now Loading...</h4>
+	このコンテンツはJavaScriptを使用しています。<br>
+	いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
+	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
+</div>
+
 <section id="EnqueteHistory">
-	<h3 class="muse">マンスリーアンケート</h3>
-	<div class="loading">
-		<h4>Now Loading...</h4>
-		このコンテンツはJavaScriptを使用しています。<br>
-		いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
-		お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
-	</div>
+	<h3 class="muse">マンスリーアンケート一覧</h3>
+</section>
+
+<section id="MostVoted">
+	<h3 class="aqours">キャラ別最多得票</h3>
 </section>
 
 <section>
@@ -525,10 +602,16 @@ function DrawEnqueteList(){
 </nav>
 
 <script><!--
-	document.getElementById("EnqueteHistory").innerHTML =
-	'<h3 class="muse">マンスリーアンケート<\/h3>'
-	+ '<p>下表の右にある矢印をクリックすると、結果発表ページを開きます。<\/p>\n'
+	document.getElementById("EnqueteHistory").innerHTML +=
+	  '<p>下表の右にある矢印をクリックすると、結果発表ページを開きます。<\/p>\n'
 	+ DrawEnqueteList();
+	
+	document.getElementById("MostVoted").innerHTML +=
+	  '<p>PCで閲覧している場合、「第○回」のボタンにカーソルを合わせることで、ツールチップにその回のテーマが表示されます。<\/p>'
+	+ DrawMostVoted();
+
+	//◆「Now Loading...」解除
+	document.getElementById("Loading").style.display = "none";
 
 	//■デバックモード時の処理
 	if(isDebugMode) {
