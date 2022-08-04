@@ -2260,6 +2260,63 @@ const StoryList = [
 		},
 		]
 	},
+	{
+		"name": "第41章「『私』の夢」",
+		"part": [
+		{
+			"title": "第1話 高まる期待の中で",
+			"desc": "Aqoursのライブ会場に着いた一行は、すでに集まっているたくさんのAqoursファンを目にする。ずいぶん遠くから駆けつけたファンの熱意を感じ、期待はますます高まるばかり！",
+			"tag": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu", "Kaoruko"]
+		},
+		{
+			"title": "第2話 意気<ruby>軒昂<rt>けんこう<\/rt><\/ruby>！",
+			"desc": "Aqoursのリハーサルを見学している一行。ライブ直前まで妥協のない様子を見て、Aqoursの本気を感じ取り……？",
+			"memo": "真姫のみ立ち絵・セリフ無し。",
+			"tag": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu", "Kaoruko"]
+		},
+		{
+			"title": "第3話 このステージから！",
+			"desc": "ついに始まったAqoursのライブ。会場に詰めかけたあふれんばかりのファンを前に、アクティブなパフォーマンスを繰り広げる！",
+			"tag": ["Player", "Eli", "Kotori", "Umi", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Karin", "Setsuna"]
+		},
+		{
+			"title": "第4話 <ruby>漣<rt>さざなみ<\/rt><\/ruby>広がる声",
+			"desc": "Aqoursのライブも終盤。全国から集った新しいファン。いつも応援してくれる地元のファンと一体になってステージは盛り上がり……？",
+			"tag": ["Player", "Honoka", "Eli", "Umi", "Rin", "Nozomi", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Kasumi", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu", "Kaoruko"]
+		},
+		{
+			"title": "第5話 ライブの後は……？",
+			"desc": "無事にライブを終えたAqours。十千万に集まり、μ's、ニジガクを交えて打ち上げパーティ！",
+			"tag": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+		},
+		{
+			"title": "第6話 夜の波間に映る影",
+			"desc": "十千万での打ち上げは大盛り上がり。Aqoursに刺激を受けたニジガクとμ'sのメンバーは、どんどんやんしたいことを話していって……。　そんな中、あなたは風にあたり外へ……",
+			"tag": ["Player", "Chika"]
+		},
+		{
+			"title": "第7話 暗闇を走る",
+			"desc": "やっぱり自分だけ何もない、何も持ってないことに気落ちしてしまったあなた。帰りのバスでも、気分が上がらず……？",
+			"tag": ["Player", "Honoka", "Chika", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu", "Kaoruko"]
+		},
+		{
+			"title": "第8話 吹き飛ばせ！",
+			"desc": "ずっともやもやしていた想いを全部吐き出してしまったあなた。そんなあなたを、同好会のメンバーはやさしく包み込んでくれて……？",
+			"memo": "エマ・璃奈の立ち絵・セリフ無し。",
+			"tag": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Shioriko", "Mia", "Lanzhu"]
+		},
+		{
+			"title": "第9話 眩しいサービスエリア",
+			"desc": "バスは順調に走り続け、東京も目の前。その前に最後の休憩をしようとサービスエリアに降り立つあなたたち。最後まで全力で楽しもう！",
+			"tag": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu", "Kaoruko"]
+		},
+		{
+			"title": "第10話 夢はひとりのものじゃない",
+			"desc": "サービスエリアでサビのメロディを思いついたあなた。アプリに打ち込んで、曲は完成した。それは今にも歌いだしたくなるメロディで……？",
+			"tag": ["Player", "Chika", "Ayumu", "Kaoruko"]
+		}
+		]
+	},
 	]
 },
 //■■■■■■■■■■ イベントエピソード ■■■■■■■■■■
@@ -4921,7 +4978,7 @@ const StoryList = [
 		]
 	},
 	{
-		"name": "越えて繋がる天の川",
+		"name": "越えて繋がる天の川！",
 		"part": [
 		{
 			"title": "第1話",
@@ -4957,6 +5014,46 @@ const StoryList = [
 			"title": "第7話",
 			"desc": "ライブ成功の打ち上げの夜。6人は、まだまだ元気いっぱいなようで……？",
 			"tag": ["Umi", "Yoshiko", "Ruby", "Kanata", "Setsuna", "Lanzhu"]
+		}
+		]
+	},
+	{
+		"name": "夏だ、海だ、合宿だYeah!!",
+		"part": [
+		{
+			"title": "第1話",
+			"desc": "夏休み、合宿のために沼津へとやってきた4人。沼津へ到着するや否や、果南と花丸が出迎えてくれた。",
+			"tag": ["Maki", "Kanan", "Hanamaru", "Kasumi", "Ai", "Shioriko"]
+		},
+		{
+			"title": "第2話",
+			"desc": "合宿で寝泊まりする場所は、花丸がよく通っているお寺。みんな山の中まで歩いてきたので、かすみはダウン寸前……！？",
+			"tag": ["Maki", "Kanan", "Hanamaru", "Kasumi", "Ai", "Shioriko"]
+		},
+		{
+			"title": "第3話",
+			"desc": "一息ついた後、まずは海へ行くことにした一行。かすみと愛は遊ぶ気満々のようで……。",
+			"tag": ["Maki", "Kanan", "Hanamaru", "Kasumi", "Ai", "Shioriko"]
+		},
+		{
+			"title": "第4話",
+			"desc": "初日はみんな海で遊ぶことになった。果南、真姫、花丸はダイビングで内浦の海を満喫。かすみ・愛・栞子はビーチバレー！",
+			"tag": ["Maki", "Kanan", "Hanamaru", "Kasumi", "Ai", "Shioriko"]
+		},
+		{
+			"title": "第5話",
+			"desc": "気がつけばみんなお腹が空いた頃。愛、栞子、果南が屋台で食べ物を買ってきた。",
+			"tag": ["Maki", "Kanan", "Hanamaru", "Kasumi", "Ai", "Shioriko"]
+		},
+		{
+			"title": "第6話",
+			"desc": "果南が買ってきたのはスイカ！ 浜辺とスイカから連想されるもの……もちろんスイカ割り！",
+			"tag": ["Maki", "Kanan", "Hanamaru", "Kasumi", "Ai", "Shioriko"]
+		},
+		{
+			"title": "第7話",
+			"desc": "日も暮れて暗くなった後。6人はビーチで花火を満喫！　でも、何か忘れているような……？",
+			"tag": ["Maki", "Kanan", "Hanamaru", "Kasumi", "Ai", "Shioriko"]
 		}
 		]
 	},
@@ -7595,6 +7692,11 @@ const StoryList = [
 			"title": "33話 私の分身！？",
 		 	"desc": "歩夢と共にVTuber興味が湧いたあなた。もし歩夢がVTuberになったら……？と考えると、ワクワクが止まらなくて……？",
 			"tag": ["Player", "Ayumu", "Rina"]
+		},
+		{
+			"title": "34話 あゆぴょん、デビュー！",
+		 	"desc": "ついに歩夢がVTuberデビュー！　うさぎのあゆぴょんの初めての配信を見たあなたは……？",
+			"tag": ["Player", "Ayumu"]
 		}
 		]
 	},
@@ -7770,6 +7872,11 @@ const StoryList = [
 			"title": "33話 偵察！　いざ沼津！",
 		 	"desc": "かすみんアレンジの特訓の自主練習について栞子に怒られたかすみ。新たな特訓のため、他のスクールアイドルを偵察することに……？",
 			"tag": ["Player", "Ruby", "Kasumi"]
+		},
+		{
+			"title": "34話 コンテスト、開始！",
+		 	"desc": "地域のホームアイドルを勝ち取るため、特訓を積んできたかすみ。ついに、コンテストが始まる……！",
+			"tag": ["Player", "Kasumi"]
 		}
 		]
 	},
@@ -7945,6 +8052,11 @@ const StoryList = [
 			"title": "33話 しずくの決意",
 		 	"desc": "演劇部部長の一人芝居に引き込まれたしずく。だが、なぜ誰も観客がいないところで演じていたのか？　しずくは部長に話を聞いて……？",
 			"tag": ["Player", "Shizuku"]
+		},
+		{
+			"title": "34話 フライヤー大作戦！",
+		 	"desc": "演劇部部長の一人芝居をたくさんの人に見てもらいたいしずく。そのためしずくがとった行動とは？",
+			"tag": ["Player", "Kasumi", "Shizuku", "Rina", "Shioriko"]
 		}
 		]
 	},
@@ -8120,6 +8232,11 @@ const StoryList = [
 			"title": "33話 果林の体当たり修行・２",
 		 	"desc": "コンテストに向けて、修行を積んでいる果林。今日は栞子に所作を習いに行って……？",
 			"tag": ["Player", "Karin", "Shioriko"]
+		},
+		{
+			"title": "34話 束の間の",
+		 	"desc": "連日の修行でオーバーワーク気味に見える果林。あなたはそんな果林が心配で……？",
+			"tag": ["Player", "Karin", "Emma"]
 		}
 		]
 	},
@@ -8296,6 +8413,11 @@ const StoryList = [
 			"title": "33話 トリオ結成！？",
 		 	"desc": "璃奈とミアをお笑いに誘った愛。いきなり誘われたふたりはびっくりして……？",
 			"tag": ["Player", "Ai", "Rina", "Mia"]
+		},
+		{
+			"title": "34話 お笑い特訓！",
+		 	"desc": "愛の誘いで、愛、ミア、璃奈の３人でお笑いトリオを組むことになった。早速特訓開始！",
+			"tag": ["Player", "Ai", "Rina", "Mia"]
 		}
 		]
 	},
@@ -8469,6 +8591,11 @@ const StoryList = [
 		{
 			"title": "33話 メイド心得",
 		 	"desc": "急遽、ホールの欠員を補うことになってしまった彼方。でも、メイドさんなんてやったことない！　ことりによるスパルタメイド心得指南！",
+			"tag": ["Player", "Kotori", "Kanata"]
+		},
+		{
+			"title": "34話 彼方、出陣！",
+		 	"desc": "突如、メイド服を着てホールでの仕事になった彼方。ぎこちないながらも、なんとかお仕え……できてる？",
 			"tag": ["Player", "Kotori", "Kanata"]
 		}
 		]
@@ -8644,6 +8771,11 @@ const StoryList = [
 			"title": "33話 ハートが大事！",
 		 	"desc": "かすみに漫画を楽しみにしていると言われ、俄然やる気が湧いてきたせつ菜。徐々に構想がまとまってきて……？",
 			"tag": ["Player", "Ayumu", "Kasumi", "Setsuna", "Rina", "Lanzhu"]
+		},
+		{
+			"title": "34話 生みの苦しみ？",
+		 	"desc": "雑誌の新人賞を目指すことを決めたせつ菜。自室で漫画に向き合う日々が始まる！",
+			"tag": ["Player", "Setsuna"]
 		}
 		]
 	},
@@ -8819,6 +8951,11 @@ const StoryList = [
 			"title": "33話 マイの特訓・その１",
 		 	"desc": "あなたの提案で特訓を始めたマイ。写真に大事な要素を見つめ直すことに。まずは元気いっぱい１年生のシャッターチャンスを狙え！",
 			"tag": ["Player", "Kasumi", "Shizuku", "Emma", "Rina", "Shioriko", "Mai"]
+		},
+		{
+			"title": "33話 マイの特訓・その２",
+		 	"desc": "今度のマイの特訓相手は２年生。一枚絵としての構図のセンスを磨け！",
+			"tag": ["Player", "Ayumu", "Ai", "Setsuna", "Emma", "Lanzhu", "Mai"]
 		}
 		]
 	},
@@ -8996,6 +9133,11 @@ const StoryList = [
 			"title": "33話 エラーの真実！？",
 			"desc": "浅希に調べてもらっていた璃奈ちゃんボードだが、浅希が見てもお手上げなよう。浅希が部室に来て……？",
 			"tag": ["Player", "Rina", "Asagi"]
+		},
+		{
+			"title": "34話 選ばなきゃ？",
+			"desc": "浅希が明かしたエラーの原因。それは璃奈の表情が豊かになったことだった。いつかはボードを取る日がくるのかと悩む璃奈は……？",
+			"tag": ["Player", "Kasumi", "Shizuku", "Rina", "Shioriko", "Mia"]
 		}
 		]
 	},
@@ -9104,6 +9246,11 @@ const StoryList = [
 			"title": "20話 賛成派？　反対派？",
 		 	"desc": "自分がファンクラブでどういったことをしたいのか、しっかり考えてみようとしている栞子。右月と左月にも意見を聞いてみようとして……？",
 			"tag": ["Player", "Shioriko", "Uzuki", "Satsuki"]
+		},
+		{
+			"title": "21話 行き届く眼差し",
+		 	"desc": "栞子のファンクラブに賛成か反対かで言い合う右月と左月。ふたりに挟まれ困っていた栞子は……？",
+			"tag": ["Player", "Shioriko", "Uzuki", "Satsuki"]
 		}
 		]
 	},
@@ -9172,6 +9319,11 @@ const StoryList = [
 			"title": "12話 気合い？　暴走？",
 			"desc": "にこ襲来で燃えているミア。本物のエンタメを見せると宣言したからには……？",
 			"tag": ["Player", "Mia"]
+		},
+		{
+			"title": "13話 記憶の底の砂",
+			"desc": "にこに刺激され、本物のエンタメを見せてやると意気込むミア。ステージの準備を着々と進めていくが……？",
+			"tag": ["Player", "Mia"]
 		}
 		]
 	},
@@ -9239,7 +9391,12 @@ const StoryList = [
 		{
 			"title": "12話 元気になって！",
 			"desc": "怪我をした雛・ピイピイの面倒を見ることになったランジュ。ひとりで生き抜く強さを教えると意気込んでいるが……？",
-			"tag": ["Player", "Ai", "Lanzhu"]
+			"tag": ["Player", "Lanzhu"]
+		},
+		{
+			"title": "13話 強く<ruby>逞<rt>たくま<\/rt><\/ruby>しく！",
+			"desc": "ランジュの献身的な世話の甲斐もあり、怪我もよくなってきた雛。次は飛ぶ練習！",
+			"tag": ["Player", "Lanzhu"]
 		}
 		]
 	}

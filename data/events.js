@@ -611,4 +611,13 @@ const EventList = [
 	"UR" : ["Kanan", "Hanamaru", "Shioriko"],
 	"SR" : ["Maki", "Kasumi", "Ai"]
 },
+{
+	"id" : 69,
+	"name" : "挑戦！サンセットサマー",
+	"type" : "exchange",
+	"started" : new Date("2022-08-07T15:00:00+09:00"),
+	"ended"   : new Date("2022-08-14T14:59:59+09:00"),
+	"UR" : ["Kotori", "You", "Rina"],
+	"SR" : ["Umi", "Ayumu", "Setsuna"]
+},
 ];
