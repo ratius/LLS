@@ -8018,5 +8018,29 @@ const RawCardList = [
 	"source": "reward",
 	"desc": "イベント「挑戦！サンセットサマー」報酬 (ランキング枠)"
 },
+{
+	"id": 737,
+	"name": "Mia",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Vo",
+	"cn1": "今の見た！？すごかったでしょ！",
+	"cn2": "Miracle Fast Diner",
+	"date": "2022/08/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 738,
+	"name": "Ruby",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "辛い！辛いよ！た",
+	"cn2": "Thank you, FRIENDS!!",
+	"date": "2022/08/14",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
+},
 ];
-const LatestUpdate = "2022/08/07 イベント「挑戦！サンセットサマー」まで";
+const LatestUpdate = "2022/08/14 「パーティーガチャ」まで";
