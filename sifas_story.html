@@ -146,6 +146,7 @@ const TagData = {
 	"Arisa":      {"name": "亜里沙",  "r":128, "g": 80, "b": 96 },
 	"456":        {"name": "よいつむ","r": 80, "g":112, "b":128 },
 	"Mito":       {"name": "美渡",    "r": 80, "g":112, "b":128 },
+	"Uchicchi":   {"name": "うちっちー","r": 80, "g":112, "b":128 },
 	"Haruka":     {"name": "遥",      "r":128, "g":112, "b": 80 },
 	"Misato":     {"name": "美里",    "r":128, "g":112, "b": 80 },
 	"Mai":        {"name": "マイ",    "r":128, "g":112, "b": 80 },
@@ -296,6 +297,16 @@ function NarrowerEvent(changed){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2022/08/17</span></summary>
+		<div>
+			<span class="new"></span>ストーリーを新たに掲載
+			<ul>
+				<li>キズナエピソード：μ's(第27話まで)</li>
+				<li>イベントエピソード：「挑戦！サンセットサマー!」</li>
+			</ul>
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2022/08/04</span></summary>
 		<div>
 			<span class="new"></span>ストーリーを新たに掲載
@@ -896,6 +907,10 @@ loadScript("data/story.js", function() {
 						isError++;
 					}
 					if('tag' in temp3){
+						if(temp3['tag'].length === 0){ //●登場人物がない
+							console.log('[Error] 登場人物が未設定:\n' + StoryLocation);
+							isError++;
+						}
 						for(let temp4 of temp3.tag){
 							if(!(temp4 in TagData)){ //●登場人物が不正
 								console.log('[Error] 登場人物が不正 (' + temp4 + '):\n' + StoryLocation);
