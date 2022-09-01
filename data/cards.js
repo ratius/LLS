@@ -7451,7 +7451,7 @@ const RawCardList = [
 	"cn2": "A song for You! You? You!!",
 	"date": "2022/05/22",
 	"source": "reward",
-	"desc": "イベント「カワイイ☆ワンダーランド」報酬 (交換所枠)"
+	"desc": "イベント「カワイイ☆ワンダーランド」報酬 (イベントpt枠)"
 },
 {
 	"id": 690,
@@ -7667,7 +7667,7 @@ const RawCardList = [
 	"cn2": "Colorful Dreams! Colorful Smiles!",
 	"date": "2022/06/22",
 	"source": "reward",
-	"desc": "イベント「想い伝えるウエディング」報酬 (交換所枠)"
+	"desc": "イベント「想い伝えるウエディング」報酬 (イベントpt枠)"
 },
 {
 	"id": 708,
@@ -7883,7 +7883,7 @@ const RawCardList = [
 	"cn2": "Colorful Dreams! Colorful Smiles!",
 	"date": "2022/07/22",
 	"source": "reward",
-	"desc": "イベント「夏だ、海だ、合宿だYeah!!」報酬 (交換所枠)"
+	"desc": "イベント「夏だ、海だ、合宿だYeah!!」報酬 (イベントpt枠)"
 },
 {
 	"id": 726,
@@ -7945,7 +7945,6 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
 },
-
 {
 	"id": 731,
 	"name": "Kotori",
@@ -8042,5 +8041,125 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「パーティーガチャ」で追加"
 },
+{
+	"id": 739,
+	"name": "Mari",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Gd",
+	"cn1": "唇や口はナチュラルな状態で…",
+	"cn2": "祭り囃子の使者",
+	"date": "2022/08/19",
+	"source": "gacha",
+	"desc": "「夏の夜に響く想いガチャ」で追加"
+},
+{
+	"id": 740,
+	"name": "Nico",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "よし、今度こそ……ふーっ！！",
+	"cn2": "Mermaid festa vol.1",
+	"date": "2022/08/19",
+	"source": "gacha",
+	"desc": "「夏の夜に響く想いガチャ」で追加"
+},
+{
+	"id": 741,
+	"name": "Shizuku",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "なんとなくコツが掴めてきました",
+	"cn2": "祭り囃子の使者",
+	"date": "2022/08/19",
+	"source": "gacha",
+	"desc": "「夏の夜に響く想いガチャ」で追加"
+},
+{
+	"id": 742,
+	"name": "Eli",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "みんな、最後までついてきて！",
+	"cn2": "祭り囃子の使者",
+	"date": "2022/08/22",
+	"source": "reward",
+	"desc": "イベント「夏の夜に響く想い」報酬"
+},
+{
+	"id": 743,
+	"name": "Emma",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Gd",
+	"cn1": "今すっごく楽しいんだ！",
+	"cn2": "未来ハーモニー",
+	"date": "2022/08/22",
+	"source": "reward",
+	"desc": "イベント「夏の夜に響く想い」報酬 (イベントpt枠)"
+},
+{
+	"id": 744,
+	"name": "Kanan",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Vo",
+	"cn1": "えいっ、それっ！",
+	"cn2": "Thank you, FRIENDS!!",
+	"date": "2022/08/22",
+	"source": "reward",
+	"desc": "イベント「夏の夜に響く想い」報酬 (ランキング枠)"
+},
+{
+	"id": 745,
+	"name": "Umi",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "今回は結構手応えがあるんです！",
+	"cn2": "KAWAII最前線！",
+	"date": "2022/08/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 746,
+	"name": "Karin",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sk",
+	"cn1": "目も閉じてちょうだい",
+	"cn2": "紅き艶麗",
+	"date": "2022/08/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 747,
+	"name": "Ai",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "今日は自分でもうまくできた！",
+	"cn2": "未来ハーモニー",
+	"date": "2022/08/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 748,
+	"name": "Yoshiko",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "もうちょっとだけ休ませて～」",
+	"cn2": "Thank you, FRIENDS!!",
+	"date": "2022/08/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
 ];
-const LatestUpdate = "2022/08/14 「パーティーガチャ」まで";
+const LatestUpdate = "2022/08/30 「スクスタフェス」まで";
