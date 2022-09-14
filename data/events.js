@@ -620,4 +620,31 @@ const EventList = [
 	"UR" : ["Kotori", "You", "Rina"],
 	"SR" : ["Umi", "Ayumu", "Setsuna"]
 },
+{
+	"id" : 70,
+	"name" : "夏の夜に響く想い",
+	"type" : "story",
+	"started" : new Date("2022-08-22T15:00:00+09:00"),
+	"ended"   : new Date("2022-08-30T14:59:59+09:00"),
+	"UR" : ["Eli", "Mari", "Shizuku"],
+	"SR" : ["Nico", "Kanan", "Emma"]
+},
+{
+	"id" : 71,
+	"name" : "月夜の幸せ",
+	"type" : "exchange",
+	"started" : new Date("2022-09-07T15:00:00+09:00"),
+	"ended"   : new Date("2022-09-14T14:59:59+09:00"),
+	"UR" : ["Kanan", "Setsuna", "Shioriko"],
+	"SR" : ["Rin", "Dia", "Lanzhu"]
+},
+{
+	"id" : 72,
+	"name" : "私達のホリディ・レコード",
+	"type" : "story",
+	"started" : new Date("2022-09-16T15:00:00+09:00"),
+	"ended"   : new Date("2022-09-22T14:59:59+09:00"),
+	"UR" : ["Hanayo", "Dia", "Kasumi"],
+	"SR" : ["Nozomi", "Hanamaru", "Karin"]
+},
 ];
