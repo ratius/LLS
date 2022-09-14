@@ -36,6 +36,7 @@ p{
 	width: min(calc(100% - 10px), 1200px);
 	height: calc(90vh - 120px);
 	overflow-y: scroll;
+	background-color: white;
 }
 
 #OutputTable {
@@ -147,13 +148,16 @@ const TagData = {
 	"Yohane":     {"name": "堕天使ヨハネ",         "r":180, "g":160, "b":80, "style": "Square"},
 	"Dokkiri":    {"name": "穂乃果と愛のドッキリ", "r":180, "g":160, "b":80, "style": "Square"},
 	"Triathlon":  {"name": "地獄のトライアスロン", "r":180, "g":160, "b":80, "style": "Square"},
-	"Broadcast":  {"name": "善子のゲーム配信",     "r":180, "g":160, "b":80, "style": "Square"},
+	"Broadcast":  {"name": "ゲーム生配信",         "r":180, "g":160, "b":80, "style": "Square"},
+	"Meshimazu":  {"name": "せつ菜の料理",         "r":180, "g":160, "b":80, "style": "Square"},
 	"Washi":      {"name": "わしわしの秘密",       "r":180, "g":160, "b":80, "style": "Square"},
 	"Monodomo":   {"name": "者どもの森",           "r":180, "g":160, "b":80, "style": "Square"},
 	"Calorie":    {"name": "絵里のカロリー事情",   "r":180, "g":160, "b":80, "style": "Square"},
 	"Pool":       {"name": "プールのステージ",     "r":180, "g":160, "b":80, "style": "Square"},
 	"Helicopter": {"name": "小原家のヘリコプター", "r":180, "g":160, "b":80, "style": "Square"},
 	"25252":      {"name": "にっこにっこにー",     "r":180, "g":160, "b":80, "style": "Square"},
+	"Marathon":   {"name": "スクールアイドルDVDマラソン","r":180, "g":160, "b":80, "style": "Square"},
+	"Mango":      {"name": "流行りのマンゴー牛乳", "r":180, "g":160, "b":80, "style": "Square"},
 };
 
 //■ソート対象
@@ -189,6 +193,8 @@ const SortTarget = [
 {"name": "出演：エマ・ヴェルデ", "tag": "Emma"},
 {"name": "出演：天王寺 璃奈", "tag": "Rina"},
 {"name": "出演：三船 栞子", "tag": "Shioriko"},
+{"name": "出演：ミア・テイラー", "tag": "Mia"},
+{"name": "出演：鐘 嵐珠", "tag": "Lanzhu"},
 {"name": "----"},
 {"name": "テーマ：季節の行事", "tag": "Season"},
 {"name": "テーマ：誕生日", "tag": "Birthday"},
@@ -198,12 +204,15 @@ const SortTarget = [
 {"name": "シリーズ：穂乃果と愛のドッキリ", "tag": "Dokkiri"},
 {"name": "シリーズ：わしわしの秘密", "tag": "Washi"},
 {"name": "シリーズ：地獄のトライアスロン", "tag": "Triathlon"},
-{"name": "シリーズ：善子のゲーム配信", "tag": "Broadcast"},
+{"name": "シリーズ：ゲーム生配信", "tag": "Broadcast"},
 {"name": "シリーズ：者どもの森", "tag": "Monodomo"},
 {"name": "シリーズ：絵里のカロリー事情", "tag": "Calorie"},
 {"name": "シリーズ：プールのステージ", "tag": "Pool"},
 {"name": "シリーズ：小原家のヘリコプター", "tag": "Helicopter"},
 {"name": "シリーズ：にっこにっこにー", "tag": "25252"},
+{"name": "シリーズ：せつ菜の料理", "tag": "Meshimazu"},
+{"name": "シリーズ：スクールアイドルDVDマラソン", "tag": "Marathon"},
+{"name": "シリーズ：流行りのマンゴー牛乳", "tag": "Mango"},
 ];
 
 //■■関数
@@ -260,7 +269,8 @@ function DrawStoryList(tag){
 	<h3 class="foreword">まえがき</h3>
 	<p>
 		スクフェスALL STARSで配信されている「毎日劇場」のまとめです。<br>
-		下部のプルダウンメニューから見たいカテゴリを選択すると、該当するストーリーが表示されます。
+		下部のプルダウンメニューから見たいカテゴリを選択すると、該当するストーリーが表示されます。<br>
+		現在、2021年9月分までのデータベースがあります。
 	</p>
 </section>
 
@@ -280,6 +290,12 @@ function DrawStoryList(tag){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2022/09/12</span></summary>
+		<div>
+			<span class="new"></span>データベースを追加（2021年3月～9月）
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2022/06/15</span> - 更新履歴リニューアル</summary>
 		<div>
 			<span class="fix"></span>更新履歴をリニューアル（他ページ同様、折りたたみ式に変更）
