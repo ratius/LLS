@@ -5233,6 +5233,46 @@ const StoryList = [
 		}
 		]
 	},
+	{
+		"name": "私達のホリディ・レコード",
+		"part": [
+		{
+			"title": "第1話",
+			"desc": "今日は図書委員の当番だった花丸。仕事を忘れてスクールアイドルの動画に夢中になっていて……。",
+			"tag": ["Dia", "Hanamaru", "Kasumi"]
+		},
+		{
+			"title": "第2話",
+			"desc": "花丸の元に、かすみから遊びのお誘いの電話がかかってきた。ダイヤと花丸は了承し、そして次の日曜日……。",
+			"tag": ["Nozomi", "Hanayo", "Dia", "Hanamaru", "Kasumi", "Karin"]
+		},
+		{
+			"title": "第3話",
+			"desc": "かすみの狙いは、自分たちが遊んでいる動画を撮ることだった。かすみ達が向かったのは、アミューズメント施設！",
+			"tag": ["Nozomi", "Hanayo", "Dia", "Hanamaru", "Kasumi", "Karin"]
+		},
+		{
+			"title": "第4話",
+			"desc": "もっとかっこいい動画が撮りたいかすみ。ダーツ台へとやってきた。",
+			"tag": ["Nozomi", "Hanayo", "Dia", "Hanamaru", "Kasumi", "Karin"]
+		},
+		{
+			"title": "第5話",
+			"desc": "ダーツで大いに盛り上がった6人。次はビリヤード対決！",
+			"tag": ["Nozomi", "Hanayo", "Dia", "Hanamaru", "Kasumi", "Karin"]
+		},
+		{
+			"title": "第6話",
+			"desc": "まずは3年生の3人がカットボールで対決することに。負けた人は罰ゲームというルールまで加わり、3人は必死に。",
+			"tag": ["Nozomi", "Hanayo", "Dia", "Hanamaru", "Kasumi", "Karin"]
+		},
+		{
+			"title": "第7話",
+			"desc": "ビリヤードは希のペースで進んでいく。すると、突然、電話の着信音が……！",
+			"tag": ["Nozomi", "Hanayo", "Dia", "Hanamaru", "Kasumi", "Karin"]
+		}
+		]
+	}
 	]
 },
 //■■■■■■■■■■ キズナエピソード ■■■■■■■■■■
