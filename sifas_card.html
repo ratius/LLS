@@ -331,6 +331,12 @@ function DrawTable(group, GroupNumber){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2022/10/08</span></summary>
+		<div>
+			<span class="fix"></span>栞子の列の表示調整（他の虹ヶ咲キャラの10枚目に相当するURが無いため）
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2022/06/25</span></summary>
 		<div>
 			<span class="fix"></span>「UR ○枚目」の背景を、背景画像を用いない方法に変更<br>
@@ -440,7 +446,6 @@ loadScript("data/cards.js", function() {
 		let CurrentDate = new Date("2019/01/01");
 		for(const CardTemp of RawCardList){
 			if(CardTemp.id == -1){ continue; }
-			
 			if(CardTemp.id < CurrentId) { //●前のカードより小さいID番号
 				console.log('[Error] カードNo.の順序ミス: \n'
 				+ ('name' in CardTemp ? '\tName: ' + CardTemp.name + '\n' : '')
