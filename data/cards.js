@@ -6877,6 +6877,7 @@ const RawCardList = [
 	"source": "gacha",
 	"desc": "「繋がり感じるホワイトデーガチャ」で追加"
 },
+{"id": -1, "name": "Shioriko", "rare": "UR", "offset":1 },
 {
 	"id": 642,
 	"name": "Hanayo",
@@ -8329,5 +8330,125 @@ const RawCardList = [
 	"source": "reward",
 	"desc": "イベント「私達のホリディ・レコード」報酬 (ランキング枠)"
 },
+{
+	"id": 763,
+	"name": "Chika",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sp",
+	"cn1": "しいたけ降りて〜〜！",
+	"cn2": "くノ一・千歌",
+	"date": "2022/09/26",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 764,
+	"name": "Ayumu",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "あなたも近くにいてくれない？",
+	"cn2": "ALL STAR Princess",
+	"date": "2022/09/26",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 765,
+	"name": "Rina",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "ボードが濡れちゃった……",
+	"cn2": "未来ハーモニー",
+	"date": "2022/09/26",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 766,
+	"name": "Mari",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "レモンかミルクはいる？",
+	"cn2": "Thank you, FRIENDS!!",
+	"date": "2022/09/26",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 767,
+	"name": "Honoka",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "じゃーん、見て見て！",
+	"cn2": "フルスロットル☆サポーターズ",
+	"date": "2022/10/04",
+	"source": "gacha",
+	"desc": "「届け！　情熱のエール！ガチャ」で追加"
+},
+{
+	"id": 768,
+	"name": "You",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "い、いやちょっと褒めすぎだって",
+	"cn2": "Thank you, FRIENDS!!",
+	"date": "2022/10/04",
+	"source": "gacha",
+	"desc": "「届け！　情熱のエール！ガチャ」で追加"
+},
+{
+	"id": 769,
+	"name": "Ai",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "エールをおくるよ！",
+	"cn2": "フルスロットル☆サポーターズ",
+	"date": "2022/10/04",
+	"source": "gacha",
+	"desc": "「届け！　情熱のエール！ガチャ」で追加"
+},
+{
+	"id": 770,
+	"name": "Lanzhu",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Gd",
+	"cn1": "全てが誰かの力になるの！",
+	"cn2": "フルスロットル☆サポーターズ",
+	"date": "2022/10/07",
+	"source": "reward",
+	"desc": "イベント「届け！　情熱のエール！」報酬"
+},
+{
+	"id": 771,
+	"name": "Kotori",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "えへへ、任せて♪",
+	"cn2": "Mermaid festa vol.1",
+	"date": "2022/10/07",
+	"source": "reward",
+	"desc": "イベント「届け！　情熱のエール！」報酬 (交換所枠)"
+},
+{
+	"id": 772,
+	"name": "Riko",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sk",
+	"cn1": "落ち着いて、ランジュちゃん！",
+	"cn2": "Thank you, FRIENDS!!",
+	"date": "2022/10/07",
+	"source": "reward",
+	"desc": "イベント「届け！　情熱のエール！」報酬 (ランキング枠)"
+},
 ];
-const LatestUpdate = "2022/09/14 「パーティーガチャ」まで";
+const LatestUpdate = "2022/10/07 イベント「届け！　情熱のエール！」まで";

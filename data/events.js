@@ -647,4 +647,13 @@ const EventList = [
 	"UR" : ["Hanayo", "Dia", "Kasumi"],
 	"SR" : ["Nozomi", "Hanamaru", "Karin"]
 },
+{
+	"id" : 73,
+	"name" : "届け！　情熱のエール！",
+	"type" : "exchange",
+	"started" : new Date("2022-10-07T15:00:00+09:00"),
+	"ended"   : new Date("2022-10-14T14:59:59+09:00"),
+	"UR" : ["Honoka", "Ai", "Lanzhu"],
+	"SR" : ["Kotori", "Riko", "You"]
+},
 ];
