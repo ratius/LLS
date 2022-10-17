@@ -8450,5 +8450,29 @@ const RawCardList = [
 	"source": "reward",
 	"desc": "イベント「届け！　情熱のエール！」報酬 (ランキング枠)"
 },
+{
+	"id": 773,
+	"name": "Yoshiko",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "んっ、あと、もう、ちょっと！",
+	"cn2": "妖艶の巫女",
+	"date": "2022/10/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 774,
+	"name": "Maki",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Gd",
+	"cn1": "どうして私のサインカードが！？",
+	"cn2": "Mermaid festa vol.1",
+	"date": "2022/10/14",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
+},
 ];
-const LatestUpdate = "2022/10/07 イベント「届け！　情熱のエール！」まで";
+const LatestUpdate = "2022/10/14 「パーティーガチャ」まで";
