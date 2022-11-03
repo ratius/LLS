@@ -656,4 +656,22 @@ const EventList = [
 	"UR" : ["Honoka", "Ai", "Lanzhu"],
 	"SR" : ["Kotori", "Riko", "You"]
 },
+{
+	"id" : 74,
+	"name" : "いたずら魔女のお菓子パーティ",
+	"type" : "story",
+	"started" : new Date("2022-10-22T15:00:00+09:00"),
+	"ended"   : new Date("2022-10-30T14:59:59+09:00"),
+	"UR" : ["Nozomi", "Ruby", "Emma"],
+	"SR" : ["Honoka", "Chika", "Shioriko"]
+},
+{
+	"id" : 75,
+	"name" : "彼方の和菓子と照る山紅葉",
+	"type" : "exchange",
+	"started" : new Date("2022-10-07T15:00:00+09:00"),
+	"ended"   : new Date("2022-10-14T14:59:59+09:00"),
+	"UR" : ["Nico", "Riko", "Kanata"],
+	"SR" : ["Eli", "Shizuku", "Mia"]
+},
 ];
