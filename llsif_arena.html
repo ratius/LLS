@@ -20,7 +20,7 @@
 
 <title>ライブ♪アリーナまとめ | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="main.css" media="print" onload="this.media='all'">
 <style><!--
 
 #info-box {
@@ -312,14 +312,46 @@ function CreateDebugLog(obj){
 	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
 </div>
 
-<section id="StoryViewer" style="display: none;">
+<section id="StoryViewer">
 	<h3 class="muse">過去のテキスト</h3>
+	<p>以下のいずれかを行うことで、表示回を切り替えることができます。</p>
+	<ul>
+		<li>上部のタイトル部分のセレクトボックスで、表示したい回を選択する</li>
+		<li>上部の「前回」「次回」ボタンを押す</li>
+		<li>テキスト部分にフォーカスを当てた状態で、キーボードのカーソルキーの左右を押す</li>
+	</ul>
+	
+	<div id="info-box">
+		<table id="info-table">
+			<tbody>
+				<tr>
+					<th id="ButtonLeft"  rowspan="2" onclick="false"><span style="font-size:35px">&#x2b05;</span><br>前回</th>
+					<th id="HeaderUpper"><select id="select-box" onchange="WriteMessage()"></select></th>
+					<th id="ButtonRight" rowspan="2" onclick="false"><span style="font-size:35px">&#x2b95;</span><br>次回</th>
+				</tr>
+				<tr>
+					<th><span id="sub"></span></th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div id="message-box" tabindex="0">
+		<table id="message-table">
+			<tbody id="message-list"></tbody>
+		</table>
+	</div>
 </section>
 
 <section>
 <h3 class="niji">更新履歴</h3>
 <p>下のボックス内の、色つきの日付の行をクリックすると展開/折りたたみされます。</p>
 <div id="history2">
+	<details open>
+		<summary><span class="date">2022/11/05</span> - レンダリング最適化</summary>
+		<div>
+			<span class="fix"></span>レンダリングの最適化
+		</div>
+	</details>
 	<details open>
 		<summary><span class="date">2022/11/03</span></summary>
 		<div>
@@ -450,41 +482,14 @@ function loadScript(src, callback) {
 loadScript("data/arena.js", function() {
 	const TimeOutputStart = performance.now();
 	
-	//◆描画
-	let Output = 
-	  '<p>以下のいずれかを行うことで、表示回を切り替えることができます。<\/p>\n'
-	+ '<ul>\n\t<li>上部のタイトル部分のセレクトボックスで、表示したい回を選択する<\/li>\n'
-	+ '\t<li>上部の「前回」「次回」ボタンを押す<\/li>\n'
-	+ '\t<li>テキスト部分にフォーカスを当てた状態で、キーボードのカーソルキーの左右を押す<\/li>\n<\/ul>\n'
-
-	//◆ボックス上部
-	+ '<div id="info-box">\n<table id="info-table">\n<tbody>\n<tr>\n'
-	
-	//○左
-	+ '<th id="ButtonLeft" rowspan="2" onclick="false"><span style="font-size:35px">&#x2b05;<\/span><br>前回<\/th>\n'
-	
-	//○上
-	+ '<th id="HeaderUpper">'
-	+ '\n<select id="select-box" onchange="WriteMessage()">\n';
-	for(i=0; i<ArenaData.length; i++){
-		Output += '\t<option>' + ArenaData[i].title + '<\/option>\n';
+	//セレクトボックスの要素を追加
+	for(temp1 of ArenaData){
+		var temp2 = document.createElement("option");
+		temp2.text = temp1.title;
+		document.getElementById("select-box").appendChild(temp2);
 	}
-	Output += '<\/select>\n<\/th>\n'
-
-	//○右
-	+ '<th id="ButtonRight" rowspan="2" onclick="false"><span style="font-size:35px">&#x2b95;<\/span><br>次回<\/th>\n<\/tr>\n'
-
-	//○下
-	+ '<tr>\n<th><span id="sub"><\/span><\/th>\n<\/tr>\n'
-	+ '<\/tbody>\n<\/table>\n<\/div>\n'
-
-	//◆ボックス下部
-	+ '<div id="message-box" tabindex="1">\n'
-	+ '<table id="message-table">\n<tbody id="message-list">\n<\/tbody>\n<\/table>\n<\/div>\n';
 	
-	document.getElementById("StoryViewer").innerHTML += Output;
 	WriteMessage(0);
-	document.getElementById("StoryViewer").style.display = "block";
 
 	document.addEventListener('keydown', function(){
 		act = document.activeElement.toString();
