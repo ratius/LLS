@@ -273,21 +273,10 @@ function DrawRoundButton(CharId, EventId, Prefix){
 
 //■イベント一覧
 function WriteEventList(){
-	let Output = '\n<div id="Event-Border"><table id="EventList">\n';
-
-	//■ヘッダー
-	Output += '<thead>\n<tr class="header-top">\n'
-	+ '<th rowspan="2" class="border-r border-b">No.<\/th>'
-	+ '<th rowspan="2" class="border-r border-b">イベント名<\/th>'
-	+ '<th rowspan="2" class="border-r border-b">タイプ<\/th>'
-	+ '<th rowspan="2" class="border-r border-b">開催期間<\/th>'
-	+ '<th colspan="2" class="border-r">参加キャラクター<\/th><\/tr>\n'
-	+ '<tr><th class="border-b">UR<\/th>'
-	+ '<th class="border-r border-b">SR<\/th<\/tr>\n<\/thead>\n<tbody>\n';
+	let Output = '';
 
 	//■メイン
-	let CurrentEvent;
-	for(CurrentEvent of EventList){
+	for(const CurrentEvent of EventList){
 		Output += '<tr><td style="text-align:center;">' + CurrentEvent.id
 		+ '<\/td><td>' + CurrentEvent.name
 		+ '<\/td><td style="font-size: small; text-align:center;';
@@ -328,8 +317,7 @@ function WriteEventList(){
 		}
 		Output +=  '<\/td><\/tr>';
 	}
-	Output += '<\/tbody>\n<\/table>\n<\/div>\n';
-	return Output;
+	document.getElementById("EventList-contents").innerHTML += Output;
 }
 
 //■トリオ用のデータ集計。最大4重の配列で格納する
@@ -425,68 +413,58 @@ function DrawSingleTable(CharList){
 // ■「ペア共演状況」テーブルの作成
 function DrawPairTable(){
 
-	//■親テーブル
-	let Output = '<table id="Pair-Table">\n<thead>\n<tr>\n';
-
-		//■左上
-		Output += '<td>\n<div class="PT-Top PT-Left" id="PT-TL"><\/div><\/td>\n';
-
-		//■右上
-		Output += '<td><div class="PT-Top PT-Right" id="PT-TR">\n'
-		+ '<table class="quarter-table" style="width: ' + (TagDataLength*PairTableWidth) + 'px">\n<thead>\n<tr>\n';
-		for(x in TagData){
-			//キャラクター名取得
-			Output += '<th class="bg_' + x + '"><strong class="shadowname">'
-			+ TagData[x].name + '<\/strong><\/th>\n';
-		}
-		Output += '<\/tr>\n<\/thead>\n<\/table>\n<\/div>\n<\/td>';
+	//■右上
+	var Output = '<table class="quarter-table" style="width: '
+	+ (TagDataLength*PairTableWidth) + 'px">\n<thead>\n<tr>\n';
 	
-	Output += '<\/tr>\n<\/thead>\n<tbody>\n<tr>';
-	
-		//■左下
-		Output += '<td><div class="PT-Bottom PT-Left" id="PT-BL">\n'
-		+ '<table class="quarter-table">\n<tbody>\n';
+	for(x in TagData){
+		//キャラクター名取得
+		Output += '<th class="bg_' + x + '"><strong class="shadowname">'
+		+ TagData[x].name + '<\/strong><\/th>\n';
+	}
+	Output += '<\/tr>\n<\/thead>\n<\/table>';
+	document.getElementById("PT-TR").innerHTML = Output;
+
+	//■左下
+	Output = '<table class="quarter-table">\n<tbody>\n';
 		
-		for(y in TagData){
-			Output += '<tr><th class="bg_' + y + '"><strong class="shadowname">'
-			+ TagData[y].name + '<\/strong><\/th><\/tr>\n';
-		}
-		Output += '<\/tbody>\n<\/table>\n<\/div><\/td>\n';
+	for(y in TagData){
+		Output += '<tr><th class="bg_' + y + '"><strong class="shadowname">'
+		+ TagData[y].name + '<\/strong><\/th><\/tr>\n';
+	}
+	Output += '<\/tbody>\n<\/table>';
+	document.getElementById("PT-BL").innerHTML = Output;
 
-		//■右下
-		Output += '<td><div class="PT-Bottom PT-Right" id="PT-BR" onscroll="SyncScroll();">\n'
-		+ '<table class="quarter-table" style="width: ' + (TagDataLength*PairTableWidth) + 'px">\n<tbody>\n';
-		for(y in TagData){
-			Output += '<tr>\n';
-			for(x in TagData){
-				if(x === y){ //同キャラは灰色
-					Output += '<td style="background-color:#aaa"><\/td>\n';
-				}else {
-					let CirclesInRow = 0; //丸の個数を数えて、必要に応じて改行
-					Output += '<td class="bg_tp_white bg_' + y + '">'
-					
-					const temp1 = [TagData[x].number, TagData[y].number].sort(function(a,b){return a-b});
-
-					if(TrioHistory[temp1[0]][temp1[1]-temp1[0]][0].length == 0){
-						Output += '－';
-					}
-
-					for(z of TrioHistory[temp1[0]][temp1[1]-temp1[0]][0]){
-						Output += DrawRoundButton(x, z, TagData[x].name + '・' + TagData[y].name)
-						
-						if(++CirclesInRow == 4){ //改行処理
-							Output += '<br>';
-							CirclesInRow = 0;
-						}
-					}
-					Output += '<\/td>\n';
+	//■右下
+	Output = '<table class="quarter-table" style="width: ' + (TagDataLength*PairTableWidth) + 'px">\n<tbody>\n';
+	
+	for(y in TagData){
+		Output += '<tr>\n';
+		for(x in TagData){
+			if(x === y){ //同キャラは灰色
+				Output += '<td style="background-color:#aaa"><\/td>\n';
+			}else {
+				let CirclesInRow = 0; //丸の個数を数えて、必要に応じて改行
+				Output += '<td class="bg_tp_white bg_' + y + '">'
+				const temp1 = [TagData[x].number, TagData[y].number].sort(function(a,b){return a-b});
+				if(TrioHistory[temp1[0]][temp1[1]-temp1[0]][0].length == 0){
+					Output += '－';
 				}
+				for(z of TrioHistory[temp1[0]][temp1[1]-temp1[0]][0]){
+					Output += DrawRoundButton(x, z, TagData[x].name + '・' + TagData[y].name)
+					
+					if(++CirclesInRow == 4){ //改行処理
+						Output += '<br>';
+						CirclesInRow = 0;
+					}
+				}
+				Output += '<\/td>\n';
 			}
-			Output += '<\/tr>\n';
 		}
-
-	Output += '<\/table><\/div><\/td>\n<\/tr>\n<\/tbody>\n<\/table>';
-	return Output;
+		Output += '<\/tr>\n';
+	}
+	Output += '<\/table>';
+	document.getElementById("PT-BR").innerHTML = Output;
 }
 
 // ■「トリオ重複状況」テーブルの作成
@@ -558,6 +536,24 @@ function SyncScroll() {
 
 <section id="EventList">
 	<h3 class="muse">イベント一覧</h3>
+	<div id="Event-Border">
+		<table id="EventList">
+			<thead>
+			<tr class="header-top">
+				<th rowspan="2" class="border-r border-b">No.</th>
+				<th rowspan="2" class="border-r border-b">イベント名</th>
+				<th rowspan="2" class="border-r border-b">タイプ</th>
+				<th rowspan="2" class="border-r border-b">開催期間</th>
+				<th colspan="2" class="border-r">参加キャラクター</th>
+			</tr>
+			<tr>
+				<th class="border-b">UR</th>
+				<th class="border-r border-b">SR</th>
+			</tr>
+		</thead>
+		<tbody id="EventList-contents"></tbody>
+		</table>
+	</div>
 </section>
 
 <section id="SingleData">
@@ -566,6 +562,20 @@ function SyncScroll() {
 
 <section id="PairData">
 	<h3 class="niji">ペア共演状況</h3>
+	<table id="Pair-Table">
+		<thead>
+			<tr>
+				<td><div class="PT-Top PT-Left" id="PT-TL"></div></td>
+				<td><div class="PT-Top PT-Right" id="PT-TR"></div></td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><div class="PT-Bottom PT-Left" id="PT-BL"></div></td>
+				<td><div class="PT-Bottom PT-Right" id="PT-BR" onscroll="SyncScroll();"></div></td>
+			</tr>
+		</tbody>
+	</table>
 </section>
 
 <section id="TrioData">
@@ -680,15 +690,14 @@ loadScript("data/events.js", function() {
 	let CardList = [];
 	MakeTrioData();
 
-	document.getElementById("EventList").innerHTML += WriteEventList();
-
 	document.getElementById("SingleData").innerHTML += '\n'
 	+ DrawSingleTable(['Honoka', 'Eli', 'Kotori', 'Umi', 'Rin', 'Maki', 'Nozomi', 'Hanayo', 'Nico'])
 	+ DrawSingleTable(['Chika', 'Riko', 'Kanan', 'Dia', 'You', 'Yoshiko', 'Hanamaru', 'Mari', 'Ruby'])
 	+ DrawSingleTable(['Ayumu', 'Kasumi', 'Shizuku', 'Karin', 'Ai', 'Kanata', 'Setsuna', 'Emma', 'Rina'])
 	+ DrawSingleTable(['Shioriko', 'Mia', 'Lanzhu', '', '', '', '', '', '']);
 	
-	document.getElementById("PairData").innerHTML += DrawPairTable();
+	WriteEventList();
+	DrawPairTable();
 	
 	document.getElementById("TrioData").innerHTML += DrawDuplicatedTrioList();
 	
@@ -742,6 +751,15 @@ loadScript("data/events.js", function() {
 				isError++;
 			}
 		}
+
+		for(i in EventList){
+			if(EventList[i].id - 1 != i){
+				console.log((EventList[i].id-1) + ", " + i);
+				console.log('[Error] イベント番号が不正 (' + EventList[i].id + ')\n\tイベント名: ' + EventList[i].name);
+				isError++;
+			}
+		}
+
 		if(isError > 0){
 			alert('' + isError + '件のエラーが見つかりました。コンソールを確認してください。');
 		}
