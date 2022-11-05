@@ -20,36 +20,38 @@
 <title>スクスタ 過去のイベントまとめ | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main.css">
-<link rel="stylesheet" href="color_sifas.css">
+<link rel="stylesheet" href="color_sifas.css" media="print" onload="this.media='all'">
 <style><!--
 
-#Event-Border{ width: min(calc(100% - 20px), 1200px);}
-
-#Event-Border {
+/*■スクロール可能なテーブル */
+.FixedHeader {
 	overflow-y: scroll;
-	border: solid 3px rgb(226,6,126);
+	width: min(calc(100% - 20px), 1200px);
 	height: calc(80vh - 30px);
-	background-color: rgb(255, 240, 247);
 }
 
-#Event-Border table {
+.FixedHeader table {
 	width: 100%;
 	border-collapse: separate;
 	border-spacing: 0;
 }
 
-#EventList thead {
+.FixedHeader thead {
 	position: sticky;
+	z-index: 3;
 	top: 0;
-	background-color: #f4abd2;
-}
-#EventList thead tr:nth-child(2){
-	background-color: #ffdbef;
 }
 
-#EventList thead .border-r { border-right: solid 1px #e2067e;}
-#EventList thead .border-b { border-bottom: solid 2px #e2067e;}
+/*■色指定：イベント一覧 */
+#EventList-Border {
+	border: solid 3px #e50080;
+	background-color: rgb(255, 240, 247);
+}
 
+#EventList thead { background-color: #f4abd2;}
+#EventList thead tr:nth-child(2){ background-color: #ffdbef;}
+#EventList thead .border-r { border-right: solid 1px #e50080;}
+#EventList thead .border-b { border-bottom: solid 2px #e50080;}
 
 #EventList tbody td{
 	padding: 2px 5px;
@@ -61,17 +63,24 @@
 #EventList .group_A { background-color: #dbf4ff; }
 #EventList .group_N { background-color: #ffefd6; }
 
-
-#Single-Table {
-	width: calc(100% - 15px);
-	text-align: center;
-	border-collapse: collapse;
-	border: 2px solid #00a0ea;
+/*■色指定：キャラクター登場状況一覧 */
+#SingleData-Border {
+	border: solid 3px #19b1f6;
+	background-color: rgb(240, 247, 255);
 }
 
-td.sttd {
-	border-right: 1px solid #aaa;
-	border-bottom: 1px solid #aaa;
+#SingleData thead { background-color: #9de3fe;}
+#SingleData thead .border-r { border-right: solid 1px #19b1f6;}
+#SingleData thead .border-b { border-bottom: solid 2px #19b1f6;}
+#SingleData tbody tr{ height: 30px; }
+#SingleData tbody td{
+	padding: 2px 5px;
+	border-right: solid 1px #ccc;
+	border-bottom: solid 1px #bbb;
+}
+
+#Single-Table {
+	border: 2px solid #00a0ea;
 }
 
 #Pair-Table {
@@ -130,9 +139,6 @@ td.sttd {
 }
 
 #Trio-Border thead{
-	position: sticky;
-	z-index: 3;
-	top: 0;
 	background-color: rgb(242, 195, 237);
 }
 
@@ -380,37 +386,27 @@ function MakeTrioData(){
 }
 
 // ■「キャラクター登場状況」テーブルの作成（キャラ別）
-function DrawSingleTable(CharList){
-	let Output1 = '<tr>\n'; //キャラ名
-	let Output2 = '<tr style="background-color: white;">\n'; //回数
-	let Output3 = '<tr>\n'; //ボタン
-
-	for(CharId of CharList){
-		if(CharId === ''){ //空白
-			Output1 += '<th style="width:' + (100/CharList.length) + '%"><\/th>\n';
-			Output2 += '<td><\/td>\n';
-			Output3 += '<td><\/td>\n';
-		} else {
-			if (CharId in TagData){
-				const CharNumber = TagData[CharId].number;
-				
-				Output1 += '<th class="bg_' + CharId + '" style="width:' + (100/CharList.length) + '%">'
-				+ '<strong class="shadowname">' + TagData[CharId].name + '<\/strong><\/th>\n';
-				
-				Output2 += '<td class="sttd">' + TrioHistory[CharNumber][0].length + '回<br><\/td>';
-				
-				Output3 += '<td class="sttd bg_tp_white bg_' + CharId + '">';
-				for(CurrentEvent of TrioHistory[CharNumber][0]){
-					Output3 += DrawRoundButton(CharId, CurrentEvent, false);
-					
-				}
-			}
+function DrawSingleTable(){
+	let Output = '';
+	
+	for(const CharId in TagData){
+		const CharNumber = TagData[CharId].number;
+		
+		Output += '<tr><th class="bg_' + CharId + '">'
+		+ '<strong class="shadowname">' + TagData[CharId].name + '<\/strong><\/th>'
+		+ '<td class="sttd" style="text-align:center;">' + TrioHistory[CharNumber][0].length + '<br><\/td>'
+		+ '<td class="sttd">';
+		
+		let k = 0;
+		for(CurrentEvent of TrioHistory[CharNumber][0]){
+			Output += DrawRoundButton(CharId, CurrentEvent, false);
+			if(++k >= 5){ Output += " "; k=0;}
 		}
+		Output += '<\/tr>\n';
+		
 	}
-	return '<table id="Single-Table">\n<thead>\n' 
-	+ Output1 + '<\/tr>\n<\/thead>\n'
-	+ '<tbody>\n' + Output2 + '<\/tr>\n'
-	+ Output3 + '<\/tr>\n<\/tbody>\n<\/table>\n';
+	
+	document.getElementById("SingleData-contents").innerHTML += Output;
 }
 
 // ■「ペア共演状況」テーブルの作成
@@ -472,8 +468,7 @@ function DrawPairTable(){
 
 // ■「トリオ重複状況」テーブルの作成
 function DrawDuplicatedTrioList(){
-	let Output = '<div id="Trio-Border"><table id="Trio-Table">\n'
-	+ '<thead>\n<tr>\n<th colspan="3">重複トリオ<\/th><th>回数<\/th><th>参加イベント<\/th><\/tr><\/thead>\n<tbody>'
+	let Output = '';
 
 	for(temp1=0; temp1<TrioHistory.length; temp1++){
 		for(temp2=1; temp2<TrioHistory[temp1].length; temp2++){
@@ -504,8 +499,7 @@ function DrawDuplicatedTrioList(){
 			}
 		}
 	}
-	Output += '<\/tbody>\n<\/table><\/div>';
-	return Output;
+	document.getElementById("TrioData-contents").innerHTML += Output;
 }
 
 //■スクロールバー連動
@@ -537,30 +531,42 @@ function SyncScroll() {
 	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
 </div>
 
-<section id="EventList">
+<section>
 	<h3 class="muse">イベント一覧</h3>
-	<div id="Event-Border">
+	<div id="EventList-Border" class="FixedHeader">
 		<table id="EventList">
 			<thead>
-			<tr class="header-top">
-				<th rowspan="2" class="border-r border-b">No.</th>
-				<th rowspan="2" class="border-r border-b">イベント名</th>
-				<th rowspan="2" class="border-r border-b">タイプ</th>
-				<th rowspan="2" class="border-r border-b">開催期間</th>
-				<th colspan="2" class="border-r">参加キャラクター</th>
-			</tr>
-			<tr>
-				<th class="border-b">UR</th>
-				<th class="border-r border-b">SR</th>
-			</tr>
-		</thead>
-		<tbody id="EventList-contents"></tbody>
+				<tr class="header-top">
+					<th rowspan="2" class="border-r border-b">No.</th>
+					<th rowspan="2" class="border-r border-b">イベント名</th>
+					<th rowspan="2" class="border-r border-b">タイプ</th>
+					<th rowspan="2" class="border-r border-b">開催期間</th>
+					<th colspan="2" class="border-r">参加キャラクター</th>
+				</tr>
+				<tr>
+					<th class="border-b">UR</th>
+					<th class="border-r border-b">SR</th>
+				</tr>
+			</thead>
+			<tbody id="EventList-contents"></tbody>
 		</table>
 	</div>
 </section>
 
-<section id="SingleData">
+<section>
 	<h3 class="aqours">キャラクター登場状況</h3>
+	<div id="SingleData-Border" class="FixedHeader">
+		<table id="SingleData">
+			<thead>
+				<tr>
+					<th class="border-r border-b" style="width: 100px;">キャラクター</th>
+					<th class="border-r border-b" style="width: 80px;">登場回数</th>
+					<th class="border-r border-b">参加イベント</th>
+				</tr>
+			</thead>
+			<tbody id="SingleData-contents"></tbody>
+		</table>
+	</div>
 </section>
 
 <section id="PairData">
@@ -581,8 +587,21 @@ function SyncScroll() {
 	</table>
 </section>
 
-<section id="TrioData">
+<section>
 	<h3 class="liella">トリオ重複状況</h3>
+	<div id="Trio-Border" class="FixedHeader">
+		<table id="Trio-Table">
+			<thead>
+				<tr>
+					<th colspan="3">重複トリオ</th>
+					<th>回数</th>
+					<th>参加イベント</th>
+				</tr>
+			</thead>
+			<tbody id="TrioData-contents">
+			</tbody>
+		</table>
+	</div>
 </section>
 
 <section>
@@ -590,6 +609,13 @@ function SyncScroll() {
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2022/11/05</span> - レイアウト調整</summary>
+		<div>
+			<span class="fix"></span>「キャラクター登場状況」をリニューアル<br>
+			<span class="fix"></span>レンダリングの最適化
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2022/06/25</span> - レイアウト調整</summary>
 		<div>
 			<span class="fix"></span>「イベント一覧」「トリオ重複状況」のヘッダーが固定されるように変更<br>
@@ -693,16 +719,10 @@ loadScript("data/events.js", function() {
 	let CardList = [];
 	MakeTrioData();
 
-	document.getElementById("SingleData").innerHTML += '\n'
-	+ DrawSingleTable(['Honoka', 'Eli', 'Kotori', 'Umi', 'Rin', 'Maki', 'Nozomi', 'Hanayo', 'Nico'])
-	+ DrawSingleTable(['Chika', 'Riko', 'Kanan', 'Dia', 'You', 'Yoshiko', 'Hanamaru', 'Mari', 'Ruby'])
-	+ DrawSingleTable(['Ayumu', 'Kasumi', 'Shizuku', 'Karin', 'Ai', 'Kanata', 'Setsuna', 'Emma', 'Rina'])
-	+ DrawSingleTable(['Shioriko', 'Mia', 'Lanzhu', '', '', '', '', '', '']);
-	
 	WriteEventList();
+	DrawSingleTable();
 	DrawPairTable();
-	
-	document.getElementById("TrioData").innerHTML += DrawDuplicatedTrioList();
+	DrawDuplicatedTrioList();
 	
 	document.getElementById("Loading").style.display = "none";
 
