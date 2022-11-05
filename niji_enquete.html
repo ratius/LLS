@@ -19,40 +19,46 @@
 <link rel="stylesheet" href="main.css">
 <style><!--
 
-#EnqueteList {
-	border: solid 3px #e2067e;
-	height: calc(80vh - 30px);
+/* 共通 */
+.FixedHeader {
 	overflow-y: scroll;
-	background-color: rgba(226,126,176,0.1);
+	width: min(calc(100% - 20px), 1200px);
+	height: calc(80vh - 30px);
 }
 
-#MostVotedList {
-	border: solid 3px #19b1f6;
-	height: calc(80vh - 30px);
-	overflow-y: scroll;
-	background-color: rgba(25,177,246,0.1);
-}
-
-#EnqueteList table, #MostVotedList table{
+.FixedHeader table{
 	width: 100%;
 	border-collapse: separate;
 	border-spacing: 0;
 	background-color: white;
 }
 
-#EnqueteList thead th {
+.FixedHeader thead th{
 	position: sticky;
 	top: 0;
 	padding: 2px 5px;
+}
+
+/*  マンスリーアンケート一覧*/
+#EnqueteTable {
+	border: solid 3px #e2067e;
+	background-color: rgba(226,126,176,0.1);
+}
+
+#MostVotedTable {
+	border: solid 3px #19b1f6;
+	height: calc(80vh - 30px);
+	overflow-y: scroll;
+	background-color: rgba(25,177,246,0.1);
+}
+
+#EnqueteTable thead th {
 	background-color: #f4abd2;
 	border-bottom: solid 3px #e2067e;
 	border-right: solid 1px #e2067e;
 }
 
-#MostVotedList thead th {
-	position: sticky;
-	top: 0;
-	padding: 2px 5px;
+#MostVotedTable thead th {
 	background-color: #75d0f9;
 	border-bottom: solid 3px #19b1f6;
 	border-right: solid 1px #19b1f6;
@@ -68,16 +74,16 @@ tbody td:last-child {
 	border-right: solid 1px #bbb;
 }
 
-#EnqueteList a {
+#EnqueteTable a {
 	font-size: 190%;
 	text-decoration: none;
 }
 
-.underline:hover {
+.TitleButton:hover {
 	font-weight: bold;
 	background-color: #fc9;
 }
-.underline {
+.TitleButton {
 	width: 70px;
 	text-align: center;
 	display: inline-block;
@@ -126,12 +132,38 @@ if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
 	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
 </div>
 
-<section id="EnqueteHistory">
+<section>
 	<h3 class="muse">マンスリーアンケート一覧</h3>
+	<p>下表の右にある矢印をクリックすると、結果発表ページを開きます。</p>
+	<div id="EnqueteTable" class="FixedHeader">
+		<table>
+			<thead>
+				<tr>
+					<th>No.</th>
+					<th>投票期間</th>
+					<th>お題</th>
+					<th colspan="2">最多得票キャラクター</th>
+					<th style="white-space: nowrap;">リンク</th>
+				</tr>
+			</thead>
+			<tbody id="Enquete-result"></tbody>
+		</table>
+	</div>
 </section>
 
-<section id="MostVoted">
+<section>
 	<h3 class="aqours">キャラ別最多得票</h3>
+	<p>PCで閲覧している場合、「第○回」のボタンにカーソルを合わせることで、ツールチップにその回のテーマが表示されます。</p>
+	<div id="MostVotedTable" class="FixedHeader">
+		<table>
+			<thead>
+				<tr>
+					<th style="width: 150px;">キャラクター</th>
+					<th>最多得票</th>
+				</tr>
+			</thead>
+			<tbody id="MostVoted-result"></tbody>
+		</table>
 </section>
 
 <section>
@@ -139,6 +171,12 @@ if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2022/11/05</span> - レンダリング最適化</summary>
+		<div>
+			<span class="fix"></span>レンダリングの最適化
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2022/07/28</span> - 「キャラ別最多得票」追加</summary>
 		<div>
 			<span class="new"></span>「キャラ別最多得票」の節を追加
@@ -182,13 +220,8 @@ function loadScript(src, callback) {
 loadScript("data/enquete.js", function() {
 	const TimeOutputStart = performance.now();
 
-	document.getElementById("EnqueteHistory").innerHTML +=
-	  '<p>下表の右にある矢印をクリックすると、結果発表ページを開きます。<\/p>\n'
-	+ DrawEnqueteList();
-	
-	document.getElementById("MostVoted").innerHTML +=
-	  '<p>PCで閲覧している場合、「第○回」のボタンにカーソルを合わせることで、ツールチップにその回のテーマが表示されます。<\/p>'
-	+ DrawMostVoted();
+	DrawEnqueteTable();
+	DrawMostVoted();
 
 	//◆「Now Loading...」解除
 	document.getElementById("Loading").style.display = "none";
