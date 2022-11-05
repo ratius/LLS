@@ -360,6 +360,17 @@ const EnqueteList = [
 	"theme" : "もし寿司屋か蕎麦屋になるなら、それぞれぴったりなメンバーは？",
 	"option1" : "寿司屋",
 	"option2" : "蕎麦屋",
+	"winner1" : "Karin",
+	"winner2" : "Shioriko"
+},
+{
+	"id": 34,
+	"url" : "https://lovelive-as.bushimo.jp/selects/q202208/",
+	"started" : new Date("2022-10-26T21:15:00+09:00"),
+	"ended"   : new Date("2022-11-01T23:59:59+09:00"),
+	"theme" : "もしアナウンサーかお天気キャスターになるなら、それぞれぴったりなメンバーは？",
+	"option1" : "アナウンサー",
+	"option2" : "お天気キャスター",
 	"winner1" : "",
 	"winner2" : ""
 },
@@ -399,18 +410,11 @@ function GetStringFromDate(date,hm){
 	return temp2;
 }
 
-//■マンスリーアンケート一覧
-function DrawEnqueteList(){
-	let Output = '<div id="EnqueteList"><table>';
-	
-	//◆ヘッダー
-	Output += '<thead><th>No.<\/th><th>投票期間<\/th><th>お題<\/th>'
-	+ '<th colspan="2">最多得票キャラクター<\/th><th style="white-space: nowrap;">リンク<\/th><\/tr><\/thead>';
-	
-	//◆メイン
-	Output += '<tbody>'
+//■「マンスリーアンケート一覧」の描画
+function DrawEnqueteTable(){
+	let Output = '';
 	for(temp of EnqueteList){
-		if(!temp.id){ continue;}
+		if(!temp.id){ continue;} //ID未指定ならスキップ
 		Output += '<tr><td style="text-align:center">' + temp.id + '<\/td>\n'
 		+ '<td style="font-size: small; white-space: nowrap;">開始：' + GetStringFromDate(temp.started) + '<br>'
 		+ '終了：' + GetStringFromDate(temp.ended) + '<\/td>\n'
@@ -431,39 +435,28 @@ function DrawEnqueteList(){
 			Output += '<td><\/td>\n<td><\/td>\n';
 		}
 		Output += '<\/tr>\n';
-
 	}
-	Output += '<\/tbody>\n<\/table>\n<\/div>'
-	
-	return Output;
+	document.getElementById("Enquete-result").innerHTML = Output;
 }
 
-//■キャラ別最多得票
+//■「キャラ別最多得票」の描画
 function DrawMostVoted(){
-	let Output = '<div id="MostVotedList"><table>';
-	
-	//◆ヘッダー
-	Output += '<thead><th style="width: 150px;">キャラクター<\/th><th>最多得票<\/th><\/tr><\/thead>';
-	
-	//◆メイン
-	Output += '<tbody>'
-	
+	let Output = '';
 	for(const CharTemp in NameFromID){
 		Output += '<tr><th class="bg_' + CharTemp + '">' + NameFromID[CharTemp] + '<\/th><td>';
 		for(const EventTemp of EnqueteList){
 			if(CharTemp === EventTemp["winner1"]){
-				Output += '<span class="underline" title="' + EventTemp["theme"] + '">'
+				Output += '<span class="TitleButton" title="' + EventTemp["theme"] + '">'
 				+ '第' + EventTemp["id"] + '回<\/span>「'
 				+ EventTemp["option1"] + '」1位<br>';
 			}		
 			if(CharTemp === EventTemp["winner2"]){
-				Output += '<span class="underline" title="' + EventTemp["theme"] + '">'
+				Output += '<span class="TitleButton" title="' + EventTemp["theme"] + '">'
 				+ '第' + EventTemp["id"] + '回<\/span>「'
 				+ EventTemp["option2"] + '」1位<br>';
 			}		
 		}
 		Output += '<\/td><\/tr>\n';
 	}
-	Output += '<\/tbody>\n<\/table>\n<\/div>'
-	return Output;
+	document.getElementById("MostVoted-result").innerHTML = Output;
 }
