@@ -6,7 +6,7 @@
 <meta property="og:url" content="https://ratius.github.io/LLS/sifas_event.html">
 <meta property="og:title" content="スクスタ 過去のイベントまとめ">
 <meta property="og:type" content="website">
-<meta property="og:description" content="スクスタ内におけるキャラクターの呼び方のまとめです。">
+<meta property="og:description" content="スクスタのイベントストーリーで開催されたイベント、および共演したペアのまとめです。">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@ratius55">
@@ -63,7 +63,7 @@
 #EventList .group_A { background-color: #dbf4ff; }
 #EventList .group_N { background-color: #ffefd6; }
 
-/*■色指定：キャラクター登場状況一覧 */
+/*■個別指定：キャラクター登場状況一覧 */
 #SingleData-Border {
 	border: solid 3px #19b1f6;
 	background-color: rgb(240, 247, 255);
@@ -83,6 +83,7 @@
 	border: 2px solid #00a0ea;
 }
 
+/*■個別指定：ペア共演状況 */
 #Pair-Table {
 	width: calc(100% - 14px);
 	height: 80vh;
@@ -124,18 +125,10 @@
 .bg_Lanzhu{ font-size:10pt;}
 
 
+/*■個別指定：トリオ重複状況 */
 #Trio-Border{
-	overflow-y: scroll;
 	border: solid 3px #da57d8;
-	width: calc(100% - 20px);
-	height: calc(80vh - 30px);
 	background-color: rgba(226,126,176,0.1);
-}
-
-#Trio-Border table {
-	width: 100%;
-	border-collapse: separate;
-	border-spacing: 0;
 }
 
 #Trio-Border thead{
@@ -467,13 +460,13 @@ function DrawPairTable(){
 }
 
 // ■「トリオ重複状況」テーブルの作成
-function DrawDuplicatedTrioList(){
+function DrawDuplicatedTrioList(min){
 	let Output = '';
 
 	for(temp1=0; temp1<TrioHistory.length; temp1++){
 		for(temp2=1; temp2<TrioHistory[temp1].length; temp2++){
 			for(temp3=1; temp3<TrioHistory[temp1][temp2].length; temp3++){
-				if(TrioHistory[temp1][temp2][temp3].length > 1){
+				if(TrioHistory[temp1][temp2][temp3].length >= min){
 					const Char1Id = Object.keys(TagData)[temp1];
 					const Char2Id = Object.keys(TagData)[temp1+temp2];
 					const Char3Id = Object.keys(TagData)[temp1+temp2+temp3];
@@ -722,7 +715,7 @@ loadScript("data/events.js", function() {
 	WriteEventList();
 	DrawSingleTable();
 	DrawPairTable();
-	DrawDuplicatedTrioList();
+	DrawDuplicatedTrioList(2);
 	
 	document.getElementById("Loading").style.display = "none";
 
