@@ -39,7 +39,7 @@
 	border: solid 2px #a89;
 	padding: 4px;
 	width: min( calc(100% - 12px) , 900px);
-	height: calc(90vh - 120px);
+	height: calc(90vh - 100px);
 	overflow-y: scroll;
 }
 
@@ -51,16 +51,19 @@
 	margin: 5px 5px 10px;
 }
 
-.StoryTable thead td{
+.StoryTable th{
 	position: relative;
-	padding: 0;
 	height: 45px;
 	border: 2px;
 	border-style: solid;
 	border-color: inherit;
+	background: linear-gradient(90deg, rgba(255,255,255,0)0%, rgba(255,255,255,0.25) 100%);
+	padding-left: 15px;
+	text-align: left;
+	font-size: 140%;
 }
 
-.StoryTable tbody td {
+.StoryTable td {
 	padding: 5px 10px;
 	line-height: 170%;
 	border-width: 1px;
@@ -78,15 +81,6 @@
 	background-color: white;
 }
 
-.story-title {
-	font-size: 140%;
-	font-weight: bold;
-	background:linear-gradient(90deg, rgba(255,255,255,0)0%, rgba(255,255,255,0.25) 100%);
-}
-.story-title span {
-	margin-left: 15px;
-}
-
 .RoundButton {
 	display: inline-block;
 	margin: 1px auto;
@@ -102,65 +96,6 @@
 let isDebugMode = false;
 const Parameter = location.search.substring(1).split('&');
 if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
-
-//■各種データ
-const TagData = {
-	"none":       {"name": "欠損値",  "r":160, "g":160, "b":160 },
-	"main":       {"name": "メイン",  "r":122, "g":202, "b":223 },
-	"main2":      {"name": "メイン",  "r":160, "g":140, "b":240 },
-	"event":      {"name": "イベント","r":255, "g":130, "b":127 },
-	"kizuna":     {"name": "キズナ",  "r":119, "g":191, "b":220 },
-	"special":    {"name": "特殊",    "r":240, "g":192, "b":128 },
-
-	"Honoka":     {"name": "穂乃果",  "r":255, "g":163, "b": 54 },
-	"Eli":        {"name": "絵里",    "r":122, "g":238, "b":255 },
-	"Kotori":     {"name": "ことり",  "r":206, "g":191, "b":191 },
-	"Umi":        {"name": "海未",    "r": 23, "g":105, "b":255 },
-	"Rin":        {"name": "凛",      "r":219, "g":212, "b": 30 },
-	"Maki":       {"name": "真姫",    "r":255, "g": 80, "b": 62 },
-	"Nozomi":     {"name": "希",      "r":196, "g": 85, "b":246 },
-	"Hanayo":     {"name": "花陽",    "r":106, "g":230, "b":115 },
-	"Nico":       {"name": "にこ",    "r":255, "g": 79, "b":145 },
-	"Chika":      {"name": "千歌",    "r":255, "g":149, "b": 71 },
-	"Riko":       {"name": "梨子",    "r":255, "g":158, "b":172 },
-	"Kanan":      {"name": "果南",    "r": 39, "g":193, "b":183 },
-	"Dia":        {"name": "ダイヤ",  "r":219, "g":  8, "b": 57 },
-	"You":        {"name": "曜",      "r":102, "g":192, "b":255 },
-	"Yoshiko":    {"name": "善子",    "r":193, "g":202, "b":212 },
-	"Hanamaru":   {"name": "花丸",    "r":255, "g":208, "b": 16 },
-	"Mari":       {"name": "鞠莉",    "r":194, "g": 82, "b":198 },
-	"Ruby":       {"name": "ルビィ",  "r":255, "g":111, "b":190 },
-	"Ayumu":      {"name": "歩夢",    "r":255, "g":191, "b":224 },
-	"Kasumi":     {"name": "かすみ",  "r":213, "g":222, "b":112 },
-	"Shizuku":    {"name": "しずく",  "r":187, "g":237, "b":255 },
-	"Karin":      {"name": "果林",    "r": 74, "g": 47, "b":237 },
-	"Ai":         {"name": "愛",      "r":255, "g":130, "b": 70 },
-	"Kanata":     {"name": "彼方",    "r":190, "g":130, "b":255 },
-	"Setsuna":    {"name": "せつ菜",  "r":246, "g": 14, "b": 14 },
-	"Emma":       {"name": "エマ",    "r":143, "g":218, "b":121 },
-	"Rina":       {"name": "璃奈",    "r":208, "g":206, "b":225 },
-	"Shioriko":   {"name": "栞子",    "r": 36, "g":189, "b":139 },
-	"Mia":        {"name": "ミア",    "r":214, "g":213, "b":202 },
-	"Lanzhu":     {"name": "ランジュ","r":248,"g":200, "b":196 },
-	"Player":     {"name": "あなた",  "r":160, "g":192, "b":160 },
-
-	"Yukiho":     {"name": "雪穂",    "r":128, "g": 80, "b": 96 },
-	"Arisa":      {"name": "亜里沙",  "r":128, "g": 80, "b": 96 },
-	"456":        {"name": "よいつむ","r": 80, "g":112, "b":128 },
-	"Mito":       {"name": "美渡",    "r": 80, "g":112, "b":128 },
-	"Uchicchi":   {"name": "うちっちー","r": 80, "g":112, "b":128 },
-	"Haruka":     {"name": "遥",      "r":128, "g":112, "b": 80 },
-	"Misato":     {"name": "美里",    "r":128, "g":112, "b": 80 },
-	"Mai":        {"name": "マイ",    "r":128, "g":112, "b": 80 },
-	"Kaoruko":    {"name": "薫子",    "r":128, "g":112, "b": 80 },
-	"Uzuki":      {"name": "右月",    "r":128, "g":112, "b": 80 },
-	"Satsuki":    {"name": "左月",    "r":128, "g":112, "b": 80 },
-	"Hanpen":     {"name": "はんぺん","r":128, "g":112, "b": 80 },
-	"Rijicho":    {"name": "理事長",  "r":128, "g":112, "b": 80 },
-	"Asagi":      {"name": "浅希",    "r":128, "g":112, "b": 80 },
-	"Acting":     {"name": "演劇部部長","r":128, "g":112, "b": 80 },
-	"Basketball": {"name": "バスケ部部長","r":128, "g":112, "b": 80 },
-};
 
 //■■関数
 //■登場人物名の丸囲みを出力
@@ -184,7 +119,7 @@ function NarrowerEvent(changed){
 	temp1 = document.getElementById('N1');
 	temp1index = temp1.selectedIndex -1;
 	temp2 = document.getElementById('N2');
-	temp2index = temp2.selectedIndex-1;
+	temp2index = temp2.selectedIndex -1;
 
 	switch (changed){
 		case 1:
@@ -206,7 +141,7 @@ function NarrowerEvent(changed){
 		if (temp2index < 0){
 			return;
 		} else {
-			//◆出力します
+			//◆データを出力
 			const TimeOutputStart = performance.now();
 			
 			let Output = '';
@@ -231,8 +166,8 @@ function NarrowerEvent(changed){
 				+ Math.floor((coltemp2.b * 2 + 300)/5) + ');"'
 
 				Output += '>\n<thead>\n'
-				+ '<tr>\n\t<td colspan="2" class="story-title"><span>' + i.title + '<\/span>'
-				+ '<\/td>\n<\/tr>\n<\/thead>\n'
+				+ '<tr>\n\t<th colspan="2" class="story-title">' + i.title
+				+ '<\/th>\n<\/tr>\n<\/thead>\n'
 				
 				+ '<tbody>\n';
 				
@@ -281,6 +216,19 @@ function NarrowerEvent(changed){
 		「ラブライブ！スクールアイドルフェスティバル ALL STARS」に収録されている各種ストーリーの一覧です。<br>
 		イベントストーリーは、公式によるあらすじが設定されていませんが、ネタバレにならない程度に独自にあらすじを加えてあります。
 	</p>
+	
+	<h4 class="foreword">概要を確認可能なストーリー</h4>
+	<ul>
+		<li>メインストーリー：第<span id="ep_num_1"></span>章まで</li>
+		<li>イベントエピソード：「<span id="ep_num_2"></span>」まで</li>
+		<li>キズナエピソード：<ul>
+			<li>μ&#39;s：各<span id="ep_num_3"></span>話まで</li>
+			<li>Aqours：各<span id="ep_num_4"></span>話まで</li>
+			<li>ニジガク：初期9人 (各<span id="ep_num_5"></span>話まで)、栞子 (<span id="ep_num_6"></span>話まで)、ミア/ランジュ (<span id="ep_num_7"></span>話まで)</li>
+		</ul>
+		<li>アニメ連動ストーリー：1期・2期ともに掲載完了</li>
+		<li>サイドエピソード：掲載予定なし</li>
+	</ul>
 </section>
 
 <div id="Loading">
@@ -290,8 +238,15 @@ function NarrowerEvent(changed){
 	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
 </div>
 
-<section id="StoryViewer" style="display: none;">
+<section>
 	<h3 class="muse">便覧</h3>
+	<div style="margin-bottom: 10px;">
+		<select id="N1" onChange="NarrowerEvent(1)"><option>(カテゴリを選択)</option></select>
+		<select id="N2" onChange="NarrowerEvent(2)" style="display: none;"></select>
+	</div>
+	<div id="OutputArea">
+		<div style="margin:10px; font-size: 120%; color:#666;">(上のプルダウンメニューから、見たいストーリーを選んでください)</div>
+	</div>
 </section>
 
 <section>
@@ -299,6 +254,18 @@ function NarrowerEvent(changed){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2022/11/06</span></summary>
+		<div>
+			<span class="new"></span>ストーリーを新たに掲載
+			<ul>
+				<li>メインストーリー：第44章</li>
+				<li>キズナエピソード：ニジガク初期9名(第36話まで)、栞子(第23話まで)、ミア・ランジュ(第15話まで)</li>
+				<li>イベントエピソード：「いたずら魔女のお菓子パーティ」</li>
+			</ul>
+			<span class="fix"></span>レンダリングの最適化
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2022/10/17</span></summary>
 		<div>
 			<span class="new"></span>ストーリーを新たに掲載
@@ -768,82 +735,6 @@ function NarrowerEvent(changed){
 		</div>
 	</details>
 	<details>
-		<summary><span class="date">2020/11/24</span></summary>
-		<div>
-			<span class="new"></span>ストーリーを新たに掲載
-			<ul>
-				<li>メインストーリー：第8章・第9章</li>
-				<li>イベントエピソード：「最高の遊園地攻略法！？」</li>
-				<li>キズナエピソード：絵里・真姫・千歌 (全話)</li>
-				<li>TVアニメ連動ストーリー：第6～8話 (璃奈、彼方、しずく)</li>
-			</ul>
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2020/11/01</span></summary>
-		<div>
-			<span class="new"></span>ストーリーを新たに掲載
-			<ul>
-				<li>メインストーリー：第20章</li>
-				<li>キズナエピソード：穂乃果・ことり・凛・花陽 (13話)、しずく・果林・彼方 (全話)</li>
-				<li>TVアニメ連動ストーリー：第5話 (エマ)</li>
-			</ul>
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2020/10/25</span></summary>
-		<div>
-			<span class="new"></span>ストーリーを新たに掲載
-			<ul>
-				<li>メインストーリー：第19章</li>
-				<li>イベントエピソード：「楽しいハロウィンパーティー」まで全イベント</li>
-				<li>キズナエピソード：鞠莉 (全話)</li>
-				<li>TVアニメ連動ストーリー：第3～4話 (せつ菜、愛)</li>
-			</ul>
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2020/10/11</span></summary>
-		<div>
-			<span class="new"></span>ストーリーを新たに掲載
-			<ul>
-				<li>キズナエピソード：かすみ (全話)</li>
-				<li>TVアニメ連動ストーリー：第2話 (かすみ)</li>
-			</ul>
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2020/10/05</span></summary>
-		<div>
-			<span class="new"></span>ストーリーを新たに掲載
-			<ul>
-				<li>メインストーリー：第5～7章</li>
-				<li>キズナエピソード：ダイヤ・歩夢 (全話)、曜・ルビィ (最新話)</li>
-				<li>TVアニメ連動ストーリー：第1話 (歩夢)</li>
-			</ul>
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2020/09/24</span></summary>
-		<div>
-			<span class="new"></span>ストーリーを新たに掲載
-			<ul>
-				<li>イベントエピソード：「下町巡り珍道中」～「マジカル・タイム！」</li>
-				<li>キズナエピソード：花陽・曜・せつ菜・エマ (全話)</li>
-			</ul>
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2020/09/21</span></summary>
-		<div>
-			<span class="new"></span>ストーリーを新たに掲載
-			<ul>
-				<li>メインストーリー：第18章</li>
-				<li>キズナエピソード：ことり・凛・ルビィ (全話)</li>
-			</ul>
-		</div>
-	</details>
-	<details>
 		<summary class="important"><span class="date">2020/09/16</span> - テスト公開</summary>
 		<div>
 			<span class="new"></span>テスト公開<br>
@@ -888,35 +779,22 @@ function loadScript(src, callback) {
 
 loadScript("data/story.js", function() {
 	const TimeOutputStart = performance.now();
+	//■エピソードの数を反映
+	document.getElementById("ep_num_1").innerHTML = StoryList[0].part.length;
+	document.getElementById("ep_num_2").innerHTML = StoryList[1].part[StoryList[1].part.length-1].name;
+	document.getElementById("ep_num_3").innerHTML = StoryList[2].part[0].part.length;
+	document.getElementById("ep_num_4").innerHTML = StoryList[2].part[9].part.length;
+	document.getElementById("ep_num_5").innerHTML = StoryList[2].part[18].part.length;
+	document.getElementById("ep_num_6").innerHTML = StoryList[2].part[27].part.length;
+	document.getElementById("ep_num_7").innerHTML = StoryList[2].part[28].part.length;
 
-	document.getElementById("Foreword").innerHTML +=
-	  '<h4 class="foreword">概要を確認可能なストーリー<\/h4>\n'
-	+ '<ul id="recorded">'
-	+ '<li>メインストーリー：第' + StoryList[0].part.length +'章まで<\/li>'
-	+ '<li>イベントエピソード：「'
-	+ StoryList[1].part[StoryList[1].part.length-1].name + '」まで<\/li>'
-	+ '<li>キズナエピソード：<ul>'
-	+ '<li>μ&#39;s：各' + StoryList[2].part[0].part.length + '話まで<\/li>'
-	+ '<li>Aqours：各' + StoryList[2].part[9].part.length + '話まで<\/li>'
-	+ '<li>ニジガク：初期9人 (各' + StoryList[2].part[18].part.length +'話まで)、'
-	+ '栞子 (' + StoryList[2].part[27].part.length +'話まで)、'
-	+ 'ミア/ランジュ (' + StoryList[2].part[28].part.length+ '話まで)<\/li>'
-	+ '<\/ul>'
-	+ '<li>アニメ連動ストーリー：1期・2期ともに掲載完了<\/li>';
-	+ '<li>サイドエピソード：掲載予定なし<\/li>'
-	+ '<\/ul>';
-	
-	//■ストーリー閲覧用説
-	let Output =  '\n<div style="margin-bottom: 10px;">'
-	+ '<select id="N1" onChange="NarrowerEvent(1)">\n<option>(カテゴリを選択)<\/option>';
-	for(i=0; i<StoryList.length; i++){
-		Output += '<option>' + StoryList[i].name + '<\/option>\n';
+	//■セレクトボックスに要素を追加
+	for(temp1 of StoryList){
+		var temp2 = document.create
+		var temp2 = document.createElement("option");
+		temp2.text = temp1.name;
+		document.getElementById("N1").appendChild(temp2);
 	}
-	Output += '<\/select><select id="N2" onChange="NarrowerEvent(2)" style="display: none;"><\/select><\/div>'
-	+ '<div id="OutputArea"><div style="margin:10px; font-size: 120%; color:#666;">'
-	+ '(上のプルダウンメニューから、見たいストーリーを選んでください)<\/div><\/div>';
-	document.getElementById("StoryViewer").innerHTML += Output;
-	document.getElementById("StoryViewer").style.display = "block";
 
 	document.getElementById("Loading").style.display = "none";
 	
