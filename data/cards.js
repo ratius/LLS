@@ -5536,7 +5536,7 @@ const RawCardList = [
 	"name": "Mia",
 	"rare": "SR",
 	"atr": "Elegant",
-	"type": "Sp",
+	"type": "Gd",
 	"cn1": "ボクなりのやり方",
 	"cn2": "I'm Still...",
 	"date": "2021/09/03",
