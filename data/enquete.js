@@ -421,14 +421,14 @@ function DrawEnqueteTable(){
 		+ '<td>' + temp.theme + '<\/td>\n'
 		
 		if(temp.winner1 in NameFromID){
-			Output += '<td class="bg_' + temp.winner1 + '" style="text-align: center;">'
+			Output += '<td class="bg_ll_' + temp.winner1 + '" style="text-align: center;">'
 			+ '<span style="font-size:small;">「' + temp.option1 + '」<\/span><br><strong>' + NameFromID[temp.winner1] + '<\/strong><\/td>\n';
 		} else {
 			Output += '<td><\/td>\n';
 		}
 
 		if(temp.winner2 in NameFromID){
-			Output += '<td class="bg_' + temp.winner2 + '" style="text-align: center;">'
+			Output += '<td class="bg_ll_' + temp.winner2 + '" style="text-align: center;">'
 			+ '<span style="font-size:small;">「' + temp.option2 + '」<\/span><br><strong>' + NameFromID[temp.winner2] + '<\/strong><\/td>\n'
 			+ '<td style="text-align: center;"><a href="' + temp.url + '" target="_blank">&#x27a1;<\/a><\/td>';
 		} else {
@@ -443,7 +443,7 @@ function DrawEnqueteTable(){
 function DrawMostVoted(){
 	let Output = '';
 	for(const CharTemp in NameFromID){
-		Output += '<tr><th class="bg_' + CharTemp + '">' + NameFromID[CharTemp] + '<\/th><td>';
+		Output += '<tr><th class="bg_ll_' + CharTemp + '">' + NameFromID[CharTemp] + '<\/th><td>';
 		for(const EventTemp of EnqueteList){
 			if(CharTemp === EventTemp["winner1"]){
 				Output += '<span class="TitleButton" title="' + EventTemp["theme"] + '">'
