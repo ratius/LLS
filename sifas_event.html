@@ -20,7 +20,7 @@
 <title>スクスタ 過去のイベントまとめ | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main.css">
-<link rel="stylesheet" href="color_sifas.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="color.css" media="print" onload="this.media='all'">
 <style><!--
 
 /*■スクロール可能なテーブル */
@@ -264,7 +264,7 @@ function LookUpEvent(id, data){
 //■■描画用関数
 //■丸ボタン
 function DrawRoundButton(CharId, EventId, Prefix){
-	return '<div class="EventBox bg_' + CharId + '" title="'
+	return '<div class="EventBox bg_as_' + CharId + '" title="'
 	+ (Prefix ? Prefix + '\n' : '')
 	+ LookUpEvent(EventId,"name") + '\n'
 	+ '(' + GetStringFromDate(LookUpEvent(EventId,"started"), false)
@@ -385,7 +385,7 @@ function DrawSingleTable(){
 	for(const CharId in TagData){
 		const CharNumber = TagData[CharId].number;
 		
-		Output += '<tr><th class="bg_' + CharId + '">'
+		Output += '<tr><th class="bg_as_' + CharId + '">'
 		+ '<strong class="shadowname">' + TagData[CharId].name + '<\/strong><\/th>'
 		+ '<td class="sttd" style="text-align:center;">' + TrioHistory[CharNumber][0].length + '<br><\/td>'
 		+ '<td class="sttd">';
@@ -411,7 +411,7 @@ function DrawPairTable(){
 	
 	for(x in TagData){
 		//キャラクター名取得
-		Output += '<th class="bg_' + x + '"><strong class="shadowname">'
+		Output += '<th class="bg_as_' + x + '"><strong class="shadowname">'
 		+ TagData[x].name + '<\/strong><\/th>\n';
 	}
 	Output += '<\/tr>\n<\/thead>\n<\/table>';
@@ -421,7 +421,7 @@ function DrawPairTable(){
 	Output = '<table class="quarter-table">\n<tbody>\n';
 		
 	for(y in TagData){
-		Output += '<tr><th class="bg_' + y + '"><strong class="shadowname">'
+		Output += '<tr><th class="bg_as_' + y + '"><strong class="shadowname">'
 		+ TagData[y].name + '<\/strong><\/th><\/tr>\n';
 	}
 	Output += '<\/tbody>\n<\/table>';
@@ -437,7 +437,7 @@ function DrawPairTable(){
 				Output += '<td style="background-color:#aaa"><\/td>\n';
 			}else {
 				let CirclesInRow = 0; //丸の個数を数えて、必要に応じて改行
-				Output += '<td class="bg_tp_white bg_' + y + '">'
+				Output += '<td class="bg_tp_white bg_as_' + y + '">'
 				const temp1 = [TagData[x].number, TagData[y].number].sort(function(a,b){return a-b});
 				if(TrioHistory[temp1[0]][temp1[1]-temp1[0]][0].length == 0){
 					Output += '－';
@@ -472,11 +472,11 @@ function DrawDuplicatedTrioList(min){
 					const Char3Id = Object.keys(TagData)[temp1+temp2+temp3];
 					
 					Output += '<tr>'
-					+ '<th class="bg_' + Char1Id + ' trioname"><span class="shadowname">'
+					+ '<th class="bg_as_' + Char1Id + ' trioname"><span class="shadowname">'
 					+ TagData[Char1Id].name + '<\/span><\/th>'
-					+ '<th class="bg_' + Char2Id + ' trioname"><span class="shadowname">'
+					+ '<th class="bg_as_' + Char2Id + ' trioname"><span class="shadowname">'
 					+ TagData[Char2Id].name + '<\/span><\/th>'
-					+ '<th class="bg_' + Char3Id + ' trioname"><span class="shadowname">'
+					+ '<th class="bg_as_' + Char3Id + ' trioname"><span class="shadowname">'
 					+ TagData[Char3Id].name+ '<\/span><\/th>'
 					+ '<th style="width: 30px; background-color: hsl('
 					+ (TrioHistory[temp1][temp2][temp3].length*50-60)

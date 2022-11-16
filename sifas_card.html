@@ -21,6 +21,7 @@
 <title>スクスタ カード実装状況 | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="color.css" media="print" onload="this.media='all'">
 <style><!--
 
 #Legend table{
@@ -103,39 +104,6 @@ td:hover .tool-tip {
 .none   { background-color: #ddd;}
 .na     { background-color: #ffefe7; padding: 1px; border: solid 2px #ecb; color: #ba9;}
 
-.Honoka  { background-color: rgb(255, 163,  54);}
-.Eli     { background-color: rgb(122, 238, 255);}
-.Kotori  { background-color: rgb(206, 191, 191);}
-.Umi     { background-color: rgb( 23, 105, 255);}
-.Rin     { background-color: rgb(219, 212,  30);}
-.Maki    { background-color: rgb(255,  80,  62);}
-.Nozomi  { background-color: rgb(196,  85, 246);}
-.Hanayo  { background-color: rgb(106, 230, 115);}
-.Nico    { background-color: rgb(255,  79, 145);}
-
-.Chika   { background-color: rgb(255, 149,  71);}
-.Riko    { background-color: rgb(255, 158, 172);}
-.Kanan   { background-color: rgb( 39, 193, 183);}
-.Dia     { background-color: rgb(219,   8,  57);}
-.You     { background-color: rgb(102, 192, 255);}
-.Yoshiko { background-color: rgb(193, 202, 212);}
-.Hanamaru{ background-color: rgb(255, 208,  16);}
-.Mari    { background-color: rgb(194,  82, 198);}
-.Ruby    { background-color: rgb(255, 111, 190);}
-
-.Ayumu   { background-color: rgb(255, 191, 224);}
-.Kasumi  { background-color: rgb(213, 222, 112);}
-.Shizuku { background-color: rgb(187, 237, 255);}
-.Karin   { background-color: rgb( 74,  47, 237);}
-.Ai      { background-color: rgb(255, 130,  70);}
-.Kanata  { background-color: rgb(190, 130, 255);}
-.Setsuna { background-color: rgb(246,  14,  14);}
-.Emma    { background-color: rgb(143, 218, 121); font-size: 80%;}
-.Rina    { background-color: rgb(208, 206, 225);}
-.Shioriko{ background-color: rgb( 36, 189, 139);}
-.Mia     { background-color: rgb(214, 213, 202); font-size: 80%;}
-.Lanzhu  { background-color: rgb(248, 200, 196);}
-
 --></style>
 <script><!--
 //■デバッグモード判定
@@ -145,36 +113,36 @@ if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
 
 //■各種データ
 const TagData = {
-	"Honoka":   {"number":0 , "name": "高坂 穂乃果",   "r":255, "g":163, "b": 54 },
-	"Eli":      {"number":1 , "name": "絢瀬 絵里",     "r":122, "g":238, "b":255 },
-	"Kotori":   {"number":2 , "name": "南 ことり",     "r":206, "g":191, "b":191 },
-	"Umi":      {"number":3 , "name": "園田 海未",     "r": 23, "g":105, "b":255 },
-	"Rin":      {"number":4 , "name": "星空 凛",       "r":219, "g":212, "b": 30 },
-	"Maki":     {"number":5 , "name": "西木野 真姫",   "r":255, "g": 80, "b": 62 },
-	"Nozomi":   {"number":6 , "name": "東條 希",       "r":196, "g": 85, "b":246 },
-	"Hanayo":   {"number":7 , "name": "小泉 花陽",     "r":106, "g":230, "b":115 },
-	"Nico":     {"number":8 , "name": "矢澤 にこ",     "r":255, "g": 79, "b":145 },
-	"Chika":    {"number":9 , "name": "高海 千歌",     "r":255, "g":149, "b": 71 },
-	"Riko":     {"number":10, "name": "桜内 梨子",     "r":255, "g":158, "b":172 },
-	"Kanan":    {"number":11, "name": "松浦 果南",     "r": 39, "g":193, "b":183 },
-	"Dia":      {"number":12, "name": "黒澤 ダイヤ",   "r":219, "g":  8, "b": 57 },
-	"You":      {"number":13, "name": "渡辺 曜",       "r":102, "g":192, "b":255 },
-	"Yoshiko":  {"number":14, "name": "津島 善子",     "r":193, "g":202, "b":212 },
-	"Hanamaru": {"number":15, "name": "国木田 花丸",   "r":255, "g":208, "b": 16 },
-	"Mari":     {"number":16, "name": "小原 鞠莉",     "r":194, "g": 82, "b":198 },
-	"Ruby":     {"number":17, "name": "黒澤 ルビィ",   "r":255, "g":111, "b":190 },
-	"Ayumu":    {"number":18, "name": "上原 歩夢",     "r":255, "g":191, "b":224 },
-	"Kasumi":   {"number":19, "name": "中須 かすみ",   "r":213, "g":222, "b":112 },
-	"Shizuku":  {"number":20, "name": "桜坂 しずく",   "r":187, "g":237, "b":255 },
-	"Karin":    {"number":21, "name": "朝香 果林",     "r": 74, "g": 47, "b":237 },
-	"Ai":       {"number":22, "name": "宮下 愛",       "r":255, "g":130, "b": 70 },
-	"Kanata":   {"number":23, "name": "近江 彼方",     "r":190, "g":130, "b":255 },
-	"Setsuna":  {"number":24, "name": "優木 せつ菜",   "r":246, "g": 14, "b": 14 },
-	"Emma":     {"number":25, "name": "エマ・ヴェルデ","r":143, "g":218, "b":121 },
-	"Rina":     {"number":26, "name": "天王寺 璃奈",   "r":208, "g":206, "b":225 },
-	"Shioriko": {"number":27, "name": "三船 栞子",     "r": 36, "g":189, "b":139 },
-	"Mia":      {"number":28, "name": "ミア・テイラー","r":214, "g":213, "b":202 },
-	"Lanzhu":   {"number":29, "name": "鐘 嵐珠"       ,"r":248, "g":200, "b":196 }
+	"Honoka":   {"number":0 , "name": "高坂 穂乃果"   },
+	"Eli":      {"number":1 , "name": "絢瀬 絵里"     },
+	"Kotori":   {"number":2 , "name": "南 ことり"     },
+	"Umi":      {"number":3 , "name": "園田 海未"     },
+	"Rin":      {"number":4 , "name": "星空 凛"       },
+	"Maki":     {"number":5 , "name": "西木野 真姫"   },
+	"Nozomi":   {"number":6 , "name": "東條 希"       },
+	"Hanayo":   {"number":7 , "name": "小泉 花陽"     },
+	"Nico":     {"number":8 , "name": "矢澤 にこ"     },
+	"Chika":    {"number":9 , "name": "高海 千歌"     },
+	"Riko":     {"number":10, "name": "桜内 梨子"     },
+	"Kanan":    {"number":11, "name": "松浦 果南"     },
+	"Dia":      {"number":12, "name": "黒澤 ダイヤ"   },
+	"You":      {"number":13, "name": "渡辺 曜"       },
+	"Yoshiko":  {"number":14, "name": "津島 善子"     },
+	"Hanamaru": {"number":15, "name": "国木田 花丸"   },
+	"Mari":     {"number":16, "name": "小原 鞠莉"     },
+	"Ruby":     {"number":17, "name": "黒澤 ルビィ"   },
+	"Ayumu":    {"number":18, "name": "上原 歩夢"     },
+	"Kasumi":   {"number":19, "name": "中須 かすみ"   },
+	"Shizuku":  {"number":20, "name": "桜坂 しずく"   },
+	"Karin":    {"number":21, "name": "朝香 果林"     },
+	"Ai":       {"number":22, "name": "宮下 愛"       },
+	"Kanata":   {"number":23, "name": "近江 彼方"     },
+	"Setsuna":  {"number":24, "name": "優木 せつ菜"   },
+	"Emma":     {"number":25, "name": "エマ・ヴェルデ"},
+	"Rina":     {"number":26, "name": "天王寺 璃奈"   },
+	"Shioriko": {"number":27, "name": "三船 栞子"     },
+	"Mia":      {"number":28, "name": "ミア・テイラー"},
+	"Lanzhu":   {"number":29, "name": "鐘 嵐珠"       }
 };
 const numCharacters = Object.keys(TagData).length;
 
@@ -214,7 +182,6 @@ function DrawLegend(){
 	return Output;
 }
 
-
 // ■テーブルを作成
 function DrawTable(group, GroupNumber){
 	var Output = '<div class="card-box">\n<table class="cardlist" style="min-width: ' + (100+group.length*108) + 'px">\n';
@@ -222,7 +189,9 @@ function DrawTable(group, GroupNumber){
 	//■ヘッダー
 	Output += '<thead>\n<tr class="header-top">\n<th><\/th>\n';
 	for(const CharTemp of group){
-		Output += '<th class="' + CharTemp + '"><strong class="shadowname">'
+		Output += '<th class="bg_as_' + CharTemp + '"'
+		+ (TagData[CharTemp].name.length > 6 ? ' style="font-size:80%"' : '')
+		+ '><strong class="shadowname">'
 		+ TagData[CharTemp].name + '<\/strong><\/th>\n';
 	}
 	Output += '<\/tr>\n<\/thead>\n<tbody>\n';
