@@ -674,4 +674,13 @@ const EventList = [
 	"UR" : ["Nico", "Riko", "Kanata"],
 	"SR" : ["Eli", "Shizuku", "Mia"]
 },
+{
+	"id" : 76,
+	"name" : "あなたと踊る舞踏会",
+	"type" : "story",
+	"started" : new Date("2022-11-22T15:00:00+09:00"),
+	"ended"   : new Date("2022-11-29T14:59:59+09:00"),
+	"UR" : ["Umi", "Chika", "Emma"],
+	"SR" : ["Nozomi", "Dia", "Lanzhu"]
+},
 ];

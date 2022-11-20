@@ -1,5 +1,6 @@
 //■色データ
 const CharData = [
+	//■μ'ｓ
 	{ id:'Honoka', name:'高坂 穂乃果',
 		llsif:    {r:255, g:214, b:165},
 		llsif2:   {r:255, g:247, b:237},
@@ -90,7 +91,7 @@ const CharData = [
 		logofinal:{r:212, g: 78, b:141}
 	},
 	
-
+	//■Aqours
 	{ id:'Chika'   , name:'高海 千歌',
 		official: {r:255, g:121, b: 27},
 		llsif:    {r:255, g:205, b:183},
@@ -99,6 +100,7 @@ const CharData = [
 		puchi:    {r:255, g:155, b: 13},
 		sifas:    {r:255, g:149, b: 71},
 		sifas_s1: {r:255, g:127, b: 50},
+		yohane:   {r:247, g:225, b:212},
 		vote2nd:  {r:240, g:162, b: 11},
 		vote3rd:  {r:238, g:120, b:  0},
 		vote4th:  {r:239, g:120, b:  0},
@@ -120,6 +122,7 @@ const CharData = [
 		puchi:    {r:248, g:138, b:149},
 		sifas:    {r:255, g:158, b:172},
 		sifas_s1: {r:251, g: 99, b:126},
+		yohane:   {r:248, g:225, b:229},
 		vote2nd:  {r:233, g:169, b:232},
 		vote3rd:  {r:220, g:118, b:171},
 		vote4th:  {r:238, g:135, b:180},
@@ -141,6 +144,7 @@ const CharData = [
 		puchi:    {r: 15, g:219, b:155},
 		sifas:    {r: 39, g:193, b:183},
 		sifas_s1: {r:  0, g:199, b:177},
+		yohane:   {r:228, g:244, b:243},
 		vote2nd:  {r: 19, g:232, b:174},
 		vote3rd:  {r:  0, g:179, b:134},
 		vote4th:  {r:  0, g:170, b:131},
@@ -162,6 +166,7 @@ const CharData = [
 		puchi:    {r:251, g: 74, b: 74},
 		sifas:    {r:219, g:  7, b: 57},
 		sifas_s1: {r:228, g:  0, b: 43},
+		yohane:   {r:250, g:225, b:229},
 		vote2nd:  {r:242, g: 59, b: 76},
 		vote3rd:  {r:231, g: 45, b: 54},
 		vote4th:  {r:231, g: 45, b: 56},
@@ -183,6 +188,7 @@ const CharData = [
 		puchi:    {r: 43, g:207, b:242},
 		sifas:    {r:102, g:192, b:255},
 		sifas_s1: {r:  0, g:181, b:226},
+		yohane:   {r:218, g:246, b:253},
 		vote2nd:  {r: 73, g:185, b:249},
 		vote3rd:  {r:  0, g:149, b:216},
 		vote4th:  {r:  0, g:149, b:217},
@@ -204,6 +210,7 @@ const CharData = [
 		puchi:    {r:142, g:142, b:142},
 		sifas:    {r:193, g:202, b:212},
 		sifas_s1: {r:177, g:179, b:179},
+		yohane:   {r:228, g:226, b:226},
 		vote2nd:  {r:137, g:137, b:137},
 		vote3rd:  {r: 76, g: 73, b: 72},
 		vote4th:  {r:113, g:113, b:113},
@@ -225,6 +232,7 @@ const CharData = [
 		puchi:    {r:215, g:197, b:  1},
 		sifas:    {r:255, g:208, b: 15},
 		sifas_s1: {r:255, g:205, b:  0},
+		yohane:   {r:253, g:243, b:202},
 		vote2nd:  {r:230, g:214, b: 23},
 		vote3rd:  {r:159, g:140, b:  0},
 		vote4th:  {r:255, g:241, b:  0},
@@ -246,6 +254,7 @@ const CharData = [
 		puchi:    {r:195, g:100, b:255},
 		sifas:    {r:194, g: 82, b:198},
 		sifas_s1: {r:155, g: 38, b:182},
+		yohane:   {r:234, g:218, b:236},
 		vote2nd:  {r:174, g: 88, b:235},
 		vote3rd:  {r:124, g: 80, b:157},
 		vote4th:  {r:124, g: 80, b:157},
@@ -267,6 +276,7 @@ const CharData = [
 		puchi:    {r:255, g: 98, b:146},
 		sifas:    {r:255, g:111, b:190},
 		sifas_s1: {r:233, g: 60, b:172},
+		yohane:   {r:253, g:222, b:239},
 		vote2nd:  {r:251, g:117, b:228},
 		vote3rd:  {r:183, g: 63, b:145},
 		vote4th:  {r:230, g: 47, b:139},
@@ -280,7 +290,7 @@ const CharData = [
 		logounit: {r:230, g: 55, b:141}
 	},
 
-
+	//■虹ヶ咲学園スクールアイドル同好会
 	{ id:'Ayumu'   , name:'上原 歩夢',
 		official: {r:237, g:125, b:149},
 		llsif:    {r:254, g:186, b:203},
@@ -296,7 +306,6 @@ const CharData = [
 		logo5th:  {r:234, g: 96, b:158},
 		logounit: {r:226, g: 60, b:103}
 	},
-
 	{ id:'Kasumi'  , name:'中須 かすみ',
 		official: {r:231, g:214, b:  0},
 		llsif:    {r:245, g:252, b:164},
@@ -312,7 +321,6 @@ const CharData = [
 		logo5th:  {r:255, g:241, b:  0},
 		logounit: {r:255, g:245, b:127}
 	},
-
 	{ id:'Shizuku' , name:'桜坂 しずく',
 		official: {r:  1, g:183, b:237},
 		llsif:    {r:178, g:223, b:238},
@@ -328,7 +336,6 @@ const CharData = [
 		logo5th:  {r: 77, g:183, b:225},
 		logounit: {r:  0, g:164, b:198}
 	},
-
 	{ id:'Karin'   , name:'朝香 果林',
 		official: {r: 72, g:094, b:198},
 		llsif:    {r:176, g:204, b:251},
@@ -344,7 +351,6 @@ const CharData = [
 		logo5th:  {r: 89, g: 71, b:154},
 		logounit: {r: 70, g: 75, b:152}
 	},
-
 	{ id:'Ai'      , name:'宮下 愛',
 		official: {r:255, g:088, b:  0},
 		llsif:    {r:255, g:213, b:151},
@@ -360,7 +366,6 @@ const CharData = [
 		logo5th:  {r:236, g:104, b: 53},
 		logounit: {r:232, g: 57, b: 40}
 	},
-
 	{ id:'Kanata'  , name:'近江 彼方',
 		official: {r:166, g:100, b:160},
 		llsif:    {r:225, g:209, b:246},
@@ -376,7 +381,6 @@ const CharData = [
 		logo5th:  {r:212, g:182, b:214},
 		logounit: {r:218, g:180, b:212}
 	},
-
 	{ id:'Setsuna' , name:'優木 せつ菜',
 		official: {r:216, g: 28, b: 47},
 		llsif:    {r:255, g:175, b:175},
@@ -392,7 +396,6 @@ const CharData = [
 		logo5th:  {r:203, g: 39, b: 47},
 		logounit: {r:184, g: 28, b: 37}
 	},
-
 	{ id:'Emma'    , name:'エマ・ヴェルデ',
 		official: {r:132, g:195, b:110},
 		llsif:    {r:211, g:250, b:211},
@@ -410,7 +413,6 @@ const CharData = [
 		logo5th:  {r:196, g:219, b:112},
 		logounit: {r:203, g:226, b:163}
 	},
-
 	{ id:'Rina'    , name:'天王寺 璃奈',
 		official: {r:156, g:165, b:185},
 		llsif:    {r:214, g:225, b:227},
@@ -426,7 +428,6 @@ const CharData = [
 		logo5th:  {r:174, g:175, b:194},
 		logounit: {r:255, g:254, b:254}
 	},
-
 	{ id:'Shioriko', name:'三船 栞子',
 		llsif:    {r:192, g:237, b:222},
 		llsif2:   {r:242, g:251, b:248},
@@ -438,7 +439,6 @@ const CharData = [
 		logo5th:  {r: 89, g:187, b:141},
 		logounit: {r: 22, g:178, b:134}
 	},
-
 	{ id:'Mia', name:'ミア・テイラー',
 		official: {r:214, g:213, b:202},
 		llsif:    {r:218, g:217, b:210},
@@ -449,7 +449,6 @@ const CharData = [
 		logo5th:  {r:208, g:208, b:199},
 		logounit: {r:169, g:167, b:151}
 	},
-
 	{ id:'Lanzhu', name:'鐘 嵐珠',
 		official: {r:248, g:200, b:196},
 		llsif:    {r:252, g:222, b:220},
@@ -460,13 +459,13 @@ const CharData = [
 		logo5th:  {r:245, g:208, b:210},
 		logounit: {r:237, g:149, b:142}
 	},
-	
 	{ id:'Yu', name:'高咲 侑',
 		official: {r: 29, g: 29, b: 29},
 		logo3rd:  {r: 86, g: 86, b: 84},
 		logo5th:  {r: 63, g: 58, b: 57}
 	},
 
+	//■Liella!
 	{ id:'Kanon', name:'澁谷 かのん',
 		official: {r:255, g:127, b: 39},
 		llsif:    {r:255, g:197, b:157},
@@ -476,7 +475,6 @@ const CharData = [
 		logo2nd_b:{r:242, g:150, b:  0},
 		logo3rd:  {r:250, g:205, b:137},
 	},
-
 	{ id:'Keke', name:'唐 可可',
 		official: {r:160, g:255, b:249},
 		llsif:    {r:174, g:255, b:250},
@@ -486,7 +484,6 @@ const CharData = [
 		logo2nd_b:{r:186, g:226, b:248},
 		logo3rd:  {r:223, g:242, b:252},
 	},
-
 	{ id:'Chisato', name:'嵐 千砂都',
 		official: {r:255, g:110, b:144},
 		llsif:    {r:255, g:202, b:214},
@@ -496,7 +493,6 @@ const CharData = [
 		logo2nd_b:{r:240, g:157, b:193},
 		logo3rd:  {r:248, g:207, b:224},
 	},
-
 	{ id:'Sumire', name:'平安名 すみれ',
 		official: {r:116, g:244, b:102},
 		llsif:    {r:195, g:255, b:188},
@@ -506,7 +502,6 @@ const CharData = [
 		logo2nd_b:{r:140, g:196, b: 86},
 		logo3rd:  {r:203, g:227, b:174},
 	},
-
 	{ id:'Ren', name:'葉月 恋',
 		official: {r:  0, g:  0, b:160},
 		llsif:    {r:192, g:203, b:255},
@@ -516,34 +511,68 @@ const CharData = [
 		logo2nd_b:{r: 87, g: 75, b:156},
 		logo3rd:  {r:117, g:124, b:187},
 	},
-
 	{ id:'Kinako', name:'桜小路 きな子',
 		official: {r:255, g:244, b: 66},
 		llsif:    {r:255, g:247, b:203},
 		llsif2:   {r:245, g:253, b:245},
 		logo3rd:  {r:250, g:245, b:176},
 	},
-
 	{ id:'Mei', name:'米女 メイ',
 		official: {r:255, g: 53, b: 53},
 		llsif:    {r:255, g:195, b:195},
 		llsif2:   {r:255, g:243, b:243},
 		logo3rd:  {r:242, g:156, b:169},
 	},
-
 	{ id:'Shiki', name:'若菜 四季',
 		official: {r:178, g:255, b:221},
 		llsif:    {r:219, g:255, b:239},
 		llsif2:   {r:248, g:255, b:252},
 		logo3rd:  {r:224, g:240, b:232},
 	},
-
 	{ id:'Natsumi', name:'鬼塚 夏美',
 		official: {r:255, g: 81, b:196},
 		llsif:    {r:255, g:203, b:237},
 		llsif2:   {r:255, g:245, b:251},
 		logo3rd:  {r:233, g:174, b:206},
-	}
+	},
+	
+	//■スクールアイドルミュージカル
+	{ id:'Rurika', name:'椿 ルリカ',
+		official: {r:115, g:184, b:226},
+	},
+	{ id:'Yuzuha', name:'皇 ユズハ',
+		official: {r:239, g:239, b:239},
+	},
+	{ id:'Yukino', name:'北条 ユキノ',
+		official: {r:245, g:130, b: 32},
+	},
+	{ id:'Hikaru', name:'天草 ヒカル',
+		official: {r: 60, g:104, b: 84},
+	},
+	{ id:'Maaya', name:'三笠 マーヤ',
+		official: {r:228, g:136, b:152},
+	},
+	{ id:'Anzu', name:'滝沢 アンズ',
+		official: {r:216, g: 31, b: 53},
+	},
+	{ id:'Misuzu', name:'若月 ミスズ',
+		official: {r:  0, g: 76, b:113},
+	},
+	{ id:'Toa', name:'来栖 トア',
+		official: {r:255, g:140, b:144},
+	},
+	{ id:'Rena', name:'鈴賀 レナ',
+		official: {r:171, g:201, b:  0},
+	},
+	{ id:'Sayaka', name:'晴風 サヤカ',
+		official: {r:255, g:238, b: 80},
+	},
+	{ id:'Madoka', name:'椿 マドカ',
+		official: {r: 52, g: 88, b: 44},
+	},
+	{ id:'Kyoka', name:'滝沢 キョウカ',
+		official: {r:172, g: 48, b: 64},
+	},
 ];
 
 
@@ -555,6 +584,7 @@ const LabelName = {
 	sifas: 'スクスタ<br>（ゲーム内）',
 	sifas_s1: 'スクスタ<br>（公式web）',
 	sifac: 'アケフェス<br>（キャラ名）',
+	yohane: '幻日のヨハネ<br>（公式web）',
 	monthly: 'マンスリー<br>ランキング',
 	nijiyon: 'にじよん<br>（キャラ名）',
 	vote2nd: '2ndシングル<br>センター投票',
