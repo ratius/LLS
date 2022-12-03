@@ -8788,18 +8788,6 @@ const RawCardList = [
 },
 {
 	"id": 801,
-	"name": "Rin",
-	"rare": "SR",
-	"atr": "Smile",
-	"type": "Sp",
-	"cn1": "うーんん……",
-	"cn2": "LOVELESS WORLD",
-	"date": "2022/11/29",
-	"source": "none",
-	"desc": "「スクスタフェス」で追加"
-},
-{
-	"id": 802,
 	"name": "Kasumi",
 	"rare": "SR",
 	"atr": "Natural",
@@ -8810,7 +8798,18 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
 },
-
+{
+	"id": 802,
+	"name": "Rin",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "うーんん……",
+	"cn2": "LOVELESS WORLD",
+	"date": "2022/11/29",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
 {
 	"id": 803,
 	"name": "Kanan",
@@ -8884,4 +8883,4 @@ const RawCardList = [
 	"desc": "イベント「ハピネス♪スノータイム」報酬 (ランキング枠)"
 },
 ];
-const LatestUpdate = "2022/11/22 イベント「あなたと踊る舞踏会」まで";
+const LatestUpdate = "2022/12/07 イベント「ハピネス♪スノータイム」まで";
