@@ -365,12 +365,23 @@ const EnqueteList = [
 },
 {
 	"id": 34,
-	"url" : "https://lovelive-as.bushimo.jp/selects/q202208/",
+	"url" : "https://lovelive-as.bushimo.jp/selects/q202210/",
 	"started" : new Date("2022-10-26T21:15:00+09:00"),
 	"ended"   : new Date("2022-11-01T23:59:59+09:00"),
 	"theme" : "もしアナウンサーかお天気キャスターになるなら、それぞれぴったりなメンバーは？",
 	"option1" : "アナウンサー",
 	"option2" : "お天気キャスター",
+	"winner1" : "Shioriko",
+	"winner2" : "Emma"
+},
+{
+	"id": 35,
+	"url" : "https://lovelive-as.bushimo.jp/selects/q202211/",
+	"started" : new Date("2022-11-24T21:14:00+09:00"),
+	"ended"   : new Date("2022-11-30T23:59:59+09:00"),
+	"theme" : "もし作詞家か作曲家になるなら、それぞれぴったりなメンバーは？",
+	"option1" : "作詞家",
+	"option2" : "作曲家",
 	"winner1" : "",
 	"winner2" : ""
 },
