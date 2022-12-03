@@ -8594,7 +8594,6 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
 },
-
 {
 	"id": 785,
 	"name": "Nico",
@@ -8762,6 +8761,127 @@ const RawCardList = [
 	"date": "2022/11/22",
 	"source": "reward",
 	"desc": "イベント「あなたと踊る舞踏会」報酬 (ランキング枠)"
+},
+{
+	"id": 799,
+	"name": "Shioriko",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Vo",
+	"cn1": "私、とても嬉しいです。",
+	"cn2": "天空の楽園",
+	"date": "2022/11/29",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 800,
+	"name": "Mari",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "それじゃあ、一緒にテイクオフ♪",
+	"cn2": "氷雪の華姫",
+	"date": "2022/11/29",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 801,
+	"name": "Rin",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "うーんん……",
+	"cn2": "LOVELESS WORLD",
+	"date": "2022/11/29",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 802,
+	"name": "Kasumi",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Gd",
+	"cn1": "それじゃあ、このポーズに決定！",
+	"cn2": "永遠の一瞬",
+	"date": "2022/11/29",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+
+{
+	"id": 803,
+	"name": "Kanan",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "私を信じて！",
+	"cn2": "ウインター・フェスティバル",
+	"date": "2022/12/04",
+	"source": "gacha",
+	"desc": "「ハピネス♪スノータイムガチャ」で追加"
+},
+{
+	"id": 804,
+	"name": "Umi",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "テーマは「スキー場ライブ」です",
+	"cn2": "LOVELESS WORLD",
+	"date": "2022/12/04",
+	"source": "gacha",
+	"desc": "「ハピネス♪スノータイムガチャ」で追加"
+},
+{
+	"id": 805,
+	"name": "Mia",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "上手に止まれない……",
+	"cn2": "ウインター・フェスティバル",
+	"date": "2022/12/04",
+	"source": "gacha",
+	"desc": "「ハピネス♪スノータイムガチャ」で追加"
+},
+{
+	"id": 806,
+	"name": "Rin",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "これでショートカットだにゃ！",
+	"cn2": "ウインター・フェスティバル",
+	"date": "2022/12/07",
+	"source": "reward",
+	"desc": "イベント「ハピネス♪スノータイム」報酬"
+},
+{
+	"id": 807,
+	"name": "You",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "じんわり身体中に染みわたるよ〜",
+	"cn2": "君の瞳を巡る冒険",
+	"date": "2022/12/07",
+	"source": "reward",
+	"desc": "イベント「ハピネス♪スノータイム」報酬 (交換所枠)"
+},
+{
+	"id": 808,
+	"name": "Karin",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "あ、あれ？やだ、スピードが！",
+	"cn2": "永遠の一瞬",
+	"date": "2022/12/07",
+	"source": "reward",
+	"desc": "イベント「ハピネス♪スノータイム」報酬 (ランキング枠)"
 },
 ];
 const LatestUpdate = "2022/11/22 イベント「あなたと踊る舞踏会」まで";

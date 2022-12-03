@@ -669,8 +669,8 @@ const EventList = [
 	"id" : 75,
 	"name" : "彼方の和菓子と照る山紅葉",
 	"type" : "exchange",
-	"started" : new Date("2022-10-07T15:00:00+09:00"),
-	"ended"   : new Date("2022-10-14T14:59:59+09:00"),
+	"started" : new Date("2022-11-07T15:00:00+09:00"),
+	"ended"   : new Date("2022-11-14T14:59:59+09:00"),
 	"UR" : ["Nico", "Riko", "Kanata"],
 	"SR" : ["Eli", "Shizuku", "Mia"]
 },
@@ -682,5 +682,14 @@ const EventList = [
 	"ended"   : new Date("2022-11-29T14:59:59+09:00"),
 	"UR" : ["Umi", "Chika", "Emma"],
 	"SR" : ["Nozomi", "Dia", "Lanzhu"]
+},
+{
+	"id" : 77,
+	"name" : "ハピネス♪スノータイム",
+	"type" : "exchange",
+	"started" : new Date("2022-12-07T15:00:00+09:00"),
+	"ended"   : new Date("2022-12-14T14:59:59+09:00"),
+	"UR" : ["Rin", "Kanan", "Mia"],
+	"SR" : ["Umi", "You", "Karin"]
 },
 ];
