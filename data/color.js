@@ -555,7 +555,7 @@ const CharData = [
 	{ id:'Anzu', name:'滝沢 アンズ',
 		official: {r:216, g: 31, b: 53},
 	},
-	{ id:'Misuzu', name:'若月 ミスズ',
+	{ id:'Misuzu', name:'若槻 ミスズ',
 		official: {r:  0, g: 76, b:113},
 	},
 	{ id:'Toa', name:'来栖 トア',
