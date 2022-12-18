@@ -8882,5 +8882,101 @@ const RawCardList = [
 	"source": "reward",
 	"desc": "イベント「ハピネス♪スノータイム」報酬 (ランキング枠)"
 },
+{
+	"id": 809,
+	"name": "Shizuku",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "この子がすっごくかわいくて……",
+	"cn2": "茨の森の眠り姫",
+	"date": "2022/12/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 810,
+	"name": "Riko",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Sp",
+	"cn1": "起きちゃったの？",
+	"cn2": "君の瞳を巡る冒険",
+	"date": "2022/12/14",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 811,
+	"name": "Dia",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sp",
+	"cn1": "合唱がうまくいきますように",
+	"cn2": "プレゼントフォーユー♡",
+	"date": "2022/12/19",
+	"source": "gacha",
+	"desc": "「キャロルの響く聖なる夜ガチャ」で追加"
+},
+{
+	"id": 812,
+	"name": "Ai",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "わー、みてみて！星飾りだよ！",
+	"cn2": "永遠の一瞬",
+	"date": "2022/12/19",
+	"source": "gacha",
+	"desc": "「キャロルの響く聖なる夜ガチャ」で追加"
+},
+{
+	"id": 813,
+	"name": "Eli",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "ようこそおいでくださいました",
+	"cn2": "プレゼントフォーユー♡",
+	"date": "2022/12/19",
+	"source": "gacha",
+	"desc": "「キャロルの響く聖なる夜ガチャ」で追加"
+},
+{
+	"id": 814,
+	"name": "Rina",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "この気持ち、届いてほしい",
+	"cn2": "プレゼントフォーユー♡",
+	"date": "2022/12/22",
+	"source": "reward",
+	"desc": "イベント「キャロルの響く聖なる夜」報酬"
+},
+{
+	"id": 815,
+	"name": "Nico",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sk",
+	"cn1": "みんなにはお菓子をプレゼントよ",
+	"cn2": "LOVELESS WORLD",
+	"date": "2022/12/22",
+	"source": "reward",
+	"desc": "イベント「キャロルの響く聖なる夜」報酬 (イベントpt枠)"
+},
+{
+	"id": 816,
+	"name": "Ruby",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "『次の日の朝のことです。』",
+	"cn2": "君の瞳を巡る冒険",
+	"date": "2022/12/22",
+	"source": "reward",
+	"desc": "イベント「キャロルの響く聖なる夜」報酬 (ランキング枠)"
+},
 ];
-const LatestUpdate = "2022/12/07 イベント「ハピネス♪スノータイム」まで";
+const LatestUpdate = "2022/12/22 イベント「キャロルの響く聖なる夜」まで";

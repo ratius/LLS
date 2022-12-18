@@ -692,4 +692,13 @@ const EventList = [
 	"UR" : ["Rin", "Kanan", "Mia"],
 	"SR" : ["Umi", "You", "Karin"]
 },
+{
+	"id" : 78,
+	"name" : "キャロルの響く聖なる夜",
+	"type" : "story",
+	"started" : new Date("2022-12-22T15:00:00+09:00"),
+	"ended"   : new Date("2022-12-30T14:59:59+09:00"),
+	"UR" : ["Eli", "Dia", "Rina"],
+	"SR" : ["Nico", "Ruby", "Ai"]
+},
 ];
