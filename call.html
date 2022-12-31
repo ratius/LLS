@@ -15,7 +15,7 @@
 <meta name="twitter:description" content="スクスタ内におけるキャラクターの呼び方のまとめです。">
 <meta name="description" content="スクスタ内におけるキャラクターの呼び方のまとめです。">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=1200px, initial-scale=1">
 
 <title>スクスタ 呼称表 | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
@@ -72,7 +72,7 @@ const CallData = {
 		'Shioriko': '栞子', 'Mia': 'ミア', 'Lanzhu': 'ランジュ'
 	},
 	'Rin': {
-		'name': '星空 凛', 'r': 219, 'g': 212, 'b': 30,
+		'name': '星空 凛', 'r': 219, 'g': 212, 'b': 30, 'Player': 'あなた',
 		'Honoka': '穂乃果ちゃん', 'Eli': '絵里ちゃん', 'Kotori': 'ことりちゃん', 'Umi': '海未ちゃん', 'Rin': '凛', 'Maki' :'真姫ちゃん', 'Nozomi': '希ちゃん', 'Hanayo': 'かよちん', 'Nico': 'にこちゃん',
 		'Chika': '千歌さん', 'Riko': '梨子さん', 'Kanan': '果南さん', 'Dia': 'ダイヤさん', 'You': '曜さん', 'Yoshiko': '善子ちゃん', 'Hanamaru': '花丸ちゃん', 'Mari': '鞠莉さん', 'Ruby': 'ルビィちゃん',
 		'Ayumu': '歩夢さん', 'Kasumi': 'かすみん', 'Shizuku': 'しずくちゃん', 'Karin': '果林さん', 'Ai': '愛さん', 'Kanata': '彼方さん', 'Setsuna': 'せつ菜さん', 'Emma': 'エマさん', 'Rina': '璃奈ちゃん', 
@@ -222,7 +222,7 @@ const CallData = {
 		'Chika': '千歌ちゃん', 'Riko': '梨子ちゃん', 'Kanan': '果南ちゃん', 'Dia': 'ダイヤちゃん', 'You': '曜ちゃん', 'Yoshiko': '善子ちゃん', 'Hanamaru': '花丸ちゃん', 'Mari': '鞠莉ちゃん', 'Ruby': 'ルビィちゃん',
 		'Ayumu': '歩夢ちゃん', 'Kasumi': 'かすみちゃん', 'Shizuku': 'しずくちゃん', 'Karin': '果林ちゃん', 'Ai': '愛ちゃん', 'Kanata': '彼方ちゃん<br>私', 'Setsuna': 'せつ菜ちゃん', 'Emma': 'エマちゃん', 'Rina': '璃奈ちゃん',
 		'Shioriko': '栞子ちゃん', 'Mia': 'ミアちゃん', 'Lanzhu': 'ランジュちゃん',
-		'Haruka': '遥ちゃん', 'Kaoruko': '薫子せんせー'
+		'Haruka': '遥ちゃん', 'Kaoruko': '薫子せんせー', 'Tsumugi': 'ツムギちゃん'
 	},
 	'Setsuna': {
 		'name': '優木 せつ菜', 'r': 246, 'g': 14, 'b': 14, 'Player': 'あなた',
@@ -349,6 +349,10 @@ const CallData = {
 	},
 	'Asagi': {
 		'name': '浅希', 'r': 140, 'g': 140, 'b': 120, 
+	},
+	'Tsumugi': {
+		'name': '加藤 ツムギ', 'r': 140, 'g': 140, 'b': 120, 'Player': 'あなた', 
+		'Kanata':'近江さん', 'Tsumugi': '私'
 	}
 };
 
@@ -521,11 +525,11 @@ function CreateTable(charCalled, charCalling){
 	  CreateTable(ListAqours.concat(["Player"]), ListAS);
 	
 	document.getElementById("Call_Niji_1").innerHTML +=
-	  CreateTable(ListNiji.concat(["Player"]), ListAS.concat(["Haruka", "Misato", "Mai", "Satsuki", "Basketball", "Acting"]));
+	  CreateTable(ListNiji.concat(["Player"]), ListAS.concat(["Haruka", "Misato", "Mai", "Satsuki", "Basketball", "Acting", "Tsumugi"]));
 
 	document.getElementById("Call_Niji_2").innerHTML +=
-	  CreateTable(["Shioriko", "Mia", "Lanzhu", "Kaoruko", "Haruka"],
-	  ListAS.concat(["Kaoruko", "Haruka", "Misato", "Uzuki", "Satsuki", "Rijicho", "Basketball", "Acting"]))
+	  CreateTable(["Shioriko", "Mia", "Lanzhu", "Kaoruko", "Haruka", "Tsumugi"],
+	  ListAS.concat(["Kaoruko", "Haruka", "Tsumugi", "Misato", "Uzuki", "Satsuki", "Rijicho", "Basketball", "Acting"]))
 	
 	document.getElementById("Call_Niji_3").innerHTML +=
 	  CreateTable(["Misato", "Uzuki", "Satsuki", "Mai", "Asagi", "Basketball", "Acting"],
