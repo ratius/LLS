@@ -6581,8 +6581,8 @@ const RawCardList = [
 	"id": 617,
 	"name": "Chika",
 	"rare": "SR",
-	"atr": "Cool",
-	"type": "Sp",
+	"atr": "Pure",
+	"type": "Sk",
 	"cn1": "モデルは動いちゃだめだよ〜",
 	"cn2": "MY舞☆TONIGHT",
 	"date": "2022/01/23",
@@ -8049,7 +8049,7 @@ const RawCardList = [
 	"atr": "Elegant",
 	"type": "Gd",
 	"cn1": "唇や口はナチュラルな状態で…",
-	"cn2": "祭り囃子の使者",
+	"cn2": "祭囃子の使者",
 	"date": "2022/08/19",
 	"source": "gacha",
 	"desc": "「夏の夜に響く想いガチャ」で追加"
@@ -8073,7 +8073,7 @@ const RawCardList = [
 	"atr": "Cool",
 	"type": "Sk",
 	"cn1": "なんとなくコツが掴めてきました",
-	"cn2": "祭り囃子の使者",
+	"cn2": "祭囃子の使者",
 	"date": "2022/08/19",
 	"source": "gacha",
 	"desc": "「夏の夜に響く想いガチャ」で追加"
@@ -8085,7 +8085,7 @@ const RawCardList = [
 	"atr": "Active",
 	"type": "Sp",
 	"cn1": "みんな、最後までついてきて！",
-	"cn2": "祭り囃子の使者",
+	"cn2": "祭囃子の使者",
 	"date": "2022/08/22",
 	"source": "reward",
 	"desc": "イベント「夏の夜に響く想い」報酬"
@@ -8978,5 +8978,53 @@ const RawCardList = [
 	"source": "reward",
 	"desc": "イベント「キャロルの響く聖なる夜」報酬 (ランキング枠)"
 },
+{
+	"id": 817,
+	"name": "Hanayo",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "手と身体をあっためてね",
+	"cn2": "心を紡ぐラブレター",
+	"date": "2022/12/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 818,
+	"name": "Setsuna",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "まさかのシークレット！！",
+	"cn2": "烈火の魔術師",
+	"date": "2022/12/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 819,
+	"name": "Kanata",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "おせち作るの楽しみだなあ♪",
+	"cn2": "永遠の一瞬",
+	"date": "2022/12/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 820,
+	"name": "Chika",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "かんせーい！",
+	"cn2": "君の瞳を巡る冒険",
+	"date": "2022/12/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
 ];
-const LatestUpdate = "2022/12/22 イベント「キャロルの響く聖なる夜」まで";
+const LatestUpdate = "2022/12/30 「スクスタフェス」まで";
