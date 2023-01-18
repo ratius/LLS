@@ -701,4 +701,22 @@ const EventList = [
 	"UR" : ["Eli", "Dia", "Rina"],
 	"SR" : ["Nico", "Ruby", "Ai"]
 },
+{
+	"id" : 79,
+	"name" : "新春、ドリーミング初詣",
+	"type" : "exchange",
+	"started" : new Date("2023-01-07T15:00:00+09:00"),
+	"ended"   : new Date("2023-01-14T14:59:59+09:00"),
+	"UR" : ["Kotori", "Yoshiko", "Ayumu"],
+	"SR" : ["Hanamaru", "Rina", "Mia"]
+},
+{
+	"id" : 80,
+	"name" : "冬の不思議な出会い",
+	"type" : "story",
+	"started" : new Date("2023-01-22T15:00:00+09:00"),
+	"ended"   : new Date("2023-01-30T14:59:59+09:00"),
+	"UR" : ["Maki", "Riko", "Ai"],
+	"SR" : ["Eli", "Mari", "Shizuku"]
+},
 ];
