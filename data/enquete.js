@@ -386,7 +386,7 @@ const EnqueteList = [
 	"winner2" : "Mia"
 },
 {
-	"id": 35,
+	"id": 36,
 	"url" : "https://lovelive-as.bushimo.jp/selects/q202212/",
 	"started" : new Date("2022-12-22T21:15:00+09:00"),
 	"ended"   : new Date("2022-12-28T23:59:59+09:00"),
@@ -397,7 +397,7 @@ const EnqueteList = [
 	"winner2" : "Kanata"
 },
 {
-	"id": 35,
+	"id": 37,
 	"url" : "https://lovelive-as.bushimo.jp/selects/q202301/",
 	"started" : new Date("2023-01-19T21:15:00+09:00"),
 	"ended"   : new Date("2023-01-25T23:59:59+09:00"),
