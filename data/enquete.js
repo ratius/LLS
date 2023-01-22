@@ -377,11 +377,33 @@ const EnqueteList = [
 {
 	"id": 35,
 	"url" : "https://lovelive-as.bushimo.jp/selects/q202211/",
-	"started" : new Date("2022-11-24T21:14:00+09:00"),
+	"started" : new Date("2022-11-24T21:45:00+09:00"),
 	"ended"   : new Date("2022-11-30T23:59:59+09:00"),
 	"theme" : "もし作詞家か作曲家になるなら、それぞれぴったりなメンバーは？",
 	"option1" : "作詞家",
 	"option2" : "作曲家",
+	"winner1" : "Ayumu",
+	"winner2" : "Mia"
+},
+{
+	"id": 35,
+	"url" : "https://lovelive-as.bushimo.jp/selects/q202212/",
+	"started" : new Date("2022-12-22T21:15:00+09:00"),
+	"ended"   : new Date("2022-12-28T23:59:59+09:00"),
+	"theme" : "もしラーメン屋かカレー屋の店員になるなら、それぞれぴったりなメンバーは？",
+	"option1" : "ラーメン屋",
+	"option2" : "カレー屋",
+	"winner1" : "Lanzhu",
+	"winner2" : "Kanata"
+},
+{
+	"id": 35,
+	"url" : "https://lovelive-as.bushimo.jp/selects/q202301/",
+	"started" : new Date("2023-01-19T21:15:00+09:00"),
+	"ended"   : new Date("2023-01-25T23:59:59+09:00"),
+	"theme" : "もしゲームプログラマーかゲームデザイナーになるなら、それぞれぴったりなメンバーは？",
+	"option1" : "ゲームプログラマー",
+	"option2" : "ゲームデザイナー",
 	"winner1" : "",
 	"winner2" : ""
 },
