@@ -719,4 +719,13 @@ const EventList = [
 	"UR" : ["Maki", "Riko", "Ai"],
 	"SR" : ["Eli", "Mari", "Shizuku"]
 },
+{
+	"id" : 81,
+	"name" : "ドキドキ！節分チェイス",
+	"type" : "exchange",
+	"started" : new Date("2023-02-07T15:00:00+09:00"),
+	"ended"   : new Date("2023-02-14T14:59:59+09:00"),
+	"UR" : ["Nozomi", "Hanamaru", "Lanzhu"],
+	"SR" : ["Maki", "Hanayo", "Setsuna"]
+},
 ];
