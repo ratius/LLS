@@ -74,6 +74,13 @@ const ColToa  = "#ffd1d3";
 const ColRena = "#dde99a";
 const ColSaya = "#fff8a9";
 
+const ColKaho = "#fcd9a5";
+const ColSayH = "#bbcace";
+const ColKozu = "#c2dbbe";
+const ColTsuz = "#dabfb5";
+const ColRurH = "#f7c0c3";
+const ColMegu = "#eeeddf";
+
 
 var MemberGroup = [
 	[""  ,"μ’s～Liella!",["Muse","Aqours","Niji","Liella"]],
@@ -102,6 +109,7 @@ var MemberGroup = [
 	["┣","スクスタキャスト",["MuseCast","AqoursCast","NijiCast"]],
 	["┗","楽曲ユニット",["AllUnit"]],
 	[""  ,"スクールアイドルミュージカル",["Musical"]],
+	[""  ,"蓮ノ空女学院スクールアイドルクラブ",["Hasu"]],
 	[""  ,"スクフェス転入生",["Seiran","Shino","Chitose","Touoh","Shion","YG"]],
 	["┣","青藍高校",["Seiran"]],
 	["┣","東雲学院",["Shino"]],
@@ -506,6 +514,13 @@ var CharList = [
 	{name:"鈴賀レナ",   color:[ColRena], group:{"Musical":1}},
 	{name:"晴風サヤカ", color:[ColSaya], group:{"Musical":1}},
 
+	{name:"日野下花帆", color:[ColKaho], group:{"Hasu":1}},
+	{name:"村野さやか", color:[ColSayH], group:{"Hasu":1}},
+	{name:"乙宗 梢",    color:[ColKozu], group:{"Hasu":1}},
+	{name:"夕霧綴理",   color:[ColTsuz], group:{"Hasu":1}},
+	{name:"大沢瑠璃乃", color:[ColRurH], group:{"Hasu":1}},
+	{name:"藤島慈",     color:[ColMegu], group:{"Hasu":1}},
+	
 	{name:"桜坂しずく",    color:["#acf"], group:{"Seiran":1}},
 	{name:"一之瀬マリカ",  color:["#acf"], group:{"Seiran":1}},
 	{name:"永山みなみ",    color:["#acf"], group:{"Seiran":1}},
@@ -1042,6 +1057,12 @@ function shuffle(array) {
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2022/02/14</span> - ソート対象追加</summary>
+		<div>
+			<span class="new"></span>「蓮ノ空女学院スクールアイドルクラブ」を追加
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2022/12/09</span> - ソート対象追加</summary>
 		<div>
 			<span class="new"></span>「スクールアイドルミュージカル」を追加
