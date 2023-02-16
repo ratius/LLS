@@ -106,7 +106,7 @@
 #PairTable td{ width: 99px; height: 59px; }
 #PairTable th.bg_as_Lanzhu{ font-size:10pt;}
 
-/*■個別指定：トリオ重複状況 */
+/*■個別指定：頻出重複トリオ */
 #Trio-Border{
 	border: solid 3px #da57d8;
 	background-color: rgba(226,126,176,0.1);
@@ -427,7 +427,7 @@ function DrawPairTable(){
 	document.getElementById("PairTable-border").innerHTML = Output;
 }
 
-// ■「トリオ重複状況」テーブルの作成
+// ■「頻出重複トリオ」テーブルの作成
 function DrawDuplicatedTrioList(min){
 	let Output = '';
 
@@ -530,7 +530,7 @@ function DrawDuplicatedTrioList(min){
 </section>
 
 <section>
-	<h3 class="liella">トリオ重複状況</h3>
+	<h3 class="liella">頻出重複トリオ</h3>
 	<div id="Trio-Border" class="FixedHeader">
 		<table id="Trio-Table">
 			<thead>
@@ -554,6 +554,7 @@ function DrawDuplicatedTrioList(min){
 		<summary><span class="date">2023/02/16</span> - レイアウト調整</summary>
 		<div>
 			<span class="fix"></span>「ペア共演状況」のレイアウト調整<br>
+			<span class="fix"></span>「頻出重複トリオ」の閾値を調整<br>
 			<span class="fix"></span>スマートフォンでの閲覧時のレイアウト不具合を修正
 		</div>
 	</details>
@@ -567,7 +568,7 @@ function DrawDuplicatedTrioList(min){
 	<details>
 		<summary><span class="date">2022/06/25</span> - レイアウト調整</summary>
 		<div>
-			<span class="fix"></span>「イベント一覧」「トリオ重複状況」のヘッダーが固定されるように変更<br>
+			<span class="fix"></span>「イベント一覧」「頻出重複トリオ」のヘッダーが固定されるように変更<br>
 			<span class="fix"></span>更新履歴をリニューアル（他ページ同様、折りたたみ式に変更）<br>
 			<span class="fix"></span>その他、各種レイアウトを調整
 		</div>
@@ -575,7 +576,7 @@ function DrawDuplicatedTrioList(min){
 	<details>
 		<summary><span class="date">2022/04/17</span> - レイアウト調整</summary>
 		<div>
-			<span class="fix"></span>「イベント一覧」「トリオ重複状況」のレイアウトを調整（高解像度の画面での閲覧を想定）
+			<span class="fix"></span>「イベント一覧」「頻出重複トリオ」のレイアウトを調整（高解像度の画面での閲覧を想定）
 		</div>
 	</details>
 	<details>
@@ -604,9 +605,9 @@ function DrawDuplicatedTrioList(min){
 		</div>
 	</details>
 	<details>
-		<summary><span class="date">2020/09/03</span> - 「トリオ重複状況」実装</summary>
+		<summary><span class="date">2020/09/03</span> - 「頻出重複トリオ」実装</summary>
 		<div>
-			<span class="new"></span>「トリオ重複状況」を実装
+			<span class="new"></span>「頻出重複トリオ」を実装
 		</div>
 	</details>
 	<details>
