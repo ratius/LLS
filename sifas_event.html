@@ -84,46 +84,27 @@
 }
 
 /*■個別指定：ペア共演状況 */
-#Pair-Table {
+#PairTable-border {
 	width: calc(100% - 14px);
-	height: 80vh;
-	text-align: center;
-	border-collapse: collapse;
+	height: 90vh;
 	border: 3px solid #f29600;
+	overflow: scroll;
 }
 
-#Pair-Table td{
-	padding: 0;
+#PairTable {
+	width: 3124px;
+	text-align: center;
+	border-collapse: separate;
+	border-spacing: 0;
 }
 
-.PT-Top       { overflow-x: hidden; height: 28px; border-bottom: 2px solid #973;}
-.PT-Top tr    { height: 28px; }
-.PT-Bottom    { overflow-x: scroll; height: calc(80vh - 30px);}
-.PT-Bottom tr { height: 59px; }
-.PT-Left      { overflow-y: hidden; width: 62px; border-right: 2px solid #973;}
-.PT-Left th   { width: 60px;}
-.PT-Right     { overflow-y: scroll; width: calc(100vw - 117px); margin-right: 0;}
-.PT-Right td, div.PT-Right th { width: 74px; }
-
-.quarter-table {
-	border-collapse: collapse;
-	padding: 1px 0;
-	text-align:center;
-}
-
-#PT-TL { background-color: #dbf4ff; }
-
-.PT-Right > .quarter-table th,
-.PT-Right > .quarter-table td {
-	border-right: 1px solid #aaa;
-}
-.PT-Bottom > .quarter-table tr {
-	border-bottom: 1px solid #aaa;
-}
-.quarter-table td { color: #999; }
-
-.bg_Lanzhu{ font-size:10pt;}
-
+#PT-TL { background-color: #fbdfb2; z-index: 2; }
+.PT-top   { position: sticky; top:  0; height: 28px; border-bottom: 2px solid #973;} /*上*/
+.PT-left  { position: sticky; left: 0; width: 60px;  border-right:  2px solid #973;} /*左*/
+.PT-bottom{ border-bottom: 1px solid #aaa;} /*下*/
+.PT-right { border-right:  1px solid #aaa;} /*右*/
+#PairTable td{ width: 99px; height: 59px; }
+#PairTable th.bg_as_Lanzhu{ font-size:10pt;}
 
 /*■個別指定：トリオ重複状況 */
 #Trio-Border{
@@ -405,39 +386,26 @@ function DrawSingleTable(){
 // ■「ペア共演状況」テーブルの作成
 function DrawPairTable(){
 
-	//■右上
-	var Output = '<table class="quarter-table" style="width: '
-	+ (TagDataLength*PairTableWidth) + 'px">\n<thead>\n<tr>\n';
-	
+	//■ヘッダー
+	var Output = '<table id="PairTable">\n<thead>\n<tr>\n';
+	Output += '<th class="PT-top PT-left" id="PT-TL"><\/th>\n';
 	for(x in TagData){
 		//キャラクター名取得
-		Output += '<th class="bg_as_' + x + '"><strong class="shadowname">'
+		Output += '<th class="PT-top PT-right bg_as_' + x + '"><strong class="shadowname">'
 		+ TagData[x].name + '<\/strong><\/th>\n';
 	}
-	Output += '<\/tr>\n<\/thead>\n<\/table>';
-	document.getElementById("PT-TR").innerHTML = Output;
+	Output += '<\/tr>\n<\/thead>\n<tbody>\n';
 
-	//■左下
-	Output = '<table class="quarter-table">\n<tbody>\n';
-		
+	//■メイン
 	for(y in TagData){
-		Output += '<tr><th class="bg_as_' + y + '"><strong class="shadowname">'
-		+ TagData[y].name + '<\/strong><\/th><\/tr>\n';
-	}
-	Output += '<\/tbody>\n<\/table>';
-	document.getElementById("PT-BL").innerHTML = Output;
-
-	//■右下
-	Output = '<table class="quarter-table" style="width: ' + (TagDataLength*PairTableWidth) + 'px">\n<tbody>\n';
-	
-	for(y in TagData){
-		Output += '<tr>\n';
+		Output += '<tr><th class="PT-bottom PT-left bg_as_' + y + '"><strong class="shadowname">'
+		+ TagData[y].name + '<\/strong><\/th>\n';
 		for(x in TagData){
 			if(x === y){ //同キャラは灰色
 				Output += '<td style="background-color:#aaa"><\/td>\n';
 			}else {
 				let CirclesInRow = 0; //丸の個数を数えて、必要に応じて改行
-				Output += '<td class="bg_tp_white bg_as_' + y + '">'
+				Output += '<td class="PT-bottom PT-right bg_tp_white bg_as_' + y + '">'
 				const temp1 = [TagData[x].number, TagData[y].number].sort(function(a,b){return a-b});
 				if(TrioHistory[temp1[0]][temp1[1]-temp1[0]][0].length == 0){
 					Output += '－';
@@ -455,8 +423,8 @@ function DrawPairTable(){
 		}
 		Output += '<\/tr>\n';
 	}
-	Output += '<\/table>';
-	document.getElementById("PT-BR").innerHTML = Output;
+	Output += '<\/tbody>\n<\/table>';
+	document.getElementById("PairTable-border").innerHTML = Output;
 }
 
 // ■「トリオ重複状況」テーブルの作成
@@ -493,12 +461,6 @@ function DrawDuplicatedTrioList(min){
 		}
 	}
 	document.getElementById("TrioData-contents").innerHTML = Output;
-}
-
-//■スクロールバー連動
-function SyncScroll() {
-	document.getElementById('PT-TR').scrollLeft = document.all('PT-BR').scrollLeft;
-	document.getElementById('PT-BL').scrollTop = document.all('PT-BR').scrollTop;
 }
 
 --></script>
@@ -562,22 +524,9 @@ function SyncScroll() {
 	</div>
 </section>
 
-<section id="PairData">
+<section>
 	<h3 class="niji">ペア共演状況</h3>
-	<table id="Pair-Table">
-		<thead>
-			<tr>
-				<td><div class="PT-Top PT-Left" id="PT-TL"></div></td>
-				<td><div class="PT-Top PT-Right" id="PT-TR"></div></td>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><div class="PT-Bottom PT-Left" id="PT-BL"></div></td>
-				<td><div class="PT-Bottom PT-Right" id="PT-BR" onscroll="SyncScroll();"></div></td>
-			</tr>
-		</tbody>
-	</table>
+	<div id="PairTable-border"></div>
 </section>
 
 <section>
@@ -602,6 +551,13 @@ function SyncScroll() {
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2022/02/16</span> - レイアウト調整</summary>
+		<div>
+			<span class="fix"></span>「ペア共演状況」のレイアウト調整<br>
+			<span class="fix"></span>スマートフォンから、「ペア共演状況」が正しく見えなかったのを調整
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2022/11/05</span> - レイアウト調整</summary>
 		<div>
 			<span class="fix"></span>「キャラクター登場状況」をリニューアル<br>
