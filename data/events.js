@@ -728,4 +728,13 @@ const EventList = [
 	"UR" : ["Nozomi", "Hanamaru", "Lanzhu"],
 	"SR" : ["Maki", "Hanayo", "Setsuna"]
 },
+{
+	"id" : 82,
+	"name" : "ビューティー温泉旅行",
+	"type" : "story",
+	"started" : new Date("2023-02-20T15:00:00+09:00"),
+	"ended"   : new Date("2023-02-27T14:59:59+09:00"),
+	"UR" : ["You", "Ruby", "Karin"],
+	"SR" : ["Honoka", "Kanan", "Ayumu"]
+},
 ];

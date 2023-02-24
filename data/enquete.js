@@ -404,6 +404,17 @@ const EnqueteList = [
 	"theme" : "もしゲームプログラマーかゲームデザイナーになるなら、それぞれぴったりなメンバーは？",
 	"option1" : "ゲームプログラマー",
 	"option2" : "ゲームデザイナー",
+	"winner1" : "Rina",
+	"winner2" : "Setsuna"
+},
+{
+	"id": 38,
+	"url" : "https://lovelive-as.bushimo.jp/selects/q202302/",
+	"started" : new Date("2023-02-19T22:00:00+09:00"),
+	"ended"   : new Date("2023-02-25T23:59:59+09:00"),
+	"theme" : "もし農家か漁師になるなら、それぞれぴったりなメンバーは？",
+	"option1" : "農家",
+	"option2" : "漁師",
 	"winner1" : "",
 	"winner2" : ""
 },
