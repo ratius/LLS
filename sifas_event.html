@@ -100,11 +100,10 @@
 
 #PT-TL { background-color: #fbdfb2; z-index: 2; }
 .PT-top   { position: sticky; top:  0; height: 28px; border-bottom: 2px solid #973;} /*上*/
-.PT-left  { position: sticky; left: 0; width: 60px;  border-right:  2px solid #973;} /*左*/
-.PT-bottom{ border-bottom: 1px solid #aaa;} /*下*/
-.PT-right { border-right:  1px solid #aaa;} /*右*/
-#PairTable td{ width: 99px; height: 59px; }
-#PairTable th.bg_as_Lanzhu{ font-size:10pt;}
+.PT-left  { position: sticky; left: 0; border-right:  2px solid #973;} /*左*/
+.PT-bottom{ height: 59px; border-bottom: 1px solid #aaa;} /*下*/
+.PT-right { width: 99px;  border-right: 1px solid #aaa;} /*右*/
+#PairTable tbody th.bg_as_Lanzhu{ font-size:10pt;}
 
 /*■個別指定：頻出重複トリオ */
 #Trio-Border{
@@ -387,8 +386,8 @@ function DrawSingleTable(){
 function DrawPairTable(){
 
 	//■ヘッダー
-	var Output = '<table id="PairTable">\n<thead>\n<tr>\n';
-	Output += '<th class="PT-top PT-left" id="PT-TL"><\/th>\n';
+	var Output = '<table id="PairTable">\n<thead>\n<tr>\n'
+	+ '<th class="PT-top PT-left" id="PT-TL"><\/th>\n';
 	for(x in TagData){
 		//キャラクター名取得
 		Output += '<th class="PT-top PT-right bg_as_' + x + '"><strong class="shadowname">'
@@ -401,7 +400,7 @@ function DrawPairTable(){
 		Output += '<tr><th class="PT-bottom PT-left bg_as_' + y + '"><strong class="shadowname">'
 		+ TagData[y].name + '<\/strong><\/th>\n';
 		for(x in TagData){
-			if(x === y){ //同キャラは灰色
+			if(x === y){ //同キャラ同士の欄は灰色背景
 				Output += '<td style="background-color:#aaa"><\/td>\n';
 			}else {
 				let CirclesInRow = 0; //丸の個数を数えて、必要に応じて改行
@@ -412,8 +411,7 @@ function DrawPairTable(){
 				}
 				for(z of TrioHistory[temp1[0]][temp1[1]-temp1[0]][0]){
 					Output += DrawRoundButton(x, z, TagData[x].name + '・' + TagData[y].name)
-					
-					if(++CirclesInRow == 4){ //改行処理
+					if(++CirclesInRow == 4){ //4個ごとに改行を入れる
 						Output += '<br>';
 						CirclesInRow = 0;
 					}
@@ -541,6 +539,13 @@ function DrawDuplicatedTrioList(min){
 				</tr>
 			</thead>
 			<tbody id="TrioData-contents">
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
 			</tbody>
 		</table>
 	</div>

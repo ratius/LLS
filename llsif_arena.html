@@ -4,28 +4,28 @@
 <meta charset="utf-8">
 
 <meta property="og:url" content="https://ratius.github.io/LLS/llsif_arena.html">
-<meta property="og:title" content="ライブ♪アリーナまとめ">
+<meta property="og:title" content="ライブ♪アリーナ テキスト集">
 <meta property="og:type" content="website">
-<meta property="og:description" content="スクフェスにおける、ライブ♪アリーナのセリフ集です。">
+<meta property="og:description" content="スクフェスにおける、ライブ♪アリーナのテキスト集です。">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@ratius55">
 <meta name="twitter:creator" content="@ratius55">
-<meta name="twitter:title" content="ライブ♪アリーナまとめ">
+<meta name="twitter:title" content="ライブ♪アリーナ テキスト集">
 <meta name="twitter:image" content="https://ratius.github.io/LLS/img/card_arena.png">
-<meta name="twitter:description" content="スクフェスにおける、ライブ♪アリーナのセリフ集です。">
-<meta name="description" content="スクフェスにおける、ライブ♪アリーナのセリフ集です。">
+<meta name="twitter:description" content="スクフェスにおける、ライブ♪アリーナのテキスト集です。">
+<meta name="description" content="スクフェスにおける、ライブ♪アリーナのテキスト集です。">
 
-<meta name="viewport" content="width=1200px, initial-scale=1">
+<meta name="viewport" content="width=1000, initial-scale=1">
 
-<title>ライブ♪アリーナまとめ | ラブライブ！ストレージ</title>
+<title>ライブ♪アリーナ テキスト集 | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main.css">
 <style><!--
 
 #info-box {
-	width: 800px;
-	height: 90px;
+	width: 900px;
+	height: 100px;
 	border-style: solid;
 	border-color: #333;
 	border-width: 2px 2px 0;
@@ -34,12 +34,13 @@
 }
 
 #info-table {
-	width: 800px;
-	height: 90px;
+	width: 900px;
+	height: 100px;
 	border-collapse: collapse;
 	background-color: #335;
 	color: white;
 }
+
 #ButtonLeft, #ButtonRight {
 	width: 100px;
 	user-select: none;
@@ -60,12 +61,13 @@
 	cursor: not-allowed;
 }
 
+/* セレクトボックス */
 #select-box {
-	width: 570px;
+	width: 670px;
 	margin: 10px auto 0;
-	background-color: #557;
+	background-color: #446;
 	border: solid 1px #ccc;
-	font-size: 110%;
+	font-size: 120%;
 	text-align: center;
 	padding: 8px;
 	color: #fff;
@@ -79,33 +81,41 @@
 	background-position: right 10px center;
 }
 
+#select-box option {
+	background-color: #557;
+}
+
 #message-box {
-	width: 800px;
+	width: 900px;
 	height: calc(90vh - 110px);
 	overflow-y: scroll;
 	border: solid 2px #333;
 }
+
+#sub {
+	color: #ccc;
+	font-size: 90%;
+}
+
 #message-table {
 	width: 100%;
-	font-size: 120%;
+	font-size: 130%;
 	line-height: 150%;
 	border-collapse: collapse;
 	color: white;
 }
 
 #message-table tbody th, #message-table tbody td {
-	padding: 7px 3px;
+	padding: 7px 2px;
 	border-bottom: solid 2px #eee;
 	color: #eee;
 }
 
-#sub {
-	color: #ccc;
-	font-size: small;
-}
-
-#message-table tr:nth-child(odd){ background-color: hsl(333, 50%, 60%);}
+#message-table tr:nth-child(odd){ background-color: hsl(333, 45%, 60%);}
 #message-table tr:nth-child(even){ background-color: hsl(333, 40%, 50%);}
+
+#message-table th:nth-child(1) { width: 70px; }
+#message-table th:nth-child(2) { width: 90px; }
 
 .OpponentName {
 	color: #fff;
@@ -130,10 +140,10 @@
 div.note { /*注釈*/
 	margin: 8px 8px 0 8px;
 	padding: 4px 6px;
-	line-height: 150%;
-	background: rgba(32, 64, 48, 0.4);
+	line-height: 170%;
+	background: rgba(32, 64, 48, 0.45);
 	border: solid 1px #333;
-	font-size:small;
+	font-size: 70%;
 	color: #eee;
 }
 
@@ -215,7 +225,7 @@ const TagData = {
 const IconSize = 64;
 var CurrentPage = 0;
 
-//■セリフ一覧の描画
+//■テキスト一覧の描画
 function WriteMessage(set) {
 	//引数が無い場合、セレクトボックスの状態から引数を生成する
 	if(set === undefined){ set = document.getElementById('select-box').selectedIndex; }
@@ -226,7 +236,7 @@ function WriteMessage(set) {
 	let Output = "";
 	let MessageNumber = 1;
 	for(const temp1 of ArenaData[set].Opponent){
-		Output += '\n<tr>\n\t<th style="width: 60px">';
+		Output += '\n<tr>\n\t<th>';
 		if('num' in temp1){
 			Output += '' + temp1.num + '<\/th>\n';
 			if(Number(temp1.num) === temp1.num){ //数値型の場合、カウントを上書き
@@ -239,7 +249,7 @@ function WriteMessage(set) {
 			if(temp1.name in TagData){
 				let temp2 = TagData[temp1.name];
 		
-				Output += '\t<th style="width:80px"><div class="face" style="background-position: '
+				Output += '\t<th><div class="face" style="background-position: '
 				+ 'right -' + (9 - temp2.x)*IconSize + 'px bottom -' + (6 - temp2.y)*IconSize + 'px">'
 				+ '<\/div><\/th>\n\t<td>'
 				+ '<span class="OpponentName">'
@@ -295,13 +305,17 @@ function CreateDebugLog(obj){
 </head>
 <body>
 <header>
-	<h2 id="MainTitle">スクフェス ライブ♪アリーナまとめ</h2>
+	<h2 id="MainTitle">スクフェス ライブ♪アリーナ テキスト集</h2>
 </header>
 
 <section>
 	<h3 class="foreword">まえがき</h3>
 	<p>
-		スクフェスにおける、「ライブ♪アリーナ」のまとめです。<br>
+		ゲーム「ラブライブ！スクールアイドルフェスティバル」内で定期開催されていたイベント「ライブ♪アリーナ」のテキスト集です。
+	</p>
+	<p>
+		(2023/2/3) 私の知る範囲で、全てのテキストの掲載が完了。<br>
+		欠けているテキストの補完に協力していただいた皆様に感謝。
 	</p>
 </section>
 
@@ -325,9 +339,14 @@ function CreateDebugLog(obj){
 		<table id="info-table">
 			<tbody>
 				<tr>
-					<th id="ButtonLeft"  rowspan="2" onclick="false"><span style="font-size:35px">&#x2b05;</span><br>前回</th>
-					<th id="HeaderUpper"><select id="select-box" onchange="WriteMessage()"></select></th>
-					<th id="ButtonRight" rowspan="2" onclick="false"><span style="font-size:35px">&#x2b95;</span><br>次回</th>
+					<th id="ButtonLeft"  rowspan="2" onclick="false"><span style="font-size:40px">&#x2b05;</span><br>前回</th>
+					<th id="HeaderUpper">
+						<select id="select-box" onchange="WriteMessage()">
+						<optgroup id="sb-t1" label="本編テキスト"></optgroup>
+						<optgroup id="sb-t2" label="その他"></optgroup>
+						</select>
+					</th>
+					<th id="ButtonRight" rowspan="2" onclick="false"><span style="font-size:40px">&#x2b95;</span><br>次回</th>
 				</tr>
 				<tr>
 					<th><span id="sub"></span></th>
@@ -347,6 +366,13 @@ function CreateDebugLog(obj){
 <p>下のボックス内の、色つきの日付の行をクリックすると展開/折りたたみされます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2023/03/02</span> - テキスト追加他</summary>
+		<div>
+			<span class="new"></span>閲覧可能なテキストを追加（第29回）<br>
+			<span class="fix"></span>レイアウトを調整
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2023/02/07</span> - テキスト追加</summary>
 		<div>
 			<span class="new"></span>閲覧可能なテキストを追加（第28回）
@@ -504,7 +530,11 @@ loadScript("data/arena.js", function() {
 	for(temp1 of ArenaData){
 		var temp2 = document.createElement("option");
 		temp2.text = temp1.title;
-		document.getElementById("select-box").appendChild(temp2);
+		if(temp2.text[0] == "第"){
+			document.getElementById("sb-t1").appendChild(temp2);
+		} else {
+			document.getElementById("sb-t2").appendChild(temp2);
+		}
 	}
 	
 	WriteMessage(0);

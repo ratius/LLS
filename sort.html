@@ -110,6 +110,7 @@ var MemberGroup = [
 	["┗","楽曲ユニット",["AllUnit"]],
 	[""  ,"スクールアイドルミュージカル",["Musical"]],
 	[""  ,"蓮ノ空女学院スクールアイドルクラブ",["Hasu"]],
+	["┗","蓮ノ空ユニット",["HasuUnit"]],
 	[""  ,"スクフェス転入生",["Seiran","Shino","Chitose","Touoh","Shion","YG"]],
 	["┣","青藍高校",["Seiran"]],
 	["┣","東雲学院",["Shino"]],
@@ -338,13 +339,17 @@ var CharList = [
 	{name:"虹ヶ咲学園1年生",  namealt:"虹ヶ咲学園<br>1年生",   color:["#ed9"], subtext:"中須かすみ<br>桜坂しずく<br>天王寺璃奈<br>三船栞子", group:{"NijiUnit":1}},
 	{name:"虹ヶ咲学園2年生",  namealt:"虹ヶ咲学園<br>2年生",   color:["#eaa"], subtext:"上原歩夢<br>宮下愛<br>優木せつ菜", group:{"NijiUnit":1}},
 	{name:"虹ヶ咲学園3年生",  namealt:"虹ヶ咲学園<br>3年生",   color:["#9ec"], subtext:"朝香果林<br>近江彼方<br>エマ・ヴェルデ", group:{"NijiUnit":1}},
-	{name:"スクフェス分室",     namealt:"スクフェス<br>分室", color:["#eee"], subtext:"桜坂しずく<br>近江彼方<br>エマ・ヴェルデ", group:{"NijiUnit":1}},
-	{name:"ファミ通App分室",    namealt:"ファミ通App<br>分室", color:["#eee"], subtext:"上原歩夢<br>宮下愛<br>天王寺璃奈", group:{"NijiUnit":1}},
+	{name:"スクフェス分室",     namealt:"スクフェス<br>分室",     color:["#eee"], subtext:"桜坂しずく<br>近江彼方<br>エマ・ヴェルデ", group:{"NijiUnit":1}},
+	{name:"ファミ通App分室",    namealt:"ファミ通App<br>分室",    color:["#eee"], subtext:"上原歩夢<br>宮下愛<br>天王寺璃奈", group:{"NijiUnit":1}},
 	{name:"電撃オンライン分室", namealt:"電撃オンライン<br>分室", color:["#eee"], subtext:"中須かすみ<br>朝香果林<br>優木せつ菜", group:{"NijiUnit":1}},
-	{name:"DiverDiva",        color:['#9cf'], subtext:"宮下愛<br>朝香果林", group:{"NijiUnit":1,"AllUnit":1}},
-	{name:"A・ZU・NA",        color:['#fad'], subtext:"上原歩夢<br>桜坂しずく<br>優木せつ菜", group:{"NijiUnit":1,"AllUnit":1}},
+	{name:"DiverDiva",        color:['#cbf'], subtext:"宮下愛<br>朝香果林", group:{"NijiUnit":1,"AllUnit":1}},
+	{name:"A・ZU・NA",        color:['#f88'], subtext:"上原歩夢<br>桜坂しずく<br>優木せつ菜", group:{"NijiUnit":1,"AllUnit":1}},
 	{name:"QU4RTZ",           color:['#fda'], subtext:"中須かすみ<br>近江彼方<br>エマ・ヴェルデ<br>天王寺璃奈", group:{"NijiUnit":1,"AllUnit":1}},
 	{name:"R3BIRTH",          color:['#abf'], subtext:"三船栞子<br>鐘嵐珠<br>ミア・テイラー", group:{"NijiUnit":1,"AllUnit":1}},
+	{name:"グローバル交流チーム", namealt:"グローバル交流<br>チーム",   color:["#eee"], subtext:"エマ・ヴェルデ<br>ミア・テイラー<br>鐘嵐珠", group:{"NijiUnit":1}},
+	{name:"創作料理チーム",                                             color:["#eee"], subtext:"上原歩夢<br>宮下愛<br>近江彼方", group:{"NijiUnit":1}},
+	{name:"衣装&グッズ考案チーム", namealt:"衣装&グッズ考案<br>チーム", color:["#eee"], subtext:"中須かすみ<br>桜坂しずく<br>朝香果林", group:{"NijiUnit":1}},
+	{name:"IT活用チーム",                                               color:["#eee"], subtext:"優木せつ菜<br>天王寺璃奈<br>三船栞子", group:{"NijiUnit":1}},
 	{name:"スクフェススマイル組", namealt:"スクフェス<br>スマイル組", color:["#f9c"], subtext:"宮下愛<br>近江彼方<br>天王寺璃奈<br>鐘嵐珠", group:{"NijiUnit":1}},
 	{name:"スクフェスピュア組",   namealt:"スクフェス<br>ピュア組",   color:["#9fb"], subtext:"上原歩夢<br>中須かすみ<br>エマ・ヴェルデ<br>ミア・テイラー", group:{"NijiUnit":1}},
 	{name:"スクフェスクール組",   namealt:"スクフェス<br>クール組",   color:["#9df"], subtext:"桜坂しずく<br>朝香果林<br>優木せつ菜<br>三船栞子", group:{"NijiUnit":1}},
@@ -499,7 +504,7 @@ var CharList = [
 	{name:"きなメイ",  color:[ColKina, ColMei ], group:{"LiellaCP":1}},
 	{name:"きなしき",  color:[ColKina, ColShik], group:{"LiellaCP":1}},
 	{name:"きななつ",  color:[ColKina, ColNats], group:{"LiellaCP":1}},
-	{name:"メイしき",  color:[ColMei , ColShik], group:{"LiellaCP":1}},
+	{name:"しきメイ",  color:[ColShik, ColMei], group:{"LiellaCP":1}},
 	{name:"メイなつ",  color:[ColMei , ColNats], group:{"LiellaCP":1}},
 	{name:"しきなつ",  color:[ColShik, ColNats], group:{"LiellaCP":1}},
 
@@ -520,7 +525,11 @@ var CharList = [
 	{name:"夕霧綴理",   color:[ColTsuz], group:{"Hasu":1}},
 	{name:"大沢瑠璃乃", color:[ColRurH], group:{"Hasu":1}},
 	{name:"藤島慈",     color:[ColMegu], group:{"Hasu":1}},
-	
+
+	{name:"スリーズブーケ",   color:[ColKaho,ColKozu], group:{"HasuUnit":1}},
+	{name:"DOLLCHESTRA",      color:[ColSayH,ColTsuz], group:{"HasuUnit":1}},
+	{name:"みらくらぱーく！", color:[ColRurH,ColMegu], group:{"HasuUnit":1}},
+
 	{name:"桜坂しずく",    color:["#acf"], group:{"Seiran":1}},
 	{name:"一之瀬マリカ",  color:["#acf"], group:{"Seiran":1}},
 	{name:"永山みなみ",    color:["#acf"], group:{"Seiran":1}},
@@ -1057,6 +1066,12 @@ function shuffle(array) {
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2022/03/02</span> - ソート対象追加</summary>
+		<div>
+			<span class="new"></span>「蓮ノ空ユニット」を追加
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2022/02/14</span> - ソート対象追加</summary>
 		<div>
 			<span class="new"></span>「蓮ノ空女学院スクールアイドルクラブ」を追加
