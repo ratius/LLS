@@ -737,4 +737,13 @@ const EventList = [
 	"UR" : ["You", "Ruby", "Karin"],
 	"SR" : ["Honoka", "Kanan", "Ayumu"]
 },
+{
+	"id" : 83,
+	"name" : "オンリーワンのひな祭り",
+	"type" : "exchange",
+	"started" : new Date("2023-03-07T15:00:00+09:00"),
+	"ended"   : new Date("2023-03-14T14:59:59+09:00"),
+	"UR" : ["Hanayo", "Mari", "Kasumi"],
+	"SR" : ["Kotori", "Hanamaru", "Kanata"]
+},
 ];

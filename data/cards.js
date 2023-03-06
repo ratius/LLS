@@ -9458,5 +9458,77 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
 },
+{
+	"id": 857,
+	"name": "Hanayo",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Vo",
+	"cn1": "正解は……○でした〜！",
+	"cn2": "芽吹き花開く雛祭り",
+	"date": "2023/03/04",
+	"source": "gacha",
+	"desc": "「オンリーワンのひな祭りガチャ」で追加"
+},
+{
+	"id": 858,
+	"name": "Hanamaru",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Vo",
+	"cn1": "あ、しまったずら……！",
+	"cn2": "Step! ZERO to ONE",
+	"date": "2023/03/04",
+	"source": "gacha",
+	"desc": "「オンリーワンのひな祭りガチャ」で追加"
+},
+{
+	"id": 859,
+	"name": "Mari",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "わあ、おいしそう〜！！",
+	"cn2": "芽吹き花開く雛祭り",
+	"date": "2023/03/04",
+	"source": "gacha",
+	"desc": "「オンリーワンのひな祭りガチャ」で追加"
+},
+{
+	"id": 860,
+	"name": "Kasumi",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "ギリギリまで諦めたくないです！",
+	"cn2": "芽吹き花開く雛祭り",
+	"date": "2023/03/07",
+	"source": "reward",
+	"desc": "イベント「オンリーワンのひな祭り」報酬"
+},
+{
+	"id": 861,
+	"name": "Kanata",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "喜んでもらえるかなあって",
+	"cn2": "ミラクル STAY TUNE！",
+	"date": "2023/03/07",
+	"source": "reward",
+	"desc": "イベント「オンリーワンのひな祭り」報酬 (交換所枠)"
+},
+{
+	"id": 862,
+	"name": "Kotori",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Gd",
+	"cn1": "デザインを考えなくっちゃね！",
+	"cn2": "HEART to HEART!",
+	"date": "2023/03/07",
+	"source": "reward",
+	"desc": "イベント「オンリーワンのひな祭り」報酬 (ランキング枠)"
+},
 ];
-const LatestUpdate = "2023/02/27 「スクスタフェス」まで";
+const LatestUpdate = "2023/03/07 イベント「オンリーワンのひな祭り」まで";
