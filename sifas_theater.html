@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 
 <meta property="og:url" content="https://ratius.github.io/LLS/sifas_theater.html">
-<meta property="og:title" content="スクスタ 毎日劇場便覧 | ラブライブ！ストレージ">
+<meta property="og:title" content="スクスタ 毎日劇場 データベース | ラブライブ！ストレージ">
 <meta property="og:type" content="website">
 <meta property="og:description" content="スクスタの毎日劇場のまとめ。">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@ratius55">
 <meta name="twitter:creator" content="@ratius55">
-<meta name="twitter:title" content="スクスタ 毎日劇場便覧 | ラブライブ！ストレージ">
+<meta name="twitter:title" content="スクスタ 毎日劇場 データベース | ラブライブ！ストレージ">
 <meta name="twitter:description" content="スクスタの毎日劇場のまとめ。">
 
-<title>スクスタ 毎日劇場便覧 | ラブライブ！ストレージ</title>
+<title>スクスタ 毎日劇場 データベース | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main.css">
 <style><!--
@@ -158,12 +158,14 @@ const TagData = {
 	"25252":      {"name": "にっこにっこにー",     "r":180, "g":160, "b":80, "style": "Square"},
 	"Marathon":   {"name": "スクールアイドルDVDマラソン","r":180, "g":160, "b":80, "style": "Square"},
 	"Mango":      {"name": "流行りのマンゴー牛乳", "r":180, "g":160, "b":80, "style": "Square"},
+	"Karaage":    {"name": "にこちゃんの唐揚げ", "r":180, "g":160, "b":80, "style": "Square"},
 };
 
 //■ソート対象
 const SortTarget = [
 {"name": "2020年", "tag": "year-2020"},
 {"name": "2021年", "tag": "year-2021"},
+{"name": "2022年", "tag": "year-2022"},
 {"name": "----"},
 {"name": "出演：高坂 穂乃果", "tag": "Honoka"},
 {"name": "出演：絢瀬 絵里", "tag": "Eli"},
@@ -213,6 +215,7 @@ const SortTarget = [
 {"name": "シリーズ：せつ菜の料理", "tag": "Meshimazu"},
 {"name": "シリーズ：スクールアイドルDVDマラソン", "tag": "Marathon"},
 {"name": "シリーズ：流行りのマンゴー牛乳", "tag": "Mango"},
+{"name": "シリーズ：にこちゃんの唐揚げ", "tag": "Karaage"},
 ];
 
 //■■関数
@@ -262,7 +265,7 @@ function DrawStoryList(tag){
 </head>
 <body>
 <header>
-	<h2 id="MainTitle">スクスタ 毎日劇場便覧</h2>
+	<h2 id="MainTitle">スクスタ 毎日劇場 データベース</h2>
 </header>
 
 <section>
@@ -270,7 +273,7 @@ function DrawStoryList(tag){
 	<p>
 		スクフェスALL STARSで配信されている「毎日劇場」のまとめです。<br>
 		下部のプルダウンメニューから見たいカテゴリを選択すると、該当するストーリーが表示されます。<br>
-		現在、2021年9月分までのデータベースがあります。
+		現在、2021年12月分までのデータベースがあります。
 	</p>
 </section>
 
@@ -292,7 +295,7 @@ function DrawStoryList(tag){
 	<details open>
 		<summary><span class="date">2022/09/12</span></summary>
 		<div>
-			<span class="new"></span>データベースを追加（2021年3月～9月）
+			<span class="new"></span>データを追加（2021年3月～9月）
 		</div>
 	</details>
 	<details>
@@ -367,7 +370,7 @@ loadScript("data/theater.js", function() {
 		
 		//◆描画時間の出力
 		const TimeOutputEnd = performance.now();
-		console.log('スクスタ 毎日劇場便覧\n初期描画処理: ' + (TimeOutputEnd - TimeOutputStart) + ' ミリ秒');
+		console.log('スクスタ 毎日劇場 データベース\n初期描画処理: ' + (TimeOutputEnd - TimeOutputStart) + ' ミリ秒');
 	}
 });
 --></script>
