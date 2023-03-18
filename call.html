@@ -415,7 +415,7 @@ function CreateTable(charCalled, charCalling){
 }
 --></script>
 </head>
-<body>
+<body class="RM">
 <header>
 	<h2>スクスタ 呼称表</h2>
 </header>
@@ -428,6 +428,25 @@ function CreateTable(charCalled, charCalling){
 	</p>
 </section>
 
+
+<div id="RightMenu">
+	<ul>
+		<li><strong>目次</strong></li>
+		<li><hr></li>
+		<li><a href="#Foreword">まえがき</a></li>
+		<li><a href="#CallList">呼ばれ方一覧</a></li>
+		<li><ul>
+			<li><a href="#Call_Muse">μ's</a></li>
+			<li><a href="#Call_Aqours">Aqours</a></li>
+			<li><a href="#Call_Niji_1">虹ヶ咲(1)</a></li>
+			<li><a href="#Call_Niji_2">虹ヶ咲(2)</a></li>
+			<li><a href="#Call_Niji_3">虹ヶ咲(3)</a></li>
+			<li><a href="#Call_Other">その他</a></li>
+		</ul></li>
+	<li><a href="#History">更新履歴</a></li>
+	</ul>
+</div>
+
 <div id="Loading">
 	<h4>Now Loading...</h4>
 	このコンテンツはJavaScriptを使用しています。<br>
@@ -435,35 +454,44 @@ function CreateTable(charCalled, charCalling){
 	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
 </div>
 
-<section id="Call_Muse" style="display: none;">
-	 <h3 class="muse">μ'sの呼ばれ方</h3>
+<section id="CallList">
+	<h3 class="muse">呼ばれ方一覧</h3>
+	<section id="Call_Muse" style="display: none;">
+		<h4 class="muse">μ'sの呼ばれ方</h3>
+	</section>
+
+	<section id="Call_Aqours" style="display: none;">
+		<h4 class="aqours">Aqoursの呼ばれ方</h3>
+	</section>
+
+	<section id="Call_Niji_1" style="display: none;">
+		<h4 class="niji">ニジガクの呼ばれ方(1)</h3>
+	</section>
+
+	<section id="Call_Niji_2" style="display: none;">
+		<h4 class="niji">ニジガクの呼ばれ方(2)</h3>
+	</section>
+
+	<section id="Call_Niji_3" style="display: none;">
+		<h4 class="niji">ニジガクの呼ばれ方(3)</h3>
+	</section>
+
+	<section id="Call_Other" style="display: none;">
+		<h4 class="foreword">その他キャラクターの呼ばれ方</h3>
+	</section>
 </section>
 
-<section id="Call_Aqours" style="display: none;">
-	<h3 class="aqours">Aqoursの呼ばれ方</h3>
-</section>
-
-<section id="Call_Niji_1" style="display: none;">
-	<h3 class="niji">ニジガクの呼ばれ方(1)</h3>
-</section>
-
-<section id="Call_Niji_2" style="display: none;">
-	<h3 class="niji">ニジガクの呼ばれ方(2)</h3>
-</section>
-
-<section id="Call_Niji_3" style="display: none;">
-	<h3 class="niji">ニジガクの呼ばれ方(3)</h3>
-</section>
-
-<section id="Call_Other" style="display: none;">
-	<h3 class="foreword">その他キャラクターの呼ばれ方</h3>
-</section>
-
-<section>
+<section id="History">
 <h3 class="niji">更新履歴 (呼び方の追加以外)</h3>
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2023/03/18</span></summary>
+		<div>
+			<span class="new"></span>目次を追加
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2020/12/31</span> - キャラクター追加</summary>
 		<div>
 			<span class="new"></span>加藤ツムギの呼び方・呼ばれ方を追加（第46章まで）

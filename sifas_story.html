@@ -22,6 +22,26 @@
 <link rel="stylesheet" href="main.css">
 <style><!--
 
+.caution {
+	font-size: small;
+	list-style-type: none;
+}
+.caution summary {
+	color: #c36;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.caution summary:hover {
+	color: #f03;
+}
+
+.caution div{
+	line-height: 170%;
+	background-color: #eee;
+	border-left: 3px solid #999;
+	padding: 6px;
+}
+
 #N1, #N2 {
 	border: solid 2px #b9a;
 	font-size: x-large;
@@ -205,7 +225,7 @@ function NarrowerEvent(changed){
 
 --></script>
 </head>
-<body>
+<body class="RM">
 <header>
 	<h2 id="MainTitle">スクスタ ストーリー便覧</h2>
 </header>
@@ -225,11 +245,32 @@ function NarrowerEvent(changed){
 			<li>μ&#39;s：各<span id="ep_num_3"></span>話まで</li>
 			<li>Aqours：各<span id="ep_num_4"></span>話まで</li>
 			<li>ニジガク：初期9人 (各<span id="ep_num_5"></span>話まで)、栞子 (<span id="ep_num_6"></span>話まで)、ミア・ランジュ (<span id="ep_num_7"></span>話まで)</li>
+			<li style="list-style-type: none;">
+				<details class="caution">
+					<summary>【注】キズナエピソードの掲載方針（クリックで展開）</summary>
+					<div>
+						キズナエピソードは、スクールアイドルのキズナLv.を上げることで解放されるコンテンツです。<br>
+						2021年2月頃からは、キズナエピソードを解放するために必要なキズナLv.は1話配信（1ヶ月半おき）ごとに3ずつ増えるのが通例となっています。<br>
+						しかし、キズナLv.が上がるにしたがって、キズナLv.を1上げるのに必要な労力は増えていきます。そのため、プレイヤーがキズナエピソードの解放に必要な労力は日に日に増えています。<br>
+						この便覧の作者も、キズナエピソードを全て読むために各キャラクターのキズナLv.を満遍なく上げる育成方針の維持が困難だと感じています。要求キズナLv.が100以下のものは掲載に尽力しますが、それをを超えた分のキズナエピソードは<b>積極的には掲載しない予定です。</b>ご了承下さい。
+					</div>
+				</details>
+			</li>
 		</ul>
 		<li>アニメ連動ストーリー：1期・2期ともに掲載完了</li>
 		<li>サイドエピソード：掲載予定なし</li>
 	</ul>
 </section>
+
+<div id="RightMenu">
+	<ul>
+		<li><strong>目次</strong></li>
+		<li><hr></li>
+		<li><a href="#Foreword">まえがき</a></li>
+		<li><a href="#Viewer">ストーリー一覧</a></li>
+		<li><a href="#History">更新履歴</a></li>
+	</ul>
+</div>
 
 <div id="Loading">
 	<h4>Now Loading...</h4>
@@ -238,8 +279,8 @@ function NarrowerEvent(changed){
 	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
 </div>
 
-<section>
-	<h3 class="muse">便覧</h3>
+<section id="Viewer">
+	<h3 class="muse">ストーリー一覧</h3>
 	<div style="margin-bottom: 10px;">
 		<select id="N1" onChange="NarrowerEvent(1)"><option>(カテゴリを選択)</option></select>
 		<select id="N2" onChange="NarrowerEvent(2)" style="display: none;"></select>
@@ -249,12 +290,18 @@ function NarrowerEvent(changed){
 	</div>
 </section>
 
-<section>
+<section id="History">
 <h3 class="niji">更新履歴（ストーリー掲載以外で）</h3>
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
-		<summary><span class="date">2022/11/06</span></summary>
+		<summary><span class="date">2023/03/18</span></summary>
+		<div>
+			<span class="new"></span>目次を追加
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2022/11/06</span> - レンダリングの最適化</summary>
 		<div>
 			<span class="fix"></span>レンダリングの最適化
 		</div>
@@ -262,11 +309,11 @@ function NarrowerEvent(changed){
 	<details>
 		<summary><span class="date">2022/06/25</span> - 不具合修正</summary>
 		<div>
-			<span class="fix"></span>一部ストーリーの「登場人物」の誤りを修正
+			<span class="fix"></span>一部ストーリーの「登場人物」欄の誤りを修正
 		</div>
 	</details>
 	<details>
-		<summary><span class="date">2022/06/21</span> - 更新履歴リニューアル 他</summary>
+		<summary><span class="date">2022/06/21</span> - 更新履歴リニューアル</summary>
 		<div>
 			<span class="fix"></span>更新履歴をリニューアル（折りたたみ式に変更）<br>
 		</div>

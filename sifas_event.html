@@ -26,7 +26,7 @@
 /*■スクロール可能なテーブル */
 .FixedHeader {
 	overflow-y: scroll;
-	width: min(calc(100% - 20px), 1200px);
+	width: min(calc(100% - 6px), 1000px);
 	height: calc(80vh - 30px);
 }
 
@@ -63,7 +63,7 @@
 #EventList .group_A { background-color: #dbf4ff; }
 #EventList .group_N { background-color: #ffefd6; }
 
-/*■個別指定：キャラクター登場状況一覧 */
+/*■個別指定：キャラクター登場回数 */
 #SingleData-Border {
 	border: solid 3px #19b1f6;
 	background-color: rgb(240, 247, 255);
@@ -85,7 +85,7 @@
 
 /*■個別指定：ペア共演状況 */
 #PairTable-border {
-	width: calc(100% - 14px);
+	width: calc(100% - 6px);
 	height: 90vh;
 	border: 3px solid #f29600;
 	overflow: scroll;
@@ -358,7 +358,7 @@ function MakeTrioData(){
 	}
 }
 
-// ■「キャラクター登場状況」テーブルの作成（キャラ別）
+// ■「キャラクター登場回数」テーブルの作成（キャラ別）
 function DrawSingleTable(){
 	let Output = '';
 	
@@ -462,20 +462,32 @@ function DrawDuplicatedTrioList(min){
 }
 
 --></script>
-
 </head>
-<body>
+<body class="RM">
 <header>
 	<h2 id="MainTitle">スクスタ 過去のイベントまとめ</h2>
 </header>
 
-<section>
+<section id="Foreword">
 	<h3 class="foreword">まえがき</h3>
 	<p>
 		スクフェスALL STARSのイベントストーリーおける、各ペアの共演状況です。<br>
 		PCで閲覧している場合、イベント番号の書かれた丸にカーソルを当てることで詳しい情報のツールチップが出現します。
 	</p>
 </section>
+
+<div id="RightMenu">
+	<ul>
+		<li><strong>目次</strong></li>
+		<li><hr></li>
+		<li><a href="#Foreword">まえがき</a></li>
+		<li><a href="#EventList">イベント一覧</a></li>
+		<li><a href="#Single">キャラクター登場回数</a></li>
+		<li><a href="#Pair">ペア共演状況</a></li>
+		<li><a href="#Trio">頻出重複トリオ</a></li>
+		<li><a href="#history">更新履歴</a></li>
+	</ul>
+</div>
 
 <div id="Loading">
 	<h4>Now Loading...</h4>
@@ -484,10 +496,10 @@ function DrawDuplicatedTrioList(min){
 	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
 </div>
 
-<section>
+<section id="EventList">
 	<h3 class="muse">イベント一覧</h3>
 	<div id="EventList-Border" class="FixedHeader">
-		<table id="EventList">
+		<table id="EventList-Table">
 			<thead>
 				<tr class="header-top">
 					<th rowspan="2" class="border-r border-b">No.</th>
@@ -506,8 +518,8 @@ function DrawDuplicatedTrioList(min){
 	</div>
 </section>
 
-<section>
-	<h3 class="aqours">キャラクター登場状況</h3>
+<section id="Single">
+	<h3 class="aqours">キャラクター登場回数</h3>
 	<div id="SingleData-Border" class="FixedHeader">
 		<table id="SingleData">
 			<thead>
@@ -522,12 +534,12 @@ function DrawDuplicatedTrioList(min){
 	</div>
 </section>
 
-<section>
+<section id="Pair">
 	<h3 class="niji">ペア共演状況</h3>
 	<div id="PairTable-border"></div>
 </section>
 
-<section>
+<section id="Trio">
 	<h3 class="liella">頻出重複トリオ</h3>
 	<div id="Trio-Border" class="FixedHeader">
 		<table id="Trio-Table">
@@ -551,11 +563,17 @@ function DrawDuplicatedTrioList(min){
 	</div>
 </section>
 
-<section>
+<section id="history">
 <h3 class="niji">更新履歴（イベント追加以外）</h3>
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2023/03/18</span></summary>
+		<div>
+			<span class="new"></span>目次を追加
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2023/02/16</span> - レイアウト調整</summary>
 		<div>
 			<span class="fix"></span>「ペア共演状況」のレイアウト調整<br>
@@ -566,7 +584,7 @@ function DrawDuplicatedTrioList(min){
 	<details>
 		<summary><span class="date">2022/11/05</span> - レイアウト調整</summary>
 		<div>
-			<span class="fix"></span>「キャラクター登場状況」をリニューアル<br>
+			<span class="fix"></span>「キャラクター登場回数」をリニューアル<br>
 			<span class="fix"></span>レンダリングの最適化
 		</div>
 	</details>
@@ -593,7 +611,7 @@ function DrawDuplicatedTrioList(min){
 	<details>
 		<summary><span class="date">2021/11/06</span> - レイアウト調整</summary>
 		<div>
-			<span class="fix"></span>「キャラクター登場状況」の表のレイアウトを調整
+			<span class="fix"></span>「キャラクター登場回数」の表のレイアウトを調整
 		</div>
 	</details>
 	<details>
@@ -622,9 +640,9 @@ function DrawDuplicatedTrioList(min){
 		</div>
 	</details>
 	<details>
-		<summary><span class="date">2020/07/31</span> - 「キャラクター登場状況」実装</summary>
+		<summary><span class="date">2020/07/31</span> - 「キャラクター登場回数」実装</summary>
 		<div>
-			<span class="new"></span>「キャラクター登場状況」を実装
+			<span class="new"></span>「キャラクター登場回数」を実装
 		</div>
 	</details>
 	<details>

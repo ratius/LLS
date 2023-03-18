@@ -26,7 +26,7 @@
 /* 共通 */
 .FixedHeader {
 	overflow-y: scroll;
-	width: min(calc(100% - 20px), 1200px);
+	width: min(calc(100% - 6px), 1000px);
 	height: calc(80vh - 30px);
 }
 
@@ -105,15 +105,27 @@ const Parameter = location.search.substring(1).split('&');
 if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
 --></script>
 </head>
-<body>
+<body class="RM">
 <header>
 	<h2 id="MainTitle">虹ヶ咲学園スクールアイドル同好会 マンスリーアンケートまとめ</h2>
 </header>
 
-<section>
+<section id="Foreword">
 	<h3 class="foreword">まえがき</h3>
 	<p>投票企画「<a href="https://lovelive-as.bushimo.jp/selects/">虹ヶ咲学園スクールアイドル同好会 マンスリーアンケート</a>」のまとめです。</p>
 </section>
+
+
+<div id="RightMenu">
+	<ul>
+		<li><strong>目次</strong></li>
+		<li><hr></li>
+		<li><a href="#Foreword">まえがき</a></li>
+		<li><a href="#EnqueteList">アンケート一覧</a></li>
+		<li><a href="#MostVoted">キャラ別最多得票</a></li>
+		<li><a href="#History">更新履歴</a></li>
+	</ul>
+</div>
 
 <div id="Loading">
 	<h4>Now Loading...</h4>
@@ -122,8 +134,8 @@ if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
 	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
 </div>
 
-<section>
-	<h3 class="muse">マンスリーアンケート一覧</h3>
+<section id="EnqueteList">
+	<h3 class="muse">アンケート一覧</h3>
 	<p>下表の右にある矢印をクリックすると、結果発表ページを開きます。</p>
 	<div id="EnqueteTable" class="FixedHeader">
 		<table>
@@ -141,7 +153,7 @@ if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
 	</div>
 </section>
 
-<section>
+<section id="MostVoted">
 	<h3 class="aqours">キャラ別最多得票</h3>
 	<p>PCで閲覧している場合、「第○回」のボタンにカーソルを合わせることで、ツールチップにその回のテーマが表示されます。</p>
 	<div id="MostVotedTable" class="FixedHeader">
@@ -154,13 +166,20 @@ if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
 			</thead>
 			<tbody id="MostVoted-result"></tbody>
 		</table>
+	</div>
 </section>
 
-<section>
+<section id="History">
 <h3 class="niji">更新履歴（結果掲載以外）</h3>
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2023/03/18</span></summary>
+		<div>
+			<span class="new"></span>目次を追加
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2022/11/06</span> - レンダリング最適化</summary>
 		<div>
 			<span class="fix"></span>レンダリングの最適化

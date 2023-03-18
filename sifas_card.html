@@ -26,7 +26,7 @@
 
 #Legend table{
 	border-collapse: collapse;
-	border: solid 2px #f29600;
+	border: solid 3px #f29600;
 }
 
 #Legend thead {
@@ -91,7 +91,6 @@ td:hover .tool-tip {
 .SR > th {
 	background-color: #ccc;
 }
-
 
 .cap { font-size: 120%; }
 .sleep { color: #999; }
@@ -168,31 +167,22 @@ function LoadRawData(){
 	}
 }
 
-// ■凡例を作成
-function DrawLegend(){
- 	var Output = '\n'
-	+ '<table><thead><th>表記<\/th><th>解説<\/th><\/thead><tbody>'
-	+ '<tr><th class="release">'+ ToolTipSource['release']+ '<\/th><td>恒常。そのキャラクターの実装と同時に登場したカード<\/td><\/tr>'
-	+ '<tr><th class="none">'   + ToolTipSource['none']   + '<\/th><td>恒常。初期実装分でなく、イベントとも無関係なカード<\/td><\/tr>'
-	+ '<tr><th class="gacha">'  + ToolTipSource['gacha']  + '<\/th><td>恒常。イベントガチャで登場<\/td><\/tr>'
-	+ '<tr><th class="reward">' + ToolTipSource['reward'] + '<\/th><td>イベント報酬として登場<\/td><\/tr>'
-	+ '<tr><th class="fes">'    + ToolTipSource['fes']    + '<\/th><td><b>スクスタフェス限定<\/b>。特定のガチャから排出<\/td><\/tr>'
-	+ '<tr><th class="party">'  + ToolTipSource['party']  + '<\/th><td><b>パーティーガチャ限定<\/b>。特定のガチャから排出<\/td><\/tr>'
-	+ '<\/tbody><\/table>';
-	return Output;
-}
-
 // ■テーブルを作成
-function DrawTable(group, GroupNumber){
-	var Output = '<div class="card-box">\n<table class="cardlist" style="min-width: ' + (100+group.length*108) + 'px">\n';
+function DrawTable(num1, num2, GroupNum){
+	var Output = '<div class="card-box">\n'
+	+ '<table class="cardlist" style="min-width: ' + (208+(num2 - num1)*108) + 'px">\n';
 
 	//■ヘッダー
 	Output += '<thead>\n<tr class="header-top">\n<th><\/th>\n';
-	for(const CharTemp of group){
-		Output += '<th class="bg_as_' + CharTemp + '"'
-		+ (TagData[CharTemp].name.length > 6 ? ' style="font-size:80%"' : '')
+	for(i=num1; i<=num2 ; i++){
+		var TargetChar = "";
+		for(var name in  TagData){
+			if(TagData[name].number === i){ TargetChar = name; break; }
+		}
+		Output += '<th class="bg_as_' + TargetChar + '"'
+		+ (TagData[TargetChar].name.length > 6 ? ' style="font-size:80%"' : '')
 		+ '><strong class="shadowname">'
-		+ TagData[CharTemp].name + '<\/strong><\/th>\n';
+		+ TagData[TargetChar].name + '<\/strong><\/th>\n';
 	}
 	Output += '<\/tr>\n<\/thead>\n<tbody>\n';
 
@@ -205,16 +195,19 @@ function DrawTable(group, GroupNumber){
 		blank = 0; //仕込み
 		OutputTmp += '<tr class="' + Rarity +'"><th><span class="cap">' + Rarity + ' ' + (TempY+1) + '枚目<\/span>';
 		if(TempZ == numCharacters){ //SRの場合、衣装名も出す
-			if(TempY < OutfitList[GroupNumber].length){
-				OutputTmp += '<br><span style="font-weight:normal">(' + OutfitList[GroupNumber][TempY] + ')<\/span>';
+			if(TempY < OutfitList[GroupNum].length){
+				OutputTmp += '<br><span style="font-weight:normal">(' + OutfitList[GroupNum][TempY] + ')<\/span>';
 			}
 		}
 		OutputTmp +=  '<\/th>\n';
 		
-		for(x of group){
-			const TempX = TagData[x].number;
-			if(TempY < CardList[TempX + TempZ].length){ //あるならば
-				ListTmp = CardList[TempX + TempZ][TempY]
+		for(i=num1; i<=num2 ; i++){
+			var TargetChar = "";
+			for(var name in TagData){
+				if(TagData[name].number === i){ TargetChar = name; break; }
+			}
+			if(TempY < CardList[TagData[TargetChar].number + TempZ].length){ //あるならば
+				ListTmp = CardList[TagData[TargetChar].number + TempZ][TempY]
 
 				if(ListTmp.id === -2){
 					continue;
@@ -242,7 +235,7 @@ function DrawTable(group, GroupNumber){
 				blank++;
 			}
 		}
-		if(blank == group.length || TempY >= 30){ //全部が空マスか、リストが長くなりすぎたら中断
+		if(blank > num2 - num1 || TempY >= 30){ //全部が空マスか、リストが長くなりすぎたら中断
 			TempY = 0;
 			TempZ += numCharacters;
 		} else { 
@@ -256,21 +249,36 @@ function DrawTable(group, GroupNumber){
 
 --></script>
 </head>
-<body>
-
+<body class="RM">
 <header>
 	<h2 id="MainTitle">スクスタ カード実装状況</h2>
 </header>
 
-<section>
+<section id="Foreword">
 	<h3 class="foreword">まえがき</h3>
 	<p>
 		「ラブライブ！スクールアイドルフェスティバルALL STARS」で実装されているUR・SRのまとめです。<br>
 		追加メンバーの「○枚目」は、URはゲーム内のパラメータの合計値を、SRは衣装セットを基準に設定しています。<br>
 		PCで閲覧している場合、セルにカーソルを当てることで詳しい情報のツールチップが出現します。<br>
 	</p>
-	<p id="RecordedData"></p>
+	<p id="RecordedData">掲載データ範囲：</p>
 </section>
+
+<div id="RightMenu">
+	<ul>
+		<li><strong>目次</strong></li>
+		<li><hr></li>
+		<li><a href="#Foreword">まえがき</a></li>
+		<li><a href="#Legend">凡例</a></li>
+		<li><a href="#CardList">カード一覧</a></li>
+		<li><ul>
+			<li><a href="#Muse">μ's</a></li>
+			<li><a href="#Aqours">Aqours</a></li>
+			<li><a href="#Niji">虹ヶ咲</a></li>
+		</ul></li>
+	<li><a href="#history">更新履歴</a></li>
+	</ul>
+</div>
 
 <div id="Loading">
 	<h4>Now Loading...</h4>
@@ -281,10 +289,24 @@ function DrawTable(group, GroupNumber){
 
 <section id="Legend">
 	<h3 class="foreword">凡例</h3>
+	<table>
+	<thead><tr><th>表記</th><th>解説</th></tr></thead>
+	<tbody>
+		<tr><th class="release">初期  </th><td>恒常。そのキャラクターの実装と同時に登場したカード</td></tr>
+		<tr><th class="none"   >非イベ</th><td>恒常。初期実装分でなく、イベントとも無関係なカード</td></tr>
+		<tr><th class="gacha"  >Ｅ特攻</th><td>恒常。イベントガチャで登場</td></tr>
+		<tr><th class="reward" >Ｅ報酬</th><td>イベント報酬として登場</td></tr>
+		<tr><th class="fes"    >Ｆ限定</th><td><b>スクスタフェス限定</b>。特定のガチャから排出</td></tr>
+		<tr><th class="party"  >Ｐ限定</th><td><b>パーティーガチャ限定</b>。特定のガチャから排出</td></tr>
+	</tbody>
+</table>
 </section>
 
-<section>
+<section id="CardList">
 	<h3 class="liella">カード一覧</h3>
+	<p>
+	以下の表は左右にスクロールすることができます。
+	</p>
 	<section id="Muse">
 		<h4 class="muse">μ's</h4>
 	</section>
@@ -294,15 +316,21 @@ function DrawTable(group, GroupNumber){
 	</section>
 
 	<section id="Niji">
-		<h4 class="niji">ニジガク</h4>
+		<h4 class="niji">虹ヶ咲</h4>
 	</section>	
 </section>
 
-<section>
+<section id="history">
 <h3 class="niji">更新履歴 (カード追加以外)</h3>
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2023/03/18</span></summary>
+		<div>
+			<span class="new"></span>目次を追加
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2022/10/08</span></summary>
 		<div>
 			<span class="fix"></span>栞子の列の表示調整（他の虹ヶ咲キャラの10枚目に相当するURが無いため）
@@ -342,7 +370,7 @@ function DrawTable(group, GroupNumber){
 		</div>
 	</details>
 	<details>
-		<summary><span class="date">2021/03/19</span></summary>
+		<summary><span class="date">2021/03/19</span> - 属性・タイプを追加</summary>
 		<div>
 			<span class="new"></span>属性・タイプの表示を追加
 		</div>
@@ -388,13 +416,11 @@ loadScript("data/cards.js", function() {
 	let CardList = [];
 	LoadRawData();
 
-	document.getElementById("RecordedData").innerHTML = '掲載データ範囲：' + LatestUpdate + '';
+	document.getElementById("RecordedData").innerHTML += LatestUpdate;
 
-	document.getElementById("Legend").innerHTML += DrawLegend();
-
-	document.getElementById("Muse").innerHTML   += '\n' + DrawTable(["Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"], 0);
-	document.getElementById("Aqours").innerHTML   += '\n' + DrawTable(["Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby"], 1);
-	document.getElementById("Niji").innerHTML   += '\n' + DrawTable(["Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"], 2);
+	document.getElementById("Muse").innerHTML   += '\n' + DrawTable(0,8,0);
+	document.getElementById("Aqours").innerHTML += '\n' + DrawTable(9,17,1);
+	document.getElementById("Niji").innerHTML   += '\n' + DrawTable(18,29,2);
 	
 	//◆「Now Loading...」解除
 	document.getElementById("Loading").style.display = "none";

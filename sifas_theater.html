@@ -262,12 +262,12 @@ function DrawStoryList(tag){
 
 --></script>
 </head>
-<body>
+<body class="RM">
 <header>
 	<h2 id="MainTitle">スクスタ 毎日劇場 データベース</h2>
 </header>
 
-<section>
+<section id="Foreword">
 	<h3 class="foreword">まえがき</h3>
 	<p>
 		スクフェスALL STARSで配信されている「毎日劇場」のまとめです。<br>
@@ -275,6 +275,16 @@ function DrawStoryList(tag){
 		現在、2021年12月分までのデータベースがあります。
 	</p>
 </section>
+
+<div id="RightMenu">
+	<ul>
+		<li><strong>目次</strong></li>
+		<li><hr></li>
+		<li><a href="#Foreword">まえがき</a></li>
+		<li><a href="#StoryViewer">毎日劇場一覧</a></li>
+		<li><a href="#History">更新履歴</a></li>
+	</ul>
+</div>
 
 <div id="Loading">
 	<h4>Now Loading...</h4>
@@ -284,14 +294,20 @@ function DrawStoryList(tag){
 </div>
 
 <section id="StoryViewer" style="display: none;">
-	<h3 class="muse">便覧</h3>
+	<h3 class="muse">毎日劇場一覧</h3>
 </section>
 
-<section>
+<section id="History">
 <h3 class="niji">更新履歴</h3>
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2023/03/18</span></summary>
+		<div>
+			<span class="new"></span>目次を追加
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2023/03/06</span></summary>
 		<div>
 			<span class="new"></span>データを追加（2021年10月～12月）

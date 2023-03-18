@@ -194,12 +194,12 @@ div.note { /*注釈*/
 
 --></style>
 </head>
-<body>
+<body class="RM">
 <header>
 	<h2 id="MainTitle">スクフェス ライブ♪アリーナ テキスト集</h2>
 </header>
 
-<section>
+<section id="Foreword">
 	<h3 class="foreword">まえがき</h3>
 	<p>
 		ゲーム「ラブライブ！スクールアイドルフェスティバル」内で定期開催されていたイベント「ライブ♪アリーナ」のテキスト集です。
@@ -209,6 +209,17 @@ div.note { /*注釈*/
 		欠けているテキストの補完に協力していただいた皆様に感謝。
 	</p>
 </section>
+
+<div id="RightMenu">
+	<ul>
+		<li><strong>目次</strong></li>
+		<li><hr></li>
+		<li><a href="#Foreword">まえがき</a></li>
+		<li><a href="#StoryViewer">過去のテキスト</a></li>
+		<li><a href="#TimesAppear">キャラ別登場回数</a></li>
+		<li><a href="#History">更新履歴</a></li>
+	</ul>
+</div>
 
 <div id="Loading">
 	<h4>Now Loading...</h4>
@@ -252,7 +263,7 @@ div.note { /*注釈*/
 	</div>
 </section>
 
-<section>
+<section id="TimesAppear">
 	<h3 class="aqours">キャラ別登場回数</h3>
 	<p>
 		各キャラクターの、ステージ1〜30のスペシャルセッションで登場した回数です。<br>
@@ -272,11 +283,17 @@ div.note { /*注釈*/
 	</div>
 </section>
 
-<section>
+<section id="History">
 <h3 class="niji">更新履歴（テキスト追加以外で）</h3>
 <p>下のボックス内の、色つきの日付の行をクリックすると展開/折りたたみされます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2023/03/18</span></summary>
+		<div>
+			<span class="new"></span>目次を追加
+		</div>
+	</details>
+	<details>
 		<summary class="important"><span class="date">2023/03/04</span> - 「キャラ別登場回数」を追加</summary>
 		<div>
 			<span class="fix"></span>「キャラ別登場回数」の表を追加
