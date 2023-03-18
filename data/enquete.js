@@ -415,6 +415,17 @@ const EnqueteList = [
 	"theme" : "もし農家か漁師になるなら、それぞれぴったりなメンバーは？",
 	"option1" : "農家",
 	"option2" : "漁師",
+	"winner1" : "Emma",
+	"winner2" : "Karin"
+},
+{
+	"id": 39,
+	"url" : "https://lovelive-as.bushimo.jp/selects/q202303/",
+	"started" : new Date("2023-03-08T21:15:00+09:00"),
+	"ended"   : new Date("2023-03-14T23:59:59+09:00"),
+	"theme" : "もし落語家かDJになるなら、それぞれぴったりなメンバーは？",
+	"option1" : "落語家",
+	"option2" : "DJ",
 	"winner1" : "",
 	"winner2" : ""
 },

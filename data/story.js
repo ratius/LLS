@@ -6004,6 +6004,47 @@ const StoryList = [
 		}
 		]
 	},
+	{
+		"name": "オンリーワンのひな祭り",
+		"part": [
+		{
+			"title": "第1話",
+			"desc": "人手不足のため、幼稚園のひな祭りイベントの手伝いをすることになったことりは、皆にもお手伝いを頼むことに。",
+			"memo": "男雛を「お内裏様」、女雛を「お雛様」と呼ぶのは、童謡「うれしいひなまつり」から広まった誤用。元々は、ひな壇の一番上の男女一対の人形を「<ruby>内裏<rt>だいり<\/rt>雛<rt>びな<\/rt><\/ruby>」と呼んでいた。",
+			"tag": ["Kotori", "Hanayo", "Hanamaru", "Mari", "Kasumi", "Kanata"]
+		},
+		{
+			"title": "第2話",
+			"desc": "ことりは幼稚園のみんなに着てもらう衣装の進捗を発表する。他にも出し物が必要だが、彼方が考えてきたのは……？",
+			"tag": ["Kotori", "Hanayo", "Hanamaru", "Mari", "Kasumi", "Kanata"]
+		},
+		{
+			"title": "第3話",
+			"desc": "イベントの準備も進んできたことり達。公園で遊んでいる子どもたちの話を聞いていると、あることに気がつく。",
+			"tag": ["Kotori", "Hanayo", "Kasumi"]
+		},
+		{
+			"title": "第4話",
+			"desc": "急遽、衣装のデザインを変更することにしたことり達。みんなで協力して、衣装を仕上げていく。",
+			"tag": ["Kotori", "Hanayo", "Hanamaru", "Mari", "Kasumi", "Kanata"]
+		},
+		{
+			"title": "第5話",
+			"desc": "ついにイベント本番！ 子どもたちの衣装や、ライブ前の出し物は好評なようだ。",
+			"tag": ["Kotori", "Hanayo", "Hanamaru", "Mari", "Kasumi", "Kanata"]
+		},
+		{
+			"title": "第6話",
+			"desc": "ライブ直前、トラブルで音響機器が使えない。子どもたちを待たせるわけにもいかない6人は…？",
+			"tag": ["Kotori", "Hanayo", "Hanamaru", "Mari", "Kasumi", "Kanata"]
+		},
+		{
+			"title": "第7話",
+			"desc": "音響機器が直るまでの間、ピアノの伴奏に合わせて歌うことで乗り切った6人。イベントは大成功！",
+			"tag": ["Kotori", "Hanayo", "Hanamaru", "Mari", "Kasumi", "Kanata"]
+		}
+		]
+	},
 	]
 },
 //■■■■■■■■■■ キズナエピソード ■■■■■■■■■■
