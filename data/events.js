@@ -746,4 +746,13 @@ const EventList = [
 	"UR" : ["Hanayo", "Mari", "Kasumi"],
 	"SR" : ["Kotori", "Hanamaru", "Kanata"]
 },
+{
+	"id" : 84,
+	"name" : "春の花園で見つけて",
+	"type" : "story",
+	"started" : new Date("2023-03-22T15:00:00+09:00"),
+	"ended"   : new Date("2023-03-30T14:59:59+09:00"),
+	"UR" : ["Eli", "Emma", "Lanzhu"],
+	"SR" : ["Umi", "Dia", "You"]
+},
 ];

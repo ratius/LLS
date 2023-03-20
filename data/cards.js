@@ -9554,5 +9554,77 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「パーティーガチャ」で追加"
 },
+{
+	"id": 865,
+	"name": "Emma",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Vo",
+	"cn1": "BGMに合わせてお花が踊ってる",
+	"cn2": "Flower Princess",
+	"date": "2023/03/19",
+	"source": "gacha",
+	"desc": "「春の花園で見つけてガチャ」で追加"
+},
+{
+	"id": 866,
+	"name": "You",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Sk",
+	"cn1": "みんなで写真撮ろうよ！",
+	"cn2": "Step! ZERO to ONE",
+	"date": "2023/03/19",
+	"source": "gacha",
+	"desc": "「春の花園で見つけてガチャ」で追加"
+},
+{
+	"id": 867,
+	"name": "Eli",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "ふ、ふたりとも褒めすぎよ……！",
+	"cn2": "Flower Princess",
+	"date": "2023/03/19",
+	"source": "gacha",
+	"desc": "「春の花園で見つけてガチャ」で追加"
+},
+{
+	"id": 868,
+	"name": "Lanzhu",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "ピッタリのお花が見つかったわ",
+	"cn2": "Flower Princess",
+	"date": "2023/03/22",
+	"source": "reward",
+	"desc": "イベント「春の花園で見つけて」報酬"
+},
+{
+	"id": 869,
+	"name": "Umi",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "さあ、召し上がってください",
+	"cn2": "HEART to HEART!",
+	"date": "2023/03/22",
+	"source": "reward",
+	"desc": "イベント「春の花園で見つけて」報酬 (イベントpt枠)"
+},
+{
+	"id": 870,
+	"name": "Dia",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "お土産として買おうと思って",
+	"cn2": "Step! ZERO to ONE",
+	"date": "2023/03/22",
+	"source": "reward",
+	"desc": "イベント「春の花園で見つけて」報酬 (ランキング枠)"
+},
 ];
 const LatestUpdate = "2023/03/14 「パーティーガチャ」まで";
