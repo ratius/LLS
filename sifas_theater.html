@@ -148,7 +148,7 @@ const TagData = {
 	"Yohane":     {"name": "堕天使ヨハネ",         "r":180, "g":160, "b":80, "style": "Square"},
 	"Dokkiri":    {"name": "穂乃果と愛のドッキリ", "r":180, "g":160, "b":80, "style": "Square"},
 	"Triathlon":  {"name": "地獄のトライアスロン", "r":180, "g":160, "b":80, "style": "Square"},
-	"Broadcast":  {"name": "ゲーム生配信",         "r":180, "g":160, "b":80, "style": "Square"},
+	"Broadcast":  {"name": "スクールアイドル達の生配信",         "r":180, "g":160, "b":80, "style": "Square"},
 	"Meshimazu":  {"name": "せつ菜の料理",         "r":180, "g":160, "b":80, "style": "Square"},
 	"Washi":      {"name": "わしわしの秘密",       "r":180, "g":160, "b":80, "style": "Square"},
 	"Monodomo":   {"name": "者どもの森",           "r":180, "g":160, "b":80, "style": "Square"},
@@ -157,14 +157,18 @@ const TagData = {
 	"Helicopter": {"name": "小原家のヘリコプター", "r":180, "g":160, "b":80, "style": "Square"},
 	"25252":      {"name": "にっこにっこにー",     "r":180, "g":160, "b":80, "style": "Square"},
 	"Marathon":   {"name": "スクールアイドルDVDマラソン","r":180, "g":160, "b":80, "style": "Square"},
+	"SelectShop": {"name": "セレクトショップ", "r":180, "g":160, "b":80, "style": "Square"},
+	"ChouCream":  {"name": "にこにこシュークリーム","r":180, "g":160, "b":80, "style": "Square"},
 	"Mango":      {"name": "流行りのマンゴー牛乳", "r":180, "g":160, "b":80, "style": "Square"},
 	"Karaage":    {"name": "にこちゃんの唐揚げ", "r":180, "g":160, "b":80, "style": "Square"},
+	"Sentai":     {"name": "スクールアイドル戦隊", "r":180, "g":160, "b":80, "style": "Square"},
 };
 
 //■ソート対象
 const SortTarget = [
-{"name": "2020年", "tag": "year-2020"},
+{"name": "2022年", "tag": "year-2022"},
 {"name": "2021年", "tag": "year-2021"},
+{"name": "2020年", "tag": "year-2020"},
 {"name": "----"},
 {"name": "出演：高坂 穂乃果", "tag": "Honoka"},
 {"name": "出演：絢瀬 絵里", "tag": "Eli"},
@@ -205,7 +209,7 @@ const SortTarget = [
 {"name": "シリーズ：穂乃果と愛のドッキリ", "tag": "Dokkiri"},
 {"name": "シリーズ：わしわしの秘密", "tag": "Washi"},
 {"name": "シリーズ：地獄のトライアスロン", "tag": "Triathlon"},
-{"name": "シリーズ：ゲーム生配信", "tag": "Broadcast"},
+{"name": "シリーズ：スクールアイドル達の生配信", "tag": "Broadcast"},
 {"name": "シリーズ：者どもの森", "tag": "Monodomo"},
 {"name": "シリーズ：絵里のカロリー事情", "tag": "Calorie"},
 {"name": "シリーズ：プールのステージ", "tag": "Pool"},
@@ -213,8 +217,11 @@ const SortTarget = [
 {"name": "シリーズ：にっこにっこにー", "tag": "25252"},
 {"name": "シリーズ：せつ菜の料理", "tag": "Meshimazu"},
 {"name": "シリーズ：スクールアイドルDVDマラソン", "tag": "Marathon"},
+{"name": "シリーズ：セレクトショップ", "tag": "SelectShop"},
+{"name": "シリーズ：にこにこシュークリーム", "tag": "ChouCream"},
 {"name": "シリーズ：流行りのマンゴー牛乳", "tag": "Mango"},
 {"name": "シリーズ：にこちゃんの唐揚げ", "tag": "Karaage"},
+{"name": "シリーズ：スクールアイドル戦隊", "tag": "Sentai"},
 ];
 
 //■■関数
@@ -272,7 +279,7 @@ function DrawStoryList(tag){
 	<p>
 		スクフェスALL STARSで配信されている「毎日劇場」のまとめです。<br>
 		下部のプルダウンメニューから見たいカテゴリを選択すると、該当するストーリーが表示されます。<br>
-		現在、2021年12月分までのデータベースがあります。
+		現在、2022年6月分までのデータベースがあります。
 	</p>
 </section>
 
@@ -302,19 +309,25 @@ function DrawStoryList(tag){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
-		<summary><span class="date">2023/03/18</span></summary>
+		<summary><span class="date">2023/03/20</span> - データを追加</summary>
+		<div>
+			<span class="new"></span>データを追加（2022年1月～6月）
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2023/03/18</span> - 目次を追加</summary>
 		<div>
 			<span class="new"></span>目次を追加
 		</div>
 	</details>
 	<details>
-		<summary><span class="date">2023/03/06</span></summary>
+		<summary><span class="date">2023/03/06</span> - データを追加</summary>
 		<div>
 			<span class="new"></span>データを追加（2021年10月～12月）
 		</div>
 	</details>
 	<details>
-		<summary><span class="date">2022/09/12</span></summary>
+		<summary><span class="date">2022/09/12</span> - データを追加</summary>
 		<div>
 			<span class="new"></span>データを追加（2021年3月～9月）
 		</div>
