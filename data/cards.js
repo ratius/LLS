@@ -5269,24 +5269,24 @@ const RawCardList = [
 },
 {
 	"id": 504,
-	"name": "Maki",
-	"rare": "UR",
-	"atr": "Active",
-	"type": "Sk",
-	"cn1": "ここの書斎が、特にお気に入り",
-	"cn2": "魅惑の司書",
-	"date": "2021/07/30",
-	"source": "fes",
-	"desc": "「スクスタフェス」で追加"
-},
-{
-	"id": 505,
 	"name": "Ruby",
 	"rare": "UR",
 	"atr": "Natural",
 	"type": "Sp",
 	"cn1": "ん……むにゃむにゃ……",
 	"cn2": "sweet little angel",
+	"date": "2021/07/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 505,
+	"name": "Maki",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Sk",
+	"cn1": "ここの書斎が、特にお気に入り",
+	"cn2": "魅惑の司書",
 	"date": "2021/07/30",
 	"source": "fes",
 	"desc": "「スクスタフェス」で追加"
@@ -9440,7 +9440,7 @@ const RawCardList = [
 	"rare": "SR",
 	"atr": "Elegant",
 	"type": "Sp",
-	"cn1": "んん〜、delicious！！	",
+	"cn1": "んん〜、delicious！！",
 	"cn2": "ミラクルSTAY TUNE！",
 	"date": "2023/02/27",
 	"source": "none",
@@ -9626,5 +9626,126 @@ const RawCardList = [
 	"source": "reward",
 	"desc": "イベント「春の花園で見つけて」報酬 (ランキング枠)"
 },
+{
+	"id": 871,
+	"name": "Maki",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Vo",
+	"cn1": "あなたってホントに素直ね。",
+	"cn2": "サイバーロックガール",
+	"date": "2023/03/26",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 872,
+	"name": "Riko",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sp",
+	"cn1": "好きって言ってたでしょ？",
+	"cn2": "Fairy Concert",
+	"date": "2023/03/26",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 873,
+	"name": "Ayumu",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Vo",
+	"cn1": "……うん、いい感じ",
+	"cn2": "ミラクルSTAY TUNE！",
+	"date": "2023/03/26",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 874,
+	"name": "Honoka",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "わーん、早く青になってー！",
+	"cn2": "HEART to HEART!",
+	"date": "2023/03/26",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+
+{
+	"id": 875,
+	"name": "Rin",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Sp",
+	"cn1": "ヘッドスライディーング！",
+	"cn2": "ベースボール・フェスティバル",
+	"date": "2023/04/04",
+	"source": "gacha",
+	"desc": "「白熱！　炎のベースボール・ゲームガチャ」で追加"
+},
+{
+	"id": 876,
+	"name": "Shioriko",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "あっ、ボールが！？",
+	"cn2": "ミラクル STAY TUNE！",
+	"date": "2023/04/04",
+	"source": "gacha",
+	"desc": "「白熱！　炎のベースボール・ゲームガチャ」で追加"
+},
+{
+	"id": 877,
+	"name": "Kanan",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sk",
+	"cn1": "四番としてのつとめを果たすよ",
+	"cn2": "ベースボール・フェスティバル",
+	"date": "2023/04/04",
+	"source": "gacha",
+	"desc": "「白熱！　炎のベースボール・ゲームガチャ」で追加"
+},
+{
+	"id": 878,
+	"name": "Mia",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sp",
+	"cn1": "外角高め、もらった！",
+	"cn2": "ベースボール・フェスティバル",
+	"date": "2023/04/07",
+	"source": "reward",
+	"desc": "イベント「白熱！　炎のベースボール・ゲーム」報酬"
+},
+{
+	"id": 879,
+	"name": "Nico",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Gd",
+	"cn1": "走れー！どんどんいきなさーい！",
+	"cn2": "HEART to HEART!",
+	"date": "2023/04/07",
+	"source": "reward",
+	"desc": "イベント「白熱！　炎のベースボール・ゲーム」報酬 (交換所枠)"
+},
+{
+	"id": 880,
+	"name": "Mari",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sk",
+	"cn1": "マリーを打ち崩せるかしら？",
+	"cn2": "Step! ZERO to ONE",
+	"date": "2023/04/07",
+	"source": "reward",
+	"desc": "イベント「白熱！　炎のベースボール・ゲーム」報酬 (ランキング枠)"
+},
 ];
-const LatestUpdate = "2023/03/14 「パーティーガチャ」まで";
+const LatestUpdate = "2023/04/07 イベント「白熱！　炎のベースボール・ゲーム」まで";

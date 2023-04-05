@@ -426,6 +426,17 @@ const EnqueteList = [
 	"theme" : "もし落語家かDJになるなら、それぞれぴったりなメンバーは？",
 	"option1" : "落語家",
 	"option2" : "DJ",
+	"winner1" : "Shioriko",
+	"winner2" : "Mia"
+},
+{
+	"id": 40,
+	"url" : "https://lovelive-as.bushimo.jp/selects/q202304/",
+	"started" : new Date("2023-04-03T21:15:00+09:00"),
+	"ended"   : new Date("2023-04-09T23:59:59+09:00"),
+	"theme" : "もしウェディングプランナーかドレスコーディネーターになるなら、それぞれぴったりなメンバーは？",
+	"option1" : "ウェディングプランナー",
+	"option2" : "ドレスコーディネーター",
 	"winner1" : "",
 	"winner2" : ""
 },

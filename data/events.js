@@ -755,4 +755,13 @@ const EventList = [
 	"UR" : ["Eli", "Emma", "Lanzhu"],
 	"SR" : ["Umi", "Dia", "You"]
 },
+{
+	"id" : 85,
+	"name" : "白熱！　炎のベースボール・ゲーム",
+	"type" : "exchange",
+	"started" : new Date("2023-04-07T15:00:00+09:00"),
+	"ended"   : new Date("2023-04-14T12:59:59+09:00"),
+	"UR" : ["Rin", "Kanan", "Mia"],
+	"SR" : ["Nico", "Mari", "Shioriko"]
+},
 ];
