@@ -14,6 +14,8 @@
 <meta name="twitter:title" content="スクスタ 転入生データベース&ストーリー | ラブライブ！ストレージ">
 <meta name="twitter:description" content="。スクフェスに登場した転入生の情報を保管しています。">
 
+<meta name="viewport" content="width=1000, initial-scale=1">
+
 <title>スクフェス 転入生データベース&ストーリー | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main.css">
@@ -38,7 +40,7 @@ p{
 
 #OutputArea {
 	border: solid 3px #a89;
-	width: min(calc(100% - 22px), 1200px);
+	width: min(calc(100% - 22px), 1000px);
 	height: calc(90vh - 130px);
 	overflow-y: scroll;
 	background-color: white;
@@ -78,7 +80,7 @@ table.profile td{
 	padding: 0 8px;
 }
 
-/* テキスト1 */
+/* テキスト関連 */
 .text_partner {
 	max-width: 900px;
 	margin: 5px;
@@ -86,6 +88,7 @@ table.profile td{
 	border: 2px solid #aaa;
 	border-radius: 8px;
 }
+/* サイドストーリー */
 
 .text_story {
 	background-color: #fde;
@@ -98,7 +101,7 @@ table.profile td{
 	border-color: #d9b;
 	border-radius: 50vw;
 }
-/* 転入生の顔 */
+
 .face {
 	display: inline-block;
 	margin: auto;
@@ -107,9 +110,6 @@ table.profile td{
 	background-image: url(img/students.png);
 	background-repeat: no-repeat;
 }
-
-/* サイドストーリー */
-
 .text_story > .face {
 	position: absolute;
 	top: 28px; 
@@ -117,7 +117,8 @@ table.profile td{
 }
 .text {
 	display: inline-block;
-	height: 100px;
+	width: 640px;
+	height: 110px;
 	position: absolute;
 	top: 5px; 
 	left: 120px;
@@ -173,7 +174,7 @@ function DrawCardData(name, num){
 	const temp2 = temp1.card[num];
 	
 	let Output = '<h3>' + (num+1) + '枚目 (部員No.' + temp2.num + ')<\/h3>'
-	+ ('memo' in temp2 ? '<span style="font-size:small">' + temp2.memo + '<\/span>' : '')
+	+ ('memo' in temp2 ? '<span style="font-size:90%">' + temp2.memo + '<\/span>' : '')
 	
 	if('text' in temp2){
 		Output += '<h4>パートナー時テキスト<\/h4>';
