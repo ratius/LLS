@@ -4,6 +4,7 @@ a:hover {color: #ff0033;}
 body {
 	position: relative;
 	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
 }
 
 p {
