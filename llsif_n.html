@@ -174,7 +174,7 @@ function DrawCardData(name, num){
 	const temp2 = temp1.card[num];
 	
 	let Output = '<h3>' + (num+1) + '枚目 (部員No.' + temp2.num + ')<\/h3>'
-	+ ('memo' in temp2 ? '<span style="font-size:90%">' + temp2.memo + '<\/span>' : '')
+	+ ('memo' in temp2 ? '<p style="font-size:90%">' + temp2.memo + '<\/p>' : '')
 	
 	if('text' in temp2){
 		Output += '<h4>パートナー時テキスト<\/h4>';
