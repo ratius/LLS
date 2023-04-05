@@ -14,7 +14,7 @@
 <meta name="twitter:title" content="スクスタ 転入生データベース&ストーリー | ラブライブ！ストレージ">
 <meta name="twitter:description" content="。スクフェスに登場した転入生の情報を保管しています。">
 
-<meta name="viewport" content="width=1000, initial-scale=1">
+<meta name="viewport" content="width=1000">
 
 <title>スクフェス 転入生データベース&ストーリー | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
@@ -174,7 +174,7 @@ function DrawCardData(name, num){
 	const temp2 = temp1.card[num];
 	
 	let Output = '<h3>' + (num+1) + '枚目 (部員No.' + temp2.num + ')<\/h3>'
-	+ ('memo' in temp2 ? '<p>' + temp2.memo + '<\/p>' : '')
+	+ ('memo' in temp2 ? '<p style="font-size: 100%">' + temp2.memo + '<\/p>' : '')
 	
 	if('text' in temp2){
 		Output += '<h4>パートナー時テキスト<\/h4>';
