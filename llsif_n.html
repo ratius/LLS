@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta charset="utf-8">
+
+<meta property="og:url" content="https://ratius.github.io/LLS/llsif_n.html">
+<meta property="og:title" content="スクフェス 転入生データベース&ストーリー | ラブライブ！ストレージ">
+<meta property="og:type" content="website">
+<meta property="og:description" content="スクフェスに登場した転入生の情報を保管しています。">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@ratius55">
+<meta name="twitter:creator" content="@ratius55">
+<meta name="twitter:title" content="スクスタ 転入生データベース&ストーリー | ラブライブ！ストレージ">
+<meta name="twitter:description" content="。スクフェスに登場した転入生の情報を保管しています。">
+
+<title>スクフェス 転入生データベース&ストーリー | ラブライブ！ストレージ</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+<link rel="stylesheet" href="main.css">
+<style><!--
+
+p{
+	margin: 15px 10px;
+}
+
+#Narrower {
+	width: 250px;
+	border: solid 2px #b9a;
+	font-size: x-large;
+	font-weight: bold;
+	padding: 5px;
+	margin-right: 10px;
+}
+
+#ButtonField {
+	display: inline-block;
+}
+
+#OutputArea {
+	border: solid 3px #a89;
+	width: min(calc(100% - 22px), 1200px);
+	height: calc(90vh - 130px);
+	overflow-y: scroll;
+	background-color: white;
+	padding: 0 10px;
+}
+
+#OutputArea h3, #OutputArea h4 {
+	margin: 1rem auto 0.5rem;
+}
+
+/* クリック用ボタン */
+span.jump {
+	font-size: large;
+	display: inline-block;
+	width: auto;
+	margin: auto 4px;
+	padding: 0.25rem 0.75rem;
+	cursor: pointer;
+	background-color: #fde;
+	border: 2px solid #978;
+	border-radius: 4px;
+}
+
+span.disabled {
+	color: #bbb;
+	background-color: #ddd;
+	border-color: #bbb;
+	cursor: not-allowed;
+}
+
+/*プロフィール*/
+table.profile {
+	font-size: 120%;
+	margin: 10px 0;
+}
+table.profile td{
+	padding: 0 8px;
+}
+
+/* テキスト1 */
+.text_partner {
+	max-width: 900px;
+	margin: 5px;
+	padding: 5px 10px;
+	border: 2px solid #aaa;
+	border-radius: 8px;
+}
+
+.text_story {
+	background-color: #fde;
+	max-width: 800px;
+	height: 120px;
+	margin: 8px;
+	position: relative;
+	border-style: solid;
+	border-width: 2px 8px;
+	border-color: #d9b;
+	border-radius: 50vw;
+}
+/* 転入生の顔 */
+.face {
+	display: inline-block;
+	margin: auto;
+	width: 64px;
+	height: 64px;
+	background-image: url(img/students.png);
+	background-repeat: no-repeat;
+}
+
+/* サイドストーリー */
+
+.text_story > .face {
+	position: absolute;
+	top: 28px; 
+	left: 35px;
+}
+.text {
+	display: inline-block;
+	height: 100px;
+	position: absolute;
+	top: 5px; 
+	left: 120px;
+	margin: 0;
+	font-size: 110%;
+}
+
+--></style>
+<script><!--
+//■デバッグモード判定
+let isDebugMode = false;
+const Parameter = location.search.substring(1).split('&');
+if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
+
+function DrawButtons(name) {
+	if(name === ""){ return false; }
+
+	const temp1 = NData.filter( q => q.name === name)[0];
+	let Output = '<span class="jump" onclick="DrawProfile(&#39;' + temp1.name+ '&#39;);">Profile<\/span>';
+
+	for(temp2 in temp1.card) {
+		const ButtonNum = parseInt(temp2) + 1;
+		Output += '<span class="jump';
+		if(temp1.card[temp2].num != -1){ //-1で無ければリンクを掲載する
+			Output += '" onclick="DrawCardData(&#39;' + temp1.name + '&#39;,' + temp2 + ');"'
+		} else {
+			Output += ' disabled"'
+		}
+		Output += '>' + ButtonNum + '<\/span>';
+	}
+
+	document.getElementById("ButtonField").innerHTML = Output;
+	DrawProfile(name);
+}
+
+function DrawProfile(name){
+	const temp1 = NData.filter( q => q.name === name)[0];
+	let Output = '<h3>プロフィール<\/h3>\n<table class="profile"><tbody>'
+	+ '<tr><td>学校<\/td><td>' + SchoolData[temp1.school].name + '<\/td><\/tr>'
+	+ '<tr><td>学年<\/td><td>' + temp1.grade + '年<\/td><\/tr>'
+	+ '<tr><td>誕生日<\/td><td>' + temp1.birth[0] + '月' + temp1.birth[1] + '日<\/td><\/tr>'
+	+ '<tr><td>血液型<\/td><td>' + temp1.blood + '型<\/td><\/tr>'
+	+ '<tr><td>身長<\/td><td>' + temp1.height + 'cm<\/td><\/tr>'
+	+ '<tr><td>スリーサイズ<\/td><td>B' + temp1.body[0] + 'W' + temp1.body[1] + 'H' + temp1.body[2] + '<\/td><\/tr>'
+	+ '<tr><td>趣味<\/td><td>' + temp1.hobby + '<\/td><\/tr>'
+	+'<\/tbody><\/table>';
+	
+	document.getElementById("OutputArea").innerHTML = Output;
+}
+
+function DrawCardData(name, num){
+	const temp1 = NData.filter(q => q.name === name)[0];
+	const temp2 = temp1.card[num];
+	
+	let Output = '<h3>' + (num+1) + '枚目 (部員No.' + temp2.num + ')<\/h3>'
+	+ ('memo' in temp2 ? '<span style="font-size:small">' + temp2.memo + '<\/span>' : '')
+	
+	if('text' in temp2){
+		Output += '<h4>パートナー時テキスト<\/h4>';
+		for(temp3 of temp2.text){
+			Output += '<div class="text_partner">' + temp3 + '<\/div>';
+		}
+	}
+	if('side' in temp2){
+		Output += '<h4>サイドストーリー「' + temp2.sidetitle + '」<\/h4>';
+		for(temp3 of temp2.side){
+			Output += '<div class="text_story">' + DrawFace(temp1.name)
+			+ '<div class="text">' + '<b>' + ('namealt' in temp1 ? temp1.namealt : temp1.name) + '<\/b><br>'
+			+ temp3.t + '<\/div><\/div>';
+		}
+	}
+	document.getElementById("OutputArea").innerHTML = Output;
+	document.getElementById("OutputArea").scrollTop = 0;
+}
+
+function DrawFace(name){
+	const temp1 = NData.filter(q => q.name === name);
+	if(temp1.length > 0){
+		if('face' in temp1[0]){
+			return '<div class="face" style="background-position: right '
+			+ (-64*temp1[0].face[0]) + 'px bottom ' + (-64*temp1[0].face[1]) + 'px"><\/div>';
+		} else {
+			return '<div class="face_empty"><\/div>';
+		}
+	} else {
+		return false;
+	}
+}
+
+--></script>
+</head>
+<body class="RM">
+<header>
+	<h2 id="MainTitle">スクフェス 転入生データベース</h2>
+</header>
+
+<section id="Foreword">
+	<h3 class="foreword">まえがき</h3>
+	<p>
+		「ラブライブ!スクールアイドルフェスティバル」で配信された転入生の各種テキストのまとめです。<br>
+		虹ヶ咲扱いの桜坂しずく、近江彼方、エマ・ヴェルデのカードは、<br>
+		「キラキラ☆転入生フェスティバル」SSRのみ掲載します。
+	</p>
+</section>
+
+<div id="RightMenu">
+	<ul>
+		<li><strong>目次</strong></li>
+		<li><hr></li>
+		<li><a href="#Foreword">まえがき</a></li>
+		<li><a href="#Viewer">転入生データベース</a></li>
+		<li><a href="#History">更新履歴</a></li>
+	</ul>
+</div>
+
+<div id="Loading">
+	<h4>Now Loading...</h4>
+	このコンテンツはJavaScriptを使用しています。<br>
+	いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
+	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
+</div>
+
+<section id="Viewer">
+	<h3 class="muse">転入生データベース</h3>
+	<p>プルダウンメニューから転入生を選び、その右に表示されるボタンから情報を見ることができます。</p>
+	<div style="margin-bottom: 10px;">
+		<select id="Narrower" onChange="DrawButtons(this.value)">
+			<option value="">(転入生を選択)</option>
+		</select>
+		<div id="ButtonField"></div>
+	</div>
+	<div id="OutputArea">
+	</div>
+</section>
+
+<section id="History">
+<h3 class="niji">更新履歴</h3>
+<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
+<div id="history2">
+	<details open>
+		<summary class="important"><span class="date">2023/06/15</span> - テスト公開</summary>
+		<div>
+			<span class="new"></span>テスト公開
+		</div>
+	</details>
+</div>
+</section>
+
+<nav>
+<p><a id="BackToMain" href="index.html">トップページに戻る。</a></p>
+</nav>
+
+<script><!--
+function loadScript(src, callback) {
+    let done = false;
+    let head = document.getElementsByTagName('head')[0];
+    let script = document.createElement('script');
+    script.src = src;
+    head.appendChild(script);
+    // Attach handlers for all browsers
+    script.onload = script.onreadystatechange = function() {
+        if ( !done && (!this.readyState ||
+                this.readyState === "loaded" || this.readyState === "complete") ) {
+            done = true;
+            callback();
+            // Handle memory leak in IE
+            script.onload = script.onreadystatechange = null;
+            if ( head && script.parentNode ) {
+                head.removeChild( script );
+            }
+        }
+    };
+}
+
+loadScript("data/ntext.js", function() {
+	const TimeOutputStart = performance.now();
+	
+	//■セレクトボックスに要素を追加
+	for(temp1 of NData){
+		var temp2 = document.create
+		var temp2 = document.createElement("option");
+		temp2.text = temp1.name;
+		temp2.style.cssText = 'background-color: ' + SchoolData[temp1.school].color;
+		document.getElementById("Narrower").appendChild(temp2);
+	}
+	
+	//■「Now Loading...」解除
+	document.getElementById("Loading").style.display = "none";
+	
+	//■デバックモード時の処理
+	if(isDebugMode) {
+		//◆デバッグモードであることを表示
+		document.title = '[debug]' + document.title;
+		document.bgColor = '#dce';
+		
+		document.getElementById("MainTitle").innerHTML += "*";
+		document.getElementById("BackToMain").href += "?debug";
+		
+		//◆描画時間の出力
+		const TimeOutputEnd = performance.now();
+		console.log('スクフェス 転入生データベース\n初期描画処理: ' + (TimeOutputEnd - TimeOutputStart) + ' ミリ秒');
+	}
+});
+--></script>
+</body>
+</html>
