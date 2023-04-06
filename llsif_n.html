@@ -25,7 +25,7 @@ p{
 	margin: 15px 10px;
 }
 
-#Narrower {
+#PullDownMenu {
 	width: 250px;
 	border: solid 2px #b9a;
 	font-size: x-large;
@@ -64,6 +64,12 @@ span.jump {
 	border-radius: 4px;
 }
 
+span.warning {
+	font-weight: bold;
+	background-color: #f88;
+	border-color: #933;
+}
+
 span.disabled {
 	color: #bbb;
 	background-color: #ddd;
@@ -72,12 +78,26 @@ span.disabled {
 }
 
 /*プロフィール*/
-table.profile {
-	font-size: 120%;
-	margin: 10px 0;
+#ProfileContainer {
+	max-width: 500px;
+	display: flex;
+	align-items: center;
 }
-table.profile td{
-	padding: 0 8px;
+#ProfileContainer > div{
+	flex-basis: 64px;
+	margin: 0 10px;
+}
+
+#ProfileContainer > table{
+	flex: 1;
+	font-size: 120%;
+	margin: 0 10px;
+	border-collapse: collapse;
+	border: 2px solid #ccc;
+}
+#ProfileContainer > table td{
+	padding: 2px 8px;
+	border-bottom: 1px solid #ddd;
 }
 
 /* テキスト関連 */
@@ -133,6 +153,7 @@ let isDebugMode = false;
 const Parameter = location.search.substring(1).split('&');
 if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
 
+//■ボタンの描画
 function DrawButtons(name) {
 	if(name === ""){ return false; }
 
@@ -141,34 +162,66 @@ function DrawButtons(name) {
 
 	for(temp2 in temp1.card) {
 		const ButtonNum = parseInt(temp2) + 1;
-		Output += '<span class="jump';
-		if(temp1.card[temp2].num != -1){ //-1で無ければリンクを掲載する
-			Output += '" onclick="DrawCardData(&#39;' + temp1.name + '&#39;,' + temp2 + ');"'
-		} else {
-			Output += ' disabled"'
+
+		//■クラス判定
+		let CurrentClass = "";
+		if(isDebugMode){
+			if('sidetitle' in temp1.card[temp2]){
+				if(temp1.card[temp2].sidetitle === ""){ //サイドストーリーのタイトル未設定
+					CurrentClass = "warning";
+				}
+			}
+			if('side' in temp1.card[temp2]){
+				if('t' in temp1.card[temp2].side[0]){
+					if(temp1.card[temp2].side[0].t === ""){
+						CurrentClass = "warning";
+					}
+				}
+			}
+			if(!'memo' in temp1.card[temp2]){ //メモ未設定
+				CurrentClass = "warning";
+			}
+			if(temp1.card[temp2].num == -1){ //番号未設定
+				CurrentClass = "disabled";
+			}
 		}
-		Output += '>' + ButtonNum + '<\/span>';
+		
+		Output += '<span class="jump'
+		+ (CurrentClass === "" ? '' : ' ' + CurrentClass) + '"'
+		+ (CurrentClass === "disabled" ? '' : '" onclick="DrawCardData(&#39;' + temp1.name + '&#39;,' + temp2 + ');"')
+		+ '>' + ButtonNum + '<\/span>';
 	}
 
 	document.getElementById("ButtonField").innerHTML = Output;
 	DrawProfile(name);
 }
 
+//■プロフィールの作成
 function DrawProfile(name){
 	const temp1 = NData.filter( q => q.name === name)[0];
-	let Output = '<h3>プロフィール<\/h3>\n<table class="profile"><tbody>'
-	+ '<tr><td>学校<\/td><td>' + SchoolData[temp1.school].name + '<\/td><\/tr>'
+	let Output = '<h3>' + name + '　プロフィール<\/h3>\n'
+	+ '<div id="ProfileContainer">' + DrawFace(name)
+	+ '<table class="profile"><tbody>'
+	+ '<tr><td style="width: 120px;">学校<\/td><td>' + SchoolData[temp1.y].name + '<\/td><\/tr>'
 	+ '<tr><td>学年<\/td><td>' + temp1.grade + '年<\/td><\/tr>'
 	+ '<tr><td>誕生日<\/td><td>' + temp1.birth[0] + '月' + temp1.birth[1] + '日<\/td><\/tr>'
 	+ '<tr><td>血液型<\/td><td>' + temp1.blood + '型<\/td><\/tr>'
 	+ '<tr><td>身長<\/td><td>' + temp1.height + 'cm<\/td><\/tr>'
-	+ '<tr><td>スリーサイズ<\/td><td>B' + temp1.body[0] + 'W' + temp1.body[1] + 'H' + temp1.body[2] + '<\/td><\/tr>'
+	+ '<tr><td>スリーサイズ<\/td><td>Ｂ' + temp1.body[0] + 'Ｗ' + temp1.body[1] + 'Ｈ' + temp1.body[2] + 'cm<\/td><\/tr>'
 	+ '<tr><td>趣味<\/td><td>' + temp1.hobby + '<\/td><\/tr>'
-	+'<\/tbody><\/table>';
+	+'<\/tbody><\/table><\/div>';
+	
+	if('text' in temp1) {
+		Output += '<h4>パートナー時テキスト<\/h4>';
+		for(temp2 of temp1.text){
+			Output += '<div class="text_partner">' + temp2 + '<\/div>';
+		}
+	}
 	
 	document.getElementById("OutputArea").innerHTML = Output;
 }
 
+//■カード個別データの作成
 function DrawCardData(name, num){
 	const temp1 = NData.filter(q => q.name === name)[0];
 	const temp2 = temp1.card[num];
@@ -190,6 +243,9 @@ function DrawCardData(name, num){
 			+ temp3.t + '<\/div><\/div>';
 		}
 	}
+	if('foot' in temp2){
+		Output += '<p style="font-size: 90%">' + temp2.foot + '<\/p>';
+	}
 	document.getElementById("OutputArea").innerHTML = Output;
 	document.getElementById("OutputArea").scrollTop = 0;
 }
@@ -197,14 +253,10 @@ function DrawCardData(name, num){
 function DrawFace(name){
 	const temp1 = NData.filter(q => q.name === name);
 	if(temp1.length > 0){
-		if('face' in temp1[0]){
-			return '<div class="face" style="background-position: right '
-			+ (-64*temp1[0].face[0]) + 'px bottom ' + (-64*temp1[0].face[1]) + 'px"><\/div>';
-		} else {
-			return '<div class="face_empty"><\/div>';
-		}
+		return '<div class="face" style="background-position: right '
+		+ (temp1[0].x*64-576) + 'px bottom ' + (temp1[0].y*64-384) + 'px"><\/div>';
 	} else {
-		return false;
+		return '<div class="face_empty"><\/div>';
 	}
 }
 
@@ -245,7 +297,7 @@ function DrawFace(name){
 	<h3 class="muse">転入生データベース</h3>
 	<p>プルダウンメニューから転入生を選び、その右に表示されるボタンから情報を見ることができます。</p>
 	<div style="height: 60px;">
-		<select id="Narrower" onChange="DrawButtons(this.value)">
+		<select id="PullDownMenu" onChange="DrawButtons(this.value)">
 			<option value="">(転入生を選択)</option>
 		</select>
 		<div id="ButtonField"></div>
@@ -301,8 +353,8 @@ loadScript("data/ntext.js", function() {
 		var temp2 = document.create
 		var temp2 = document.createElement("option");
 		temp2.text = temp1.name;
-		temp2.style.cssText = 'background-color: ' + SchoolData[temp1.school].color;
-		document.getElementById("Narrower").appendChild(temp2);
+		temp2.style.cssText = 'background-color: ' + SchoolData[temp1.y].color;
+		document.getElementById("PullDownMenu").appendChild(temp2);
 	}
 	
 	//■「Now Loading...」解除
