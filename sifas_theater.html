@@ -153,8 +153,9 @@ const TagData = {
 	"Washi":      {"name": "わしわしの秘密",       "r":180, "g":160, "b":80, "style": "Square"},
 	"Monodomo":   {"name": "者どもの森",           "r":180, "g":160, "b":80, "style": "Square"},
 	"Calorie":    {"name": "絵里のカロリー事情",   "r":180, "g":160, "b":80, "style": "Square"},
-	"Pool":       {"name": "プールのステージ",     "r":180, "g":160, "b":80, "style": "Square"},
 	"Helicopter": {"name": "小原家のヘリコプター", "r":180, "g":160, "b":80, "style": "Square"},
+	"Pool":       {"name": "プールのステージ",     "r":180, "g":160, "b":80, "style": "Square"},
+	"Airborne":   {"name": "空の上のステージ",     "r":180, "g":160, "b":80, "style": "Square"},
 	"25252":      {"name": "にっこにっこにー",     "r":180, "g":160, "b":80, "style": "Square"},
 	"Marathon":   {"name": "スクールアイドルDVDマラソン","r":180, "g":160, "b":80, "style": "Square"},
 	"SelectShop": {"name": "セレクトショップ", "r":180, "g":160, "b":80, "style": "Square"},
@@ -212,8 +213,9 @@ const SortTarget = [
 {"name": "シリーズ：スクールアイドル達の生配信", "tag": "Broadcast"},
 {"name": "シリーズ：者どもの森", "tag": "Monodomo"},
 {"name": "シリーズ：絵里のカロリー事情", "tag": "Calorie"},
-{"name": "シリーズ：プールのステージ", "tag": "Pool"},
 {"name": "シリーズ：小原家のヘリコプター", "tag": "Helicopter"},
+{"name": "シリーズ：プールのステージ", "tag": "Pool"},
+{"name": "シリーズ：空の上のステージ", "tag": "Airborne"},
 {"name": "シリーズ：にっこにっこにー", "tag": "25252"},
 {"name": "シリーズ：せつ菜の料理", "tag": "Meshimazu"},
 {"name": "シリーズ：スクールアイドルDVDマラソン", "tag": "Marathon"},
@@ -279,7 +281,7 @@ function DrawStoryList(tag){
 	<p>
 		スクフェスALL STARSで配信されている「毎日劇場」のまとめです。<br>
 		下部のプルダウンメニューから見たいカテゴリを選択すると、該当するストーリーが表示されます。<br>
-		現在、2022年6月分までのデータベースがあります。
+		現在、2022年9月分までのデータベースがあります。
 	</p>
 </section>
 
@@ -309,6 +311,12 @@ function DrawStoryList(tag){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2023/04/07</span> - データを追加</summary>
+		<div>
+			<span class="new"></span>データを追加（2022年7月～9月）
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2023/03/20</span> - データを追加</summary>
 		<div>
 			<span class="new"></span>データを追加（2022年1月～6月）
