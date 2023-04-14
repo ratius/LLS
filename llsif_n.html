@@ -238,8 +238,10 @@ function DrawCardData(name, num){
 	if('side' in temp2){
 		Output += '<h4>サイドストーリー「' + temp2.sidetitle + '」<\/h4>';
 		for(temp3 of temp2.side){
-			Output += '<div class="text_story">' + DrawFace(temp1.name)
-			+ '<div class="text">' + '<b>' + ('namealt' in temp1 ? temp1.namealt : temp1.name) + '<\/b><br>'
+			Output += '<div class="text_story">'
+			+ ('n' in temp3 ? DrawFace(null) : DrawFace(temp1.name))
+			+ '<div class="text">' + '<b>'
+			+ ('n' in temp3 ? temp3.n : ('namealt' in temp1 ? temp1.namealt : temp1.name)) + '<\/b><br>'
 			+ temp3.t + '<\/div><\/div>';
 		}
 	}
