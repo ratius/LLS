@@ -9747,5 +9747,29 @@ const RawCardList = [
 	"source": "reward",
 	"desc": "イベント「白熱！　炎のベースボール・ゲーム」報酬 (ランキング枠)"
 },
+{
+	"id": 881,
+	"name": "Ruby",
+	"rare": "UR",
+	"atr": "Smile",
+	"type": "Sp",
+	"cn1": "「コレ！」って選べなくて……",
+	"cn2": "リトルヴァンパイア",
+	"date": "2023/04/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
+},
+{
+	"id": 882,
+	"name": "Kasumi",
+	"rare": "SR",
+	"atr": "Pure",
+	"type": "Sp",
+	"cn1": "「かっすみん！　かっすみん！」",
+	"cn2": "ミラクル STAY TUNE！",
+	"date": "2023/04/14",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
+},
 ];
-const LatestUpdate = "2023/04/07 イベント「白熱！　炎のベースボール・ゲーム」まで";
+const LatestUpdate = "2023/04/14 「パーティーガチャ」まで";
