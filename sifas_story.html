@@ -251,7 +251,7 @@ function NarrowerEvent(changed){
 					<div>
 						キズナエピソードは、スクールアイドルのキズナLv.を上げることで解放されるコンテンツです。<br>
 						2021年2月頃からは、キズナエピソードを解放するために必要なキズナLv.は1話配信（1ヶ月半おき）ごとに3ずつ増えるのが通例となっています。<br>
-						しかし、キズナLv.が上がるにしたがって、キズナLv.を1上げるのに必要な労力は増えていきます。そのため、プレイヤーがキズナエピソードの解放に必要な労力は日に日に増えています。<br>
+						しかし、キズナLv.が上がるにしたがって、キズナLv.を1上げるのに必要な労力は増えていきます。そのため、プレイヤーがキズナエピソードの既読を維持するために必要なプレイ量も日に日に増えています。<br>
 						この便覧の作者も、キズナエピソードを全て読むために各キャラクターのキズナLv.を満遍なく上げる育成方針の維持が困難だと感じています。要求キズナLv.が100以下のものは掲載に尽力しますが、それをを超えた分のキズナエピソードは<b>積極的には掲載しない予定です。</b>ご了承下さい。
 					</div>
 				</details>
@@ -402,6 +402,7 @@ loadScript("data/story.js", function() {
 		document.getElementById("N1").appendChild(temp2);
 	}
 
+	//■「Now Loading...」解除
 	document.getElementById("Loading").style.display = "none";
 	
 	//■デバックモード時の処理
@@ -425,6 +426,7 @@ loadScript("data/story.js", function() {
 				
 				if(!('name' in temp2)){ //●タイトルが無い
 					console.log('[Error] 区分タイトルが未設定:\n\tLocation: ' + temp1.name);
+					console.log(temp2);
 					isError++;
 					break;
 				}

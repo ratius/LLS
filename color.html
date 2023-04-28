@@ -33,8 +33,6 @@ table.call {
 	margin-bottom: 40px;
 }
 
-th.Emma, th.Mia { font-size: 80%;}
-
 table.call tr:nth-child(even) { background-color: #ddd;}
 table.call tr:nth-child(odd) { background-color: #fff;}
 
@@ -100,8 +98,9 @@ function CreateColorListTable(Idol, col, tablecol){
 	+ '<thead>\n<tr>\n\t<th style="width: 110px; background-color:' + tablecol + '">→キャラクター<br>↓媒体<\/th>\n';
 	//■ヘッダーのキャラ名
 	for(x of Idol){
-		Output += '\t<th class="' + CharData[x].id + '" style="width:' + (92/Idol.length) + '%">'
-		+ CharData[x].name + '<\/th>\n';
+		const temp = CharData.filter(q => q.id === x)[0];
+		Output += '\t<th class="' + temp.id + '" style="width:' + (92/Idol.length) + '%">'
+		+ temp.name + '<\/th>\n';
 	}
 	Output += '<\/tr>\n<\/thead>\n';
 
@@ -111,14 +110,14 @@ function CreateColorListTable(Idol, col, tablecol){
 		Output += '<tr>\n\t<th>' + (LabelName[y] ? LabelName[y]:  '未定義の色') + '<\/th>\n';
 	
 		for (x of Idol) {
-			var k = CharData[x][y];
+			const temp = CharData.filter(q => q.id === x)[0];
 		
-			if (k){ //定義されているなら
-				var temp1 = GetColorCode(k);
-				Output += '\t<td style="color:' + chooseTextColor(k) + '; background:' + temp1 + '">\n'
+			if(y in temp){
+				const temp2 = GetColorCode(temp[y]);
+				Output += '\t<td style="color:' + chooseTextColor(temp[y]) + '; background:' + temp2 + '">\n'
 				+ '\t\t<span class="rgbCode" onclick="Cpy(this);">('
-				+ Math.floor(k.r) + ', ' + Math.floor(k.g) + ', ' + Math.floor(k.b) + ')<\/span><br>\n'
-				+ '\t\t<span onclick="Cpy(this);">' + temp1 + '<\/span>\n\t<\/td>\n';
+				+ Math.floor(temp[y].r) + ', ' + Math.floor(temp[y].g) + ', ' + Math.floor(temp[y].b) + ')<\/span><br>\n'
+				+ '\t\t<span onclick="Cpy(this);">' + temp2 + '<\/span>\n\t<\/td>\n';
 			} else {
 				Output += '\t<td><\/td>\n';
 			}
@@ -204,7 +203,14 @@ function CreateColorListTable(Idol, col, tablecol){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
-		<summary><span class="date">2023/03/18</span></summary>
+		<summary class="important"><span class="date">2023/04/28</span> - Liella!3期生参戦に伴う調整 他</summary>
+		<div>
+			<span class="new"></span>「ウィーン・マルガレーテ」「鬼塚冬毬」の列を追加<br>
+			<span class="new"></span>「謎解きフェスティバル」を追加
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2023/03/18</span> - 目次を追加</summary>
 		<div>
 			<span class="new"></span>目次を追加
 		</div>
@@ -327,27 +333,27 @@ loadScript("data/color.js", function() {
 	const TimeOutputStart = performance.now();
 	
 	document.getElementById("Color_Muse").innerHTML += '\n'
-	+ CreateColorListTable([0,1,2,3,4,5,6,7,8],
-	  ['sifas', 'sifas_s1', 'puchi', 'llsif', 'llsif_l', 'llsif2', 'sifac', 'logofinal'], '#e50080');
+	+ CreateColorListTable(['Honoka', 'Eli', 'Kotori', 'Umi', 'Rin', 'Maki', 'Nozomi', 'Hanayo', 'Nico'],
+	  ['sifas', 'sifas_s1', 'puchi', 'llsif', 'llsif_l', 'llsif2', 'sifac', 'nazotoki', 'logofinal'], '#e50080');
 
 	document.getElementById("Color_Aqours").innerHTML += '\n'
-	+ CreateColorListTable([9,10,11,12,13,14,15,16,17],
-	  ['official', 'sifas', 'sifas_s1', 'puchi', 'llsif', 'llsif_l', 'llsif2', 'yohane', 'sifac', 'vote2nd', 'vote3rd', 'vote4th', 'duotrio', 'logomovie', 'logo1st', 'logo2nd', 'logo4th', 'logo5th', 'logo6th', 'logounit'], '#19b1f6');
+	+ CreateColorListTable(['Chika', 'Riko', 'Kanan', 'Dia', 'You', 'Yoshiko', 'Hanamaru', 'Mari', 'Ruby'],
+	  ['official', 'sifas', 'sifas_s1', 'puchi', 'llsif', 'llsif_l', 'llsif2', 'yohane', 'sifac', 'nazotoki', 'vote2nd', 'vote3rd', 'vote4th', 'duotrio', 'logomovie', 'logo1st', 'logo2nd', 'logo4th', 'logo5th', 'logo6th', 'logounit'], '#19b1f6');
 
 	document.getElementById("Color_Niji").innerHTML += '\n'
-	+ CreateColorListTable([18,19,20,21,22,23,24,25,26,27,28,29,30],
-	  ['official', 'sifas', 'sifas_s1', 'llsif', 'llsif_l', 'llsif2', 'monthly', 'nijiyon', 'logo1st', 'logo3rd', 'logosf', 'logo4th', 'logo5th', 'logounit'], '#f8b656');
+	+ CreateColorListTable(['Ayumu', 'Kasumi', 'Shizuku', 'Karin', 'Ai', 'Kanata', 'Setsuna', 'Emma', 'Rina', 'Shioriko', 'Mia', 'Lanzhu', 'Yu'],
+	  ['official', 'sifas', 'sifas_s1', 'llsif', 'llsif_l', 'llsif2', 'monthly', 'nijiyon', 'nazotoki', 'logo1st', 'logo3rd', 'logosf', 'logo4th', 'logo5th', 'logounit'], '#f8b656');
 
 	document.getElementById("Color_Liella").innerHTML += '\n'
-	+ CreateColorListTable([31,32,33,34,35,36,37,38,39],
-	  ['official', 'llsif', 'llsif_l', 'llsif2', 'logo1st', 'logo2nd_a', 'logo2nd_b', 'logo3rd'], '#da57d8');
+	+ CreateColorListTable(['Kanon', 'Keke', 'Chisato', 'Sumire', 'Ren', 'Kinako', 'Mei', 'Shiki', 'Natsumi', 'Wien', 'Tomari'],
+	  ['official', 'llsif', 'llsif_l', 'llsif2', 'nazotoki', 'logo1st', 'logo2nd_a', 'logo2nd_b', 'logo3rd'], '#da57d8');
 
 	document.getElementById("Color_Musical").innerHTML += '\n'
-	+ CreateColorListTable([40,41,42,43,44,45,46,47,48,49],
+	+ CreateColorListTable(['RurikaM', 'YuzuhaM', 'YukinoM', 'HikaruM', 'MaayaM', 'AnzuM', 'MisuzuM', 'ToaM', 'RenaM', 'SayakaM', 'MadokaM', 'KyokaM'],
 	  ['official'], '#c40035');
 
 	document.getElementById("Color_Hasu").innerHTML += '\n'
-	+ CreateColorListTable([52,53,54,55,56,57],
+	+ CreateColorListTable(['Kaho', 'Sayaka', 'Kozue', 'Tsuzuri', 'Rurino', 'Megumi'],
 	  ['official'], '#76bde3');
 
 	document.getElementById("Loading").style.display = "none";

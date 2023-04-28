@@ -62,6 +62,8 @@ const ColKina = "#fffaa3";
 const ColMei  = "#ff9999";
 const ColShik = "#dbfff0";
 const ColNats = "#ffa8e2";
+const ColWien = "#daf";
+const ColToma = "#8df";
 
 const ColRuri = "#c7e2f3";
 const ColYuzu = "#f8f8f8";
@@ -110,6 +112,7 @@ var MemberGroup = [
 	["┗","楽曲ユニット",["AllUnit"]],
 	[""  ,"スクールアイドルミュージカル",["Musical"]],
 	[""  ,"蓮ノ空女学院スクールアイドルクラブ",["Hasu"]],
+	["┣","蓮ノ空キャスト",["HasuCast"]],
 	["┗","蓮ノ空ユニット",["HasuUnit"]],
 	[""  ,"スクフェス転入生",["Seiran","Shino","Chitose","Touoh","Shion","YG"]],
 	["┣","青藍高校",["Seiran"]],
@@ -320,6 +323,7 @@ var CharList = [
 	{name:"左月",           color:["#eee"], group:{"Niji2":1}},
 	{name:"演劇部部長",     color:["#eee"], group:{"Niji2":1}},
 	{name:"バスケ部部長",   color:["#eee"], group:{"Niji2":1}},
+	{name:"加藤ツムギ",     color:["#eee"], group:{"Niji2":1}},
 	{name:"はんぺん", subtext:"白い猫", color:["#eee"], group:{"Niji2":1}},
 	
 	{name:"大西亜玖璃", subtext:"上原歩夢 役",       color:[ColAyum], group:{"NijiCast":1}},
@@ -445,6 +449,8 @@ var CharList = [
 	{name:"米女メイ",       color:[ColMei ], group:{"Liella":1}},
 	{name:"若菜四季",       color:[ColShik], group:{"Liella":1}},
 	{name:"鬼塚夏美",       color:[ColNats], group:{"Liella":1}},
+	{name:"ウィーン・マルガレーテ", color:[ColWien], group:{"Liella":1}},
+	{name:"鬼塚冬毬",       color:[ColToma], group:{"Liella":1}},
 
 	{name:"柊摩央",     subtext:"Sunny Passion", color:["#ed8"], group:{"Liella2":1}},
 	{name:"聖澤悠奈",   subtext:"Sunny Passion", color:["#cbe"], group:{"Liella2":1}},
@@ -459,7 +465,6 @@ var CharList = [
 	{name:"結ヶ丘理事長",   color:["#eee"], group:{"Liella2":1}},
 	{name:"マンマル", subtext:"澁谷家のフクロウ", color:["#eee"], group:{"Liella2":1}},
 	{name:"チビ", subtext:"葉月家の犬", color:["#eee"], group:{"Liella2":1}},
-	{name:"ウィーン・マルガレーテ", color:["#eee"], group:{"Liella2":1}},
 	
 	{name:"伊達さゆり",    subtext:"澁谷かのん 役",   color:[ColKano], group:{"LiellaCast":1}},
 	{name:"Liyuu",         subtext:"唐可可 役",       color:[ColKeke], group:{"LiellaCast":1}},
@@ -470,6 +475,7 @@ var CharList = [
 	{name:"薮島朱音",      subtext:"米女メイ 役",     color:[ColMei ], group:{"LiellaCast":1}},
 	{name:"大熊和奏",      subtext:"若菜四季 役",     color:[ColShik], group:{"LiellaCast":1}},
 	{name:"絵森彩",        subtext:"鬼塚夏美 役",     color:[ColNats], group:{"LiellaCast":1}},
+	{name:"結那",          subtext:"ウィーン・マルガレーテ 役",color:[ColWien], group:{"LiellaCast":1}},
 
 	{name:"かのクゥ",  color:[ColKano, ColKeke], group:{"LiellaCP":1}},
 	{name:"かのちさ",  color:[ColKano, ColChis], group:{"LiellaCP":1}},
@@ -525,6 +531,13 @@ var CharList = [
 	{name:"夕霧綴理",   color:[ColTsuz], group:{"Hasu":1}},
 	{name:"大沢瑠璃乃", color:[ColRurH], group:{"Hasu":1}},
 	{name:"藤島慈",     color:[ColMegu], group:{"Hasu":1}},
+
+	{name:"楡井希実", subtext:"日野下花帆 役", color:[ColKaho], group:{"HasuCast":1}},
+	{name:"野中ここな", subtext:"村野さやか 役", color:[ColSayH], group:{"HasuCast":1}},
+	{name:"花宮初奈", subtext:"乙宗梢 役",     color:[ColKozu], group:{"HasuCast":1}},
+	{name:"佐々木琴子	", subtext:"夕霧綴理 役",   color:[ColTsuz], group:{"HasuCast":1}},
+	{name:"菅叶和", subtext:"大沢瑠璃乃 役", color:[ColRurH], group:{"HasuCast":1}},
+	{name:"月音こな", subtext:"藤島慈 役",     color:[ColMegu], group:{"HasuCast":1}},
 
 	{name:"スリーズブーケ",   color:[ColKaho,ColKozu], group:{"HasuUnit":1}},
 	{name:"DOLLCHESTRA",      color:[ColSayH,ColTsuz], group:{"HasuUnit":1}},
@@ -585,6 +598,11 @@ var CharList = [
 	{name:"レオ",          color:["#dfb"], group:{"YG":1}},
 	{name:"早乙女紫",      color:["#dfa"], group:{"YG":1}}
 ];
+
+//■デバッグモード判定
+let isDebugMode = false;
+const Parameter = location.search.substring(1).split('&');
+if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
 
 //■リストを変換する
 var Member = [];
@@ -1066,21 +1084,30 @@ function shuffle(array) {
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
-		<summary><span class="date">2022/03/02</span> - ソート対象追加</summary>
+		<summary><span class="date">2023/04/28</span> - モード追加 他</summary>
 		<div>
-			<span class="new"></span>「蓮ノ空ユニット」を追加
+			<span class="new"></span>虹ヶ咲関係者：「加藤ツムギ」を追加<br>
+			<span class="new"></span>Liella!：「鬼塚冬毬」「結那(ウィーン役キャスト」を追加<br>
+			<span class="fix"></span>Liella!：ウィーン・マルガレーテをメインキャラクターに格上げ<br>
+			<span class="new"></span>蓮ノ空：「蓮ノ空キャスト」モードを実装
 		</div>
 	</details>
 	<details>
-		<summary><span class="date">2022/02/14</span> - ソート対象追加</summary>
+		<summary><span class="date">2022/03/02</span> - モード追加</summary>
 		<div>
-			<span class="new"></span>「蓮ノ空女学院スクールアイドルクラブ」を追加
+			<span class="new"></span>「蓮ノ空ユニット」モードを実装
 		</div>
 	</details>
 	<details>
-		<summary><span class="date">2022/12/09</span> - ソート対象追加</summary>
+		<summary><span class="date">2022/02/14</span> - モード追加</summary>
 		<div>
-			<span class="new"></span>「スクールアイドルミュージカル」を追加
+			<span class="new"></span>「蓮ノ空女学院スクールアイドルクラブ」モードを実装
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2022/12/09</span> - モード追加</summary>
+		<div>
+			<span class="new"></span>「スクールアイドルミュージカル」モードを実装
 		</div>
 	</details>
 	<details>
@@ -1094,7 +1121,7 @@ function shuffle(array) {
 	<details>
 		<summary><span class="date">2022/07/31</span> - ソート対象追加</summary>
 		<div>
-			<span class="new"></span>「ウィーン・マルガレーテ」を追加
+			<span class="new"></span>スーパースター!!：「ウィーン・マルガレーテ」を追加
 		</div>
 	</details>
 	<details>
@@ -1226,7 +1253,7 @@ function shuffle(array) {
 
 
 <nav>
-<p><a href="index.html">トップページに戻る。</a></p>
+<p><a id="BackToMain" href="index.html">トップページに戻る。</a></p>
 </nav>
 
 <script><!--
@@ -1242,6 +1269,16 @@ for(i=0; i<MemberGroup.length; i++){
 document.getElementById("Selector").innerHTML = Output;
 
 document.getElementById("Loading").style.display = "none";
+
+
+//■デバックモード時の処理
+if(isDebugMode) {
+	//◆デバッグモードであることを表示
+	document.title = '[debug]' + document.title;
+	document.bgColor = '#dce';
+	
+	document.getElementById("BackToMain").href += "?debug";
+}
 --></script>
 
 </body>
