@@ -6180,6 +6180,46 @@ const StoryList = [
 		}
 		]
 	},
+	{
+		"name": "お宝発見！しずく探検隊",
+		"part": [
+		{
+			"title": "第1話",
+			"desc": "宝の地図に書かれた宝を探しにやって来たしずく達。まずは川が立ちはばかる。",
+			"tag": ["Umi", "Hanayo", "Chika", "Shizuku", "Ai", "Setsuna"]
+		},
+		{
+			"title": "第2話",
+			"desc": "川の近くの橋は渡れそうにない状態だった。花陽が先導して、流れの緩やかな部分を渡ることに。",
+			"tag": ["Umi", "Hanayo", "Chika", "Shizuku", "Ai", "Setsuna"]
+		},
+		{
+			"title": "第3話",
+			"desc": "川を渡り、山の奥の方までやってきた6人。千歌は木に生っている果実を見つけたが、食べられるのか？",
+			"tag": ["Umi", "Hanayo", "Chika", "Shizuku", "Ai", "Setsuna"]
+		},
+		{
+			"title": "第4話",
+			"desc": "地図に示された宝の在り処まで着々と近づいてきた6人。突然、方位磁石が狂い出し……？",
+			"tag": ["Umi", "Hanayo", "Chika", "Shizuku", "Ai", "Setsuna"]
+		},
+		{
+			"title": "第5話",
+			"desc": "大変な行程を経て、ついに目的地の山頂に到達したが、宝は見あたらない。何か見落としていたのだろうか？",
+			"tag": ["Umi", "Hanayo", "Chika", "Shizuku", "Ai", "Setsuna"]
+		},
+		{
+			"title": "第6話",
+			"desc": "千歌のおかげで、地図にあぶり出しが仕込まれているのを見抜いたしずく。宝の在り処はもうすぐだ！",
+			"tag": ["Umi", "Hanayo", "Chika", "Shizuku", "Ai", "Setsuna"]
+		},
+		{
+			"title": "第7話",
+			"desc": "無事に宝箱を見つけるも、突然洞窟が崩れて絶体絶命のピンチ。何とか抜け出した6人は……。",
+			"tag": ["Umi", "Hanayo", "Chika", "Shizuku", "Ai", "Setsuna"]
+		}
+		]
+	},
 	]
 },
 //■■■■■■■■■■ キズナエピソード ■■■■■■■■■■
