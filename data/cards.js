@@ -9674,7 +9674,6 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「スクスタフェス」で追加"
 },
-
 {
 	"id": 875,
 	"name": "Rin",
@@ -9771,5 +9770,127 @@ const RawCardList = [
 	"source": "none",
 	"desc": "「パーティーガチャ」で追加"
 },
+
+{
+	"id": 883,
+	"name": "Umi",
+	"rare": "UR",
+	"atr": "Active",
+	"type": "Sp",
+	"cn1": "今助けます！",
+	"cn2": "ドリーム・トレジャー",
+	"date": "2023/04/19",
+	"source": "gacha",
+	"desc": "「お宝発見！しずく探検隊ガチャ」で追加"
+},
+{
+	"id": 884,
+	"name": "Chika",
+	"rare": "SR",
+	"atr": "Elegant",
+	"type": "Vo",
+	"cn1": "ゆっくり歩けばなんとか――",
+	"cn2": "Step! ZERO to ONE",
+	"date": "2023/04/19",
+	"source": "gacha",
+	"desc": "「お宝発見！しずく探検隊ガチャ」で追加"
+},
+{
+	"id": 885,
+	"name": "Setsuna",
+	"rare": "UR",
+	"atr": "Elegant",
+	"type": "Gd",
+	"cn1": "えへへ、ありがとうございます！",
+	"cn2": "ドリーム・トレジャー",
+	"date": "2023/04/19",
+	"source": "gacha",
+	"desc": "「お宝発見！しずく探検隊ガチャ」で追加"
+},
+{
+	"id": 886,
+	"name": "Shizuku",
+	"rare": "UR",
+	"atr": "Natural",
+	"type": "Vo",
+	"cn1": "一緒に、絶対帰ろう！",
+	"cn2": "ドリーム・トレジャー",
+	"date": "2023/04/22",
+	"source": "reward",
+	"desc": "イベント「お宝発見！しずく探検隊」報酬"
+},
+{
+	"id": 887,
+	"name": "Hanayo",
+	"rare": "SR",
+	"atr": "Active",
+	"type": "Sk",
+	"cn1": "うん、待ってるね！",
+	"cn2": "HEART to HEART!",
+	"date": "2023/04/22",
+	"source": "reward",
+	"desc": "イベント「お宝発見！しずく探検隊」報酬 (イベントpt枠)"
+},
+{
+	"id": 888,
+	"name": "Ai",
+	"rare": "SR",
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "“そう、がんきょう”だけに！",
+	"cn2": "ミラクル STAY TUNE！",
+	"date": "2023/04/22",
+	"source": "reward",
+	"desc": "イベント「お宝発見！しずく探検隊」報酬 (ランキング枠)"
+},
+//	{
+//		"id": 889,
+//		"name": "Honoka",
+//		"rare": "UR",
+//		"atr": "",
+//		"type": "",
+//		"cn1": "",
+//		"cn2": "",
+//		"date": "2023/04/30",
+//		"source": "fes",
+//		"desc": "「スクスタフェス」で追加"
+//	},
+//	{
+//		"id": 890,
+//		"name": "Rina",
+//		"rare": "UR",
+//		"atr": "",
+//		"type": "",
+//		"cn1": "",
+//		"cn2": "",
+//		"date": "2023/04/30",
+//		"source": "fes",
+//		"desc": "「スクスタフェス」で追加"
+//	},
+//	{
+//		"id": 891,
+//		"name": "",
+//		"rare": "SR",
+//		"atr": "",
+//		"type": "",
+//		"cn1": "",
+//		"cn2": "",
+//		"date": "2023/04/30",
+//		"source": "none",
+//		"desc": "「スクスタフェス」で追加"
+//	},
+//	{
+//		"id": 892,
+//		"name": "",
+//		"rare": "SR",
+//		"atr": "",
+//		"type": "",
+//		"cn1": "",
+//		"cn2": "",
+//		"date": "2023/04/30",
+//		"source": "none",
+//		"desc": "「スクスタフェス」で追加"
+//	},
 ];
-const LatestUpdate = "2023/04/14 「パーティーガチャ」まで";
+const LatestUpdate = "2023/04/22 イベント「お宝発見！しずく探検隊」まで";
+//const LatestUpdate = "2023/04/30 「スクスタフェス」まで";
