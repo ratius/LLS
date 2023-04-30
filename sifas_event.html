@@ -244,13 +244,19 @@ function LookUpEvent(id, data){
 //■■描画用関数
 //■丸ボタン
 function DrawRoundButton(CharId, EventId, Prefix){
-	return '<div class="EventBox bg_as_' + CharId + '" title="'
+	let Output = '<div class="EventBox bg_as_' + CharId + '" title="'
 	+ (Prefix ? Prefix + '\n' : '')
-	+ LookUpEvent(EventId,"name") + '\n'
-	+ '(' + GetStringFromDate(LookUpEvent(EventId,"started"), false)
-	+ '～' + GetStringFromDate(LookUpEvent(EventId,"ended"), false) + ')'
-	+ '" style="color:' + TagData[CharId].color + '">'
+	+ LookUpEvent(EventId,"name");
+
+	const temp = LookUpEvent(EventId, "ended");
+
+	if(temp != undefined){
+		Output +='\n(' + GetStringFromDate(LookUpEvent(EventId,"started"), false)
+		+ '～' + GetStringFromDate(LookUpEvent(EventId,"ended"), false) + ')';
+	}
+	Output += '" style="color:' + TagData[CharId].color + '">'
 	+ '<span>' + EventId + '<\/span><\/div>';
+	return Output;
 }
 
 //■イベント一覧
@@ -272,10 +278,14 @@ function WriteEventList(){
 			default:
 				Output += '">' + CurrentEvent.type;
 		}
-		Output += '<\/td><td style="font-size: small;">開始：' + GetStringFromDate(CurrentEvent.started, true) + '<br>'
-		+ '終了：' +  GetStringFromDate(CurrentEvent.ended, true)
-		+ ' (' + Math.round((CurrentEvent.ended - CurrentEvent.started)/86400000) + '日間)'
-		+ '<\/td><td style="font-size: small;">';
+		Output += '<\/td><td style="font-size: small;">開始：'
+		+ ('started' in CurrentEvent ? GetStringFromDate(CurrentEvent.started, true) : '未定') + '<br>'
+		+ '終了：'
+		+ ('ended' in CurrentEvent ? GetStringFromDate(CurrentEvent.ended, true) : '未定');
+		if('started' in CurrentEvent && 'ended' in CurrentEvent){
+			Output += ' (' + Math.round((CurrentEvent.ended - CurrentEvent.started)/86400000) + '日間)';
+		}
+		Output += '<\/td><td style="font-size: small;">';
 
 		if('UR' in CurrentEvent){
 			for(temp1=0; temp1<CurrentEvent.UR.length; temp1++){
@@ -471,7 +481,7 @@ function DrawDuplicatedTrioList(min){
 <section id="Foreword">
 	<h3 class="foreword">まえがき</h3>
 	<p>
-		スクフェスALL STARSのイベントストーリーおける、各ペアの共演状況です。<br>
+		スクフェスALL STARSのイベントストーリーのまとめ、及び登場キャラクターの状況です。<br>
 		PCで閲覧している場合、イベント番号の書かれた丸にカーソルを当てることで詳しい情報のツールチップが出現します。
 	</p>
 </section>

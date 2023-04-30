@@ -101,6 +101,7 @@ td:hover .tool-tip {
 .release{ background-color: #eee;}
 .party  { background-color: #ed8;}
 .none   { background-color: #ddd;}
+.scheduled { background-color: #ceb; color:#786;}
 .na     { background-color: #ffefe7; padding: 1px; border: solid 2px #ecb; color: #ba9;}
 
 --></style>
@@ -145,7 +146,7 @@ const TagData = {
 };
 const numCharacters = Object.keys(TagData).length;
 
-const ToolTipSource = {'gacha':'Ｅ特効', 'reward':'Ｅ報酬', 'fes':'Ｆ限定', 'party':'Ｐ限定', 'none':'非イベ', 'release':'初期　'};
+const ToolTipSource = {'gacha':'Ｅ特効', 'reward':'Ｅ報酬', 'fes':'Ｆ限定', 'party':'Ｐ限定', 'none':'非イベ', 'release':'初期　', 'scheduled':'(追加予定)'};
 
 // カードリスト。UR・SRを分けて格納するため、キャラ数の2倍の要素数の配列を用意
 let CardList = new Array(numCharacters * 2);
@@ -217,7 +218,9 @@ function DrawTable(num1, num2, GroupNum){
 				} else {
 					ToolTipTmp = (ListTmp.id ? 'No.' + ListTmp.id : '') + ' ' + ListTmp.desc;
 					
-					if(ListTmp.cn1 && ListTmp.cn2){ //覚醒前後がきちんと出ていれば
+					if(ListTmp.source === 'scheduled'){
+						
+					} else if (ListTmp.cn1 && ListTmp.cn2){ //覚醒前後がきちんと出ていれば
 						ToolTipTmp += '&#10;覚醒前：' + ListTmp.cn1 + '&#10;覚醒後：' + ListTmp.cn2 ;
 					} else {
 						console.log("[データ不備] " + ListTmp.id + "番の覚醒前/覚醒後カード名が設定されていません");
@@ -227,7 +230,7 @@ function DrawTable(num1, num2, GroupNum){
 					+ '<strong>' + ToolTipSource[ListTmp.source] + '<\/strong>'
 					+ (ListTmp.atr ? ' <img src="img/atr_' + ListTmp.atr.toLowerCase() + '.png" width="24" height="24" alt="' +  ListTmp.atr.toLowerCase() + '">' : '')
 					+ (ListTmp.type ? '<img src="img/type_' + ListTmp.type.toLowerCase() + '.png" width="24" height="24" alt="' + ListTmp.type.toLowerCase() + '">' : '')
-					+ '<br>' + ListTmp.date
+					+ ('date' in ListTmp ? '<br>' + ListTmp.date : '')
 					+ '<\/td>\n';
 				}
 			}else{
