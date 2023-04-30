@@ -764,4 +764,27 @@ const EventList = [
 	"UR" : ["Rin", "Kanan", "Mia"],
 	"SR" : ["Nico", "Mari", "Shioriko"]
 },
+{
+	"id" : 86,
+	"name" : "お宝発見！しずく探検隊",
+	"type" : "story",
+	"started" : new Date("2023-04-22T15:00:00+09:00"),
+	"ended"   : new Date("2023-04-29T14:59:59+09:00"),
+	"UR" : ["Umi", "Shizuku", "Setsuna"],
+	"SR" : ["Hanayo", "Chika", "Ai"]
+},
+{
+	"id" : 87,
+	"name" : "(イベント名未定1)",
+	"type" : "exchange",
+	"UR" : ["Nico", "You", "Kanata"],
+	"SR" : ["Rin", "Shizuku", "Lanzhu"]
+},
+{
+	"id" : 88,
+	"name" : "(イベント名未定2)",
+	"type" : "story",
+	"UR" : ["Kotori", "Ai", "Shioriko"],
+	"SR" : ["Eli", "Yoshiko", "Setsuna"]
+},
 ];

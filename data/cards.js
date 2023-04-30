@@ -9843,54 +9843,179 @@ const RawCardList = [
 	"source": "reward",
 	"desc": "イベント「お宝発見！しずく探検隊」報酬 (ランキング枠)"
 },
-//	{
-//		"id": 889,
-//		"name": "Honoka",
-//		"rare": "UR",
-//		"atr": "",
-//		"type": "",
-//		"cn1": "",
-//		"cn2": "",
-//		"date": "2023/04/30",
-//		"source": "fes",
-//		"desc": "「スクスタフェス」で追加"
-//	},
-//	{
-//		"id": 890,
-//		"name": "Rina",
-//		"rare": "UR",
-//		"atr": "",
-//		"type": "",
-//		"cn1": "",
-//		"cn2": "",
-//		"date": "2023/04/30",
-//		"source": "fes",
-//		"desc": "「スクスタフェス」で追加"
-//	},
-//	{
-//		"id": 891,
-//		"name": "",
-//		"rare": "SR",
-//		"atr": "",
-//		"type": "",
-//		"cn1": "",
-//		"cn2": "",
-//		"date": "2023/04/30",
-//		"source": "none",
-//		"desc": "「スクスタフェス」で追加"
-//	},
-//	{
-//		"id": 892,
-//		"name": "",
-//		"rare": "SR",
-//		"atr": "",
-//		"type": "",
-//		"cn1": "",
-//		"cn2": "",
-//		"date": "2023/04/30",
-//		"source": "none",
-//		"desc": "「スクスタフェス」で追加"
-//	},
+{
+	"id": 889,
+	"name": "Honoka",
+	"rare": "UR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "おっまたせー！",
+	"cn2": "Colorful★Magician",
+	"date": "2023/04/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 890,
+	"name": "Rina",
+	"rare": "UR",
+	"atr": "Pure",
+	"type": "Sp",
+	"cn1": "前より写真が好きになったの。",
+	"cn2": "クラシカルゴシック・メイド",
+	"date": "2023/04/30",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 891,
+	"name": "Karin",
+	"rare": "SR",
+	"atr": "Cool",
+	"type": "Vo",
+	"cn1": "ああ、愛。来たのね",
+	"cn2": "ミラクル STAY TUNE！",
+	"date": "2023/04/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 892,
+	"name": "Emma",
+	"rare": "SR",
+	"atr": "Smile",
+	"type": "Gd",
+	"cn1": "さあ、召し上がれ♪",
+	"cn2": "ミラクル STAY TUNE！",
+	"date": "2023/04/30",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
+},
+{
+	"id": 893,
+	"name": "You",
+	"rare": "UR",
+	"source": "scheduled",
+	"desc": "2023年5月上旬イベントで追加予定"
+},
+{
+	"id": 894,
+	"name": "Lanzhu",
+	"rare": "SR",
+	"source": "scheduled",
+	"desc": "2023年5月上旬イベントで追加予定"
+},
+{
+	"id": 895,
+	"name": "Kanata",
+	"rare": "UR",
+	"source": "scheduled",
+	"desc": "2023年5月上旬イベントで追加予定"
+},
+{
+	"id": 896,
+	"name": "Nico",
+	"rare": "UR",
+	"source": "scheduled",
+	"desc": "2023年5月上旬イベントで追加予定"
+},
+{
+	"id": 897,
+	"name": "Rin",
+	"rare": "SR",
+	"source": "scheduled",
+	"desc": "2023年5月上旬イベントで追加予定"
+},
+{
+	"id": 898,
+	"name": "Shizuku",
+	"rare": "SR",
+	"source": "scheduled",
+	"desc": "2023年5月上旬イベントで追加予定"
+},
+{
+	"id": 899,
+	"name": "Nozomi",
+	"rare": "UR",
+	"source": "scheduled",
+	"desc": "2023年5月「パーティーガチャ」で追加予定"
+},
+{
+	"id": 900,
+	"name": "Ruby",
+	"rare": "SR",
+	"source": "scheduled",
+	"desc": "2023年5月「パーティーガチャ」で追加予定"
+},
+{
+	"id": 901,
+	"name": "Kotori",
+	"rare": "UR",
+	"source": "scheduled",
+	"desc": "2023年5月下旬イベントで追加予定"
+},
+{
+	"id": 902,
+	"name": "Setsuna",
+	"rare": "SR",
+	"source": "scheduled",
+	"desc": "2023年5月下旬イベントで追加予定"
+},
+{
+	"id": 903,
+	"name": "Ai",
+	"rare": "UR",
+	"source": "scheduled",
+	"desc": "2023年5月下旬イベントで追加予定"
+},
+{
+	"id": 904,
+	"name": "Shioriko",
+	"rare": "UR",
+	"source": "scheduled",
+	"desc": "2023年5月下旬イベントで追加予定"
+},
+{
+	"id": 905,
+	"name": "Eli",
+	"rare": "SR",
+	"source": "scheduled",
+	"desc": "2023年5月下旬イベントで追加予定"
+},
+{
+	"id": 906,
+	"name": "Yoshiko",
+	"rare": "SR",
+	"source": "scheduled",
+	"desc": "2023年5月下旬イベントで追加予定"
+},
+{
+	"id": 907,
+	"name": "Hanamaru",
+	"rare": "UR",
+	"source": "scheduled",
+	"desc": "2023年5月「スクスタフェス」で追加予定"
+},
+{
+	"id": 908,
+	"name": "Ayumu",
+	"rare": "UR",
+	"source": "scheduled",
+	"desc": "2023年5月「スクスタフェス」で追加予定"
+},
+{
+	"id": 909,
+	"name": "Maki",
+	"rare": "SR",
+	"source": "scheduled",
+	"desc": "2023年5月「スクスタフェス」で追加予定"
+},
+{
+	"id": 910,
+	"name": "Riko",
+	"rare": "SR",
+	"source": "scheduled",
+	"desc": "2023年5月「スクスタフェス」で追加予定"
+},
 ];
-const LatestUpdate = "2023/04/22 イベント「お宝発見！しずく探検隊」まで";
-//const LatestUpdate = "2023/04/30 「スクスタフェス」まで";
+const LatestUpdate = "2023/04/30 「スクスタフェス」まで";
