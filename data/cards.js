@@ -9893,59 +9893,99 @@ const RawCardList = [
 },
 {
 	"id": 893,
-	"name": "You",
+	"name": "Kanata",
 	"rare": "UR",
-	"source": "scheduled",
-	"desc": "2023年5月上旬イベントで追加予定"
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "尊い、最高！！！",
+	"cn2": "ドリーム・ユートピア",
+	"date": "2023/05/04",
+	"source": "gacha",
+	"desc": "「スイートドリーミング♪ガチャ」で追加"
 },
 {
 	"id": 894,
 	"name": "Lanzhu",
 	"rare": "SR",
-	"source": "scheduled",
-	"desc": "2023年5月上旬イベントで追加予定"
+	"atr": "Pure",
+	"type": "Sp",
+	"cn1": "順番に食べるわね！",
+	"cn2": "ミラクル STAY TUNE！",
+	"date": "2023/05/04",
+	"source": "gacha",
+	"desc": "「スイートドリーミング♪ガチャ」で追加"
 },
 {
 	"id": 895,
-	"name": "Kanata",
+	"name": "You",
 	"rare": "UR",
-	"source": "scheduled",
-	"desc": "2023年5月上旬イベントで追加予定"
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "やったあ！！　優勝だー！！",
+	"cn2": "ドリーム・ユートピア",
+	"date": "2023/05/04",
+	"source": "gacha",
+	"desc": "「スイートドリーミング♪ガチャ」で追加"
 },
 {
 	"id": 896,
 	"name": "Nico",
 	"rare": "UR",
-	"source": "scheduled",
-	"desc": "2023年5月上旬イベントで追加予定"
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "絶対、負けないんだから……",
+	"cn2": "ドリーム・ユートピア",
+	"date": "2023/05/07",
+	"source": "reward",
+	"desc": "イベント「スイートドリーミング♪」報酬"
 },
 {
 	"id": 897,
-	"name": "Rin",
+	"name": "Shizuku",
 	"rare": "SR",
-	"source": "scheduled",
-	"desc": "2023年5月上旬イベントで追加予定"
+	"atr": "Elegant",
+	"type": "Gd",
+	"cn1": "映画でもどうですか？",
+	"cn2": "ミラクル STAY TUNE！",
+	"date": "2023/05/07",
+	"source": "reward",
+	"desc": "イベント「スイートドリーミング♪」報酬 (交換所枠)"
 },
 {
 	"id": 898,
-	"name": "Shizuku",
+	"name": "Rin",
 	"rare": "SR",
-	"source": "scheduled",
-	"desc": "2023年5月上旬イベントで追加予定"
+	"atr": "Active",
+	"type": "Gd",
+	"cn1": "凛の動きについてこられるかにゃ",
+	"cn2": "HEART to HEART!",
+	"date": "2023/05/07",
+	"source": "reward",
+	"desc": "イベント「スイートドリーミング♪」報酬 (ランキング枠)"
 },
 {
 	"id": 899,
 	"name": "Nozomi",
 	"rare": "UR",
-	"source": "scheduled",
-	"desc": "2023年5月「パーティーガチャ」で追加予定"
+	"atr": "Pure",
+	"type": "Sk",
+	"cn1": "ねえ、今付けてみてもいいかな？",
+	"cn2": "パッションピンク・ガール",
+	"date": "2023/05/14",
+	"source": "party",
+	"desc": "「パーティーガチャ」で追加"
 },
 {
 	"id": 900,
 	"name": "Ruby",
 	"rare": "SR",
-	"source": "scheduled",
-	"desc": "2023年5月「パーティーガチャ」で追加予定"
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "はい、ランジュさん！",
+	"cn2": "Step! ZERO to ONE",
+	"date": "2023/05/14",
+	"source": "none",
+	"desc": "「パーティーガチャ」で追加"
 },
 {
 	"id": 901,
@@ -10018,4 +10058,4 @@ const RawCardList = [
 	"desc": "2023年5月「スクスタフェス」で追加予定"
 },
 ];
-const LatestUpdate = "2023/04/30 「スクスタフェス」まで";
+const LatestUpdate = "2023/05/14 「パーティーガチャ」まで";

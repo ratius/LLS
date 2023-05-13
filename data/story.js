@@ -6,6 +6,7 @@ const StoryList = [
 	"part": [
 	{
 		"name": "第1章「みんなで叶える物語」",
+		"date": "2019-09-26",
 		"part": [
 		{
 			"title": "第1話 前半 スクールアイドルを応援したい！",
@@ -67,6 +68,7 @@ const StoryList = [
 	},
 	{
 		"name": "第2章「チャンスをつかめ！」",
+		"date": "2019-09-26",
 		"part": [
 		{
 			"title": "第1話 メインステージを目指して",
@@ -128,6 +130,7 @@ const StoryList = [
 	},
 	{
 		"name": "第3章「only our shine・前編」",
+		"date": "2019-09-26",
 		"part": [
 		{
 			"title": "第1話 いざ沼津",
@@ -184,6 +187,7 @@ const StoryList = [
 	},
 	{
 		"name": "第4章「only our shine・後編」",
+		"date": "2019-09-26",
 		"part": [
 		{
 			"title": "第1話 高まる期待",
@@ -239,6 +243,7 @@ const StoryList = [
 	},
 	{
 		"name": "第5章「μ'sの秘密を探れ！」",
+		"date": "2019-09-26",
 		"part": [
 		{
 			"title": "第1話 想いを募らせて",
@@ -294,6 +299,7 @@ const StoryList = [
 	},
 	{
 		"name": "第6章「勝負の行方」",
+		"date": "2019-09-26",
 		"part": [
 		{
 			"title": "第1話 度胸試し",
@@ -349,6 +355,7 @@ const StoryList = [
 	},
 	{
 		"name": "第7章「TOKIMEKI Runners」",
+		"date": "2019-09-26",
 		"part": [
 		{
 			"title": "第1話 Aqoursの場合",
@@ -409,6 +416,7 @@ const StoryList = [
 	},
 	{
 		"name": "第8章「夢への一歩を抱きしめて」",
+		"date": "2019-10-31",
 		"part": [
 		{
 			"title": "第1話 諦めたくない！",
@@ -466,6 +474,7 @@ const StoryList = [
 	},
 	{
 		"name": "第9章「せつ菜の試練」",
+		"date": "2019-11-30",
 		"part": [
 		{
 			"title": "第1話 嵐の幕開け",
@@ -521,6 +530,7 @@ const StoryList = [
 	},
 	{
 		"name": "第10章「新生徒会長の無理難題」",
+		"date": "2019-12-31",
 		"part": [
 		{
 			"title": "第1話 新生徒会長はどんな人？",
@@ -577,6 +587,7 @@ const StoryList = [
 	},
 	{
 		"name": "第11章「目指せスクフェス！三校合同合宿！」",
+		"date": "2020-01-31",
 		"part": [
 		{
 			"title": "第1話 テストの後は……？",
@@ -632,6 +643,7 @@ const StoryList = [
 	},
 	{
 		"name": "第12章「前しか見えない！」",
+		"date": "2020-02-28",
 		"part": [
 		{
 			"title": "第1話 ススメ！ススメ！",
@@ -689,6 +701,7 @@ const StoryList = [
 	},
 	{
 		"name": "第13章「部活動紹介でニジガク知名度UP作戦！」",
+		"date": "2020-03-31",
 		"part": [
 		{
 			"title": "第1話 足りないものは積んでゆけ！",
@@ -745,6 +758,7 @@ const StoryList = [
 	},
 	{
 		"name": "第14章「埋まっていくピース！」",
+		"date": "2020-04-30",
 		"part": [
 		{
 			"title": "第1話 最後の最後まで！",
@@ -802,6 +816,7 @@ const StoryList = [
 	},
 	{
 		"name": "第15章「みんなの夢のために―前編―」",
+		"date": "2020-05-29",
 		"part": [
 		{
 			"title": "第1話 同志よ、きたれ！",
@@ -859,6 +874,7 @@ const StoryList = [
 	},
 	{
 		"name": "第16章「みんなの夢のために―後編―」",
+		"date": "2020-06-30",
 		"part": [
 		{
 			"title": "第1話 強い気持ちと足りない想い",
@@ -915,6 +931,7 @@ const StoryList = [
 	},
 	{
 		"name": "第17章「スクールアイドルフェスティバル！」",
+		"date": "2020-07-31",
 		"part": [
 		{
 			"title": "第1話 待ちきれない夜",
@@ -973,6 +990,7 @@ const StoryList = [
 	},
 	{
 		"name": "第18章「いざ！　秘密の特訓へ！」",
+		"date": "2020-08-31",
 		"color": "main2",
 		"part": [
 		{
@@ -1029,6 +1047,7 @@ const StoryList = [
 	},
 	{
 		"name": "第19章「ゾンビとの戦い」",
+		"date": "2020-09-30",
 		"color": "main2",
 		"part": [
 		{
@@ -1085,6 +1104,7 @@ const StoryList = [
 	},
 	{
 		"name": "第20章「スクールアイドル同好会VSスクールアイドル部！？」",
+		"date": "2020-10-31",
 		"part": [
 		{
 			"title": "第1話 前半 ただいま、みんな！",
@@ -1145,6 +1165,7 @@ const StoryList = [
 	},
 	{
 		"name": "第21章「悩めるしずくのイノセント」",
+		"date": "2020-11-30",
 		"part": [
 		{
 			"title": "第1話 それぞれの夜",
@@ -1200,6 +1221,7 @@ const StoryList = [
 	},
 	{
 		"name": "第22章「気づいて、小さな声」",
+		"date": "2020-12-29",
 		"part": [
 		{
 			"title": "第1話 ミア・テイラー",
@@ -1261,6 +1283,7 @@ const StoryList = [
 	},
 	{
 		"name": "第23章「愛さんプロデュース！合同イベント！　前編」",
+		"date": "2021-01-30",
 		"part": [
 		{
 			"title": "第1話 愛の想い",
@@ -1316,6 +1339,7 @@ const StoryList = [
 	},
 	{
 		"name": "第24章「愛さんプロデュース！合同イベント！　後編」",
+		"date": "2021-02-28",
 		"part": [
 		{
 			"title": "第1話 準備万端！　いきます！",
@@ -1371,6 +1395,7 @@ const StoryList = [
 	},
 	{
 		"name": "第25章「私のままで、もっと高く」",
+		"date": "2021-03-31",
 		"part": [
 		{
 			"title": "第1話 困惑・混乱・混迷",
@@ -1427,6 +1452,7 @@ const StoryList = [
 	},
 	{
 		"name": "第26章「薫子がやってきた」",
+		"date": "2021-04-29",
 		"part": [
 		{
 			"title": "第1話 新しいイベント！？",
@@ -1482,6 +1508,7 @@ const StoryList = [
 	},
 	{
 		"name": "第27章「もう我慢はヤメです！！」",
+		"date": "2021-05-30",
 		"part": [
 		{
 			"title": "第1話 むかし話",
@@ -1542,6 +1569,7 @@ const StoryList = [
 	},
 	{
 		"name": "第28章「ランジュの想い」",
+		"date": "2021-06-29",
 		"part": [
 		{
 			"title": "第1話 いつもと同じ景色",
@@ -1597,6 +1625,7 @@ const StoryList = [
 	},
 	{
 		"name": "第29章「これが私のスクールアイドル！」",
+		"date": "2021-07-30",
 		"part": [
 		{
 			"title": "第1話 もう一度、最初から",
@@ -1652,6 +1681,7 @@ const StoryList = [
 	},
 	{
 		"name": "第30章「私たち、みんな！」",
+		"date": "2021-08-30",
 		"part": [
 		{
 			"title": "第1話 これまでの日々、これからの日々",
@@ -1707,6 +1737,7 @@ const StoryList = [
 	},
 	{
 		"name": "第31章「新しい日常」",
+		"date": "2021-09-29",
 		"color": "main2",
 		"part": [
 		{
@@ -1763,6 +1794,7 @@ const StoryList = [
 	},
 	{
 		"name": "第32章「教えて！　μ's！　前編」",
+		"date": "2021-10-30",
 		"part": [
 		{
 			"title": "第1話 ヒントを探しに",
@@ -1818,6 +1850,7 @@ const StoryList = [
 	},
 	{
 		"name": "第33章「教えて！　μ's！　後編」",
+		"date": "2021-11-29",
 		"part": [
 		{
 			"title": "第1話 １曲なんて選べない！",
@@ -1874,6 +1907,7 @@ const StoryList = [
 	},
 	{
 		"name": "第34章「教えて！　Aqours！　前編」",
+		"date": "2021-12-28",
 		"part": [
 		{
 			"title": "第1話 いつもの風景",
@@ -1929,6 +1963,7 @@ const StoryList = [
 	},
 	{
 		"name": "第35章「教えて！　Aqours！　後編」",
+		"date": "2022-01-30",
 		"part": [
 		{
 			"title": "第1話 憧れたままで！",
@@ -1984,6 +2019,7 @@ const StoryList = [
 	},
 	{
 		"name": "第36章「聞かせて！　ニジガク！　前編」",
+		"date": "2022-02-27",
 		"part": [
 		{
 			"title": "第1話 夜の内緒話",
@@ -2039,6 +2075,7 @@ const StoryList = [
 	},
 	{
 		"name": "第37章「聞かせて！　ニジガク！　中編」",
+		"date": "2022-03-30",
 		"part": [
 		{
 			"title": "第1話 ハイキングに夢中！",
@@ -2094,6 +2131,7 @@ const StoryList = [
 	},
 	{
 		"name": "第38章「聞かせて！　ニジガク！　後編」",
+		"date": "2022-04-29",
 		"part": [
 		{
 			"title": "第1話 お見通し！？",
@@ -2149,6 +2187,7 @@ const StoryList = [
 	},
 	{
 		"name": "第39章「PVが動かしたキモチ」",
+		"date": "2022-05-30",
 		"part": [
 		{
 			"title": "第1話 高揚！",
@@ -2205,6 +2244,7 @@ const StoryList = [
 	},
 	{
 		"name": "第40章「西へ向かえば」",
+		"date": "2022-06-29",
 		"part": [
 		{
 			"title": "第1話 おもてなしは念入りに！",
@@ -2262,6 +2302,7 @@ const StoryList = [
 	},
 	{
 		"name": "第41章「『私』の夢」",
+		"date": "2022-07-30",
 		"part": [
 		{
 			"title": "第1話 高まる期待の中で",
@@ -2319,6 +2360,7 @@ const StoryList = [
 	},
 	{
 		"name": "第42章「これからのμ's！？」",
+		"date": "2022-08-30",
 		"part": [
 		{
 			"title": "第1話 鮮やかな夢を見る夜",
@@ -2375,6 +2417,7 @@ const StoryList = [
 	},
 	{
 		"name": "第43章「変わらないものを残すため」",
+		"date": "2022-09-25",
 		"part": [
 		{
 			"title": "第1話 いつもの風景？",
@@ -2431,6 +2474,7 @@ const StoryList = [
 	},
 	{
 		"name": "第44章「遠い未来を覗くとき」",
+		"date": "2022-10-30",
 		"part": [
 		{
 			"title": "第1話 繋がりたいから",
@@ -2486,6 +2530,7 @@ const StoryList = [
 	},
 	{
 		"name": "第45章「４８時間の応援歌」",
+		"date": "2022-11-29",
 		"part": [
 		{
 			"title": "第1話 そんなことない！",
@@ -2541,6 +2586,7 @@ const StoryList = [
 	},
 	{
 		"name": "第46章「差し伸べて、応える」",
+		"date": "2022-12-30",
 		"part": [
 		{
 			"title": "第1話 １歩目のドキドキ",
@@ -2596,6 +2642,7 @@ const StoryList = [
 	},
 	{
 		"name": "第47章「ニジガクを選ぶ理由」",
+		"date": "2023-01-30",
 		"part": [
 		{
 			"title": "第1話 学園案内パンフレット",
@@ -2651,6 +2698,7 @@ const StoryList = [
 	},
 	{
 		"name": "第48章「他学科授業体験プログラム」",
+		"date": "2023-02-27",
 		"part": [
 		{
 			"title": "第1話 未体験を体験したい！",
@@ -2706,6 +2754,7 @@ const StoryList = [
 	},
 	{
 		"name": "第49章「世界は謎で満ちている」",
+		"date": "2023-03-30",
 		"part": [
 		{
 			"title": "第1話 閃きを追いかけろ！",
@@ -2756,6 +2805,118 @@ const StoryList = [
 			"title": "第10話 ひと筋の光",
 			"desc": "美里のお見舞いのため、病院に行ったあなたと愛。病院の患者さんに愛は大人気で、なんとミニライブまで開催してしまった。ほどよい疲れで帰路について……？",
 			"tag": ["Player", "Ai"]
+		}
+		]
+	},
+	{
+		"name": "第50章「無限に広がる愛バース！」",
+		"date": "2023-04-30",
+		"part": [
+		{
+			"title": "第1話 自由な世界",
+			"desc": "美里さんのお見舞いをしてとりとめもないもやもやを抱えていた愛。でもあなたの言葉がヒントになって何かを掴んだようで……？",
+			"tag": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+		},
+		{
+			"title": "第2話 メタバースを初体験！？",
+			"desc": "愛がいつか作りたい世界、それはメタバースに近いもの。しかし、そのメタバースというものがいまいち掴めない。一番手近と思われるゲームでその世界を体験してみようということになり……？",
+			"tag": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+		},
+		{
+			"title": "第3話 MMORPGブーム到来！？",
+			"desc": "メタバースに触れてみようということで始めたMMORPG。難しいかと思われたものの、璃奈やミアの助けを借りてやってみるとみんなハマってしまい……？",
+			"tag": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+		},
+		{
+			"title": "第4話 ひとつの世界",
+			"desc": "部活の時間になってもゲームの話でもちきりの同好会メンバー。そんな中、愛はある思いを新たにしたようで……？",
+			"tag": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+		},
+		{
+			"title": "第5話 ハマる、広がる、繋がる",
+			"desc": "すっかりゲームにハマってしまったニジガクメンバー。今夜の冒険は……？",
+			"tag": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+		},
+		{
+			"title": "第6話 ゲームの世界へご招待！",
+			"desc": "ゲームの世界に慣れてきた愛たち。人に説明できるくらいまでやりこんだところで、病院のみんなにも体験プレイしてもらおうと、タブレットを持参して病院に行ったが……？",
+			"tag": ["Player", "Ayumu", "Ai", "Kanata", "Rina", "Shioriko"]
+		},
+		{
+			"title": "第7話 みんなの場所",
+			"desc": "病院のみんなのMMORPGへの反応は、愛の予想とはちょっと違うものだった。きっとみんなで楽しめると思ったのになぜ……？　悩む愛は答えを見つけられるのか！？",
+			"tag": ["Player", "Kasumi", "Shizuku", "Karin", "Ai", "Setsuna", "Emma", "Rina", "Mia", "Lanzhu", "Misato"]
+		},
+		{
+			"title": "第8話 掴んだ輪郭！",
+			"desc": "美里と話すことで、自分の作りたい世界の輪郭が見えた愛。それを同好会のみんなに話してみると……？",
+			"tag": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+		},
+		{
+			"title": "第9話 お披露目！？　愛バース！",
+			"desc": "同好会のみんなに話して、自分の目指すものをしっかりと掴んだ愛。病院のみんなにも改めて話をしたら……？",
+			"tag": ["Player", "Ayumu", "Shizuku", "Ai", "Setsuna", "Emma", "Lanzhu"]
+		},
+		{
+			"title": "第10話 ニジガクを知ってください！",
+			"desc": "同好会の協力もあり、ついに生徒会はニジガクの学園案内パンフレットを作り上げた。そこには同好会メンバーの目線で見たニジガクの魅力、他学科授業体験プログラムのインタビューなど情報が山盛りで……？",
+			"tag": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+		}
+		]
+	},
+	{
+		"name": "第51章「「お祭り」って羨ましい！」",
+		"date": "2023-04-30",
+		"part": [
+		{
+			"title": "第1話 広がる！　楽しいの「輪」",
+			"desc": "ニジガクに食泊されて、MMORPGを楽しむようになったμ'sとAqours。今日は集まれる人で集まって冒険しようということになり……？",
+			"tag": ["Player", "Honoka", "Rin", "Nozomi", "Hanayo", "Chika", "Riko", "You", "Yoshiko", "Mari", "Ayumu", "Kasumi", "Karin", "Setsuna", "Rina", "Mia"]
+		},
+		{
+			"title": "第2話 身近なお祭りって？",
+			"desc": "μ'sがライブをさせてもらえることになったお祭りに誘われたニジガクメンバー。お祭りと聞いてワクワクが止まらない！",
+			"tag": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+		},
+		{
+			"title": "第3話 お祭りに行こう！",
+			"desc": "待ちに待ったお祭り当日！　秋葉原の駅まで迎えに来てくれたμ'sと合流するニジガクとAqoursメンバー。このお祭りの思い出話を聞きながら、ついに神田明神へ！",
+			"tag": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Nico", "Chika", "Dia", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Karin", "Ai", "Kanata", "Emma", "Mia", "Lanzhu"]
+		},
+		{
+			"title": "第4話 がまん大会の行方！",
+			"desc": "だいこく祭りを楽しむ一行。まわりから漂う香りに翻弄されたあなたたち。一方、「<ruby>寒中<rt>かんちゅう<\/rt>禊<rt>みそぎ<\/rt><\/ruby>がまん大会」の看板を見つけたランジュは……？",
+			"tag": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "You", "Yoshiko", "Hanamaru", "Kasumi", "Shizuku", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu"]
+		},
+		{
+			"title": "第5話 寝付けない夜！",
+			"desc": "だいこく祭り１日目を存分に楽しんだあなたたち。明日のμ'sのステージに備えて今日はゆっくり……ということにはならず……？",
+			"tag": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+		},
+		{
+			"title": "第6話 受け継がれてきたもの",
+			"desc": "だいこく祭り２日目。枕投げで眠い目をこすりつつ会場に向かったあなたたち。今日は伝統の儀式を説明してもらい……？",
+			"tag": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+		},
+		{
+			"title": "第7話 夕焼けのステージ",
+			"desc": "思い思いに楽しんでいただいこく祭りも終盤。μ'sのステージが始まる時間が近づく！",
+			"tag": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Karin", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+		},
+		{
+			"title": "第8話 隣にいるあなたへ",
+			"desc": "だいこく祭りが終わった。高揚感と少しの寂しさを抱えて帰路につくメンバー。家で待っていてくれたのは……？",
+			"tag": ["Player", "Player", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Karin", "Kanata", "Setsuna", "Emma", "Shioriko", "Mia", "Lanzhu", "Kaoruko"]
+		},
+		{
+			"title": "第9話 新しい街",
+			"desc": "興奮冷めやらぬまま昨日の話をしていたら、ふと、ここお台場には伝統的なお祭りがないことに気づいたニジガクメンバー。それってどうして？",
+			"tag": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+		},
+		{
+			"title": "第10話 私の中心にある街",
+			"desc": "改めて、身も心もお台場に馴染んでいることを実感したあなたたち。大好きな街で遊んで、また新しい発見が……？",
+			"tag": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
 		}
 		]
 	},
@@ -6220,6 +6381,47 @@ const StoryList = [
 		}
 		]
 	},
+	{
+		"name": "スイートドリーミング♪",
+		"part": [
+		{
+			"title": "第1話",
+			"desc": "一泊二日の合宿にやってきた6人。みんなお泊りを楽しみにしているようで……？",
+			"tag": ["Rin", "Nico", "You", "Shizuku", "Kanata", "Lanzhu"]
+		},
+		{
+			"title": "第2話",
+			"desc": "日が暮れて、パジャマに着替えた6人。ランジュは、パジャマを選んでくれたみんなにお礼がしたいと言う。",
+			"tag": ["Rin", "Nico", "You", "Shizuku", "Kanata", "Lanzhu"]
+		},
+		{
+			"title": "第3話",
+			"desc": "しずくが持ってきたのは映画のDVD。部屋を暗くして、映画気分での上映会が始まる。",
+			"tag": ["Rin", "Nico", "You", "Shizuku", "Kanata", "Lanzhu"]
+		},
+		{
+			"title": "第4話",
+			"desc": "しずくが持参した映画はホラーに哲学と、感想に困るものばかり。そんな中、凛が突然、ある提案を持ちかけ……？",
+			"tag": ["Rin", "Nico", "You", "Shizuku", "Kanata", "Lanzhu"]
+		},
+		{
+			"title": "第5話",
+			"desc": "枕投げは大盛りあがり。その後は、トランプ？ウノ？リバーシ？ どれで遊ぶのか？",
+			"tag": ["Rin", "Nico", "You", "Shizuku", "Kanata", "Lanzhu"]
+		},
+		{
+			"title": "第6話",
+			"desc": "ゲームの結果、彼方のやりたい事にみんなで付き合うことになった。彼方は、みんなでスクールアイドル雑誌を読みたいという。",
+			"memo": "メインストーリー第25章で登場した彼方から遥へのコール、「ラブリー・ハルカ！」が再び登場。今度は周りのみんなも一緒に……？",
+			"tag": ["Rin", "Nico", "You", "Shizuku", "Kanata", "Lanzhu"]
+		},
+		{
+			"title": "第7話",
+			"desc": "夜遅くまで遊んで、すっかり眠くなってしまった6人。明日のトレーニングに向けて……おやすみなさい！",
+			"tag": ["Rin", "Nico", "You", "Shizuku", "Kanata", "Lanzhu"]
+		}
+		]
+	},
 	]
 },
 //■■■■■■■■■■ キズナエピソード ■■■■■■■■■■
@@ -8971,7 +9173,7 @@ const StoryList = [
 			"tag": ["Player", "Kanan", "Dia", "Mari"]
 		},
 		{
-			"title": "16話 ",
+			"title": "16話 私を無敵にしてくれるもの",
 			"desc": "ユニットライブの打ち合わせのため、浦女の部室に向かうあなたは、その途中で鞠莉の姿を見つける。楽しそうに鼻歌を歌う鞠莉。その理由は……",
 			"tag": ["Player", "Mari"]
 		},
@@ -9426,6 +9628,11 @@ const StoryList = [
 			"desc": "宝探しと言いつつ、昔歩夢とよく来ていた公園をたのしむあなた。そしてついに宝の隠し場所が……？",
 			"tag": ["Player", "Ayumu"]
 		},
+		{
+			"title": "40話 あなたの未来と私の夢",
+			"desc": "将来の夢を考える中で、自分の視野を広げるために海外をめぐってみようと考えたあなた。それを歩夢に伝えると……？",
+			"tag": ["Player", "Ayumu"]
+		},
 		]
 	},
 	{
@@ -9631,6 +9838,11 @@ const StoryList = [
 			"desc": "スクールアイドルにもビューティーにも打ち込むかすみ。充実した１日の最後にあったのは……？",
 			"tag": ["Player", "Kasumi"]
 		},
+		{
+			"title": "40話 テレビデビュー！？",
+			"desc": "地元でホームアイドルとしての活動も頑張っているかすみ。そんなかすみのもとに、とある依頼が舞い込んで……？",
+			"tag": ["Player", "Kasumi", "Shizuku", "Rina", "Shioriko", "Mia"]
+		},
 		]
 	},
 	{
@@ -9835,7 +10047,13 @@ const StoryList = [
 			"title": "39話 さよならの日",
 			"desc": "親知らずを抜くのが怖いあまりに、何事にも動じないお嬢様を演じていたと告白したしずく。それを聞いたあなたは……？",
 			"tag": ["Player", "Shizuku"]
-		}
+		},
+		{
+			"title": "40話 お出かけは波乱の予感？",
+			"desc": "しずくから週末のお誘いを受けたあなた。以前もこんなことがあった。そのときは行く先々でトラブルがあったなと思い出しながら待ち合わせ場所に行くと……？",
+			"memo": "「以前」とは15話のこと。",
+			"tag": ["Player", "Shizuku"]
+		},
 		]
 	},
 	{
@@ -10040,7 +10258,12 @@ const StoryList = [
 			"title": "39話 あの夢を追いかけて",
 			"desc": "読者モデルコンテストの動画を観たエマたちから口々に褒められた果林。そんな果林が取った行動とは？",
 			"tag": ["Player", "Karin"]
-		}
+		},
+		{
+			"title": "40話 指先から伸びる未来",
+			"desc": "モデルとしても順調に成長している果林。とあるオファーがきたことであなたを呼び出して……？",
+			"tag": ["Player", "Karin"]
+		},
 		]
 	},
 	{
@@ -10246,7 +10469,12 @@ const StoryList = [
 			"title": "39話 ダジャレにお任せ！？",
 			"desc": "雷の時間はダジャレの時間！とすることで雷を克服した愛。果たしてその克服は本物なのか！？",
 			"tag": ["Player", "Ai"]
-		}
+		},
+		{
+			"title": "40話 やりたいこと山盛り！",
+			"desc": "スクールアイドルを通していろいろな経験をして、やってみたいこと挑戦してみたいことが山積みになっている愛。そんな愛があなたにした相談とは？",
+			"tag": ["Player", "Ai"]
+		},
 		]
 	},
 	{
@@ -10449,6 +10677,10 @@ const StoryList = [
 		{
 			"title": "39話 眠れぬ夜はお供します",
 			"desc": "不眠症は奥が深い問題で、自分にできることはないかもしれないと一度は思った彼方。だが、あなたや歩夢たちの言葉でできることを探そうと思い直し……？",
+			"tag": ["Player", "Kanata"]
+		},		{
+			"title": "40話 彼方のお手伝い大作戦！",
+			"desc": "一緒に買い出しをする約束をしていた彼方とあなた。でも、あなたはどうしても提出しなくてはいけない課題を抱えてしまい……？",
 			"tag": ["Player", "Kanata"]
 		},
 		]
@@ -10654,7 +10886,12 @@ const StoryList = [
 			"title": "39話 あの頃の私、 見てますか？",
 			"desc": "授賞式に参加できる第３のせつ菜探しに明け暮れるせつ菜とあなた。なかなかピンとくるキャラが見つからないまま、授賞式は迫ってきて……？",
 			"tag": ["Player", "Setsuna"]
-		}
+		},
+		{
+			"title": "40話 いろいろな活動",
+			"desc": "部室で最近のファンクラブ活動について話しているニジガクメンバー。自分のファンクラブは作っていないせつ菜が今日はいろいろと質問をしていて……？",
+			"tag": ["Player", "Ayumu", "Ai", "Setsuna", "Rina"]
+		},
 		]
 	},
 	{
@@ -10859,6 +11096,11 @@ const StoryList = [
 			"title": "39話 空に溶けゆくメロディを追って！",
 			"desc": "いよいよ歩夢の童謡ライブ当日！　エマプロデュースのライブの行方は……？",
 			"tag": ["Player", "Ayumu", "Emma", "Shioriko"]
+		},
+		{
+			"title": "40話 一緒に来てほしい！",
+			"desc": "家族と将来について話し合うため、一度スイスに帰国することになったエマ。ただその顔は不安そうで……？",
+			"tag": ["Player", "Emma"]
 		},
 		]
 	},
@@ -11066,7 +11308,12 @@ const StoryList = [
 			"title": "39話 やさしい時間",
 			"desc": "今回のハンバーガーも大好評で手応えを感じる璃奈。 次はゲームで手応えを感じる！？",
 			"tag": ["Player", "Rina", "Mia"]
-		}
+		},
+		{
+			"title": "40話 果てしないデジタル",
+			"desc": "自作のゲームなどを作ってのゲーム大会やオンラインライブでどんどんファンとの繋がりを広げていく璃奈。今日はこの前のファンクラブイベントの反省会……？",
+			"tag": ["Player", "Rina"]
+		},
 		]
 	},
 	{
@@ -11205,6 +11452,12 @@ const StoryList = [
 			"desc": "栞子を慌ただしく連れ回してしまったあなた。栞子はちょっと戸惑っている。次に行く場所で名誉挽回なるか！？",
 			"tag": ["Player", "Shioriko"]
 		},
+		{
+			"title": "27話 世界の歩き方",
+			"desc": "ある日、栞子が何か熱心に読み込んでいるところを見かけたあなた。どんな本を読んでいるのかと思えば……？",
+			"memo": "ストーリー内で出てくる「成人と認められるにはバンジージャンプをしなくてはいけない場所」はバヌアツのペンテコスト島の伝統。「トマトを投げ合うお祭り」はスペインのブニョールで行われる。",
+			"tag": ["Player", "Shioriko", "Kaoruko"]
+		},
 		]
 	},
 	{
@@ -11303,6 +11556,11 @@ const StoryList = [
 			"desc": "完璧なデートコースをついに練り上げたミア！　今日はその成果を出す時！　大人っぽくてエレガントでスマートなデートを見せつけろ！",
 			"tag": ["Player", "Mia"]
 		},
+		{
+			"title": "19話 越えたいライン",
+			"desc": "部活にくるはずだったミアが姿を消した。電話にもメッセにも応答がなくて……？",
+			"tag": ["Player", "Shizuku", "Kanata", "Mia"]
+		},
 		]
 	},
 	{
@@ -11400,6 +11658,11 @@ const StoryList = [
 			"title": "18話 もっと知りたい！",
 			"desc": "１日たっぷりと動物園を満喫したランジュとあなた。帰り道はちょっと名残惜しい……？",
 			"tag": ["Player", "Lanzhu"]
+		},
+		{
+			"title": "19話 ランジュに集え！",
+			"desc": "栞子が行っているボランティア活動に参加したいと申し出たランジュ。今日は児童館で子供たちのお世話。ランジュにお世話は務まるのか！？",
+			"tag": ["Player", "Shioriko", "Lanzhu"]
 		},
 		]
 	}

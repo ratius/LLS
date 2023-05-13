@@ -775,8 +775,10 @@ const EventList = [
 },
 {
 	"id" : 87,
-	"name" : "(イベント名未定1)",
+	"name" : "スイートドリーミング♪",
 	"type" : "exchange",
+	"started" : new Date("2023-05-07T15:00:00+09:00"),
+	"ended"   : new Date("2023-05-14T12:59:59+09:00"),
 	"UR" : ["Nico", "You", "Kanata"],
 	"SR" : ["Rin", "Shizuku", "Lanzhu"]
 },
