@@ -154,7 +154,7 @@ const CallData = {
 	},
 	'Hanamaru': {
 		'name': '国木田 花丸', 'r': 255, 'g': 208, 'b': 016, 'Player': 'あなた',
-		'Honoka': '穂乃果ちゃん', 'Eli': '絵里さん', 'Kotori': 'ことりさん', 'Umi': '<span class="memo" title="イベントストーリー「ハイキングでリフレッシュ！」第1話">(海未ちゃん)<\/span><br>海未さん', 'Rin': '凛ちゃん', 'Maki' :'真姫ちゃん', 'Nozomi': '希さん', 'Hanayo': '花陽ちゃん', 'Nico': 'にこさん',
+		'Honoka': '穂乃果さん<br>穂乃果ちゃん', 'Eli': '絵里さん', 'Kotori': 'ことりさん', 'Umi': '<span class="memo" title="イベントストーリー「ハイキングでリフレッシュ！」第1話">(海未ちゃん)<\/span><br>海未さん', 'Rin': '凛ちゃん', 'Maki' :'真姫ちゃん', 'Nozomi': '希さん', 'Hanayo': '花陽ちゃん', 'Nico': 'にこさん',
 		'Chika': '千歌ちゃん', 'Riko': '梨子ちゃん', 'Kanan': '果南ちゃん', 'Dia': 'ダイヤさん', 'You': '曜ちゃん', 'Yoshiko': '善子ちゃん', 'Hanamaru': 'マル', 'Mari': '鞠莉ちゃん', 'Ruby': 'ルビィちゃん',
 		'Ayumu': '歩夢さん', 'Kasumi': 'かすみちゃん', 'Shizuku': 'しずくちゃん', 'Karin': '果林さん', 'Ai': '愛さん', 'Kanata': '彼方さん', 'Setsuna': 'せつ菜さん', 'Emma': 'エマさん', 'Rina': '璃奈ちゃん',
 		'Shioriko': '栞子ちゃん', 'Mia': 'ミアちゃん', 'Lanzhu': 'ランジュさん',
@@ -222,7 +222,7 @@ const CallData = {
 		'Chika': '千歌ちゃん', 'Riko': '梨子ちゃん', 'Kanan': '果南ちゃん', 'Dia': 'ダイヤちゃん', 'You': '曜ちゃん', 'Yoshiko': '善子ちゃん', 'Hanamaru': '花丸ちゃん', 'Mari': '鞠莉ちゃん', 'Ruby': 'ルビィちゃん',
 		'Ayumu': '歩夢ちゃん', 'Kasumi': 'かすみちゃん', 'Shizuku': 'しずくちゃん', 'Karin': '果林ちゃん', 'Ai': '愛ちゃん', 'Kanata': '彼方ちゃん<br>私', 'Setsuna': 'せつ菜ちゃん', 'Emma': 'エマちゃん', 'Rina': '璃奈ちゃん',
 		'Shioriko': '栞子ちゃん', 'Mia': 'ミアちゃん', 'Lanzhu': 'ランジュちゃん',
-		'Haruka': '遥ちゃん', 'Kaoruko': '薫子せんせー', 'Tsumugi': 'ツムギちゃん'
+		'Haruka': '遥ちゃん', 'Kaoruko': '薫子せんせー', 'Tsumugi': 'ツムギちゃん', 'Misato': '美里さん'
 	},
 	'Setsuna': {
 		'name': '優木 せつ菜', 'r': 246, 'g': 14, 'b': 14, 'Player': 'あなた',
@@ -278,7 +278,7 @@ const CallData = {
 		'Chika': '千歌ちゃん', 'Riko': '梨子ちゃん', 'Kanan': '果南さん', 'Dia': 'ダイヤさん', 'You': '曜ちゃん', 'Yoshiko': '善子ちゃん', 'Hanamaru': '花丸ちゃん', 'Mari': '鞠莉さん', 'Ruby': 'ルビィちゃん',
 		'Ayumu': '歩夢ちゃん', 'Kasumi': 'かすみちゃん', 'Shizuku': 'しずくちゃん', 'Karin': '果林さん', 'Ai': '愛ちゃん', 'Kanata': '彼方さん', 'Setsuna': 'せつ菜ちゃん', 'Emma': 'エマさん', 'Rina': '璃奈ちゃん',
 		'Shioriko': '栞子ちゃん', 'Lanzhu': 'ランジュちゃん<span class="memo" title="20～29章">ランジュさん<\/span>', 'Mia': 'ミアちゃん',
-		'Haruka': '遥ちゃん', 'Arisa': '亜里沙ちゃん', 'Kaoruko': '薫子さん', 'Mai': 'マイさん', 'Satsuki': '左月さん', 'Uzuki': '右月さん', 'Asagi': '浅希ちゃん', 'Tsumugi': 'ツムギさん', 'Hanpen': 'はんぺん'
+		'Haruka': '遥ちゃん', 'Arisa': '亜里沙ちゃん', 'Cocoro': '<span class="memo" title="キズナエピソード「雷、怖いの？」">こころちゃん<\/span>', 'Kaoruko': '薫子さん', 'Mai': 'マイさん', 'Satsuki': '左月さん', 'Uzuki': '右月さん', 'Asagi': '浅希ちゃん', 'Tsumugi': 'ツムギさん', 'Hanpen': 'はんぺん'
 	},
 
 	'Yukiho': {
@@ -579,7 +579,7 @@ function CreateTable(charCalled, charCalling){
 	
 	document.getElementById("Call_Niji_3").innerHTML +=
 	  CreateTable(["Misato", "Uzuki", "Satsuki", "Mai", "Asagi", "Basketball", "Acting", "Hanpen"],
-	  ["Kasumi", "Shizuku", "Ai", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Player", "Misato", "Uzuki", "Satsuki", "Mai", "Asagi", "Basketball", "Acting"]);
+	  ["Kasumi", "Shizuku", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Lanzhu", "Player", "Misato", "Uzuki", "Satsuki", "Mai", "Asagi", "Basketball", "Acting"]);
 	
 	document.getElementById("Call_Other").innerHTML +=
 	  CreateTable(["Yukiho", "Arisa", "Cocoa", "Cocoro", "Cotaro", "Mito", "Shima", "Sarah", "Leah"],
