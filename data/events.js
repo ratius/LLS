@@ -784,8 +784,10 @@ const EventList = [
 },
 {
 	"id" : 88,
-	"name" : "(イベント名未定2)",
+	"name" : "あなたの心に輝くジュエリー",
 	"type" : "story",
+	"started" : new Date("2023-05-22T15:00:00+09:00"),
+	"ended"   : new Date("2023-05-30T14:59:59+09:00"),
 	"UR" : ["Kotori", "Ai", "Shioriko"],
 	"SR" : ["Eli", "Yoshiko", "Setsuna"]
 },

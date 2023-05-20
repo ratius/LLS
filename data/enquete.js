@@ -437,6 +437,17 @@ const EnqueteList = [
 	"theme" : "もしウェディングプランナーかドレスコーディネーターになるなら、それぞれぴったりなメンバーは？",
 	"option1" : "ウェディングプランナー",
 	"option2" : "ドレスコーディネーター",
+	"winner1" : "Ayumu",
+	"winner2" : "Karin"
+},
+{
+	"id": 41,
+	"url" : "https://lovelive-as.bushimo.jp/selects/q202305/",
+	"started" : new Date("2023-05-18T22:30:00+09:00"),
+	"ended"   : new Date("2023-05-24T23:59:59+09:00"),
+	"theme" : "もしストリーマーかインフルエンサーになるなら、それぞれぴったりなメンバーは？",
+	"option1" : "ストリーマー",
+	"option2" : "インフルエンサー",
 	"winner1" : "",
 	"winner2" : ""
 },

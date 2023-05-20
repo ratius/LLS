@@ -9991,43 +9991,73 @@ const RawCardList = [
 	"id": 901,
 	"name": "Kotori",
 	"rare": "UR",
-	"source": "scheduled",
-	"desc": "2023年5月下旬イベントで追加予定"
+	"atr": "Pure",
+	"type": "Gd",
+	"cn1": "栞子ちゃんのために作ったの",
+	"cn2": "ミステリアス・ジュエリー",
+	"date": "2023/05/19",
+	"source": "gacha",
+	"desc": "「あなたの心に輝くジュエリーガチャ」で追加"
 },
 {
 	"id": 902,
 	"name": "Setsuna",
 	"rare": "SR",
-	"source": "scheduled",
-	"desc": "2023年5月下旬イベントで追加予定"
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "ペリドット・パワー・チャージ！",
+	"cn2": "ミラクル STAY TUNE！",
+	"date": "2023/05/19",
+	"source": "gacha",
+	"desc": "「あなたの心に輝くジュエリーガチャ」で追加"
 },
 {
 	"id": 903,
 	"name": "Ai",
 	"rare": "UR",
-	"source": "scheduled",
-	"desc": "2023年5月下旬イベントで追加予定"
+	"atr": "Active",
+	"type": "Sk",
+	"cn1": "はずかしいっていうか……",
+	"cn2": "ミステリアス・ジュエリー",
+	"date": "2023/05/19",
+	"source": "gacha",
+	"desc": "「あなたの心に輝くジュエリーガチャ」で追加"
 },
 {
 	"id": 904,
 	"name": "Shioriko",
 	"rare": "UR",
-	"source": "scheduled",
-	"desc": "2023年5月下旬イベントで追加予定"
+	"atr": "Smile",
+	"type": "Vo",
+	"cn1": "ポーズを考えてみたんですが……",
+	"cn2": "ミステリアス・ジュエリー",
+	"date": "2023/05/22",
+	"source": "reward",
+	"desc": "イベント「あなたの心に輝くジュエリー」報酬"
 },
 {
 	"id": 905,
-	"name": "Eli",
+	"name": "Yoshiko",
 	"rare": "SR",
-	"source": "scheduled",
-	"desc": "2023年5月下旬イベントで追加予定"
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "闇の眷属よ、我が元へ集え！",
+	"cn2": "Step! ZERO to ONE",
+	"date": "2023/05/22",
+	"source": "reward",
+	"desc": "イベント「あなたの心に輝くジュエリー」報酬 (報酬枠)"
 },
 {
 	"id": 906,
-	"name": "Yoshiko",
+	"name": "Eli",
 	"rare": "SR",
-	"source": "scheduled",
-	"desc": "2023年5月下旬イベントで追加予定"
+	"atr": "Elegant",
+	"type": "Sk",
+	"cn1": "こういう時こそ平常心よ",
+	"cn2": "HEART to HEART!",
+	"date": "2023/05/22",
+	"source": "reward",
+	"desc": "イベント「あなたの心に輝くジュエリー」報酬 (ランキング枠)"
 },
 {
 	"id": 907,
@@ -10058,4 +10088,4 @@ const RawCardList = [
 	"desc": "2023年5月「スクスタフェス」で追加予定"
 },
 ];
-const LatestUpdate = "2023/05/14 「パーティーガチャ」まで";
+const LatestUpdate = "2023/05/22 イベント「あなたの心に輝くジュエリー」まで";
