@@ -2366,7 +2366,7 @@ const StoryList = [
 			"title": "第1話 鮮やかな夢を見る夜",
 			"desc": "沼津から帰ってきた穂乃果。沼津駅で送ってくれたAqoursのメンバーとの楽しい会話を思い出して……？",
 			"memo": "ほぼ全編が穂乃果の回想。", 
-			"tag": ["Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Karin", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby"]
+			"tag": ["Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby"]
 		},
 		{
 			"title": "第2話 世界を驚かそう！",
@@ -2901,7 +2901,7 @@ const StoryList = [
 		{
 			"title": "第7話 夕焼けのステージ",
 			"desc": "思い思いに楽しんでいただいこく祭りも終盤。μ'sのステージが始まる時間が近づく！",
-			"tag": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Karin", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+			"tag": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
 		},
 		{
 			"title": "第8話 隣にいるあなたへ",
@@ -2973,6 +2973,63 @@ const StoryList = [
 			"title": "第10話 聞かせて！！",
 			"desc": "お祭りにみんなから集めたお台場に関する思い出展示を追加することにしたニジガクメンバー。学園のみんな、よく行くショップなど、お台場で生活するいろんな人から話を集めていて……？",
 			"tag": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+		}
+		]
+	},
+	{
+		"name": "第53章 虹を繋いで、奇跡輝け！",
+		"date": "2023-05-30",
+		"part": [
+		{
+			"title": "第1話 伝え合うこと",
+			"desc": "お祭りのための曲作りをしているあなた。するとメンバーからグループ通話がかかってきて……？",
+			"tag": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+		},
+		{
+			"title": "第2話 お台場の歴史を作ろう！",
+			"desc": "新曲を書き上げてうっかり眠ってしまったあなた。歩夢に起こされ待ち合わせ場所に向かうと……？",
+			"tag": ["Player", "Honoka", "Eli", "Emma", "Nico", "Chika", "Dia", "You", "Hanamaru", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+		},
+		{
+			"title": "第3話 オープニングセレモニー！",
+			"desc": "ついにお台場のお祭りのオープニングセレモニー！　メンバーが挨拶をしていって……？",
+			"tag": ["Player", "Kotori", "Umi", "Rin", "Hanayo", "Nico", "Chika", "Kanan", "You", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+		},
+		{
+			"title": "第4話 いつかはいつもの風景に",
+			"desc": "お台場レインボーカーニバルがはじまった！　有明ガーデンではA・ZU・NAランドが開園！！",
+			"tag": ["Player", "Umi", "Rin", "Nozomi", "Riko", "Yoshiko", "Mari", "Ayumu", "Shizuku", "Setsuna"]
+		},
+		{
+			"title": "第5話 世界を股に！",
+			"desc": "お腹が空いたら屋台フード！　R3BIRTHが選びぬいた各国料理を召し上がれ！",
+			"tag": ["Player", "Honoka", "Kotori", "Hanayo", "Chika", "You", "Ruby", "Shioriko", "Mia", "Lanzhu"]
+		},
+		{
+			"title": "第6話 SNSトレンド上位！？",
+			"desc": "お台場レインボーカーニバルがSNSで拡散されたりして大注目！？　お祭りに参加しようという人が集まってきて……？",
+			"tag": ["Player", "Honoka", "Kotori", "Hanayo", "Chika", "You", "Ruby", "Shioriko", "Mia", "Lanzhu"]
+		},
+		{
+			"title": "第7話 フロアを沸かせ！",
+			"desc": "ダイバーシティ東京 プラザにやってきたあなた。熱気溢れる会場の真ん中にいたのは……？",
+			"memo": "絵里の言う「借り」は、メインストーリー第5章を参照。",
+			"tag": ["Player", "Eli", "Maki", "Nico", "Kanan", "Dia", "Hanamaru", "Karin", "Ai"]
+		},
+		{
+			"title": "第8話 船に乗せる想い",
+			"desc": "夕方、QU4RTZが行う灯籠流しに参加しに集まったμ'sとAqours。その船に乗せる言葉とは……？",
+			"tag": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Kasumi", "Kanata", "Emma", "Rina"]
+		},
+		{
+			"title": "第9話 流れ、巡りゆけ！",
+			"desc": "灯籠流しイベントに間に合ったニジガクメンバーも次々と願いを書いていく。静かな海に浮かぶたくさんの灯籠を見て……？",
+			"tag": ["Player", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Karin", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
+		},
+		{
+			"title": "第10話 KAGAYAKI Don't forget!",
+			"desc": "お台場レインボーカーニバルの締めくくりとなるステージに立つニジガクメンバー。あなたの作った楽曲が歴史となる！",
+			"tag": ["Player", "Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Karin", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"]
 		}
 		]
 	},
@@ -6475,6 +6532,46 @@ const StoryList = [
 			"title": "第7話",
 			"desc": "夜遅くまで遊んで、すっかり眠くなってしまった6人。明日のトレーニングに向けて……おやすみなさい！",
 			"tag": ["Rin", "Nico", "You", "Shizuku", "Kanata", "Lanzhu"]
+		}
+		]
+	},
+	{
+		"name": "あなたの心に輝くジュエリー",
+		"part": [
+		{
+			"title": "第1話",
+			"desc": "ジュエリーの魅力を知ってもらうためのイメージPVを作ることになった栞子は、愛とせつ菜に協力を仰ぐ。",
+			"tag": ["Ai", "Setsuna", "Shioriko"]
+		},
+		{
+			"title": "第2話",
+			"desc": "PVの撮影現場へやってきた栞子たち。普段着慣れない衣装を用意された愛は、恥ずかしそうな様子で……？",
+			"tag": ["Eli", "Kotori", "Yoshiko", "Ai", "Setsuna", "Shioriko"]
+		},
+		{
+			"title": "第3話",
+			"desc": "着替え終わった5人は、それぞれの誕生日にちなんだ誕生石を使ったジュエリーを身につける。",
+			"tag": ["Eli", "Kotori", "Yoshiko", "Ai", "Setsuna", "Shioriko"]
+		},
+		{
+			"title": "第4話",
+			"desc": "撮影会場にやってきた5人と栞子。最初に撮影するのは絵里！",
+			"tag": ["Eli", "Kotori", "Yoshiko", "Ai", "Setsuna", "Shioriko"]
+		},
+		{
+			"title": "第5話",
+			"desc": "撮影も順調に進み、次はせつ菜の番。しかし、せつ菜は善子と共同でパフォーマンスがしたいと言い……？",
+			"tag": ["Eli", "Kotori", "Yoshiko", "Ai", "Setsuna", "Shioriko"]
+		},
+		{
+			"title": "第6話",
+			"desc": "撮影のトリはことり。この撮影のために用意してきた衣装に込められた想いを話す。",
+			"tag": ["Eli", "Kotori", "Yoshiko", "Ai", "Setsuna", "Shioriko"]
+		},
+		{
+			"title": "第7話",
+			"desc": "ことりは栞子の衣装も用意していた！ PVに出てほしいとことりに頼まれた栞子は……。",
+			"tag": ["Eli", "Kotori", "Yoshiko", "Ai", "Setsuna", "Shioriko"]
 		}
 		]
 	},

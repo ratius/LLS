@@ -10063,29 +10063,49 @@ const RawCardList = [
 	"id": 907,
 	"name": "Hanamaru",
 	"rare": "UR",
-	"source": "scheduled",
-	"desc": "2023年5月「スクスタフェス」で追加予定"
+	"atr": "Natural",
+	"type": "Sk",
+	"cn1": "それじゃあ、一緒に飛ばすずら！",
+	"cn2": "ぴゅあ♡ナース",
+	"date": "2023/05/31",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
 },
 {
 	"id": 908,
 	"name": "Ayumu",
 	"rare": "UR",
-	"source": "scheduled",
-	"desc": "2023年5月「スクスタフェス」で追加予定"
+	"atr": "Cool",
+	"type": "Sp",
+	"cn1": "おうちにお泊りに行ってもいい？",
+	"cn2": "クリムゾン・ローズ",
+	"date": "2023/05/31",
+	"source": "fes",
+	"desc": "「スクスタフェス」で追加"
 },
 {
 	"id": 909,
-	"name": "Maki",
+	"name": "Riko",
 	"rare": "SR",
-	"source": "scheduled",
-	"desc": "2023年5月「スクスタフェス」で追加予定"
+	"atr": "Natural",
+	"type": "Sp",
+	"cn1": "本当に千歌ちゃんってすいにいね",
+	"cn2": "Step! ZERO to ONE",
+	"date": "2023/05/31",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
 },
 {
 	"id": 910,
-	"name": "Riko",
+	"name": "Maki",
 	"rare": "SR",
-	"source": "scheduled",
-	"desc": "2023年5月「スクスタフェス」で追加予定"
+	"atr": "Active",
+	"type": "Vo",
+	"cn1": "にこちゃん、どうしよう……！",
+	"cn2": "HEART to HEART!",
+	"date": "2023/05/31",
+	"source": "none",
+	"desc": "「スクスタフェス」で追加"
 },
 ];
-const LatestUpdate = "2023/05/22 イベント「あなたの心に輝くジュエリー」まで";
+const LatestUpdate = "2023/05/31 「スクスタフェス」まで";
