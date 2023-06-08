@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta charset="utf-8">
+
+<meta property="og:url" content="https://ratius.github.io/LLS/calendar.html">
+<meta property="og:title" content="ラブライブ！カレンダー">
+<meta property="og:type" content="website">
+<meta property="og:description" content="ラブライブ！シリーズの誕生日等が記されたカレンダーです。">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@ratius55">
+<meta name="twitter:creator" content="@ratius55">
+<meta name="twitter:title" content="ラブライブ！カレンダー">
+<meta name="twitter:description" content="ラブライブ！シリーズの誕生日等が記されたカレンダーです。">
+
+<meta name="viewport" content="width=800">
+
+<title>ラブライブ！カレンダー | ラブライブ！ストレージ</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+<link rel="stylesheet" href="main.css">
+<style><!--
+#calendar {
+	width: 780px;
+	background-color: #fff;
+}
+
+#date {
+	width: 200px;
+	text-align: center;
+	font-size: xx-large;
+	margin: 0 auto 20px;
+}
+
+#calendar table{
+	margin: auto;
+	border-collapse: collapse;
+}
+#calendar thead {
+	border-bottom: solid 2px #999;
+}
+
+#calendar td {
+	position: relative;
+	width: 108px;
+	height: 90px;
+	padding: 0;
+	border: solid 1px #666;
+}
+
+.day {
+	position: absolute;
+	top: 2px;
+	left: 5px;
+	color: #d0d0d0;
+	font-size: 200%;
+	user-select: none;
+	z-index: 1;
+}
+
+.birthday { 
+	position: absolute;
+	bottom: 0px;
+	left: 2px;
+	font-size: small;
+	z-index: 2;
+}
+
+.c_muse   {color: #e50080;}
+.c_aqours {color: #19b1f6;}
+.c_niji   {color: #f8b656;}
+.c_liella {color: #da57d8;}
+.c_musical{color: #df2743;}
+.c_hasu   {color: #76bde3;}
+.c_llsif  {color: #777777;}
+
+--></style>
+<script><!--
+
+const BirthdayList = {
+	'0101' : [['黒澤ダイヤ',    '●', 'aqours' ]],
+	'0325' : [['多々良るう',    '●', 'llsif'  ]],
+	'0602' : [['宮下ココ',      '●', 'llsif'  ]],
+	'0604' : [['下園咲',        '●', 'llsif'  ]],
+	'0609' : [['東條希',        '●', 'muse'   ], ['結木ゆな',      '🎤', 'muse'   ]],
+	'0613' : [['小原鞠莉',      '●', 'aqours' ]],
+	'0615' : [['乙宗梢',        '●', 'hasu'   ], ['黒崎隼',        '●', 'llsif'  ]],
+	'0616' : [['佐伯麗音',      '●', 'llsif'  ]],
+	'0617' : [['若菜四季',      '●', 'liella' ]],
+	'0628' : [['三森すずこ',    '🎤', 'muse'   ]],
+	'0629' : [['朝香果林',      '●', 'niji'   ]],
+	'0701' : [['ペイトン尚美',  '🎤', 'liella' ]],
+	'0707' : [['逢沢遊宇',      '●', 'llsif'  ]],
+	'0710' : [['門田剣',        '●', 'llsif'  ]],
+	'0712' : [['南條愛乃',      '🎤', 'muse'   ]],
+	'0713' : [['津島善子',      '●', 'aqours' ]],
+	'0714' : [['坂巻千鶴子',    '●', 'llsif'  ]],
+	'0717' : [['唐可可',        '●', 'liella' ]],
+	'0718' : [['薮島朱音',      '🎤', 'liella' ]],
+	'0719' : [['三田美吹',      '🎤', 'musical']],
+	'0720' : [['篠宮あきる',    '●', 'llsif'  ]],
+	'0721' : [['月島結架',      '●', 'llsif'  ]],
+	'0722' : [['矢澤にこ',      '●', 'muse'   ]],
+	'0723' : [['内田彩',        '🎤', 'muse'   ], ['鈴木愛奈',      '🎤', 'aqours' ]],
+	'0801' : [['高海千歌',      '●', 'aqorus' ]],
+	'0803' : [['高坂穂乃果',    '●', 'muse'   ], ['佐藤美波',      '🎤', 'musical']],
+	'0806' : [['マリア',        '●', 'llsif'  ]],
+	'0807' : [['鬼塚夏実',      '●', 'liella' ]],
+	'0808' : [['優木せつ菜',    '●', 'niji'   ], ['逢田梨香子',    '🎤', 'aqours' ]],
+	'0810' : [['鬼崎アキラ',    '●', 'llsif'  ]],
+	'0812' : [['斉木風',        '●', 'llsif'  ]],
+	'0816' : [['レオ',          '●', 'llsif'  ]],
+	'0820' : [['結城紗菜',      '●', 'llsif'  ], ['月音こな',      '🎤', 'hasu'   ]],
+	'0828' : [['佐々木琴子',    '🎤', 'hasu'   ]],
+	'0830' : [['永山みなみ',    '●', 'llsif'  ]],
+	'0831' : [['大沢瑠璃乃',    '●', 'hasu'   ]]
+};
+
+//■カレンダーの描画
+function generateCalendar(y, m){
+	document.getElementById("date").innerHTML = y + '年' + (1+m) + '月';
+	
+	const startingDay = new Date(y, m, 1).getDay(); //曜日
+	const daysInMonth = new Date(y, m+1, 0).getDate();
+	
+	let Output = '';
+	let day = - startingDay;
+
+	for(w=0; w<6; w++){
+		Output += '<tr>'
+
+		for(d=0; d<7; d++){
+			Output += '<td>';
+			tempdate = new Date(y, m, ++day);
+			if(tempdate.getMonth() == m){
+				
+				Output += '<div class="day">' + day + '<\/div>';
+				//誕生日に合致している場合、誕生日を記載
+				tempcode = ((tempdate.getMonth()+1).toString().padStart(2, '0'))
+				+ (tempdate.getDate()).toString().padStart(2, '0');
+				if(tempcode in BirthdayList){
+					Output += '<div class="birthday">';
+					for(i of BirthdayList[tempcode]){
+						Output += '<span class="c_' + i[2] + '">' + i[1] + '<\/span>'
+						+ i[0] + '<br>';
+					}
+					Output += '<\/div>';
+				}
+			}
+			Output += '<\/td>'
+		}
+		Output += '<\/tr>'
+	}
+	document.getElementById("calendarInner").innerHTML = Output;
+}
+
+--></script>
+</head>
+<body>
+
+<header>
+	<h2 id="MainTitle">スクスタ カレンダー</h2>
+</header>
+
+<section>
+	<h3 class="foreword">まえがき</h3>
+	<p>
+		JavaScriptで動くカレンダーです。
+		ラブライブ！シリーズのキャラクター、キャストの誕生日も表示されます。
+	</p>
+	<p id="RecordedData"></p>
+</section>
+
+<div id="Loading">
+	<h4>Now Loading...</h4>
+	このコンテンツはJavaScriptを使用しています。<br>
+	いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
+	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
+</div>
+
+<section>
+	<h3 class="muse">カレンダー</h3>
+	<div id="calendar">
+		<div id="date">0000年00月</div>
+		<table>
+			<thead>
+				<th>日</td>
+				<th>月</td>
+				<th>火</td>
+				<th>水</td>
+				<th>木</td>
+				<th>金</td>
+				<th>土</td>
+			</thead>
+			<tbody id="calendarInner">
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><tr>
+			</tbody>
+		</table>
+	</div>
+</section>
+
+<section>
+<h3 class="niji">更新履歴</h3>
+<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
+<div id="history2">
+	<details open>
+		<summary class="important"><span class="date">2022/XX/XX</span> - 公開</summary>
+		<div>
+			<span class="new"></span>公開
+		</div>
+	</details>
+</div>
+</section>
+
+<nav>
+<p><a id="BackToMain" href="index.html">トップページに戻る。</a></p>
+</nav>
+
+<script><!--
+let isDebugMode = false;
+const Parameter = location.search.substring(1).split('&');
+if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
+
+const TimeOutputStart = performance.now();
+
+let year = new Date().getFullYear();
+let month = new Date().getMonth();
+
+generateCalendar(year, month);
+
+//◆「Now Loading...」解除
+document.getElementById("Loading").style.display = "none";
+
+//■デバックモード時の処理
+if(isDebugMode) {
+	//◆デバッグモードであることを表示
+	document.title = '[debug]' + document.title;
+	document.bgColor = '#dce';
+	
+	document.getElementById("MainTitle").innerHTML += "*";
+	document.getElementById("BackToMain").href += "?debug";
+	
+	//◆描画時間の出力
+	const TimeOutputEnd = performance.now();
+	console.log('スクスタ 衣装早見表\n初期描画処理: ' + (TimeOutputEnd - TimeOutputStart) + ' ミリ秒');
+
+	//◆データの不具合チェック
+	let isError = 0;
+	if(isError > 0){
+		alert('' + isError + '件のエラーが見つかりました。コンソールを確認してください。');
+	}
+}
+--></script>
+
+</body>
+</html>
