@@ -19,52 +19,81 @@
 <title>ラブライブ！カレンダー | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="color.css" media="print" onload="this.media='all'">
 <style><!--
-#calendar {
-	width: 780px;
-	background-color: #fff;
-}
-
 #date {
 	width: 200px;
 	text-align: center;
-	font-size: xx-large;
-	margin: 0 auto 20px;
+	font-size: x-large;
+	margin: 0 auto 5px;
 }
 
 #calendar table{
 	margin: auto;
-	border-collapse: collapse;
+	border-collapse: separate;
+	border-spacing: 4px;
+	color: #333;
 }
 #calendar thead {
 	border-bottom: solid 2px #999;
 }
 
-#calendar td {
-	position: relative;
-	width: 108px;
-	height: 90px;
+#calendar tbody td {
+	width: 30px;
+	height: 30px;
 	padding: 0;
-	border: solid 1px #666;
-}
-
-.day {
-	position: absolute;
-	top: 2px;
-	left: 5px;
-	color: #d0d0d0;
-	font-size: 200%;
-	user-select: none;
-	z-index: 1;
-}
-
-.birthday { 
-	position: absolute;
-	bottom: 0px;
-	left: 2px;
 	font-size: small;
-	z-index: 2;
+	text-align: center;
+	border-radius: 50vh;
+	border-style: solid;
+	border-width: 2px;
 }
+
+.birth { background-color: #fbd; border-color: #fbd;}
+.day { border-color: transparent;}
+.non { color: #c0c0c0; border-color: transparent;}
+.today {
+	font-weight: bold;
+	border-color: #c69;
+}
+
+#schedule table {
+	margin: auto;
+	border-collapse: collapse;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #e50080;
+}
+#schedule thead th {
+	background-color: #ffcce9;
+	border-bottom: solid 1px #e50080;
+}
+
+.arrow {
+	width: 40px;
+	height: 28px;
+	line-height: 28px;
+	background-color: #ffcce9;
+	clip-path: polygon(10% 0, 80% 0, 100% 50%, 80% 100%, 10% 100%);
+}
+
+#schedule tbody th {
+	width: 40px;
+	height: 35px;
+	border-bottom: solid 1px #bbb;
+}
+
+#schedule tbody td {
+	width: 320px;
+	padding-left: 10px;
+	border-bottom: solid 1px #bbb;
+}
+
+#check input {
+	width: 18px;
+	height: 18px;
+}
+
 
 .c_muse   {color: #e50080;}
 .c_aqours {color: #19b1f6;}
@@ -78,80 +107,227 @@
 <script><!--
 
 const BirthdayList = {
-	'0101' : [['黒澤ダイヤ',    '●', 'aqours' ]],
-	'0325' : [['多々良るう',    '●', 'llsif'  ]],
-	'0602' : [['宮下ココ',      '●', 'llsif'  ]],
-	'0604' : [['下園咲',        '●', 'llsif'  ]],
-	'0609' : [['東條希',        '●', 'muse'   ], ['結木ゆな',      '🎤', 'muse'   ]],
-	'0613' : [['小原鞠莉',      '●', 'aqours' ]],
-	'0615' : [['乙宗梢',        '●', 'hasu'   ], ['黒崎隼',        '●', 'llsif'  ]],
-	'0616' : [['佐伯麗音',      '●', 'llsif'  ]],
-	'0617' : [['若菜四季',      '●', 'liella' ]],
-	'0628' : [['三森すずこ',    '🎤', 'muse'   ]],
-	'0629' : [['朝香果林',      '●', 'niji'   ]],
-	'0701' : [['ペイトン尚美',  '🎤', 'liella' ]],
-	'0707' : [['逢沢遊宇',      '●', 'llsif'  ]],
-	'0710' : [['門田剣',        '●', 'llsif'  ]],
-	'0712' : [['南條愛乃',      '🎤', 'muse'   ]],
-	'0713' : [['津島善子',      '●', 'aqours' ]],
-	'0714' : [['坂巻千鶴子',    '●', 'llsif'  ]],
-	'0717' : [['唐可可',        '●', 'liella' ]],
-	'0718' : [['薮島朱音',      '🎤', 'liella' ]],
-	'0719' : [['三田美吹',      '🎤', 'musical']],
-	'0720' : [['篠宮あきる',    '●', 'llsif'  ]],
-	'0721' : [['月島結架',      '●', 'llsif'  ]],
-	'0722' : [['矢澤にこ',      '●', 'muse'   ]],
-	'0723' : [['内田彩',        '🎤', 'muse'   ], ['鈴木愛奈',      '🎤', 'aqours' ]],
-	'0801' : [['高海千歌',      '●', 'aqorus' ]],
-	'0803' : [['高坂穂乃果',    '●', 'muse'   ], ['佐藤美波',      '🎤', 'musical']],
-	'0806' : [['マリア',        '●', 'llsif'  ]],
-	'0807' : [['鬼塚夏実',      '●', 'liella' ]],
-	'0808' : [['優木せつ菜',    '●', 'niji'   ], ['逢田梨香子',    '🎤', 'aqours' ]],
-	'0810' : [['鬼崎アキラ',    '●', 'llsif'  ]],
-	'0812' : [['斉木風',        '●', 'llsif'  ]],
-	'0816' : [['レオ',          '●', 'llsif'  ]],
-	'0820' : [['結城紗菜',      '●', 'llsif'  ], ['月音こな',      '🎤', 'hasu'   ]],
-	'0828' : [['佐々木琴子',    '🎤', 'hasu'   ]],
-	'0830' : [['永山みなみ',    '●', 'llsif'  ]],
-	'0831' : [['大沢瑠璃乃',    '●', 'hasu'   ]]
-};
+	'0101' : [['黒澤ダイヤ',    'C', 'aqours' ]],
+	'0107' : [['神谷理華',      'C', 'llsif'  ]],
+	'0109' : [['Liyuu',         'V', 'liella' ]],
+	'0113' : [['村野さやか',    'C', 'hasu'   ]],
+	'0115' : [['杏ジュリア',    'V', 'musical']],
+	'0117' : [['小泉花陽',      'C', 'muse'   ]],
+	'0120' : [['ウィーン・マルガレーテ','C', 'liella' ]],
+	'0121' : [['クリスティーナ','C', 'llsif'  ], ['星守紗凪',      'V', 'musical']],
+	'0123' : [['中須かすみ',    'C', 'niji'   ]],
+	'0125' : [['高天原睦月',    'C', 'llsif'  ]],
+	'0128' : [['野中ここな',    'V', 'hasu'   ]],
+	'0131' : [['久保田未夢',    'V', 'niji'   ], ['青山瑠里',      'V', 'musical']],
 
-//■カレンダーの描画
+	'0201' : [['楠田亜衣奈',    'V', 'muse'   ]],
+	'0205' : [['エマ・ヴェルデ','C', 'niji'   ], ['小宮有紗',      'V', 'aqours' ]],
+	'0207' : [['伊波杏樹',      'V', 'aqours' ]],
+	'0208' : [['蘭花',          'C', 'llsif'  ]],
+	'0209' : [['白木凪',        'C', 'llsif'  ]],
+	'0210' : [['松浦果南',      'C', 'aqours' ]],
+	'0212' : [['田野アサミ',    'V', 'aqours' ]],
+	'0215' : [['鐘嵐珠',        'C', 'niji'   ]],
+	'0218' : [['須田いるか',    'C', 'llsif'  ]],
+	'0219' : [['降幡愛',        'V', 'aqours' ]],
+	'0223' : [['白瀬小雪',      'C', 'llsif'  ], ['絵森彩',        'V', 'liella' ]],
+	'0225' : [['嵐千砂都',      'C', 'liella' ]],
+	'0227' : [['小泉萌香',      'V', 'niji'   ]],
+
+	'0301' : [['上原歩夢',      'C', 'niji'   ]],
+	'0303' : [['早乙女紫',      'C', 'llsif'  ]],
+	'0304' : [['国木田花丸',    'C', 'aqours' ], ['小山璃奈',      'V', 'musical']],
+	'0305' : [['矢野妃菜喜',    'V', 'niji'   ]],
+	'0307' : [['森嶋ななか',    'C', 'llsif'  ]],
+	'0308' : [['鳥居歩美',      'C', 'llsif'  ], ['岬なこ',        'V', 'liella' ]],
+	'0315' : [['園田海未',      'C', 'muse'   ]],
+	'0320' : [['設楽ふみ',      'C', 'llsif'  ]],
+	'0325' : [['多々良るう',    'C', 'llsif'  ]],
+	'0328' : [['吉武千颯',      'V', 'liella' ]],
+
+	'0402' : [['桐原優香',      'C', 'llsif'  ]],
+	'0403' : [['桜坂しずく',    'C', 'niji'   ]],
+	'0404' : [['黒羽咲良',      'C', 'llsif'  ]],
+	'0407' : [['紫藤美咲',      'C', 'llsif'  ]],
+	'0410' : [['桜小路きな子',  'C', 'liella' ]],
+	'0413' : [['大熊和奏',      'V', 'liella' ]],
+	'0417' : [['渡辺曜',        'C', 'muse'   ], ['相良茉優',      'V', 'niji'   ]],
+	'0419' : [['西木野真姫',    'C', 'aqours' ]],
+	'0420' : [['一之瀬マリカ',  'C', 'llsif'  ]],
+	'0422' : [['兵藤さゆり',    'C', 'llsif'  ]],
+	'0425' : [['前田佳織里',    'V', 'niji'   ]],
+	'0427' : [['西葉瑞希',      'V', 'musical']],
+	'0429' : [['堀内まり菜',    'V', 'musical']],
+
+	'0501' : [['澁谷かのん',    'C', 'liella' ]],
+	'0502' : [['Pile',          'V', 'muse'   ], ['大西亜玖璃',    'V', 'niji'   ]],
+	'0504' : [['鹿角聖良',      'C', 'aqours' ]],
+	'0505' : [['下園咲',        'C', 'llsif'  ]],
+	'0506' : [['相川涼',        'C', 'llsif'  ]],
+	'0512' : [['ジェニファー',  'C', 'llsif'  ]],
+	'0515' : [['藤城悠弓',      'C', 'llsif'  ], ['林鼓子',        'V', 'niji'   ]],
+	'0516' : [['青山なぎさ',    'V', 'liella' ]],
+	'0519' : [['久保ユリカ',    'V', 'muse'   ]],
+	'0520' : [['浅井七海',      'V', 'musical']],
+	'0521' : [['楡井希美',      'V', 'hasu'   ]],
+	'0522' : [['日野下花帆',    'C', 'hasu'   ]],
+	'0524' : [['内田秀',        'V', 'niji'   ]],
+	'0530' : [['宮下愛',        'C', 'niji'   ]],
+
+	'0602' : [['宮下ココ',      'C', 'llsif'  ]],
+	'0604' : [['下園咲',        'C', 'llsif'  ]],
+	'0609' : [['東條希',        'C', 'muse'   ], ['結木ゆな',      'V', 'liella' ]],
+	'0613' : [['小原鞠莉',      'C', 'aqours' ]],
+	'0615' : [['乙宗梢',        'C', 'hasu'   ], ['黒崎隼',        'C', 'llsif'  ]],
+	'0616' : [['佐伯麗音',      'C', 'llsif'  ]],
+	'0617' : [['若菜四季',      'C', 'liella' ]],
+	'0628' : [['三森すずこ',    'V', 'muse'   ]],
+	'0629' : [['朝香果林',      'C', 'niji'   ]],
+
+	'0701' : [['ペイトン尚美',  'V', 'liella' ]],
+	'0707' : [['逢沢遊宇',      'C', 'llsif'  ]],
+	'0710' : [['門田剣',        'C', 'llsif'  ]],
+	'0712' : [['南條愛乃',      'V', 'muse'   ]],
+	'0713' : [['津島善子',      'C', 'aqours' ]],
+	'0714' : [['坂巻千鶴子',    'C', 'llsif'  ]],
+	'0717' : [['唐可可',        'C', 'liella' ]],
+	'0718' : [['薮島朱音',      'V', 'liella' ]],
+	'0719' : [['三田美吹',      'V', 'musical']],
+	'0720' : [['篠宮あきる',    'C', 'llsif'  ]],
+	'0721' : [['月島結架',      'C', 'llsif'  ]],
+	'0722' : [['矢澤にこ',      'C', 'muse'   ]],
+	'0723' : [['内田彩',        'V', 'muse'   ], ['鈴木愛奈',      'V', 'aqours' ]],
+
+	'0801' : [['高海千歌',      'C', 'aqours' ]],
+	'0803' : [['高坂穂乃果',    'C', 'muse'   ], ['佐藤美波',      'V', 'musical']],
+	'0806' : [['マリア',        'C', 'llsif'  ]],
+	'0807' : [['鬼塚夏実',      'C', 'liella' ]],
+	'0808' : [['優木せつ菜',    'C', 'niji'   ], ['逢田梨香子',    'V', 'aqours' ]],
+	'0810' : [['鬼崎アキラ',    'C', 'llsif'  ]],
+	'0812' : [['斉木風',        'C', 'llsif'  ]],
+	'0816' : [['レオ',          'C', 'llsif'  ], ['斉藤朱夏',      'V', 'aqours' ]],
+	'0820' : [['結城紗菜',      'C', 'llsif'  ], ['月音こな',      'V', 'hasu'   ]],
+	'0828' : [['佐々木琴子',    'V', 'hasu'   ]],
+	'0830' : [['永山みなみ',    'C', 'llsif'  ]],
+	'0831' : [['大沢瑠璃乃',    'C', 'hasu'   ]],
+
+	'0907' : [['村上奈津実',    'V', 'niji'   ]],
+	'0909' : [['黒羽咲夜',      'C', 'llsif'  ]],
+	'0912' : [['南ことり',      'C', 'muse'   ]],
+	'0919' : [['桜内梨子',      'C', 'aqours' ]],
+	'0920' : [['西村文絵',      'C', 'llsif'  ], ['指出毬亜',      'V', 'niji'   ]],
+	'0921' : [['黒澤ルビィ',    'C', 'aqours' ]],
+	'0925' : [['高槻かなこ',    'V', 'aqours' ]],
+	'0927' : [['結那',          'V', 'liella' ]],
+	'0928' : [['平安名すみれ',  'C', 'liella' ], ['関根優那',      'V', 'musical']],
+	'0930' : [['杉崎亜矢',      'C', 'llsif'  ], ['伊達さゆり',    'V', 'liella' ]],
+
+	'1005' : [['三船栞子',      'C', 'niji'   ]],
+	'1006' : [['田中ちえ美',    'V', 'niji'   ]],
+	'1016' : [['鬼頭明里',      'V', 'niji'   ]],
+	'1020' : [['吉川瑞希',      'C', 'llsif'  ]],
+	'1021' : [['絢瀬絵里',      'C', 'muse'   ]],
+	'1023' : [['小林愛香',      'V', 'aqours' ]],
+	'1024' : [['花宮初奈',      'V', 'hasu'   ]],
+	'1026' : [['飯田里穂',      'V', 'muse'   ]],
+	'1029' : [['若菜四季',      'C', 'liella' ]],
+	'1030' : [['菊池朱美',      'C', 'llsif'  ]],
+
+	'1101' : [['星空凛',        'C', 'muse'   ], ['鈴原希実',      'V', 'liella' ]],
+	'1102' : [['諏訪ななか',    'V', 'aqours' ]],
+	'1105' : [['近江遥',        'C', 'llsif'  ]],
+	'1113' : [['天王寺璃奈',    'C', 'niji'   ]],
+	'1114' : [['レベッカ',      'C', 'llsif'  ]],
+	'1115' : [['九条聖良',      'C', 'llsif'  ]],
+	'1116' : [['イザベラ',      'C', 'llsif'  ]],
+	'1117' : [['夕霧綴理',      'C', 'hasu'   ]],
+	'1119' : [['菅叶和',        'V', 'hasu'   ]],
+	'1124' : [['葉月恋',        'C', 'liella' ]],
+
+	'1206' : [['ミア・テイラー','C', 'niji'   ]],
+	'1210' : [['新田恵海',      'V', 'muse'   ]],
+	'1212' : [['鹿角理亞',      'C', 'aqours' ], ['支倉かさね',    'C', 'llsif'  ]],
+	'1216' : [['近江彼方',      'C', 'niji'   ]],
+	'1220' : [['藤島慈',        'C', 'hasu'   ]],
+	'1222' : [['楠木ともり',    'V', 'niji'   ]],
+	'1223' : [['佐藤日向',      'V', 'aqours' ]],
+	'1224' : [['御堂優理',      'C', 'llsif'  ]],
+	'1226' : [['徳井青空',      'V', 'muse'   ]],
+	'1228' : [['鬼塚冬毬',      'C', 'liella' ]]
+};
+//■カレンダーと予定表の描画
 function generateCalendar(y, m){
 	document.getElementById("date").innerHTML = y + '年' + (1+m) + '月';
 	
-	const startingDay = new Date(y, m, 1).getDay(); //曜日
-	const daysInMonth = new Date(y, m+1, 0).getDate();
-	
 	let Output = '';
-	let day = - startingDay;
+	let day = -(new Date(y, m).getDay());
 
+	//■カレンダー
 	for(w=0; w<6; w++){
 		Output += '<tr>'
-
 		for(d=0; d<7; d++){
-			Output += '<td>';
 			tempdate = new Date(y, m, ++day);
-			if(tempdate.getMonth() == m){
-				
-				Output += '<div class="day">' + day + '<\/div>';
-				//誕生日に合致している場合、誕生日を記載
-				tempcode = ((tempdate.getMonth()+1).toString().padStart(2, '0'))
-				+ (tempdate.getDate()).toString().padStart(2, '0');
-				if(tempcode in BirthdayList){
-					Output += '<div class="birthday">';
-					for(i of BirthdayList[tempcode]){
-						Output += '<span class="c_' + i[2] + '">' + i[1] + '<\/span>'
-						+ i[0] + '<br>';
-					}
-					Output += '<\/div>';
-				}
+			Output += '<td class="';
+			
+			if(tempdate.getFullYear() === new Date().getFullYear()
+			  && tempdate.getMonth() === new Date().getMonth()
+			  && tempdate.getDate() === new Date().getDate() ){
+				Output += 'today ';
 			}
-			Output += '<\/td>'
+			if(tempdate.getMonth() === m){
+				const tempcode = ((tempdate.getMonth()+1).toString().padStart(2, '0'))
+				+ (tempdate.getDate()).toString().padStart(2, '0');
+				let isBirthday = false;
+				if (tempcode in BirthdayList){
+					for(i of BirthdayList[tempcode]){
+						if(i[2] === 'llsif' && document.getElementById('o_llsif').checked === false){ continue;}
+						if(i[1] === 'V' && document.getElementById('o_cast').checked === false){ continue;}
+						isBirthday = true;
+						break;
+					}
+				}
+				Output += (isBirthday ? 'birth' : 'day');
+			} else {
+				Output += 'non';
+			}
+			Output += '">' + tempdate.getDate() + '<\/td>'
 		}
 		Output += '<\/tr>'
 	}
 	document.getElementById("calendarInner").innerHTML = Output;
+	
+	//■予定表
+	Output = '<table>\n<thead>\n<tr>'
+	+ '<th>日<\/th><th>誕生日<\/th>'
+	+ '<th>日<\/th><th>誕生日<\/th>'
+	+ '<\/tr>\n<\/thead>\n<tbody>\n';
+	
+	for(y=0; y<16; y++){
+		Output += '<tr>';
+		for(x=0; x<2; x++){
+			if(new Date(y, m, x*16+y+1).getMonth() != m){
+				Output += '<th><\/th><td><\/td>';
+				continue;
+			}
+			Output += '<th><div class="arrow">' + (x*16+y+1) + '<\/div><\/th><td>';
+			var tempcode = (m+1).toString().padStart(2, '0') + (x*16+y+1).toString().padStart(2, '0');
+			if(tempcode in BirthdayList){
+				for(i of BirthdayList[tempcode]){
+					if(i[2] === 'llsif' && document.getElementById('o_llsif').checked === false){ continue;}
+					if(i[1] === 'V' && document.getElementById('o_cast').checked === false){ continue;}
+					Output += ' <span class="c_' + i[2] + '">' + (i[1] === 'C' ? '●' : '🎤') + '<\/span>' + i[0];
+				}
+			}
+			Output += '<\/td>';
+		}
+		Output += '<\/tr>\n';
+	}
+	
+	Output += '<\/tbody>\n<\/table>';
+	document.getElementById("schedule").innerHTML = Output;
+	
+	
+
 }
 
 --></script>
@@ -159,7 +335,7 @@ function generateCalendar(y, m){
 <body>
 
 <header>
-	<h2 id="MainTitle">スクスタ カレンダー</h2>
+	<h2 id="MainTitle">ラブライブ！カレンダー</h2>
 </header>
 
 <section>
@@ -180,28 +356,22 @@ function generateCalendar(y, m){
 
 <section>
 	<h3 class="muse">カレンダー</h3>
-	<div id="calendar">
+	<div id="calendar" style="width: 780px; height: 315px;">
 		<div id="date">0000年00月</div>
 		<table>
 			<thead>
-				<th>日</td>
-				<th>月</td>
-				<th>火</td>
-				<th>水</td>
-				<th>木</td>
-				<th>金</td>
-				<th>土</td>
+				<th>日</td><th>月</td><th>火</td><th>水</td><th>木</td><th>金</td><th>土</td>
 			</thead>
 			<tbody id="calendarInner">
-				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><tr>
-				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><tr>
-				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><tr>
-				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><tr>
-				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><tr>
-				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><tr>
 			</tbody>
 		</table>
 	</div>
+	<div id="schedule" style="width: 780px; height: 650px;">
+	</div>
+	<form id="check">
+		<label><input type="checkbox" id="o_cast" onclick="generateCalendar(year, month)" checked>キャストを表示する</label><br>
+		<label><input type="checkbox" id="o_llsif" onclick="generateCalendar(year, month)" checked>スクフェス転入生を表示する</label><br>
+	</form>
 </section>
 
 <section>
