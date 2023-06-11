@@ -4,28 +4,71 @@
 <meta charset="utf-8">
 
 <meta property="og:url" content="https://ratius.github.io/LLS/calendar.html">
-<meta property="og:title" content="ラブライブ！カレンダー">
+<meta property="og:title" content="ラブライブ！誕生日カレンダー">
 <meta property="og:type" content="website">
-<meta property="og:description" content="ラブライブ！シリーズの誕生日等が記されたカレンダーです。">
+<meta property="og:description" content="ラブライブ！シリーズのキャラクターやキャストの誕生日を確認できるカレンダーです。">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@ratius55">
 <meta name="twitter:creator" content="@ratius55">
-<meta name="twitter:title" content="ラブライブ！カレンダー">
-<meta name="twitter:description" content="ラブライブ！シリーズの誕生日等が記されたカレンダーです。">
+<meta name="twitter:title" content="ラブライブ！誕生日カレンダー">
+<meta name="twitter:description" content="ラブライブ！シリーズのキャラクターやキャストの誕生日を確認できるカレンダーです。">
 
 <meta name="viewport" content="width=800">
 
-<title>ラブライブ！カレンダー | ラブライブ！ストレージ</title>
+<title>ラブライブ！誕生日カレンダー | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="color.css" media="print" onload="this.media='all'">
 <style><!--
+
+.calendar-container {
+	display: flex;
+	width: 780px;
+	height: 330px;
+}
+
+#options {
+	width: 400px;
+	margin-left: 10px;
+	font-size: large;
+	line-height: 180%;
+}
+#options input {
+	width: 20px;
+	height: 20px;
+}
+
+#date_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 310px;
+	padding: 3px 15px;
+}
+
+#date_container > div {
+	height: 40px;
+}
+
+#date_container input {
+	width: 40px;
+	height: 40px;
+	font-size: large;
+}
+
 #date {
 	width: 200px;
 	text-align: center;
+	line-height: 40px;
 	font-size: x-large;
-	margin: 0 auto 5px;
+}
+
+#calendar{
+	width: 340px;
+	height: 320px;
+	border: solid 1px #999;
+	background-color: white;
 }
 
 #calendar table{
@@ -63,6 +106,7 @@
 	border-style: solid;
 	border-width: 2px;
 	border-color: #e50080;
+	font-size: 120%;
 }
 #schedule thead th {
 	background-color: #ffcce9;
@@ -84,16 +128,10 @@
 }
 
 #schedule tbody td {
-	width: 320px;
-	padding-left: 10px;
+	width: 330px;
+	padding: 0 0 0 5px;
 	border-bottom: solid 1px #bbb;
 }
-
-#check input {
-	width: 18px;
-	height: 18px;
-}
-
 
 .c_muse   {color: #e50080;}
 .c_aqours {color: #19b1f6;}
@@ -257,6 +295,9 @@ const BirthdayList = {
 };
 //■カレンダーと予定表の描画
 function generateCalendar(y, m){
+	let tempdate = new Date(y, m);
+	y = tempdate.getFullYear();
+	m = tempdate.getMonth();
 	document.getElementById("date").innerHTML = y + '年' + (1+m) + '月';
 	
 	let Output = '';
@@ -341,8 +382,7 @@ function generateCalendar(y, m){
 <section>
 	<h3 class="foreword">まえがき</h3>
 	<p>
-		JavaScriptで動くカレンダーです。
-		ラブライブ！シリーズのキャラクター、キャストの誕生日も表示されます。
+		ラブライブ！シリーズのキャラクター、キャストの誕生日を確認できるカレンダーです。
 	</p>
 	<p id="RecordedData"></p>
 </section>
@@ -356,22 +396,29 @@ function generateCalendar(y, m){
 
 <section>
 	<h3 class="muse">カレンダー</h3>
-	<div id="calendar" style="width: 780px; height: 315px;">
-		<div id="date">0000年00月</div>
-		<table>
-			<thead>
-				<th>日</td><th>月</td><th>火</td><th>水</td><th>木</td><th>金</td><th>土</td>
-			</thead>
-			<tbody id="calendarInner">
-			</tbody>
-		</table>
+	<div class="calendar-container">
+		<div id="options">
+			<strong>オプション</strong><br>
+			<label><input type="checkbox" id="o_cast" onclick="generateCalendar(year, month)" checked>キャストを表示する</label><br>
+			<label><input type="checkbox" id="o_llsif" onclick="generateCalendar(year, month)" checked>スクフェス転入生を表示する</label><br>
+		</div>
+		<div id="calendar">
+			<div id="date_container">
+				<div class="month_select"><input type="button" value="←" onclick="generateCalendar(year, --month)"></input></div>
+				<div id="date">0000年00月</div>
+				<div class="month_select"><input type="button" value="→" onclick="generateCalendar(year, ++month)"></input></div>
+			</div>
+			<table>
+				<thead>
+					<th>日</td><th>月</td><th>火</td><th>水</td><th>木</td><th>金</td><th>土</td>
+				</thead>
+				<tbody id="calendarInner">
+				</tbody>
+			</table>
+		</div>
 	</div>
 	<div id="schedule" style="width: 780px; height: 650px;">
 	</div>
-	<form id="check">
-		<label><input type="checkbox" id="o_cast" onclick="generateCalendar(year, month)" checked>キャストを表示する</label><br>
-		<label><input type="checkbox" id="o_llsif" onclick="generateCalendar(year, month)" checked>スクフェス転入生を表示する</label><br>
-	</form>
 </section>
 
 <section>
@@ -379,7 +426,7 @@ function generateCalendar(y, m){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
-		<summary class="important"><span class="date">2022/XX/XX</span> - 公開</summary>
+		<summary class="important"><span class="date">2023/06/11</span> - 公開</summary>
 		<div>
 			<span class="new"></span>公開
 		</div>
