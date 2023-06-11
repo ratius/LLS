@@ -343,15 +343,15 @@ function generateCalendar(y, m){
 	+ '<th>日<\/th><th>誕生日<\/th>'
 	+ '<\/tr>\n<\/thead>\n<tbody>\n';
 	
-	for(y=0; y<16; y++){
+	for(z=0; z<16; z++){
 		Output += '<tr>';
 		for(x=0; x<2; x++){
-			if(new Date(y, m, x*16+y+1).getMonth() != m){
+			if((x === 0 && z === 15) || new Date(y, m, x*15+z+1).getMonth() != m){
 				Output += '<th><\/th><td><\/td>';
 				continue;
 			}
-			Output += '<th><div class="arrow">' + (x*16+y+1) + '<\/div><\/th><td>';
-			var tempcode = (m+1).toString().padStart(2, '0') + (x*16+y+1).toString().padStart(2, '0');
+			Output += '<th><div class="arrow">' + (x*15+z+1) + '<\/div><\/th><td>';
+			var tempcode = (m+1).toString().padStart(2, '0') + (x*15+z+1).toString().padStart(2, '0');
 			if(tempcode in BirthdayList){
 				for(i of BirthdayList[tempcode]){
 					if(i[2] === 'llsif' && document.getElementById('o_llsif').checked === false){ continue;}
@@ -427,6 +427,12 @@ function generateCalendar(y, m){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary class="important"><span class="date">2023/06/11</span> - 不具合修正</summary>
+		<div>
+			<span class="new"></span>「2月」選択時、誕生日詳細表が常に閏年となる不具合を修正
+		</div>
+	</details>
+	<details>
 		<summary class="important"><span class="date">2023/06/11</span> - 公開</summary>
 		<div>
 			<span class="new"></span>公開
