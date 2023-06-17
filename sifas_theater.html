@@ -163,10 +163,13 @@ const TagData = {
 	"Mango":      {"name": "流行りのマンゴー牛乳", "r":180, "g":160, "b":80, "style": "Square"},
 	"Karaage":    {"name": "にこちゃんの唐揚げ", "r":180, "g":160, "b":80, "style": "Square"},
 	"Sentai":     {"name": "スクールアイドル戦隊", "r":180, "g":160, "b":80, "style": "Square"},
+	"Maid":       {"name": "ことりのメイドカフェ", "r":180, "g":160, "b":80, "style": "Square"},
+	"Skateboarding":{"name": "GWはみんなでスケボー", "r":180, "g":160, "b":80, "style": "Square"},
 };
 
 //■ソート対象
 const SortTarget = [
+{"name": "2023年", "tag": "year-2023"},
 {"name": "2022年", "tag": "year-2022"},
 {"name": "2021年", "tag": "year-2021"},
 {"name": "2020年", "tag": "year-2020"},
@@ -224,6 +227,8 @@ const SortTarget = [
 {"name": "シリーズ：流行りのマンゴー牛乳", "tag": "Mango"},
 {"name": "シリーズ：にこちゃんの唐揚げ", "tag": "Karaage"},
 {"name": "シリーズ：スクールアイドル戦隊", "tag": "Sentai"},
+{"name": "シリーズ：ことりのメイドカフェ", "tag": "Maid"},
+{"name": "シリーズ：GWはみんなでスケボー", "tag": "Skateboarding"},
 ];
 
 //■■関数
@@ -280,8 +285,8 @@ function DrawStoryList(tag){
 	<h3 class="foreword">まえがき</h3>
 	<p>
 		スクフェスALL STARSで配信されている「毎日劇場」のまとめです。<br>
-		下部のプルダウンメニューから見たいカテゴリを選択すると、該当するストーリーが表示されます。<br>
-		現在、2022年12月分までのデータベースがあります。
+		下部のプルダウンメニューから見たいカテゴリを選択すると、該当するストーリータイトル・登場キャラクター等が表示されます。<br>
+		現在、2023年6月17日分までのデータベースがあります。
 	</p>
 </section>
 
@@ -311,6 +316,12 @@ function DrawStoryList(tag){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2023/06/17</span> - データを追加</summary>
+		<div>
+			<span class="new"></span>データを追加（2023年1月～6月17日）
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2023/06/07</span> - データを追加</summary>
 		<div>
 			<span class="new"></span>データを追加（2022年10月～12月）
