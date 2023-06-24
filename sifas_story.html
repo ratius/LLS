@@ -144,6 +144,10 @@ function NarrowerEvent(changed){
 			const TimeOutputStart = performance.now();
 			
 			let Output = '';
+			if('date' in StoryList[temp1index].part[temp2index]){
+				const datetemp = new Date(StoryList[temp1index].part[temp2index].date);
+				//Output += datetemp.getFullYear() + '年' + (datetemp.getMonth()+1) + '月' + datetemp.getDate() + '日配信<br>'
+			}
 			for(i of StoryList[temp1index].part[temp2index].part){
 				Output += '<table class="StoryTable"';
 
@@ -218,12 +222,12 @@ function NarrowerEvent(changed){
 	
 	<h4 class="foreword">概要を確認可能なストーリー</h4>
 	<ul>
-		<li>メインストーリー：第<span id="ep_num_1"></span>章まで</li>
-		<li>イベントエピソード：「<span id="ep_num_2"></span>」まで</li>
-		<li>キズナエピソード：<ul>
-			<li>μ&#39;s：各<span id="ep_num_3"></span>話まで</li>
-			<li>Aqours：各<span id="ep_num_4"></span>話まで</li>
-			<li>ニジガク：初期9人 (各<span id="ep_num_5"></span>話まで)、栞子 (<span id="ep_num_6"></span>話まで)、ミア・ランジュ (<span id="ep_num_7"></span>話まで)</li>
+		<li>メインストーリー：全53章（掲載完了）</li>
+		<li>イベントエピソード：全88イベント（掲載完了）</li>
+		<li>キズナエピソード（掲載完了）：<ul>
+			<li>μ&#39;s：各34話まで</li>
+			<li>Aqours：各34話まで</li>
+			<li>ニジガク：初期9人 (各41話まで)、栞子 (28話まで)、ミア・ランジュ (各20話まで)</li>
 		</ul>
 		<li>アニメ連動ストーリー：1期・2期ともに掲載完了</li>
 		<li>サイドエピソード：掲載予定なし</li>
@@ -353,14 +357,6 @@ function loadScript(src, callback) {
 
 loadScript("data/story.js", function() {
 	const TimeOutputStart = performance.now();
-	//■エピソードの数を反映
-	document.getElementById("ep_num_1").innerHTML = StoryList[0].part.length;
-	document.getElementById("ep_num_2").innerHTML = StoryList[1].part[StoryList[1].part.length-1].name;
-	document.getElementById("ep_num_3").innerHTML = StoryList[2].part[0].part.length;
-	document.getElementById("ep_num_4").innerHTML = StoryList[2].part[9].part.length;
-	document.getElementById("ep_num_5").innerHTML = StoryList[2].part[18].part.length;
-	document.getElementById("ep_num_6").innerHTML = StoryList[2].part[27].part.length;
-	document.getElementById("ep_num_7").innerHTML = StoryList[2].part[28].part.length;
 
 	//■セレクトボックスに要素を追加
 	for(temp1 of StoryList){
