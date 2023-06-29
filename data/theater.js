@@ -1271,23 +1271,16 @@ const TheaterLog = [
 {"date": "2023/06/15", "title": "果南ちゃんちのごはん！", "tag": ["Kanan", "You"]},
 {"date": "2023/06/16", "title": "私たちの街！", "tag": ["Ayumu", "Ai", "Setsuna", "Lanzhu"], "memo": "アクアシティお台場×ラブライブ！虹ヶ咲学園スクールアイドル同好会 コラボ"},
 {"date": "2023/06/17", "title": "狙います！", "tag": ["Kasumi", "Setsuna", "Rina", "Mia", "Live"], "memo": "虹ヶ咲 にじたび！ TOKIMEKI FAN MEETING TOUR 福岡公演1日目"},
+{"date": "2023/06/18", "title": "ありがとう、福岡！", "tag": ["Kasumi", "Setsuna", "Rina", "Mia", "Live"], "memo": "虹ヶ咲 にじたび！ TOKIMEKI FAN MEETING TOUR 福岡公演2日目"},
+{"date": "2023/06/19", "title": "愛さん特製びっくりスペシャル！", "tag": ["Ai", "Kanata"]},
+{"date": "2023/06/20", "title": "照らす光", "tag": ["Honoka", "Ayumu"]},
+{"date": "2023/06/21", "title": "好きなもの？", "tag": ["Dia", "Rina"]},
+{"date": "2023/06/22", "title": "永遠の謎", "tag": ["Rin", "Hanayo"]},
+{"date": "2023/06/23", "title": "MOVIE TIME!", "tag": ["Rin", "Nozomi", "Hanamaru", "Mari", "Kasumi", "Mia"], "memo": "ラブライブ！虹ヶ咲学園スクールアイドル同好会 NEXT SKY 公開"},
+{"date": "2023/06/24", "title": "アキバジャック！", "tag": ["Rin", "Hanayo", "Maki", "Chika", "Riko", "You", "Karin", "Kanata", "Emma", "Mia"], "memo": "スクフェスシリーズ感謝祭2023 DAY1<br>(Aqours浦の星女学院RADIO!!! JMA出張放送局 in 8OJよりも優先)"},
+{"date": "2023/06/25", "title": "時間ギリギリまで！", "tag": ["Honoka", "Kotori", "Umi", "Kanan", "Dia", "Mari", "Kasumi", "Shizuku", "Rina", "Shioriko"], "memo": "スクフェスシリーズ感謝祭2023 DAY2"},
+{"date": "2023/06/26", "title": "まだまだ盛り上がりたい！", "tag": ["Eli", "Nozomi", "Nico", "Yoshiko", "Hanamaru", "Ruby", "Ayumu", "Ai", "Setsuna", "Lanzhu"], "memo": "スクフェスシリーズ感謝祭2023 後日談"},
+{"date": "2023/06/27", "title": "思うまま進め！", "tag": ["Hanamaru", "Shizuku"]},
+{"date": "2023/06/28", "title": "声を聞かせて！", "tag": ["Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"], "memo": "虹ヶ咲 NEXT SKY挿入歌「Feel Alive / Go Our Way！」発売"},{"date": "2023/06/29", "title": "ハッピーバースデー、果林！", "tag": ["Maki", "Karin", "Birthday"], "memo": "朝香果林 誕生日"},
+{"date": "2023/06/30", "title": "出発！！", "tag": ["Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico", "Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby", "Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu", "Triathlon"], "memo": "スクスタ サービス最終日"}
 ];
-
-/*
-
-
-{"date": "2023/06/18", "title": "", "tag": ["Kasumi", "Setsuna", "Rina", "Mia", "Live"], "memo": "虹ヶ咲 にじたび！ TOKIMEKI FAN MEETING TOUR 福岡公演2日目"},
-{"date": "2023/06/19", "title": "", "tag": []},
-{"date": "2023/06/20", "title": "", "tag": []},
-{"date": "2023/06/21", "title": "", "tag": []},
-{"date": "2023/06/22", "title": "", "tag": []},
-{"date": "2023/06/23", "title": "", "tag": []},
-{"date": "2023/06/24", "title": "", "tag": ["You", "Yoshiko", "Ruby", "Live"], "memo": "Aqours浦の星女学院RADIO!!! JMA出張放送局 in 8OJ"},
-{"date": "2023/06/25", "title": "", "tag": []},
-{"date": "2023/06/26", "title": "", "tag": []},
-{"date": "2023/06/27", "title": "", "tag": []},
-{"date": "2023/06/28", "title": "", "tag": []},
-{"date": "2023/06/29", "title": "", "tag": ["Karin", "Birthday"], "memo": "朝香果林 誕生日"},
-{"date": "2023/06/30", "title": "", "tag": []},
-
-*/
