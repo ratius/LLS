@@ -342,6 +342,7 @@ const CharData = [
 		logosf:   {r:244, g:180, b:201},
 		logo4th:  {r:234, g: 96, b:158},
 		logo5th:  {r:234, g: 96, b:158},
+		logo6th:  {r:234, g:129, b:133},
 		logounit: {r:226, g: 60, b:103}
 	},
 	{ id: 'Kasumi', name: '中須 かすみ', colorname: 'パステルイエロー',
@@ -359,6 +360,7 @@ const CharData = [
 		logosf:   {r:242, g:226, b: 60},
 		logo4th:  {r:255, g:241, b:  0},
 		logo5th:  {r:255, g:241, b:  0},
+		logo6th:  {r:230, g:229, b:  0},
 		logounit: {r:255, g:245, b:127}
 	},
 	{ id: 'Shizuku', name: '桜坂 しずく', colorname: 'ライトブルー',
@@ -376,6 +378,7 @@ const CharData = [
 		logosf:   {r:143, g:207, b:227},
 		logo4th:  {r: 77, g:183, b:225},
 		logo5th:  {r: 77, g:183, b:225},
+		logo6th:  {r: 87, g:195, b:234},
 		logounit: {r:  0, g:164, b:198}
 	},
 	{ id: 'Karin', name: '朝香 果林', colorname: 'ロイヤルブルー',
@@ -393,6 +396,7 @@ const CharData = [
 		logosf:   {r:117, g:158, b:211},
 		logo4th:  {r: 89, g: 71, b:154},
 		logo5th:  {r: 89, g: 71, b:154},
+		logo6th:  {r: 23, g: 88, b:168},
 		logounit: {r: 70, g: 75, b:152}
 	},
 	{ id: 'Ai'      , name: '宮下 愛', colorname: '超オレンジ',
@@ -410,6 +414,7 @@ const CharData = [
 		logosf:   {r:246, g:174, b: 93},
 		logo4th:  {r:236, g:104, b: 53},
 		logo5th:  {r:236, g:104, b: 53},
+		logo6th:  {r:221, g: 88, b: 29},
 		logounit: {r:232, g: 57, b: 40}
 	},
 	{ id: 'Kanata', name: '近江 彼方', colorname: 'すみれ色',
@@ -427,6 +432,7 @@ const CharData = [
 		logosf:   {r:172, g:134, b:187},
 		logo4th:  {r:212, g:182, b:214},
 		logo5th:  {r:212, g:182, b:214},
+		logo6th:  {r:202, g:157, b:198},
 		logounit: {r:218, g:180, b:212}
 	},
 	{ id: 'Setsuna', name: '優木 せつ菜', colorname: 'スカーレット',
@@ -444,6 +450,7 @@ const CharData = [
 		logosf:   {r:237, g:119, b:135},
 		logo4th:  {r:203, g: 39, b: 47},
 		logo5th:  {r:203, g: 39, b: 47},
+		logo6th:  {r:209, g: 55, b: 53},
 		logounit: {r:184, g: 28, b: 37}
 	},
 	{ id: 'Emma', name: 'エマ・<br>ヴェルデ', colorname: 'ライトグリーン',
@@ -463,6 +470,7 @@ const CharData = [
 		logosf:   {r:181, g:215, b:136},
 		logo4th:  {r:196, g:219, b:112},
 		logo5th:  {r:196, g:219, b:112},
+		logo6th:  {r:108, g:188, b: 99},
 		logounit: {r:203, g:226, b:163}
 	},
 	{ id: 'Rina', name: '天王寺 璃奈', colorname: 'ペーパーホワイト',
@@ -480,6 +488,7 @@ const CharData = [
 		logosf:   {r:219, g:220, b:239},
 		logo4th:  {r:174, g:175, b:194},
 		logo5th:  {r:174, g:175, b:194},
+		logo6th:  {r:184, g:183, b:199},
 		logounit: {r:255, g:254, b:254}
 	},
 	{ id: 'Shioriko', name: '三船 栞子', colorname: '翡翠色',
@@ -493,6 +502,7 @@ const CharData = [
 		logosf:   {r: 99, g:189, b:147},
 		logo4th:  {r: 89, g:187, b:141},
 		logo5th:  {r: 89, g:187, b:141},
+		logo6th:  {r:  1, g:167, b:105},
 		logounit: {r: 22, g:178, b:134}
 	},
 	{ id: 'Mia', name: 'ミア・<br>テイラー', colorname: 'プラチナシルバー',
@@ -505,6 +515,7 @@ const CharData = [
 		nazotoki: {r:233, g:231, b:226},
 		logo4th:  {r:208, g:208, b:199},
 		logo5th:  {r:208, g:208, b:199},
+		logo6th:  {r:203, g:214, b:216},
 		logounit: {r:169, g:167, b:151}
 	},
 	{ id: 'Lanzhu', name: '鐘 嵐珠', colorname: 'ピンクゴールド',
@@ -517,6 +528,7 @@ const CharData = [
 		nazotoki: {r:255, g:205, b:199},
 		logo4th:  {r:245, g:208, b:210},
 		logo5th:  {r:245, g:208, b:210},
+		logo6th:  {r:241, g:205, b:207},
 		logounit: {r:237, g:149, b:142}
 	},
 	{ id: 'Yu', name: '高咲 侑',
@@ -524,7 +536,8 @@ const CharData = [
 		llsif2:   {r:195, g:195, b:195},
 		nazotoki: {r:188, g:188, b:188},
 		logo3rd:  {r: 86, g: 86, b: 84},
-		logo5th:  {r: 63, g: 58, b: 57}
+		logo5th:  {r: 63, g: 58, b: 57},
+		logo6th:  {r: 89, g: 87, b: 88}
 	},
 
 	//■Liella!
@@ -664,21 +677,27 @@ const CharData = [
 	//■蓮ノ空
 	{ id: 'Kaho', name: '日野下 花帆', colorname: '',
 		official: {r:248, g:181, b:  0},
+		logo1st:  {r:255, g:191, b:  0},
 	},
 	{ id: 'Sayaka', name: '村野 さやか', colorname: '',
 		official: {r: 83, g:131, b:195},
+		logo1st:  {r: 16, g: 83, b:166},
 	},
 	{ id: 'Kozue', name: '乙宗 梢', colorname: '',
 		official: {r:104, g:190, b:141},
+		logo1st:  {r:105, g:205, b:130},
 	},
 	{ id: 'Tsuzuri', name: '夕霧 綴理', colorname: '',
-		official: {r:186, g:38, b: 54},
+		official: {r:186, g: 38, b: 54},
+		logo1st:  {r:231, g: 51, b: 74},
 	},
 	{ id: 'Rurino', name: '大沢 瑠璃乃', colorname: '',
 		official: {r:231, g: 96, b:158},
+		logo1st:  {r:247, g:146, b:147},
 	},
 	{ id: 'Megumi', name: '藤島 慈', colorname: '',
 		official: {r:200, g:194, b:198},
+		logo1st:  {r:255, g:255, b:255},
 	},
 ];
 
