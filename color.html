@@ -203,10 +203,16 @@ function CreateColorListTable(Idol, col, tablecol){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2023/08/23</span> - カラー追加</summary>
+		<div>
+			<span class="new"></span>虹ヶ咲 6thライブの色を追加
+		</div>
+	</details>
+	<details>
 		<summary class="important"><span class="date">2023/04/28</span> - Liella!3期生参戦に伴う調整 他</summary>
 		<div>
 			<span class="new"></span>「ウィーン・マルガレーテ」「鬼塚冬毬」の列を追加<br>
-			<span class="new"></span>「謎解きフェスティバル」を追加
+			<span class="new"></span>謎解きフェスティバルの色を追加
 		</div>
 	</details>
 	<details>
@@ -342,7 +348,7 @@ loadScript("data/color.js", function() {
 
 	document.getElementById("Color_Niji").innerHTML += '\n'
 	+ CreateColorListTable(['Ayumu', 'Kasumi', 'Shizuku', 'Karin', 'Ai', 'Kanata', 'Setsuna', 'Emma', 'Rina', 'Shioriko', 'Mia', 'Lanzhu', 'Yu'],
-	  ['official', 'sifas', 'sifas_s1', 'llsif', 'llsif_l', 'llsif2', 'monthly', 'nijiyon', 'nazotoki', 'logo1st', 'logo3rd', 'logosf', 'logo4th', 'logo5th', 'logounit'], '#f8b656');
+	  ['official', 'sifas', 'sifas_s1', 'llsif', 'llsif_l', 'llsif2', 'monthly', 'nijiyon', 'nazotoki', 'logo1st', 'logo3rd', 'logosf', 'logo4th', 'logo5th', 'logo6th','logounit'], '#f8b656');
 
 	document.getElementById("Color_Liella").innerHTML += '\n'
 	+ CreateColorListTable(['Kanon', 'Keke', 'Chisato', 'Sumire', 'Ren', 'Kinako', 'Mei', 'Shiki', 'Natsumi', 'Wien', 'Tomari'],
@@ -354,7 +360,7 @@ loadScript("data/color.js", function() {
 
 	document.getElementById("Color_Hasu").innerHTML += '\n'
 	+ CreateColorListTable(['Kaho', 'Sayaka', 'Kozue', 'Tsuzuri', 'Rurino', 'Megumi'],
-	  ['official'], '#76bde3');
+	  ['official', 'logo1st'], '#76bde3');
 
 	document.getElementById("Loading").style.display = "none";
 

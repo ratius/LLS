@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta charset="utf-8">
+
+<meta property="og:url" content="https://ratius.github.io/LLS/lll_connect.html">
+<meta property="og:title" content="リンクラ スクールアイドルコネクトまとめ">
+<meta property="og:type" content="website">
+<meta property="og:description" content="「Link! Like! ラブライブ!」">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@ratius55">
+<meta name="twitter:creator" content="@ratius55">
+<meta name="twitter:title" content="リンクラ スクールアイドルコネクトまとめ">
+<meta name="twitter:description" content="「虹ヶ咲学園スクールアイドル　マンスリーアンケート」データの非公式保管所です。">
+<meta name="description" content="「虹ヶ咲学園スクールアイドル　マンスリーアンケート」データの非公式保管所です。">
+
+<meta name="viewport" content="width=1200px, initial-scale=1">
+
+<title>リンクラ スクールアイドルコネクトまとめ | ラブライブ！ストレージ</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="color.css" media="print" onload="this.media='all'">
+<style><!--
+
+/* 共通 */
+.FixedHeader {
+	overflow-y: scroll;
+	width: min(calc(100% - 6px), 1000px);
+	height: calc(80vh - 30px);
+}
+
+.FixedHeader table{
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+	background-color: white;
+}
+
+.FixedHeader thead th{
+	position: sticky;
+	top: 0;
+	padding: 2px 5px;
+}
+
+/*  マンスリーアンケート一覧*/
+#LiveListTable {
+	border: solid 3px #e2067e;
+	background-color: rgba(226,126,176,0.1);
+}
+
+#LiveListTable thead th {
+	background-color: #f4abd2;
+	border-bottom: solid 3px #e2067e;
+	border-right: solid 1px #e2067e;
+}
+
+tbody td, tbody th {
+	text-align: left;
+	padding: 3px 5px;
+	border-right: solid 1px #bbb;
+}
+
+tr.top td { /*配信日、動画リンク*/
+	text-align: center;
+}
+
+tr.top:nth-child(n+2) > td , tr.top:nth-child(n+2) > th {
+	border-top: solid 3px #999;
+}
+
+tr.mid > td {
+	border-top: solid 1px #bbb;
+}
+
+.setlist { /*セットリスト*/
+	width: 300px;
+	border: solid 1px #9ce;
+}
+
+.setlist summary {
+	margin: 0;
+	padding: 2px 6px;
+	background-color: #d0f0ff;
+}
+
+.setlist ol {
+	margin: 5px 0;
+	padding-left: 25px;
+}
+
+.setlist i {
+	color: #69c;
+}
+
+.RoundButton {
+	display: inline-block;
+	margin: 1px auto;
+	padding: 0px 6px;
+	height: 22px;
+	border: 2px solid;
+	border-radius: 50vh;
+}
+
+.SquareButton {
+	display: inline-block;
+	margin: 1px auto;
+	padding: 0px 6px;
+	height: 22px;
+	border: 2px solid;
+}
+
+--></style>
+<script><!--
+//■デバッグモード判定
+let isDebugMode = false;
+const Parameter = location.search.substring(1).split('&');
+if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
+
+//■キャラクター名のボタンを描画
+const TagData = {
+	"meets"     : {"name": "With×MEETS" , "r":160, "g":112, "b": 96, "s": "Square" },
+	"live"      : {"name": "Fes×LIVE"   , "r": 80, "g":128, "b":128, "s": "Square" },
+	"cancelled" : {"name": "配信中止"    , "r":160, "g":160, "b":160, "s": "Square" },
+	
+	"Kaho"    : {"name": "花帆"   , "r":248, "g":181, "b":  0, "s": "Round" },
+	"Sayaka"  : {"name": "さやか" , "r": 83, "g":131, "b":195, "s": "Round" },
+	"Kozue"   : {"name": "梢"     , "r":104, "g":190, "b":141, "s": "Round" },
+	"Tsuzuri" : {"name": "綴理"   , "r":186, "g": 38, "b": 54, "s": "Round" },
+	"Rurino"  : {"name": "瑠璃乃" , "r":231, "g": 96, "b":158, "s": "Round" },
+	"Megumi"  : {"name": "慈"     , "r":200, "g":194, "b":198, "s": "Round" }
+};
+
+function DrawCharName(character){
+	if(character in TagData){
+		const temp = TagData[character];
+		let Output = '<span class="' + temp.s + 'Button" '
+		+ 'style="background-color:rgb('
+		+ Math.floor((temp.r + 510)/3) + ','
+		+ Math.floor((temp.g + 510)/3) + ','
+		+ Math.floor((temp.b + 510)/3) + '); '
+		+ ' border-color: rgb(' + temp.r + ',' + temp.g + ',' + temp.b + ');">'
+		+ temp.name + '<\/span>';
+		return Output;
+	} else { //存在しないなら
+		console.log("キャラクターID " + character + " は存在しません");
+		return false;
+	}
+}
+
+//■Date型を「YYYY/MM/DD (hh:mm)」という文字列に変換
+function GetStringFromDate(date,hm){
+	const temp1 = new Date(date);
+	
+	if(temp1.getFullYear() == 1970){ //取得失敗などの理由で1970年になった場合、空文字列を返す
+		console.log("Error: " + temp + "may not be a date");
+		return "";
+	}
+	let temp2 = temp1.getFullYear()
+	+ "/" + ("00" + (temp1.getMonth()+1)).slice(-2)
+	+ "/" + ("00" + (temp1.getDate())).slice(-2);
+	if(hm){
+		temp2 += " " + ("00" + (temp1.getHours())).slice(-2)
+		+ ":" + ("00" + (temp1.getMinutes())).slice(-2);
+	}
+	return temp2;
+}
+
+//■「スクールアイドルコネクト一覧」の描画
+function DrawLiveList(){
+	let Output = '';
+	for(const temp1 of LiveList){
+		let OutputTemp1 = '';
+		let OutputTemp2 = '';
+		if(!'title' in temp1 || temp1.title === ''){ continue;} //タイトル未指定ならスキップ
+		let row = 1;
+		
+		//2行目：解説
+		if('desc' in temp1 || 'setlist' in temp1){
+			row++;
+			const DescTemp = temp1.desc.replace(/\{\{([^:]*):(\d{19})\}\}/, '（<a href="https://twitter.com/hasunosora_SIC/status/$2" target="blank">$1<\/a>）');
+			OutputTemp2 += '<tr class="mid"><td colspan="2" style="font-size: small;">' + DescTemp;
+			if('setlist' in temp1){ //セットリスト
+				OutputTemp2 += '<details class="setlist"><summary>セットリスト (クリックで展開)<\/summary><ol>';
+				for(const temp2 of temp1.setlist){
+					if(temp2 === 'MC'){
+						OutputTemp2 += '<li><i>MC<\/i><\/li>';
+					} else {
+						OutputTemp2 += '<li>' + temp2 + '<\/li>';
+					}
+				}
+				OutputTemp2 += '<\/ol><\/details>\n';
+			}
+			OutputTemp2 += '<\/td><\/tr>\n';
+		}
+		
+		//3行目：タグ
+		if('tag' in temp1){
+			if(temp1.tag !== ''){
+				row++;
+				OutputTemp2 += '<tr class="mid"><td>タグ<\/td><td>';
+				for(temp2 of temp1.tag){
+					OutputTemp2 += DrawCharName(temp2) + '\n';
+				}
+				OutputTemp2 += '<\/td><\/tr>\n';
+			}
+		}
+		
+		//1行目：動画リンクなど
+		OutputTemp1 = '<tr class="top"><td rowspan="' + row + '" style="white-space: nowrap;">' + GetStringFromDate(temp1.date) + '<\/td>\n'
+		+ '<th colspan="2">' + temp1.title + '<\/th>'
+		
+		OutputTemp1 += '<td rowspan="' + row + '">';
+		if('tube' in temp1){
+			if(temp1.tube !== ''){
+				OutputTemp1 += '<a href="https://www.youtube.com/watch?v=' + temp1.tube + '" target="blank">'
+				+ '<img src="http://img.youtube.com/vi/' + temp1.tube.split('&')[0] + '/default.jpg" width="120" height="90" alt="動画"><\/a>'
+				+ '<\/td><\/tr>\n';
+			}
+		}
+		OutputTemp1 += '<\/td><\/tr>\n';
+		Output += OutputTemp1 + OutputTemp2;
+	}
+	document.getElementById("LiveList-result").innerHTML = Output;
+}
+--></script>
+</head>
+<body class="RM">
+<header>
+	<h2 id="MainTitle">リンクラ スクールアイドルコネクトまとめ</h2>
+</header>
+
+<section id="Foreword">
+	<h3 class="foreword">まえがき</h3>
+	<p>アプリ「Link! Like! ラブライブ！」内のコンテンツ「スクールアイドルコネクト」で配信された動画のまとめです。</p>
+</section>
+
+
+<div id="RightMenu">
+	<ul>
+		<li><strong>目次</strong></li>
+		<li><hr></li>
+		<li><a href="#Foreword">まえがき</a></li>
+		<li><a href="#CastedLiveList">動画一覧</a></li>
+		<li><a href="#History">更新履歴</a></li>
+	</ul>
+</div>
+
+<div id="Loading">
+	<h4>Now Loading...</h4>
+	このコンテンツはJavaScriptを使用しています。<br>
+	いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
+	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
+</div>
+
+<section id="CastedLiveList">
+	<h3 class="muse">スクールアイドルコネクト一覧</h3>
+	<p>「動画リンク」列のサムネイルをクリック/タップすると、YouTubeの動画を開きます。<br>
+	タグのキャラクター欄は、実際の出演者を表しています。<br>
+	（出演予定であったが、実際には配信に参加しなかったメンバー名のタグは付与しない方針です）</p>
+	<div id="LiveListTable" class="FixedHeader">
+		<table>
+			<thead>
+				<tr>
+					<th style="width: 100px;">配信日</th>
+					<th colspan="2">配信内容</th>
+					<th style="width: 120px;">動画リンク</th>
+				</tr>
+			</thead>
+			<tbody id="LiveList-result"></tbody>
+		</table>
+	</div>
+</section>
+
+<section id="History">
+<h3 class="niji">更新履歴（結果掲載以外）</h3>
+<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
+<div id="history2">
+	<details open>
+		<summary class="important"><span class="date">2023/08/23</span> - 公開</summary>
+		<div>
+			<span class="new"></span>公開
+		</div>
+	</details>
+</div>
+</section>
+
+<nav>
+<p><a id="BackToMain" href="index.html">トップページに戻る。</a></p>
+</nav>
+
+<script><!--
+function loadScript(src, callback) {
+    let done = false;
+    let head = document.getElementsByTagName('head')[0];
+    let script = document.createElement('script');
+    script.src = src;
+    head.appendChild(script);
+    // Attach handlers for all browsers
+    script.onload = script.onreadystatechange = function() {
+        if ( !done && (!this.readyState ||
+                this.readyState === "loaded" || this.readyState === "complete") ) {
+            done = true;
+            callback();
+            // Handle memory leak in IE
+            script.onload = script.onreadystatechange = null;
+            if ( head && script.parentNode ) {
+                head.removeChild( script );
+            }
+        }
+    };
+}
+
+loadScript("data/hasu_live.js", function() {
+	const TimeOutputStart = performance.now();
+
+	DrawLiveList();
+
+	//◆「Now Loading...」解除
+	document.getElementById("Loading").style.display = "none";
+	
+	//■デバックモード時の処理
+	if(isDebugMode) {
+		//◆デバッグモードであることを表示
+		document.title = '[debug]' + document.title;
+		document.bgColor = '#dce';
+		
+		document.getElementById("MainTitle").innerHTML += "*";
+		document.getElementById("BackToMain").href += "?debug";
+		
+		//◆描画時間の出力
+		const TimeOutputEnd = performance.now();
+		console.log('リンクラ スクールアイドルコネクトまとめ\n初期描画処理: ' + (TimeOutputEnd - TimeOutputStart) + ' ミリ秒');
+	}
+});
+--></script>
+
+</body>
+</html>
