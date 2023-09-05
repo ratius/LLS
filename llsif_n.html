@@ -155,7 +155,10 @@ if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
 
 //■ボタンの描画
 function DrawButtons(name) {
-	if(name === ""){ return false; }
+	if(name === ""){
+		document.getElementById("ButtonField").innerHTML = '';
+		return false;
+	}
 
 	const temp1 = NData.filter( q => q.name === name)[0];
 	let Output = '<span class="jump" onclick="DrawProfile(&#39;' + temp1.name+ '&#39;);">Profile<\/span>';
@@ -273,8 +276,8 @@ function DrawFace(name){
 	<h3 class="foreword">まえがき</h3>
 	<p>
 		「ラブライブ!スクールアイドルフェスティバル」で配信された転入生の各種テキストのまとめです。<br>
-		虹ヶ咲扱いの桜坂しずく、近江彼方、エマ・ヴェルデのカードは、<br>
-		「キラキラ☆転入生フェスティバル」SSRのみ掲載します。
+		桜坂しずく、近江彼方、エマ・ヴェルデのカードは、転入生として扱われているカード、<br>
+		及び「キラキラ☆転入生フェスティバル」SSRのみ掲載します。
 	</p>
 </section>
 
@@ -313,12 +316,18 @@ function DrawFace(name){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2023/09/05</span> - データ追加</summary>
+		<div>
+			<span class="new"></span>データを追加（亜矢、さち子、瑞希、朱美、文絵、レベッカ） 現在25/54人<br>
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2023/08/23</span> - データ追加</summary>
 		<div>
 			<span class="new"></span>データを追加（かさね） 現在19/54人<br>
 		</div>
 	</details>
-	<details open>
+	<details>
 		<summary><span class="date">2023/07/10</span> - データ追加</summary>
 		<div>
 			<span class="new"></span>データを追加（クリスティーナ、ふみ、命、ラクシャータ） 現在18/54人<br>
