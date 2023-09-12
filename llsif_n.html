@@ -242,7 +242,7 @@ function DrawCardData(name, num){
 		Output += '<h4>サイドストーリー「' + temp2.sidetitle + '」<\/h4>';
 		for(temp3 of temp2.side){
 			Output += '<div class="text_story">'
-			+ ('n' in temp3 ? DrawFace(null) : DrawFace(temp1.name))
+			+ ('f' in temp3 ? DrawFace(temp3.f) : DrawFace(temp1.name))
 			+ '<div class="text">' + '<b>'
 			+ ('n' in temp3 ? temp3.n : ('namealt' in temp1 ? temp1.namealt : temp1.name)) + '<\/b><br>'
 			+ temp3.t + '<\/div><\/div>';
@@ -316,46 +316,52 @@ function DrawFace(name){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2023/09/12</span> - データ追加</summary>
+		<div>
+			<span class="new"></span>データを追加（九条聖来、御堂優理、神谷理華、白木凪、白瀬小雪、高天原睦月、蘭花、イザベラ） 現在33/54人<br>
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2023/09/05</span> - データ追加</summary>
 		<div>
-			<span class="new"></span>データを追加（亜矢、さち子、瑞希、朱美、文絵、レベッカ） 現在25/54人<br>
+			<span class="new"></span>データを追加（杉崎亜矢、田中さち子、吉川瑞希、菊池朱美、西村文絵、レベッカ） 現在25/54人<br>
 		</div>
 	</details>
 	<details>
 		<summary><span class="date">2023/08/23</span> - データ追加</summary>
 		<div>
-			<span class="new"></span>データを追加（かさね） 現在19/54人<br>
+			<span class="new"></span>データを追加（支倉かさね） 現在19/54人<br>
 		</div>
 	</details>
 	<details>
 		<summary><span class="date">2023/07/10</span> - データ追加</summary>
 		<div>
-			<span class="new"></span>データを追加（クリスティーナ、ふみ、命、ラクシャータ） 現在18/54人<br>
+			<span class="new"></span>データを追加（クリスティーナ、設楽ふみ、福原命、ラクシャータ） 現在18/54人<br>
 		</div>
 	</details>
 	<details>
 		<summary><span class="date">2023/04/28</span> - データ追加</summary>
 		<div>
-			<span class="new"></span>データを追加（ココ、あきる、剣） 現在14/54人<br>
+			<span class="new"></span>データを追加（宮下ココ、篠宮あきる、門田剣） 現在14/54人<br>
 		</div>
 	</details>
 	<details>
 		<summary><span class="date">2023/04/14</span> - データ追加</summary>
 		<div>
-			<span class="new"></span>データを追加（隼） 現在11/54人<br>
+			<span class="new"></span>データを追加（黒崎隼） 現在11/54人<br>
 		</div>
 	</details>
 	<details>
 		<summary><span class="date">2023/04/10</span> - データ追加</summary>
 		<div>
-			<span class="new"></span>データを追加（いるか、姫乃、咲良、咲夜、ジェニファー） 現在10/54人<br>
+			<span class="new"></span>データを追加（須田いるか、綾小路姫乃、黒羽咲良、黒羽咲夜、ジェニファー） 現在10/54人<br>
 			<span class="new"></span>パートナー時共通テキストを掲載
 		</div>
 	</details>
 	<details>
 		<summary class="important"><span class="date">2023/04/05</span> - テスト公開</summary>
 		<div>
-			<span class="new"></span>テスト公開（しずく、彼方、遥、るう、エマ） 現在5/54人
+			<span class="new"></span>テスト公開（桜坂しずく、近江彼方、近江遥、多々良るう、エマ・ヴェルデ） 現在5/54人
 		</div>
 	</details>
 </div>
@@ -392,6 +398,7 @@ loadScript("data/ntext.js", function() {
 	
 	//■セレクトボックスに要素を追加
 	for(temp1 of NData){
+		if(temp1.card[0].side[0].t === ''){ continue;} //未実装のカードは飛ばす
 		var temp2 = document.create
 		var temp2 = document.createElement("option");
 		temp2.text = temp1.name;
