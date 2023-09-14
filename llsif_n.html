@@ -53,11 +53,11 @@ p{
 
 /* クリック用ボタン */
 span.jump {
-	font-size: large;
+	font-size: 150%;
 	display: inline-block;
 	width: auto;
 	margin: auto 4px;
-	padding: 0.25rem 0.75rem;
+	padding: 0.25rem 0.85rem;
 	cursor: pointer;
 	background-color: #fde;
 	border: 2px solid #978;
@@ -202,7 +202,7 @@ function DrawButtons(name) {
 //■プロフィールの作成
 function DrawProfile(name){
 	const temp1 = NData.filter( q => q.name === name)[0];
-	let Output = '<h3>' + name + '　プロフィール<\/h3>\n'
+	let Output = '<h3>' + name + ' プロフィール<\/h3>\n'
 	+ '<div id="ProfileContainer">' + DrawFace(name)
 	+ '<table class="profile"><tbody>'
 	+ '<tr><td style="width: 120px;">学校<\/td><td>' + SchoolData[temp1.y].name + '<\/td><\/tr>'
@@ -229,7 +229,7 @@ function DrawCardData(name, num){
 	const temp1 = NData.filter(q => q.name === name)[0];
 	const temp2 = temp1.card[num];
 	
-	let Output = '<h3>' + (num+1) + '枚目 (部員No.' + temp2.num + ')<\/h3>'
+	let Output = '<h3>' +  name + ' ' + (num+1) + '枚目 (部員No.' + temp2.num + ')<\/h3>'
 	+ ('memo' in temp2 ? '<p style="font-size: 90%">' + temp2.memo + '<\/p>' : '')
 	
 	if('text' in temp2){
@@ -316,6 +316,12 @@ function DrawFace(name){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2023/09/15</span> - データ追加</summary>
+		<div>
+			<span class="new"></span>データを追加（鳥居歩美、森嶋ななか、桐原優香、早乙女紫） 現在37/54人<br>
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2023/09/12</span> - データ追加</summary>
 		<div>
 			<span class="new"></span>データを追加（九条聖来、御堂優理、神谷理華、白木凪、白瀬小雪、高天原睦月、蘭花、イザベラ） 現在33/54人<br>

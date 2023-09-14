@@ -87,7 +87,7 @@ function chooseTextColor(RGB) {
 }
 //■ クリップボードにコピー。わざわざ書くのが長ったらしいのでCpy(this)で済ませる
 function Cpy(temp1) {
-	navigator.clipboard.writeText(temp1.innerHTML);
+	if(event.ctrlKey){ navigator.clipboard.writeText(temp1.innerHTML);}
 	return false;
 }
 
@@ -140,7 +140,7 @@ function CreateColorListTable(Idol, col, tablecol){
 	<h3 class="foreword">まえがき</h3>
 	<p>
 		「ラブライブ！」シリーズにおいて、各所で使われているメンバーカラーのまとめです。<br>
-		RGB値やおよびカラーコードの部分をクリックすると、それをクリップボードにコピーできます。<br>
+		PCで閲覧している場合、Ctrlキーを押しながらRGB値やおよびカラーコードの部分をクリックすると、それをクリップボードにコピーできます。<br>
 		このページではRGBでの抽出が可能なデジタルカラーのみを扱っています。
 	</p>
 </section>
@@ -163,8 +163,8 @@ function CreateColorListTable(Idol, col, tablecol){
 			<li><a href="#Color_Aqours">Aqours</a></li>
 			<li><a href="#Color_Niji">虹ヶ咲</a></li>
 			<li><a href="#Color_Liella">Liella!</a></li>
-			<li><a href="#Color_Musical">ミュージカル</a></li>
 			<li><a href="#Color_Hasu">蓮ノ空</a></li>
+			<li><a href="#Color_Musical">ミュージカル</a></li>
 		</ul></li>
 	<li><a href="#History">更新履歴</a></li>
 	</ul>
@@ -189,12 +189,12 @@ function CreateColorListTable(Idol, col, tablecol){
 		  <h4 class="box_liella">Liella!のメンバーカラー</h3>
 	</section>
 
-	<section id="Color_Musical">
-		  <h4 class="box_musical">スクールアイドルミュージカルのメンバーカラー</h3>
-	</section>
-
 	<section id="Color_Hasu">
 		  <h4 class="box_hasu">蓮ノ空女学院スクールアイドルクラブのメンバーカラー</h3>
+	</section>
+
+	<section id="Color_Musical">
+		  <h4 class="box_musical">スクールアイドルミュージカルのメンバーカラー</h3>
 	</section>
 </section>
 
@@ -203,6 +203,14 @@ function CreateColorListTable(Idol, col, tablecol){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2023/09/15</span> - カラー追加</summary>
+		<div>
+			<span class="new"></span>「公式サイト(総合)」の色を追加<br>
+			<span class="fix"></span>グループの並び順を変更<br>
+			<span class="fix"></span>Ctrlキーを押している時のみ、クリップボードへコピーできるように仕様変更
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2023/08/23</span> - カラー追加</summary>
 		<div>
 			<span class="new"></span>虹ヶ咲 6thライブの色を追加
@@ -212,7 +220,7 @@ function CreateColorListTable(Idol, col, tablecol){
 		<summary class="important"><span class="date">2023/04/28</span> - Liella!3期生参戦に伴う調整 他</summary>
 		<div>
 			<span class="new"></span>「ウィーン・マルガレーテ」「鬼塚冬毬」の列を追加<br>
-			<span class="new"></span>謎解きフェスティバルの色を追加
+			<span class="new"></span>「謎解きフェスティバル」の色を追加
 		</div>
 	</details>
 	<details>
@@ -340,27 +348,27 @@ loadScript("data/color.js", function() {
 	
 	document.getElementById("Color_Muse").innerHTML += '\n'
 	+ CreateColorListTable(['Honoka', 'Eli', 'Kotori', 'Umi', 'Rin', 'Maki', 'Nozomi', 'Hanayo', 'Nico'],
-	  ['sifas', 'sifas_s1', 'puchi', 'llsif', 'llsif_l', 'llsif2', 'sifac', 'nazotoki', 'logofinal'], '#e50080');
+	  ['official', 'sifas', 'sifas_s1', 'puchi', 'llsif', 'llsif_l', 'llsif2', 'sifac', 'nazotoki', 'logofinal'], '#e50080');
 
 	document.getElementById("Color_Aqours").innerHTML += '\n'
 	+ CreateColorListTable(['Chika', 'Riko', 'Kanan', 'Dia', 'You', 'Yoshiko', 'Hanamaru', 'Mari', 'Ruby'],
-	  ['official', 'sifas', 'sifas_s1', 'puchi', 'llsif', 'llsif_l', 'llsif2', 'yohane', 'sifac', 'nazotoki', 'vote2nd', 'vote3rd', 'vote4th', 'duotrio', 'logomovie', 'logo1st', 'logo2nd', 'logo4th', 'logo5th', 'logo6th', 'logounit'], '#19b1f6');
+	  ['official', 'official2', 'sifas', 'sifas_s1', 'puchi', 'llsif', 'llsif_l', 'llsif2', 'yohane', 'sifac', 'nazotoki', 'vote2nd', 'vote3rd', 'vote4th', 'duotrio', 'logomovie', 'logo1st', 'logo2nd', 'logo4th', 'logo5th', 'logo6th', 'logounit'], '#19b1f6');
 
 	document.getElementById("Color_Niji").innerHTML += '\n'
 	+ CreateColorListTable(['Ayumu', 'Kasumi', 'Shizuku', 'Karin', 'Ai', 'Kanata', 'Setsuna', 'Emma', 'Rina', 'Shioriko', 'Mia', 'Lanzhu', 'Yu'],
-	  ['official', 'sifas', 'sifas_s1', 'llsif', 'llsif_l', 'llsif2', 'monthly', 'nijiyon', 'nazotoki', 'logo1st', 'logo3rd', 'logosf', 'logo4th', 'logo5th', 'logo6th','logounit'], '#f8b656');
+	  ['official', 'official2', 'sifas', 'sifas_s1', 'llsif', 'llsif_l', 'llsif2', 'monthly', 'nijiyon', 'nazotoki', 'logo1st', 'logo3rd', 'logosf', 'logo4th', 'logo5th', 'logo6th','logounit'], '#f8b656');
 
 	document.getElementById("Color_Liella").innerHTML += '\n'
 	+ CreateColorListTable(['Kanon', 'Keke', 'Chisato', 'Sumire', 'Ren', 'Kinako', 'Mei', 'Shiki', 'Natsumi', 'Wien', 'Tomari'],
-	  ['official', 'llsif', 'llsif_l', 'llsif2', 'nazotoki', 'logo1st', 'logo2nd_a', 'logo2nd_b', 'logo3rd'], '#da57d8');
-
-	document.getElementById("Color_Musical").innerHTML += '\n'
-	+ CreateColorListTable(['RurikaM', 'YuzuhaM', 'YukinoM', 'HikaruM', 'MaayaM', 'AnzuM', 'MisuzuM', 'ToaM', 'RenaM', 'SayakaM', 'MadokaM', 'KyokaM'],
-	  ['official'], '#c40035');
+	  ['official', 'official2', 'llsif', 'llsif_l', 'llsif2', 'nazotoki', 'logo1st', 'logo2nd_a', 'logo2nd_b', 'logo3rd'], '#da57d8');
 
 	document.getElementById("Color_Hasu").innerHTML += '\n'
 	+ CreateColorListTable(['Kaho', 'Sayaka', 'Kozue', 'Tsuzuri', 'Rurino', 'Megumi'],
-	  ['official', 'logo1st'], '#76bde3');
+	  ['official', 'official2', 'logo1st'], '#76bde3');
+
+	document.getElementById("Color_Musical").innerHTML += '\n'
+	+ CreateColorListTable(['RurikaM', 'YuzuhaM', 'YukinoM', 'HikaruM', 'MaayaM', 'AnzuM', 'MisuzuM', 'ToaM', 'RenaM', 'SayakaM', 'MadokaM', 'KyokaM'],
+	  ['official', 'official2'], '#c40035');
 
 	document.getElementById("Loading").style.display = "none";
 
