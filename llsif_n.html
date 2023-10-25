@@ -170,7 +170,7 @@ function DrawButtons(name) {
 		let CurrentClass = "";
 		if(isDebugMode){
 			if('sidetitle' in temp1.card[temp2]){
-				if(temp1.card[temp2].sidetitle === ""){ //サイドストーリーのタイトル未設定
+				if(temp1.card[temp2].sidetitle === ""){ //サイドストーリー
 					CurrentClass = "warning";
 				}
 			}
@@ -181,10 +181,10 @@ function DrawButtons(name) {
 					}
 				}
 			}
-			if(!'memo' in temp1.card[temp2]){ //メモ未設定
+			if(!'memo' in temp1.card[temp2]){ //メモ
 				CurrentClass = "warning";
 			}
-			if(temp1.card[temp2].num == -1){ //番号未設定
+			if(temp1.card[temp2].num == -1){ //番
 				CurrentClass = "disabled";
 			}
 		}
@@ -316,51 +316,64 @@ function DrawFace(name){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary class="important"><span class="date">2023/10/25</span> - データ追加</summary>
+		<div>
+			<span class="new"></span>正式公開<br>
+			<span class="new"></span>データを追加（永山みなみ、結城紗菜、斉木風、坂巻千鶴子、鬼崎アキラ、月島結架、マリア、レオ） 現在54/54人
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2023/09/24</span> - データ追加</summary>
+		<div>
+			<span class="new"></span>データを追加（逢沢遊宇、佐伯麗音） 現在46/54人
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2023/09/21</span> - データ追加</summary>
 		<div>
-			<span class="new"></span>データを追加（一之瀬マリカ、藤城悠弓、下園咲、相川涼、紫藤美咲、志賀仁美、兵藤さゆり） 現在44/54人<br>
+			<span class="new"></span>データを追加（一之瀬マリカ、藤城悠弓、下園咲、相川涼、紫藤美咲、志賀仁美、兵藤さゆり） 現在44/54人
 		</div>
 	</details>
 	<details>
 		<summary><span class="date">2023/09/15</span> - データ追加</summary>
 		<div>
-			<span class="new"></span>データを追加（鳥居歩美、森嶋ななか、桐原優香、早乙女紫） 現在37/54人<br>
+			<span class="new"></span>データを追加（鳥居歩美、森嶋ななか、桐原優香、早乙女紫） 現在37/54人
 		</div>
 	</details>
 	<details>
 		<summary><span class="date">2023/09/12</span> - データ追加</summary>
 		<div>
-			<span class="new"></span>データを追加（九条聖来、御堂優理、神谷理華、白木凪、白瀬小雪、高天原睦月、蘭花、イザベラ） 現在33/54人<br>
+			<span class="new"></span>データを追加（九条聖来、御堂優理、神谷理華、白木凪、白瀬小雪、高天原睦月、蘭花、イザベラ） 現在33/54人
 		</div>
 	</details>
 	<details>
 		<summary><span class="date">2023/09/05</span> - データ追加</summary>
 		<div>
-			<span class="new"></span>データを追加（杉崎亜矢、田中さち子、吉川瑞希、菊池朱美、西村文絵、レベッカ） 現在25/54人<br>
+			<span class="new"></span>データを追加（杉崎亜矢、田中さち子、吉川瑞希、菊池朱美、西村文絵、レベッカ） 現在25/54人
 		</div>
 	</details>
 	<details>
 		<summary><span class="date">2023/08/23</span> - データ追加</summary>
 		<div>
-			<span class="new"></span>データを追加（支倉かさね） 現在19/54人<br>
+			<span class="new"></span>データを追加（支倉かさね） 現在19/54人
 		</div>
 	</details>
 	<details>
 		<summary><span class="date">2023/07/10</span> - データ追加</summary>
 		<div>
-			<span class="new"></span>データを追加（クリスティーナ、設楽ふみ、福原命、ラクシャータ） 現在18/54人<br>
+			<span class="new"></span>データを追加（クリスティーナ、設楽ふみ、福原命、ラクシャータ） 現在18/54人
 		</div>
 	</details>
 	<details>
 		<summary><span class="date">2023/04/28</span> - データ追加</summary>
 		<div>
-			<span class="new"></span>データを追加（宮下ココ、篠宮あきる、門田剣） 現在14/54人<br>
+			<span class="new"></span>データを追加（宮下ココ、篠宮あきる、門田剣） 現在14/54人
 		</div>
 	</details>
 	<details>
 		<summary><span class="date">2023/04/14</span> - データ追加</summary>
 		<div>
-			<span class="new"></span>データを追加（黒崎隼） 現在11/54人<br>
+			<span class="new"></span>データを追加（黒崎隼） 現在11/54人
 		</div>
 	</details>
 	<details>

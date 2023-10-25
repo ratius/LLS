@@ -178,7 +178,7 @@ function DrawLiveList(){
 		//2行目：解説
 		if('desc' in temp1 || 'setlist' in temp1){
 			row++;
-			const DescTemp = temp1.desc.replace(/\{\{([^:]*):(\d{19})\}\}/, '（<a href="https://twitter.com/hasunosora_SIC/status/$2" target="blank">$1<\/a>）');
+			const DescTemp = temp1.desc.replace(/\{\{([^:]*):(\d{19})\}\}/g, '（<a href="https://twitter.com/hasunosora_SIC/status/$2" target="blank">$1<\/a>）');
 			OutputTemp2 += '<tr class="mid"><td colspan="2" style="font-size: small;">' + DescTemp;
 			if('setlist' in temp1){ //セットリスト
 				OutputTemp2 += '<details class="setlist"><summary>セットリスト (クリックで展開)<\/summary><ol>';
