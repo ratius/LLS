@@ -15,7 +15,7 @@
 <meta name="twitter:description" content="「虹ヶ咲学園スクールアイドル　マンスリーアンケート」データの非公式保管所です。">
 <meta name="description" content="「虹ヶ咲学園スクールアイドル　マンスリーアンケート」データの非公式保管所です。">
 
-<meta name="viewport" content="width=1200px, initial-scale=1">
+<meta name="viewport" content="width=800">
 
 <title>リンクラ スクールアイドルコネクトまとめ | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
@@ -43,7 +43,16 @@
 	padding: 2px 5px;
 }
 
-/*  マンスリーアンケート一覧*/
+/* 絞り込み */
+#Narrower {
+	border: solid 2px #b9a;
+	font-size: x-large;
+	font-weight: bold;
+	padding: 5px;
+	margin-right: 10px;
+}
+
+/* 動画一覧 */
 #LiveListTable {
 	border: solid 3px #e2067e;
 	background-color: rgba(226,126,176,0.1);
@@ -71,6 +80,14 @@ tr.top:nth-child(n+2) > td , tr.top:nth-child(n+2) > th {
 
 tr.mid > td {
 	border-top: solid 1px #bbb;
+}
+
+tr.mid > td.tag {
+	width: 40px;
+}
+
+tr.cancelled > td, tr.cancelled > th{
+	background-color: #ddd;
 }
 
 .setlist { /*セットリスト*/
@@ -121,7 +138,7 @@ if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
 const TagData = {
 	"meets"     : {"name": "With×MEETS" , "r":160, "g":112, "b": 96, "s": "Square" },
 	"live"      : {"name": "Fes×LIVE"   , "r": 80, "g":128, "b":128, "s": "Square" },
-	"cancelled" : {"name": "配信中止"    , "r":160, "g":160, "b":160, "s": "Square" },
+	"cancelled" : {"name": "配信中止"    , "r":128, "g":128, "b":128, "s": "Square" },
 	
 	"Kaho"    : {"name": "花帆"   , "r":248, "g":181, "b":  0, "s": "Round" },
 	"Sayaka"  : {"name": "さやか" , "r": 83, "g":131, "b":195, "s": "Round" },
@@ -167,19 +184,39 @@ function GetStringFromDate(date,hm){
 }
 
 //■「スクールアイドルコネクト一覧」の描画
-function DrawLiveList(){
+function DrawLiveList(season){
+	if(season === undefined || season === ""){ return false;} //期間が指定されていない場合、描画をキャンセル
+
+	const DateTemp = season.split(',');
+	DateStart = new Date(DateTemp[0]);
+	DateEnd = new Date(DateTemp[1]);
+	
 	let Output = '';
 	for(const temp1 of LiveList){
 		let OutputTemp1 = '';
 		let OutputTemp2 = '';
+		const isCancelled = (temp1.tag.filter((k) => k === 'cancelled').length > 0);
+	
 		if(!'title' in temp1 || temp1.title === ''){ continue;} //タイトル未指定ならスキップ
+		if(season !== undefined){ //日付が指定されており、範囲外ならスキップ
+			if(temp1.date.getTime() < DateStart.getTime()){ continue;}
+			if(temp1.date.getTime() > DateEnd.getTime()){ continue;}
+		}
+		
 		let row = 1;
 		
 		//2行目：解説
 		if('desc' in temp1 || 'setlist' in temp1){
 			row++;
-			const DescTemp = temp1.desc.replace(/\{\{([^:]*):(\d{19})\}\}/g, '（<a href="https://twitter.com/hasunosora_SIC/status/$2" target="blank">$1<\/a>）');
-			OutputTemp2 += '<tr class="mid"><td colspan="2" style="font-size: small;">' + DescTemp;
+			const DescTemp = temp1.desc
+			// {{X:タイトル:数字17桁}} という部分を、Xへのリンクに置換する
+			.replace(/\{\{[xX]:([^:]*):(\d{19})\}\}/g, '（<a href="https://twitter.com/hasunosora_SIC/status/$2" target="blank">$1<\/a>）')
+			// {{L:タイトル:URL}} の部分を、リンクに置換する
+			.replace(/\{\{[lL]:([^:]*):([^}]*)\}\}/g, '<a href="$2" target="blank">$1<\/a>');
+
+			OutputTemp2 += '<tr class="mid' + (isCancelled ? ' cancelled' : '') +'">'
+			+ '<td colspan="2" style="font-size: small;">'
+			+ DescTemp;
 			if('setlist' in temp1){ //セットリスト
 				OutputTemp2 += '<details class="setlist"><summary>セットリスト (クリックで展開)<\/summary><ol>';
 				for(const temp2 of temp1.setlist){
@@ -198,7 +235,8 @@ function DrawLiveList(){
 		if('tag' in temp1){
 			if(temp1.tag !== ''){
 				row++;
-				OutputTemp2 += '<tr class="mid"><td>タグ<\/td><td>';
+				OutputTemp2 += '<tr class="mid' + (isCancelled ? ' cancelled' : '') +'">'
+				+ '<td class="tag">タグ<\/td><td>';
 				for(temp2 of temp1.tag){
 					OutputTemp2 += DrawCharName(temp2) + '\n';
 				}
@@ -207,7 +245,8 @@ function DrawLiveList(){
 		}
 		
 		//1行目：動画リンクなど
-		OutputTemp1 = '<tr class="top"><td rowspan="' + row + '" style="white-space: nowrap;">' + GetStringFromDate(temp1.date) + '<\/td>\n'
+		OutputTemp1 = '<tr class="top' + (isCancelled ? ' cancelled' : '') +'">'
+		+ '<td rowspan="' + row + '" style="white-space: nowrap;">' + GetStringFromDate(temp1.date) + '<\/td>\n'
 		+ '<th colspan="2">' + temp1.title + '<\/th>'
 		
 		OutputTemp1 += '<td rowspan="' + row + '">';
@@ -219,6 +258,7 @@ function DrawLiveList(){
 			}
 		}
 		OutputTemp1 += '<\/td><\/tr>\n';
+		
 		Output += OutputTemp1 + OutputTemp2;
 	}
 	document.getElementById("LiveList-result").innerHTML = Output;
@@ -255,11 +295,24 @@ function DrawLiveList(){
 
 <section id="CastedLiveList">
 	<h3 class="muse">動画一覧</h3>
+	<p>プルダウンメニューから期間を選択すると、その期間に合致する配信が表示されます。
+	</p>
 	<p>「動画リンク」列のサムネイルをクリック/タップすると、YouTubeの動画を開きます。<br>
 	タグのキャラクター欄は、実際の出演者を表しています。<br>
 	（出演予定であったが、実際には配信に参加しなかったメンバー名のタグは付与しない方針です）</p>
+	<div style="margin-bottom: 10px;">
+		<select id="Narrower" onChange="DrawLiveList(this.value)">
+			<option value="">(期間を選択)</option>
+			<option value="2023-04-01,2023-09-30">103期 上半期（2023年4月 - 2023年9月）</option>
+			<option value="2023-10-01,2024-03-31">103期 下半期（2023年10月 - 2024年3月）</option>
+			<!--<option value="2024-04-01,2024-09-30">104期 上半期（2024年4月 - 2024年9月）</option>
+			<option value="2024-10-01,2025-03-31">104期 下半期（2024年10月 - 2025年3月）</option>
+			<option value="2025-04-01,2025-09-30">105期 上半期（2025年4月 - 2025年9月）</option>
+			<option value="2025-10-01,2026-03-31">105期 下半期（2025年10月 - 2026年3月）</option>-->
+		</select>
+	</div>
 	<div id="LiveListTable" class="FixedHeader">
-		<table>
+		<table style="min-height:100%;">
 			<thead>
 				<tr>
 					<th style="width: 100px;">配信日</th>
@@ -267,7 +320,7 @@ function DrawLiveList(){
 					<th style="width: 120px;">動画リンク</th>
 				</tr>
 			</thead>
-			<tbody id="LiveList-result"></tbody>
+			<tbody id="LiveList-result"><tr><td colspan="4" style="padding: 10px; vertical-align: top; font-size: large; color: #666; ">プルダウンメニューから期間を選択してください。</td></tr></tbody>
 		</table>
 	</div>
 </section>
@@ -277,7 +330,22 @@ function DrawLiveList(){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
-		<summary><span class="date">2023/08/23</span> - データ追加</summary>
+		<summary><span class="date">2023/11/18</span> - データ追加・改修</summary>
+		<div>
+			<span class="new"></span>2023/11/27までの配信（予定分含む）を掲載<br>
+			<span class="new"></span>中止となった配信の情報に背景色を付与<br>
+			<span class="fix"></span>「配信一覧」を期間を選択して表示するように変更<br>
+			<span class="fix"></span>スマートフォン等のデバイスからの見え方を調整
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2023/10/25</span> - データ追加</summary>
+		<div>
+			<span class="new"></span>2023/10/26までの配信（予定分含む）を掲載
+		</div>
+	</details>
+	<details>
+		<summary><span class="date">2023/09/12</span> - データ追加</summary>
 		<div>
 			<span class="new"></span>2023/9/16までの配信（予定分含む）を掲載
 		</div>
@@ -320,7 +388,7 @@ function loadScript(src, callback) {
 loadScript("data/hasu_live.js", function() {
 	const TimeOutputStart = performance.now();
 
-	DrawLiveList();
+	//DrawLiveList();
 
 	//◆「Now Loading...」解除
 	document.getElementById("Loading").style.display = "none";
