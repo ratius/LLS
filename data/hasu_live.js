@@ -403,7 +403,7 @@ const LiveList = [
 	'date': new Date('2023-08-30'),
 	'title': '103期8月度Fes×LIVE',
 	'tube': 'dL3VNPMYzzQ&t=4323',
-	'setlist': ['ド！ド！ド！', 'ハクチューアラモード', 'MC', 'Mirage Voyage', '眩耀夜行', 'ココン東西', 'MC', '夏めきペイン', '永遠のEuphoria', 'MC'],
+	'setlist': ['ド！ド！ド！', 'ハクチューアラモード', 'MC', 'Mirage Voyage', '眩耀夜行', 'ココン東西', 'MC', '夏めきペイン', '永遠のEuphoria'],
 	'tag': ['live', 'Kaho', 'Sayaka', 'Kozue', 'Tsuzuri', 'Rurino', 'Megumi'],
 	'desc': 'ライブ会場は、徳光海岸の特設ステージ。ついに慈も参戦し、出演は6人に！'
 },
@@ -432,7 +432,7 @@ const LiveList = [
 	'date': new Date('2023-09-07'),
 	'title': '本のお話がした〜い！',
 	'tube': '5u-Fe414jjM',
-	'tag': ['meets', 'Kaho', 'Sayaka', 'Kozue', 'Tsuzuri', 'Rurino', 'Megumi'],
+	'tag': ['meets', 'Kaho'],
 	'desc': '花帆の個人配信。花帆が好きな本のお話で盛り上がる！ 花帆はファンタジー小説が好きな様子？<br>本配信内で、花帆の好きな作品として『ダレン・シャン』『クロニクル 千古の闇』『シティーハンター』『創竜伝』『心霊探偵 八雲』『レディー・ガンナー』の6作品が挙げられた。'
 },
 {
@@ -447,7 +447,7 @@ const LiveList = [
 	'title': '蓮ノ空２年生の会',
 	'tube': 'O2LOfOhevsE',
 	'tag': ['meets', 'Kozue', 'Tsuzuri', 'Megumi'],
-	'desc': ''
+	'desc': '約2ヶ月ぶり（2023/07/06参照）となる蓮ノ空２年生の会。3人のことをもっと知ってもらおう！'
 },
 {
 	'date': new Date('2023-09-14'),
@@ -461,35 +461,35 @@ const LiveList = [
 	'title': '温泉旅行特別配信：スリーズブーケ',
 	'tube': 'mu8Y3pydIy4',
 	'tag': ['meets', 'Kaho',  'Kozue',],
-	'desc': 'この配信ではWith×MEETS AFTERは行われなかった。'
+	'desc': '{{L:ゆのくに天祥:https://yunokunitensyo.jp}}から配信するスリーズブーケ。先に活動記録第11話を視聴しておくことを推奨。<br>1日に2回の配信が行われたのはこの日が初めてである。<br>この配信ではWith×MEETS AFTERは行われなかった。'
 },
 {
 	'date': new Date('2023-09-16'),
 	'title': '温泉旅行特別配信：DOLLCHESTRA',
 	'tube': '5BI3IbNxeUo',
 	'tag': ['meets', 'Sayaka', 'Tsuzuri'],
-	'desc': 'この配信ではWith×MEETS AFTERは行われなかった。'
+	'desc': 'ゆのくに天祥から配信するDOLLCHESTRA。先に活動記録第11話を視聴しておくことを推奨。<br>「私(さやか)が便利で、慈先輩が優しいなの、納得がいかないんですけど。」「さやは便利で優しい。」<br>この配信ではWith×MEETS AFTERは行われなかった。'
 },
 {
 	'date': new Date('2023-09-18'),
 	'title': 'だるまさんローリング',
 	'tube': 'EGpQ1bXaO90',
 	'tag': ['meets', 'Tsuzuri'],
-	'desc': ''
+	'desc': 'スクールアイドルコネクトのコメント機能を使って、綴理と「だるまさんがころんだ」ゲームをしよう！'
 },
 {
 	'date': new Date('2023-09-23'),
 	'title': 'たまには雑談など。',
 	'tube': 'EGmEAcW9Daw',
 	'tag': ['meets', 'Kozue'],
-	'desc': ''
+	'desc': '梢の個人配信。機械音痴な梢の設定ミスで、今日の配信はずいぶんとアップになっていて…？<br>With×MEETS AFTERは更にどアップ。'
 },
 {
 	'date': new Date('2023-09-24'),
 	'title': '勝負だよ、瑠璃乃ちゃん！',
 	'tube': 'CORz7DeojmE',
 	'tag': ['meets', 'Kaho', 'Rurino'],
-	'desc': '花帆と瑠璃乃が、三番勝負で対決！'
+	'desc': '花帆と瑠璃乃が「体じゃんけん」「ぐるぐる体幹対決」「英語禁止ゲーム」の三番勝負で対決！'
 },
 {
 	'date': new Date('2023-09-27'),
@@ -502,7 +502,7 @@ const LiveList = [
 	'date': new Date('2023-09-28'),
 	'title': '103期9月度Fes×LIVE',
 	'tube': 'KL5sO3N8H-4&t=3930s',
-	'setlist': ['夏めきペイン', 'MC', 'Take It Over', '素顔のピクセル', 'アイデンティティ', 'MC', 'ド！ド！ド！', 'ツキマカセ', 'フォーチュンムービー', 'Dream Believers', 'MC'],
+	'setlist': ['夏めきペイン', 'MC', 'Take It Over', '素顔のピクセル', 'アイデンティティ', 'MC', 'ド！ド！ド！', 'ツキマカセ', 'フォーチュンムービー', 'Dream Believers'],
 	'tag': ['live', 'Kaho', 'Sayaka', 'Kozue', 'Tsuzuri', 'Rurino', 'Megumi'],
 	'desc': 'ライブ会場は、蓮ノ空女学院の音楽堂。3ユニットが「伝統曲」を披露する。'
 },
@@ -511,28 +511,28 @@ const LiveList = [
 	'title': '9月Fes×LIVE振り返り配信',
 	'tube': 'mAc8zRdThiE',
 	'tag': ['meets', 'Kaho', 'Sayaka', 'Kozue', 'Tsuzuri', 'Rurino', 'Megumi'],
-	'desc': ''
+	'desc': '先日行われた103期9月度Fes×LIVEの振り返り。そして、来月度Fes×LIVEの予告も。'
 },
 {
 	'date': new Date('2023-10-02'),
 	'title': 'ふたりでセリフ読み。',
 	'tube': 'PQgocIrnhtQ',
 	'tag': ['meets', 'Sayaka', 'Tsuzuri'],
-	'desc': ''
+	'desc': '9月18日の配信で予告されていた「セリフ朗読」。みんなから募集されたセリフを2人で読み上げる！'
 },
 {
 	'date': new Date('2023-10-05'),
 	'title': 'お話ししよ～',
-	'tube': 'HcKQfm3d8HA',
+	'tube': 'HcKQfm3d8HA&t=590s',
 	'tag': ['meets', 'Megumi'],
-	'desc': 'この配信は、蓮ノ空女学院スクールアイドルクラブ公式YouTubeでも同時配信された。YouTube上では、アーカイブは「動画」ではなく「ライブ」タブにある。'
+	'desc': '慈ちゃんと雑談！ 主にゲームの話題。<br>この配信は、蓮ノ空女学院スクールアイドルクラブ公式YouTubeでも同時配信された。YouTube上では、アーカイブは「動画」ではなく「ライブ」タブにある。'
 },
 {
 	'date': new Date('2023-10-07'),
 	'title': 'カメラを、持ってみる。',
 	'tube': 'zi_YtE0YYNw',
 	'tag': ['meets', 'Tsuzuri'],
-	'desc': ''
+	'desc': '綴理の手持ちカメラと共に、部室を360度探検しよう！'
 },
 {
 	'date': new Date('2023-10-09'),
@@ -614,7 +614,7 @@ const LiveList = [
 	'desc': ''
 },
 {
-	'date': new Date('2023-11-07'),
+	'date': new Date('2023-11-09'),
 	'title': 'そういえば半年経ちましたね',
 	'tube': 'aumJ-uF9B6I',
 	'tag': ['meets', 'Sayaka'],
@@ -630,27 +630,84 @@ const LiveList = [
 {
 	'date': new Date('2023-11-13'),
 	'title': '何か拾った。',
-	'tube': '',
+	'tube': 'cJpPeaRyWCU',
 	'tag': ['meets', 'Tsuzuri', 'Rurino'],
 	'desc': '綴理が拾ったのはだるま……？ 否、石川県の観光PRマスコットキャラクターの「{{L:ひゃくまんさん:https://hyakumansan.jp}}」！<br>この配信ではWith×MEETS AFTERは行われなかった。'
 },
 {
 	'date': new Date('2023-11-16'),
 	'title': '夕霧 綴理生誕祭',
-	'tube': '',
+	'tube': 'w5DbT9nxDRc',
 	'tag': ['meets', 'Kaho', 'Sayaka', 'Kozue', 'Tsuzuri', 'Rurino', 'Megumi'],
 	'desc': '11月16日は綴理ちゃんの誕生日！ みんなでお祝いしよう！<br>先日のお礼か、この配信から蓮ノ空の部室に小さな「ひゃくまんさん」の置物が増えている。'
 },
 {
 	'date': new Date('2023-11-23'),
 	'title': 'かほとめぐです♡',
-	'tube': '',
+	'tube': 'GUjGfYWubc4',
 	'tag': ['meets', 'Kaho', 'Megumi'],
 	'desc': ''
 },
 {
 	'date': new Date('2023-11-27'),
 	'title': '11月度Fes×LIVE直前配信',
+	'tube': 'QkjKcaaSfA8',
+	'tag': ['meets', 'Kaho', 'Sayaka', 'Kozue', 'Tsuzuri', 'Rurino', 'Megumi'],
+	'desc': '毎月恒例となったFes×LIVE直前配信。今回は梢ではなく、慈が進行役を担当。Fes×LIVE当日の投票企画の告知も。'
+},
+{
+	'date': new Date('2023-11-29'),
+	'title': '103期11月度Fes×LIVE',
+	'tube': '',
+	'tag': ['live', 'Kaho', 'Sayaka', 'Kozue', 'Tsuzuri', 'Rurino', 'Megumi'],
+	'desc': '今月のFes×LIVEは、金沢城からお届け！ 1曲目の「On your mark」の後に衣装投票が行われ、選ばれた衣装に着替えてユニット曲が披露された。',
+	'setlist': ['On your mark', 'MC', 'KNOT', 'ド！ド！ド！', 'Holiday∞Holiday', 'MC', 'ツバサ・ラ・リベルテ', 'MC']
+},
+{
+	'date': new Date('2023-12-02'),
+	'title': '村野さやかのラジオ 第６回',
+	'tube': '8nfk2NkIjLY',
+	'tag': ['meets', 'Sayaka', 'Rurino'],
+	'desc': ''
+},
+{
+	'date': new Date('2023-12-04'),
+	'title': 'もしもみんながファンタジーの世界にいたら…',
+	'tube': 'XytOnKYX_64',
+	'tag': ['meets', 'Kaho'],
+	'desc': '当初は綴理の単独配信の予定だった{{X:当初の予定表:1729017211476472184}}が、諸般の事情により、花帆の単独配信に変更された。{{X:出演者変更のお知らせ:1730196225448632804}}'
+},
+{
+	'date': new Date('2023-12-07'),
+	'title': '梢先輩に「気品」を学ぼう！',
+	'tube': '',
+	'tag': ['meets', 'Kozue', 'Rurino'],
+	'desc': ''
+},
+{
+	'date': new Date('2023-12-11'),
+	'title': '完全ノープラン雑談！',
+	'tube': '',
+	'tag': ['meets', 'Kaho'],
+	'desc': ''
+},
+{
+	'date': new Date('2023-12-13'),
+	'title': 'ハロめぐちゃんねる年末スペシャル！',
+	'tube': 'lr94xePQ8qA',
+	'tag': ['meets', 'Megumi'],
+	'desc': 'この配信は、蓮ノ空女学院スクールアイドルクラブ公式YouTubeでも同時配信された。YouTube上では、アーカイブは「動画」ではなく「ライブ」タブにある。'
+},
+{
+	'date': new Date('2023-12-16'),
+	'title': '蓮ノ空を紹介させてください',
+	'tube': 'QRXO3FoWLG4',
+	'tag': ['meets', 'Kozue'],
+	'desc': 'この配信は、蓮ノ空女学院スクールアイドルクラブ公式YouTubeでも同時配信された。YouTube上では、アーカイブは「動画」ではなく「ライブ」タブにある。'
+},
+{
+	'date': new Date('2023-12-20'),
+	'title': '藤島 慈生誕祭！',
 	'tube': '',
 	'tag': ['meets', 'Kaho', 'Sayaka', 'Kozue', 'Tsuzuri', 'Rurino', 'Megumi'],
 	'desc': ''
@@ -659,7 +716,7 @@ const LiveList = [
 
 /*
 {
-	'date': new Date('2023-11-00'),
+	'date': new Date('2023-12-00'),
 	'title': '',
 	'tube': '',
 	'tag': ['meets', 'Kaho', 'Sayaka', 'Kozue', 'Tsuzuri', 'Rurino', 'Megumi'],
