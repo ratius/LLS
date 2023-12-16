@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta charset="utf-8">
+
+<meta property="og:url" content="https://ratius.github.io/LLS/llsif2_theater.html">
+<meta property="og:title" content="スクフェス2 毎日劇場 データベース | ラブライブ！ストレージ">
+<meta property="og:type" content="website">
+<meta property="og:description" content="スクフェス2の毎日劇場のまとめ。">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@ratius55">
+<meta name="twitter:creator" content="@ratius55">
+<meta name="twitter:title" content="スクフェス2 毎日劇場 データベース | ラブライブ！ストレージ">
+<meta name="twitter:description" content="スクフェス2の毎日劇場のまとめ。">
+
+<meta name="viewport" content="width=800">
+
+<title>スクフェス2 毎日劇場 データベース | ラブライブ！ストレージ</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+<link rel="stylesheet" href="main.css">
+<style><!--
+p{
+	margin: 15px 10px;
+}
+
+#Narrower {
+	border: solid 2px #b9a;
+	font-size: x-large;
+	font-weight: bold;
+	padding: 5px;
+	margin-right: 10px;
+}
+
+#OutputArea {
+	border: solid 3px #a89;
+	width: calc(100% - 10px);
+	min-width: 480px;
+	max-width: 1200px;
+	height: calc(90vh - 120px);
+	overflow-y: scroll;
+	background-color: white;
+}
+
+#OutputTable {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#OutputTable td, #OutputTable th{
+	padding: 4px 10px;
+}
+
+#OutputTable .row1{
+	background-color: #fde;
+	border-bottom: solid 1px #c0b0b8;
+}
+
+#OutputTable .date{
+	width: 100px;
+	font-size: 95%;
+	background-color: #eee;
+	color: #666;
+	border-right: solid 1px #999;
+}
+
+#OutputTable .title{
+	position: relative;
+	width: 30%;
+	color: #403038;
+	text-align: left;
+}
+
+#OutputTable .has_text {
+	background-color: #fac;
+	clip-path: polygon(0% 0%, calc(100% - 10px) 0%, 100% 50%, calc(100% - 10px) 100%, 0% 100%);
+	cursor: pointer;
+}
+
+#OutputTable .memo{
+	font-size: small;
+	color: #666;
+}
+
+#OutputTable .date, #OutputTable .tag {
+	border-bottom: solid 2px #999;
+}
+#OutputTable .memo, #OutputTable .tag {
+	border-right: solid 1px #999;
+}
+
+.RoundButton {
+	display: inline-block;
+	margin: 1px auto;
+	padding: 0px 6px;
+	height: 22px;
+	border: 2px solid;
+	border-radius: 50vh;
+}
+
+.SquareButton {
+	display: inline-block;
+	margin: 1px auto;
+	padding: 0px 6px;
+	height: 22px;
+	border: 2px solid;
+}
+
+#Modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+#Modal-Container {
+	position: relative;
+	width: calc(100% - 200px);
+	min-width: 300px;
+	max-width: 1000px;
+	height: calc(100% - 100px);
+	min-height: 400px;
+	max-height: 80%;
+	background-color: #fde;
+	border: solid 2px #423;
+	border-radius: 20px;
+}
+
+#Modal-TitleBox{
+	height: 50px;
+	margin: 15px 40px;
+	background-color: #a47;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	overflow-x: hidden;
+}
+
+#Modal-Title{
+	font-size: 180%;
+	color: white;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+#Modal-ReaderBox {
+	height: calc(100% - 100px);
+	margin: auto 28px;
+	overflow-y: scroll;
+	overscroll-behavior-y: contain;
+	background: white;
+	border: 2px solid #999;
+}
+
+#Modal-Text {
+	padding: 10px;
+}
+
+#Modal-Text > hr {
+	height: 0px; 
+	border: 1px solid #bbb;
+}
+
+#Modal-Text > p {
+	margin: 5px 5px 5px 30px;
+}
+
+#Modal-CloseButton {
+	position: absolute;
+	top: -25px;
+	right: -25px;
+	width: 46px;
+	height: 46px;
+	background: #ddd;
+	border: solid 2px #423;
+	border-radius: 50%;
+	font-size: 200%;
+	text-align: center;
+	line-height: 50px;
+	user-select: none;
+}
+
+.fadeout{
+	animation: fadeout-anim 0.2s forwards;
+}
+
+@keyframes fadeout-anim {
+	0% {opacity: 1;}
+	100% { opacity: 0;}
+}
+
+--></style>
+<script><!--
+//■デバッグモード判定
+let isDebugMode = false;
+const Parameter = location.search.substring(1).split('&');
+if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
+
+//■■各種データ定義
+//■タグデータ
+const TagData = {
+	"Honoka":  {"name": "穂乃果",  "r":243, "g":133, "b":  0, "style": "Round"},
+	"Eli":     {"name": "絵里",    "r": 46, "g":191, "b":212, "style": "Round"},
+	"Kotori":  {"name": "ことり",  "r":166, "g":154, "b":154, "style": "Round"},
+	"Umi":     {"name": "海未",    "r":  9, "g": 77, "b":202, "style": "Round"},
+	"Rin":     {"name": "凛",      "r":219, "g":212, "b": 30, "style": "Round"},
+	"Maki":    {"name": "真姫",    "r":205, "g": 34, "b": 16, "style": "Round"},
+	"Nozomi":  {"name": "希",      "r":160, "g": 43, "b":212, "style": "Round"},
+	"Hanayo":  {"name": "花陽",    "r": 59, "g":203, "b": 69, "style": "Round"},
+	"Nico":    {"name": "にこ",    "r":211, "g": 27, "b": 96, "style": "Round"},
+
+	"Chika":   {"name": "千歌",    "r":236, "g":116, "b": 28, "style": "Round"},
+	"Riko":    {"name": "梨子",    "r":233, "g":114, "b":132, "style": "Round"},
+	"Kanan":   {"name": "果南",    "r": 13, "g":148, "b":139, "style": "Round"},
+	"Dia":     {"name": "ダイヤ",  "r":170, "g":  0, "b": 40, "style": "Round"},
+	"You":     {"name": "曜",      "r": 56, "g":153, "b":220, "style": "Round"},
+	"Yoshiko": {"name": "善子",    "r":151, "g":160, "b":172, "style": "Round"},
+	"Hanamaru":{"name": "花丸",    "r":226, "g":181, "b":  0, "style": "Round"},
+	"Mari":    {"name": "鞠莉",    "r":148, "g": 35, "b":152, "style": "Round"},
+	"Ruby":    {"name": "ルビィ",  "r":234, "g": 75, "b":162, "style": "Round"},
+
+	"Ayumu":   {"name": "歩夢",    "r":246, "g":150, "b":201, "style": "Round"},
+	"Kasumi":  {"name": "かすみ",  "r":213, "g":222, "b":112, "style": "Round"},
+	"Shizuku": {"name": "しずく",  "r":138, "g":204, "b":228, "style": "Round"},
+	"Karin":   {"name": "果林",    "r": 42, "g": 20, "b":180, "style": "Round"},
+	"Ai":      {"name": "愛",      "r":232, "g": 89, "b": 21, "style": "Round"},
+	"Kanata":  {"name": "彼方",    "r":156, "g": 94, "b":223, "style": "Round"},
+	"Setsuna": {"name": "せつ菜",  "r":179, "g":  6, "b":  6, "style": "Round"},
+	"Emma":    {"name": "エマ",    "r":143, "g":218, "b":121, "style": "Round"},
+	"Rina":    {"name": "璃奈",    "r":158, "g":154, "b":192, "style": "Round"},
+	"Shioriko":{"name": "栞子",    "r": 18, "g":158, "b":112, "style": "Round"},
+	"Mia":     {"name": "ミア",    "r":169, "g":168, "b":152, "style": "Round"},
+	"Lanzhu":  {"name": "嵐珠",    "r":246, "g":153, "b":146, "style": "Round"},
+	"Yu":      {"name": "侑",      "r":195, "g":195, "b":195, "style": "Round"},
+
+	"Kanon":   {"name": "かのん"  ,"r":242, "g": 99, "b":  0, "style": "Round"},
+	"Keke":    {"name": "可可"    ,"r": 58, "g":255, "b":243, "style": "Round"},
+	"Chisato": {"name": "千砂都"  ,"r":255, "g": 58, "b":107, "style": "Round"},
+	"Sumire":  {"name": "すみれ"  ,"r": 38, "g":228, "b": 17, "style": "Round"},
+	"Ren":     {"name": "恋"      ,"r":  0, "g":  0, "b":109, "style": "Round"},
+	"Kinako":  {"name": "きな子"  ,"r":219, "g":206, "b":  0, "style": "Round"},
+	"Mei":     {"name": "メイ"    ,"r":207, "g":  0, "b":  0, "style": "Round"},
+	"Shiki":   {"name": "四季"    ,"r": 76, "g":255, "b":176, "style": "Round"},
+	"Natsumi": {"name": "夏美"    ,"r":234, "g":  0, "b":155, "style": "Round"},
+	"Wien":    {"name": "ウィーン","r":228, "g":157, "b":253, "style": "Round"},
+	"Tomari":  {"name": "冬毬"    ,"r": 76, "g":210, "b":226, "style": "Round"},
+	
+	"Season":     {"name": "季節の行事", "r":100, "g":140, "b":160, "style": "Square"},
+	"Birthday":   {"name": "誕生日",     "r":100, "g":140, "b":160, "style": "Square"},
+	"Live":       {"name": "ライブ",     "r":100, "g":140, "b":160, "style": "Square"}
+};
+
+//■ソート対象
+const SortTarget = [
+{"name": "2023年", "tag": "year-2023"},
+//{"name": "2024年", "tag": "year-2024"},
+{"name": "----"},
+{"name": "出演：高坂 穂乃果", "tag": "Honoka"},
+//{"name": "出演：絢瀬 絵里", "tag": "Eli"},
+//{"name": "出演：南 ことり", "tag": "Kotori"},
+{"name": "出演：園田 海未", "tag": "Umi"},
+//{"name": "出演：星空 凛", "tag": "Rin"},
+{"name": "出演：西木野 真姫", "tag": "Maki"},
+{"name": "出演：東條 希", "tag": "Nozomi"},
+//{"name": "出演：小泉 花陽", "tag": "Hanayo"},
+//{"name": "出演：矢澤 にこ", "tag": "Nico"},
+{"name": "出演：高海 千歌", "tag": "Chika"},
+{"name": "出演：桜内 梨子", "tag": "Riko"},
+{"name": "出演：松浦 果南", "tag": "Kanan"},
+//{"name": "出演：黒澤 ダイヤ", "tag": "Dia"},
+//{"name": "出演：渡辺 曜", "tag": "You"},
+{"name": "出演：津島 善子", "tag": "Yoshiko"},
+{"name": "出演：国木田 花丸", "tag": "Hanamaru"},
+//{"name": "出演：小原 鞠莉", "tag": "Mari"},
+{"name": "出演：黒澤 ルビィ", "tag": "Ruby"},
+{"name": "出演：上原 歩夢", "tag": "Ayumu"},
+//{"name": "出演：中須 かすみ", "tag": "Kasumi"},
+//{"name": "出演：桜坂 しずく", "tag": "Shizuku"},
+//{"name": "出演：朝香 果林", "tag": "Karin"},
+//{"name": "出演：宮下 愛", "tag": "Ai"},
+//{"name": "出演：近江 彼方", "tag": "Kanata"},
+//{"name": "出演：優木 せつ菜", "tag": "Setsuna"},
+{"name": "出演：エマ・ヴェルデ", "tag": "Emma"},
+{"name": "出演：天王寺 璃奈", "tag": "Rina"},
+//{"name": "出演：三船 栞子", "tag": "Shioriko"},
+//{"name": "出演：ミア・テイラー", "tag": "Mia"},
+//{"name": "出演：鐘 嵐珠", "tag": "Lanzhu"},
+{"name": "出演：高咲 侑", "tag": "Yu"},
+{"name": "出演：澁谷 かのん", "tag": "Kanon"},
+//{"name": "出演：唐 可可", "tag": "Keke"},
+{"name": "出演：嵐 千砂都", "tag": "Chisato"},
+//{"name": "出演：平安名 すみれ", "tag": "Sumire"},
+//{"name": "出演：葉月 恋", "tag": "Ren"},
+//{"name": "出演：桜小路 きな子", "tag": "Kinako"},
+//{"name": "出演：米女 メイ", "tag": "Mei"},
+//{"name": "出演：若菜 四季", "tag": "Shiki"},
+//{"name": "出演：鬼塚 夏美", "tag": "Natsumi"},
+//{"name": "出演：ウィーン・マルガレーテ", "tag": "Wien"},
+//{"name": "出演：鬼塚 冬毬", "tag": "Tomari"},
+{"name": "----"},
+//{"name": "テーマ：季節の行事", "tag": "Season"},
+{"name": "テーマ：誕生日", "tag": "Birthday"},
+//{"name": "テーマ：ライブ", "tag": "Live"},
+//{"name": "----"},
+//{"name": "シリーズ：堕天使ヨハネ", "tag": "Yohane"},
+];
+
+//■■関数
+//■キャラクター名のボタン
+function DrawCharName(character){
+	if(character in TagData){
+		const temp = TagData[character];
+		let Output = '<span class="' + temp.style + 'Button" '
+		+ 'style="background-color:rgb('
+		+ Math.floor((temp.r + 510)/3) + ','
+		+ Math.floor((temp.g + 510)/3) + ','
+		+ Math.floor((temp.b + 510)/3) + '); '
+		+ ' border-color: rgb(' + temp.r + ',' + temp.g + ',' + temp.b + ');">'
+		+ temp.name + '<\/span>';
+		return Output;
+	} else { //存在しないなら
+		console.log("キャラクターID " + character + " は存在しません");
+		return false;
+	}
+}
+
+//■条件に合致するストーリーを抜き出してリストアップ
+function DrawStoryList(tag){
+	Output = "";
+	result = new Array();
+	if(tag === "undefined"){
+		return;
+	} else if(tag.substring(0,5) === "year-"){ //「年」が選択された場合
+		result = TheaterLog.filter(temp => temp.date.substring(0,4) === tag.substring(5));
+	} else {
+		result = TheaterLog.filter(temp => temp.tag.indexOf(tag) != -1);
+	}
+	for(temp1 of result){
+		Output += '<tr class="row1">\n\t<th class="date" rowspan="2">' + temp1.date + '<\/th>\n'
+		+ '<th class="title'
+		+ (temp1.text ? ' has_text" onclick="MakeModal(this.innerHTML);">' : '">') + temp1.title
+		+ '<\/th>\t<td class="memo">' + (temp1.memo ? temp1.memo : '') + '<\/td>\n<\/tr>\n'
+		+ '\n<tr>\n\t<td colspan="2" class="tag">\n';
+		for(temp2 of temp1.tag){
+			Output += '\t' + DrawCharName(temp2) + '\n';
+		}		
+		Output += '\t<\/td>\n<\/tr>\n';
+	}
+	document.getElementById("OutputField").innerHTML = Output;
+}
+
+//■タイトル名から毎日劇場の本文を探し、ポップアップウィンドウに描画
+function MakeModal(title, code){
+	if(title === undefined){ return false;}
+	if(title === ""){ return false;}
+
+	//該当話を探してくる。1つだけでなければreturn
+	let result = TheaterLog.filter(temp => temp.title === title);
+	if(result.length != 1){ return false;}
+
+	//タイトル描画
+	document.getElementById("Modal-Title").innerHTML = title;
+	
+	//テキスト描画
+	let Output = "";
+	const TextLog = result[0].text.split('\n');
+	for(i of TextLog){
+		i = i.split(/>>|\t/);
+		Output += DrawCharName(result[0].tag[i[0]]) + '<br><p>' + i[1] + '<\/p><hr>';
+	}
+	document.getElementById("Modal-Text").innerHTML = Output;
+	
+	//ポップアップを表示する
+	document.getElementById("Modal").classList.remove("fadeout");
+	document.getElementById("Modal").style.display = "flex";
+}
+
+//■モーダルウィンドウを閉じる
+function CloseModal(target){
+	let ModalBG = document.getElementById('Modal');
+	if(target === null){ //ターゲット指定
+		if(target !== event.target.closest('#Modal-Container')){
+			return false;
+		}
+	}
+	console.log(target);
+	ModalBG.classList.add("fadeout");
+	setTimeout(function(){
+		document.getElementById("Modal-ReaderBox").scrollTop = 0;
+		ModalBG.style.display = "none";
+	}, 200);
+}
+
+--></script>
+</head>
+<body>
+<header>
+	<h2 id="MainTitle">スクフェス2 毎日劇場アーカイブ</h2>
+</header>
+
+<section id="Foreword">
+	<h3 class="foreword">まえがき</h3>
+	<p>
+		スクフェス2で配信されていた「毎日劇場」のまとめです。<br>
+		下部のプルダウンメニューから見たいカテゴリを選択すると、該当するストーリータイトル・登場キャラクター等が表示されます。<br>
+	</p>
+</section>
+
+<div id="RightMenu">
+	<ul>
+		<li><strong>目次</strong></li>
+		<li><hr></li>
+		<li><a href="#Foreword">まえがき</a></li>
+		<li><a href="#StoryViewer">毎日劇場一覧</a></li>
+		<li><a href="#History">更新履歴</a></li>
+	</ul>
+</div>
+
+<div id="Loading">
+	<h4>Now Loading...</h4>
+	このコンテンツはJavaScriptを使用しています。<br>
+	いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
+	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
+</div>
+
+<section id="StoryViewer" style="display: none;">
+	<h3 class="muse">毎日劇場一覧</h3>
+	<p>
+		下部のプルダウンメニューから見たいカテゴリを選択すると、該当するストーリータイトル・登場キャラクター等が表示されます。<br>
+		タイトル部分が濃くなっているものは、タイトル部分をクリックするとテキストが表示されます。
+	</p>
+</section>
+
+<div id="Modal" style="display: none;" onclick="CloseModal(null)";>
+	<div id="Modal-Container">
+		<div id="Modal-CloseButton" onclick="CloseModal();">&#10006;</div>
+		<div id="Modal-TitleBox">
+			<span id="Modal-Title">タイトル</span>
+		</div>
+		<div id="Modal-ReaderBox">
+			<div id="Modal-Text">本文</div>
+		</div>
+	</div>
+</div>
+
+<section id="History">
+<h3 class="niji">更新履歴</h3>
+<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
+<div id="history2">
+	<details open>
+		<summary class="important"><span class="date">2022/12/16</span> - 公開</summary>
+		<div>
+			<span class="new"></span>公開
+		</div>
+	</details>
+</div>
+</section>
+
+<nav>
+<p><a id="BackToMain" href="index.html">トップページに戻る。</a></p>
+</nav>
+
+<script><!--
+function loadScript(src, callback) {
+    let done = false;
+    let head = document.getElementsByTagName('head')[0];
+    let script = document.createElement('script');
+    script.src = src;
+    head.appendChild(script);
+    // Attach handlers for all browsers
+    script.onload = script.onreadystatechange = function() {
+        if ( !done && (!this.readyState ||
+                this.readyState === "loaded" || this.readyState === "complete") ) {
+            done = true;
+            callback();
+            // Handle memory leak in IE
+            script.onload = script.onreadystatechange = null;
+            if ( head && script.parentNode ) {
+                head.removeChild( script );
+            }
+        }
+    };
+}
+
+loadScript("data/llsif2_theater.js", function() {
+	const TimeOutputStart = performance.now();
+	
+	let Output =
+	//◆絞り込みボタン
+	  '<div style="margin-bottom: 10px;">'
+	+ '<select id="Narrower" onChange="DrawStoryList(this.value)">\n<option value="undefined">(見たいカテゴリを選択)<\/option>';
+	for(i=0; i<SortTarget.length; i++){
+		Output += '<option value="'
+		+ (SortTarget[i].tag ? SortTarget[i].tag : 'undefined') + '">'
+		+ SortTarget[i].name + '<\/option>\n';
+	}
+	Output += '<\/select><\/div>\n'
+	+ '<div id="OutputArea"><table id="OutputTable"><tbody id="OutputField"><\/tbody><\/table><\/div>';
+	document.getElementById("StoryViewer").innerHTML += Output;
+	document.getElementById("StoryViewer").style.display = "block";
+
+	//◆「Now Loading...」解除
+	document.getElementById("Loading").style.display = "none";
+	
+	//■デバックモード時の処理
+	if(isDebugMode) {
+		//◆デバッグモードであることを表示
+		document.title = '[debug]' + document.title;
+		document.bgColor = '#dce';
+		
+		document.getElementById("MainTitle").innerHTML += "*";
+		document.getElementById("BackToMain").href += "?debug";
+		
+		//◆データの不具合チェック
+		const CheckBegin = 7;
+		let isError = 0;
+		for(i=CheckBegin; i<TheaterLog.length; i++){
+			const TextTemp1 = TheaterLog[i].text.split('\n');
+			for(j in TextTemp1){
+				const TextTemp2 = TextTemp1[j].split(/>>|\t/);
+				if(TextTemp2.length !== 2){
+					console.log('エラー：パラメータ数異常\n該当箇所：' + TheaterLog[i].date
+					 + '「' + TheaterLog[i].title + '」' + (Number(j)+1) + '行目');
+					isError++;
+					continue;
+				}
+				if(!isFinite(TextTemp2[0])){
+					console.log('エラー：登場人物が不正\n該当箇所：' + TheaterLog[i].date
+					 + '「' + TheaterLog[i].title + '」' + (Number(j)+1) + '行目');
+					isError++;
+				} else if(TextTemp2[0] > TheaterLog[i].tag.length){
+					console.log('エラー：登場人物のデータ範囲エラー\n該当箇所：' + TheaterLog[i].date
+					 + '「' + TheaterLog[i].title + '」' + (Number(j)+1) + '行目');
+					isError++;
+				}
+			}
+		}
+		if(isError > 0){
+			alert('' + isError + '件のエラーが見つかりました。コンソールを確認してください。');
+		}
+		//◆描画時間の出力
+		const TimeOutputEnd = performance.now();
+		console.log('スクフェス2 毎日劇場 データベース\n初期描画処理: ' + (TimeOutputEnd - TimeOutputStart) + ' ミリ秒');
+	}
+});
+--></script>
+</body>
+</html>

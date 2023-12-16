@@ -16,7 +16,7 @@ p {
 	width: 221px;
 	margin: 0 0 0 15px;
 	border: solid 1px #978;
-	z-index: 99;
+	z-index: 9;
 	background: linear-gradient(90deg, #fde 0%, white 50%);
 }
 #RightMenu > ul {
