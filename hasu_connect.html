@@ -56,6 +56,7 @@
 #LiveListTable {
 	border: solid 3px #e2067e;
 	background-color: rgba(226,126,176,0.1);
+	overscroll-behavior-y: contain;
 }
 
 #LiveListTable thead th {
@@ -330,6 +331,12 @@ function DrawLiveList(season){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2023/10/25</span> - データ追加</summary>
+		<div>
+			<span class="new"></span>2023/12/20までの配信（予定分含む）を掲載
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2023/11/18</span> - データ追加・改修</summary>
 		<div>
 			<span class="new"></span>2023/11/27までの配信（予定分含む）を掲載<br>
