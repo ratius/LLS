@@ -14,7 +14,7 @@
 <meta name="twitter:title" content="スクフェス2 毎日劇場 データベース | ラブライブ！ストレージ">
 <meta name="twitter:description" content="スクフェス2の毎日劇場のまとめ。">
 
-<meta name="viewport" content="width=800">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>スクフェス2 毎日劇場 データベース | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
@@ -264,11 +264,11 @@ const SortTarget = [
 //{"name": "出演：絢瀬 絵里", "tag": "Eli"},
 //{"name": "出演：南 ことり", "tag": "Kotori"},
 {"name": "出演：園田 海未", "tag": "Umi"},
-//{"name": "出演：星空 凛", "tag": "Rin"},
+{"name": "出演：星空 凛", "tag": "Rin"},
 {"name": "出演：西木野 真姫", "tag": "Maki"},
 {"name": "出演：東條 希", "tag": "Nozomi"},
 //{"name": "出演：小泉 花陽", "tag": "Hanayo"},
-//{"name": "出演：矢澤 にこ", "tag": "Nico"},
+{"name": "出演：矢澤 にこ", "tag": "Nico"},
 {"name": "出演：高海 千歌", "tag": "Chika"},
 {"name": "出演：桜内 梨子", "tag": "Riko"},
 {"name": "出演：松浦 果南", "tag": "Kanan"},
@@ -294,12 +294,12 @@ const SortTarget = [
 {"name": "出演：澁谷 かのん", "tag": "Kanon"},
 //{"name": "出演：唐 可可", "tag": "Keke"},
 {"name": "出演：嵐 千砂都", "tag": "Chisato"},
-//{"name": "出演：平安名 すみれ", "tag": "Sumire"},
+{"name": "出演：平安名 すみれ", "tag": "Sumire"},
 //{"name": "出演：葉月 恋", "tag": "Ren"},
 //{"name": "出演：桜小路 きな子", "tag": "Kinako"},
 //{"name": "出演：米女 メイ", "tag": "Mei"},
 //{"name": "出演：若菜 四季", "tag": "Shiki"},
-//{"name": "出演：鬼塚 夏美", "tag": "Natsumi"},
+{"name": "出演：鬼塚 夏美", "tag": "Natsumi"},
 //{"name": "出演：ウィーン・マルガレーテ", "tag": "Wien"},
 //{"name": "出演：鬼塚 冬毬", "tag": "Tomari"},
 {"name": "----"},
@@ -370,7 +370,7 @@ function MakeModal(title, code){
 	let Output = "";
 	const TextLog = result[0].text.split('\n');
 	for(i of TextLog){
-		i = i.split(/>>|\t/);
+		i = i.split('\t');
 		Output += DrawCharName(result[0].tag[i[0]]) + '<br><p>' + i[1] + '<\/p><hr>';
 	}
 	document.getElementById("Modal-Text").innerHTML = Output;
@@ -522,7 +522,7 @@ loadScript("data/llsif2_theater.js", function() {
 		for(i=CheckBegin; i<TheaterLog.length; i++){
 			const TextTemp1 = TheaterLog[i].text.split('\n');
 			for(j in TextTemp1){
-				const TextTemp2 = TextTemp1[j].split(/>>|\t/);
+				const TextTemp2 = TextTemp1[j].split('\t');
 				if(TextTemp2.length !== 2){
 					console.log('エラー：パラメータ数異常\n該当箇所：' + TheaterLog[i].date
 					 + '「' + TheaterLog[i].title + '」' + (Number(j)+1) + '行目');
