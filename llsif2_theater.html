@@ -3,16 +3,18 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
 <meta charset="utf-8">
 
+<meta name="description" content="スクフェス2で配信されていた「毎日劇場」のまとめです。">
+
 <meta property="og:url" content="https://ratius.github.io/LLS/llsif2_theater.html">
 <meta property="og:title" content="スクフェス2 毎日劇場アーカイブ | ラブライブ！ストレージ">
 <meta property="og:type" content="website">
-<meta property="og:description" content="スクフェス2の毎日劇場のまとめ。">
+<meta property="og:description" content="スクフェス2で配信されていた「毎日劇場」のまとめです。">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@ratius55">
 <meta name="twitter:creator" content="@ratius55">
 <meta name="twitter:title" content="スクフェス2 毎日劇場アーカイブ | ラブライブ！ストレージ">
-<meta name="twitter:description" content="スクフェス2の毎日劇場のまとめ。">
+<meta name="twitter:description" content="スクフェス2で配信されていた「毎日劇場」のまとめです。">
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -30,6 +32,7 @@ p{
 }
 
 #PullDownList {
+	max-width: 100%;
 	border: solid 2px #b9a;
 	font-size: x-large;
 	font-weight: bold;
@@ -40,59 +43,56 @@ p{
 #OutputArea {
 	border: solid 3px #a89;
 	width: calc(100% - 10px);
-	max-width: 1200px;
-	height: calc(90vh - 120px);
+	max-width: 1000px;
+	height: calc(100vh - 150px);
 	overflow-y: scroll;
 	background-color: white;
 }
 
-#OutputTable {
+#OutputArea article {
 	width: 100%;
-	border-collapse: collapse;
+	display: grid;
+	flex-wrap: wrap;
+	border-bottom: solid 1px #999;
 }
 
-#OutputTable td, #OutputTable th{
+#OutputArea .date, #OutputArea .title, #OutputArea .memo{
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
 	padding: 4px 10px;
 }
 
-#OutputTable .row1{
+#OutputArea .date{ /*日付入力欄*/
+	font-size: 95%;
+	font-weight: bold;
+	background-color: #eee;
+	color: #666;
+}
+#OutputArea .TitleContainer { /*タイトルとメモ*/
+	display: flex;
 	background-color: #fde;
 	border-bottom: solid 1px #c0b0b8;
 }
-
-#OutputTable .date{
-	width: 90px;
-	font-size: 95%;
-	background-color: #eee;
-	color: #666;
-	border-right: solid 1px #999;
-}
-
-#OutputTable .title{
-	position: relative;
-	width: 30%;
+#OutputArea .title { /*タイトル欄*/
+	width: 40%;
 	color: #403038;
-	text-align: left;
+	font-weight: bold;
 }
-
-#OutputTable .has_text {
+#OutputArea .has_text {
 	background-color: #fac;
 	clip-path: polygon(0% 0%, calc(100% - 10px) 0%, 100% 50%, calc(100% - 10px) 100%, 0% 100%);
 	cursor: pointer;
 }
-
-#OutputTable .memo{
+#OutputArea .memo { /*メモ欄*/
+	width: 60%;
 	font-size: small;
 	color: #666;
+	background-color: #fde;
 }
-
-#OutputTable .date, #OutputTable .tag {
-	border-bottom: solid 2px #999;
+#OutputArea .tag { /*タグ欄*/
+	padding: 4px 10px;
 }
-#OutputTable .memo, #OutputTable .tag {
-	border-right: solid 1px #999;
-}
-
 .RoundButton {
 	display: inline-block;
 	margin: 1px auto;
@@ -110,6 +110,7 @@ p{
 	border: 2px solid;
 }
 
+/* モーダルウィンドウ*/
 #Modal {
 	position: fixed;
 	top: 0;
@@ -124,15 +125,14 @@ p{
 
 #Modal-Container {
 	position: relative;
-	width: calc(100% - 200px);
-	min-width: 300px;
+	box-sizing: border-box;
 	max-width: 1000px;
 	height: calc(100% - 100px);
 	min-height: 400px;
 	max-height: 80%;
 	background-color: #fde;
-	border: solid 2px #423;
-	border-radius: 20px;
+	border-style: solid;
+	border-color: #423;
 }
 
 #Modal-TitleBox{
@@ -146,7 +146,6 @@ p{
 }
 
 #Modal-Title{
-	font-size: 180%;
 	color: white;
 	font-weight: bold;
 	white-space: nowrap;
@@ -176,17 +175,67 @@ p{
 
 #Modal-CloseButton {
 	position: absolute;
-	top: -25px;
-	right: -25px;
-	width: 46px;
-	height: 46px;
+	box-sizing: border-box;
+	width: 50px;
+	height: 50px;
 	background: #ddd;
 	border: solid 2px #423;
-	border-radius: 50%;
 	font-size: 200%;
 	text-align: center;
 	line-height: 50px;
 	user-select: none;
+}
+
+
+/* ■スマートフォン向けレイアウト */
+@media screen and (max-width: 599px) {
+	#OutputArea article:not(:last-child) {
+		border-bottom: solid 3px #999;
+	}
+	#OutputArea .date:before {
+		content: "▼";
+	}
+	#OutputArea .date {
+		width: 100%;
+		border-bottom: solid 1px #c0b0b8;
+	}
+	#OutputArea .tag {
+		width: 100%;
+	}
+	#Modal-Container {
+		width: 100%;
+		border-width: 2px 0;
+	}
+	#Modal-CloseButton {
+		top: -50px;
+		right: 0px;
+	}
+}
+
+/* ■PC向けレイアウト */
+@media screen and (min-width: 600px) {
+	#OutputArea article {
+		grid-template-columns: 120px auto;
+	}
+	#OutputArea .date {
+		justify-content: center;
+		width: 120px;
+		grid-row: span 2;
+		border-right: solid 1px #999;
+	}
+	#Modal-Container {
+		width: calc(100% - 100px);
+		border-radius: 20px;
+		border-width: 2px;
+	}
+	#Modal-CloseButton {
+		top: -25px;
+		right: -25px;
+		border-radius: 50%;
+	}
+	#Modal-Title{
+		font-size: 180%;
+	}
 }
 
 .fadeout{
@@ -265,47 +314,47 @@ const SortTarget = [
 //{"name": "2024年", "tag": "year-2024"},
 {"name": "----"},
 {"name": "出演：高坂 穂乃果", "tag": "Honoka"},
-//{"name": "出演：絢瀬 絵里", "tag": "Eli"},
-//{"name": "出演：南 ことり", "tag": "Kotori"},
+{"name": "出演：絢瀬 絵里", "tag": "Eli"},
+{"name": "出演：南 ことり", "tag": "Kotori"},
 {"name": "出演：園田 海未", "tag": "Umi"},
 {"name": "出演：星空 凛", "tag": "Rin"},
 {"name": "出演：西木野 真姫", "tag": "Maki"},
 {"name": "出演：東條 希", "tag": "Nozomi"},
-//{"name": "出演：小泉 花陽", "tag": "Hanayo"},
+{"name": "出演：小泉 花陽", "tag": "Hanayo"},
 {"name": "出演：矢澤 にこ", "tag": "Nico"},
 {"name": "出演：高海 千歌", "tag": "Chika"},
 {"name": "出演：桜内 梨子", "tag": "Riko"},
 {"name": "出演：松浦 果南", "tag": "Kanan"},
-//{"name": "出演：黒澤 ダイヤ", "tag": "Dia"},
-//{"name": "出演：渡辺 曜", "tag": "You"},
+{"name": "出演：黒澤 ダイヤ", "tag": "Dia"},
+{"name": "出演：渡辺 曜", "tag": "You"},
 {"name": "出演：津島 善子", "tag": "Yoshiko"},
 {"name": "出演：国木田 花丸", "tag": "Hanamaru"},
-//{"name": "出演：小原 鞠莉", "tag": "Mari"},
+{"name": "出演：小原 鞠莉", "tag": "Mari"},
 {"name": "出演：黒澤 ルビィ", "tag": "Ruby"},
 {"name": "出演：上原 歩夢", "tag": "Ayumu"},
-//{"name": "出演：中須 かすみ", "tag": "Kasumi"},
-//{"name": "出演：桜坂 しずく", "tag": "Shizuku"},
-//{"name": "出演：朝香 果林", "tag": "Karin"},
-//{"name": "出演：宮下 愛", "tag": "Ai"},
-//{"name": "出演：近江 彼方", "tag": "Kanata"},
-//{"name": "出演：優木 せつ菜", "tag": "Setsuna"},
+{"name": "出演：中須 かすみ", "tag": "Kasumi"},
+{"name": "出演：桜坂 しずく", "tag": "Shizuku"},
+{"name": "出演：朝香 果林", "tag": "Karin"},
+{"name": "出演：宮下 愛", "tag": "Ai"},
+{"name": "出演：近江 彼方", "tag": "Kanata"},
+{"name": "出演：優木 せつ菜", "tag": "Setsuna"},
 {"name": "出演：エマ・ヴェルデ", "tag": "Emma"},
 {"name": "出演：天王寺 璃奈", "tag": "Rina"},
-//{"name": "出演：三船 栞子", "tag": "Shioriko"},
-//{"name": "出演：ミア・テイラー", "tag": "Mia"},
-//{"name": "出演：鐘 嵐珠", "tag": "Lanzhu"},
+{"name": "出演：三船 栞子", "tag": "Shioriko"},
+{"name": "出演：ミア・テイラー", "tag": "Mia"},
+{"name": "出演：鐘 嵐珠", "tag": "Lanzhu"},
 {"name": "出演：高咲 侑", "tag": "Yu"},
 {"name": "出演：澁谷 かのん", "tag": "Kanon"},
-//{"name": "出演：唐 可可", "tag": "Keke"},
+{"name": "出演：唐 可可", "tag": "Keke"},
 {"name": "出演：嵐 千砂都", "tag": "Chisato"},
 {"name": "出演：平安名 すみれ", "tag": "Sumire"},
-//{"name": "出演：葉月 恋", "tag": "Ren"},
-//{"name": "出演：桜小路 きな子", "tag": "Kinako"},
-//{"name": "出演：米女 メイ", "tag": "Mei"},
-//{"name": "出演：若菜 四季", "tag": "Shiki"},
+{"name": "出演：葉月 恋", "tag": "Ren"},
+{"name": "出演：桜小路 きな子", "tag": "Kinako"},
+{"name": "出演：米女 メイ", "tag": "Mei"},
+{"name": "出演：若菜 四季", "tag": "Shiki"},
 {"name": "出演：鬼塚 夏美", "tag": "Natsumi"},
-//{"name": "出演：ウィーン・マルガレーテ", "tag": "Wien"},
-//{"name": "出演：鬼塚 冬毬", "tag": "Tomari"},
+{"name": "出演：ウィーン・マルガレーテ", "tag": "Wien"},
+{"name": "出演：鬼塚 冬毬", "tag": "Tomari"},
 {"name": "----"},
 //{"name": "テーマ：季節の行事", "tag": "Season"},
 {"name": "テーマ：誕生日", "tag": "Birthday"},
@@ -345,17 +394,19 @@ function DrawStoryList(tag){
 		result = TheaterLog.filter(temp => temp.tag.indexOf(tag) != -1);
 	}
 	for(temp1 of result){
-		Output += '<tr class="row1">\n\t<th class="date" rowspan="2">' + temp1.date + '<\/th>\n'
-		+ '<th class="title'
-		+ (temp1.text ? ' has_text" onclick="MakeModal(this.innerHTML);">' : '">') + temp1.title
-		+ '<\/th>\t<td class="memo">' + (temp1.memo ? temp1.memo : '') + '<\/td>\n<\/tr>\n'
-		+ '\n<tr>\n\t<td colspan="2" class="tag">\n';
+		Output += '<article>'
+		+ '<div class="date">' + temp1.date + '<\/div>\n'
+		+ '<div class="TitleContainer">\n'
+		+ '<div class="title'
+		+ (temp1.text ? ' has_text" onclick="MakeModal(this.innerHTML);">' : '">') + temp1.title + '<\/div>\n'
+		+ '<div class="memo">' + temp1.memo + '<\/div>\n<\/div>\n'
+		+ '<div class="tag">';
 		for(temp2 of temp1.tag){
 			Output += '\t' + DrawCharName(temp2) + '\n';
-		}		
-		Output += '\t<\/td>\n<\/tr>\n';
+		}
+		Output += '<\/div>\n<\/article>\n';
 	}
-	document.getElementById("OutputField").innerHTML = Output;
+	document.getElementById("OutputArea").innerHTML = Output;
 }
 
 //■タイトル名から毎日劇場の本文を探し、ポップアップウィンドウに描画
@@ -445,7 +496,6 @@ function CloseModal(target){
 		</select>
 	</div>
 	<div id="OutputArea">
-		<table id="OutputTable"><tbody id="OutputField"></tbody></table>
 	</div>
 </section>
 
@@ -466,6 +516,12 @@ function CloseModal(target){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2023/12/18</span> - スマートフォン用レイアウトを実装</summary>
+		<div>
+			<span class="new"></span>スマートフォン用レイアウトを実装
+		</div>
+	</details>
+	<details>
 		<summary class="important"><span class="date">2022/12/16</span> - 公開</summary>
 		<div>
 			<span class="new"></span>公開
