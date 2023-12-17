@@ -54,9 +54,43 @@ p{
 	#ButtonField::-webkit-scrollbar {
 		display: none;
 	}
+	#ProfileContainer > div{
+		flex-basis: 64px;
+		margin: 0 30px;
+	}
+	#ProfileTable{
+		max-width: 400px;
+	}
+	/* サイドストーリー */
+	.text_story {
+		background-color: #fde;
+		width: 670px;
+		height: 120px;
+		margin: 8px 0;
+		position: relative;
+		border-style: solid;
+		border-width: 2px 8px;
+		border-color: #d9b;
+		border-radius: 50vw;
+	}
+	.text_story > .face {
+		position: absolute;
+		top: 28px; 
+		left: 28px;
+	}
+	.text {
+		display: inline-block;
+		width: 550px;
+		height: 110px;
+		position: absolute;
+		top: 5px; 
+		left: 110px;
+		margin: 0;
+		font-size: 110%;
+	}
 }
 @media (max-width: 599px) {
-	#ButtonField::before {
+	#ButtonField.has_button::before {
 		position: sticky;
 		content: "";
 		left: 0;
@@ -67,7 +101,7 @@ p{
 		border-style: solid;
 		border-color: transparent #a89 transparent transparent;
 	}
-	#ButtonField::after {
+	#ButtonField.has_button::after {
 		position: sticky;
 		content: "";
 		right: 0;
@@ -78,15 +112,30 @@ p{
 		border-style: solid;
 		border-color: transparent transparent transparent #a89;
 	}
+	#ProfileContainer {
+		flex-direction: column;
+	}
+	#ProfileTable{
+		width: calc(100% - 2px);
+	}
+	.text_story {
+		margin: 8px;
+		padding-top: 10px;
+		border-top: 2px solid #999;
+	}
+	.text_story > .face {
+		display: none;
+	}
 }
 
 #OutputArea {
 	border: solid 3px #a89;
 	width: min(calc(100% - 22px), 800px);
-	height: calc(90vh - 130px);
+	height: calc(100vh - 200px);
 	overflow-y: scroll;
 	background-color: white;
 	padding: 0 10px;
+	overscroll-behavior-y: contain;
 }
 
 #OutputArea h3, #OutputArea h4 {
@@ -106,40 +155,29 @@ span.jump {
 	border-radius: 4px;
 }
 
-span.warning {
-	font-weight: bold;
-	background-color: #f88;
-	border-color: #933;
-}
-
-span.disabled {
-	color: #bbb;
-	background-color: #ddd;
-	border-color: #bbb;
-	cursor: not-allowed;
-}
-
 /*プロフィール*/
 #ProfileContainer {
-	max-width: 500px;
 	display: flex;
 	align-items: center;
 }
-#ProfileContainer > div{
-	flex-basis: 64px;
-	margin: 0 10px;
-}
-
-#ProfileContainer > table{
+#ProfileTable{
 	flex: 1;
 	font-size: 120%;
 	margin: 0 10px;
 	border-collapse: collapse;
 	border: 2px solid #ccc;
 }
-#ProfileContainer > table td{
+#ProfileTable td{
 	padding: 2px 8px;
 	border-bottom: 1px solid #ddd;
+}
+.face {
+	display: inline-block;
+	margin: auto;
+	width: 64px;
+	height: 64px;
+	background-image: url(img/students.png);
+	background-repeat: no-repeat;
 }
 
 /* テキスト関連 */
@@ -149,43 +187,6 @@ span.disabled {
 	padding: 5px 10px;
 	border: 2px solid #aaa;
 	border-radius: 8px;
-}
-/* サイドストーリー */
-
-.text_story {
-	background-color: #fde;
-	max-width: 750px;
-	height: 120px;
-	margin: 8px;
-	position: relative;
-	border-style: solid;
-	border-width: 2px 8px;
-	border-color: #d9b;
-	border-radius: 50vw;
-}
-
-.face {
-	display: inline-block;
-	margin: auto;
-	width: 64px;
-	height: 64px;
-	background-image: url(img/students.png);
-	background-repeat: no-repeat;
-}
-.text_story > .face {
-	position: absolute;
-	top: 28px; 
-	left: 35px;
-}
-.text {
-	display: inline-block;
-	width: 580px;
-	height: 110px;
-	position: absolute;
-	top: 5px; 
-	left: 120px;
-	margin: 0;
-	font-size: 110%;
 }
 
 --></style>
@@ -199,6 +200,7 @@ if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
 function DrawButtons(name) {
 	if(name === ""){
 		document.getElementById("ButtonField").innerHTML = '';
+		document.getElementById("ButtonField").classList.remove("has_button");
 		return false;
 	}
 
@@ -210,34 +212,14 @@ function DrawButtons(name) {
 
 		//■クラス判定
 		let CurrentClass = "";
-		if(isDebugMode){
-			if('sidetitle' in temp1.card[temp2]){
-				if(temp1.card[temp2].sidetitle === ""){ //サイドストーリー
-					CurrentClass = "warning";
-				}
-			}
-			if('side' in temp1.card[temp2]){
-				if('t' in temp1.card[temp2].side[0]){
-					if(temp1.card[temp2].side[0].t === ""){
-						CurrentClass = "warning";
-					}
-				}
-			}
-			if(!'memo' in temp1.card[temp2]){ //メモ
-				CurrentClass = "warning";
-			}
-			if(temp1.card[temp2].num == -1){ //番
-				CurrentClass = "disabled";
-			}
-		}
 		
 		Output += '<span class="jump'
-		+ (CurrentClass === "" ? '' : ' ' + CurrentClass) + '"'
 		+ (CurrentClass === "disabled" ? '' : '" onclick="DrawCardData(&#39;' + temp1.name + '&#39;,' + temp2 + ');"')
 		+ '>' + ButtonNum + '<\/span>';
 	}
 
 	document.getElementById("ButtonField").innerHTML = Output;
+		document.getElementById("ButtonField").classList.add("has_button");
 	DrawProfile(name);
 }
 
@@ -246,13 +228,13 @@ function DrawProfile(name){
 	const temp1 = NData.filter( q => q.name === name)[0];
 	let Output = '<h3>' + name + ' プロフィール<\/h3>\n'
 	+ '<div id="ProfileContainer">' + DrawFace(name)
-	+ '<table class="profile"><tbody>'
-	+ '<tr><td style="width: 120px;">学校<\/td><td>' + SchoolData[temp1.y].name + '<\/td><\/tr>'
+	+ '<table id="ProfileTable"><tbody>'
+	+ '<tr><td style="width: 40%;">学校<\/td><td>' + SchoolData[temp1.y].name + '<\/td><\/tr>'
 	+ '<tr><td>学年<\/td><td>' + temp1.grade + '年<\/td><\/tr>'
 	+ '<tr><td>誕生日<\/td><td>' + temp1.birth[0] + '月' + temp1.birth[1] + '日<\/td><\/tr>'
 	+ '<tr><td>血液型<\/td><td>' + temp1.blood + '型<\/td><\/tr>'
 	+ '<tr><td>身長<\/td><td>' + temp1.height + 'cm<\/td><\/tr>'
-	+ '<tr><td>スリーサイズ<\/td><td>Ｂ' + temp1.body[0] + 'Ｗ' + temp1.body[1] + 'Ｈ' + temp1.body[2] + 'cm<\/td><\/tr>'
+	+ '<tr style="word-break: keep-all;"><td>スリー<wbr>サイズ<\/td><td>Ｂ' + temp1.body[0] + '<wbr>Ｗ' + temp1.body[1] + '<wbr>Ｈ' + temp1.body[2] + 'cm<\/td><\/tr>'
 	+ '<tr><td>趣味<\/td><td>' + temp1.hobby + '<\/td><\/tr>'
 	+'<\/tbody><\/table><\/div>';
 	
@@ -342,7 +324,8 @@ function DrawFace(name){
 
 <section id="Viewer">
 	<h3 class="muse">転入生データベース</h3>
-	<p>プルダウンメニューから転入生を選び、その右に表示されるボタンから情報を見ることができます。</p>
+	<p>プルダウンメニューから転入生を選ぶと、下部にボタンが表示されます。<br>
+	そのボタンを押すことで情報を見ることができます。</p>
 	<div>
 		<div id="PullDown-Container">
 			<label for="PullDownMenu">転入生</label>
@@ -361,77 +344,27 @@ function DrawFace(name){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2023/12/18</span> - スマートフォン正式対応</summary>
+		<div>
+			<span class="new"></span>スマートフォン用レイアウトを実装
+		</div>
+	</details>
+	<details>
 		<summary class="important"><span class="date">2023/10/25</span> - データ追加</summary>
 		<div>
-			<span class="new"></span>正式公開<br>
-			<span class="new"></span>データを追加（永山みなみ、結城紗菜、斉木風、坂巻千鶴子、鬼崎アキラ、月島結架、マリア、レオ） 現在54/54人
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/09/24</span> - データ追加</summary>
-		<div>
-			<span class="new"></span>データを追加（逢沢遊宇、佐伯麗音） 現在46/54人
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/09/21</span> - データ追加</summary>
-		<div>
-			<span class="new"></span>データを追加（一之瀬マリカ、藤城悠弓、下園咲、相川涼、紫藤美咲、志賀仁美、兵藤さゆり） 現在44/54人
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/09/15</span> - データ追加</summary>
-		<div>
-			<span class="new"></span>データを追加（鳥居歩美、森嶋ななか、桐原優香、早乙女紫） 現在37/54人
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/09/12</span> - データ追加</summary>
-		<div>
-			<span class="new"></span>データを追加（九条聖来、御堂優理、神谷理華、白木凪、白瀬小雪、高天原睦月、蘭花、イザベラ） 現在33/54人
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/09/05</span> - データ追加</summary>
-		<div>
-			<span class="new"></span>データを追加（杉崎亜矢、田中さち子、吉川瑞希、菊池朱美、西村文絵、レベッカ） 現在25/54人
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/08/23</span> - データ追加</summary>
-		<div>
-			<span class="new"></span>データを追加（支倉かさね） 現在19/54人
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/07/10</span> - データ追加</summary>
-		<div>
-			<span class="new"></span>データを追加（クリスティーナ、設楽ふみ、福原命、ラクシャータ） 現在18/54人
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/04/28</span> - データ追加</summary>
-		<div>
-			<span class="new"></span>データを追加（宮下ココ、篠宮あきる、門田剣） 現在14/54人
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/04/14</span> - データ追加</summary>
-		<div>
-			<span class="new"></span>データを追加（黒崎隼） 現在11/54人
+			<span class="new"></span>正式公開
 		</div>
 	</details>
 	<details>
 		<summary><span class="date">2023/04/10</span> - データ追加</summary>
 		<div>
-			<span class="new"></span>データを追加（須田いるか、綾小路姫乃、黒羽咲良、黒羽咲夜、ジェニファー） 現在10/54人<br>
 			<span class="new"></span>パートナー時共通テキストを掲載
 		</div>
 	</details>
 	<details>
 		<summary class="important"><span class="date">2023/04/05</span> - テスト公開</summary>
 		<div>
-			<span class="new"></span>テスト公開（桜坂しずく、近江彼方、近江遥、多々良るう、エマ・ヴェルデ） 現在5/54人
+			<span class="new"></span>テスト公開
 		</div>
 	</details>
 </div>
