@@ -42,7 +42,42 @@ p{
 }
 
 #ButtonField {
-	display: inline-block;
+	position: relative;
+	display: flex;
+	width: calc(100% - 8px);
+	height: 70px;
+	padding: 0 4px;
+	overflow-x: scroll;
+}
+
+@media (min-width: 600px) {
+	#ButtonField::-webkit-scrollbar {
+		display: none;
+	}
+}
+@media (max-width: 599px) {
+	#ButtonField::before {
+		position: sticky;
+		content: "";
+		left: 0;
+		top: 14px;
+		width: 0;
+		height: 0;
+		border-width: 20px 10px 20px 0;
+		border-style: solid;
+		border-color: transparent #a89 transparent transparent;
+	}
+	#ButtonField::after {
+		position: sticky;
+		content: "";
+		right: 0;
+		top: 14px;
+		width: 0;
+		height: 0;
+		border-width: 20px 0 20px 10px;
+		border-style: solid;
+		border-color: transparent transparent transparent #a89;
+	}
 }
 
 #OutputArea {
@@ -308,7 +343,7 @@ function DrawFace(name){
 <section id="Viewer">
 	<h3 class="muse">転入生データベース</h3>
 	<p>プルダウンメニューから転入生を選び、その右に表示されるボタンから情報を見ることができます。</p>
-	<div style="height: 120px;">
+	<div>
 		<div id="PullDown-Container">
 			<label for="PullDownMenu">転入生</label>
 			<select id="PullDownMenu" onChange="DrawButtons(this.value)">
