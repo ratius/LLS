@@ -25,6 +25,7 @@ p{
 }
 
 #Narrower {
+	width: 350px;
 	border: solid 2px #b9a;
 	font-size: x-large;
 	font-weight: bold;
@@ -428,12 +429,20 @@ function CloseModal(target){
 	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
 </div>
 
-<section id="StoryViewer" style="display: none;">
+<section id="StoryViewer">
 	<h3 class="muse">毎日劇場一覧</h3>
 	<p>
 		下部のプルダウンメニューから見たいカテゴリを選択すると、該当するストーリータイトル・登場キャラクター等が表示されます。<br>
 		タイトル部分が濃くなっているものは、タイトル部分をクリックするとテキストが表示されます。
 	</p>
+	<div style="margin-bottom: 10px;">
+		<select id="Narrower" onChange="DrawStoryList(this.value)">
+			<option value="undefined">(見たいカテゴリを選択)</option>
+		</select>
+	</div>
+	<div id="OutputArea">
+		<table id="OutputTable"><tbody id="OutputField"></tbody></table>
+	</div>
 </section>
 
 <div id="Modal" style="display: none;" onclick="CloseModal(null)";>
@@ -490,21 +499,15 @@ function loadScript(src, callback) {
 loadScript("data/llsif2_theater.js", function() {
 	const TimeOutputStart = performance.now();
 	
-	let Output =
-	//◆絞り込みボタン
-	  '<div style="margin-bottom: 10px;">'
-	+ '<select id="Narrower" onChange="DrawStoryList(this.value)">\n<option value="undefined">(見たいカテゴリを選択)<\/option>';
-	for(i=0; i<SortTarget.length; i++){
-		Output += '<option value="'
-		+ (SortTarget[i].tag ? SortTarget[i].tag : 'undefined') + '">'
-		+ SortTarget[i].name + '<\/option>\n';
+	//■セレクトボックスに要素を追加
+	for(temp1 of SortTarget){
+		var temp2 = document.createElement("option");
+		temp2.text = temp1.name;
+		temp2.value = temp1.tag;
+		document.getElementById("Narrower").appendChild(temp2);
 	}
-	Output += '<\/select><\/div>\n'
-	+ '<div id="OutputArea"><table id="OutputTable"><tbody id="OutputField"><\/tbody><\/table><\/div>';
-	document.getElementById("StoryViewer").innerHTML += Output;
-	document.getElementById("StoryViewer").style.display = "block";
 
-	//◆「Now Loading...」解除
+	//■「Now Loading...」解除
 	document.getElementById("Loading").style.display = "none";
 	
 	//■デバックモード時の処理
