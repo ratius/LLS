@@ -37,6 +37,10 @@ p {
 #RightMenu li {
 	margin-bottom: 3px;
 }
+#RightMenu li a {
+	display: block;
+	padding: 2px 0px;
+}
 #RightMenu ul ul {
 	font-size: 90%;
 }
