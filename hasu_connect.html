@@ -44,7 +44,13 @@
 }
 
 /* 絞り込み */
-#Narrower {
+#PullDown-Container {
+	font-size: x-large;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#PullDownList {
 	border: solid 2px #b9a;
 	font-size: x-large;
 	font-weight: bold;
@@ -301,8 +307,9 @@ function DrawLiveList(season){
 	<p>「動画リンク」列のサムネイルをクリック/タップすると、YouTubeの動画を開きます。<br>
 	タグのキャラクター欄は、実際の出演者を表しています。<br>
 	（出演予定であったが、実際には配信に参加しなかったメンバー名のタグは付与しない方針です）</p>
-	<div style="margin-bottom: 10px;">
-		<select id="Narrower" onChange="DrawLiveList(this.value)">
+	<div id="PullDown-Container">
+		<label for="PullDownList">絞り込み</label>
+		<select id="PullDownList" onChange="DrawLiveList(this.value)">
 			<option value="">(期間を選択)</option>
 			<option value="2023-04-01,2023-09-30">103期 上半期（2023年4月 - 2023年9月）</option>
 			<option value="2023-10-01,2024-03-31">103期 下半期（2023年10月 - 2024年3月）</option>
@@ -394,8 +401,6 @@ function loadScript(src, callback) {
 
 loadScript("data/hasu_live.js", function() {
 	const TimeOutputStart = performance.now();
-
-	//DrawLiveList();
 
 	//◆「Now Loading...」解除
 	document.getElementById("Loading").style.display = "none";
