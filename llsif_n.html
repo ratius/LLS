@@ -15,7 +15,7 @@
 <meta name="twitter:description" content="。スクフェスに登場した転入生の情報を保管しています。">
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#e50080" />
+<meta name="theme-color" content="#e50080">
 
 <title>スクフェス 転入生データベース | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
@@ -24,6 +24,12 @@
 
 p{
 	margin: 15px 10px;
+}
+
+#PullDown-Container {
+	font-size: x-large;
+	font-weight: bold;
+	margin-bottom: 10px;
 }
 
 #PullDownMenu {
@@ -268,7 +274,7 @@ function DrawFace(name){
 
 --></script>
 </head>
-<body class="RM">
+<body>
 <header>
 	<h2 id="MainTitle">スクフェス 転入生データベース</h2>
 </header>
@@ -302,10 +308,13 @@ function DrawFace(name){
 <section id="Viewer">
 	<h3 class="muse">転入生データベース</h3>
 	<p>プルダウンメニューから転入生を選び、その右に表示されるボタンから情報を見ることができます。</p>
-	<div style="height: 60px;">
-		<select id="PullDownMenu" onChange="DrawButtons(this.value)">
-			<option value="">(転入生を選択)</option>
-		</select>
+	<div style="height: 120px;">
+		<div id="PullDown-Container">
+			<label for="PullDownMenu">転入生</label>
+			<select id="PullDownMenu" onChange="DrawButtons(this.value)">
+				<option value="">(選択)</option>
+			</select>
+		</div>
 		<div id="ButtonField"></div>
 	</div>
 	<div id="OutputArea">
