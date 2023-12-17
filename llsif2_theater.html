@@ -55,8 +55,6 @@ p{
 	width: 100%;
 	display: grid;
 	flex-wrap: wrap;
-	border-bottom: solid 1px #999;
-	border-right: solid 1px #999;
 }
 
 #OutputArea .date, #OutputArea .title, #OutputArea .memo{
@@ -200,6 +198,8 @@ p{
 @media screen and (min-width: 600px) {
 	#OutputArea article {
 		grid-template-columns: 120px auto;
+		border-right: solid 1px #999;
+		border-bottom: solid 1px #999;
 	}
 	#OutputArea .date {
 		justify-content: center;
