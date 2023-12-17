@@ -4,27 +4,32 @@
 <meta charset="utf-8">
 
 <meta property="og:url" content="https://ratius.github.io/LLS/llsif2_theater.html">
-<meta property="og:title" content="スクフェス2 毎日劇場 データベース | ラブライブ！ストレージ">
+<meta property="og:title" content="スクフェス2 毎日劇場アーカイブ | ラブライブ！ストレージ">
 <meta property="og:type" content="website">
 <meta property="og:description" content="スクフェス2の毎日劇場のまとめ。">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@ratius55">
 <meta name="twitter:creator" content="@ratius55">
-<meta name="twitter:title" content="スクフェス2 毎日劇場 データベース | ラブライブ！ストレージ">
+<meta name="twitter:title" content="スクフェス2 毎日劇場アーカイブ | ラブライブ！ストレージ">
 <meta name="twitter:description" content="スクフェス2の毎日劇場のまとめ。">
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>スクフェス2 毎日劇場 データベース | ラブライブ！ストレージ</title>
+<title>スクフェス2 毎日劇場アーカイブ | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main.css">
 <style><!--
 p{
 	margin: 15px 10px;
 }
+#PullDown-Container {
+	font-size: x-large;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
 
-#Narrower {
+#PullDownList {
 	width: 350px;
 	border: solid 2px #b9a;
 	font-size: x-large;
@@ -435,9 +440,10 @@ function CloseModal(target){
 		下部のプルダウンメニューから見たいカテゴリを選択すると、該当するストーリータイトル・登場キャラクター等が表示されます。<br>
 		タイトル部分が濃くなっているものは、タイトル部分をクリックするとテキストが表示されます。
 	</p>
-	<div style="margin-bottom: 10px;">
-		<select id="Narrower" onChange="DrawStoryList(this.value)">
-			<option value="undefined">(見たいカテゴリを選択)</option>
+	<div id="PullDown-Container">
+		<label>絞り込み</label>
+		<select id="PullDownList" onChange="DrawStoryList(this.value)">
+			<option value="undefined">(選択してください)</option>
 		</select>
 	</div>
 	<div id="OutputArea">
@@ -504,7 +510,7 @@ loadScript("data/llsif2_theater.js", function() {
 		var temp2 = document.createElement("option");
 		temp2.text = temp1.name;
 		temp2.value = temp1.tag;
-		document.getElementById("Narrower").appendChild(temp2);
+		document.getElementById("PullDownList").appendChild(temp2);
 	}
 
 	//■「Now Loading...」解除
