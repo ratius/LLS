@@ -44,12 +44,13 @@ p{
 #ButtonField {
 	position: relative;
 	display: flex;
-	width: calc(100% - 8px);
+	width: 100%;
 	height: 70px;
 	padding: 0 4px;
 	overflow-x: scroll;
 }
 
+/* ■スマートフォン向けレイアウト */
 @media (min-width: 600px) {
 	#ButtonField::-webkit-scrollbar {
 		display: none;
@@ -89,6 +90,8 @@ p{
 		font-size: 110%;
 	}
 }
+
+/* ■PC向けレイアウト */
 @media (max-width: 599px) {
 	#ButtonField.has_button::before {
 		position: sticky;
@@ -130,7 +133,8 @@ p{
 
 #OutputArea {
 	border: solid 3px #a89;
-	width: min(calc(100% - 22px), 800px);
+	width: 100%;
+	max-width: 800px;
 	height: calc(100vh - 200px);
 	overflow-y: scroll;
 	background-color: white;
