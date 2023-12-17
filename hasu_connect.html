@@ -15,7 +15,7 @@
 <meta name="twitter:description" content="「虹ヶ咲学園スクールアイドル　マンスリーアンケート」データの非公式保管所です。">
 <meta name="description" content="「虹ヶ咲学園スクールアイドル　マンスリーアンケート」データの非公式保管所です。">
 
-<meta name="viewport" content="width=800">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>リンクラ スクールアイドルコネクトまとめ | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
@@ -302,11 +302,10 @@ function DrawLiveList(season){
 
 <section id="CastedLiveList">
 	<h3 class="muse">動画一覧</h3>
-	<p>プルダウンメニューから期間を選択すると、その期間に合致する配信が表示されます。
+	<p>下部のプルダウンメニューから期間を選択すると、その期間に配信された動画の情報が表示されます。
 	</p>
 	<p>「動画リンク」列のサムネイルをクリック/タップすると、YouTubeの動画を開きます。<br>
-	タグのキャラクター欄は、実際の出演者を表しています。<br>
-	（出演予定であったが、実際には配信に参加しなかったメンバー名のタグは付与しない方針です）</p>
+	タグのキャラクター欄は、実際に配信に参加したメンバーを表しています。</p>
 	<div id="PullDown-Container">
 		<label for="PullDownList">絞り込み</label>
 		<select id="PullDownList" onChange="DrawLiveList(this.value)">
@@ -334,35 +333,17 @@ function DrawLiveList(season){
 </section>
 
 <section id="History">
-<h3 class="niji">更新履歴（結果掲載以外）</h3>
+<h3 class="niji">更新履歴（動画掲載以外）</h3>
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
-		<summary><span class="date">2023/10/25</span> - データ追加</summary>
-		<div>
-			<span class="new"></span>2023/12/20までの配信（予定分含む）を掲載
-		</div>
-	</details>
-	<details>
 		<summary><span class="date">2023/11/18</span> - データ追加・改修</summary>
 		<div>
-			<span class="new"></span>2023/11/27までの配信（予定分含む）を掲載<br>
 			<span class="new"></span>中止となった配信の情報に背景色を付与<br>
 			<span class="fix"></span>「配信一覧」を期間を選択して表示するように変更<br>
 			<span class="fix"></span>スマートフォン等のデバイスからの見え方を調整
 		</div>
 	</details>
-	<details>
-		<summary><span class="date">2023/10/25</span> - データ追加</summary>
-		<div>
-			<span class="new"></span>2023/10/26までの配信（予定分含む）を掲載
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/09/12</span> - データ追加</summary>
-		<div>
-			<span class="new"></span>2023/9/16までの配信（予定分含む）を掲載
-		</div>
 	</details>
 	<details open>
 		<summary class="important"><span class="date">2023/08/23</span> - 公開</summary>
