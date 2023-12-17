@@ -22,6 +22,7 @@
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main.css">
 <style><!--
+
 p{
 	margin: 15px 10px;
 }
@@ -42,9 +43,10 @@ p{
 
 #OutputArea {
 	border: solid 3px #a89;
-	width: calc(100% - 10px);
+	width: 100%
 	max-width: 1000px;
 	height: calc(100vh - 150px);
+	overflow-x: hidden;
 	overflow-y: scroll;
 	background-color: white;
 }
@@ -54,12 +56,12 @@ p{
 	display: grid;
 	flex-wrap: wrap;
 	border-bottom: solid 1px #999;
+	border-right: solid 1px #999;
 }
 
 #OutputArea .date, #OutputArea .title, #OutputArea .memo{
 	display: flex;
 	align-items: center;
-	box-sizing: border-box;
 	padding: 4px 10px;
 }
 
@@ -93,22 +95,7 @@ p{
 #OutputArea .tag { /*タグ欄*/
 	padding: 4px 10px;
 }
-.RoundButton {
-	display: inline-block;
-	margin: 1px auto;
-	padding: 0px 6px;
-	height: 22px;
-	border: 2px solid;
-	border-radius: 50vh;
-}
 
-.SquareButton {
-	display: inline-block;
-	margin: 1px auto;
-	padding: 0px 6px;
-	height: 22px;
-	border: 2px solid;
-}
 
 /* モーダルウィンドウ*/
 #Modal {
@@ -125,8 +112,6 @@ p{
 
 #Modal-Container {
 	position: relative;
-	box-sizing: border-box;
-	max-width: 1000px;
 	height: calc(100% - 100px);
 	min-height: 400px;
 	max-height: 80%;
@@ -153,7 +138,7 @@ p{
 
 #Modal-ReaderBox {
 	height: calc(100% - 100px);
-	margin: auto 28px;
+	margin: auto 30px;
 	overflow-y: scroll;
 	overscroll-behavior-y: contain;
 	background: white;
@@ -175,7 +160,6 @@ p{
 
 #Modal-CloseButton {
 	position: absolute;
-	box-sizing: border-box;
 	width: 50px;
 	height: 50px;
 	background: #ddd;
@@ -224,7 +208,8 @@ p{
 		border-right: solid 1px #999;
 	}
 	#Modal-Container {
-		width: calc(100% - 100px);
+		width: calc(100% - 80px);
+	max-width: 1000px;
 		border-radius: 20px;
 		border-width: 2px;
 	}

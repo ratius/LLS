@@ -1,3 +1,7 @@
+*{
+	box-sizing: border-box;
+}
+
 a {color: #cc3366;}
 a:hover {color: #ff0033;}
 
@@ -102,6 +106,24 @@ section > h4 {
 	border-color:#999;
 }
 
+/* ■ボタン */
+.RoundButton {
+	display: inline-block;
+	margin: 1px auto;
+	padding: 0px 6px;
+	height: 26px;
+	border: 2px solid;
+	border-radius: 50vh;
+}
+
+.SquareButton {
+	display: inline-block;
+	margin: 1px auto;
+	padding: 0px 6px;
+	height: 26px;
+	border: 2px solid;
+}
+
 /* ■読み込み中 */
 #Loading {
 	position: absolute;
@@ -120,15 +142,13 @@ section > h4 {
 
 /* ■更新履歴 */
 #history2 {
-	width: min(calc(100% - 5px), 1000px);
+	width: 100%;
+	max-width: 1000px;
 	max-height: calc(80vh - 30px);
 	overflow-y: scroll;
 	border: solid 3px #da6;
 }
 
-#history2 > details {
-	border-right: solid 2px #db8;
-}
 #history2 > details:not(:last-child) {
 	border-bottom: solid 2px #db8;
 }
