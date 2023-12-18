@@ -27,13 +27,14 @@ p{
 	margin: 15px 10px;
 }
 #PullDown-Container {
+	max-width: 100%;
+	overflow-x: hidden;
 	font-size: x-large;
 	font-weight: bold;
 	margin-bottom: 10px;
 }
 
-#PullDownList {
-	max-width: 100%;
+#PullDownMenu {
 	border: solid 2px #b9a;
 	font-size: x-large;
 	font-weight: bold;
@@ -111,11 +112,7 @@ p{
 #Modal-Container {
 	position: relative;
 	height: calc(100% - 100px);
-	min-height: 400px;
-	max-height: 80%;
 	background-color: #fde;
-	border-style: solid;
-	border-color: #423;
 }
 
 #Modal-TitleBox{
@@ -136,7 +133,6 @@ p{
 
 #Modal-ReaderBox {
 	height: calc(100% - 100px);
-	margin: auto 30px;
 	overflow-y: scroll;
 	overscroll-behavior-y: contain;
 	background: white;
@@ -157,7 +153,6 @@ p{
 }
 
 #Modal-CloseButton {
-	position: absolute;
 	width: 50px;
 	height: 50px;
 	background: #ddd;
@@ -185,12 +180,19 @@ p{
 		width: 100%;
 	}
 	#Modal-Container {
+		display: flex;
+		flex-wrap: wrap;
 		width: 100%;
-		border-width: 2px 0;
+		height: 100%;
+	}
+	#Modal-TitleBox {
+		width: calc(100% - 130px); 
 	}
 	#Modal-CloseButton {
-		top: -50px;
-		right: 0px;
+		width: 50px;
+	}
+	#Modal-ReaderBox {
+		margin: 0 10px auto 10px;
 	}
 }
 
@@ -209,17 +211,22 @@ p{
 	}
 	#Modal-Container {
 		width: calc(100% - 80px);
-	max-width: 1000px;
+		max-width: 1000px;
+		max-height: 80%;
+		border: solid 2px #423;
 		border-radius: 20px;
-		border-width: 2px;
 	}
 	#Modal-CloseButton {
+		position: absolute;
 		top: -25px;
 		right: -25px;
 		border-radius: 50%;
 	}
 	#Modal-Title{
 		font-size: 180%;
+	}
+	#Modal-ReaderBox {
+		margin: 0 30px auto 30px;
 	}
 }
 
@@ -428,7 +435,6 @@ function CloseModal(target){
 			return false;
 		}
 	}
-	console.log(target);
 	ModalBG.classList.add("fadeout");
 	setTimeout(function(){
 		document.getElementById("Modal-ReaderBox").scrollTop = 0;
@@ -475,8 +481,8 @@ function CloseModal(target){
 		タイトル部分が濃くなっているものは、タイトル部分をクリックするとテキストが表示されます。
 	</p>
 	<div id="PullDown-Container">
-		<label for="PullDownList">絞り込み</label>
-		<select id="PullDownList" onChange="DrawStoryList(this.value)">
+		<label for="PullDownMenu">絞り込み</label>
+		<select id="PullDownMenu" onChange="DrawStoryList(this.value)">
 			<option value="undefined">(選択してください)</option>
 		</select>
 	</div>
@@ -486,10 +492,10 @@ function CloseModal(target){
 
 <div id="Modal" style="display: none;" onclick="CloseModal(null)";>
 	<div id="Modal-Container">
-		<div id="Modal-CloseButton" onclick="CloseModal();">&#10006;</div>
 		<div id="Modal-TitleBox">
 			<span id="Modal-Title">タイトル</span>
 		</div>
+		<div id="Modal-CloseButton" onclick="CloseModal();">&#10006;</div>
 		<div id="Modal-ReaderBox">
 			<div id="Modal-Text">本文</div>
 		</div>
@@ -501,9 +507,9 @@ function CloseModal(target){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
-		<summary><span class="date">2023/12/18</span> - スマートフォン用レイアウトを実装</summary>
+		<summary><span class="date">2023/12/18</span> - スマートフォン向けレイアウトを導入</summary>
 		<div>
-			<span class="new"></span>スマートフォン用レイアウトを実装
+			<span class="new"></span>スマートフォン向けレイアウトを導入
 		</div>
 	</details>
 	<details>
@@ -549,7 +555,7 @@ loadScript("data/llsif2_theater.js", function() {
 		var temp2 = document.createElement("option");
 		temp2.text = temp1.name;
 		temp2.value = temp1.tag;
-		document.getElementById("PullDownList").appendChild(temp2);
+		document.getElementById("PullDownMenu").appendChild(temp2);
 	}
 
 	//■「Now Loading...」解除
