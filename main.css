@@ -109,7 +109,7 @@ section > h4 {
 /* ■ボタン */
 .RoundButton {
 	display: inline-block;
-	margin: 1px auto;
+	margin: 1px 5px 1px 0;
 	padding: 0px 6px;
 	height: 26px;
 	border: 2px solid;
@@ -118,7 +118,7 @@ section > h4 {
 
 .SquareButton {
 	display: inline-block;
-	margin: 1px auto;
+	margin: 1px 5px 1px 0;
 	padding: 0px 6px;
 	height: 26px;
 	border: 2px solid;
