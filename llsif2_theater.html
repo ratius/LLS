@@ -52,49 +52,49 @@ p{
 	background-color: white;
 }
 
-#OutputArea > div {
+#OutputArea article {
 	width: 100%;
 	display: grid;
 	flex-wrap: wrap;
 }
 
-#OutputArea .date, #OutputArea .title, #OutputArea .memo{
+.story-date, .story-title, .story-memo{
 	display: flex;
 	align-items: center;
 	padding: 4px 10px;
 }
 
-#OutputArea .date{ /*日付入力欄*/
+.story-date{ /*日付入力欄*/
 	font-size: 95%;
 	font-weight: bold;
 	background-color: #eee;
 	color: #666;
 }
-#OutputArea .TitleContainer { /*タイトルとメモ*/
+.story-titleContainer { /*タイトルとメモ*/
 	display: flex;
 	background-color: #fde;
 	border-bottom: solid 1px #d0c0c8;
 }
-#OutputArea .title { /*タイトル欄*/
+.story-title { /*タイトル欄*/
 	width: 40%;
 	color: #403038;
 	font-weight: bold;
+
+	&.has_text {
+		background-color: #fac;
+		clip-path: polygon(0% 0%, calc(100% - 10px) 0%, 100% 50%, calc(100% - 10px) 100%, 0% 100%);
+		cursor: pointer;
+	}
 }
-#OutputArea .has_text {
-	background-color: #fac;
-	clip-path: polygon(0% 0%, calc(100% - 10px) 0%, 100% 50%, calc(100% - 10px) 100%, 0% 100%);
-	cursor: pointer;
-}
-#OutputArea .memo { /*メモ欄*/
+.story-memo { /*メモ欄*/
 	width: 60%;
 	font-size: small;
 	color: #666;
 	background-color: #fde;
 }
-#OutputArea .tags { /*タグ欄*/
+.story-tags { /*タグ欄*/
 	padding: 4px 10px;
 }
-
 
 /* モーダルウィンドウ*/
 #Modal {
@@ -163,20 +163,19 @@ p{
 	user-select: none;
 }
 
-
 /* ■スマートフォン向けレイアウト */
 @media screen and (max-width: 599px) {
-	#OutputArea > div:not(:last-child) {
+	#OutputArea > article:not(:last-child) {
 		border-bottom: solid 3px #999;
 	}
-	#OutputArea .date:before {
+	.story-date:before {
 		content: "▼";
 	}
-	#OutputArea .date {
+	.story-date {
 		width: 100%;
 		border-bottom: solid 1px #c0b0b8;
 	}
-	#OutputArea .tags {
+	.story-tags {
 		width: 100%;
 	}
 	#Modal-Container {
@@ -198,12 +197,12 @@ p{
 
 /* ■PC向けレイアウト */
 @media screen and (min-width: 600px) {
-	#OutputArea > div {
+	#OutputArea > article {
 		grid-template-columns: 120px auto;
 		border-right: solid 1px #999;
 		border-bottom: solid 1px #999;
 	}
-	#OutputArea .date {
+	.story-date {
 		justify-content: center;
 		width: 120px;
 		grid-row: span 2;
@@ -348,7 +347,7 @@ const SortTarget = [
 {"name": "出演：ウィーン・マルガレーテ", "tag": "Wien"},
 {"name": "出演：鬼塚 冬毬", "tag": "Tomari"},
 {"name": "----"},
-//{"name": "テーマ：季節の行事", "tag": "Season"},
+{"name": "テーマ：季節の行事", "tag": "Season"},
 {"name": "テーマ：誕生日", "tag": "Birthday"},
 //{"name": "テーマ：ライブ", "tag": "Live"},
 //{"name": "----"},
@@ -370,28 +369,27 @@ function DrawCharName(character){
 
 //■条件に合致するストーリーを抜き出してリストアップ
 function DrawStoryList(cons){
-	result = new Array();
+	storyResult = new Array();
 	if(cons === "undefined"){
 		return;
 	} else if(cons.substring(0,5) === "year-"){ //「年」が選択された場合
-		result = TheaterLog.filter(temp => temp.date.substring(0,4) === cons.substring(5));
+		storyResult = TheaterLog.filter(temp => temp.date.substring(0,4) === cons.substring(5));
 	} else {
-		result = TheaterLog.filter(temp => temp.tags.indexOf(cons) != -1);
+		storyResult = TheaterLog.filter(temp => temp.tags.indexOf(cons) != -1);
 	}
-	Output = "";
-	for(temp1 of result){
-		Output += '<div>'
-		+ '<div class="date">' + temp1.date + '<\/div>'
-		+ '<div class="TitleContainer">'
-		+ '<div class="title'
-		+ (temp1.text ? ' has_text" onclick="MakeModal(' + temp1.id + ');">' : '">') + temp1.title + '<\/div>'
-		+ '<div class="memo">' + ('memo' in temp1 ? temp1.memo : '') + '<\/div><\/div>'
-		+ '<div class="tags">';
-		for(temp2 of temp1.tags){
-			Output += DrawCharName(temp2);
-		}
-		Output += '<\/div><\/div>';
-	}
+	Output = storyResult.reduce ( (result, story) => {
+		let temp = '<article>'
+		+ '<div class="story-date">' + story.date + '<\/div>'
+		+ '<div class="story-titleContainer">'
+		+ '<div class="story-title'
+		+ ('text' in story ? ' has_text" onclick="MakeModal(' + story.id + ');"' : '')
+		+  '">' + story.title + '<\/div>'
+		+ '<div class="story-memo">' + ('memo' in story ? story.memo : '') + '<\/div><\/div>'
+		+ '<div class="story-tags">'
+		+ story.tags.reduce( (result, tag) => { return result + DrawCharName(tag); }, '')
+		+ '<\/div><\/article>';
+		return result + temp;
+	}, '');
 	document.getElementById("OutputArea").innerHTML = Output;
 }
 
@@ -415,7 +413,6 @@ function MakeModal(id, code){
 	//ポップアップを表示
 	document.getElementById("Modal").classList.remove("fadeout");
 	document.getElementById("Modal").style.display = "flex";
-	
 }
 
 //■モーダルウィンドウを閉じる
@@ -444,7 +441,7 @@ function CloseModal(target){
 	<h3 class="foreword">まえがき</h3>
 	<p>
 		スクフェス2で配信されていた「毎日劇場」のまとめです。<br>
-		下部のプルダウンメニューから見たいカテゴリを選択すると、該当するストーリータイトル・登場キャラクター等が表示されます。<br>
+		本文もアーカイブする予定です。
 	</p>
 </section>
 
@@ -540,22 +537,22 @@ function loadScript(src, callback) {
 
 loadScript("data/llsif2_theater.js", function() {
 	const TimeOutputStart = performance.now();
-	//■色データをCSSに追加
-	//◆色の計算用
-	const getColor = (Object, divisor) => { //色情報
+	//◆ボタン色計算用
+	const getColor = (Object, divisor) => {
 		if(!divisor){ divisor = 1;}
 		const r = Math.floor((Object.r + (255 * (divisor-1))) / divisor);
 		const g = Math.floor((Object.g + (255 * (divisor-1))) / divisor);
 		const b = Math.floor((Object.b + (255 * (divisor-1))) / divisor);
 		return 'rgb(' + r + ',' + g + ',' + b + ');';
 	}
-	let Output = '\n';
-	for(const key in TagData){
-		Output += '.button_' + key + '{\n\t'
+	//■色データをCSSに追加
+	let AddedCSS = '\n';
+	Object.keys(TagData).forEach(function(key) {
+		AddedCSS += '.button_' + key + '{\n\t'
 		+ 'background-color: ' + getColor(TagData[key], 3) + '\n\t'
 		+ 'border-color: ' + getColor(TagData[key], 1) + '\n}\n';
-	}
-	document.querySelector('style').textContent += Output; //一つずつ追加するとその度再計算の時間がかかるため、一括追加
+	});
+	document.querySelector('style').textContent += AddedCSS; //一括追加で再計算の時間を一度だけに
 	
 	//■セレクトボックスに要素を追加
 	for(const temp1 of SortTarget){
@@ -578,31 +575,32 @@ loadScript("data/llsif2_theater.js", function() {
 		document.getElementById("BackToMain").href += "?debug";
 		
 		//◆データの不具合チェック
-		const CheckBegin = 8;
-		let isError = 0;
-		for(i=CheckBegin; i<TheaterLog.length; i++){
-			const TextTemp1 = TheaterLog[i].text.split('\n');
-			
-			for(j=0; j<TextTemp1.length; j++){
-				const TextTemp2 = TextTemp1[j].split('\t');
+		const isError = TheaterLog.reduce( (acc, val) => {
+			if(!("text" in val)){ return acc;}
+			const TextTemp = val.text.split('\n');
+			return acc + TextTemp.reduce( (acc2, val2, index2) => {
+				const ErrorLocation = ' (' + val.date
+				 + '「' + val.title + '」' + (index2+1) + '行目)';
+				
+				const TextTemp2 = val2.split('\t');
 				if(TextTemp2.length !== 2){
-					console.log('エラー：パラメータ数異常\n該当箇所：' + TheaterLog[i].date
-					 + '「' + TheaterLog[i].title + '」' + (Number(j)+1) + '行目');
-					isError++;
-					continue;
+					console.log('エラー：パラメータ数が異常' + ErrorLocation);
+					return acc2 + 1;
 				}
 				if(!isFinite(TextTemp2[0])){
-					console.log('エラー：登場人物が不正\n該当箇所：' + TheaterLog[i].date
-					 + '「' + TheaterLog[i].title + '」' + (Number(j)+1) + '行目');
-					isError++;
-				} else if(TextTemp2[0] > TheaterLog[i].tags.length){
-					console.log('エラー：登場人物のデータ範囲エラー\n該当箇所：' + TheaterLog[i].date
-					 + '「' + TheaterLog[i].title + '」' + (Number(j)+1) + '行目');
-					isError++;
+					console.log('エラー：登場人物が不正な値' + ErrorLocation);
+					return acc2 + 1;
+				} else if(TextTemp2[0] === ''){
+					console.log('エラー：登場人物が未設定' + ErrorLocation);
+					return acc2 + 1;
+				} else if(TextTemp2[0] > val.tags.length){
+					console.log('エラー：登場人物のデータ範囲エラー' + ErrorLocation);
+					return acc2 + 1;
 				}
-			}
-		}
-		if(isError > 0){
+				return acc2;
+			}, 0);
+		}, 0);
+		if(isError){
 			alert('' + isError + '件のエラーが見つかりました。コンソールを確認してください。');
 		}
 		//◆描画時間の出力
