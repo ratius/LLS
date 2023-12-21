@@ -15,39 +15,44 @@ p {
 	color: #333;
 }
 
+/* ■右メニュー */
 #RightMenu {
 	display: inline-block;
-	width: 221px;
+	width: 223px;
 	margin: 0 0 0 15px;
 	border: solid 1px #978;
 	z-index: 9;
 	background: linear-gradient(90deg, #fde 0%, white 50%);
+	
+	strong {
+		font-size: large;
+		display: block;
+		margin: 2px;
+	}
+	hr {
+		border: none;
+		border-bottom: 2px solid #cbc;
+		margin: 4px auto;
+	}
+	ul {
+		list-style: none;
+		padding: 10px 20px;
+		margin: 0;
+		
+		ul {
+			font-size: 90%;
+		}
+	}
+
+	li {
+		margin-bottom: 3px;
+			a {
+			display: block;
+			padding: 2px 0px;
+		}
+	}
 }
-#RightMenu > ul {
-	list-style: none;
-	padding: 10px 20px;
-	margin: 0;
-}
-#RightMenu strong {
-	font-size: large;
-	display: block;
-	margin: 2px;
-}
-#RightMenu hr {
-	border: none;
-	border-bottom: 2px solid #cbc;
-	margin: 4px auto;
-}
-#RightMenu li {
-	margin-bottom: 3px;
-}
-#RightMenu li a {
-	display: block;
-	padding: 2px 0px;
-}
-#RightMenu ul ul {
-	font-size: 90%;
-}
+
 @media screen and (min-width: 1280px) {
 	body.RM {
 		width: calc(100vw - 256px);
@@ -107,7 +112,7 @@ section > h4 {
 }
 
 /* ■ボタン */
-.RoundButton {
+.RoundButton, .button-Round {
 	display: inline-block;
 	margin: 1px 5px 1px 0;
 	padding: 0px 6px;
@@ -116,7 +121,7 @@ section > h4 {
 	border-radius: 50vh;
 }
 
-.SquareButton {
+.SquareButton, .button-Square {
 	display: inline-block;
 	margin: 1px 5px 1px 0;
 	padding: 0px 6px;
@@ -132,13 +137,14 @@ section > h4 {
 	text-align:center;
 	z-index: 98;
 	padding: 10px;
+
+	h4 {
+		margin: 5px 0;
+		font-size: 150%;
+		font-weight: bold;
+	}
 }
 
-#Loading h4 {
-	margin: 5px 0;
-	font-size: 150%;
-	font-weight: bold;
-}
 
 /* ■更新履歴 */
 #history2 {
@@ -147,42 +153,45 @@ section > h4 {
 	max-height: calc(80vh - 30px);
 	overflow-y: scroll;
 	border: solid 3px #da6;
+	
+	details:not(:last-child) {
+		border-bottom: solid 2px #db8;
+	}
+	details {
+		summary {
+			padding: 2px 7px;
+			font-size: 110%;
+			background: #f0e8e0;
+		}
+		summary:not(.important){ background-color: #fdc;}
+		.important { background-color: #ffb;}
+		
+		div{
+			background: white;
+			padding: 5px 12px;
+			line-height: 170%;
+		}
+	}
+	details[open] summary {
+		border-bottom: solid 2px #db7;
+	}
+	details[open] span.date {
+		font-weight: bold;
+	}
+
+	ul {
+		margin: 5px 0 5px 0;
+		color: #444;
+		font-size: small;
+		list-style-type: none;
+		padding-inline-start: 20px;
+		line-height: 180%;
+	}
+	li:before { content:"▶ "; color:#b95;}
 }
 
-#history2 > details:not(:last-child) {
-	border-bottom: solid 2px #db8;
-}
 
-#history2 > details > summary {
-	padding: 2px 7px;
-	font-size: 110%;
-	background: #f0e8e0;
-}
-
-#history2 > details[open] > summary { background:#ffddcc; border-bottom: solid 2px #db7;}
-#history2 > details > summary.important { background: #ffb;}
-
-#history2 > details > div{
-	background: white;
-	padding: 5px 12px;
-	line-height: 170%;
-}
-
-#history2 > details[open] span.date {
-	font-weight: bold;
-}
-
-#history2 ul {
-	margin: 5px 0 5px 0;
-	color: #444;
-	font-size: small;
-	list-style-type: none;
-	padding-inline-start: 20px;
-	line-height: 180%;
-}
-#history2 li:before { content:"▶ "; color:#b95;}
-
-span.fix {
+.fix, .icon-Fix {
 	display: inline-block;
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAQCAYAAAAMJL+VAAACzUlEQVR42rVUS09TURDGsGHpP3DlQuNCaYlFkVpFjY+oMXFPXGI04hMF5CXgg/iI0ZSAxpAYNfEVDRLSF20pGlEEbAJSRUDEqiAVgUu5bT9nDufiLVRZ2WQ6QznzfWe+mTNJAJLWFzctYi9jE5mVrJNsnAwL2Lg8yzkmHY7AnA3Ip8hD/wS0lCxIyBgpGgl/JUtwuzwQJRCVjH2MAS0yObPIhYxC11zAGOeQqdJDYjFmslZOtfxHmD2DrClwwpTvEMaxuagJW854sOu8b6EqwtJXaxIZ5Q+qWUrg9H9D4Msv9H+fwMDwBF73/kDqCTuuPAuAP9sqvcg87UJWmRtahRtL3XpiVXojE9ToCczFLowpKt72h1DxqAtXGwIof9glqtp78TmO1nUIMP7bQKQsG+dxzL9JEo2ghgn8mvZmqXNoYho19l4szn6MpQcbsPxwI9ILHDhw8w3uvxjEOrr9/httsHd+xc5zPlGJrTOII0S++pQDG0rcWi/8TKBo+pmlHxpVMDgyKQCau4dR6/yIZbmNsNo+CIm2VniRRVVMTUfR2B7EvZZPiMZi2HG2WZDrpFISEgRDU3gfHMdd3wCevBrCpfoerKAqLpOPRGeAVh23Iae2DWokJsAP3WqHIc8u5NM1XEko0U+SqM7dhyU59aK5JirbkGcTBDGqYHtlM9LzneS9UKYjgpSna22hU7t9nERxTWaCsUkVD0hrI91oM43mpjIPEdloinqERFzBymM2vAyMoIemrfvzGNr7RpFG50n/eU02ziUIhhTc9vYjlWTgktkMRFD19B0mwxFRfi5Jwjffd70V2ddaRZx/x4+0k0RS6v4zpoke2u4LPjHr/Lhm+8MPrdyDPVUtIubp4XPcVDaOWSa64LyHNm9V0Dyr9JCicg3MkuhXBYPKued1InIyZnLiV0WiZaffP39bdpY5i0+XY7Xol93/Xte/AcGI5WjNdwFAAAAAAElFTkSuQmCC);
 	background-repeat: no-repeat;
@@ -192,7 +201,7 @@ span.fix {
 	margin-right: 4px;
 }
 
-span.new {
+.new, .icon-New {
 	display: inline-block;
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAQCAYAAAAMJL+VAAAC0klEQVR42rWUy0tbURDGU9z4h3ThSsSkRmMT8ywJRcVFX1DBYkWE+upOUReuWrpyp60LhS6kiHHbEmihoKRKKz4QFVyoK59VAqlerr+eueNNpBtLoReGO+cxM998c2Y8gIdw+JbzV73ayKiRZSM5I9wguau7o45t0Y/j00Msps5fviw1+mjBMBKBaJS/CPCniI9SN4iHQKCEhw9LqarKUF0tjm1zYBEM2mbvkrq6mxxeGlEb/ctexgkSDpdoOoHAGM+eQXv7OXfvQigEDQ3Q0wOJhK4lI1euZ3ld1/X5lT6mFN2/78Png2zWQr4nT6C8HAYGnCUPHkBtrRrX1GDAFKkTMG6GwWARSChkOetIxOchHn9nqIDPnzXAly9QVgb9/WDbGPrgzh01bGmBR4+4olKzjMc1SH09pFIaJJWyDHDZfydFXnUczM3Z/PypqNvaoKtL9aYmNd7agqMjyOVgakozOTiAyUlIJuH0FH78wAG7vW2TTkNFxarHpJunshKWlhT9p0+wuQnd3Rrg3j2YnYWzM6VoaEj3BWE2C8vL0NmpewLw6VPVX73C+M0XA0j0+XlNU6j5+hUuLqCxERYW4OQEVlYEnTpobYU3b+DwED58gN1d2NuDiQn49QseP5Ys80qR1wuLizbfv8Pt2/D+vTrJ5xXpt2+wswPNzfD8uaKUQsvLE8qOj9WxABQaNzdtp8jh8KoWWTLY2LBYXxfelFO56FIxPKz627cwOKh/93nu7+vZixcwPa16Om05oBMJU+Rk0ue8ivFxyzGU4vn90Nen9ZACy/r1a63T2hrMzOgrEruREfj4Uant7VW9o8NyzlIpnzaaNIU48fvPCw0jBZX+kCcoa9EFlfwlY7e5xM69J/3i9WqzFhotFisxqGUOZa4aSNs+GrXN3mWBilhMeXfF3Y9GL82Z2siY0XsZx2c8XlKcpDo7Rv9huN0w7P7zuP4NgNoQId37mFkAAAAASUVORK5CYII=);
 	background-repeat: no-repeat;
