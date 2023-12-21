@@ -26,7 +26,8 @@
 /* 共通 */
 .FixedHeader {
 	overflow-y: scroll;
-	width: min(calc(100% - 6px), 1000px);
+	width: 100%;
+	max-width: 1000px;
 	height: calc(80vh - 30px);
 }
 
@@ -35,12 +36,6 @@
 	border-collapse: separate;
 	border-spacing: 0;
 	background-color: white;
-}
-
-.FixedHeader thead th{
-	position: sticky;
-	top: 0;
-	padding: 2px 5px;
 }
 
 /* 絞り込み */
@@ -60,79 +55,149 @@
 }
 
 /* 動画一覧 */
-#LiveListTable {
+#OutputArea {
+	width: 100%;
+	max-width: 1000px;
+	height: calc(100vh - 150px);
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background-color: white;
 	border: solid 3px #e2067e;
-	background-color: rgba(226,126,176,0.1);
-	overscroll-behavior-y: contain;
 }
 
-#LiveListTable thead th {
-	background-color: #f4abd2;
-	border-bottom: solid 3px #e2067e;
-	border-right: solid 1px #e2067e;
+article {
+	width: 100%;
+	display: grid;
+	flex-wrap: wrap;
+	
+	div {
+		padding: 4px 10px;
+	}
 }
-
-tbody td, tbody th {
-	text-align: left;
-	padding: 3px 5px;
-	border-right: solid 1px #bbb;
-}
-
-tr.top td { /*配信日、動画リンク*/
-	text-align: center;
-}
-
-tr.top:nth-child(n+2) > td , tr.top:nth-child(n+2) > th {
-	border-top: solid 3px #999;
-}
-
-tr.mid > td {
-	border-top: solid 1px #bbb;
-}
-
-tr.mid > td.tag {
-	width: 40px;
-}
-
-tr.cancelled > td, tr.cancelled > th{
+article.cancelled {
 	background-color: #ddd;
+
+	.article-box-title, .article-box-tube {
+		background-color: #ccc;
+	}
+}
+article:not(.cancelled) {
+	.article-box-title {
+		background-color: #fde;
+	}
+}
+
+.article-box-date, .article-box-tube{
+	display: flex;
+	align-items: center;
+}
+.article-box-date{ /*日付入力欄*/
+	font-size: 95%;
+	font-weight: bold;
+	background-color: #eee;
+	color: #666;
+}
+.article-box-title { /*タイトル*/
+	font-weight: bold;
+	border-bottom: solid 1px #bbb;
+}
+.article-box-desc { /*説明文*/
+	font-size: small;
+	border-bottom: solid 1px #bbb;
 }
 
 .setlist { /*セットリスト*/
-	width: 300px;
+	width: min(300px, 100%);
 	border: solid 1px #9ce;
-}
 
-.setlist summary {
-	margin: 0;
-	padding: 2px 6px;
-	background-color: #d0f0ff;
-}
-
-.setlist ol {
+	summary {
+		margin: 0;
+		padding: 2px 6px;
+		background-color: #d0f0ff;
+	}
+	ol {
 	margin: 5px 0;
-	padding-left: 30px;
+		padding-left: 30px;
+	}
+	i {
+		color: #69c;
+	}
 }
 
-.setlist i {
-	color: #69c;
+/* ■スマートフォン向けレイアウト */
+@media screen and (max-width: 599px) {
+	.pc-only {
+		display: none;
+	}
+
+	article {
+		grid-template-columns: auto 70px;
+	}
+	article:not(:last-child) {
+		border-bottom: solid 3px #999;
+	}
+	article:not(.cancelled) {
+		.article-box-tube {
+			background-color: #fde;
+		}
+	}
+	
+	.article-box-date:before {
+		content: "▼";
+	}
+	.article-box-date {
+		width: 100%;
+		border-bottom: solid 1px #c0b0b8;
+	}
+	.article-box-tube {
+		border-bottom: solid 1px #bbb;
+	}
+	.article-box-date, .article-box-desc, .article-box-tags{
+		grid-column: span 2;
+	}
+	.pc-exclusive-link {
+		text-decoration: none;
+		color: inherit;
+		cursor: default;
+		pointer-events: none;
+	}
 }
 
-.RoundButton {
-	display: inline-block;
-	margin: 1px auto;
-	padding: 0px 6px;
-	height: 22px;
-	border: 2px solid;
-	border-radius: 50vh;
-}
+/* ■PC向けレイアウト */
+@media screen and (min-width: 600px) {
+	.sp-only {
+		display: none;
+	}
 
-.SquareButton {
-	display: inline-block;
-	margin: 1px auto;
-	padding: 0px 6px;
-	height: 22px;
-	border: 2px solid;
+	article {
+		grid-template-columns: 120px auto 130px;
+		border-right: solid 1px #999;
+		border-bottom: solid 1px #999;
+	}
+
+	.article-box-date {
+		justify-content: center;
+		width: 120px;
+		grid-row: span 3;
+		border-right: solid 1px #999;
+	}
+	.article-box-tube {
+		justify-content: center;
+		width: 130px;
+		grid-row: span 3;
+		border-left: solid 1px #bbb;
+
+		a {
+			width: 124px;
+			height: 72px;
+			border: solid 2px #f66;
+		}
+		img {
+			width: 120px;
+			height: 68px;
+			object-fit: cover;
+		}
+	}
 }
 
 --></style>
@@ -144,33 +209,28 @@ if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
 
 //■キャラクター名のボタンを描画
 const TagData = {
-	"meets"     : {"name": "With×MEETS" , "r":160, "g":112, "b": 96, "s": "Square" },
-	"live"      : {"name": "Fes×LIVE"   , "r": 80, "g":128, "b":128, "s": "Square" },
-	"cancelled" : {"name": "配信中止"    , "r":128, "g":128, "b":128, "s": "Square" },
+	"meets"     : {"name": "With×MEETS" , "r":160, "g":112, "b": 96, "style": "Square" },
+	"live"      : {"name": "Fes×LIVE"   , "r": 80, "g":128, "b":128, "style": "Square" },
+	"cancelled" : {"name": "配信中止"    , "r":128, "g":128, "b":128, "style": "Square" },
 	
-	"Kaho"    : {"name": "花帆"   , "r":248, "g":181, "b":  0, "s": "Round" },
-	"Sayaka"  : {"name": "さやか" , "r": 83, "g":131, "b":195, "s": "Round" },
-	"Kozue"   : {"name": "梢"     , "r":104, "g":190, "b":141, "s": "Round" },
-	"Tsuzuri" : {"name": "綴理"   , "r":186, "g": 38, "b": 54, "s": "Round" },
-	"Rurino"  : {"name": "瑠璃乃" , "r":231, "g": 96, "b":158, "s": "Round" },
-	"Megumi"  : {"name": "慈"     , "r":200, "g":194, "b":198, "s": "Round" }
+	"Kaho"    : {"name": "花帆"   , "r":248, "g":181, "b":  0, "style": "Round" },
+	"Sayaka"  : {"name": "さやか" , "r": 83, "g":131, "b":195, "style": "Round" },
+	"Kozue"   : {"name": "梢"     , "r":104, "g":190, "b":141, "style": "Round" },
+	"Tsuzuri" : {"name": "綴理"   , "r":186, "g": 38, "b": 54, "style": "Round" },
+	"Rurino"  : {"name": "瑠璃乃" , "r":231, "g": 96, "b":158, "style": "Round" },
+	"Megumi"  : {"name": "慈"     , "r":200, "g":194, "b":198, "style": "Round" }
 };
 
+//■キャラクター名のボタン ver.20231220
 function DrawCharName(character){
-	if(character in TagData){
-		const temp = TagData[character];
-		let Output = '<span class="' + temp.s + 'Button" '
-		+ 'style="background-color:rgb('
-		+ Math.floor((temp.r + 510)/3) + ','
-		+ Math.floor((temp.g + 510)/3) + ','
-		+ Math.floor((temp.b + 510)/3) + '); '
-		+ ' border-color: rgb(' + temp.r + ',' + temp.g + ',' + temp.b + ');">'
-		+ temp.name + '<\/span>';
-		return Output;
-	} else { //存在しないなら
+	if(!character in TagData){ //存在しないなら
 		console.log("キャラクターID " + character + " は存在しません");
 		return false;
 	}
+	const target = TagData[character];
+	let Output = '<span class="' + target.style + 'Button button_' + character + '">'
+	+ target.name + '<\/span>';
+	return Output;
 }
 
 //■Date型を「YYYY/MM/DD (hh:mm)」という文字列に変換
@@ -194,82 +254,74 @@ function GetStringFromDate(date,hm){
 //■「スクールアイドルコネクト一覧」の描画
 function DrawLiveList(season){
 	if(season === undefined || season === ""){ return false;} //期間が指定されていない場合、描画をキャンセル
-
 	const DateTemp = season.split(',');
-	DateStart = new Date(DateTemp[0]);
-	DateEnd = new Date(DateTemp[1]);
-	
-	let Output = '';
-	for(const temp1 of LiveList){
-		let OutputTemp1 = '';
-		let OutputTemp2 = '';
-		const isCancelled = (temp1.tag.filter((k) => k === 'cancelled').length > 0);
-	
-		if(!'title' in temp1 || temp1.title === ''){ continue;} //タイトル未指定ならスキップ
-		if(season !== undefined){ //日付が指定されており、範囲外ならスキップ
-			if(temp1.date.getTime() < DateStart.getTime()){ continue;}
-			if(temp1.date.getTime() > DateEnd.getTime()){ continue;}
-		}
-		
-		let row = 1;
-		
-		//2行目：解説
-		if('desc' in temp1 || 'setlist' in temp1){
-			row++;
-			const DescTemp = temp1.desc
-			// {{X:タイトル:数字17桁}} という部分を、Xへのリンクに置換する
-			.replace(/\{\{[xX]:([^:]*):(\d{19})\}\}/g, '（<a href="https://twitter.com/hasunosora_SIC/status/$2" target="blank">$1<\/a>）')
-			// {{L:タイトル:URL}} の部分を、リンクに置換する
-			.replace(/\{\{[lL]:([^:]*):([^}]*)\}\}/g, '<a href="$2" target="blank">$1<\/a>');
+	const DateStart = new Date(DateTemp[0]);
+	const DateEnd = new Date(DateTemp[1]);
 
-			OutputTemp2 += '<tr class="mid' + (isCancelled ? ' cancelled' : '') +'">'
-			+ '<td colspan="2" style="font-size: small;">'
-			+ DescTemp;
-			if('setlist' in temp1){ //セットリスト
-				OutputTemp2 += '<details class="setlist"><summary>セットリスト (クリックで展開)<\/summary><ol>';
-				for(const temp2 of temp1.setlist){
-					if(temp2 === 'MC'){
-						OutputTemp2 += '<li><i>MC<\/i><\/li>';
+	const result = LiveList.filter( (connect) => { //当該動画を
+		if(!'title' in connect || connect.title === ''){ return false;} //タイトル未指定ならスキップ
+		if(connect.date.getTime() > DateStart.getTime()
+		&& connect.date.getTime() < DateEnd.getTime()){ //日付の範囲指定
+			return true;
+		}
+	});
+
+	//特定の記法をリンクへと置換する
+	const DecorateText = ( text => text
+		// {{X:タイトル:数字17桁}} → Xへのリンク
+		.replace(/\{\{[xX]:([^:]*):(\d{19})\}\}/g, '（<a href="https://twitter.com/hasunosora_SIC/status/$2" target="blank">$1<\/a>）')
+		// {{L:タイトル:URL}} → リンク
+		.replace(/\{\{[lL]:([^:]*):([^}]*)\}\}/g, '<a href="$2" class="pc-exclusive-link" target="_blank" rel="noopener noreferrer">$1<\/a>')
+	);
+	
+	document.getElementById("OutputArea").innerHTML = result.reduce( (acc, connect) => {
+		//コンテナ
+		acc += '<article' + (connect.tags.find( (e) => e === 'cancelled') ? ' class="cancelled">' : '>');
+		//日付
+		acc += '<div class="article-box-date">' + GetStringFromDate(connect.date, false) + '<\/div>';
+		//タイトル
+		acc += '<div class="article-box-title">' + connect.title + '<\/div>';
+		//動画リンク
+		acc += '<div class="article-box-tube">';
+		if('tube' in connect){
+			if(connect.tube !== ''){
+				acc += '<a href="https://www.youtube.com/watch?v=' + connect.tube + '" target="blank">'
+				+ '<img src="http://img.youtube.com/vi/' + connect.tube.split('&')[0] + '/default.jpg" '
+				+ 'alt="' + connect.title + '" loading="lazy" class="pc-only">'
+				+ '<span class="sp-only">動画へ<\/span><\/a>';
+			}
+		}
+		acc += '<\/div>';
+		//解説
+		if('desc' in connect || 'setlist' in connect){
+			let descTemp = DecorateText(connect.desc);
+			
+			if('setlist' in connect){ //セットリストがあるなら
+				descTemp += '<details class="setlist"><summary>セットリスト (クリックで展開)<\/summary><ol>'
+				+ connect.setlist.reduce( (result, program) => {
+					if(program === 'MC'){
+						return result + '<li><i>MC<\/i><\/li>';
 					} else {
-						OutputTemp2 += '<li>' + temp2 + '<\/li>';
+						return result + '<li>' + program + '<\/li>';
 					}
-				}
-				OutputTemp2 += '<\/ol><\/details>\n';
+				}, '')
+				+ '<\/ol><\/details>\n';
 			}
-			OutputTemp2 += '<\/td><\/tr>\n';
+			acc += '<div class="article-box-desc">' + descTemp + '<\/div>';
 		}
-		
-		//3行目：タグ
-		if('tag' in temp1){
-			if(temp1.tag !== ''){
-				row++;
-				OutputTemp2 += '<tr class="mid' + (isCancelled ? ' cancelled' : '') +'">'
-				+ '<td class="tag">タグ<\/td><td>';
-				for(temp2 of temp1.tag){
-					OutputTemp2 += DrawCharName(temp2) + '\n';
-				}
-				OutputTemp2 += '<\/td><\/tr>\n';
+		//タグ
+		if('tags' in connect){
+			if(connect.tags !== ''){
+				acc += '<div class="article-box-tags">タグ：';
+				connect.tags.forEach( (tag) => {
+					acc += DrawCharName(tag);
+				});
+				acc += '<\/div>';
 			}
 		}
+		return acc + '<\/article>';
 		
-		//1行目：動画リンクなど
-		OutputTemp1 = '<tr class="top' + (isCancelled ? ' cancelled' : '') +'">'
-		+ '<td rowspan="' + row + '" style="white-space: nowrap;">' + GetStringFromDate(temp1.date) + '<\/td>\n'
-		+ '<th colspan="2">' + temp1.title + '<\/th>'
-		
-		OutputTemp1 += '<td rowspan="' + row + '">';
-		if('tube' in temp1){
-			if(temp1.tube !== ''){
-				OutputTemp1 += '<a href="https://www.youtube.com/watch?v=' + temp1.tube + '" target="blank">'
-				+ '<img src="http://img.youtube.com/vi/' + temp1.tube.split('&')[0] + '/default.jpg" width="120" height="90" alt="動画"><\/a>'
-				+ '<\/td><\/tr>\n';
-			}
-		}
-		OutputTemp1 += '<\/td><\/tr>\n';
-		
-		Output += OutputTemp1 + OutputTemp2;
-	}
-	document.getElementById("LiveList-result").innerHTML = Output;
+	}, "");
 }
 --></script>
 </head>
@@ -305,7 +357,7 @@ function DrawLiveList(season){
 	<h3 class="muse">動画一覧</h3>
 	<p>下部のプルダウンメニューから期間を選択すると、その期間に配信された動画の情報が表示されます。
 	</p>
-	<p>「動画リンク」列のサムネイルをクリック/タップすると、YouTubeの動画を開きます。<br>
+	<p>「動画リンク」列のサムネイル、または「動画へ」と書かれたリンクをクリック/タップすると、YouTubeの動画を開きます。<br>
 	タグのキャラクター欄は、実際に配信に参加したメンバーを表しています。</p>
 	<div id="PullDown-Container">
 		<label for="PullDownList">絞り込み</label>
@@ -319,17 +371,10 @@ function DrawLiveList(season){
 			<option value="2025-10-01,2026-03-31">105期 下半期（2025年10月 - 2026年3月）</option>-->
 		</select>
 	</div>
-	<div id="LiveListTable" class="FixedHeader">
-		<table style="min-height:100%;">
-			<thead>
-				<tr>
-					<th style="width: 100px;">配信日</th>
-					<th colspan="2">配信内容</th>
-					<th style="width: 120px;">動画リンク</th>
-				</tr>
-			</thead>
-			<tbody id="LiveList-result"><tr><td colspan="4" style="padding: 10px; vertical-align: top; font-size: large; color: #666; ">プルダウンメニューから期間を選択してください。</td></tr></tbody>
-		</table>
+	<div id="OutputArea">
+		<div style="padding: 10px; vertical-align: top; font-size: large; color: #666">
+			プルダウンメニューから期間を選択してください。
+		</div>
 	</div>
 </section>
 
@@ -338,13 +383,18 @@ function DrawLiveList(season){
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2023/12/22</span> - スマートフォン向けレイアウトを導入</summary>
+		<div>
+			<span class="new"></span>スマートフォン向けレイアウトを導入
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2023/11/18</span> - データ追加・改修</summary>
 		<div>
 			<span class="new"></span>中止となった配信の情報に背景色を付与<br>
 			<span class="fix"></span>「配信一覧」を期間を選択して表示するように変更<br>
 			<span class="fix"></span>スマートフォン等のデバイスからの見え方を調整
 		</div>
-	</details>
 	</details>
 	<details open>
 		<summary class="important"><span class="date">2023/08/23</span> - 公開</summary>
@@ -383,6 +433,23 @@ function loadScript(src, callback) {
 
 loadScript("data/hasu_live.js", function() {
 	const TimeOutputStart = performance.now();
+
+	//◆ボタン色計算用
+	const getColor = (Object, divisor) => {
+		if(!divisor){ divisor = 1;}
+		const r = Math.floor((Object.r + (255 * (divisor-1))) / divisor);
+		const g = Math.floor((Object.g + (255 * (divisor-1))) / divisor);
+		const b = Math.floor((Object.b + (255 * (divisor-1))) / divisor);
+		return 'rgb(' + r + ',' + g + ',' + b + ');';
+	}
+	//■色データをCSSに追加
+	let AddedCSS = '\n';
+	Object.keys(TagData).forEach(function(key) {
+		AddedCSS += '.button_' + key + '{\n\t'
+		+ 'background-color: ' + getColor(TagData[key], 3) + '\n\t'
+		+ 'border-color: ' + getColor(TagData[key], 1) + '\n}\n';
+	});
+	document.querySelector('style').textContent += AddedCSS; //一括追加で再計算の時間を一度だけに
 
 	//◆「Now Loading...」解除
 	document.getElementById("Loading").style.display = "none";
