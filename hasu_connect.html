@@ -187,7 +187,7 @@ article:not(.cancelled) {
 //■デバッグモード
 const isDebugMode = (location.search.substring(1).split('&').indexOf('debug') >= 0);
 
-//■キャラクター名のボタンを描画
+//■キャラクターのデータ
 const TagData = {
 	"meets"     : {"name": "With×MEETS" , "r":160, "g":112, "b": 96, "style": "Square" },
 	"live"      : {"name": "Fes×LIVE"   , "r": 80, "g":128, "b":128, "style": "Square" },
@@ -212,7 +212,7 @@ function DrawCharName(character){
 	}
 }
 
-//■Date型「YYYY/MM/DD」という文字列に変換
+//■Date型 → "YYYY/MM/DD" への変換
 const formatDate = (date => {
 	const year = date.getFullYear();
 	const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -355,7 +355,7 @@ function DrawLiveList(season){
 			<span class="fix"></span>スマートフォン等のデバイスからの見え方を調整
 		</div>
 	</details>
-	<details open>
+	<details>
 		<summary class="important"><span class="date">2023/08/23</span> - 公開</summary>
 		<div>
 			<span class="new"></span>公開
