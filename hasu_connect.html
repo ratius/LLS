@@ -20,7 +20,6 @@
 <title>リンクラ スクールアイドルコネクトまとめ | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main.css">
-<link rel="stylesheet" href="color.css" media="print" onload="this.media='all'">
 <style><!--
 /* 絞り込み */
 #PullDown-Container {
@@ -62,10 +61,8 @@ div.cancelled {
 	background-color: #ccc;
 }
 
-article:not(.cancelled) {
-	.article-box-title {
-		background-color: #fde;
-	}
+article:not(.cancelled) .article-box-title {
+	background-color: #fde;
 }
 
 .article-box-date, .article-box-title, .article-box-desc, .article-box-tags {
