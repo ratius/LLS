@@ -22,22 +22,6 @@
 <link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="color.css" media="print" onload="this.media='all'">
 <style><!--
-
-/* 共通 */
-.FixedHeader {
-	overflow-y: scroll;
-	width: 100%;
-	max-width: 1000px;
-	height: calc(80vh - 30px);
-}
-
-.FixedHeader table{
-	width: 100%;
-	border-collapse: separate;
-	border-spacing: 0;
-	background-color: white;
-}
-
 /* 絞り込み */
 #PullDown-Container {
 	font-size: x-large;
@@ -69,14 +53,12 @@ article {
 	width: 100%;
 	display: grid;
 	flex-wrap: wrap;
-	
 	div {
 		padding: 4px 10px;
 	}
 }
 article.cancelled {
 	background-color: #ddd;
-
 	.article-box-title, .article-box-tube {
 		background-color: #ccc;
 	}
@@ -202,10 +184,8 @@ article:not(.cancelled) {
 
 --></style>
 <script><!--
-//■デバッグモード判定
-let isDebugMode = false;
-const Parameter = location.search.substring(1).split('&');
-if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
+//■デバッグモード
+const isDebugMode = (location.search.substring(1).split('&').indexOf('debug') >= 0);
 
 //■キャラクター名のボタンを描画
 const TagData = {
@@ -221,38 +201,29 @@ const TagData = {
 	"Megumi"  : {"name": "慈"     , "r":200, "g":194, "b":198, "style": "Round" }
 };
 
-//■キャラクター名のボタン ver.20231220
+//■キャラクター名のボタン ver.20231222a
 function DrawCharName(character){
-	if(!character in TagData){ //存在しないなら
-		console.log("キャラクターID " + character + " は存在しません");
-		return false;
+	if(character in TagData){ //存在する場合のみ
+		const target = TagData[character];
+		return `<span class="button-${target.style} button_${character}">${target.name}</span>`;
+	} else {
+		console.log(`キャラクターID ${character} は存在しません`);
+		return "Error";
 	}
-	const target = TagData[character];
-	let Output = '<span class="' + target.style + 'Button button_' + character + '">'
-	+ target.name + '<\/span>';
-	return Output;
 }
 
-//■Date型を「YYYY/MM/DD (hh:mm)」という文字列に変換
-function GetStringFromDate(date,hm){
-	const temp1 = new Date(date);
-	
-	if(temp1.getFullYear() == 1970){ //取得失敗などの理由で1970年になった場合、空文字列を返す
-		console.log("Error: " + temp + "may not be a date");
-		return "";
-	}
-	let temp2 = temp1.getFullYear()
-	+ "/" + ("00" + (temp1.getMonth()+1)).slice(-2)
-	+ "/" + ("00" + (temp1.getDate())).slice(-2);
-	if(hm){
-		temp2 += " " + ("00" + (temp1.getHours())).slice(-2)
-		+ ":" + ("00" + (temp1.getMinutes())).slice(-2);
-	}
-	return temp2;
-}
+//■Date型「YYYY/MM/DD」という文字列に変換
+const formatDate = (date => {
+	const year = date.getFullYear();
+	const month = String(date.getMonth() + 1).padStart(2, '0');
+	const day = String(date.getDate()).padStart(2, '0');
+	return `${year}/${month}/${day}`;
+});
 
 //■「スクールアイドルコネクト一覧」の描画
 function DrawLiveList(season){
+	const TimeOutputStart = performance.now();
+	
 	if(season === undefined || season === ""){ return false;} //期間が指定されていない場合、描画をキャンセル
 	const DateTemp = season.split(',');
 	const DateStart = new Date(DateTemp[0]);
@@ -269,59 +240,47 @@ function DrawLiveList(season){
 	//特定の記法をリンクへと置換する
 	const DecorateText = ( text => text
 		// {{X:タイトル:数字17桁}} → Xへのリンク
-		.replace(/\{\{[xX]:([^:]*):(\d{19})\}\}/g, '（<a href="https://twitter.com/hasunosora_SIC/status/$2" target="blank">$1<\/a>）')
+		.replace(/\{\{[xX]:([^:]*):(\d{19})\}\}/g,
+		'<span class="pc-only">（<a href="https://twitter.com/hasunosora_SIC/status/$2" target="blank">$1<\/a>）<\/span>')
 		// {{L:タイトル:URL}} → リンク
-		.replace(/\{\{[lL]:([^:]*):([^}]*)\}\}/g, '<a href="$2" class="pc-exclusive-link" target="_blank" rel="noopener noreferrer">$1<\/a>')
+		.replace(/\{\{[lL]:([^:]*):([^}]*)\}\}/g,
+		'<a href="$2" class="pc-exclusive-link" target="_blank" rel="noopener noreferrer">$1<\/a>')
 	);
 	
-	document.getElementById("OutputArea").innerHTML = result.reduce( (acc, connect) => {
-		//コンテナ
-		acc += '<article' + (connect.tags.find( (e) => e === 'cancelled') ? ' class="cancelled">' : '>');
-		//日付
-		acc += '<div class="article-box-date">' + GetStringFromDate(connect.date, false) + '<\/div>';
-		//タイトル
-		acc += '<div class="article-box-title">' + connect.title + '<\/div>';
-		//動画リンク
-		acc += '<div class="article-box-tube">';
-		if('tube' in connect){
-			if(connect.tube !== ''){
-				acc += '<a href="https://www.youtube.com/watch?v=' + connect.tube + '" target="blank">'
-				+ '<img src="http://img.youtube.com/vi/' + connect.tube.split('&')[0] + '/default.jpg" '
-				+ 'alt="' + connect.title + '" loading="lazy" class="pc-only">'
-				+ '<span class="sp-only">動画へ<\/span><\/a>';
-			}
-		}
-		acc += '<\/div>';
-		//解説
-		if('desc' in connect || 'setlist' in connect){
-			let descTemp = DecorateText(connect.desc);
-			
-			if('setlist' in connect){ //セットリストがあるなら
-				descTemp += '<details class="setlist"><summary>セットリスト (クリックで展開)<\/summary><ol>'
-				+ connect.setlist.reduce( (result, program) => {
-					if(program === 'MC'){
-						return result + '<li><i>MC<\/i><\/li>';
-					} else {
-						return result + '<li>' + program + '<\/li>';
-					}
-				}, '')
-				+ '<\/ol><\/details>\n';
-			}
-			acc += '<div class="article-box-desc">' + descTemp + '<\/div>';
-		}
-		//タグ
-		if('tags' in connect){
-			if(connect.tags !== ''){
-				acc += '<div class="article-box-tags">タグ：';
-				connect.tags.forEach( (tag) => {
-					acc += DrawCharName(tag);
-				});
-				acc += '<\/div>';
-			}
-		}
-		return acc + '<\/article>';
+	document.getElementById("OutputArea").innerHTML = result.map( connect => {
+		const isCancelled = connect.tags.find( (e) => e === 'cancelled');
+		const videoContent =
+		('tube' in connect && connect.tube ?
+			`<a href="https://www.youtube.com/watch?v=${connect.tube}" target="_blank">
+				<img src="http://img.youtube.com/vi/${connect.tube.split('&')[0]}/default.jpg" alt="${connect.title}" loading="lazy" class="pc-only">
+				<span class="sp-only">動画へ</span>
+			</a>`
+		:'');
+		const descContent = DecorateText(connect.desc)
+		+ ('setlist' in connect ? 
+			`<details class="setlist">
+				<summary>セットリスト (クリックで展開)</summary>
+				<ol>
+					${connect.setlist.map(program =>
+					`<li>${(program === 'MC' ? `<i>MC</i>` : program)}</li>`).join('')}
+				</ol>
+			</details>`
+		:'');
 		
-	}, "");
+		return `
+		<article ${(isCancelled ? 'class="cancelled"' : '')}>
+			<div class="article-box-date">${formatDate(connect.date)}</div>
+			<div class="article-box-title">${connect.title}</div>
+			<div class="article-box-tube">${videoContent}</div>
+			<div class="article-box-desc">${descContent}</div>
+			<div class="article-box-tags">${connect.tags.map( tag => DrawCharName(tag)).join('')}</div>
+		</article>`
+	}).join('');
+	
+	if(isDebugMode) {
+		const TimeOutputEnd = performance.now();
+		console.log(`${season}出力完了。\n所要時間: ${TimeOutputEnd - TimeOutputStart}ミリ秒`);
+	}
 }
 --></script>
 </head>
