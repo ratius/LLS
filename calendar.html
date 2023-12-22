@@ -409,8 +409,8 @@ function generateCalendar(y, m){
 	<div class="calendar-container">
 		<div id="options">
 			<strong>オプション</strong><br>
-			<label><input type="checkbox" id="o_cast" onclick="generateCalendar(year, month)" checked>キャストを表示する</label><br>
-			<label><input type="checkbox" id="o_llsif" onclick="generateCalendar(year, month)" checked>スクフェス転入生を表示する</label><br>
+			<label><input type="checkbox" id="o_cast" onclick="generateCalendar(year, month)" checked></input>キャストを表示する</label><br>
+			<label><input type="checkbox" id="o_llsif" onclick="generateCalendar(year, month)" checked></input>スクフェス転入生を表示する</label><br>
 		</div>
 		<div id="calendar">
 			<div id="date_container">
@@ -420,7 +420,7 @@ function generateCalendar(y, m){
 			</div>
 			<table>
 				<thead>
-					<th>日</td><th>月</td><th>火</td><th>水</td><th>木</td><th>金</td><th>土</td>
+					<tr><th>日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th></tr>
 				</thead>
 				<tbody id="calendarInner">
 				</tbody>
