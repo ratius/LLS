@@ -53,10 +53,8 @@ article {
 	width: 100%;
 	display: grid;
 	flex-wrap: wrap;
-	div {
-		padding: 4px 10px;
-	}
 }
+
 article.cancelled {
 	background-color: #ddd;
 	.article-box-title, .article-box-tube {
@@ -69,6 +67,9 @@ article:not(.cancelled) {
 	}
 }
 
+.article-box-date, .article-box-title, .article-box-desc, .article-box-tags {
+	padding: 4px 10px;
+}
 .article-box-date, .article-box-tube{
 	display: flex;
 	align-items: center;
