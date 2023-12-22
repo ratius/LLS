@@ -22,34 +22,31 @@ p {
 	border: solid 1px #978;
 	z-index: 9;
 	background: linear-gradient(90deg, #fde 0%, white 50%);
-	
-	strong {
-		font-size: large;
-		display: block;
-		margin: 2px;
-	}
-	hr {
-		border: none;
-		border-bottom: 2px solid #cbc;
-		margin: 4px auto;
-	}
-	ul {
-		list-style: none;
-		padding: 10px 20px;
-		margin: 0;
-		
-		ul {
-			font-size: 90%;
-		}
-	}
-
-	li {
-		margin-bottom: 3px;
-			a {
-			display: block;
-			padding: 2px 0px;
-		}
-	}
+}
+#RightMenu strong {
+	font-size: large;
+	display: block;
+	margin: 2px;
+}
+#RightMenu hr {
+	border: none;
+	border-bottom: 2px solid #cbc;
+	margin: 4px auto;
+}
+#RightMenu ul {
+	list-style: none;
+	padding: 10px 20px;
+	margin: 0;
+}
+#RightMenu ul ul {
+	font-size: 90%;
+}
+#RightMenu li {
+	margin-bottom: 3px;
+}
+#RightMenu a {
+	display: block;
+	padding: 2px 0px;
 }
 
 @media screen and (min-width: 1280px) {

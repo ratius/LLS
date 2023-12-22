@@ -116,10 +116,8 @@ article:not(.cancelled) .article-box-title {
 	article:not(:last-child) {
 		border-bottom: solid 3px #999;
 	}
-	article:not(.cancelled) {
-		.article-box-tube {
-			background-color: #fde;
-		}
+	.article-box-tube:not(.cancelled) {
+		background-color: #fde;
 	}
 	
 	.article-box-date:before {
@@ -166,17 +164,16 @@ article:not(.cancelled) .article-box-title {
 		width: 130px;
 		grid-row: span 3;
 		border-left: solid 1px #bbb;
-
-		a {
-			width: 124px;
-			height: 72px;
-			border: solid 2px #f66;
-		}
-		img {
-			width: 120px;
-			height: 68px;
-			object-fit: cover;
-		}
+	}
+	.article-box-tube a {
+		width: 124px;
+		height: 72px;
+		border: solid 2px #f66;
+	}
+	.article-box-tube img {
+		width: 120px;
+		height: 68px;
+		object-fit: cover;
 	}
 }
 
