@@ -17,6 +17,7 @@
 <meta name="twitter:description" content="スクフェス2で配信されていた「毎日劇場」のまとめです。">
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e50080">
 
 <title>スクフェス2 毎日劇場アーカイブ | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
@@ -52,19 +53,19 @@ p{
 	background-color: white;
 }
 
-#OutputArea article {
+.story {
 	width: 100%;
 	display: grid;
 	flex-wrap: wrap;
 }
 
-.story-date, .story-title, .story-memo{
-	display: flex;
-	align-items: center;
+.story-date, .story-title, .story-memo, .story-tags {
 	padding: 4px 10px;
 }
 
 .story-date{ /*日付入力欄*/
+	display: flex;
+	align-items: center;
 	font-size: 95%;
 	font-weight: bold;
 	background-color: #eee;
@@ -79,8 +80,8 @@ p{
 	width: 40%;
 	color: #403038;
 	font-weight: bold;
-
-	&.has_text {
+}
+.story-title&.has_text {
 		background-color: #fac;
 		clip-path: polygon(0% 0%, calc(100% - 10px) 0%, 100% 50%, calc(100% - 10px) 100%, 0% 100%);
 		cursor: pointer;
@@ -91,9 +92,6 @@ p{
 	font-size: small;
 	color: #666;
 	background-color: #fde;
-}
-.story-tags { /*タグ欄*/
-	padding: 4px 10px;
 }
 
 /* モーダルウィンドウ*/
@@ -141,15 +139,14 @@ p{
 
 #Modal-Text {
 	padding: 10px;
-}
 
-#Modal-Text > hr {
-	height: 0px; 
-	border: 1px solid #bbb;
-}
-
-#Modal-Text > p {
-	margin: 5px 5px 5px 30px;
+	p {
+		margin: 5px 5px 5px 30px;
+	}
+	hr {
+		height: 0px; 
+		border: 1px solid #bbb;
+	}
 }
 
 #Modal-CloseButton {
@@ -165,7 +162,7 @@ p{
 
 /* ■スマートフォン向けレイアウト */
 @media screen and (max-width: 599px) {
-	#OutputArea > article:not(:last-child) {
+	#OutputArea article:not(:last-child) {
 		border-bottom: solid 3px #999;
 	}
 	.story-date:before {
@@ -197,7 +194,7 @@ p{
 
 /* ■PC向けレイアウト */
 @media screen and (min-width: 600px) {
-	#OutputArea > article {
+	#OutputArea article {
 		grid-template-columns: 120px auto;
 		border-right: solid 1px #999;
 		border-bottom: solid 1px #999;
@@ -240,175 +237,90 @@ p{
 
 --></style>
 <script><!--
-//■デバッグモード判定
-let isDebugMode = false;
-const Parameter = location.search.substring(1).split('&');
-if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
-
-//■■各種データ定義
-//■タグデータ
-const TagData = {
-	"Honoka":  {"name": "穂乃果",  "r":243, "g":133, "b":  0, "style": "Round"},
-	"Eli":     {"name": "絵里",    "r": 46, "g":191, "b":212, "style": "Round"},
-	"Kotori":  {"name": "ことり",  "r":166, "g":154, "b":154, "style": "Round"},
-	"Umi":     {"name": "海未",    "r":  9, "g": 77, "b":202, "style": "Round"},
-	"Rin":     {"name": "凛",      "r":219, "g":212, "b": 30, "style": "Round"},
-	"Maki":    {"name": "真姫",    "r":205, "g": 34, "b": 16, "style": "Round"},
-	"Nozomi":  {"name": "希",      "r":160, "g": 43, "b":212, "style": "Round"},
-	"Hanayo":  {"name": "花陽",    "r": 59, "g":203, "b": 69, "style": "Round"},
-	"Nico":    {"name": "にこ",    "r":211, "g": 27, "b": 96, "style": "Round"},
-
-	"Chika":   {"name": "千歌",    "r":236, "g":116, "b": 28, "style": "Round"},
-	"Riko":    {"name": "梨子",    "r":233, "g":114, "b":132, "style": "Round"},
-	"Kanan":   {"name": "果南",    "r": 13, "g":148, "b":139, "style": "Round"},
-	"Dia":     {"name": "ダイヤ",  "r":170, "g":  0, "b": 40, "style": "Round"},
-	"You":     {"name": "曜",      "r": 56, "g":153, "b":220, "style": "Round"},
-	"Yoshiko": {"name": "善子",    "r":151, "g":160, "b":172, "style": "Round"},
-	"Hanamaru":{"name": "花丸",    "r":226, "g":181, "b":  0, "style": "Round"},
-	"Mari":    {"name": "鞠莉",    "r":148, "g": 35, "b":152, "style": "Round"},
-	"Ruby":    {"name": "ルビィ",  "r":234, "g": 75, "b":162, "style": "Round"},
-
-	"Ayumu":   {"name": "歩夢",    "r":246, "g":150, "b":201, "style": "Round"},
-	"Kasumi":  {"name": "かすみ",  "r":213, "g":222, "b":112, "style": "Round"},
-	"Shizuku": {"name": "しずく",  "r":138, "g":204, "b":228, "style": "Round"},
-	"Karin":   {"name": "果林",    "r": 42, "g": 20, "b":180, "style": "Round"},
-	"Ai":      {"name": "愛",      "r":232, "g": 89, "b": 21, "style": "Round"},
-	"Kanata":  {"name": "彼方",    "r":156, "g": 94, "b":223, "style": "Round"},
-	"Setsuna": {"name": "せつ菜",  "r":179, "g":  6, "b":  6, "style": "Round"},
-	"Emma":    {"name": "エマ",    "r":143, "g":218, "b":121, "style": "Round"},
-	"Rina":    {"name": "璃奈",    "r":158, "g":154, "b":192, "style": "Round"},
-	"Shioriko":{"name": "栞子",    "r": 18, "g":158, "b":112, "style": "Round"},
-	"Mia":     {"name": "ミア",    "r":169, "g":168, "b":152, "style": "Round"},
-	"Lanzhu":  {"name": "嵐珠",    "r":246, "g":153, "b":146, "style": "Round"},
-	"Yu":      {"name": "侑",      "r":195, "g":195, "b":195, "style": "Round"},
-
-	"Kanon":   {"name": "かのん"  ,"r":242, "g": 99, "b":  0, "style": "Round"},
-	"Keke":    {"name": "可可"    ,"r": 58, "g":255, "b":243, "style": "Round"},
-	"Chisato": {"name": "千砂都"  ,"r":255, "g": 58, "b":107, "style": "Round"},
-	"Sumire":  {"name": "すみれ"  ,"r": 38, "g":228, "b": 17, "style": "Round"},
-	"Ren":     {"name": "恋"      ,"r":  0, "g":  0, "b":109, "style": "Round"},
-	"Kinako":  {"name": "きな子"  ,"r":219, "g":206, "b":  0, "style": "Round"},
-	"Mei":     {"name": "メイ"    ,"r":207, "g":  0, "b":  0, "style": "Round"},
-	"Shiki":   {"name": "四季"    ,"r": 76, "g":255, "b":176, "style": "Round"},
-	"Natsumi": {"name": "夏美"    ,"r":234, "g":  0, "b":155, "style": "Round"},
-	"Wien":    {"name": "ウィーン","r":228, "g":157, "b":253, "style": "Round"},
-	"Tomari":  {"name": "冬毬"    ,"r": 76, "g":210, "b":226, "style": "Round"},
-	
-	"Season":     {"name": "季節の行事", "r":100, "g":140, "b":160, "style": "Square"},
-	"Birthday":   {"name": "誕生日",     "r":100, "g":140, "b":160, "style": "Square"},
-	"Live":       {"name": "ライブ",     "r":100, "g":140, "b":160, "style": "Square"}
-};
-
-//■ソート対象
-const SortTarget = [
-{"name": "2023年", "tag": "year-2023"},
-//{"name": "2024年", "tag": "year-2024"},
-{"name": "----"},
-{"name": "出演：高坂 穂乃果", "tag": "Honoka"},
-{"name": "出演：絢瀬 絵里", "tag": "Eli"},
-{"name": "出演：南 ことり", "tag": "Kotori"},
-{"name": "出演：園田 海未", "tag": "Umi"},
-{"name": "出演：星空 凛", "tag": "Rin"},
-{"name": "出演：西木野 真姫", "tag": "Maki"},
-{"name": "出演：東條 希", "tag": "Nozomi"},
-{"name": "出演：小泉 花陽", "tag": "Hanayo"},
-{"name": "出演：矢澤 にこ", "tag": "Nico"},
-{"name": "出演：高海 千歌", "tag": "Chika"},
-{"name": "出演：桜内 梨子", "tag": "Riko"},
-{"name": "出演：松浦 果南", "tag": "Kanan"},
-{"name": "出演：黒澤 ダイヤ", "tag": "Dia"},
-{"name": "出演：渡辺 曜", "tag": "You"},
-{"name": "出演：津島 善子", "tag": "Yoshiko"},
-{"name": "出演：国木田 花丸", "tag": "Hanamaru"},
-{"name": "出演：小原 鞠莉", "tag": "Mari"},
-{"name": "出演：黒澤 ルビィ", "tag": "Ruby"},
-{"name": "出演：上原 歩夢", "tag": "Ayumu"},
-{"name": "出演：中須 かすみ", "tag": "Kasumi"},
-{"name": "出演：桜坂 しずく", "tag": "Shizuku"},
-{"name": "出演：朝香 果林", "tag": "Karin"},
-{"name": "出演：宮下 愛", "tag": "Ai"},
-{"name": "出演：近江 彼方", "tag": "Kanata"},
-{"name": "出演：優木 せつ菜", "tag": "Setsuna"},
-{"name": "出演：エマ・ヴェルデ", "tag": "Emma"},
-{"name": "出演：天王寺 璃奈", "tag": "Rina"},
-{"name": "出演：三船 栞子", "tag": "Shioriko"},
-{"name": "出演：ミア・テイラー", "tag": "Mia"},
-{"name": "出演：鐘 嵐珠", "tag": "Lanzhu"},
-{"name": "出演：高咲 侑", "tag": "Yu"},
-{"name": "出演：澁谷 かのん", "tag": "Kanon"},
-{"name": "出演：唐 可可", "tag": "Keke"},
-{"name": "出演：嵐 千砂都", "tag": "Chisato"},
-{"name": "出演：平安名 すみれ", "tag": "Sumire"},
-{"name": "出演：葉月 恋", "tag": "Ren"},
-{"name": "出演：桜小路 きな子", "tag": "Kinako"},
-{"name": "出演：米女 メイ", "tag": "Mei"},
-{"name": "出演：若菜 四季", "tag": "Shiki"},
-{"name": "出演：鬼塚 夏美", "tag": "Natsumi"},
-{"name": "出演：ウィーン・マルガレーテ", "tag": "Wien"},
-{"name": "出演：鬼塚 冬毬", "tag": "Tomari"},
-{"name": "----"},
-{"name": "テーマ：季節の行事", "tag": "Season"},
-{"name": "テーマ：誕生日", "tag": "Birthday"},
-//{"name": "テーマ：ライブ", "tag": "Live"},
-//{"name": "----"},
-//{"name": "シリーズ：堕天使ヨハネ", "tag": "Yohane"},
-];
+//■デバッグモード
+const isDebugMode = (location.search.substring(1).split('&').indexOf('debug') >= 0);
 
 //■■関数
-//■キャラクター名のボタン ver.20231220
-function DrawCharName(character){	
-	if(!character in TagData){ //存在しないなら
-		console.log("キャラクターID " + character + " は存在しません");
-		return false;
+//■キャラクター名のボタン ver.20231222a
+function DrawCharName(character){
+	if(character in TagData){ //存在する場合のみ
+		const target = TagData[character];
+		return `<span class="button-${target.style} button_${character}">${target.name}</span>`;
+	} else {
+		console.log(`キャラクターID ${character} は存在しません`);
+		return "Error";
 	}
-	const target = TagData[character];
-	let Output = '<span class="' + target.style + 'Button button_' + character + '">'
-	+ target.name + '<\/span>';
-	return Output;
 }
 
 //■条件に合致するストーリーを抜き出してリストアップ
-function DrawStoryList(cons){
-	storyResult = new Array();
-	if(cons === "undefined"){
-		return;
-	} else if(cons.substring(0,5) === "year-"){ //「年」が選択された場合
-		storyResult = TheaterLog.filter(temp => temp.date.substring(0,4) === cons.substring(5));
-	} else {
-		storyResult = TheaterLog.filter(temp => temp.tags.indexOf(cons) != -1);
+function DrawStoryList(conditions){
+	const TimeOutputStart = performance.now();
+	const DecorateText = ( text => {
+		return text
+		// {{L:タイトル:URL}} の部分を、リンクに置換する
+		.replace(/\{\{[lL]:([^:]*):([^}]*)\}\}/g, '<a href="$2" class="pc-exclusive-link" target="blank">$1<\/a>');
+	});
+
+	let storyResult = new Array();
+	if(conditions === "undefined"){ //絞り込み条件が指定されていない場合、キャンセル
+		return false;
 	}
-	Output = storyResult.reduce ( (result, story) => {
-		let temp = '<article>'
-		+ '<div class="story-date">' + story.date + '<\/div>'
-		+ '<div class="story-titleContainer">'
-		+ '<div class="story-title'
-		+ ('text' in story ? ' has_text" onclick="MakeModal(' + story.id + ');"' : '')
-		+  '">' + story.title + '<\/div>'
-		+ '<div class="story-memo">' + ('memo' in story ? story.memo : '') + '<\/div><\/div>'
-		+ '<div class="story-tags">'
-		+ story.tags.reduce( (result, tag) => { return result + DrawCharName(tag); }, '')
-		+ '<\/div><\/article>';
-		return result + temp;
-	}, '');
-	document.getElementById("OutputArea").innerHTML = Output;
+	conditions = conditions.split(',');
+	
+	if(conditions[0] === 'date'){ //日付による絞り込み
+		const dateStart = new Date(conditions[1]);
+		const dateEnd = new Date(conditions[2]);
+		storyResult = TheaterLog.filter(temp => {
+			const dateStory = new Date(temp.date);
+			return dateStory.getTime() >= dateStart.getTime() && dateStory.getTime() <= dateEnd.getTime();
+		});
+	} else if(conditions[0] === 'tag'){ //タグによる絞り込み
+		storyResult = TheaterLog.filter(temp => temp.tags.indexOf(conditions[1]) !== -1);
+	} else {
+		return false;
+	}
+	
+	document.getElementById("OutputArea").innerHTML = storyResult.map( story => {
+		const storyTitleAtttribute = 
+		('text' in story ?
+			`class="story-title has_text" onclick="MakeModal(${story.id})"`
+		:
+			`class="story-title"`
+		);
+		const tagContent = story.tags.map( tag => DrawCharName(tag) ).join('');
+
+		return `
+		<article class="story">
+			<div class="story-date">${story.date}</div>
+			<div class="story-titleContainer">
+				<div ${storyTitleAtttribute}>${story.title}</div>
+				<div class="story-memo">${('memo' in story ? story.memo : '')}</div>
+			</div>
+			<div class="story-tags">${tagContent}</div>
+			</div>
+		</article>`;
+	}).join('');
+	
+	if(isDebugMode) {
+		const TimeOutputEnd = performance.now();
+		console.log(`${conditions}出力完了。\n所要時間: ${TimeOutputEnd - TimeOutputStart}ミリ秒`);
+	}
 }
 
 //■指定されたIDの毎日劇場をモーダルウィンドウに描画
-function MakeModal(id, code){
-	result = TheaterLog.find((temp) => temp.id === id);
+function MakeModal(id){
+	const result = TheaterLog.find(temp => temp.id === id);
 	if(!result){ return false;}
 	
 	//タイトル
 	document.getElementById("Modal-Title").innerHTML = result.title;
 	
 	//テキスト
-	let Output = "";
 	const TextLog = result.text.split('\n');
-	for(i of TextLog){
-		i = i.split('\t');
-		Output += DrawCharName(result.tags[i[0]]) + '<p>' + i[1] + '<\/p><hr>';
-	}
-	document.getElementById("Modal-Text").innerHTML = Output;
+	document.getElementById("Modal-Text").innerHTML = TextLog.map( text => {
+		text = text.split('\t');
+		return DrawCharName(result.tags[text[0]]) + `<p>${text[1]}</p><hr>`;
+	}).join("");
 	
 	//ポップアップを表示
 	document.getElementById("Modal").classList.remove("fadeout");
@@ -515,24 +427,24 @@ function CloseModal(target){
 
 <script><!--
 function loadScript(src, callback) {
-    let done = false;
-    let head = document.getElementsByTagName('head')[0];
-    let script = document.createElement('script');
-    script.src = src;
-    head.appendChild(script);
-    // Attach handlers for all browsers
-    script.onload = script.onreadystatechange = function() {
-        if ( !done && (!this.readyState ||
-                this.readyState === "loaded" || this.readyState === "complete") ) {
-            done = true;
-            callback();
-            // Handle memory leak in IE
-            script.onload = script.onreadystatechange = null;
-            if ( head && script.parentNode ) {
-                head.removeChild( script );
-            }
-        }
-    };
+	let done = false;
+	let head = document.getElementsByTagName('head')[0];
+	let script = document.createElement('script');
+	script.src = src;
+	head.appendChild(script);
+	// Attach handlers for all browsers
+	script.onload = script.onreadystatechange = function() {
+		if ( !done && (!this.readyState ||
+				this.readyState === "loaded" || this.readyState === "complete") ) {
+			done = true;
+			callback();
+			// Handle memory leak in IE
+			script.onload = script.onreadystatechange = null;
+			if ( head && script.parentNode ) {
+				head.removeChild( script );
+			}
+		}
+	};
 }
 
 loadScript("data/llsif2_theater.js", function() {
@@ -543,24 +455,24 @@ loadScript("data/llsif2_theater.js", function() {
 		const r = Math.floor((Object.r + (255 * (divisor-1))) / divisor);
 		const g = Math.floor((Object.g + (255 * (divisor-1))) / divisor);
 		const b = Math.floor((Object.b + (255 * (divisor-1))) / divisor);
-		return 'rgb(' + r + ',' + g + ',' + b + ');';
+		return `rgb(${r},${g},${b});`;
 	}
 	//■色データをCSSに追加
-	let AddedCSS = '\n';
-	Object.keys(TagData).forEach(function(key) {
-		AddedCSS += '.button_' + key + '{\n\t'
-		+ 'background-color: ' + getColor(TagData[key], 3) + '\n\t'
-		+ 'border-color: ' + getColor(TagData[key], 1) + '\n}\n';
-	});
-	document.querySelector('style').textContent += AddedCSS; //一括追加で再計算の時間を一度だけに
+	document.querySelector('style').textContent += Object.keys(TagData).map( character => {
+		return `
+		.button_${character} {
+			background-color: ${getColor(TagData[character], 3)}
+			border-color: ${getColor(TagData[character], 1)}
+		}`;
+	}).join('');
 	
 	//■セレクトボックスに要素を追加
-	for(const temp1 of SortTarget){
-		var temp2 = document.createElement("option");
-		temp2.text = temp1.name;
-		temp2.value = temp1.tag;
-		document.getElementById("PullDownMenu").appendChild(temp2);
-	}
+	SortTarget.forEach( temp => {
+		const option = document.createElement("option");
+		option.text = temp.name;
+		option.value = temp.condition;
+		document.getElementById("PullDownMenu").appendChild(option);
+	});
 
 	//■「Now Loading...」解除
 	document.getElementById("Loading").style.display = "none";
