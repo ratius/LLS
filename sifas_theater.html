@@ -33,8 +33,9 @@ p{
 
 #OutputArea {
 	border: solid 3px #a89;
-	width: min(calc(100% - 10px), 1200px);
-	height: calc(90vh - 120px);
+	width: 100%;
+	max-width: 1200px;
+	height: calc(100vh - 150px);
 	overflow-y: scroll;
 	background-color: white;
 }
@@ -83,29 +84,10 @@ p{
 #OutputTable .memo, #OutputTable .tag {
 	border-right: solid 1px #999;
 }
-
-.RoundButton {
-	display: inline-block;
-	margin: 1px auto;
-	padding: 0px 6px;
-	height: 22px;
-	border: 2px solid;
-	border-radius: 50vh;
-}
-
-.SquareButton {
-	display: inline-block;
-	margin: 1px auto;
-	padding: 0px 6px;
-	height: 22px;
-	border: 2px solid;
-}
 --></style>
 <script><!--
-//■デバッグモード判定
-let isDebugMode = false;
-const Parameter = location.search.substring(1).split('&');
-if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
+//■デバッグモード
+const isDebugMode = (location.search.substring(1).split('&').indexOf('debug') >= 0);
 
 //■■各種データ定義
 //■タグデータ
@@ -232,21 +214,14 @@ const SortTarget = [
 ];
 
 //■■関数
-//■キャラクター名のボタン
+//■キャラクター名のボタン ver.20231222a
 function DrawCharName(character){
-	if(character in TagData){
-		const temp = TagData[character];
-		let Output = '<span class="' + temp.style + 'Button" '
-		+ 'style="background-color:rgb('
-		+ Math.floor((temp.r + 510)/3) + ','
-		+ Math.floor((temp.g + 510)/3) + ','
-		+ Math.floor((temp.b + 510)/3) + '); '
-		+ ' border-color: rgb(' + temp.r + ',' + temp.g + ',' + temp.b + ');">'
-		+ temp.name + '<\/span>';
-		return Output;
-	} else { //存在しないなら
-		console.log("キャラクターID " + character + " は存在しません");
-		return false;
+	if(character in TagData){ //存在する場合のみ
+		const target = TagData[character];
+		return `<span class="button-${target.style} button_${character}">${target.name}</span>`;
+	} else {
+		console.log(`キャラクターID ${character} は存在しません`);
+		return "Error";
 	}
 }
 
@@ -267,7 +242,7 @@ function DrawStoryList(tag){
 		+ '\t<td class="memo">' + (temp1.memo ? temp1.memo : '') + '<\/td>\n<\/tr>\n'
 		+ '\n<tr>\n\t<td colspan="2" class="tag">\n';
 		for(temp2 of temp1.tag){
-			Output += '\t\t' + DrawCharName(temp2) + '\n';
+			Output += DrawCharName(temp2);
 		}		
 		Output += '\t<\/td>\n<\/tr>\n';
 	}
@@ -311,55 +286,25 @@ function DrawStoryList(tag){
 </section>
 
 <section id="History">
-<h3 class="niji">更新履歴</h3>
+<h3 class="niji">更新履歴（データ追加以外）</h3>
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
-		<summary><span class="date">2023/06/30</span> - データを追加</summary>
+		<summary><span class="date">2023/12/22</span> - タグの誤りを修正</summary>
 		<div>
-			<span class="new"></span>データを追加（2023年6月18日～6月30日）
+			<span class="fix"></span>タグの誤りを修正
 		</div>
 	</details>
 	<details>
-		<summary><span class="date">2023/06/17</span> - データを追加</summary>
+		<summary><span class="date">2023/06/30</span> - 全データの追加完了</summary>
 		<div>
-			<span class="new"></span>データを追加（2023年1月～6月17日）
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/06/07</span> - データを追加</summary>
-		<div>
-			<span class="new"></span>データを追加（2022年10月～12月）
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/04/07</span> - データを追加</summary>
-		<div>
-			<span class="new"></span>データを追加（2022年7月～9月）
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/03/20</span> - データを追加</summary>
-		<div>
-			<span class="new"></span>データを追加（2022年1月～6月）
+			<span class="new"></span>全データの追加完了
 		</div>
 	</details>
 	<details>
 		<summary><span class="date">2023/03/18</span> - 目次を追加</summary>
 		<div>
 			<span class="new"></span>目次を追加
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/03/06</span> - データを追加</summary>
-		<div>
-			<span class="new"></span>データを追加（2021年10月～12月）
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2022/09/12</span> - データを追加</summary>
-		<div>
-			<span class="new"></span>データを追加（2021年3月～9月）
 		</div>
 	</details>
 	<details>
@@ -405,6 +350,23 @@ function loadScript(src, callback) {
 
 loadScript("data/theater.js", function() {
 	const TimeOutputStart = performance.now();
+	
+	//◆ボタン色計算用
+	const getColor = (Object, divisor) => {
+		if(!divisor){ divisor = 1;}
+		const r = Math.floor((Object.r + (255 * (divisor-1))) / divisor);
+		const g = Math.floor((Object.g + (255 * (divisor-1))) / divisor);
+		const b = Math.floor((Object.b + (255 * (divisor-1))) / divisor);
+		return 'rgb(' + r + ',' + g + ',' + b + ');';
+	}
+	//■色データをCSSに追加
+	let AddedCSS = '\n';
+	Object.keys(TagData).forEach(function(key) {
+		AddedCSS += '.button_' + key + '{\n\t'
+		+ 'background-color: ' + getColor(TagData[key], 3) + '\n\t'
+		+ 'border-color: ' + getColor(TagData[key], 1) + '\n}\n';
+	});
+	document.querySelector('style').textContent += AddedCSS; //一括追加で再計算の時間を一度だけに
 	
 	let Output =
 	//◆絞り込みボタン
