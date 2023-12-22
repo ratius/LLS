@@ -57,10 +57,11 @@ article {
 
 article.cancelled {
 	background-color: #ddd;
-	.article-box-title, .article-box-tube {
-		background-color: #ccc;
-	}
 }
+div.cancelled {
+	background-color: #ccc;
+}
+
 article:not(.cancelled) {
 	.article-box-title {
 		background-color: #fde;
@@ -92,19 +93,18 @@ article:not(.cancelled) {
 .setlist { /*セットリスト*/
 	width: min(300px, 100%);
 	border: solid 1px #9ce;
-
-	summary {
-		margin: 0;
-		padding: 2px 6px;
-		background-color: #d0f0ff;
-	}
-	ol {
+}
+.setlist-summary {
+	margin: 0;
+	padding: 2px 6px;
+	background-color: #d0f0ff;
+}
+.setlist-ol {
 	margin: 5px 0;
-		padding-left: 30px;
-	}
-	i {
-		color: #69c;
-	}
+	padding-left: 30px;
+}
+.setlist-mc {
+	color: #69c;
 }
 
 /* ■スマートフォン向けレイアウト */
@@ -249,7 +249,7 @@ function DrawLiveList(season){
 	);
 	
 	document.getElementById("OutputArea").innerHTML = result.map( connect => {
-		const isCancelled = connect.tags.find( (e) => e === 'cancelled');
+		const isCancelled = (connect.tags.find( (e) => e === 'cancelled') ? 'cancelled' : '');
 		const videoContent =
 		('tube' in connect && connect.tube ?
 			`<a href="https://www.youtube.com/watch?v=${connect.tube}" target="_blank">
@@ -260,19 +260,19 @@ function DrawLiveList(season){
 		const descContent = DecorateText(connect.desc)
 		+ ('setlist' in connect ? 
 			`<details class="setlist">
-				<summary>セットリスト (クリックで展開)</summary>
-				<ol>
+				<summary class="setlist-summary">セットリスト (クリックで展開)</summary>
+				<ol class="setlist-ol">
 					${connect.setlist.map(program =>
-					`<li>${(program === 'MC' ? `<i>MC</i>` : program)}</li>`).join('')}
+					`<li>${(program === 'MC' ? `<i class="setlist-mc">MC</i>` : program)}</li>`).join('')}
 				</ol>
 			</details>`
 		:'');
 		
 		return `
-		<article ${(isCancelled ? 'class="cancelled"' : '')}>
+		<article class="${isCancelled}">
 			<div class="article-box-date">${formatDate(connect.date)}</div>
-			<div class="article-box-title">${connect.title}</div>
-			<div class="article-box-tube">${videoContent}</div>
+			<div class="article-box-title ${isCancelled}">${connect.title}</div>
+			<div class="article-box-tube ${isCancelled}">${videoContent}</div>
 			<div class="article-box-desc">${descContent}</div>
 			<div class="article-box-tags">${connect.tags.map( tag => DrawCharName(tag)).join('')}</div>
 		</article>`
@@ -333,7 +333,7 @@ function DrawLiveList(season){
 	</div>
 	<div id="OutputArea">
 		<div style="padding: 10px; vertical-align: top; font-size: large; color: #666">
-			プルダウンメニューから期間を選択してください。
+			<div style="font-size: 120%; color:#666;">(上のプルダウンメニューから、期間を選んでください)</div>
 		</div>
 	</div>
 </section>
