@@ -136,12 +136,11 @@ section > h4 {
 	text-align:center;
 	z-index: 98;
 	padding: 10px;
-
-	h4 {
-		margin: 5px 0;
-		font-size: 150%;
-		font-weight: bold;
-	}
+}
+#Loading h4 {
+	margin: 5px 0;
+	font-size: 150%;
+	font-weight: bold;
 }
 
 
@@ -152,41 +151,39 @@ section > h4 {
 	max-height: calc(80vh - 30px);
 	overflow-y: scroll;
 	border: solid 3px #da6;
-	
-	details:not(:last-child) {
-		border-bottom: solid 2px #db8;
-	}
-	details {
-		summary {
-			padding: 2px 7px;
-			font-size: 110%;
-			background: #f0e8e0;
-		}
-		summary:not(.important){ background-color: #fdc;}
-		.important { background-color: #ffb;}
-		
-		div{
-			background: white;
-			padding: 5px 12px;
-			line-height: 170%;
-		}
-	}
-	details[open] summary {
-		border-bottom: solid 2px #db7;
-	}
-	details[open] span.date {
-		font-weight: bold;
-	}
+}
+#history2 details:not(:last-child) {
+	border-bottom: solid 2px #db8;
+}
+#history2 summary {
+	padding: 2px 7px;
+	font-size: 110%;
+	background: #f0e8e0;
+}
+#history2 summary:not(.important){ background-color: #fdc;}
+#history2 summary.important { background-color: #ffb;}
+#history2 div{
+	background: white;
+	padding: 5px 12px;
+	line-height: 170%;
+}
+#history2 details[open] summary {
+	border-bottom: solid 2px #db7;
+}
+#history2 details[open] span.date {
+	font-weight: bold;
+}
 
-	ul {
-		margin: 5px 0 5px 0;
-		color: #444;
-		font-size: small;
-		list-style-type: none;
-		padding-inline-start: 20px;
-		line-height: 180%;
-	}
-	li:before { content:"▶ "; color:#b95;}
+#history2 ul {
+	margin: 5px 0 5px 0;
+	color: #444;
+	font-size: small;
+	list-style-type: none;
+	padding-inline-start: 20px;
+	line-height: 180%;
+}
+#history2 li:before {
+	content:"▶ "; color:#b95;
 }
 
 
