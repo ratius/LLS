@@ -81,7 +81,7 @@ function DrawLiveList(condition){
 		const videoContent =
 		('tube' in connect && connect.tube ?
 			`<a href="https://www.youtube.com/watch?v=${connect.tube}" target="_blank">
-				<img src="http://img.youtube.com/vi/${connect.tube.split('&')[0]}/default.jpg" alt="${connect.title}" loading="lazy" class="pc-only">
+				<img src="https://img.youtube.com/vi/${connect.tube.split('&')[0]}/default.jpg" alt="${connect.title}" loading="lazy" class="pc-only">
 				<span class="sp-only">動画へ</span>
 			</a>`
 		:'');
