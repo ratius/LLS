@@ -3,6 +3,8 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
 <meta charset="utf-8">
 
+<meta property="description" content="スクフェスに登場した転入生の情報を保管しています。">
+
 <meta property="og:url" content="https://ratius.github.io/LLS/llsif_n.html">
 <meta property="og:title" content="スクフェス 転入生データベース | ラブライブ！ストレージ">
 <meta property="og:type" content="website">
@@ -62,7 +64,7 @@ p{
 		max-width: 400px;
 	}
 	/* サイドストーリー */
-	.text_story {
+	.text-story {
 		background-color: #fde;
 		width: 670px;
 		height: 120px;
@@ -73,7 +75,7 @@ p{
 		border-color: #d9b;
 		border-radius: 50vw;
 	}
-	.text_story > .face {
+	.text-story > .face {
 		position: absolute;
 		top: 28px; 
 		left: 28px;
@@ -120,12 +122,12 @@ p{
 	#ProfileTable{
 		width: calc(100% - 2px);
 	}
-	.text_story {
+	.text-story {
 		margin: 8px;
 		padding-top: 10px;
 		border-top: 2px solid #999;
 	}
-	.text_story > .face {
+	.text-story > .face {
 		display: none;
 	}
 }
@@ -191,108 +193,8 @@ span.jump {
 	border: 2px solid #aaa;
 	border-radius: 8px;
 }
-
 --></style>
-<script><!--
-//■デバッグモード判定
-let isDebugMode = false;
-const Parameter = location.search.substring(1).split('&');
-if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
-
-//■ボタンの描画
-function DrawButtons(name) {
-	if(name === ""){
-		document.getElementById("ButtonField").innerHTML = '';
-		document.getElementById("ButtonField").classList.remove("has_button");
-		return false;
-	}
-
-	const temp1 = NData.filter( q => q.name === name)[0];
-	let Output = '<span class="jump" onclick="DrawProfile(&#39;' + temp1.name+ '&#39;);">Profile<\/span>';
-
-	for(temp2 in temp1.card) {
-		const ButtonNum = parseInt(temp2) + 1;
-
-		//■クラス判定
-		let CurrentClass = "";
-		
-		Output += '<span class="jump'
-		+ (CurrentClass === "disabled" ? '' : '" onclick="DrawCardData(&#39;' + temp1.name + '&#39;,' + temp2 + ');"')
-		+ '>' + ButtonNum + '<\/span>';
-	}
-
-	document.getElementById("ButtonField").innerHTML = Output;
-		document.getElementById("ButtonField").classList.add("has_button");
-	DrawProfile(name);
-}
-
-//■プロフィールの作成
-function DrawProfile(name){
-	const temp1 = NData.filter( q => q.name === name)[0];
-	let Output = '<h3>' + name + ' プロフィール<\/h3>\n'
-	+ '<div id="ProfileContainer">' + DrawFace(name)
-	+ '<table id="ProfileTable"><tbody>'
-	+ '<tr><td style="width: 40%;">学校<\/td><td>' + SchoolData[temp1.y].name + '<\/td><\/tr>'
-	+ '<tr><td>学年<\/td><td>' + temp1.grade + '年<\/td><\/tr>'
-	+ '<tr><td>誕生日<\/td><td>' + temp1.birth[0] + '月' + temp1.birth[1] + '日<\/td><\/tr>'
-	+ '<tr><td>血液型<\/td><td>' + temp1.blood + '型<\/td><\/tr>'
-	+ '<tr><td>身長<\/td><td>' + temp1.height + 'cm<\/td><\/tr>'
-	+ '<tr style="word-break: keep-all;"><td>スリー<wbr>サイズ<\/td><td>Ｂ' + temp1.body[0] + '<wbr>Ｗ' + temp1.body[1] + '<wbr>Ｈ' + temp1.body[2] + 'cm<\/td><\/tr>'
-	+ '<tr><td>趣味<\/td><td>' + temp1.hobby + '<\/td><\/tr>'
-	+'<\/tbody><\/table><\/div>';
-	
-	if('text' in temp1) {
-		Output += '<h4>パートナー時テキスト<\/h4>';
-		for(temp2 of temp1.text){
-			Output += '<div class="text_partner">' + temp2 + '<\/div>';
-		}
-	}
-	
-	document.getElementById("OutputArea").innerHTML = Output;
-}
-
-//■カード個別データの作成
-function DrawCardData(name, num){
-	const temp1 = NData.filter(q => q.name === name)[0];
-	const temp2 = temp1.card[num];
-	
-	let Output = '<h3>' +  name + ' ' + (num+1) + '枚目 (部員No.' + temp2.num + ')<\/h3>'
-	+ ('memo' in temp2 ? '<p style="font-size: 90%">' + temp2.memo + '<\/p>' : '')
-	
-	if('text' in temp2){
-		Output += '<h4>パートナー時テキスト<\/h4>';
-		for(temp3 of temp2.text){
-			Output += '<div class="text_partner">' + temp3 + '<\/div>';
-		}
-	}
-	if('side' in temp2){
-		Output += '<h4>サイドストーリー「' + temp2.sidetitle + '」<\/h4>';
-		for(temp3 of temp2.side){
-			Output += '<div class="text_story">'
-			+ ('f' in temp3 ? DrawFace(temp3.f) : DrawFace(temp1.name))
-			+ '<div class="text">' + '<b>'
-			+ ('n' in temp3 ? temp3.n : ('namealt' in temp1 ? temp1.namealt : temp1.name)) + '<\/b><br>'
-			+ temp3.t + '<\/div><\/div>';
-		}
-	}
-	if('foot' in temp2){
-		Output += '<p style="font-size: 90%">' + temp2.foot + '<\/p>';
-	}
-	document.getElementById("OutputArea").innerHTML = Output;
-	document.getElementById("OutputArea").scrollTop = 0;
-}
-
-function DrawFace(name){
-	const temp1 = NData.filter(q => q.name === name);
-	if(temp1.length > 0){
-		return '<div class="face" style="background-position: right '
-		+ (temp1[0].x*64-576) + 'px bottom ' + (temp1[0].y*64-384) + 'px"><\/div>';
-	} else {
-		return '<div class="face_empty"><\/div>';
-	}
-}
-
---></script>
+<script src="data/llsif_n.js" defer></script>
 </head>
 <body class="RM">
 <header>
@@ -376,59 +278,5 @@ function DrawFace(name){
 <nav>
 <p><a id="BackToMain" href="index.html">トップページに戻る。</a></p>
 </nav>
-
-<script><!--
-function loadScript(src, callback) {
-    let done = false;
-    let head = document.getElementsByTagName('head')[0];
-    let script = document.createElement('script');
-    script.src = src;
-    head.appendChild(script);
-    // Attach handlers for all browsers
-    script.onload = script.onreadystatechange = function() {
-        if ( !done && (!this.readyState ||
-                this.readyState === "loaded" || this.readyState === "complete") ) {
-            done = true;
-            callback();
-            // Handle memory leak in IE
-            script.onload = script.onreadystatechange = null;
-            if ( head && script.parentNode ) {
-                head.removeChild( script );
-            }
-        }
-    };
-}
-
-loadScript("data/ntext.js", function() {
-	const TimeOutputStart = performance.now();
-	
-	//■セレクトボックスに要素を追加
-	for(temp1 of NData){
-		if(temp1.card[0].side[0].t === ''){ continue;} //未実装のカードは飛ばす
-		var temp2 = document.create
-		var temp2 = document.createElement("option");
-		temp2.text = temp1.name;
-		temp2.style.cssText = 'background-color: ' + SchoolData[temp1.y].color;
-		document.getElementById("PullDownMenu").appendChild(temp2);
-	}
-	
-	//■「Now Loading...」解除
-	document.getElementById("Loading").style.display = "none";
-	
-	//■デバックモード時の処理
-	if(isDebugMode) {
-		//◆デバッグモードであることを表示
-		document.title = '[debug]' + document.title;
-		document.bgColor = '#dce';
-		
-		document.getElementById("MainTitle").innerHTML += "*";
-		document.getElementById("BackToMain").href += "?debug";
-		
-		//◆描画時間の出力
-		const TimeOutputEnd = performance.now();
-		console.log('スクフェス 転入生データベース\n初期描画処理: ' + (TimeOutputEnd - TimeOutputStart) + ' ミリ秒');
-	}
-});
---></script>
 </body>
 </html>
