@@ -1,3 +1,6 @@
+//■デバッグモード
+const isDebugMode = (location.search.substring(1).split('&').indexOf('debug') >= 0);
+
 //■タグデータ
 const TagData = {
 	"Honoka":  {"name": "穂乃果",  "r":243, "g":133, "b":  0, "style": "Round"},
@@ -99,28 +102,202 @@ const SortTarget = [
 {"name": "出演：鬼塚 冬毬",              "condition": "tag,Tomari"},
 {"name": "----"},
 {"name": "テーマ：季節の行事", "condition": "tag,Season"},
-{"name": "テーマ：誕生日", "condition": "tag,Birthday"},
-//{"name": "テーマ：ライブ", "condition": "tag,Live"},
+{"name": "テーマ：誕生日", "condition":     "tag,Birthday"},
+//{"name": "テーマ：リアルイベント", "condition": "tag,Event"},
 //{"name": "----"},
 //{"name": "シリーズ：堕天使ヨハネ", "condition": "tag,Yohane"},
 ];
 
-//■毎日劇場ログ
-const TheaterLog = [
-{"id": 0, "date": "2023/12/09", "title": "聞いてよ！", "tags": ["Honoka", "Umi"], "text": "1\t穂乃果\n0\tん〜？\n1\t私の話、聞いていましたか？\n0\t聞いてる聞いてる。んーと……明日のランチはどうしようか、だっけ？\n1\t全然違います！！！\n0\tうわっ、ご、ごめん……\n1\tまったく……。ぬくぬくの部屋で、こたつにすっぽり入ってスマホをいじるのが幸せなのはわかりますが……\n0\tご、ごめんってば。ほらもうスマホ置いたよ！　海未ちゃんの話聞いてなくてごめん！　寂しかったんだね〜！\n1\tち・が・い・ます！！！！！　先週出された課題の提出日が明日だと言っているんです！！！！！\n0\tえーーーっ！？　そういうことはもっと早く言ってーーー！", "memo": "『スクスタ』で好評だった毎日劇場が、『スクフェス2』でも連載開始！"},
-{"id": 1, "date": "2023/12/10", "title": "情けは人のためならず", "tags": ["Chika", "Riko"], "text": "0\t梨子ちゃん、ちょっといい？\n1\tいいわよ。どうしたの？\n0\t明日提出の課題あったよね？　梨子ちゃん、もう終わったのかな〜って\n1\tああ、数学のやつね。今回のちょっと難しかったよね\n0\tえ、そ、そうだね〜……あはは\n1\t……千歌ちゃん、正直に言ってね。課題、終わってる？\n0\tうわーん、終わってないです！　それどころか、さっき課題のこと思い出しました！　助けて、梨子ちゃ～ん！\n1\tそんなことだろうと思ったわ。ほら、課題のプリント持ってきて。わからないところがあったら教えるから\n0\tありがと〜〜！！　お礼に、喫茶店でサンドイッチごちそうするよ！\n1\tふふっ、じゃあこれを乗り越えたら、一緒にお茶しに行きましょう♪"},
-{"id": 2, "date": "2023/12/11", "title": "ふわふわの気持ち", "tags": ["Ayumu", "Yu"], "text": "1\t見て見て歩夢！　霜降りてる！\n0\tほんとだ\n1\t踏むとサクサクして楽しいよね〜\n0\tふふっ。侑ちゃんってば、それ毎年言ってるよ\n1\tそう？　歩夢はよく覚えてるな〜。……ん？　歩夢マフラーは？\n0\t学校にあるよ。昨日部室に忘れてきちゃったんだ\n1\tじゃあ私の貸してあげる！\n0\tええっ！？ いいよ、侑ちゃんが寒いでしょ？\n1\t私はだいじょーぶだって。ほら！\n0\t……ありがとう。侑ちゃんの匂いがする……", "memo": "スクフェス2の毎日劇場には高咲侑ちゃんも登場するよ！"},
-{"id": 3, "date": "2023/12/12", "title": "雨の日の練習", "tags": ["Kanon", "Chisato"], "text": "1\tうーん……どうしようかなぁ\n0\tちーぃちゃんっ\n1\tあ、かのんちゃん！　うぃっすー！\n0\tうぃっすー！　なんか難しい顔してたけど、悩みごと？\n1\t今日の練習メニューなんだけどね。屋上でダンスの練習にしようと思ってたんだけど、雨が降りそうだなーって……\n0\t本当だ。向こうのほう、空が真っ黒……！\n1\t部室で踊るわけにもいかないし……やるとしたら無難に筋トレのメニューとかかなあって\n0\t部室で踊る……あ！\n0\tダンス動画を観研究するっていうのはどうかな？ いいイメージトレーニングになるかも\n1\tいいね！　人の身体の動きを見るのは勉強になるし、パフォーマンスを磨くいい刺激になると思う！\n0\tじゃあ、かっこいいダンスの動画、放課後までにいっぱい探しておくね！"},
-{"id": 4, "date": "2023/12/13", "title": "ここじゃなくても", "tags": ["Yoshiko", "Kanan"], "text": "0\tいやーー！　屋上って風が強すぎるわ！！　寒いーーーー！！\n1\tう〜、ほんと寒いね！\n0\tねえ、今日はもう部室に戻りましょ\n1\tでも練習が……\n0\tここじゃなくてもできる練習はたくさんあるわよ\n1\tま、それもそうか\n0\tそうそう。さ、行くわよリトルデーモン\n1\tはいはい。じゃそのままランニングしよ\n0\tえっ？\n1\tここじゃなくてもできる練習、しようね〜！\n0\tええーーーーーっ！？", "memo": "12月15日→"},
-{"id": 5, "date": "2023/12/14", "title": "心配だから", "tags": ["Maki", "Nozomi"], "text": "1\tあ、いたいた。こんなところにいたんやね\n0\tあら、珍しいわね。希が音楽室にくるなんて\n1\tだって心配になっちゃって\n0\t心配？\n1\tそう。凛ちゃんと花陽ちゃんが言ってたんだよ。真姫ちゃんが今日の占いの結果で悩んでる、って\n0\t……別に悩んでないから\n1\tそうなん？　まあでもせっかくだからコレもらって。ラッキーアイテムだから\n0\t……じゃあ、もらっておく\n1\tうんうん、真姫ちゃんにラッキーが降り注ぎますように！"},
-{"id": 6, "date": "2023/12/15", "title": "辛くても！", "tags": ["Hanamaru", "Ruby"], "text": "0\tルビィちゃーん！　善子ちゃんいた？\n1\tこっちにはいなかったよ\n0\tどこに行っちゃったんだろうね……\n1\tランニング、そんなにいやなのかなあ？\n0\tマルだっていやずら\n1\t本当はルビィも……。だってこの季節は海風が冷たくて冷たくて……あったくなるまでは辛いもん\n0\tでも、その辛さの先にマルたちが目指すものがあるずら！\n1\tそ、そうだよね！　早く善子ちゃん探さなきゃ。あと見てないところは……\n0\t図書室！\n1\t図書室！", "memo": "←12月13日"},
-{"id": 7, "date": "2023/12/16", "title": "彼方ちゃんを祝いたい！", "tags": ["Emma", "Rina", "Birthday"], "memo": "近江彼方 誕生日", "text": "1\tエマさん、エマさん、こっちは準備できたよ\n0\tわたしのほうはもうちょっと……\n1\tここ、押さえとくね\n0\tありがと〜！　……よし！　これで準備OKかな？\n1\t侑さんに連絡して、彼方さんのこと連れてきてもらおう\n0\tうん！　彼方ちゃんびっくりしてくれるといいな〜\n1\tお菓子もケーキもいっぱい食べてほしい\n0\tその後はゆっくりお昼寝してもらおうね。この、最高のベッドで！！\n1\tまさか部室にベッドを作ることになるとは思わなかったけど、うまくできてよかった\n0\tお布団も枕もふわふわのを用意したから、いーっぱいすやぴしてもらっちゃお！"},
-{"id": 8, "date": "2023/12/17", "title": "信じなさい！", "tags": ["Rin", "Nico"], "text": "0\tあれ？　にこちゃん、いつもと雰囲気が違う……？\n1\tあら、わかる？\n0\tうーん……なんか……違うんだけど、どこがと言われると……\n1\t気づいてよ！\n0\tわかったにゃ！　髪飾り！\n1\t正解にこ〜！　凛もわかってきたじゃない。ご褒美にこれつけてあげる\n0\tえ！？　り、凛にはそんなかわいいの……\n1\tなに？　にこのセンスが信用できないっていうの？\n0\tし、信用します……\n1\tよろしいっ！"},
-{"id": 9, "date": "2023/12/18", "title": "ホットココアと最高の動画", "tags": ["Sumire", "Natsumi"], "text": "1\tここはカットしてテンポよく……このシーンで効果音をつけて……っと。よし、完成ですの♪\n0\t夏美、お疲れさま\n1\tあ、すみれ先輩！お疲れ様ですの！\n0\tはい、これ。ホットココアよ。\n1\tわあ、温かいですの〜。ありがとうございますの！\n0\tどういたしまして。動画の編集作業、今回も任せちゃって悪いわね\n1\t「夏美、任せたわよ！」って言ってもらえて嬉しいですの！\n0\tふふっ。じゃあ夏美、今回も任せたわよ！　夏美の作る最高の動画、楽しみにしてるわ♪\n1\tそれなら、今から一緒に観ますの！　さっき、ちょうど動画が完成したんですの♪\n0\tありがとう！　じゃあ、ココアを飲みながら観ましょうか♪"},
-{"id": 10, "date": "2023/12/19", "title": "寒さを凌ぐ秘策とは？", "tags": ["Kasumi", "Lanzhu"], "text": "0\tさささ、寒い！　寒いですーー！　部室戻るう！\n1\tええっ！？　まだランニングしてないわよ？　準備体操だってまだよ？\n0\tだって寒すぎます！　ランジュ先輩は寒くないんですか？\n1\tワクワクしてるわ！\n0\t寒くないかって聞いてるんですっ！\n1\t確かに気温は低いわね。コートがないと無理な温度だわ。でも、ランジュには秘策があるから大丈夫なのよ\n0\t寒いのが平気になる秘策なんてあるんですか！？　かすみんにも教えてください！\n1\tふふ。それはね、寒いと思う前に動くことよーーー！\n0\tあっ、待って！　準備運動もまだじゃないですか！　まず準備運動からですよお〜〜！！\n1\tきゃあっ！かすみ、置いてっちゃうわよー！"},
-{"id": 11,  "date": "2023/12/20", "title": "指先から伝わる温もり", "tags": ["Mei", "Shiki"], "text": "1\tう〜、今日は寒いな\n0\t雪が降るかもしれないと天気予報で言ってた。午後から冷え込むとも\n1\tなるほど、それでこんなに寒いのか。練習時間、もしかしたら短くなるかもな。クラス日誌、早めに書いておくか……って、くっ……！\n0\tどうしたの？\n1\t手がかじかんで、ペンがうまく持てない……！\n0\tメイ、手だして\n1\t手？　これでいいのか？\n0\tはい\n1\tなんだこれ？　わっ、温かい……！\n0\t手作りカイロ。さっき科学室で作ってきた。これを使ってメイの手を温める……ぎゅー"},
-{"id": 12, "date": "2023/12/21", "title": "お気に入りのお店", "tags": ["Eli", "Kotori", "Season"], "text": "1\tふふふ〜\n0\tあら、ご機嫌ねことり。どうしたの？\n1\tえへへ。あのね、すてきなお菓子屋さんを見つけたの\n0\tことりがそんなにウキウキするほどのお店なのね\n1\t今から絵里ちゃんも一緒に行かない？\n0\tええ、私も行きたいわ。そこでクリスマスにみんなに配るお菓子を揃えましょう！\n1\tわあっ、そうしようそうしよう！\n0\tその前に、ことりのおすすめも教えてね\n1\tもちろんだよ〜！　ふふっ、絵里ちゃんとお出かけ嬉しいな\n0\t持ち上げても奢らないわよ\n1\tそんなの狙ってないもん〜！", "memo": "クリスマス直前"},
-{"id":13 , "date": "2023/12/22", "title": "最高の相談相手", "tags": ["Karin", "Shioriko"], "text": "1\t果林さんに折り入って相談があるのですが……\n0\tどうしたの？　私で役に立てるといいけど\n1\t私、ランジュにきつく言いすぎていませんか？\n0\tえ？\n1\tランジュはあの通りの子なので……。決して悪気はないのですがああいう子なので……つい注意してしまうのですが、昨日とても落ち込ませてしまったんです\n0\t落ち込ませてしまった……？　ランジュを？\n1\tはい。今朝のランジュの様子はどうでしたか？　沈み込んでいませんでしたか？\n0\tふふっ、ものすごく元気だったわ。エマが作ってくれたサンドイッチもお昼の分まで食べちゃってたくらいよ\n1\tえ？\n0\t栞子ちゃん……ランジュはあなたの言う通りああいう子だから、一晩寝たら元気になるわよ。でもあなたの言うことを忘れたわけじゃなくて、消化して自分のものにしたってこと。だから気にしないで声をかければ大丈夫よ\n1\tは、はい！　そうします！　ありがとうございます、果林さん！", "memo": ""},
-{"id":14 , "date": "2023/12/23", "title": "衣装作りは手が抜けない！", "tags": ["You", "Mari"], "text": "1\t曜ー、これで着方合ってるかしら？\n0\tうん、合ってる合ってる。サイドのリボン結ぶからこっちきて\n1\tはーい\n0\t腕まわりキツくない？　ダンスできそう？\n1\t余裕よ！\n0\tふむふむ。このデザインはオッケー……と。じゃあ次はこっち着てみて！\n1\t……またとあるの？　もう５着は着てるんだけど……\n0\tあと２着あるよ\n1\tええっ！？　この５着のなかから選ぶのだって難しいと思ってたのにまだあるの！？\n0\tだって作りたい衣装いっぱいあるんだもん♪　鞠莉ちゃんにはこれからもモデル頼むからよろしくね〜！", "memo": ""},
-];
-//{"id": , "date": "2023/12/", "title": "", "tags": [], "text": "", "memo": ""},
+//■■サブルーチン
+//■キャラクター名のボタン ver.20231222a
+function DrawCharName(character){
+	if(character in TagData){ //存在する場合のみ
+		const target = TagData[character];
+		return `<span class="button-${target.style} button_${character}">${target.name}</span>`;
+	} else {
+		console.log(`キャラクターID ${character} は存在しません`);
+		return "Error";
+	}
+}
+
+//■オブジェクトのRGBから色を計算 ver.20231223
+const getColor = (Object, divisor) => {
+	if(!divisor){ divisor = 1;}
+	const r = Math.floor((Object.r + (255 * (divisor-1))) / divisor);
+	const g = Math.floor((Object.g + (255 * (divisor-1))) / divisor);
+	const b = Math.floor((Object.b + (255 * (divisor-1))) / divisor);
+	return 'rgb(' + r + ',' + g + ',' + b + ');';
+}
+
+//■■メイン出力
+//■条件に合致するストーリーを抜き出してリストアップ
+function DrawStoryList(conditions){
+	const TimeOutputStart = performance.now();
+	const DecorateText = ( text => {
+		return text
+		// {{L:タイトル:URL}} の部分を、リンクに置換する
+		.replace(/\{\{[lL]:([^:]*):([^}]*)\}\}/g, '<a href="$2" class="pc-exclusive-link" target="blank">$1<\/a>');
+	});
+
+	let storyResult = new Array();
+	if(conditions === "undefined"){ //絞り込み条件が指定されていない場合、キャンセル
+		return false;
+	}
+	conditions = conditions.split(',');
+	
+	if(conditions[0] === 'date'){ //日付による絞り込み
+		const dateStart = new Date(conditions[1]);
+		const dateEnd = new Date(conditions[2]);
+		storyResult = TheaterLog.filter(temp => {
+			const dateStory = new Date(temp.date);
+			return dateStory.getTime() >= dateStart.getTime() && dateStory.getTime() <= dateEnd.getTime();
+		});
+	} else if(conditions[0] === 'tag'){ //タグによる絞り込み
+		storyResult = TheaterLog.filter(temp => temp.tags.indexOf(conditions[1]) !== -1);
+	} else {
+		return false;
+	}
+	
+	document.getElementById("OutputArea").innerHTML = storyResult.map( story => {
+		const storyTitleAtttribute = 
+		('text' in story ?
+			`class="story-title has_text" onclick="MakeModal('${story.id}')"`
+		:
+			`class="story-title"`
+		);
+		const tagContent = story.tags.map( tag => DrawCharName(tag) ).join('');
+
+		return `
+		<article class="story">
+			<div class="story-date">${story.date}</div>
+			<div class="story-titleContainer">
+				<div ${storyTitleAtttribute}>${story.title}</div>
+				<div class="story-memo">${('memo' in story ? story.memo : '')}</div>
+			</div>
+			<div class="story-tags">${tagContent}</div>
+			</div>
+		</article>`;
+	}).join('');
+	
+	if(isDebugMode) {
+		const TimeOutputEnd = performance.now();
+		console.log(`${conditions}出力完了。\n所要時間: ${TimeOutputEnd - TimeOutputStart}ミリ秒`);
+	}
+}
+
+//■指定されたIDの毎日劇場をモーダルウィンドウに描画
+function MakeModal(id){
+	const result = TheaterLog.find(temp => temp.id === id);
+	if(!result){ return false;}
+	
+	//タイトル
+	document.getElementById("Modal-Title").innerHTML = result.title;
+	
+	//テキスト
+	const TextLog = result.text.split('\n');
+	document.getElementById("Modal-Text").innerHTML = TextLog.map( text => {
+		text = text.split('\t');
+		return DrawCharName(result.tags[text[0]]) + `<p>${text[1]}</p><hr>`;
+	}).join("");
+	
+	//ポップアップを表示
+	document.getElementById("Modal").classList.remove("fadeout");
+	document.getElementById("Modal").style.display = "flex";
+}
+
+//■モーダルウィンドウを閉じる
+function CloseModal(target){
+	let ModalBG = document.getElementById('Modal');
+	if(target === null){ //ターゲット指定
+		if(target !== event.target.closest('#Modal-Container')){
+			return false;
+		}
+	}
+	ModalBG.classList.add("fadeout");
+	setTimeout(function(){
+		document.getElementById("Modal-ReaderBox").scrollTop = 0;
+		ModalBG.style.display = "none";
+	}, 200);
+}
+
+//■■初期処理
+//■JSONデータベースの読み込み
+const TimeOutputStart = performance.now();
+
+const JSONPath = 'data/llsif2_theater.json';
+let TheaterLog = null;
+fetch(JSONPath)
+	.then(response => response.json())
+	.then(data => {
+		TheaterLog = data;
+		initialize();
+	}
+);
+
+const TimeOutputLoaded = performance.now();
+
+//■初期化処理
+function initialize() {
+	//TagDataの色データをCSSに追加
+	document.querySelector('style').textContent += Object.keys(TagData).map( character => {
+		return `
+		.button_${character} {
+			background-color: ${getColor(TagData[character], 3)}
+			border-color: ${getColor(TagData[character], 1)}
+		}`;
+	}).join('');
+
+	//セレクトボックスに要素を追加
+	SortTarget.forEach( temp => {
+		const option = document.createElement("option");
+		option.text = temp.name;
+		option.value = temp.condition;
+		document.getElementById("PullDownMenu").appendChild(option);
+	});
+
+	//「Now Loading...」解除
+	document.getElementById("Loading").style.display = "none";
+
+	//デバックモード時の処理
+	if(isDebugMode) {
+		//デバッグモードであることを表示
+		document.title = '[debug]' + document.title;
+		document.bgColor = '#dce';
+		
+		document.getElementById("MainTitle").innerHTML += "*";
+		document.getElementById("BackToMain").href += "?debug";
+		
+		//データの不具合チェック
+		const isError = TheaterLog.reduce( (acc, val) => {
+			if(!("text" in val)){ return acc;}
+			const TextTemp = val.text.split('\n');
+			return acc + TextTemp.reduce( (acc2, val2, index2) => {
+				const ErrorLocation = ' (' + val.date
+				 + '「' + val.title + '」' + (index2+1) + '行目)';
+				
+				const TextTemp2 = val2.split('\t');
+				if(TextTemp2.length !== 2){
+					console.log('エラー：パラメータ数が異常' + ErrorLocation);
+					return acc2 + 1;
+				}
+				if(!isFinite(TextTemp2[0])){
+					console.log('エラー：登場人物が不正な値' + ErrorLocation);
+					return acc2 + 1;
+				} else if(TextTemp2[0] === ''){
+					console.log('エラー：登場人物が未設定' + ErrorLocation);
+					return acc2 + 1;
+				} else if(TextTemp2[0] > val.tags.length){
+					console.log('エラー：登場人物のデータ範囲エラー' + ErrorLocation);
+					return acc2 + 1;
+				}
+				return acc2;
+			}, 0);
+		}, 0);
+		if(isError){
+			alert('' + isError + '件のエラーが見つかりました。コンソールを確認してください。');
+		}
+		//描画時間の出力
+		const TimeOutputEnd = performance.now();
+		console.log(`スクフェス2 毎日劇場 データベース\n読み込み： ${TimeOutputLoaded - TimeOutputStart}ミリ秒\n初期化: ${TimeOutputEnd - TimeOutputLoaded}ミリ秒`);
+	}
+}
