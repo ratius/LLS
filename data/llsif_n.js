@@ -144,6 +144,8 @@ const TimeOutputStart = performance.now();
 
 const JSONPath = 'data/llsif_n.json';
 let NData = null;
+
+document.getElementById("Loading-State").innerHTML = "データベース読み込み中…";
 fetch(JSONPath)
 	.then(response => response.json())
 	.then(data => {
@@ -153,6 +155,7 @@ fetch(JSONPath)
 );
 
 const TimeOutputLoaded = performance.now();
+document.getElementById("Loading-State").innerHTML = "初期化処理中…";
 
 //■初期化処理
 function initialize() {
