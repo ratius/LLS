@@ -3,372 +3,336 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
 <meta charset="utf-8">
 
+<meta name="description" content="ラブライブ！シリーズの各種データ置き場。">
+
 <meta property="og:url" content="https://ratius.github.io/LLS/index.html">
 <meta property="og:title" content="ラブライブ！ストレージ">
 <meta property="og:type" content="website">
-<meta property="og:description" content="ラブライブ！シリーズ、スクフェス、スクスタのデータ置き場。">
+<meta property="og:description" content="ラブライブ！シリーズの各種データ置き場。">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@ratius55">
 <meta name="twitter:creator" content="@ratius55">
 <meta name="twitter:title" content="ラブライブ！ストレージ">
 <meta name="twitter:image" content="https://ratius.github.io/LLS/img/card_index.png">
-<meta name="twitter:description" content="ラブライブ！シリーズに関する物事、特にスクフェスやスクスタについて、個人的にまとめたものが置かれているページです。">
-<meta name="description" content="ラブライブ！シリーズに関する物事、特にスクフェスやスクスタについて、個人的にまとめたものが置かれているページです。">
+<meta name="twitter:description" content="ラブライブ！シリーズの各種データ置き場。">
 
-<meta name="viewport" content="width=900">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e50080">
 
 <title>ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main.css">
 <style><!--
 
+#titleimage {
+	width: min(640px, 100%);
+}
+
 #caution {
-	display:block;
-	margin: auto;
-	width: 600px;
-	height: 120px;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 120px auto;
 	background-color: #fcc;
 	border: 2px solid black;
+}
+#caution-1 {
+	display: flex;
+	font-size: 75px;
+	align-items: center;
+	justify-content: center;
 	overflow: hidden;
 }
-
-#caution td {
-	display: table-cell;
-	position: relative;
-	top: -90px;
-	width: 80px;
-	height: 280px;
-	vertical-align: middle;
+#caution-2 {
+	padding: 4px 10px;
+	text-align: left;
 }
 
-#Menu table{
-	border-collapse: separate;
-	border-spacing: 7px;
-	margin: 15px auto;
-}
-
-#Menu td {
-	position: relative;
-	z-index: 1;
-	padding: 5px;
-	text-align: center;
-	vertical-align: middle;
-	border-style: solid;
-	color: #777;
-}
-
-#Menu td:not(.closed) {
-	border-width: 3px;
-	width: 230px;
-	height: 190px;
-}
-
-#Menu td.closed {
-	border-width: 1px;
-	width: 234px;
-	height: 194px;
-	opacity: 0.4;
-}
-
-#Menu td > strong {
-	font-size: 130%;
-	color: #666;
-}
-
-#Menu td > hr {
-	width: 90%;
-	height: 0px;
-	border-width: 0 0 3px 0;
-}
-
-#Menu td > a {
-	position: absolute;
-	top: 0;
-	left: 0;
+h2 {
 	width: 100%;
-	height: 100%;
+	height: 50px;
+	color: rgb(112, 120, 104);
+	background: linear-gradient(0deg, rgba(208, 224, 192, 0.9) 0%, rgba(224, 240, 208, 0.9) 100%);
+	border-style: solid;
+	border-width: 2px;
+	border-color: #784;
+	
+	font-size: 150%;
+	font-weight: bold;
+	line-height: 50px;
+	letter-spacing: 0.2em;
+	text-indent: 0.2em;
+}
+
+.menu-container {
+	position: relative;
+	width: 100%;
+	border-bottom: 4px solid #784;
+	margin: 20px 0;
+
+	justify-content: center;
+	justify-items: center;
+	gap: 10px;
+	padding: 10px 10px 20px 10px;
+
+}
+.menu-content {
+	position: relative;
+	border-style: solid;
+	border-width: 27px 2px 2px 2px;
+	
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	padding: 4px 10px;
+	color: #555;
+}
+.menu-content-label {
+	position: absolute;
+	left: 0;
+	top: -24px;
+	width: 100%;
+	height: 25px;
+	font-size: small;
+	font-weight: bold;
+	color: white;
+	text-align: left;
+	padding-left: 8px;
+	user-select: none;
+}
+
+.menu-content h3 {
+	margin: 0;
+	font-size: 130%;
+	word-break: keep-all;
+}
+
+.menu-content hr {
+	width: 100%;
+	border-style: solid;
+	border-width: 0 0 3px 0;
+	border-color: inherit;
+}
+
+.menu-content a {
+	position: absolute;
+	top: -27px;
+	left: -2px;
+	width: calc(100% + 4px);
+	height: calc(100% + 29px);
 	text-indent: 0;
 	z-index: 2;
 }
 
-#Menu th {
-	background: linear-gradient(0deg, rgba(208, 224, 192, 0.9) 0%, rgba(224, 240, 208, 0.9) 100%);
-	border-style: solid;
-	border-color: #ab8;
+
+/* ■スマートフォン向けレイアウト */
+@media screen and (max-width: 599px) {
+	.pc-only {
+		display: none;
+	}
+	.menu-container {
+		display: flex;
+		flex-flow: column;
+	}
+	.menu-content {
+		align-items: start;
+	}
+	.menu-content hr {
+		display: none;
+	}
+	.menu-content h3 {
+		text-align: left;
+	}
+	.menu-content-desc {
+		text-align: left;
+		font-size: small;
+		padding-left: 10px;
+	}
 }
 
-#Menu th.left {
-	width: 50px;
-	letter-spacing: 2px;
-	border-width: 3px 0 3px 3px;
-	border-radius: 25px 0 0 25px;
-	overflow: hidden;
-	
-	writing-mode: vertical-rl;
-	text-orientation: sideways;
-	font-size: 140%;
-	font-weight: bold;
-	color: rgb(120, 128, 112);
-	letter-spacing: 8px;
+/* ■PC向けレイアウト */
+@media screen and (min-width: 600px) {
+	.sp-only {
+		display: none;
+	}
+	.menu-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 270px);
+	}
+	.menu-content {
+		width: 270px;
+		height: 220px;
+	}
 }
 
-#Menu th.right {
-	width: 25px;
-	border-width: 3px 3px 3px 0;
-	border-radius: 0 25px 25px 0;
-}
-
-#Menu tr.separator {
-	height: 20px;
-}
-
-/* 色指定。背景色はスクフェス、線の色はスクスタ準拠 */
-.col_Ms01 { background: rgba(255, 214, 165, 0.7); border-color: #FFA32C;}
-.col_Ms02 { background: rgba(196, 237, 250, 0.7); border-color: #7AEEFF;}
-.col_Ms03 { background: rgba(231, 218, 218, 0.7); border-color: #CEBFBF;}
-.col_Ms04 { background: rgba(205, 223, 252, 0.7); border-color: #1769FF;}
-.col_Ms05 { background: rgba(255, 253, 177, 0.7); border-color: #DBD41E;}
-.col_Ms06 { background: rgba(255, 195, 183, 0.7); border-color: #FF503E;}
-.col_Ms07 { background: rgba(228, 214, 242, 0.7); border-color: #C455F6;}
-.col_Ms08 { background: rgba(203, 245, 206, 0.7); border-color: #6AE673;}
-.col_Ms09 { background: rgba(255, 209, 243, 0.7); border-color: #FF4F91;}
-
-.col_Aq01 { background: rgba(255, 205, 183, 0.7); border-color: #FF9547;}
-.col_Aq02 { background: rgba(255, 200, 210, 0.7); border-color: #FF9EAC;}
-.col_Aq03 { background: rgba(182, 234, 231, 0.7); border-color: #27C1B7;}
-
-.col_Nj01 { background: rgba(254, 186, 203, 0.7); border-color: #ED7D95;}
-.col_Nj02 { background: rgba(245, 252, 164, 0.7); border-color: #E7D600;}
-.col_Nj03 { background: rgba(178, 223, 238, 0.7); border-color: #3FA4C6;}
-.col_Nj04 { background: rgba(176, 204, 251, 0.7); border-color: #495EC6;}
-.col_Nj05 { background: rgba(255, 213, 151, 0.7); border-color: #FF5800;}
-.col_Nj06 { background: rgba(225, 209, 246, 0.7); border-color: #B365AE;}
-
-.col_Li01 { background: rgba(255, 197, 157, 0.7); border-color: #FF7F27;}
-.col_Li02 { background: rgba(174, 255, 250, 0.7); border-color: #A0FFF9;}
-.col_Li03 { background: rgba(255, 202, 214, 0.7); border-color: #FF6E90;}
-
-.col_Ha01 { background: rgba(252, 225, 154, 0.7); border-color: #F8B500;}
-.col_Ha02 { background: rgba(186, 205, 231, 0.7); border-color: #5383C3;}
-.col_Ha03 { background: rgba(195, 229, 209, 0.7); border-color: #68BE8D;}
-.col_Ha04 { background: rgba(227, 169, 175, 0.7); border-color: #BA2636;}
-.col_Ha05 { background: rgba(245, 192, 216, 0.7); border-color: #E7609E;}
-.col_Ha06 { background: rgba(232, 230, 232, 0.7); border-color: #C8C2C6;}
+.col-Series   { background: rgba(248, 192, 223, 0.7); border-color: rgb(228,   0, 128);}
+.col-Niji     { background: rgba(249, 200, 127, 0.6); border-color: rgb(192, 144,   0);}
+.col-LinkLike { background: linear-gradient(90deg, rgba(144, 221, 251, 0.6) 0%, rgba(167, 175, 255, 0.6) 100%); border-color: rgb(115, 151, 225);}
+.col-sifas    { background: rgba(225, 225, 235, 0.6); border-color: rgb(130, 155, 181);}
+.col-llsif2   { background: linear-gradient(rgba(127, 236, 243, 0.7) 0%, rgba(254, 156, 219, 0.7) 100%); border-color: #a67;}
+.col-llsif1   { background: rgba(255, 255, 255, 0.5); border-color: rgb(255, 102, 154);}
+.col-llsif1 h3 {color: #f69;}
+.col-system   { background: rgba(224, 240, 208, 0.9); border-color: #784; color:#707868;}
 --></style>
 </head>
 
 <body style="background:url('img/bg.png'); text-align: center;">
 
-<img src="img/title_logo.png" alt="ラブライブ！ストレージ タイトルロゴ" width="640" height="140">
+<h1><img id="titleimage" src="img/title_logo.png" alt="ラブライブ！ストレージ"></h1>
 
-<div id="caution">
-<table>
-<tbody>
-<tr>
-	<td>
-		<span style="font-size: 80px">⚠️</span>
-	</td>
-	<td style="width: 500px; text-align: left;">
+<div id="caution"> <!--注意-->
+	<div id="caution-1"><span>⚠️</span></div>
+	<div id="caution-2">
 		<strong>JavaScriptの設定を確認してね！</strong><br>
 		このWebサイトはJavaScriptを多用しているため、<br>
 		多くのコンテンツが正しく表示されない可能性があります。
-	</td>
-</tr>
-</tbody>
-</table>
+	</div>
 </div>
 
 <nav id="Menu">
-<table>
-<caption style="font-size: 160%; color:#666">
-	↓ 見たいパネルを選んでね ↓
-</caption>
-<tbody>
-	<!-- 便利系 色：μ's -->
-	<tr>
-		<th class="left" rowspan="2">総合</th>
-		<td class="col_Ms01">
-			<strong>メンバーカラー<br>まとめ</strong>
-			<hr class="col_Ms01">
-			各キャラクターのメンバーカラーを、色々な媒体から集めてみました。
+	<h2>CONTENTS</h2>
+	<div class="menu-container">
+		<!-- ■■■■ 総合 ■■■■ -->
+		<div class="menu-content col-Series">
+			<div class="menu-content-label">ラブライブ！シリーズ総合</div>
+			<h3>メンバーカラー<wbr>まとめ</h3>
+			<hr>
+			<div class="menu-content-desc">スクールアイドル達のメンバーカラーを、色々な媒体から集めてみました。</div>
 			<a href="color.html"></a>
-		</td>
-
-		<td class="col_Ms02">
-			<strong>キャラソート</strong>
-			<hr class="col_Ms02">
-			スクールアイドル、ユニット、キャスト等を好きな順に並べ替えてみよう。ツイートボタンも付いてるよ。
+		</div>
+		
+		<div class="menu-content col-Series">
+			<div class="menu-content-label">ラブライブ！シリーズ総合</div>
+			<h3>キャラソート</h3>
+			<hr>
+			<div class="menu-content-desc">スクールアイドル、ユニット、キャスト等を好きな順に並べ替えてみよう。</div>
 			<a href="sort.html"></a>
-		</td>
-
-		<td class="col_Ms03">
-			<strong>誕生日カレンダー</strong>
-			<hr class="col_Ms03">
-			スクールアイドルやキャストの誕生日を確認できます。スクフェスの転入生にも対応。
+		</div>
+		
+		<div class="menu-content col-Series">
+			<div class="menu-content-label">ラブライブ！シリーズ総合</div>
+			<h3>誕生日カレンダー</h3>
+			<hr>
+			<div class="menu-content-desc">スクールアイドルやキャストの誕生日を確認できます。スクフェスの転入生にも対応。</div>
 			<a href="calendar.html"></a>
-		</td>
-		<th class="right" rowspan="2"></th>
-	</tr>
-	
-	<tr>
-		<td class="col_Ms04">
-			<strong>虹ヶ咲学園<br>マンスリーランキング</strong>
-			<hr class="col_Ms04">
-			毎月行われていたランキングの結果を、集計・分析してみました。
+		</div>
+		
+		<div class="menu-content col-Niji">
+			<div class="menu-content-label">虹ヶ咲学園スクールアイドル同好会</div>
+			<h3>虹ヶ咲学園 <wbr>マンスリーランキング</h3>
+			<hr>
+			<div class="menu-content-desc">毎月行われていたランキングの結果を、集計・分析してみました。</div>
 			<a href="niji_ranking.html"></a>
-		</td>
+		</div>
 
-		<td class="col_Ms05">
-			<strong>虹ヶ咲学園<br>マンスリーアンケート</strong>
-			<hr class="col_Ms05">
-			毎月行われていたアンケートの集計や、便利リンクを掲載しています。
+		<div class="menu-content col-Niji">
+			<div class="menu-content-label">虹ヶ咲学園スクールアイドル同好会</div>
+			<h3>虹ヶ咲学園 <wbr>マンスリーアンケート</h3>
+			<hr>
+			<div class="menu-content-desc">毎月行われていたアンケートの集計や、便利リンクを掲載しています。</div>
 			<a href="niji_enquete.html"></a>
-		</td>
-
-		<td class="col_Ms06 closed">
-			<strong>Coming Soon...</strong>
-		</td>
-	</tr>
-	
-	<tr style="display: none;">
-		<td class="col_Ms07 closed">
-			<strong>Coming Soon...</strong>
-		</td>
-
-		<td class="col_Ms08 closed">
-			<strong>Coming Soon...</strong>
-		</td>
-
-		<td class="col_Ms09 closed">
-			<strong>Coming Soon...</strong>
-		</td>
-	</tr>
-
-	<tr class="separator"></tr>
-
-	<!-- リンクラ 色:蓮ノ空 -->
-	<tr>
-		<th class="left" rowspan="1">リンクラ</th>
-		<td class="col_Ha01">
-			<strong>スクールアイドル<br>コネクトまとめ</strong>
-			<hr class="col_Ha01">
-			アプリ内で配信されたWith×MEETS、Fes×LIVEのまとめです。
+		</div>
+		
+		<!-- ■■■■ リンクラ ■■■■ -->
+		<div class="menu-content col-LinkLike">
+			<div class="menu-content-label">Link！Like！ラブライブ！</div>
+			<h3>スクールアイドル<wbr>コネクト<wbr>まとめ</h3>
+			<hr>
+			<div class="menu-content-desc">アプリ内で配信されたWith×MEETS、Fes×LIVEのまとめです。</div>
 			<a href="hasu_connect.html"></a>
-		</td>
-
-		<td class="col_Ha02 closed">
-			<strong>Coming Soon...</strong>
-		</td>
+		</div>
 		
-		<td class="col_Ha03 closed">
-			<strong>Coming Soon...</strong>
-		</td>
-		<th class="right" rowspan="1"></th>
-	</tr>
-	
-	<tr class="separator"></tr>
-
-	<!-- スクフェス2関連 色:Liella! -->
-	<tr>
-		<th class="left" rowspan="1">スクフェス２</th>
-		<td class="col_Li01">
-			<strong>毎日劇場<br>アーカイブ</strong>
-			<hr class="col_Li01">
-			スクフェス2の毎日劇場の一覧です。アーカイブもしていきます。
+		<!-- ■■■■ スクフェス2 ■■■■ -->
+		<div class="menu-content col-llsif2">
+			<div class="menu-content-label">スクフェス2 MIRACLE LIVE!</div>
+			<h3>スクフェス2 <wbr>毎日劇場アーカイブ</h3>
+			<hr>
+			<div class="menu-content-desc">スクフェス2の毎日劇場の一覧です。本文も収録。</div>
 			<a href="llsif2_theater.html"></a>
-		</td>
-
-		<td class="col_Li02 closed">
-			<strong>Coming Soon...</strong>
-		</td>
-		
-		<td class="col_Li03 closed">
-			<strong>Coming Soon...</strong>
-		</td>
-		<th class="right" rowspan="1"></th>
-	</tr>
+		</div>
 	
-	<tr class="separator"></tr>
-
-	<!-- スクフェス関連 色:Aqours -->
-	<tr>
-		<th class="left" rowspan="1">スクフェス</th>
-		<td class="col_Aq01">
-			<strong>ライブ♪アリーナ<br>テキスト集</strong>
-			<hr class="col_Aq01">
-			今までに開催された、ライブ♪アリーナのテキストを保管しています。
+		<!-- ■■■■ スクフェス1 ■■■■ -->
+		<div class="menu-content col-llsif1">
+			<div class="menu-content-label">スクフェス1</div>
+			<h3>ライブ♪アリーナ <wbr>まとめ</h3>
+			<hr>
+			<div class="menu-content-desc">今までに開催された、ライブ♪アリーナのテキストを保管しています。</div>
 			<a href="llsif_arena.html"></a>
-		</td>
+		</div>
 
-		<td class="col_Aq02">
-			<strong>ブーストリピート用<br>部員一覧</strong>
-			<hr class="col_Aq02">
-			スクフェスのブーストリピート編成で使える部員の一覧です。<br>（別サイトへ移動します）
+		<div class="menu-content col-llsif1">
+			<div class="menu-content-label">スクフェス1</div>
+			<h3>ブーストリピート用<wbr>部員一覧</h3>
+			<hr>
+			<div class="menu-content-desc">スクフェスのブーストリピート編成で使える部員の一覧です。<br>（別サイトへ移動します）</div>
 			<a href="https://docs.google.com/spreadsheets/d/1MG2bHOUqgWbyknPKACTNzFVAx7iDa0T72VRoTUeAaIw" target="_blank" rel="noopener noreferrer"></a>
-		</td>
+		</div>
 		
-		<td class="col_Aq03">
-			<strong>転入生<br>データベース</strong>
-			<hr class="col_Aq03">
-			今はもう見られない、転入生の情報やサイドストーリーを補完しています。
+		<div class="menu-content col-llsif1">
+			<div class="menu-content-label">スクフェス1</div>
+			<h3>スクフェス <wbr>転入生データベース</h3>
+			<hr>
+			<div class="menu-content-desc">今はもう見られない、転入生の情報やサイドストーリーを補完しています。</div>
 			<a href="llsif_n.html"></a>
-		</td>
-		<th class="right" rowspan="1"></th>
-	</tr>
+		</div>
 	
-	<tr class="separator"></tr>
-	
-	<!-- スクスタ 色：虹ヶ咲 -->
-	<tr>
-		<th class="left" rowspan="2">スクスタ</th>
-		<td class="col_Nj01">
-			<strong>呼称表</strong>
-			<hr class="col_Nj01">
-			３０人のスクールアイドルとあなたは、お互いのことをどう呼び合っでいる？
+		<!-- ■■■■ スクスタ ■■■■ -->
+		<div class="menu-content col-sifas">
+			<div class="menu-content-label">スクフェスALL STARS</div>
+			<h3>スクスタ <wbr>呼称表</h3>
+			<hr>
+			<div class="menu-content-desc">３０人のスクールアイドルとあなたは、お互いのことをどう呼び合っでいる？</div>
 			<a href="call.html"></a>
-		</td>
+		</div>
 
-		<td class="col_Nj02">
-			<strong>カード実装状況</strong>
-			<hr class="col_Nj02">
-			スクスタに実装されたカードがどれくらいあったかを確認できます。
+		<div class="menu-content col-sifas">
+			<div class="menu-content-label">スクフェスALL STARS</div>
+			<h3>スクスタ <wbr>実装カード一覧</h3>
+			<hr>
+			<div class="menu-content-desc">スクスタに実装されたカードがどれくらいあったかを確認できます。</div>
 			<a href="sifas_card.html"></a>
-		</td>
+		</div>
 
-		<td class="col_Nj03">
-			<strong>過去のイベント<br>まとめ</strong>
-			<hr class="col_Nj03">
-			スクスタのイベントストーリーで開催されたイベント、および共演したペアのまとめです。
+		<div class="menu-content col-sifas">
+			<div class="menu-content-label">スクフェスALL STARS</div>
+			<h3>スクスタ <wbr>過去のイベント</h3>
+			<hr>
+			<div class="menu-content-desc">スクスタのイベントストーリーで開催されたイベント、および共演したペアのまとめです。</div>
 			<a href="sifas_event.html"></a>
-		</td>
-		<th class="right" rowspan="2"></th>
-	</tr>
-
-	<tr>
-		<td class="col_Nj04">
-			<strong>ストーリー便覧</strong>
-			<hr class="col_Nj04">
-			スクスタの各種ストーリーのあらすじと登場キャラを、ひとまとめにしてみました。
+		</div>
+		
+		<div class="menu-content col-sifas">
+			<div class="menu-content-label">スクフェスALL STARS</div>
+			<h3>スクスタ <wbr>ストーリー便覧</h3>
+			<hr>
+			<div class="menu-content-desc">スクスタの各種ストーリーのあらすじと登場キャラを、ひとまとめにしてみました。</div>
 			<a href="sifas_story.html"></a>
-		</td>
+		</div>
 
-		<td class="col_Nj05">
-			<strong>毎日劇場<br>データベース</strong>
-			<hr class="col_Nj05">
-			スクスタの毎日劇場の一覧です。どんなストーリーが配信されていた？
+		<div class="menu-content col-sifas">
+			<div class="menu-content-label">スクフェスALL STARS</div>
+			<h3>毎日劇場<wbr>データベース</h3>
+			<hr>
+			<div class="menu-content-desc">スクスタの毎日劇場の一覧です。グループを超えた掛け合いをお楽しみあれ！</div>
 			<a href="sifas_theater.html"></a>
-		</td>
-
-		<td class="col_Nj06 closed">
-		</td>
-	</tr>
-</tbody>
-</table>
+		</div>
+		
+		<!-- ■■■■ その他 ■■■■ -->
+		<div class="menu-content col-system">
+			<div class="menu-content-label">その他</div>
+			<h3>リンク集</h3>
+			<hr>
+			<div class="menu-content-desc">公式・非公式問わず、ラブライブ！関連の有用なWebサイトを集めました。</div>
+			<a href="link.html"></a>
+		</div>
+	</div>
 </nav>
 
 <address style="color:#666; margin-bottom: 30px;">
-	ご意見・データの間違い報告などは<a href="https://twitter.com/ratius55">作者のTwitterまで</a>
+	ページ作成：らてぃ(@ratius55)<br>
+	ご意見・不具合報告・データの間違い報告などは<a href="https://twitter.com/ratius55">作者のXまで</a>
 </address>
 
 <script><!--
