@@ -28,8 +28,8 @@ p{
 }
 
 .link {
-	margin: 20px 10px;
-	padding: 0 10px 10px 10px ;
+	margin-bottom: 20px;
+	padding: 0 0 10px 0;
 }
 
 .link:not(:last-child) {
@@ -51,6 +51,13 @@ p{
 	border-color: #c69;
 	color: white;
 	font-weight: bold;
+}
+/* ■PC向けレイアウト */
+@media screen and (min-width: 600px) {
+	.link {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
 }
 
 --></style>
@@ -89,7 +96,7 @@ p{
 	</ul>
 </nav>
 
-<main id="link">
+<main>
 	<h2 id="muse">リンク一覧</h2>
 	<h3 id="comprehensive" class="color-muse">総合</h3>
 	<div>
