@@ -203,7 +203,7 @@ section, main {
 a.exlink:after { 
 	content: "";
 	display: inline-block;
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAUklEQVR42s3RsQ0AIAwDQe/ETkzLTqalgJcjKChSIKSTnci2aEbrptE1QJ8JWAIwQaXK+o6AXaoYOFWKgGQfShZG9UTxCI4AqoVAcpEPgeo8AyZsbbJqWLmjHAAAAABJRU5ErkJggg==);
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAUUlEQVR42s3RsQ0AIQwEweu/A1drUoL/1VoQEDhASKM7O90dmqpqmhwD9GnAEYAJJlX2twK+Umngr5ICzD5iFkb1QvEIVgDVQsBc5EFgOteABfFA5DjO4xMWAAAAAElFTkSuQmCC);
 	background-repeat: no-repeat;
 	vertical-align: middle;
 	width: 16px;
