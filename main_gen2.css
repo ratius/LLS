@@ -2,74 +2,35 @@
 	box-sizing: border-box;
 }
 
-a {color: #cc3366;}
+a {color: #993366;}
 a:hover {color: #ff0033;}
 
+/* ■見出しとセクション */
 body {
 	color: #333;
 	position: relative;
 	font-family: sans-serif;
 }
-
-/* ■右メニュー */
-.right-menu {
-	display: inline-block;
-	width: 240px;
-	margin-left: 25px;
-	border: solid 1px #978;
-	z-index: 9;
-	background: linear-gradient(90deg, #fde 0%, white 50%);
-}
-.right-menu strong {
-	font-size: large;
-	display: block;
-	margin: 2px;
-}
-.right-menu hr {
-	border: none;
-	border-bottom: 2px solid #cbc;
-	margin: 8px auto;
-}
-.right-menu ul {
-	list-style: none;
-	padding: 10px 20px;
-	margin: 0;
-}
-.right-menu ul ul {
-	font-size: 90%;
-}
-.right-menu li {
-	margin-bottom: 3px;
-}
-.right-menu a {
-	display: block;
-	padding: 2px 0px;
+main {
+	max-width: 1022px;
+	margin: auto;
+	background-color: white;
+	border: solid 1px #ccc;
 }
 
-@media screen and (min-width: 1280px) {
-	body.RM {
-		margin-right: 248px;
-	}
-	.right-menu {
-		position: fixed;
-		top: 0;
-		right: 0;
-		height: 100vh;
-		border-width: 0 0 0 1px;
-	}
-	.right-menu li {
-		margin-bottom: 6px;
-	}
+section {
+	margin: 30px 10px;
 }
 
-/* ■見出しとセクション */
-
-#TitleName {
-	font-size: 200%;
+section p {
 	margin-left: 10px;
 }
-#TitleName:after {
-	content: "- ラブライブ！ストレージ";
+h1 {
+	font-size: 200%;
+	margin: 20px;
+}
+.title-debug:after {
+	content: "- ラブライブ！ストレージ CSS Gen2対応";
 	font-size: medium;
 	color: #888;
 	padding-left: 10px;
@@ -98,8 +59,61 @@ h3:before {
 	margin: 0 8px;
 }
 
-section, main {
-	margin: 30px 10px 50px 10px;
+/* ■右メニュー */
+.right-menu {
+	display: inline-block;
+	width: 225px;
+	margin-left: 10px;
+	padding: 10px 20px;
+	border: solid 1px #978;
+	z-index: 9;
+	background: linear-gradient(90deg, #fde 0%, white 50%);
+}
+.right-menu strong {
+	font-size: large;
+	display: block;
+	margin: 2px;
+}
+.right-menu hr {
+	border: none;
+	border-bottom: 2px solid #cbc;
+	margin: 8px auto;
+}
+.right-menu ul {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+}
+.right-menu ul ul {
+	font-size: 90%;
+	padding-left: 20px;
+}
+.right-menu li {
+	margin-bottom: 3px;
+}
+.right-menu a {
+	display: block;
+	padding: 2px 0px;
+}
+
+/* ■幅広環境向け */
+@media screen and (min-width: 1280px) {
+	body {
+		background: url('img/bg.png');
+	}
+	body.left {
+		margin-right: 233px;
+	}
+	.right-menu {
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 100vh;
+		border-width: 0 0 0 1px;
+	}
+	.right-menu li {
+		margin-bottom: 6px;
+	}
 }
 
 /* ■ボタン */
@@ -133,48 +147,40 @@ section, main {
 
 
 /* ■更新履歴 */
-#history-container {
+.history-container {
 	width: 100%;
 	max-width: 1000px;
 	max-height: calc(80vh - 30px);
 	overflow-y: scroll;
 	border: solid 3px #da6;
 }
-#history-container details {
+.history-container details {
 	border-right: solid 1px #da6;
 }
 
-#history-container details:not(:last-child) {
+.history-container details:not(:last-child) {
 	border-bottom: solid 2px #da6;
 }
-#history-container summary {
+.history-container summary {
 	padding: 2px 7px;
 	font-size: 110%;
 	background: #f0e8e0;
 }
-#history-container summary:not(.important){ background-color: #fdc;}
-#history-container summary.important { background-color: #ffb;}
-#history-container div{
+.history-container summary:not(.important){ background-color: #fdc;}
+.history-container summary.important { background-color: #ffb;}
+.history-container div{
 	background: white;
 	padding: 5px 12px;
 	line-height: 170%;
 }
-#history-container details[open] summary {
+.history-container details[open] summary {
 	border-bottom: solid 2px #db7;
 }
-#history-container details[open] span.date {
+.history-container details[open] span.date {
 	font-weight: bold;
 }
 
-#history-container ul {
-	margin: 5px 0 5px 0;
-	color: #444;
-	font-size: small;
-	list-style-type: none;
-	padding-inline-start: 20px;
-	line-height: 180%;
-}
-#history-container li:before {
+.history-container li:before {
 	content:"▶ "; color:#b95;
 }
 

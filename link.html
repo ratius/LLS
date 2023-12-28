@@ -62,7 +62,8 @@ p{
 
 --></style>
 </head>
-<body class="RM">
+<body class="left">
+<main>
 <header>
 	<h1 id="TitleName">リンク集</h1>
 </header>
@@ -75,9 +76,7 @@ p{
 			このページだけデザインが違うのは仕様です。今後、他のページもこのページのデザインに合わせて改修する予定です。
 		</span>
 	</p>
-</section>
-
-<nav class="right-menu">
+	<nav class="right-menu">
 	<ul>
 		<li><strong>目次</strong></li>
 		<li><hr></li>
@@ -96,8 +95,9 @@ p{
 		<li><a href="#history">更新履歴</a>
 	</ul>
 </nav>
+</section>
 
-<main>
+<section>
 	<h2 id="muse">リンク一覧</h2>
 	<div>
 		<h3 id="comprehensive" class="color-muse">総合</h3>
@@ -235,7 +235,7 @@ p{
 		</div>
 		<div class="link">
 			<h4>
-				<a href="https://wikiwiki.jp/llll_wiki/" target="_blank" class="exlink">
+				<a href="https://irodori-drop.com" target="_blank" class="exlink">
 				🍭いろどり🍬</a>
 			</h4>
 			<p>
@@ -405,13 +405,26 @@ p{
 			</p>
 		</div>
 	</div>
-</main>
-
+	
+	<h3 id="puchiguru" class="color-muse">ラブライブ！ School idol paradise</h3>
+	<div>
+		<div class="link">
+			<h4>
+				<span class="button-round icon-official">公式</span>
+				<a href="http://d-game.dengeki.com/lovelive/" target="_blank" class="exlink">
+				PS Vita用ゲームソフト「ラブライブ！ School idol paradise」公式サイト</a>
+			</h4>
+			<p>
+				「スクパラ」公式サイト。こんなゲームもありました。
+			</p>
+		</div>
+	</div>
+</section>
 
 <section id="history">
 <h2 class="niji">更新履歴</h2>
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
-<div id="history-container">
+<div class="history-container">
 	<details open>
 		<summary class="important"><span class="date">2023/12/27</span> - 公開</summary>
 		<div>
@@ -424,15 +437,16 @@ p{
 <nav>
 <p><a id="BackToMain" href="index.html">トップページに戻る。</a></p>
 </nav>
-
+</main>
 <script><!--
 //■デバッグモード
 const isDebugMode = (location.search.substring(1).split('&').indexOf('debug') >= 0);
 if(isDebugMode) {
 	//デバッグモードであることを表示
 	document.title = '[debug]' + document.title;
-	document.bgColor = '#edf';
+	document.bgColor = '#dce';
 	document.getElementById("TitleName").innerHTML += "*";
+	document.getElementById("TitleName").classList.add("title-debug")
 	document.getElementById("BackToMain").href += "?debug";
 }
 --></script>
