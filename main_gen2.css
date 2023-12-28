@@ -1,9 +1,6 @@
-*{
-	box-sizing: border-box;
-}
-
-a {color: #993366;}
-a:hover {color: #ff0033;}
+*{ box-sizing: border-box; }
+a {color: #936;}
+a:hover {color: #f03;}
 
 /* ■見出しとセクション */
 body {
