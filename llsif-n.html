@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta charset="utf-8">
+
+<meta property="description" content="スクフェスに登場した転入生の情報を保管しています。">
+
+<meta property="og:url" content="https://ratius.github.io/LLS/llsif_n.html">
+<meta property="og:title" content="スクフェス 転入生データベース | ラブライブ！ストレージ">
+<meta property="og:type" content="website">
+<meta property="og:description" content="スクフェスに登場した転入生の情報を保管しています。">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@ratius55">
+<meta name="twitter:creator" content="@ratius55">
+<meta name="twitter:title" content="スクフェス 転入生データベース | ラブライブ！ストレージ">
+<meta name="twitter:description" content="。スクフェスに登場した転入生の情報を保管しています。">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e50080">
+
+<title>スクフェス 転入生データベース | ラブライブ！ストレージ</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+<link rel="stylesheet" href="main_gen2.css">
+<style><!--
+
+p{
+	margin: 15px 10px;
+}
+
+#PullDown-Container {
+	font-size: x-large;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#PullDownMenu {
+	border: solid 2px #b9a;
+	font-size: x-large;
+	font-weight: bold;
+	padding: 5px;
+	margin-right: 10px;
+}
+
+#ButtonField {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 70px;
+	padding: 0 4px;
+	overflow-x: scroll;
+}
+
+#NViewer {
+	height: calc(100vh - 180px);
+	overscroll-behavior-y: contain;
+}
+
+#NViewer h4 {
+	margin-left: 1rem;
+}
+
+/* クリック用ボタン */
+span.jump {
+	font-size: 150%;
+	display: inline-block;
+	width: auto;
+	margin: auto 4px;
+	padding: 0.25rem 0.85rem;
+	cursor: pointer;
+	background-color: #fde;
+	border: 2px solid #978;
+	border-radius: 4px;
+}
+
+/*プロフィール*/
+.profile-container {
+	max-width: 750px;
+	display: flex;
+	align-items: center;
+}
+.profile-table{
+	flex: 1;
+	font-size: 120%;
+	margin: 0 10px;
+	border-collapse: collapse;
+	border: 2px solid #ccc;
+}
+.profile-table td{
+	padding: 2px 8px;
+	border-bottom: 1px solid #ddd;
+}
+.face {
+	display: inline-block;
+	margin: auto;
+	width: 64px;
+	height: 64px;
+	background-image: url(img/students.png);
+	background-repeat: no-repeat;
+}
+
+/* テキスト関連 */
+.text_partner {
+	max-width: 750px;
+	margin: 5px 10px;
+	padding: 5px 10px;
+	border: 2px solid #aaa;
+	border-radius: 8px;
+}
+
+/* ■スマートフォン向けレイアウト */
+@media (max-width: 599px) {
+	#ButtonField.has_button::before {
+		position: sticky;
+		content: "";
+		left: 0;
+		top: 14px;
+		width: 0;
+		height: 0;
+		border-width: 20px 10px 20px 0;
+		border-style: solid;
+		border-color: transparent #a89 transparent transparent;
+	}
+	#ButtonField.has_button::after {
+		position: sticky;
+		content: "";
+		right: 0;
+		top: 14px;
+		width: 0;
+		height: 0;
+		border-width: 20px 0 20px 10px;
+		border-style: solid;
+		border-color: transparent transparent transparent #a89;
+	}
+	.profile-container {
+		flex-direction: column;
+	}
+	.profile-table {
+		width: calc(100% - 20px);
+	}
+	.text-story {
+		margin: 10px;
+		padding-top: 10px;
+		border-top: 2px solid #999;
+	}
+	.text-story .face {
+		display: none;
+	}
+}
+/* ■PC向けレイアウト */
+@media (min-width: 600px) {
+	#ButtonField::-webkit-scrollbar {
+		display: none;
+	}
+	.profile-container div{
+		flex-basis: 64px;
+		margin: 0 30px;
+	}
+	.profile-table {
+		max-width: 400px;
+	}
+	/* サイドストーリー */
+	.text-story {
+		background-color: #fde;
+		width: 670px;
+		height: 120px;
+		margin: 10px;
+		position: relative;
+		border-style: solid;
+		border-width: 2px 8px;
+		border-color: #d9b;
+		border-radius: 50vw;
+	}
+	.text-story .face {
+		position: absolute;
+		top: 28px; 
+		left: 28px;
+	}
+	.text {
+		display: inline-block;
+		width: 550px;
+		height: 110px;
+		position: absolute;
+		top: 5px; 
+		left: 110px;
+		margin: 0;
+		font-size: 110%;
+	}
+}
+--></style>
+<script src="data/llsif-n.js" defer></script>
+</head>
+<body class="left">
+<main>
+	<header>
+		<h1 id="TitleName">スクフェス 転入生データベース</h2>
+		<nav class="right-menu">
+			<ul>
+				<li><strong>目次</strong></li>
+				<li><hr></li>
+				<li><a href="#Summary">概要</a></li>
+				<li><a href="#Viewer">転入生データベース</a></li>
+				<li><a href="#History">更新履歴</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section id="Summary">
+		<h2 class="foreword">概要</h2>
+		<p>
+			「ラブライブ!スクールアイドルフェスティバル」で配信された転入生の各種テキストのまとめです。<br>
+			桜坂しずく、近江彼方、エマ・ヴェルデのカードは、転入生として扱われているカード、<br>
+			及び「キラキラ☆転入生フェスティバル」SSRのみ掲載します。
+		</p>
+	</section>
+
+	<section id="Viewer">
+		<h2 class="muse">転入生データベース</h2>
+		<p>プルダウンメニューから転入生を選ぶと、下部にボタンが表示されます。<br>
+		そのボタンを押すことで情報を見ることができます。</p>
+		<div>
+			<div id="PullDown-Container">
+				<label for="PullDownMenu">転入生</label>
+				<select id="PullDownMenu" onChange="DrawButtons(this.value)">
+					<option value="">(選択)</option>
+				</select>
+			</div>
+			<div id="ButtonField"></div>
+		</div>
+		<div id="NViewer" class="output-box output-box-default">
+			このページでは、情報を表示するためにJavaScriptを使用します。<br>
+			いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
+			お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
+		</div>
+	</section>
+
+	<section id="History">
+		<h2 class="niji">更新履歴</h2>
+		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
+		<div class="history-container">
+			<details open>
+				<summary class="important"><span class="date">2023/12/28</span></summary>
+				<div>
+					<span class="icon-new"></span>CSSをアップデート
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2023/12/18</span> - スマートフォン向けレイアウトを導入</summary>
+				<div>
+					<span class="icon-new"></span>スマートフォン向けレイアウトを導入
+				</div>
+			</details>
+			<details>
+				<summary class="important"><span class="date">2023/10/25</span> - データ追加</summary>
+				<div>
+					<span class="icon-new"></span>正式公開
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2023/04/10</span> - データ追加</summary>
+				<div>
+					<span class="icon-new"></span>パートナー時共通テキストを掲載
+				</div>
+			</details>
+			<details>
+				<summary class="important"><span class="date">2023/04/05</span> - テスト公開</summary>
+				<div>
+					<span class="icon-new"></span>テスト公開
+				</div>
+			</details>
+		</div>
+	</section>
+
+	<footer>
+		<nav>
+			<a id="BackToMain" href="index.html">トップページに戻る。</a></p>
+		</nav>
+	</footer>
+</main>
+</body>
+</html>
