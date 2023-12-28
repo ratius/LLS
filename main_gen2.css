@@ -19,7 +19,10 @@ main {
 }
 
 section {
-	margin: 30px 10px;
+	margin: 30px 10px 50px 10px;
+}
+footer {
+	margin: auto 10px;
 }
 
 section p {
@@ -97,6 +100,12 @@ h3:before {
 }
 /* ■スマートフォン向け */
 @media screen and (max-width: 599px) {
+	.pc-only {
+		display: none;
+	}
+	body {
+		margin: 0;
+	}
 	main {
 		border-width: 0;
 	}
@@ -104,6 +113,9 @@ h3:before {
 
 /* ■幅広環境向け */
 @media screen and (min-width: 1280px) {
+	.sp-only {
+		display: none;
+	}
 	body {
 		background: url('img/bg.png');
 	}
@@ -121,6 +133,22 @@ h3:before {
 		margin-bottom: 6px;
 	}
 }
+/* ■出力関連 */
+.output-box {
+	position: relative;
+	width: 100%;
+	height: calc(100vh - 100px);
+	border: solid 3px #79c;
+	background-color: white;
+	overflow-y: scroll;
+}
+.output-box-default {
+	padding: 10px;
+	background-color: #ddd;
+	font-size: 120%;
+	color: #666;
+}
+
 
 /* ■ボタン */
 .button-round, .button-square {
@@ -139,13 +167,14 @@ h3:before {
 /* ■読み込み中 */
 #Loading {
 	position: absolute;
-	width: calc(100% - 20px);
+	width: 100%;
 	background-color: #ddd;
 	text-align:center;
 	z-index: 98;
 	padding: 10px;
 }
-#Loading h4 {
+#Loading span {
+	display: block;
 	margin: 5px 0;
 	font-size: 150%;
 	font-weight: bold;

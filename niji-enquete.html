@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta charset="utf-8">
+
+<meta name="description" content="「虹ヶ咲学園スクールアイドル同好会 マンスリーアンケート」のデータの非公式保管所です。">
+
+<meta property="og:url" content="https://ratius.github.io/LLS/niji_enquete.html">
+<meta property="og:title" content="虹ヶ咲学園スクールアイドル同好会 マンスリーアンケートまとめ">
+<meta property="og:type" content="website">
+<meta property="og:description" content="「虹ヶ咲学園スクールアイドル同好会 マンスリーアンケート」のデータの非公式保管所です。">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@ratius55">
+<meta name="twitter:creator" content="@ratius55">
+<meta name="twitter:title" content="虹ヶ咲 マンスリーアンケートまとめ">
+<meta name="twitter:description" content="「虹ヶ咲学園スクールアイドル同好会 マンスリーアンケート」のデータの非公式保管所です。">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e50080">
+
+<title>虹ヶ咲 マンスリーアンケートまとめ | ラブライブ！ストレージ</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+<link rel="stylesheet" href="main_gen2.css">
+<style><!--
+/* アンケート一覧*/
+.enquete {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 100px 3fr 1fr 1fr;
+}
+
+.enquete-id, .enquete-desc, .enquete-winner, .enquete-link, .prize-character, .prize-container {
+	padding: 4px 10px;
+	line-height: 150%;
+}
+
+.enquete-id {
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+	background-color: #eee;
+	color: #666;
+}
+
+.enquete-date {
+	color: #369;
+	font-size: small;
+}
+
+.enquete-winner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.prize-character {
+	text-align: center;
+	font-weight: bold;
+}
+
+.prize-container {
+	display: grid;
+	row-gap: 4px;
+}
+
+
+
+/* ■スマートフォン向けレイアウト */
+@media screen and (max-width: 599px) {
+	.enquete {
+		grid-template-columns: 1fr 1fr;
+	}
+	.enquete-id:before {
+		content: "▼";
+	}
+	.enquete-id, .enquete-desc {
+		grid-column: auto / span 2;
+	}
+	.enquete-id {
+		border-bottom: solid 1px #c0b0b8;
+	}
+	.enquete:not(:last-child), .prize:not(:last-child) {
+		border-bottom: solid 3px #999;
+	}
+}
+
+/* ■PC向けレイアウト */
+@media screen and (min-width: 600px) {
+	.enquete:not(:last-child), .prize:not(:last-child) {
+		border-bottom: solid 1px #ccc;
+	}
+	.enquete-id, .enquete-desc, .enquete-winner, .enquete-link {
+		border-right: solid 1px #ccc;
+	}
+	.prize-container {
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	}
+}
+/* ボタン */
+.button-round:hover {
+	font-weight: bold;
+	background-color: #fc9;
+}
+.button-round {
+	width: 70px;
+	text-align: center;
+	background-color: #fed;
+	border-color: #ba9;
+}
+--></style>
+<script src="data/niji-enquete.js" defer></script>
+</head>
+<body class="left">
+<main>
+	<header>
+		<h1 id="TitleName">虹ヶ咲学園スクールアイドル同好会 マンスリーアンケートまとめ</h1>
+		<nav class="right-menu">
+			<ul>
+				<li><strong>目次</strong></li>
+				<li><hr></li>
+				<li><a href="#Foreword">概要</a></li>
+				<li><a href="#EnqueteList">アンケート一覧</a></li>
+				<li><a href="#MostVoted">キャラ別最多得票項目</a></li>
+				<li><a href="#History">更新履歴</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section id="Foreword">
+		<h2>概要</h2>
+		<p>
+			公式投票企画「<a href="https://lovelive-as.bushimo.jp/selects/" class="exlink">虹ヶ咲学園スクールアイドル同好会 マンスリーアンケート</a>」のデータの非公式保管所です。<br>
+			各スクールアイドルに対して「選択肢A」「選択肢B」「どちらでもない」を割り振る方式であったもの（全42回）が集計対象です。<br>
+			2023年10月以降に実施されている、投票結果で会話相手が判明する形式のものは取り扱いません。
+		</p>
+	</section>
+
+	<section id="EnqueteList">
+		<h2 class="muse">アンケート一覧</h2>
+		<p>下表の「第○○回」部分をクリック/タップすると、結果発表ページを開きます。</p>
+		<div id="EnqueteResult" class="table-wrapper output-box output-box-default">
+			このページでは、情報を表示するためにJavaScriptを使用します。<br>
+			いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
+			お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
+		</div>
+	</section>
+
+	<section id="MostVoted">
+		<h2 class="aqours">キャラ別最多得票項目</h2>
+		<p>PCで閲覧している場合、「第○回」のボタンにカーソルを合わせることで、ツールチップにその回のテーマが表示されます。</p>
+		<div id="PrizeList" class="table-wrapper output-box output-box-default">
+		</div>
+	</section>
+
+	<section id="History">
+		<h2 class="niji">更新履歴（結果掲載以外）</h2>
+		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
+		<div class="history-container">
+			<details open>
+				<summary class="important"><span class="date">2023/12/28</span></summary>
+				<div>
+					<span class="icon-new"></span>CSSをアップデート
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2023/03/18</span></summary>
+				<div>
+					<span class="icon-new"></span>目次を追加
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2022/11/06</span> - レンダリング最適化</summary>
+				<div>
+					<span class="icon-fix"></span>レンダリングの最適化
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2022/07/28</span> - 「キャラ別最多得票」追加</summary>
+				<div>
+					<span class="icon-new"></span>「キャラ別最多得票」の節を追加
+				</div>
+			</details>
+			<details>
+				<summary class="important"><span class="date">2022/06/25</span> - 公開</summary>
+				<div>
+					<span class="icon-new"></span>公開
+				</div>
+			</details>
+		</div>
+	</section>
+
+	<footer>
+		<nav>
+			<a id="BackToMain" href="index.html">トップページに戻る。</a></p>
+		</nav>
+	</footer>
+</main>
+</body>
+</html>
