@@ -98,7 +98,7 @@ h3:before {
 /* ■スマートフォン向け */
 @media screen and (max-width: 599px) {
 	.pc-only {
-		display: none;
+		display: none !important;
 	}
 	body {
 		margin: 0;
@@ -111,7 +111,7 @@ h3:before {
 /* ■幅広環境向け */
 @media screen and (min-width: 1280px) {
 	.sp-only {
-		display: none;
+		display: none !important;
 	}
 	body {
 		background: url('img/bg.png');
