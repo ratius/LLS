@@ -24,13 +24,28 @@
 <link rel="stylesheet" href="main_gen2.css">
 <style><!--
 /* アンケート一覧*/
+.enquete-header {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 100px 3fr 2fr;
+	background-color: #cde;
+	border-bottom: solid 1px #79a;
+}
+.enquete-header-cell {
+	border-right: solid 1px #79a;
+	font-weight: bold;
+	text-align: center;
+}
+
 .enquete {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 100px 3fr 1fr 1fr;
 }
 
-.enquete-id, .enquete-desc, .enquete-winner, .enquete-link, .prize-character, .prize-container {
+.enquete-header-cell, .enquete-id, .enquete-desc, .enquete-winner, .enquete-link, .prize-character, .prize-container {
 	padding: 4px 10px;
 	line-height: 150%;
 }
