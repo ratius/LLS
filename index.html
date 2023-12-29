@@ -26,7 +26,8 @@
 <style><!--
 
 #titleimage {
-	width: min(640px, 100%);
+	max-width: 100%;
+	height: auto;
 }
 
 #caution {
@@ -180,7 +181,7 @@ h2 {
 
 <body style=" text-align: center; background: url('img/bg.png')">
 
-<h1><img id="titleimage" src="img/title_logo.png" alt="ラブライブ！ストレージ"></h1>
+<h1><img id="titleimage" src="img/title_logo.png" width="640px" height="160px" alt="ラブライブ！ストレージ"></h1>
 
 <div id="caution"> <!--注意-->
 	<div id="caution-1"><span>⚠️</span></div>
@@ -250,7 +251,7 @@ h2 {
 			<h3>スクフェス2 <wbr>毎日劇場アーカイブ</h3>
 			<hr>
 			<div class="menu-content-desc">スクフェス2の毎日劇場の一覧です。本文も収録。</div>
-			<a href="llsif2_theater.html"></a>
+			<a href="llsif2_theater.html" title="スクフェス2 毎日劇場アーカイブ"></a>
 		</div>
 	
 		<!-- ■■■■ スクフェス1 ■■■■ -->
@@ -259,7 +260,7 @@ h2 {
 			<h3>ライブ♪アリーナ <wbr>まとめ</h3>
 			<hr>
 			<div class="menu-content-desc">今までに開催された、ライブ♪アリーナのテキストを保管しています。</div>
-			<a href="llsif_arena.html"></a>
+			<a href="llsif_arena.html" title="ライブ♪アリーナ まとめ"></a>
 		</div>
 
 		<div class="menu-content col-llsif1">
@@ -267,7 +268,7 @@ h2 {
 			<h3>ブーストリピート用<wbr>部員一覧</h3>
 			<hr>
 			<div class="menu-content-desc">スクフェスのブーストリピート編成で使える部員の一覧です。<br>（別サイトへ移動します）</div>
-			<a href="https://docs.google.com/spreadsheets/d/1MG2bHOUqgWbyknPKACTNzFVAx7iDa0T72VRoTUeAaIw" target="_blank" rel="noopener noreferrer"></a>
+			<a href="https://docs.google.com/spreadsheets/d/1MG2bHOUqgWbyknPKACTNzFVAx7iDa0T72VRoTUeAaIw" target="_blank" rel="noopener noreferrer" title="ブーストリピート用部員一覧"></a>
 		</div>
 		
 		<div class="menu-content col-llsif1">
@@ -275,7 +276,7 @@ h2 {
 			<h3>スクフェス <wbr>転入生データベース</h3>
 			<hr>
 			<div class="menu-content-desc">今はもう見られない、転入生の情報やサイドストーリーを補完しています。</div>
-			<a href="llsif-n.html"></a>
+			<a href="llsif-n.html" title="スクフェス 転入生データベース"></a>
 		</div>
 	
 		<!-- ■■■■ スクスタ ■■■■ -->
@@ -284,7 +285,7 @@ h2 {
 			<h3>スクスタ <wbr>呼称表</h3>
 			<hr>
 			<div class="menu-content-desc">３０人のスクールアイドルとあなたは、お互いのことをどう呼び合っでいる？</div>
-			<a href="call.html"></a>
+			<a href="call.html" title="スクスタ 呼称表"></a>
 		</div>
 
 		<div class="menu-content col-sifas">
@@ -292,7 +293,7 @@ h2 {
 			<h3>スクスタ <wbr>実装カード一覧</h3>
 			<hr>
 			<div class="menu-content-desc">スクスタに実装されたカードがどれくらいあったかを確認できます。</div>
-			<a href="sifas_card.html"></a>
+			<a href="sifas_card.html" title="スクスタ 実装カード一覧"></a>
 		</div>
 
 		<div class="menu-content col-sifas">
@@ -300,7 +301,7 @@ h2 {
 			<h3>スクスタ <wbr>過去のイベント</h3>
 			<hr>
 			<div class="menu-content-desc">スクスタのイベントストーリーで開催されたイベント、および共演したペアのまとめです。</div>
-			<a href="sifas_event.html"></a>
+			<a href="sifas_event.html" title="スクスタ 過去のイベント"></a>
 		</div>
 		
 		<div class="menu-content col-sifas">
@@ -308,7 +309,7 @@ h2 {
 			<h3>スクスタ <wbr>ストーリー便覧</h3>
 			<hr>
 			<div class="menu-content-desc">スクスタの各種ストーリーのあらすじと登場キャラを、ひとまとめにしてみました。</div>
-			<a href="sifas_story.html"></a>
+			<a href="sifas_story.html" title="スクスタ ストーリー便覧"></a>
 		</div>
 
 		<div class="menu-content col-sifas">
@@ -316,7 +317,7 @@ h2 {
 			<h3>毎日劇場<wbr>データベース</h3>
 			<hr>
 			<div class="menu-content-desc">スクスタの毎日劇場の一覧です。グループを超えた掛け合いをお楽しみあれ！</div>
-			<a href="sifas_theater.html"></a>
+			<a href="sifas_theater.html" title="毎日劇場データベース"></a>
 		</div>
 		
 		<!-- ■■■■ その他 ■■■■ -->
@@ -325,14 +326,14 @@ h2 {
 			<h3>リンク集</h3>
 			<hr>
 			<div class="menu-content-desc">公式・非公式問わず、ラブライブ！関連の有用なWebサイトを集めました。</div>
-			<a href="link.html"></a>
+			<a href="link.html" title="リンク集"></a>
 		</div>
 	</div>
 </nav>
 
 <address style="color:#666; margin-bottom: 30px;">
 	ページ作成：らてぃ(@ratius55)<br>
-	ご意見・不具合報告・データの間違い報告などは<a href="https://twitter.com/ratius55">作者のXまで</a>
+	ご意見・不具合報告・データの間違い報告などは<a href="https://twitter.com/ratius55" target="_blank" rel="noopener noreferrer" title="作者のX">作者のX</a>まで
 </address>
 
 <script><!--
