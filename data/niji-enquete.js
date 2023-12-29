@@ -48,6 +48,13 @@ const formatDate = date => {
 function DrawEnqueteTable(){
 	document.getElementById("EnqueteResult").innerHTML = '';
 
+	const header = `
+	<div class="enquete-header pc-only">
+		<div class="enquete-header-cell">開催回</div>
+		<div class="enquete-header-cell">期間/お題</div>
+		<div class="enquete-header-cell">最多得票キャラクター</div>
+	</div>`;
+
 	const html = EnqueteLog.map( enquete => {
 		const headerTemp2 = `
 		<div class="enquete">
@@ -69,7 +76,7 @@ function DrawEnqueteTable(){
 		return headerTemp2 + winnersTemp2 + `</div>`;
 	}).join('');
 	document.getElementById("EnqueteResult").classList.remove("output-box-default");
-	document.getElementById("EnqueteResult").innerHTML = html;
+	document.getElementById("EnqueteResult").innerHTML = header + html;
 }
 
 //■「キャラ別最多得票項目」のテーブルを描画
