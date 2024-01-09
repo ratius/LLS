@@ -98,10 +98,6 @@ article:not(.cancelled) .article-box-title {
 
 /* ■スマートフォン向けレイアウト */
 @media screen and (max-width: 599px) {
-	.pc-only {
-		display: none;
-	}
-
 	article {
 		grid-template-columns: auto 70px;
 	}
@@ -135,10 +131,6 @@ article:not(.cancelled) .article-box-title {
 
 /* ■PC向けレイアウト */
 @media screen and (min-width: 600px) {
-	.sp-only {
-		display: none;
-	}
-
 	article {
 		grid-template-columns: 120px auto 130px;
 		border-right: solid 1px #999;
@@ -170,7 +162,7 @@ article:not(.cancelled) .article-box-title {
 	}
 }
 --></style>
-<script src="data/hasu-connect.js" defer></script>
+<script src="data/loader.js" data-src="data/hasu-connect.js,data/hasu-connect.json,data/common-library.js"></script>
 </head>
 <body class="left">
 <main>
@@ -188,7 +180,7 @@ article:not(.cancelled) .article-box-title {
 	</header>
 
 	<section id="Summary">
-		<h2 class="foreword">概要</h2>
+		<h2>概要</h2>
 		<p>
 			アプリ「Link! Like! ラブライブ！」内のコンテンツ「スクールアイドルコネクト」で配信された動画のまとめです。
 		</p>
@@ -224,6 +216,12 @@ article:not(.cancelled) .article-box-title {
 		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 		<div class="history-container">
 			<details open>
+				<summary><span class="date">2024/01/10</span></summary>
+				<div>
+					<span class="icon-fix"></span>データ読み込み周りの仕様を変更
+				</div>
+			</details>
+			<details>
 				<summary class="important"><span class="date">2023/12/28</span></summary>
 				<div>
 					<span class="icon-new"></span>CSSをアップデート
