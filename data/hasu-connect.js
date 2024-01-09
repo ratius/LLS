@@ -1,13 +1,5 @@
-//■デバッグモード
-const isDebugMode = (location.search.substring(1).split('&').indexOf('debug') >= 0);
-if(isDebugMode) {
-	//デバッグモードであることを表示
-	document.title = '[debug]' + document.title;
-	document.bgColor = '#dce';
-	document.getElementById("TitleName").innerHTML += "*";
-	document.getElementById("TitleName").classList.add("title-debug");
-	document.getElementById("BackToMain").href += "?debug";
-}
+//■グローバル変数定義
+const TimeOutputStart = performance.now();
 
 //■キャラクターのデータ
 const TagData = {
@@ -16,43 +8,14 @@ const TagData = {
 	"cancelled" : {"name": "配信中止"    , "r":128, "g":128, "b":128, "style": "square" },
 	
 	"Kaho"    : {"name": "花帆"   , "r":248, "g":181, "b":  0, "style": "round" },
-	"Sayaka"  : {"name": "さやか" , "r": 83, "g":131, "b":195, "style": "round" },
 	"Kozue"   : {"name": "梢"     , "r":104, "g":190, "b":141, "style": "round" },
+	"Sayaka"  : {"name": "さやか" , "r": 83, "g":131, "b":195, "style": "round" },
 	"Tsuzuri" : {"name": "綴理"   , "r":186, "g": 38, "b": 54, "style": "round" },
 	"Rurino"  : {"name": "瑠璃乃" , "r":231, "g": 96, "b":158, "style": "round" },
 	"Megumi"  : {"name": "慈"     , "r":200, "g":194, "b":198, "style": "round" }
 };
 
-//■■サブルーチン
-//■キャラクター名のボタン ver.20231222a
-function DrawCharName(character){
-	if(character in TagData){ //存在する場合のみ
-		const target = TagData[character];
-		return `<span class="button-${target.style} button_${character}">${target.name}</span>`;
-	} else {
-		console.error(`キャラクターID ${character} は存在しません`);
-		return "Error";
-	}
-}
-
-//■オブジェクトのRGBから色を計算 ver.20231223
-const getColor = (Object, divisor) => {
-	if(!divisor){ divisor = 1;}
-	const r = Math.floor((Object.r + (255 * (divisor-1))) / divisor);
-	const g = Math.floor((Object.g + (255 * (divisor-1))) / divisor);
-	const b = Math.floor((Object.b + (255 * (divisor-1))) / divisor);
-	return 'rgb(' + r + ',' + g + ',' + b + ');';
-}
-
-//■Date型 → "YYYY/MM/DD" への変換
-const formatDate = date => {
-	const year = date.getFullYear();
-	const month = String(date.getMonth() + 1).padStart(2, '0');
-	const day = String(date.getDate()).padStart(2, '0');
-	return `${year}/${month}/${day}`;
-}
-
-//■■メイン出力
+//■■出力
 //■「スクールアイドルコネクト一覧」の描画
 function DrawLiveList(condition){
 	const TimeOutputStart = performance.now();
@@ -62,7 +25,7 @@ function DrawLiveList(condition){
 	if(conditionTemp[0] === 'date'){ //期間指定
 		const DateStart = new Date(conditionTemp[1]).getTime();
 		const DateEnd = new Date(conditionTemp[2]).getTime();
-		result = LiveList.filter( (connect) => { //当該動画
+		result = window['JSON-hasu-connect'].filter( (connect) => { //当該動画
 			if(!'title' in connect || connect.title === ''){ return false;} //タイトル未指定ならスキップ
 			const DateTemp = new Date(connect.date).getTime();
 			if(DateTemp > DateStart
@@ -119,24 +82,9 @@ function DrawLiveList(condition){
 	}
 }
 
-//■■初期処理
-//■JSONデータベースの読み込み
-const TimeOutputStart = performance.now();
-
-const JSONPath = 'data/hasu-connect.json';
-let LiveList = null;
-fetch(JSONPath)
-	.then(response => response.json())
-	.then(data => {
-		LiveList = data;
-		initialize();
-	}
-);
-
-const TimeOutputLoaded = performance.now();
-
 //■初期化処理
-function initialize() {
+function initialize () {
+	const TimeOutputLoaded = performance.now();
 	//色データをCSSに追加
 	let AddedCSS = '\n';
 	Object.keys(TagData).forEach( function(key) {
@@ -146,7 +94,7 @@ function initialize() {
 	});
 	document.querySelector('style').textContent += AddedCSS;
 	
-	//解除
+	//警告解除
 	document.getElementById('LiveList').classList.remove('output-box-default');
 	document.getElementById('LiveList').innerHTML = `
 		<div style="padding: 10px; vertical-align: top; font-size: 130%; color: #666">
