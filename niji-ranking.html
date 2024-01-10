@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta charset="utf-8">
+
+<meta name="description" content="「虹ヶ咲学園スクールアイドル　マンスリーランキング」データの非公式保管所。">
+
+<meta property="og:url" content="https://ratius.github.io/LLS/niji-ranking.html">
+<meta property="og:title" content="虹ヶ咲 マンスリーランキングまとめ">
+<meta property="og:type" content="website">
+<meta property="og:description" content="「虹ヶ咲学園スクールアイドル　マンスリーランキング」データの非公式保管所。">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@ratius55">
+<meta name="twitter:creator" content="@ratius55">
+<meta name="twitter:title" content="虹ヶ咲 マンスリーランキングまとめ">
+<meta name="twitter:description" content="「虹ヶ咲学園スクールアイドル　マンスリーランキング」データの非公式保管所。">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e50080">
+
+<title>マンスリーランキングまとめ | ラブライブ！ストレージ</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+<link rel="stylesheet" href="main_gen2.css">
+<style><!--
+.ranking-header-wrapper, .ranking-wrapper {
+	display: grid;
+	grid-template-columns:100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.ranking-header-wrapper {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	background-color: #cde;
+	border-bottom: solid 1px #79a;
+}
+
+.ranking-header-cell {
+	border-right: solid 1px #79a;
+	font-weight: bold;
+	text-align: center;
+	padding: 4px 0;
+}
+
+.ranking-date{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 90%;
+	font-weight: bold;
+	background-color: #eee;
+	color: #666;
+	padding: 4px 0;
+}
+
+.ranking-cell {
+	padding: 4px 0;
+	text-align: center;
+}
+
+table {
+	max-width: 600px;
+	height: 300px;
+}
+
+#PullDown-Container {
+	max-width: 100%;
+	overflow-x: hidden;
+	font-size: x-large;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#PullDownMenu {
+	border: solid 2px #b9a;
+	font-size: x-large;
+	font-weight: bold;
+	padding: 5px;
+	margin-right: 10px;
+}
+
+.graph-header {
+	width: 100%;
+	height: 70px;
+	padding: 4px 10px;
+	text-align: center;
+}
+#GraphTitle {
+	font-size: 150%;
+	font-weight: bold;
+}
+#GraphCanvas {
+	width: 100%;
+	aspect-ratio: 5 / 2;
+}
+
+/* ■スマートフォン向けレイアウト */
+@media screen and (max-width: 599px) {
+	.ranking-header-wrapper, .ranking-wrapper {
+		grid-template-columns: 40px 1fr 40px 1fr 40px 1fr;
+	}
+	.ranking-wrapper:not(:last-child) {
+		border-bottom: solid 3px #999;
+	}
+	.ranking-date {
+		grid-column: span 6;
+		border-bottom: solid 1px #ccc;
+	}
+}
+
+
+/* ■PC向けレイアウト */
+@media screen and (min-width: 600px) {
+	.ranking-wrapper:not(:last-child) {
+		border-bottom: solid 1px #ccc;
+	}
+	.ranking-date, .ranking-character {
+		border-right: solid 1px #ccc;
+	}
+}
+
+.bg-Ayumu  { background-color: rgb(237, 197, 206); }
+.bg-Kasumi { background-color: rgb(232, 224, 137); }
+.bg-Shizuku{ background-color: rgb(190, 224, 237); }
+.bg-Karin  { background-color: rgb(192, 202, 250); }
+.bg-Ai     { background-color: rgb(253, 183, 146); }
+.bg-Kanata { background-color: rgb(211, 184, 229); }
+.bg-Setsuna{ background-color: rgb(249, 166, 170); }
+.bg-Emma   { background-color: rgb(200, 237, 190); }
+.bg-Rina   { background-color: rgb(207, 208, 227); }
+
+--></style>
+<script src="data/loader.js" data-src="data/niji-ranking.js,data/niji-ranking.json,data/common-library.js"></script>
+</head>
+<body>
+<body class="left">
+<main>
+	<header>
+		<h1 id="TitleName">虹ヶ咲学園 マンスリーランキングまとめ</h1>
+		<nav class="right-menu">
+			<ul>
+				<li><strong>目次</strong></li>
+				<li><hr></li>
+				<li><a href="#Summary">概要</a></li>
+				<li><a href="#RankData1">過去の順位一覧</a></li>
+				<li><a href="#RankData2">キャラクター別詳細</a></li>
+				<li><a href="#History">更新履歴</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section id="Summary">
+		<h2>概要</h2>
+		<p>
+			公式で開催されていた投票企画「<a href="https://lovelive-as.bushimo.jp/vote/" target="_blank" title="虹ヶ咲学園スクールアイドル同好会 マンスリーランキング" class="exlink">虹ヶ咲学園スクールアイドル同好会 マンスリーランキング</a>」のまとめです。
+		</p>
+	</section>
+
+	<section id="RankData1">
+		<h2>過去の順位一覧</h2>
+		<p>
+			下表の年月部分をクリック/タップすると、結果発表ページを開きます。
+		</p>
+		<div id="RankingResults" class="output-box"></div>
+	</section>
+
+	<section id="RankData2">
+		<h2>キャラクター別詳細</h2>
+		<div id="PullDown-Container">
+			<label for="PullDownMenu">キャラクター</label>
+			<select id="PullDownMenu" onChange="DrawGraph(this.value)">
+				<option value="undefined">(選択してください)</option>
+				<option value="Ayumu">上原歩夢</option>
+				<option value="Kasumi">中須かすみ</option>
+				<option value="Shizuku">桜坂しずく</option>
+				<option value="Karin">朝香果林</option>
+				<option value="Ai">宮下愛</option>
+				<option value="Kanata">近江彼方</option>
+				<option value="Setsuna">優木せつ菜</option>
+				<option value="Emma">エマ・ヴェルデ</option>
+				<option value="Rina">天王寺璃奈</option>
+			</select>
+		</div>
+		<div class="output-box-border" style="max-width: 606px;">
+			<div class="graph-header">
+				<span id="GraphTitle"></span><br>
+				<span id="GraphDesc">上のプルダウンメニューからキャラクターを選択してください。</span>
+			</div>
+			<canvas id="GraphCanvas" width="300" height="120"></canvas>
+		</div> 
+	</section>
+
+	<section id="History">
+		<h2 class="niji">更新履歴</h2>
+		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
+		<div class="history-container">
+			<details open>
+				<summary class="important"><span class="date">2024/01/10</span></summary>
+				<div>
+					<span class="icon-new"></span>CSSをアップデート<br>
+					<span class="icon-fix"></span>データ読み込み周りの仕様を変更
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2022/06/25</span> - レイアウト調整</summary>
+				<div>
+					<span class="icon-fix"></span>更新履歴をリニューアル（他ページ同様、折りたたみ式に変更）
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2019/12/17</span> - レイアウト調整</summary>
+				<div>
+					<span class="icon-fix"></span>レイアウト変更
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2019/08/11</span> - 「順位経験回数」実装</summary>
+				<div>
+					<span class="icon-new"></span>「順位経験回数」の節を追加
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2019/07/13</span> - 「勝敗表」実装</summary>
+				<div>
+					<span class="icon-new"></span>「勝敗表」の節を追加<br>
+					<span class="icon-new"></span>JavaScriptが実行できない時のメッセージを追加
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2019/03/20</span> - 機能改修</summary>
+				<div>
+					<span class="icon-fix"></span>「セルをクリック/タップ」は、各項目ごとにトグルになるように変更
+				</div>
+			</details>
+			<details>
+				<summary class="important"><span class="date">2019/03/08</span> - 公開</summary>
+				<div>
+					<span class="icon-new"></span>公開
+				</div>
+			</details>
+		</div>
+	</section>
+
+	<footer>
+		<nav>
+			<a id="BackToMain" href="index.html">トップページに戻る。</a>
+		</nav>
+	</footer>
+</main>
+</body>
+</html>
+
+</body>
+</html>
