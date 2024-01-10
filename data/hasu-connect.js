@@ -89,8 +89,8 @@ function initialize () {
 	let AddedCSS = '\n';
 	Object.keys(TagData).forEach( function(key) {
 		AddedCSS += '.button_' + key + '{\n\t'
-		+ 'background-color: ' + getColor(TagData[key], 3) + '\n\t'
-		+ 'border-color: ' + getColor(TagData[key], 1) + '\n}\n';
+		+ 'background-color: ' + getColor(TagData[key], 2) + ';\n\t'
+		+ 'border-color: ' + getColor(TagData[key], 0) + '\n}\n';
 	});
 	document.querySelector('style').textContent += AddedCSS;
 	
