@@ -1,0 +1,182 @@
+[
+	{
+		"id": "0",
+		"name": "2017年7月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201707/",
+		"rank": ["Rina", "Setsuna", "Kasumi", "Ayumu", "Karin", "Shizuku", "Emma", "Kanata", "Ai"]
+	},
+	{
+		"id": "1",
+		"name": "2017年8月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201708/",
+		"rank": ["Setsuna", "Rina", "Shizuku", "Kanata", "Emma", "Ayumu", "Kasumi", "Karin", "Ai"]
+	},
+	{
+		"id": "2",
+		"name": "2017年9月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201709/",
+		"rank": ["Setsuna", "Rina", "Shizuku", "Kasumi", "Karin", "Ayumu", "Ai", "Emma", "Kanata"]
+	},
+	{
+		"id": "3",
+		"name": "2017年10月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201710/",
+		"rank": ["Karin", "Setsuna", "Rina", "Kasumi", "Shizuku", "Kanata", "Ai", "Emma", "Ayumu"]
+	},
+	{
+		"id": "4",
+		"name": "2017年11月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201711/",
+		"rank": ["Setsuna", "Karin", "Kanata", "Kasumi", "Ai", "Shizuku", "Rina", "Ayumu", "Emma"]
+	},
+	{
+		"id": "5",
+		"name": "2017年12月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201712/",
+		"rank": ["Karin", "Setsuna", "Kanata", "Kasumi", "Ai", "Shizuku", "Emma", "Ayumu", "Rina"]
+	},
+	{
+		"id": "6",
+		"name": "2018年1月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201801/",
+		"rank": ["Rina", "Karin", "Shizuku", "Setsuna", "Kanata", "Kasumi", "Ai", "Ayumu", "Emma"]
+	},
+	{
+		"id": "7",
+		"name": "2018年2月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201802/",
+		"rank": ["Karin", "Setsuna", "Ai", "Kasumi", "Kanata", "Ayumu", "Emma", "Shizuku", "Rina"]
+	},
+	{
+		"id": "8",
+		"name": "2018年3月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201803/",
+		"rank": ["Karin", "Setsuna", "Kasumi", "Ai", "Kanata", "Ayumu", "Shizuku", "Emma", "Rina"]
+	},
+	{
+		"id": "9",
+		"name": "2018年4月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201804/",
+		"rank": ["Karin", "Setsuna", "Kasumi", "Emma", "Ai", "Kanata", "Ayumu", "Shizuku", "Rina"]
+	},
+	{
+		"id": "10",
+		"name": "2018年5月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201805/",
+		"rank": ["Setsuna", "Kasumi", "Karin", "Kanata", "Ai", "Ayumu", "Emma", "Shizuku", "Rina"]
+	},
+	{
+		"id": "11",
+		"name": "2018年6月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201806/",
+		"rank": ["Setsuna", "Karin", "Kanata", "Kasumi", "Ayumu", "Shizuku", "Ai", "Emma", "Rina"]
+	},
+	{
+		"id": "12",
+		"name": "2018年7月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201807/",
+		"rank": ["Kanata", "Karin", "Setsuna", "Ai", "Rina", "Ayumu", "Kasumi", "Emma", "Shizuku"]
+	},
+	{
+		"id": "13",
+		"name": "2018年8月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201808/",
+		"rank": ["Kanata", "Karin", "Setsuna", "Kasumi", "Shizuku", "Ayumu", "Rina", "Ai", "Emma"]
+	},
+	{
+		"id": "14",
+		"name": "2018年9月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201809/",
+		"rank": ["Setsuna", "Kanata", "Karin", "Kasumi", "Ayumu", "Shizuku", "Ai", "Emma", "Rina"]
+	},
+	{
+		"id": "15",
+		"name": "2018年10月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201810/",
+		"rank": ["Kasumi", "Rina", "Setsuna", "Kanata", "Ayumu", "Shizuku", "Karin", "Emma", "Ai"]
+	},
+	{
+		"id": "16",
+		"name": "2018年11月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201811/",
+		"rank": ["Rina", "Karin", "Kasumi", "Ayumu", "Kanata", "Shizuku", "Setsuna", "Emma", "Ai"]
+	},
+	{
+		"id": "17",
+		"name": "2018年12月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201812/",
+		"rank": ["Setsuna", "Ai", "Karin", "Emma", "Ayumu", "Kasumi", "Shizuku", "Kanata", "Rina"]
+	},
+	{
+		"id": "18",
+		"name": "2019年1月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201901/",
+		"rank": ["Emma", "Setsuna", "Karin", "Ai", "Ayumu", "Kasumi", "Shizuku", "Kanata", "Rina"]
+	},
+	{
+		"id": "19",
+		"name": "2019年2月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201902/",
+		"rank": ["Ayumu", "Setsuna", "Karin", "Ai", "Emma", "Shizuku", "Kasumi", "Rina", "Kanata"]
+	},
+	{
+		"id": "20",
+		"name": "2019年3月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201903/",
+		"rank": ["Shizuku", "Setsuna", "Karin", "Ai", "Ayumu", "Kasumi", "Emma", "Kanata", "Rina"]
+	},
+	{
+		"id": "21",
+		"name": "2019年4月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201904/",
+		"rank": ["Ai", "Setsuna", "Karin", "Ayumu", "Kasumi", "Emma", "Shizuku", "Rina", "Kanata"]
+	},
+	{
+		"id": "22",
+		"name": "2019年5月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201905/",
+		"rank": ["Setsuna", "Karin", "Rina", "Ai", "Kanata", "Kasumi", "Ayumu", "Shizuku", "Emma"]
+	},
+	{
+		"id": "23",
+		"name": "2019年6月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201906/",
+		"rank": ["Setsuna", "Ayumu", "Karin", "Kasumi", "Ai", "Kanata", "Shizuku", "Rina", "Emma"]
+	},
+	{
+		"id": "24",
+		"name": "2019年7月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201907/",
+		"rank": ["Setsuna", "Kanata", "Karin", "Ayumu", "Emma", "Kasumi", "Ai", "Rina", "Shizuku"]
+	},
+	{
+		"id": "25",
+		"name": "2019年8月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201908/",
+		"rank": ["Setsuna", "Kanata", "Karin", "Ayumu", "Shizuku", "Kasumi", "Ai", "Emma", "Rina"]
+	},
+	{
+		"id": "26",
+		"name": "2019年9月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201909/",
+		"rank": ["Kanata", "Setsuna", "Ayumu", "Karin", "Shizuku", "Kasumi", "Rina", "Emma", "Ai"]
+	},
+	{
+		"id": "27",
+		"name": "2019年10月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201910/",
+		"rank": ["Rina", "Shizuku", "Karin", "Kasumi", "Ayumu", "Kanata", "Setsuna", "Ai", "Emma"]
+	},
+	{
+		"id": "28",
+		"name": "2019年11月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201911/",
+		"rank": ["Emma", "Setsuna", "Kasumi", "Karin", "Ayumu", "Shizuku", "Kanata", "Ai", "Rina"]
+	},
+	{
+		"id": "29",
+		"name": "2019年12月",
+		"url": "https://lovelive-as.bushimo.jp/vote/v201912/",
+		"rank": ["Ayumu", "Setsuna", "Rina", "Shizuku", "Kanata", "Ai", "Kasumi", "Karin", "Emma"]
+	}
+]
