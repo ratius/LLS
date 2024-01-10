@@ -95,7 +95,7 @@ h3:before {
 	display: block;
 	padding: 2px 0px;
 }
-/* ■スマートフォン向け */
+/* ■スマートフォン向けレイアウト */
 @media screen and (max-width: 599px) {
 	.pc-only {
 		display: none !important;
@@ -108,11 +108,15 @@ h3:before {
 	}
 }
 
-/* ■幅広環境向け */
-@media screen and (min-width: 1280px) {
+/* ■PC向けレイアウト */
+@media screen and (min-width: 600px) {
 	.sp-only {
 		display: none !important;
 	}
+}
+
+/* ■幅広環境向けレイアウト */
+@media screen and (min-width: 1280px) {
 	body {
 		background: url('img/bg.png');
 	}
@@ -144,6 +148,10 @@ h3:before {
 	background-color: #ddd;
 	font-size: 120%;
 	color: #666;
+}
+
+.output-box-border {
+	border: solid 3px #79c
 }
 
 
