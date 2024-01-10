@@ -1,6 +1,3 @@
-//■グローバル変数定義
-const TimeOutputStart = performance.now();
-
 //■キャラクターのデータ
 const TagData = {
 	"meets"     : {"name": "With×MEETS" , "r":160, "g":112, "b": 96, "style": "square" },
@@ -105,6 +102,6 @@ function initialize () {
 	if(isDebugMode) {
 		//描画時間の出力
 		const TimeOutputEnd = performance.now();
-		console.log(`リンクラ スクールアイドルコネクトまとめ\n読み込み： ${TimeOutputLoaded - TimeOutputStart}ミリ秒\n初期化: ${TimeOutputEnd - TimeOutputLoaded}ミリ秒`);
+		console.log(`リンクラ スクールアイドルコネクトまとめ\n読み込み： ${TimeOutputLoaded - TimeLoadingStart}ミリ秒\n初期化: ${TimeOutputEnd - TimeOutputLoaded}ミリ秒`);
 	}
 }

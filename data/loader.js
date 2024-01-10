@@ -1,6 +1,7 @@
 //■■読み込み君
-//■グローバル変数の管理
+//■グローバル変数
 const files = document.currentScript.getAttribute('data-src').split(',');
+const TimeLoadingStart = performance.now();
 
 //■読み込み処理
 function loadScript(file) { //JSファイル

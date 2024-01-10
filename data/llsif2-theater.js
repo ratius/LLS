@@ -1,14 +1,3 @@
-//■デバッグモード
-const isDebugMode = (location.search.substring(1).split('&').indexOf('debug') >= 0);
-if(isDebugMode) {
-	//デバッグモードであることを表示
-	document.title = '[debug]' + document.title;
-	document.bgColor = '#dce';
-	document.getElementById("TitleName").innerHTML += "*";
-	document.getElementById("TitleName").classList.add("title-debug");
-	document.getElementById("BackToMain").href += "?debug";
-}
-
 //■タグデータ
 const TagData = {
 	"Honoka":  {"name": "穂乃果",  "r":243, "g":133, "b":  0, "style": "round"},
@@ -65,6 +54,7 @@ const TagData = {
 //■ソート対象
 const SortTarget = [
 {"name": "2023年", "condition": "date,2023/12/01,2023/12/31"},
+{"name": "2024年", "condition": "date,2024/01/01,2024/03/31"},
 {"name": "----"},
 {"name": "出演：高坂 穂乃果",            "condition": "tag,Honoka"},
 {"name": "出演：絢瀬 絵里",              "condition": "tag,Eli"},
@@ -116,27 +106,6 @@ const SortTarget = [
 //{"name": "シリーズ：堕天使ヨハネ", "condition": "tag,Yohane"},
 ];
 
-//■■サブルーチン
-//■キャラクター名のボタン ver.20231222a
-function DrawCharName(character){
-	if(character in TagData){ //存在する場合のみ
-		const target = TagData[character];
-		return `<span class="button-${target.style} button_${character}">${target.name}</span>`;
-	} else {
-		console.log(`キャラクターID ${character} は存在しません`);
-		return "Error";
-	}
-}
-
-//■オブジェクトのRGBから色を計算 ver.20231223
-const getColor = (Object, divisor) => {
-	if(!divisor){ divisor = 1;}
-	const r = Math.floor((Object.r + (255 * (divisor-1))) / divisor);
-	const g = Math.floor((Object.g + (255 * (divisor-1))) / divisor);
-	const b = Math.floor((Object.b + (255 * (divisor-1))) / divisor);
-	return 'rgb(' + r + ',' + g + ',' + b + ');';
-}
-
 //■■メイン出力
 //■条件に合致するストーリーを抜き出してリストアップ
 function DrawStoryList(conditions){
@@ -156,12 +125,12 @@ function DrawStoryList(conditions){
 	if(conditions[0] === 'date'){ //日付による絞り込み
 		const dateStart = new Date(conditions[1]);
 		const dateEnd = new Date(conditions[2]);
-		storyResult = TheaterLog.filter(temp => {
+		storyResult = window['JSON-llsif2-theater'].filter(temp => {
 			const dateStory = new Date(temp.date);
 			return dateStory.getTime() >= dateStart.getTime() && dateStory.getTime() <= dateEnd.getTime();
 		});
 	} else if(conditions[0] === 'tag'){ //タグによる絞り込み
-		storyResult = TheaterLog.filter(temp => temp.tags.indexOf(conditions[1]) !== -1);
+		storyResult = window['JSON-llsif2-theater'].filter(temp => temp.tags.indexOf(conditions[1]) !== -1);
 	} else {
 		return false;
 	}
@@ -196,7 +165,7 @@ function DrawStoryList(conditions){
 
 //■指定されたIDの毎日劇場をモーダルウィンドウに描画
 function MakeModal(id){
-	const result = TheaterLog.find(temp => temp.id === id);
+	const result = window['JSON-llsif2-theater'].find(temp => temp.id === id);
 	if(!result){ return false;}
 	
 	//タイトル
@@ -229,30 +198,16 @@ function CloseModal(target){
 	}, 200);
 }
 
-//■■初期処理
-//■JSONデータベースの読み込み
-const TimeOutputStart = performance.now();
-
-const JSONPath = 'data/llsif2-theater.json';
-let TheaterLog = null;
-fetch(JSONPath)
-	.then(response => response.json())
-	.then(data => {
-		TheaterLog = data;
-		initialize();
-	}
-);
-
-const TimeOutputLoaded = performance.now();
 
 //■初期化処理
 function initialize() {
+	const TimeOutputLoaded = performance.now();
 	//TagDataの色データをCSSに追加
 	document.querySelector('style').textContent += Object.keys(TagData).map( character => {
 		return `
 		.button_${character} {
-			background-color: ${getColor(TagData[character], 3)}
-			border-color: ${getColor(TagData[character], 1)}
+			background-color: ${getColor(TagData[character], 2)};
+			border-color: ${getColor(TagData[character], 0)}
 		}`;
 	}).join('');
 
@@ -272,10 +227,10 @@ function initialize() {
 		</div>`;
 	
 	//デバック用
-	if(isDebugMode) {		
+	if(isDebugMode) {
 		//データの不具合チェック
 		let idTemp = "";
-		const isError = TheaterLog.reduce( (acc, val) => {
+		const isError = window['JSON-llsif2-theater'].reduce( (acc, val) => {
 			if(idTemp === val.id) { 
 				console.error(`エラー：ID重複 (${val.date}「${val.title}」)`);
 				acc++;
@@ -310,6 +265,6 @@ function initialize() {
 		}
 		//描画時間の出力
 		const TimeOutputEnd = performance.now();
-		console.log(`スクフェス2 毎日劇場 データベース\n読み込み： ${TimeOutputLoaded - TimeOutputStart}ミリ秒\n初期化: ${TimeOutputEnd - TimeOutputLoaded}ミリ秒`);
+		console.log(`スクフェス2 毎日劇場 データベース\n読み込み： ${TimeOutputLoaded - TimeLoadingStart}ミリ秒\n初期化: ${TimeOutputEnd - TimeOutputLoaded}ミリ秒`);
 	}
 }
