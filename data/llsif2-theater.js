@@ -113,7 +113,7 @@ function DrawStoryList(conditions){
 	const DecorateText = ( text => {
 		return text
 		// {{L:タイトル:URL}} の部分を、リンクに置換する
-		.replace(/\{\{[lL]:([^:]*):([^}]*)\}\}/g, '<a href="$2" class="pc-exclusive-link" target="blank">$1<\/a>');
+		.replace(/\{\{[lL]:([^:]*):([^}]*)\}\}/g, '<a href="$2" class="pc-exclusive-link" target="_blank">$1<\/a>');
 	});
 
 	let storyResult = new Array();
@@ -150,7 +150,7 @@ function DrawStoryList(conditions){
 			<div class="story-date">${story.date}</div>
 			<div class="story-titleContainer">
 				<div ${storyTitleAtttribute}>${story.title}</div>
-				<div class="story-memo">${('memo' in story ? story.memo : '')}</div>
+				<div class="story-memo">${('memo' in story ? DecorateText(story.memo) : '')}</div>
 			</div>
 			<div class="story-tags">${tagContent}</div>
 			</div>
@@ -198,10 +198,8 @@ function CloseModal(target){
 	}, 200);
 }
 
-
 //■初期化処理
 function initialize() {
-	const TimeOutputLoaded = performance.now();
 	//TagDataの色データをCSSに追加
 	document.querySelector('style').textContent += Object.keys(TagData).map( character => {
 		return `
@@ -265,6 +263,6 @@ function initialize() {
 		}
 		//描画時間の出力
 		const TimeOutputEnd = performance.now();
-		console.log(`スクフェス2 毎日劇場 データベース\n読み込み： ${TimeOutputLoaded - TimeLoadingStart}ミリ秒\n初期化: ${TimeOutputEnd - TimeOutputLoaded}ミリ秒`);
+		console.log(`スクフェス2 毎日劇場アーカイブ\n初期化処理： ${TimeOutputEnd - TimeLoadingStart}ミリ秒`);
 	}
 }
