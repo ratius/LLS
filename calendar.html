@@ -3,6 +3,8 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
 <meta charset="utf-8">
 
+<meta name="description" content="ラブライブ！シリーズのキャラクターやキャストの誕生日を確認できるカレンダーです。">
+
 <meta property="og:url" content="https://ratius.github.io/LLS/calendar.html">
 <meta property="og:title" content="ラブライブ！誕生日カレンダー">
 <meta property="og:type" content="website">
@@ -14,519 +16,261 @@
 <meta name="twitter:title" content="ラブライブ！誕生日カレンダー">
 <meta name="twitter:description" content="ラブライブ！シリーズのキャラクターやキャストの誕生日を確認できるカレンダーです。">
 
-<meta name="viewport" content="width=800">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e50080">
 
 <title>ラブライブ！誕生日カレンダー | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
-<link rel="stylesheet" href="main.css">
-<link rel="stylesheet" href="color.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="main_gen2.css">
 <style><!--
 
 .calendar-container {
-	display: flex;
-	width: 780px;
-	height: 330px;
+	width: 100%;
+	display: grid;
+	margin-bottom: 10px;
 }
 
-#options {
-	width: 400px;
+.options {
 	margin-left: 10px;
 	font-size: large;
 	line-height: 180%;
 }
-#options input {
-	width: 20px;
-	height: 20px;
+.options input {
+	width: 24px;
+	height: 24px;
 }
 
-#date_container {
+/* カレンダー (右上) */
+.calendar {
+	width: 278px;
+	border: solid 1px #999;
+	background-color: white;
+}
+
+.date-container {
+	background-color: #fbd;
+	width: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
-	width: 310px;
-	padding: 3px 15px;
+	padding: 5px;
 }
 
-#date_container > div {
-	height: 40px;
-}
-
-#date_container input {
+.calendar-button {
 	width: 40px;
 	height: 40px;
 	font-size: large;
 }
 
-#date {
-	width: 200px;
+#CurrentDate {
+	width: 180px;
+	overflow: hidden;
 	text-align: center;
 	line-height: 40px;
 	font-size: x-large;
+	white-space: nowrap;
 }
 
-#calendar{
-	width: 340px;
-	height: 320px;
-	border: solid 1px #999;
-	background-color: white;
+#CalendarGridContainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	padding: 10px 15px;
+	gap: 4px;
+	aspect-ratio: 1 / 1;
 }
 
-#calendar table{
-	margin: auto;
-	border-collapse: separate;
-	border-spacing: 4px;
-	color: #333;
-}
-#calendar thead {
-	border-bottom: solid 2px #999;
-}
-
-#calendar tbody td {
-	width: 30px;
-	height: 30px;
-	padding: 0;
-	font-size: small;
+.calendar-grid-header {
 	text-align: center;
-	border-radius: 50vh;
-	border-style: solid;
-	border-width: 2px;
+	font-weight: bold;
+}
+
+.calendar-grid {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	aspect-ratio: 1 / 1;
+	border: solid 2px transparent;
+	border-radius: 50%;
+	font-size: 13pt;
 }
 
 .birth { background-color: #fbd; border-color: #fbd;}
-.day { border-color: transparent;}
 .non { color: #c0c0c0; border-color: transparent;}
 .today {
 	font-weight: bold;
 	border-color: #c69;
 }
-
-#schedule table {
-	margin: auto;
-	border-collapse: collapse;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #e50080;
-	font-size: 120%;
-}
-#schedule thead th {
-	background-color: #ffcce9;
-	border-bottom: solid 1px #e50080;
+#ScheduleContainer {
+	display: grid;
 }
 
-.arrow {
-	width: 40px;
-	height: 28px;
-	line-height: 28px;
-	background-color: #ffcce9;
-	clip-path: polygon(10% 0, 80% 0, 100% 50%, 80% 100%, 10% 100%);
+.schedule-wrapper {
+	display: grid;
+	grid-template-columns: 40px auto;
+	vertical-align: middle;
+	padding: 3px 5px;
 }
 
-#schedule tbody th {
-	width: 40px;
-	height: 35px;
-	border-bottom: solid 1px #bbb;
+.schedule-wrapper:not(:last-child) {
+	border-bottom: solid 1px #ccc;
 }
 
-#schedule tbody td {
-	width: 330px;
-	padding: 0 0 0 5px;
-	border-bottom: solid 1px #bbb;
+.schedule-day {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fbd;
+	font-weight: bold;
+	padding-right: 5px;
+	clip-path: polygon(0% 0%, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0% 100%);
 }
 
-.c_muse   {color: #e50080;}
-.c_aqours {color: #19b1f6;}
-.c_niji   {color: #f8b656;}
-.c_liella {color: #da57d8;}
-.c_musical{color: #df2743;}
-.c_hasu   {color: #cc4466;}
-.c_llsif  {color: #777777;}
+.schedule-memo span {
+	display: inline-block;
+	padding: 0 4px;
+}
+
+.icon-C:before { content: "●"; }
+.icon-V:before { content: "🎤"; }
+
+.icon-muse:before   {color: #e50080;}
+.icon-aqours:before {color: #19b1f6;}
+.icon-niji:before   {color: #f8b656;}
+.icon-liella:before {color: #da57d8;}
+.icon-musical:before{color: #df2743;}
+.icon-hasu:before   {color: #cc4466;}
+.icon-llsif:before  {color: #777777;}
+
+/* ■スマートフォン向け */
+@media screen and (max-width: 599px) {
+	.calendar-container {
+	}
+	#ScheduleContainer {
+		grid-template-columns: 1fr;
+	}
+}
+/* ■PC向けレイアウト */
+@media (min-width: 600px) {
+	.calendar-container {
+		grid-auto-flow: column;
+		grid-template-columns: 1fr 1fr;
+	}
+	#ScheduleContainer {
+		grid-auto-flow: column;
+		grid-template-rows: repeat(16, auto);
+		grid-template-columns: 1fr 1fr;
+	}
+}
 
 --></style>
-<script><!--
-
-const BirthdayList = {
-	'0101' : [['黒澤ダイヤ',    'C', 'aqours' ]],
-	'0105' : [['春名真依',      'V', 'musical']],
-	'0107' : [['神谷理華',      'C', 'llsif'  ]],
-	'0109' : [['Liyuu',         'V', 'liella' ]],
-	'0113' : [['村野さやか',    'C', 'hasu'   ]],
-	'0115' : [['杏ジュリア',    'V', 'musical']],
-	'0117' : [['小泉花陽',      'C', 'muse'   ]],
-	'0120' : [['ウィーン・マルガレーテ','C', 'liella' ]],
-	'0121' : [['クリスティーナ','C', 'llsif'  ], ['星守紗凪',      'V', 'musical']],
-	'0123' : [['中須かすみ',    'C', 'niji'   ]],
-	'0125' : [['高天原睦月',    'C', 'llsif'  ], ['鈴木まゆり',    'V', 'musical']],
-	'0128' : [['野中ここな',    'V', 'hasu'   ]],
-	'0131' : [['久保田未夢',    'V', 'niji'   ], ['青山瑠里',      'V', 'musical']],
-
-	'0201' : [['楠田亜衣奈',    'V', 'muse'   ]],
-	'0205' : [['エマ・ヴェルデ','C', 'niji'   ], ['小宮有紗',      'V', 'aqours' ]],
-	'0207' : [['伊波杏樹',      'V', 'aqours' ]],
-	'0208' : [['蘭花',          'C', 'llsif'  ]],
-	'0209' : [['白木凪',        'C', 'llsif'  ]],
-	'0210' : [['松浦果南',      'C', 'aqours' ]],
-	'0212' : [['田野アサミ',    'V', 'aqours' ]],
-	'0215' : [['鐘嵐珠',        'C', 'niji'   ]],
-	'0218' : [['須田いるか',    'C', 'llsif'  ]],
-	'0219' : [['降幡愛',        'V', 'aqours' ]],
-	'0222' : [['黒木美佑',      'V', 'musical']],
-	'0223' : [['白瀬小雪',      'C', 'llsif'  ], ['絵森彩',        'V', 'liella' ]],
-	'0225' : [['嵐千砂都',      'C', 'liella' ]],
-	'0227' : [['小泉萌香',      'V', 'niji'   ]],
-
-	'0301' : [['上原歩夢',      'C', 'niji'   ]],
-	'0303' : [['早乙女紫',      'C', 'llsif'  ]],
-	'0304' : [['国木田花丸',    'C', 'aqours' ], ['小山璃奈',      'V', 'musical']],
-	'0305' : [['矢野妃菜喜',    'V', 'niji'   ]],
-	'0307' : [['森嶋ななか',    'C', 'llsif'  ]],
-	'0308' : [['鳥居歩美',      'C', 'llsif'  ], ['岬なこ',        'V', 'liella' ]],
-	'0315' : [['園田海未',      'C', 'muse'   ]],
-	'0320' : [['設楽ふみ',      'C', 'llsif'  ]],
-	'0325' : [['多々良るう',    'C', 'llsif'  ]],
-	'0328' : [['吉武千颯',      'V', 'liella' ]],
-
-	'0402' : [['桐原優香',      'C', 'llsif'  ], ['南野巴那',      'V', 'musical']],
-	'0403' : [['桜坂しずく',    'C', 'niji'   ], ['坂倉花',        'V', 'liella' ]],
-	'0404' : [['黒羽咲良',      'C', 'llsif'  ]],
-	'0407' : [['紫藤美咲',      'C', 'llsif'  ]],
-	'0410' : [['桜小路きな子',  'C', 'liella' ]],
-	'0413' : [['大熊和奏',      'V', 'liella' ]],
-	'0417' : [['渡辺曜',        'C', 'aqours' ], ['綾小路姫乃',    'C', 'llsif'  ], ['相良茉優',      'V', 'niji'   ]],
-	'0419' : [['西木野真姫',    'C', 'muse'   ]],
-	'0420' : [['一之瀬マリカ',  'C', 'llsif'  ]],
-	'0422' : [['兵藤さゆり',    'C', 'llsif'  ]],
-	'0425' : [['前田佳織里',    'V', 'niji'   ]],
-	'0427' : [['西葉瑞希',      'V', 'musical']],
-	'0429' : [['堀内まり菜',    'V', 'musical']],
-
-	'0501' : [['澁谷かのん',    'C', 'liella' ]],
-	'0502' : [['Pile',          'V', 'muse'   ], ['大西亜玖璃',    'V', 'niji'   ]],
-	'0504' : [['鹿角聖良',      'C', 'aqours' ]],
-	'0505' : [['下園咲',        'C', 'llsif'  ]],
-	'0506' : [['相川涼',        'C', 'llsif'  ]],
-	'0512' : [['ジェニファー',  'C', 'llsif'  ]],
-	'0515' : [['藤城悠弓',      'C', 'llsif'  ], ['林鼓子',        'V', 'niji'   ]],
-	'0516' : [['青山なぎさ',    'V', 'liella' ]],
-	'0519' : [['久保ユリカ',    'V', 'muse'   ]],
-	'0520' : [['浅井七海',      'V', 'musical']],
-	'0521' : [['楡井希美',      'V', 'hasu'   ]],
-	'0522' : [['日野下花帆',    'C', 'hasu'   ]],
-	'0524' : [['内田秀',        'V', 'niji'   ]],
-	'0530' : [['宮下愛',        'C', 'niji'   ]],
-
-	'0602' : [['宮下ココ',      'C', 'llsif'  ]],
-	'0606' : [['志賀仁美',      'C', 'llsif'  ]],
-	'0609' : [['東條希',        'C', 'muse'   ], ['結木ゆな',      'V', 'liella' ]],
-	'0613' : [['小原鞠莉',      'C', 'aqours' ]],
-	'0615' : [['乙宗梢',        'C', 'hasu'   ], ['黒崎隼',        'C', 'llsif'  ]],
-	'0616' : [['佐伯麗音',      'C', 'llsif'  ]],
-	'0617' : [['若菜四季',      'C', 'liella' ]],
-	'0618' : [['ラクシャータ',  'C', 'llsif'  ]],
-	'0628' : [['三森すずこ',    'V', 'muse'   ]],
-	'0629' : [['朝香果林',      'C', 'niji'   ]],
-	'0630' : [['西田ひらり',    'V', 'musical']],
-
-	'0701' : [['ペイトン尚美',  'V', 'liella' ]],
-	'0707' : [['逢沢遊宇',      'C', 'llsif'  ]],
-	'0710' : [['門田剣',        'C', 'llsif'  ]],
-	'0712' : [['南條愛乃',      'V', 'muse'   ]],
-	'0713' : [['津島善子',      'C', 'aqours' ]],
-	'0714' : [['坂巻千鶴子',    'C', 'llsif'  ]],
-	'0717' : [['唐可可',        'C', 'liella' ]],
-	'0718' : [['薮島朱音',      'V', 'liella' ]],
-	'0719' : [['三田美吹',      'V', 'musical']],
-	'0720' : [['篠宮あきる',    'C', 'llsif'  ]],
-	'0721' : [['月島結架',      'C', 'llsif'  ]],
-	'0722' : [['矢澤にこ',      'C', 'muse'   ], ['松澤可苑',      'V', 'musical']],
-	'0723' : [['内田彩',        'V', 'muse'   ], ['鈴木愛奈',      'V', 'aqours' ]],
-
-	'0801' : [['高海千歌',      'C', 'aqours' ], ['加藤夕夏',      'V', 'musical']],
-	'0803' : [['高坂穂乃果',    'C', 'muse'   ], ['佐藤美波',      'V', 'musical']],
-	'0805' : [['法元明菜',      'V', 'niji'   ]],
-	'0806' : [['マリア',        'C', 'llsif'  ]],
-	'0807' : [['鬼塚夏実',      'C', 'liella' ]],
-	'0808' : [['優木せつ菜',    'C', 'niji'   ], ['逢田梨香子',    'V', 'aqours' ]],
-	'0810' : [['鬼崎アキラ',    'C', 'llsif'  ]],
-	'0812' : [['斉木風',        'C', 'llsif'  ]],
-	'0816' : [['レオ',          'C', 'llsif'  ], ['斉藤朱夏',      'V', 'aqours' ]],
-	'0820' : [['結城紗菜',      'C', 'llsif'  ], ['月音こな',      'V', 'hasu'   ]],
-	'0828' : [['佐々木琴子',    'V', 'hasu'   ]],
-	'0830' : [['永山みなみ',    'C', 'llsif'  ]],
-	'0831' : [['大沢瑠璃乃',    'C', 'hasu'   ]],
-
-	'0903' : [['田中さち子',    'C', 'llsif'  ]],
-	'0907' : [['村上奈津実',    'V', 'niji'   ]],
-	'0909' : [['黒羽咲夜',      'C', 'llsif'  ]],
-	'0912' : [['南ことり',      'C', 'muse'   ]],
-	'0919' : [['桜内梨子',      'C', 'aqours' ]],
-	'0920' : [['西村文絵',      'C', 'llsif'  ], ['指出毬亜',      'V', 'niji'   ]],
-	'0921' : [['黒澤ルビィ',    'C', 'aqours' ]],
-	'0925' : [['高槻かなこ',    'V', 'aqours' ]],
-	'0927' : [['結那',          'V', 'liella' ]],
-	'0928' : [['平安名すみれ',  'C', 'liella' ], ['関根優那',      'V', 'musical']],
-	'0930' : [['杉崎亜矢',      'C', 'llsif'  ], ['伊達さゆり',    'V', 'liella' ]],
-
-	'1005' : [['三船栞子',      'C', 'niji'   ]],
-	'1006' : [['田中ちえ美',    'V', 'niji'   ]],
-	'1016' : [['鬼頭明里',      'V', 'niji'   ]],
-	'1020' : [['吉川瑞希',      'C', 'llsif'  ]],
-	'1021' : [['絢瀬絵里',      'C', 'muse'   ]],
-	'1023' : [['小林愛香',      'V', 'aqours' ]],
-	'1024' : [['花宮初奈',      'V', 'hasu'   ]],
-	'1026' : [['飯田里穂',      'V', 'muse'   ]],
-	'1029' : [['米女メイ',      'C', 'liella' ]],
-	'1030' : [['菊池朱美',      'C', 'llsif'  ]],
-
-	'1101' : [['星空凛',        'C', 'muse'   ], ['鈴原希実',      'V', 'liella' ]],
-	'1102' : [['諏訪ななか',    'V', 'aqours' ]],
-	'1105' : [['福原命',        'C', 'llsif'  ]],
-	'1108' : [['山本愛梨',      'V', 'musical']],
-	'1111' : [['近江遥',        'C', 'llsif'  ]],
-	'1113' : [['天王寺璃奈',    'C', 'niji'   ]],
-	'1114' : [['レベッカ',      'C', 'llsif'  ]],
-	'1115' : [['九条聖良',      'C', 'llsif'  ]],
-	'1116' : [['イザベラ',      'C', 'llsif'  ]],
-	'1117' : [['夕霧綴理',      'C', 'hasu'   ]],
-	'1119' : [['菅叶和',        'V', 'hasu'   ], ['寺田光',        'V', 'musical']],
-	'1124' : [['葉月恋',        'C', 'liella' ]],
-
-	'1206' : [['ミア・テイラー','C', 'niji'   ]],
-	'1210' : [['新田恵海',      'V', 'muse'   ]],
-	'1212' : [['鹿角理亞',      'C', 'aqours' ], ['支倉かさね',    'C', 'llsif'  ]],
-	'1216' : [['近江彼方',      'C', 'niji'   ]],
-	'1220' : [['藤島慈',        'C', 'hasu'   ]],
-	'1221' : [['西田有愛',      'V', 'musical']],
-	'1222' : [['楠木ともり',    'V', 'niji'   ]],
-	'1223' : [['佐藤日向',      'V', 'aqours' ]],
-	'1224' : [['御堂優理',      'C', 'llsif'  ]],
-	'1226' : [['徳井青空',      'V', 'muse'   ]],
-	'1228' : [['鬼塚冬毬',      'C', 'liella' ]]
-};
-//■カレンダーと予定表の描画
-function generateCalendar(y, m){
-	let tempdate = new Date(y, m);
-	y = tempdate.getFullYear();
-	m = tempdate.getMonth();
-	document.getElementById("date").innerHTML = y + '年' + (1+m) + '月';
-	
-	let Output = '';
-	let day = -(new Date(y, m).getDay());
-
-	//■カレンダー
-	for(w=0; w<6; w++){
-		Output += '<tr>'
-		for(d=0; d<7; d++){
-			tempdate = new Date(y, m, ++day);
-			Output += '<td class="';
-			
-			if(tempdate.getFullYear() === new Date().getFullYear()
-			  && tempdate.getMonth() === new Date().getMonth()
-			  && tempdate.getDate() === new Date().getDate() ){
-				Output += 'today ';
-			}
-			if(tempdate.getMonth() === m){
-				const tempcode = ((tempdate.getMonth()+1).toString().padStart(2, '0'))
-				+ (tempdate.getDate()).toString().padStart(2, '0');
-				let isBirthday = false;
-				if (tempcode in BirthdayList){
-					for(i of BirthdayList[tempcode]){
-						if(i[2] === 'llsif' && document.getElementById('o_llsif').checked === false){ continue;}
-						if(i[1] === 'V' && document.getElementById('o_cast').checked === false){ continue;}
-						isBirthday = true;
-						break;
-					}
-				}
-				Output += (isBirthday ? 'birth' : 'day');
-			} else {
-				Output += 'non';
-			}
-			Output += '">' + tempdate.getDate() + '<\/td>'
-		}
-		Output += '<\/tr>'
-	}
-	document.getElementById("calendarInner").innerHTML = Output;
-	
-	//■予定表
-	Output = '<table>\n<thead>\n<tr>'
-	+ '<th>日<\/th><th>誕生日<\/th>'
-	+ '<th>日<\/th><th>誕生日<\/th>'
-	+ '<\/tr>\n<\/thead>\n<tbody>\n';
-	
-	for(z=0; z<16; z++){
-		Output += '<tr>';
-		for(x=0; x<2; x++){
-			if((x === 0 && z === 15) || new Date(y, m, x*15+z+1).getMonth() != m){
-				Output += '<th><\/th><td><\/td>';
-				continue;
-			}
-			Output += '<th><div class="arrow">' + (x*15+z+1) + '<\/div><\/th><td>';
-			var tempcode = (m+1).toString().padStart(2, '0') + (x*15+z+1).toString().padStart(2, '0');
-			if(tempcode in BirthdayList){
-				for(i of BirthdayList[tempcode]){
-					if(i[2] === 'llsif' && document.getElementById('o_llsif').checked === false){ continue;}
-					if(i[1] === 'V' && document.getElementById('o_cast').checked === false){ continue;}
-					Output += ' <span class="c_' + i[2] + '">' + (i[1] === 'C' ? '●' : '🎤') + '<\/span>' + i[0];
-				}
-			}
-			Output += '<\/td>';
-		}
-		Output += '<\/tr>\n';
-	}
-	
-	Output += '<\/tbody>\n<\/table>';
-	document.getElementById("schedule").innerHTML = Output;
-	
-	
-
-}
-
---></script>
+<script src="data/loader.js" data-src="data/calendar.js,data/calendar.json,data/common-library.js"></script>
 </head>
 <body>
+<main>
+	<header>
+		<h1 id="TitleName">ラブライブ！誕生日カレンダー</h1>
+	</header>
 
-<header>
-	<h2 id="MainTitle">ラブライブ！誕生日カレンダー</h2>
-</header>
+	<section id="Summary">
+		<h2>概要</h2>
+		<p>
+			ラブライブ！シリーズのキャラクター及びキャストの誕生日を確認できるカレンダーです。<br>
+			（キャストはスクールアイドルを演じている方のみ掲載しています）
+		</p>
+		<p id="RecordedData"></p>
+	</section>
 
-<section>
-	<h3 class="foreword">まえがき</h3>
-	<p>
-		ラブライブ！シリーズのキャラクター及びキャストの誕生日を確認できるカレンダーです。<br>
-		（キャストはスクールアイドルを演じている方のみ掲載しています）
-	</p>
-	<p id="RecordedData"></p>
-</section>
-
-<div id="Loading">
-	<h4>Now Loading...</h4>
-	このコンテンツはJavaScriptを使用しています。<br>
-	いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
-	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
-</div>
-
-<section>
-	<h3 class="muse">カレンダー</h3>
-	<div class="calendar-container">
-		<div id="options">
-			<strong>オプション</strong><br>
-			<label><input type="checkbox" id="o_cast" onclick="generateCalendar(year, month)" checked>キャストを表示する</label><br>
-			<label><input type="checkbox" id="o_llsif" onclick="generateCalendar(year, month)" checked>スクフェス転入生を表示する</label><br>
-		</div>
-		<div id="calendar">
-			<div id="date_container">
-				<div class="month_select"><input type="button" value="←" onclick="generateCalendar(year, --month)"></div>
-				<div id="date">0000年00月</div>
-				<div class="month_select"><input type="button" value="→" onclick="generateCalendar(year, ++month)"></div>
+	<section>
+		<h2 class="muse">カレンダー</h2>
+		<div class="calendar-container">
+			<div class="options">
+				<strong>オプション</strong><br>
+				<label><input type="checkbox" id="EnableCast" onchange="generateCalendar(globalYear, globalMonth)" checked>キャストを表示</label><br>
+				<label><input type="checkbox" id="EnableLLSIF" onchange="generateCalendar(globalYear, globalMonth)" checked>スクフェス転入生を表示</label><br>
 			</div>
-			<table>
-				<thead>
-					<tr><th>日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th></tr>
-				</thead>
-				<tbody id="calendarInner">
-				</tbody>
-			</table>
+			<div class="calendar">
+				<div class="date-container">
+					<input type="button" class="calendar-button" value="←" onclick="generateCalendar(globalYear, --globalMonth)">
+					<div id="CurrentDate"></div>
+					<input type="button" class="calendar-button" value="→" onclick="generateCalendar(globalYear, ++globalMonth)">
+				</div>
+				<div id="CalendarGridContainer">
+				</div>
+			</div>
 		</div>
-	</div>
-	<div id="schedule" style="width: 780px; height: 650px;">
-	</div>
-</section>
-
-<section>
-<h3 class="niji">更新履歴</h3>
-<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
-<div id="history2">
-	<details open>
-		<summary><span class="date">2023/08/05</span> - データベース補完</summary>
-		<div>
-			<span class="new"></span>「スクールアイドルミュージカル」2024年公演版のキャストを追加
+		<div id="ScheduleContainer" class="output-box">
 		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/09/21</span></summary>
-		<div>
-			<span class="fix"></span>「下園咲」「志賀仁美」の誕生日間違いを修正<br>
+	</section>
+
+	<section>
+		<h2 class="niji">更新履歴</h2>
+		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
+		<div class="history-container">
+			<details open>
+				<summary class="important"><span class="date">2024/01/13</span></summary>
+				<div>
+					<span class="icon-new"></span>CSSをアップデート<br>
+					<span class="icon-fix"></span>データ読み込み周りの仕様を変更
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2023/08/05</span> - データベース補完</summary>
+				<div>
+					<span class="icon-new"></span>「スクールアイドルミュージカル」2024年公演版のキャストを追加
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2023/09/21</span></summary>
+				<div>
+					<span class="icon-fix"></span>「下園咲」「志賀仁美」の誕生日間違いを修正<br>
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2023/08/05</span> - データベース補完</summary>
+				<div>
+					<span class="icon-fix"></span>掲載されていなかったキャストを追加（法元明菜）
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2023/07/11</span></summary>
+				<div>
+					<span class="icon-fix"></span>「米女メイ」の誕生日間違いを修正<br>
+					<span class="icon-fix"></span>蓮ノ空キャラクターのアイコン色を変更
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2023/06/18</span> - データベース補完</summary>
+				<div>
+					<span class="icon-fix"></span>掲載されていなかったキャラクターを追加<br>（スクフェス転入生：田中さち子、福原命、綾小路姫乃、ラクシャータ）
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2023/06/17</span> - キャスト追加 他</summary>
+				<div>
+					<span class="icon-new"></span>坂倉花（鬼塚冬毬役）を追加<br>
+					<span class="icon-fix"></span>「西木野真姫」「渡辺曜」のアイコン色の誤りを修正
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2023/06/11</span> - 不具合修正</summary>
+				<div>
+					<span class="icon-fix"></span>「2月」選択時、誕生日詳細表が常に閏年となる不具合を修正
+				</div>
+			</details>
+			<details>
+				<summary class="important"><span class="date">2023/06/11</span> - 公開</summary>
+				<div>
+					<span class="icon-new"></span>公開
+				</div>
+			</details>
 		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/08/05</span> - データベース補完</summary>
-		<div>
-			<span class="fix"></span>掲載されていなかったキャストを追加（法元明菜）
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/07/11</span></summary>
-		<div>
-			<span class="fix"></span>「米女メイ」の誕生日間違いを修正<br>
-			<span class="fix"></span>蓮ノ空キャラクターのアイコン色を変更
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/06/18</span> - データベース補完</summary>
-		<div>
-			<span class="fix"></span>掲載されていなかったキャラクターを追加<br>（スクフェス転入生：田中さち子、福原命、綾小路姫乃、ラクシャータ）
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/06/17</span> - キャスト追加 他</summary>
-		<div>
-			<span class="new"></span>坂倉花（鬼塚冬毬役）を追加<br>
-			<span class="fix"></span>「西木野真姫」「渡辺曜」のアイコン色の誤りを修正
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/06/11</span> - 不具合修正</summary>
-		<div>
-			<span class="fix"></span>「2月」選択時、誕生日詳細表が常に閏年となる不具合を修正
-		</div>
-	</details>
-	<details>
-		<summary class="important"><span class="date">2023/06/11</span> - 公開</summary>
-		<div>
-			<span class="new"></span>公開
-		</div>
-	</details>
-</div>
-</section>
+	</section>
 
-<nav>
-<p><a id="BackToMain" href="index.html">トップページに戻る。</a></p>
-</nav>
-
-<script><!--
-let isDebugMode = false;
-const Parameter = location.search.substring(1).split('&');
-if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
-
-const TimeOutputStart = performance.now();
-
-let year = new Date().getFullYear();
-let month = new Date().getMonth();
-
-generateCalendar(year, month);
-
-//◆「Now Loading...」解除
-document.getElementById("Loading").style.display = "none";
-
-//■デバックモード時の処理
-if(isDebugMode) {
-	//◆デバッグモードであることを表示
-	document.title = '[debug]' + document.title;
-	document.bgColor = '#dce';
-	
-	document.getElementById("MainTitle").innerHTML += "*";
-	document.getElementById("BackToMain").href += "?debug";
-	
-	//◆描画時間の出力
-	const TimeOutputEnd = performance.now();
-	console.log('スクスタ 衣装早見表\n初期描画処理: ' + (TimeOutputEnd - TimeOutputStart) + ' ミリ秒');
-
-	//◆データの不具合チェック
-	let isError = 0;
-	if(isError > 0){
-		alert('' + isError + '件のエラーが見つかりました。コンソールを確認してください。');
-	}
-}
---></script>
-
+	<footer>
+		<nav>
+			<a id="BackToMain" href="index.html">トップページに戻る。</a>
+		</nav>
+	</footer>
+</main>
 </body>
 </html>

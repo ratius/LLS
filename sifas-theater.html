@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta charset="utf-8">
+
+<meta name="description" content="スクスタで配信されていた「毎日劇場」のまとめです。">
+
+<meta property="og:url" content="https://ratius.github.io/LLS/sifas_theater.html">
+<meta property="og:title" content="スクスタ 毎日劇場 アーカイブ | ラブライブ！ストレージ">
+<meta property="og:type" content="website">
+<meta property="og:description" content="スクスタで配信されていた「毎日劇場」のまとめです。">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@ratius55">
+<meta name="twitter:creator" content="@ratius55">
+<meta name="twitter:title" content="スクスタ 毎日劇場 アーカイブ | ラブライブ！ストレージ">
+<meta name="twitter:description" content="スクスタで配信されていた「毎日劇場」のまとめです。">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e50080">
+
+<title>スクスタ 毎日劇場 データベース | ラブライブ！ストレージ</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+<link rel="stylesheet" href="main_gen2.css">
+<style><!--
+p{
+	margin: 15px 10px;
+}
+#PullDown-Container {
+	max-width: 100%;
+	overflow-x: hidden;
+	font-size: x-large;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#PullDownMenu {
+	border: solid 2px #b9a;
+	font-size: x-large;
+	font-weight: bold;
+	padding: 5px;
+	margin-right: 10px;
+}
+
+#StoryContainer {
+	height: calc(100vh - 150px);
+}
+
+.story {
+	width: 100%;
+	display: grid;
+	flex-wrap: wrap;
+}
+
+.story-date, .story-title, .story-memo, .story-tags {
+	padding: 4px 10px;
+}
+
+.story-date{ /*日付入力欄*/
+	display: flex;
+	align-items: center;
+	font-size: 95%;
+	font-weight: bold;
+	background-color: #eee;
+	color: #666;
+}
+.story-titleContainer { /*タイトルとメモ*/
+	display: flex;
+	background-color: #fde;
+	border-bottom: solid 1px #d0c0c8;
+}
+.story-title { /*タイトル欄*/
+	width: 40%;
+	color: #403038;
+	font-weight: bold;
+}
+.has_text {
+	background-color: #fac;
+	clip-path: polygon(0% 0%, calc(100% - 10px) 0%, 100% 50%, calc(100% - 10px) 100%, 0% 100%);
+	cursor: pointer;
+}
+.story-memo { /*メモ欄*/
+	width: 60%;
+	font-size: small;
+	color: #666;
+	background-color: #fde;
+}
+
+/* モーダルウィンドウ*/
+#Modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+#Modal-Container {
+	position: relative;
+	height: calc(100% - 100px);
+	background-color: #fde;
+}
+
+#Modal-TitleBox{
+	height: 50px;
+	margin: 15px 40px;
+	background-color: #a47;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	overflow-x: hidden;
+}
+
+#Modal-Title{
+	color: white;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+#Modal-ReaderBox {
+	height: calc(100% - 100px);
+	overflow-y: scroll;
+	overscroll-behavior-y: contain;
+	background: white;
+	border: 2px solid #999;
+}
+
+#Modal-Text {
+	padding: 10px;
+}
+#Modal-Text p {
+		margin: 5px 5px 5px 30px;
+}
+#Modal-Text hr {
+	height: 0px; 
+	border-top: 2px dotted #ccc;
+}
+
+#Modal-CloseButton {
+	width: 50px;
+	height: 50px;
+	background: #ddd;
+	border: solid 2px #423;
+	font-size: 200%;
+	text-align: center;
+	line-height: 50px;
+	user-select: none;
+}
+
+/* ■スマートフォン向けレイアウト */
+@media screen and (max-width: 599px) {
+	#StoryContainer article:not(:last-child) {
+		border-bottom: solid 3px #999;
+	}
+	.story-date:before {
+		content: "▼";
+	}
+	.story-date {
+		width: 100%;
+		border-bottom: solid 1px #c0b0b8;
+	}
+	.story-tags {
+		width: 100%;
+	}
+	#Modal-Container {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		height: 100%;
+	}
+	#Modal-TitleBox {
+		width: calc(100% - 130px); 
+	}
+	#Modal-CloseButton {
+		width: 50px;
+	}
+	#Modal-ReaderBox {
+		margin: 0 10px auto 10px;
+	}
+}
+
+/* ■PC向けレイアウト */
+@media screen and (min-width: 600px) {
+	#StoryContainer article {
+		grid-template-columns: 120px auto;
+		border-right: solid 1px #999;
+		border-bottom: solid 1px #999;
+	}
+	.story-date {
+		justify-content: center;
+		width: 120px;
+		grid-row: span 2;
+		border-right: solid 1px #999;
+	}
+	#Modal-Container {
+		width: calc(100% - 80px);
+		max-width: 1000px;
+		max-height: 80%;
+		border: solid 2px #423;
+		border-radius: 20px;
+	}
+	#Modal-CloseButton {
+		position: absolute;
+		top: -25px;
+		right: -25px;
+		border-radius: 50%;
+	}
+	#Modal-Title{
+		font-size: 180%;
+	}
+	#Modal-ReaderBox {
+		margin: 0 30px auto 30px;
+	}
+}
+
+.fadeout{
+	animation: fadeout-anim 0.2s forwards;
+}
+
+@keyframes fadeout-anim {
+	0% {opacity: 1;}
+	100% { opacity: 0;}
+}
+--></style>
+<script src="data/loader.js" data-src="data/sifas-theater.js,data/sifas-theater.json,data/common-library.js"></script>
+</head>
+<body class="left">
+<main>
+	<header>
+		<h1 id="TitleName">スクスタ 毎日劇場 データベース</h1>
+	</header>
+	<nav class="right-menu">
+		<ul>
+			<li><strong>目次</strong></li>
+			<li><hr></li>
+			<li><a href="#Summary">概要</a></li>
+			<li><a href="#StoryViewer">毎日劇場一覧</a></li>
+			<li><a href="#History">更新履歴</a></li>
+		</ul>
+	</nav>
+
+	<section id="Summary">
+		<h2>概要</h2>
+		<p>
+			スクフェスALL STARSで配信されていた「毎日劇場」のまとめです。<br>
+			下部のプルダウンメニューから見たいカテゴリを選択すると、該当するストーリータイトル・登場キャラクター等が表示されます。<br>
+		</p>
+	</section>
+
+	<section id="StoryViewer">
+		<h2>毎日劇場一覧</h2>
+		<p>
+			下部のプルダウンメニューから見たいカテゴリを選択すると、該当するストーリータイトル・登場キャラクター等が表示されます。<br>
+			タイトル部分が濃くなっているものは、タイトル部分をクリックするとテキストが表示されます。
+		</p>
+		<div id="PullDown-Container">
+			<label for="PullDownMenu">絞り込み</label>
+			<select id="PullDownMenu" onChange="DrawStoryList(this.value)">
+				<option value="undefined">(選択してください)</option>
+			</select>
+		</div>
+		<div id="StoryContainer" class="output-box output-box-default">
+			このページでは、情報を表示するためにJavaScriptを使用します。<br>
+			いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
+			お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
+		</div>
+	</section>
+
+	<div id="Modal" style="display: none" onclick="CloseModal(null)">
+		<div id="Modal-Container">
+			<div id="Modal-TitleBox">
+				<span id="Modal-Title">タイトル</span>
+			</div>
+			<div id="Modal-CloseButton" onclick="CloseModal()">&#10006;</div>
+			<div id="Modal-ReaderBox">
+				<div id="Modal-Text">本文</div>
+			</div>
+		</div>
+	</div>
+
+	<section id="History">
+		<h2 class="niji">更新履歴</h2>
+		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
+		<div class="history-container">
+			<details open>
+				<summary class="important"><span class="date">2024/01/13</span> - リニューアル</summary>
+				<div>
+					<span class="icon-new"></span>CSSをアップデート<br>
+					<span class="icon-fix"></span>データ読み込み周りの仕様を変更
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2023/06/30</span> - 全データの掲載完了</summary>
+				<div>
+					<span class="icon-new"></span>全データの掲載完了
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2023/03/18</span> - 目次を追加</summary>
+				<div>
+					<span class="icon-new"></span>目次を追加
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2022/06/15</span> - 更新履歴リニューアル</summary>
+				<div>
+					<span class="icon-fix"></span>更新履歴をリニューアル（他ページ同様、折りたたみ式に変更）
+				</div>
+			</details>
+			<details>
+				<summary class="important"><span class="date">2022/06/15</span> - テスト公開</summary>
+				<div>
+					<span class="icon-new"></span>テスト公開
+				</div>
+			</details>
+		</div>
+	</section>
+
+	<footer>
+		<nav>
+			<a id="BackToMain" href="index.html">トップページに戻る。</a>
+		</nav>
+	</footer>
+</main>
+</body>
+</html>
