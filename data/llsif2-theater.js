@@ -1,54 +1,54 @@
 //■タグデータ
 const TagData = {
-	"Honoka":  {"name": "穂乃果",  "r":243, "g":133, "b":  0, "style": "round"},
-	"Eli":     {"name": "絵里",    "r": 46, "g":191, "b":212, "style": "round"},
-	"Kotori":  {"name": "ことり",  "r":166, "g":154, "b":154, "style": "round"},
-	"Umi":     {"name": "海未",    "r":  9, "g": 77, "b":202, "style": "round"},
-	"Rin":     {"name": "凛",      "r":219, "g":212, "b": 30, "style": "round"},
-	"Maki":    {"name": "真姫",    "r":205, "g": 34, "b": 16, "style": "round"},
-	"Nozomi":  {"name": "希",      "r":160, "g": 43, "b":212, "style": "round"},
-	"Hanayo":  {"name": "花陽",    "r": 59, "g":203, "b": 69, "style": "round"},
-	"Nico":    {"name": "にこ",    "r":211, "g": 27, "b": 96, "style": "round"},
+	"Honoka":   {"name": "穂乃果",      "r":243, "g":133, "b":  0, "style": "round"},
+	"Eli":      {"name": "絵里",        "r": 46, "g":191, "b":212, "style": "round"},
+	"Kotori":   {"name": "ことり",      "r":166, "g":154, "b":154, "style": "round"},
+	"Umi":      {"name": "海未",        "r":  9, "g": 77, "b":202, "style": "round"},
+	"Rin":      {"name": "凛",          "r":219, "g":212, "b": 30, "style": "round"},
+	"Maki":     {"name": "真姫",        "r":205, "g": 34, "b": 16, "style": "round"},
+	"Nozomi":   {"name": "希",          "r":160, "g": 43, "b":212, "style": "round"},
+	"Hanayo":   {"name": "花陽",        "r": 59, "g":203, "b": 69, "style": "round"},
+	"Nico":     {"name": "にこ",        "r":211, "g": 27, "b": 96, "style": "round"},
 
-	"Chika":   {"name": "千歌",    "r":236, "g":116, "b": 28, "style": "round"},
-	"Riko":    {"name": "梨子",    "r":233, "g":114, "b":132, "style": "round"},
-	"Kanan":   {"name": "果南",    "r": 13, "g":148, "b":139, "style": "round"},
-	"Dia":     {"name": "ダイヤ",  "r":170, "g":  0, "b": 40, "style": "round"},
-	"You":     {"name": "曜",      "r": 56, "g":153, "b":220, "style": "round"},
-	"Yoshiko": {"name": "善子",    "r":151, "g":160, "b":172, "style": "round"},
-	"Hanamaru":{"name": "花丸",    "r":226, "g":181, "b":  0, "style": "round"},
-	"Mari":    {"name": "鞠莉",    "r":148, "g": 35, "b":152, "style": "round"},
-	"Ruby":    {"name": "ルビィ",  "r":234, "g": 75, "b":162, "style": "round"},
+	"Chika":    {"name": "千歌",        "r":236, "g":116, "b": 28, "style": "round"},
+	"Riko":     {"name": "梨子",        "r":233, "g":114, "b":132, "style": "round"},
+	"Kanan":    {"name": "果南",        "r": 13, "g":148, "b":139, "style": "round"},
+	"Dia":      {"name": "ダイヤ",      "r":170, "g":  0, "b": 40, "style": "round"},
+	"You":      {"name": "曜",          "r": 56, "g":153, "b":220, "style": "round"},
+	"Yoshiko":  {"name": "善子",        "r":151, "g":160, "b":172, "style": "round"},
+	"Hanamaru": {"name": "花丸",        "r":226, "g":181, "b":  0, "style": "round"},
+	"Mari":     {"name": "鞠莉",        "r":148, "g": 35, "b":152, "style": "round"},
+	"Ruby":     {"name": "ルビィ",      "r":234, "g": 75, "b":162, "style": "round"},
 
-	"Ayumu":   {"name": "歩夢",    "r":246, "g":150, "b":201, "style": "round"},
-	"Kasumi":  {"name": "かすみ",  "r":213, "g":222, "b":112, "style": "round"},
-	"Shizuku": {"name": "しずく",  "r":138, "g":204, "b":228, "style": "round"},
-	"Karin":   {"name": "果林",    "r": 42, "g": 20, "b":180, "style": "round"},
-	"Ai":      {"name": "愛",      "r":232, "g": 89, "b": 21, "style": "round"},
-	"Kanata":  {"name": "彼方",    "r":156, "g": 94, "b":223, "style": "round"},
-	"Setsuna": {"name": "せつ菜",  "r":179, "g":  6, "b":  6, "style": "round"},
-	"Emma":    {"name": "エマ",    "r":143, "g":218, "b":121, "style": "round"},
-	"Rina":    {"name": "璃奈",    "r":158, "g":154, "b":192, "style": "round"},
-	"Shioriko":{"name": "栞子",    "r": 18, "g":158, "b":112, "style": "round"},
-	"Mia":     {"name": "ミア",    "r":169, "g":168, "b":152, "style": "round"},
-	"Lanzhu":  {"name": "嵐珠",    "r":246, "g":153, "b":146, "style": "round"},
-	"Yu":      {"name": "侑",      "r":195, "g":195, "b":195, "style": "round"},
+	"Ayumu":    {"name": "歩夢",        "r":246, "g":150, "b":201, "style": "round"},
+	"Kasumi":   {"name": "かすみ",      "r":213, "g":222, "b":112, "style": "round"},
+	"Shizuku":  {"name": "しずく",      "r":138, "g":204, "b":228, "style": "round"},
+	"Karin":    {"name": "果林",        "r": 42, "g": 20, "b":180, "style": "round"},
+	"Ai":       {"name": "愛",          "r":232, "g": 89, "b": 21, "style": "round"},
+	"Kanata":   {"name": "彼方",        "r":156, "g": 94, "b":223, "style": "round"},
+	"Setsuna":  {"name": "せつ菜",      "r":179, "g":  6, "b":  6, "style": "round"},
+	"Emma":     {"name": "エマ",        "r":143, "g":218, "b":121, "style": "round"},
+	"Rina":     {"name": "璃奈",        "r":158, "g":154, "b":192, "style": "round"},
+	"Shioriko": {"name": "栞子",        "r": 18, "g":158, "b":112, "style": "round"},
+	"Mia":      {"name": "ミア",        "r":169, "g":168, "b":152, "style": "round"},
+	"Lanzhu":   {"name": "嵐珠",        "r":246, "g":153, "b":146, "style": "round"},
+	"Yu":       {"name": "侑",          "r":195, "g":195, "b":195, "style": "round"},
 
-	"Kanon":   {"name": "かのん"  ,"r":242, "g": 99, "b":  0, "style": "round"},
-	"Keke":    {"name": "可可"    ,"r": 58, "g":255, "b":243, "style": "round"},
-	"Chisato": {"name": "千砂都"  ,"r":255, "g": 58, "b":107, "style": "round"},
-	"Sumire":  {"name": "すみれ"  ,"r": 38, "g":228, "b": 17, "style": "round"},
-	"Ren":     {"name": "恋"      ,"r":  0, "g":  0, "b":109, "style": "round"},
-	"Kinako":  {"name": "きな子"  ,"r":219, "g":206, "b":  0, "style": "round"},
-	"Mei":     {"name": "メイ"    ,"r":207, "g":  0, "b":  0, "style": "round"},
-	"Shiki":   {"name": "四季"    ,"r": 76, "g":255, "b":176, "style": "round"},
-	"Natsumi": {"name": "夏美"    ,"r":234, "g":  0, "b":155, "style": "round"},
-	"Wien":    {"name": "ウィーン","r":228, "g":157, "b":253, "style": "round"},
-	"Tomari":  {"name": "冬毬"    ,"r": 76, "g":210, "b":226, "style": "round"},
+	"Kanon":    {"name": "かのん",      "r":242, "g": 99, "b":  0, "style": "round"},
+	"Keke":     {"name": "可可",        "r": 58, "g":255, "b":243, "style": "round"},
+	"Chisato":  {"name": "千砂都",      "r":255, "g": 58, "b":107, "style": "round"},
+	"Sumire":   {"name": "すみれ",      "r": 38, "g":228, "b": 17, "style": "round"},
+	"Ren":      {"name": "恋",          "r":  0, "g":  0, "b":109, "style": "round"},
+	"Kinako":   {"name": "きな子",      "r":219, "g":206, "b":  0, "style": "round"},
+	"Mei":      {"name": "メイ",        "r":207, "g":  0, "b":  0, "style": "round"},
+	"Shiki":    {"name": "四季",        "r": 76, "g":255, "b":176, "style": "round"},
+	"Natsumi":  {"name": "夏美",        "r":234, "g":  0, "b":155, "style": "round"},
+	"Margarete":{"name": "マルガレーテ","r":228, "g":157, "b":253, "style": "round"},
+	"Tomari":   {"name": "冬毬",        "r": 76, "g":210, "b":226, "style": "round"},
 	
-	"Season":     {"name": "季節の行事", "r":100, "g":140, "b":160, "style": "square"},
-	"Birthday":   {"name": "誕生日",     "r":100, "g":140, "b":160, "style": "square"},
-	"Live":       {"name": "ライブ",     "r":100, "g":140, "b":160, "style": "square"}
+	"Season":   {"name": "季節の行事", "r":100, "g":140, "b":160, "style": "square"},
+	"Birthday": {"name": "誕生日",     "r":100, "g":140, "b":160, "style": "square"},
+	"Live":     {"name": "ライブ",     "r":100, "g":140, "b":160, "style": "square"}
 };
 
 //■ソート対象
@@ -228,19 +228,39 @@ function initialize() {
 	if(isDebugMode) {
 		//データの不具合チェック
 		let idTemp = "";
-		const isError = window['JSON-llsif2-theater'].reduce( (acc, val) => {
-			if(idTemp === val.id) { 
-				console.error(`エラー：ID重複 (${val.date}「${val.title}」)`);
+		let dateTemp = "";
+		const isError = window['JSON-llsif2-theater'].reduce( (acc, story) => {
+			const currentStory = `(${story.date}「${story.title}」)`;
+			
+			if(!("tags" in story)){
+				console.error('エラー：tagsが存在しない' + currentStory);
+				return acc + 1;
+			}
+			const tagError = story.tags.reduce( (acc, tag) => {
+				if(!(tag in TagData)) {
+					console.error('エラー：不正なタグ名(' + tag + ')' + currentStory);
+					return acc + 1;
+				}
+			}, 0);
+			if(tagError){ return acc + tagError; }
+			
+			if(idTemp === story.id) { 
+				console.error('エラー：ID重複 (' + story.id + ')' + currentStory);
 				acc++;
 			}
-			idTemp = val.id;
-			if(!('text' in val)){ return acc;}
-			if(val['text'] === ''){ return acc;}
-			const TextTemp = val.text.split('\n');
-			return acc + TextTemp.reduce( (acc2, val2, index2) => {
-				const ErrorLocation = ` (${val.date}「${val.title}」${(index2+1)}行目)`;
+			idTemp = story.id;
+			if(dateTemp === story.date) { 
+				console.error('エラー：日付重複 ' + currentStory);
+				acc++;
+			}
+			dateTemp = story.date;
+			if(!('text' in story)){ return acc;}
+			if(story['text'] === ''){ return acc;}
+			const TextTemp = story.text.split('\n');
+			return acc + TextTemp.reduce( (acc2, txt, index2) => {
+				const ErrorLocation = ` (${story.date}「${story.title}」${(index2+1)}行目)`;
 				
-				const TextTemp2 = val2.split('\t');
+				const TextTemp2 = txt.split('\t');
 				if(TextTemp2.length !== 2){
 					console.error('エラー：パラメータ数が異常' + ErrorLocation);
 					return ++acc2;
@@ -251,7 +271,7 @@ function initialize() {
 				} else if(TextTemp2[0] === ''){
 					console.error('エラー：登場人物が未設定' + ErrorLocation);
 					return ++acc2;
-				} else if(TextTemp2[0] > val.tags.length){
+				} else if(TextTemp2[0] > story.tags.length){
 					console.error('エラー：登場人物のデータ範囲エラー' + ErrorLocation);
 					return ++acc2;
 				}
@@ -261,6 +281,7 @@ function initialize() {
 		if(isError){
 			alert('' + isError + '件のエラーが見つかりました。コンソールを確認してください。');
 		}
+
 		//描画時間の出力
 		const TimeOutputEnd = performance.now();
 		console.log(`スクフェス2 毎日劇場アーカイブ\n初期化処理： ${TimeOutputEnd - TimeLoadingStart}ミリ秒`);
