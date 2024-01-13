@@ -101,7 +101,18 @@ h2 {
 	color: white;
 	text-align: left;
 	padding-left: 8px;
-	user-select: none;
+}
+
+.content-gen1:after {
+	content: "";
+	position: absolute;
+	right: 4px;
+	top: -21px;
+	width: 10px;
+	height: 10px;
+	background-color: red;
+	border: solid 2px white;
+	border-radius: 50%;
 }
 
 .menu-content h3 {
@@ -117,14 +128,8 @@ h2 {
 	border-color: inherit;
 }
 
-.menu-content a {
-	position: absolute;
-	top: -27px;
-	left: -2px;
-	width: calc(100% + 4px);
-	height: calc(100% + 29px);
-	text-indent: 0;
-	z-index: 2;
+.no-underline {
+	text-decoration: none;
 }
 
 
@@ -188,132 +193,150 @@ h2 {
 
 <nav id="Menu">
 	<h2>CONTENTS</h2>
+	<p>
+		ボックスの右上に赤い円が表示されている場合、リンク先のページがスマートフォンでの閲覧に最適化されていない可能性があります。
+	</p>
 	<div class="menu-container">
 		<!-- ■■■■ 総合 ■■■■ -->
-		<div class="menu-content col-Series">
-			<div class="menu-content-label">ラブライブ！シリーズ総合</div>
-			<h3>メンバーカラー<wbr>まとめ</h3>
-			<hr>
-			<div class="menu-content-desc">スクールアイドル達のメンバーカラーを、色々な媒体から集めてみました。</div>
-			<a href="color.html"></a>
-		</div>
-		
-		<div class="menu-content col-Series">
-			<div class="menu-content-label">ラブライブ！シリーズ総合</div>
-			<h3>キャラソート</h3>
-			<hr>
-			<div class="menu-content-desc">スクールアイドル、ユニット、キャスト等を好きな順に並べ替えてみよう。</div>
-			<a href="sort.html"></a>
-		</div>
-		
-		<div class="menu-content col-Series">
-			<div class="menu-content-label">ラブライブ！シリーズ総合</div>
-			<h3>誕生日カレンダー</h3>
-			<hr>
-			<div class="menu-content-desc">スクールアイドルやキャストの誕生日を確認できます。スクフェスの転入生にも対応。</div>
-			<a href="calendar.html"></a>
-		</div>
-		
-		<div class="menu-content col-Niji">
-			<div class="menu-content-label">虹ヶ咲学園スクールアイドル同好会</div>
-			<h3>虹ヶ咲学園 <wbr>マンスリーランキング</h3>
-			<hr>
-			<div class="menu-content-desc">毎月行われていたランキングの結果を、集計・分析してみました。</div>
-			<a href="niji-ranking.html"></a>
-		</div>
+		<a href="color.html" title="メンバーカラーまとめ" class="no-underline">
+			<div class="menu-content col-Series content-gen1">
+				<div class="menu-content-label">ラブライブ！シリーズ総合</div>
+				<h3>メンバーカラー<wbr>まとめ</h3>
+				<hr>
+				<div class="menu-content-desc">スクールアイドル達のメンバーカラーを、色々な媒体から集めてみました。</div>
+			</div>
+		</a>
 
-		<div class="menu-content col-Niji">
-			<div class="menu-content-label">虹ヶ咲学園スクールアイドル同好会</div>
-			<h3>虹ヶ咲学園 <wbr>マンスリーアンケート</h3>
-			<hr>
-			<div class="menu-content-desc">毎月行われていたアンケートの集計や、便利リンクを掲載しています。</div>
-			<a href="niji-enquete.html"></a>
-		</div>
-		
+		<a href="sort.html" title="キャラソート" class="no-underline">
+			<div class="menu-content col-Series content-gen1">
+				<div class="menu-content-label">ラブライブ！シリーズ総合</div>
+				<h3>キャラソート</h3>
+				<hr>
+				<div class="menu-content-desc">スクールアイドル、ユニット、キャスト等を好きな順に並べ替えてみよう。</div>
+			</div>
+		</a>
+
+		<a href="calendar.html" title="誕生日カレンダー" class="no-underline">
+			<div class="menu-content col-Series">
+				<div class="menu-content-label">ラブライブ！シリーズ総合</div>
+				<h3>誕生日カレンダー</h3>
+				<hr>
+				<div class="menu-content-desc">スクールアイドルやキャストの誕生日を確認できます。スクフェスの転入生にも対応。</div>
+			</div>
+		</a>
+
+		<a href="niji-ranking.html" title="虹ヶ咲学園 マンスリーランキング" class="no-underline">
+			<div class="menu-content col-Niji">
+				<div class="menu-content-label">虹ヶ咲学園スクールアイドル同好会</div>
+				<h3>虹ヶ咲学園 <wbr>マンスリーランキング</h3>
+				<hr>
+				<div class="menu-content-desc">毎月行われていたランキングの結果を、集計・分析してみました。</div>
+			</div>
+		</a>
+
+		<a href="niji-enquete.html" title="虹ヶ咲学園 マンスリーアンケート" class="no-underline">
+			<div class="menu-content col-Niji">
+				<div class="menu-content-label">虹ヶ咲学園スクールアイドル同好会</div>
+				<h3>虹ヶ咲学園 <wbr>マンスリーアンケート</h3>
+				<hr>
+				<div class="menu-content-desc">毎月行われていたアンケートの集計や、便利リンクを掲載しています。</div>
+			</div>
+		</a>
+
 		<!-- ■■■■ リンクラ ■■■■ -->
-		<div class="menu-content col-LinkLike">
-			<div class="menu-content-label">Link！Like！ラブライブ！</div>
-			<h3>スクールアイドル<wbr>コネクト<wbr>まとめ</h3>
-			<hr>
-			<div class="menu-content-desc">アプリ内で配信されたWith×MEETS、Fes×LIVEのまとめです。</div>
-			<a href="hasu-connect.html" title="スクールアイドルコネクトまとめ"></a>
-		</div>
-		
+		<a href="hasu-connect.html" title="スクールアイドルコネクトまとめ" class="no-underline">
+			<div class="menu-content col-LinkLike">
+				<div class="menu-content-label">Link！Like！ラブライブ！</div>
+				<h3>スクールアイドル<wbr>コネクト<wbr>まとめ</h3>
+				<hr>
+				<div class="menu-content-desc">アプリ内で配信されたWith×MEETS、Fes×LIVEのまとめです。</div>
+			</div>
+		</a>
+
 		<!-- ■■■■ スクフェス2 ■■■■ -->
-		<div class="menu-content col-llsif2">
-			<div class="menu-content-label">スクフェス2 MIRACLE LIVE!</div>
-			<h3>スクフェス2 <wbr>毎日劇場アーカイブ</h3>
-			<hr>
-			<div class="menu-content-desc">スクフェス2の毎日劇場の一覧です。本文も収録。</div>
-			<a href="llsif2-theater.html" title="スクフェス2 毎日劇場アーカイブ"></a>
-		</div>
-	
+		<a href="llsif2-theater.html" title="スクフェス2 毎日劇場アーカイブ" class="no-underline">
+			<div class="menu-content col-llsif2">
+				<div class="menu-content-label">スクフェス2 MIRACLE LIVE!</div>
+				<h3>スクフェス2 <wbr>毎日劇場アーカイブ</h3>
+				<hr>
+				<div class="menu-content-desc">スクフェス2の毎日劇場の一覧です。本文も収録。</div>
+			</div>
+		</a>
+
 		<!-- ■■■■ スクフェス1 ■■■■ -->
-		<div class="menu-content col-llsif1">
-			<div class="menu-content-label">スクフェス1</div>
-			<h3>ライブ♪アリーナ <wbr>まとめ</h3>
-			<hr>
-			<div class="menu-content-desc">今までに開催された、ライブ♪アリーナのテキストを保管しています。</div>
-			<a href="llsif_arena.html" title="ライブ♪アリーナ まとめ"></a>
-		</div>
-		
-		<div class="menu-content col-llsif1">
-			<div class="menu-content-label">スクフェス1</div>
-			<h3>スクフェス <wbr>転入生データベース</h3>
-			<hr>
-			<div class="menu-content-desc">今はもう見られない、転入生の情報やサイドストーリーを補完しています。</div>
-			<a href="llsif-n.html" title="スクフェス 転入生データベース"></a>
-		</div>
+		<a href="llsif_arena.html" title="ライブ♪アリーナ まとめ" class="no-underline">
+			<div class="menu-content col-llsif1 content-gen1">
+				<div class="menu-content-label">スクフェス1</div>
+				<h3>ライブ♪アリーナ <wbr>まとめ</h3>
+				<hr>
+				<div class="menu-content-desc">今までに開催された、ライブ♪アリーナのテキストを保管しています。</div>
+			</div>
+		</a>
+
+		<a href="llsif-n.html" title="スクフェス 転入生データベース" class="no-underline">
+			<div class="menu-content col-llsif1">
+				<div class="menu-content-label">スクフェス1</div>
+				<h3>スクフェス <wbr>転入生データベース</h3>
+				<hr>
+				<div class="menu-content-desc">今はもう見られない、転入生の情報やサイドストーリーを補完しています。</div>
+			</div>
+		</a>
 	
 		<!-- ■■■■ スクスタ ■■■■ -->
-		<div class="menu-content col-sifas">
-			<div class="menu-content-label">スクフェスALL STARS</div>
-			<h3>スクスタ <wbr>呼称表</h3>
-			<hr>
-			<div class="menu-content-desc">３０人のスクールアイドルとあなたは、お互いのことをどう呼び合っでいる？</div>
-			<a href="call.html" title="スクスタ 呼称表"></a>
-		</div>
+		<a href="call.html" title="スクスタ 呼称表" class="no-underline">
+			<div class="menu-content col-sifas content-gen1">
+				<div class="menu-content-label">スクフェスALL STARS</div>
+				<h3>スクスタ <wbr>呼称表</h3>
+				<hr>
+				<div class="menu-content-desc">３０人のスクールアイドルとあなたは、お互いのことをどう呼び合っでいる？</div>
+			</div>
+		</a>
 
-		<div class="menu-content col-sifas">
-			<div class="menu-content-label">スクフェスALL STARS</div>
-			<h3>スクスタ <wbr>実装カード一覧</h3>
-			<hr>
-			<div class="menu-content-desc">スクスタに実装されたカードがどれくらいあったかを確認できます。</div>
-			<a href="sifas_card.html" title="スクスタ 実装カード一覧"></a>
-		</div>
+		<a href="sifas_card.html" title="スクスタ 実装カード一覧" class="no-underline">
+			<div class="menu-content col-sifas content-gen1">
+				<div class="menu-content-label">スクフェスALL STARS</div>
+				<h3>スクスタ <wbr>実装カード一覧</h3>
+				<hr>
+				<div class="menu-content-desc">スクスタに実装されたカードがどれくらいあったかを確認できます。</div>
+			</div>
+		</a>
 
-		<div class="menu-content col-sifas">
-			<div class="menu-content-label">スクフェスALL STARS</div>
-			<h3>スクスタ <wbr>過去のイベント</h3>
-			<hr>
-			<div class="menu-content-desc">スクスタのイベントストーリーで開催されたイベント、および共演したペアのまとめです。</div>
-			<a href="sifas_event.html" title="スクスタ 過去のイベント"></a>
-		</div>
-		
-		<div class="menu-content col-sifas">
-			<div class="menu-content-label">スクフェスALL STARS</div>
-			<h3>スクスタ <wbr>ストーリー便覧</h3>
-			<hr>
-			<div class="menu-content-desc">スクスタの各種ストーリーのあらすじと登場キャラを、ひとまとめにしてみました。</div>
-			<a href="sifas_story.html" title="スクスタ ストーリー便覧"></a>
-		</div>
+		<a href="sifas_event.html" title="スクスタ 過去のイベント" class="no-underline">
+			<div class="menu-content col-sifas content-gen1">
+				<div class="menu-content-label">スクフェスALL STARS</div>
+				<h3>スクスタ <wbr>過去のイベント</h3>
+				<hr>
+				<div class="menu-content-desc">スクスタのイベントストーリーで開催されたイベント、および共演したペアのまとめです。</div>
+			</div>
+		</a>
 
-		<div class="menu-content col-sifas">
-			<div class="menu-content-label">スクフェスALL STARS</div>
-			<h3>毎日劇場<wbr>データベース</h3>
-			<hr>
-			<div class="menu-content-desc">スクスタの毎日劇場の一覧です。グループを超えた掛け合いをお楽しみあれ！</div>
-			<a href="sifas-theater.html" title="毎日劇場データベース"></a>
-		</div>
-		
+		<a href="sifas_story.html" title="スクスタ ストーリー便覧" class="no-underline">
+			<div class="menu-content col-sifas content-gen1">
+				<div class="menu-content-label">スクフェスALL STARS</div>
+				<h3>スクスタ <wbr>ストーリー便覧</h3>
+				<hr>
+				<div class="menu-content-desc">スクスタの各種ストーリーのあらすじと登場キャラを、ひとまとめにしてみました。</div>
+			</div>
+		</a>
+
+		<a href="sifas-theater.html" title="毎日劇場データベース" class="no-underline">
+			<div class="menu-content col-sifas">
+				<div class="menu-content-label">スクフェスALL STARS</div>
+				<h3>毎日劇場<wbr>データベース</h3>
+				<hr>
+				<div class="menu-content-desc">スクスタの毎日劇場の一覧です。グループを超えた掛け合いをお楽しみあれ！</div>
+			</div>
+		</a>
+
 		<!-- ■■■■ その他 ■■■■ -->
-		<div class="menu-content col-system">
+		<a href="link.html" title="リンク集" class="no-underline">
+			<div class="menu-content col-system">
 			<div class="menu-content-label">その他</div>
-			<h3>リンク集</h3>
-			<hr>
-			<div class="menu-content-desc">公式・非公式問わず、ラブライブ！関連の有用なWebサイトを集めました。</div>
-			<a href="link.html" title="リンク集"></a>
-		</div>
+				<h3>リンク集</h3>
+				<hr>
+				<div class="menu-content-desc">公式・非公式問わず、ラブライブ！関連の有用なWebサイトを集めました。</div>
+			</div>
+		</a>
 	</div>
 </nav>
 
