@@ -96,7 +96,7 @@ const SortTarget = [
 {"name": "出演：米女 メイ",              "condition": "tag,Mei"},
 {"name": "出演：若菜 四季",              "condition": "tag,Shiki"},
 {"name": "出演：鬼塚 夏美",              "condition": "tag,Natsumi"},
-{"name": "出演：ウィーン・マルガレーテ", "condition": "tag,Wien"},
+{"name": "出演：ウィーン・マルガレーテ", "condition": "tag,Margarete"},
 {"name": "出演：鬼塚 冬毬",              "condition": "tag,Tomari"},
 {"name": "----"},
 {"name": "テーマ：季節の行事", "condition": "tag,Season"},
