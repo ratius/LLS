@@ -181,8 +181,6 @@ function MakeModal(id){
 	while ((match = pattern.exec(result.text)) !== null) {
 		noteList.push(match[2]);
 	}
-	console.log(noteList);
-	
 	//テキスト
 	let noteNumber = 1;
 	const TextLog = result.text.replace(pattern, function(match, s1, s2){
