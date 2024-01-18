@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta charset="utf-8">
+
+<meta name="description" content="スクスタのイベントストーリーで開催されたイベント、および共演したペアのまとめです。">
+
+<meta property="og:url" content="https://ratius.github.io/LLS/sifas_event.html">
+<meta property="og:title" content="スクスタ 過去のイベントまとめ">
+<meta property="og:type" content="website">
+<meta property="og:description" content="スクスタのイベントストーリーで開催されたイベント、および共演したペアのまとめです。">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@ratius55">
+<meta name="twitter:creator" content="@ratius55">
+<meta name="twitter:title" content="スクスタ 過去のイベントまとめ">
+<meta name="twitter:description" content="スクスタのイベントストーリーで開催されたイベント、および共演したペアのまとめです。">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e50080">
+
+<title>スクスタ 過去のイベントまとめ | ラブライブ！ストレージ</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+<link rel="stylesheet" href="main_gen2.css">
+<style><!--
+/*■共通 */
+.shadowname {
+	color: white;
+	filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.7));
+}
+
+.button-event {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	width: 22px;
+	height: 22px;
+	line-height: 22px;
+	border: 1px solid #666;
+	border-radius: 50%;
+	margin: 1px;
+	font-size: small;
+	font-weight: bold;
+}
+
+.wrapper-header {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	background-color: #cde;
+	border-bottom: solid 1px #79a;
+	z-index: 1;
+}
+
+.wrapper-header div {
+	border-right: solid 1px #79a;
+	font-weight: bold;
+	text-align: center;
+	padding: 4px 0;
+}
+
+.grid-cell {
+	border-right: solid 1px #ccc;
+	padding: 4px 10px;
+}
+
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/*■イベント一覧 */
+.eventlist-header, .eventlist-wrapper {
+	display: grid;
+}
+
+.eventlist-number {
+	font-weight: bold;
+	background-color: #eee;
+	color: #666;
+}
+
+.eventlist-date {
+	color: #369;
+	font-size: small;
+}
+
+.eventlist-color-story {
+	background-color: #cef;
+	font-size: small;
+}
+
+.eventlist-color-exchange {
+	background-color: #fdc;
+	font-size: small;
+}
+
+.eventlist-group-M { background-color: #ffdbef; }
+.eventlist-group-A { background-color: #dbf4ff; }
+.eventlist-group-N { background-color: #ffefd6; }
+
+/*■共演ペア一覧表 */
+#PairTable {
+	width: 3240px;
+	text-align: center;
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+.pairtable-TL { /*左上*/
+	background-color: #cde;
+	z-index: 2;
+}
+
+.pairtable-TL, .pairtable-TR { /*上*/
+	position: sticky;
+	top: 0;
+	border-bottom: 2px solid #79a;
+}
+.pairtable-TL, .pairtable-BL { /*左*/
+	position: sticky;
+	left: 0;
+	border-right: 2px solid #79a;
+}
+.pairtable-BL, .pairtable-BR { /*下*/
+	border-bottom: 1px solid #aaa;
+}
+.pairtable-TR, .pairtable-BR { /*右*/
+	width: 105px;
+	border-right: 1px solid #aaa;
+	padding: 5px 0;
+}
+
+.pairtable-has{
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAQCAMAAAAcVM5PAAAAMFBMVEWEhISHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7vAwMC/AbLaAAAALElEQVR42jXBtwHAIADAMNNLAvz/LYuROGKLJX7xiSmG6KKJKorIIokogngubj8DwatbdggAAAAASUVORK5CYII=);
+	background-size:contain;
+	background-blend-mode: screen;
+}
+
+.pairtable-same {
+	background-color:#aaa;
+}
+
+/* ■スマートフォン向けレイアウト */
+@media screen and (max-width: 599px) {
+	.eventlist-wrapper {
+		grid-template-columns: 40px auto;
+	}
+	.eventlist-wrapper:not(:last-child),
+	.singlelist-wrapper:not(:last-child),
+	.triolist-wrapper:not(:last-child){
+		border-bottom: solid 3px #999;
+	}
+	.eventlist-number {
+		grid-row: span 3;
+	}
+	.eventlist-name {
+		border-bottom: solid 1px #ccc;
+	}
+	.eventlist-sp-type {
+		display: inline-block;
+		padding: 0 4px;
+	}
+	.singlelist-header, .singlelist-wrapper {
+		display: grid;
+		grid-template-columns: 120px 1fr;
+	}
+	.singlelist-count {
+		grid-column: span 2;
+		border-top: solid 1px #ccc;
+	}	
+	.triolist-header-wrapper, .triolist-wrapper {
+		display: grid;
+		grid-template-columns: 90px 50px 1fr;
+		grid-auto-flow: column;
+	}
+	.triolist-rows {
+		grid-row: span 3;
+	}
+}
+
+/* ■PC向けレイアウト */
+@media screen and (min-width: 600px) {
+	.eventlist-header, .eventlist-wrapper {
+		grid-template-columns: 40px 2fr 90px 1fr 1fr;
+	}
+	.eventlist-wrapper:not(:last-child),
+	.singlelist-wrapper:not(:last-child),
+	.triolist-wrapper:not(:last-child) {
+		border-bottom: solid 1px #ccc;
+	}
+	.eventlist-cards{
+		display: flex;
+		align-items: center;
+	}
+	.singlelist-header, .singlelist-wrapper {
+		display: grid;
+		grid-template-columns: 110px 80px 1fr;
+	}
+	.triolist-header-wrapper {
+		display: grid;
+		grid-template-columns: 270px 50px 1fr;
+	}
+	.triolist-wrapper {
+		display: grid;
+		grid-template-columns: 90px 90px 90px 50px 1fr;
+	}
+}
+--></style>
+<script src="data/loader.js" data-src="data/sifas-events.js,data/sifas-events.json,data/common-library.js"></script>
+</head>
+<body class="left">
+<main>
+	<header>
+		<h1 id="TitleName">スクスタ 過去のイベントまとめ</h1>
+	</header>
+	<div class="right-menu">
+		<ul>
+			<li><strong>目次</strong></li>
+			<li><hr></li>
+			<li><a href="#Summary">概要</a></li>
+			<li><a href="#EventList">イベント一覧</a></li>
+			<li><a href="#Single">キャラクター登場回数</a></li>
+			<li><a href="#Pair">共演ペア一覧表</a></li>
+			<li><a href="#Trio">頻出重複トリオ</a></li>
+			<li><a href="#history">更新履歴</a></li>
+		</ul>
+	</div>
+
+	<section id="Summary">
+		<h2>概要</h2>
+		<p>
+			スクフェスALL STARSのイベントストーリーのまとめ、及び登場キャラクターの状況です。<br>
+			PCで閲覧している場合、イベント番号の書かれた丸にカーソルを当てることで詳しい情報のツールチップが出現します。
+		</p>
+	</section>
+
+	<section id="EventList">
+		<h2>イベント一覧</h2>
+		<div id="EventListContainer" class="output-box output-box-default">
+			このページでは、情報を表示するためにJavaScriptを使用します。<br>
+			いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
+			お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
+		</div>
+	</section>
+
+	<section id="Single">
+		<h2>キャラクター登場回数</h2>
+		<div id="SingleData" class="output-box"></div>
+	</section>
+
+	<section id="Pair">
+		<h2>共演ペア一覧表</h2>
+		<div id="PairTable-border" class="output-box"></div>
+	</section>
+
+	<section id="Trio">
+		<h2>頻出重複トリオ</h2>
+		<div id="TrioTable" class="output-box"></div>
+	</section>
+
+	<section id="History">
+		<h2>更新履歴</h2>
+		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
+		<div class="history-container">
+			<details open>
+				<summary class="important"><span class="date">2024/01/18</span> - リニューアル</summary>
+				<div>
+					<span class="icon-new"></span>CSSをアップデート<br>
+					<span class="icon-fix"></span>データ読み込み周りの仕様を変更
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2023/02/16</span> - レイアウト調整</summary>
+				<div>
+					<span class="fix"></span>「ペア共演状況」のレイアウト調整<br>
+					<span class="fix"></span>「頻出重複トリオ」の閾値を調整<br>
+					<span class="fix"></span>スマートフォンでの閲覧時のレイアウト不具合を修正
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2022/11/05</span> - レイアウト調整</summary>
+				<div>
+					<span class="fix"></span>「キャラクター登場回数」をリニューアル<br>
+					<span class="fix"></span>レンダリングの最適化
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2022/06/25</span> - レイアウト調整</summary>
+				<div>
+					<span class="fix"></span>「イベント一覧」「頻出重複トリオ」のヘッダーが固定されるように変更<br>
+					<span class="fix"></span>更新履歴をリニューアル（他ページ同様、折りたたみ式に変更）<br>
+					<span class="fix"></span>その他、各種レイアウトを調整
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2022/04/17</span> - レイアウト調整</summary>
+				<div>
+					<span class="fix"></span>「イベント一覧」「頻出重複トリオ」のレイアウトを調整（高解像度の画面での閲覧を想定）
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2022/03/04</span> - 「イベント一覧」調整</summary>
+				<div>
+					<span class="fix"></span>「参加キャラクター」に、所属校に応じた背景色を付与
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2021/11/06</span> - レイアウト調整</summary>
+				<div>
+					<span class="fix"></span>「キャラクター登場回数」の表のレイアウトを調整
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2021/10/09</span> - ミア＆ランジュのプレイアブル化に伴う調整</summary>
+				<div>
+					<span class="new"></span>ミア、ランジュが表示可能になりました！
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2021/06/02</span> - 栞子のイベント参戦に伴う調整</summary>
+				<div>
+					<span class="new"></span>栞子が表示可能になりました！<br>
+					<span class="fix"></span>「ペア共演状況」のレイアウト調整
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2020/09/03</span> - 「頻出重複トリオ」実装</summary>
+				<div>
+					<span class="new"></span>「頻出重複トリオ」を実装
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2020/08/02</span> - イベント毎の参加キャラクター表示</summary>
+				<div>
+					<span class="new"></span>「イベント一覧」のテーブルに「参加キャラクター」を追加
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2020/07/31</span> - 「キャラクター登場回数」実装</summary>
+				<div>
+					<span class="new"></span>「キャラクター登場回数」を実装
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2020/07/07</span> - 不具合修正</summary>
+				<div>
+					<span class="fix"></span>一部環境において、日付が正しく表示されない不具合を修正
+				</div>
+			</details>
+			<details>
+				<summary class="important"><span class="date">2020/07/05</span> - 公開</summary>
+				<div>
+					<span class="new"></span>公開
+				</div>
+			</details>
+		</div>
+	</section>
+
+	<footer>
+		<nav>
+			<a id="BackToMain" href="index.html">トップページに戻る。</a>
+		</nav>
+	</footer>
+</main>
+</body>
+</html>
