@@ -133,11 +133,23 @@ p{
 	padding: 10px;
 }
 #Modal-Text p {
-		margin: 5px 5px 5px 30px;
+	margin: 5px 5px 5px 30px;
 }
 #Modal-Text hr {
 	height: 0px; 
 	border: 1px solid #bbb;
+}
+.note {
+	background-color: #e8d8e0;
+	border: 1px solid #cbd;
+	color: #936;
+	font-size: small;
+	padding: 4px;
+}
+.underline {
+	text-decoration: underline solid #96c;
+	text-underline-offset: 10%;
+	padding-right: 3px;
 }
 
 #Modal-CloseButton {
@@ -287,6 +299,12 @@ p{
 		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 		<div class="history-container">
 			<details open>
+				<summary><span class="date">2024/01/18</span></summary>
+				<div>
+					<span class="icon-new"></span>注釈の表示機能を追加
+				</div>
+			</details>
+			<details>
 				<summary><span class="date">2024/01/10</span></summary>
 				<div>
 					<span class="icon-fix"></span>データ読み込み周りの仕様を変更
