@@ -32,7 +32,7 @@ async function loadFiles() {
 			await loadJSON(file);
 		}
 	}
-	setDebugMode();
+	if(isDebugMode){setDebugMode();}
 	initialize();
 }
 loadFiles();
