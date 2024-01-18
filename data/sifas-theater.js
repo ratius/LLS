@@ -36,11 +36,12 @@ const TagData = {
 	"Event":        {"name": "イベント",                   "r":100, "g":140, "b":160, "style": "square"},
 
 	"Yohane":       {"name": "堕天使ヨハネ",               "r":180, "g":160, "b": 80, "style": "square"},
+	"Pocchari":     {"name": "ぽっちゃり大作戦",           "r":180, "g":160, "b": 80, "style": "square"},
 	"Dokkiri":      {"name": "穂乃果と愛のドッキリ",       "r":180, "g":160, "b": 80, "style": "square"},
-	"Triathlon":    {"name": "地獄のトライアスロン",       "r":180, "g":160, "b": 80, "style": "square"},
-	"Broadcast":    {"name": "スクールアイドル達の生配信", "r":180, "g":160, "b": 80, "style": "square"},
-	"Meshimazu":    {"name": "せつ菜の料理",               "r":180, "g":160, "b": 80, "style": "square"},
 	"Washi":        {"name": "わしわしの秘密",             "r":180, "g":160, "b": 80, "style": "square"},
+	"Triathlon":    {"name": "地獄のトライアスロン",       "r":180, "g":160, "b": 80, "style": "square"},
+	"Meshimazu":    {"name": "せつ菜の料理",               "r":180, "g":160, "b": 80, "style": "square"},
+	"Broadcast":    {"name": "スクールアイドル達の生配信", "r":180, "g":160, "b": 80, "style": "square"},
 	"Monodomo":     {"name": "者どもの森",                 "r":180, "g":160, "b": 80, "style": "square"},
 	"Calorie":      {"name": "絵里のカロリー事情",         "r":180, "g":160, "b": 80, "style": "square"},
 	"Helicopter":   {"name": "小原家のヘリコプター",       "r":180, "g":160, "b": 80, "style": "square"},
@@ -56,7 +57,7 @@ const TagData = {
 	"Maid":         {"name": "ことりのメイドカフェ",       "r":180, "g":160, "b": 80, "style": "square"},
 	"Skateboarding":{"name": "GWはみんなでスケボー",       "r":180, "g":160, "b": 80, "style": "square"},
 };
-const SpecialCharacterName = ["？？？", "〜間〜"];
+const SpecialCharacterName = ["？？？", "〜間〜", "（SE）"];
 
 const SortTarget = [
 	{"name": "2020年 2月〜3月", "condition": "date,2020/02/01,2020/03/31"},
@@ -110,9 +111,11 @@ const SortTarget = [
 	{"name": "テーマ：リアルイベント", "condition": "tag,Event"},
 	{"name": "----"},
 	{"name": "シリーズ：堕天使ヨハネ", "condition": "tag,Yohane"},
+	{"name": "シリーズ：ぽっちゃり大作戦", "condition": "tag,Pocchari"},
 	{"name": "シリーズ：穂乃果と愛のドッキリ", "condition": "tag,Dokkiri"},
 	{"name": "シリーズ：わしわしの秘密", "condition": "tag,Washi"},
 	{"name": "シリーズ：地獄のトライアスロン", "condition": "tag,Triathlon"},
+	{"name": "シリーズ：せつ菜の料理", "condition": "tag,Meshimazu"},
 	{"name": "シリーズ：スクールアイドル達の生配信", "condition": "tag,Broadcast"},
 	{"name": "シリーズ：者どもの森", "condition": "tag,Monodomo"},
 	{"name": "シリーズ：絵里のカロリー事情", "condition": "tag,Calorie"},
@@ -120,7 +123,6 @@ const SortTarget = [
 	{"name": "シリーズ：プールのステージ", "condition": "tag,Pool"},
 	{"name": "シリーズ：空の上のステージ", "condition": "tag,Airborne"},
 	{"name": "シリーズ：にっこにっこにー", "condition": "tag,25252"},
-	{"name": "シリーズ：せつ菜の料理", "condition": "tag,Meshimazu"},
 	{"name": "シリーズ：スクールアイドルDVDマラソン", "condition": "tag,Marathon"},
 	{"name": "シリーズ：セレクトショップ", "condition": "tag,SelectShop"},
 	{"name": "シリーズ：にこにこシュークリーム", "condition": "tag,ChouCream"},
@@ -196,14 +198,34 @@ function MakeModal(id){
 	//タイトル
 	document.getElementById("Modal-Title").innerHTML = result.title;
 	
+	//{{note:1:2}}の部分を注釈にする
+	let noteList = [];
+	const pattern = new RegExp(/\{\{note:(.*?):(.*?)\}\}/g);
+	while ((match = pattern.exec(result.text)) !== null) {
+		noteList.push(match[2]);
+	}
 	//テキスト
-	const TextLog = result.text.split('\n');
-	document.getElementById("Modal-Text").innerHTML = TextLog.map( text => {
+	let noteNumber = 1;
+	const TextLog = result.text.replace(pattern, function(match, s1, s2){
+		return `<span class="underline">${s1}<sup style="color:purple">*${noteNumber}</sup></span>{{notenum:${noteNumber++}}}`
+	}).split('\n');
+	document.getElementById("Modal-Text").innerHTML = TextLog.map( (text, index) => {
 		text = text.split('\t');
 		const CharacterName = (SpecialCharacterName.find(name => name === text[0]) ?
 		text[0] : DrawCharName(result.tags[text[0]]) );
 		
-		return CharacterName + (text.length > 1 ? `<p>${text[1]}</p>` : '') + '<hr>';
+		let currentNote = [];
+		if(text.length >= 2){
+			text[1] = text[1].replace(/\{\{notenum:(\d+)\}\}/g, function(match, noteIndex){
+				if(match) { currentNote.push(`<span>*${noteIndex}： ${noteList[parseInt(noteIndex, 10)-1]}</span>`);}
+				return ``;
+			});
+		}
+		
+		return CharacterName
+		+ (text.length >=2 ? `<p>${text[1]}</p>` : '')
+		+ (currentNote.length ? `<p class="note">${currentNote.join('<br>')}</p>` : '')
+		+ (index === TextLog.length-1 ? '' : '<hr>');
 	}).join("");
 	
 	//ポップアップを表示
