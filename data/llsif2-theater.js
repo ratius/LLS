@@ -106,6 +106,10 @@ const SortTarget = [
 //{"name": "シリーズ：堕天使ヨハネ", "condition": "tag,Yohane"},
 ];
 
+//■サブルーチン
+//■注釈
+
+
 //■■メイン出力
 //■条件に合致するストーリーを抜き出してリストアップ
 function DrawStoryList(conditions){
@@ -171,11 +175,31 @@ function MakeModal(id){
 	//タイトル
 	document.getElementById("Modal-Title").innerHTML = result.title;
 	
+	//{{note:1:2}}の部分を注釈にする
+	let noteList = [];
+	const pattern = new RegExp(/\{\{note:(.*?):(.*?)\}\}/g);
+	while ((match = pattern.exec(result.text)) !== null) {
+		noteList.push(match[2]);
+	}
+	console.log(noteList);
+	
 	//テキスト
-	const TextLog = result.text.split('\n');
-	document.getElementById("Modal-Text").innerHTML = TextLog.map( text => {
+	let noteNumber = 1;
+	const TextLog = result.text.replace(pattern, function(match, s1, s2){
+		return `<span class="underline">${s1}<sup style="color:purple">*${noteNumber}</sup></span>{{notenum:${noteNumber++}}}`
+	}).split('\n');
+	document.getElementById("Modal-Text").innerHTML = TextLog.map( (text, index) => {
 		text = text.split('\t');
-		return DrawCharName(result.tags[text[0]]) + `<p>${text[1]}</p><hr>`;
+		
+		let currentNote = [];
+		text[1] = text[1].replace(/\{\{notenum:(\d+)\}\}/g, function(match, noteIndex){
+			if(match) { currentNote.push(`<span>*${noteIndex}： ${noteList[parseInt(noteIndex, 10)-1]}</span>`);}
+			return ``;
+		});
+		
+		return DrawCharName(result.tags[text[0]]) + `<p>${text[1]}</p>`
+		+ (currentNote.length ? `<p class="note">${currentNote.join('<br>')}</p>` : '')
+		+ (index === TextLog.length-1 ? '' : '<hr>');
 	}).join("");
 	
 	//ポップアップを表示
