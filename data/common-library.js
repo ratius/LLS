@@ -30,3 +30,15 @@ const formatDate = date => {
 	const day = String(date.getDate()).padStart(2, '0');
 	return `${year}/${month}/${day}`;
 }
+
+//■スクフェス転入生の顔アイコンの作成
+const NFaceIconSize = 64;
+const NFaceImageGridColumn = 10; 
+const NFaceImageGridRow = 7;
+const WriteFaceN = (x, y) => {
+	return `<div class="icon-n-face" style="background-position: right -${
+		NFaceIconSize * (NFaceImageGridColumn - x - 1)
+	}px bottom -${
+		NFaceIconSize * (NFaceImageGridRow - y - 1)
+	}px"></div>`;
+}

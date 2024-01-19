@@ -1,15 +1,4 @@
-//■デバッグモード
-const isDebugMode = (location.search.substring(1).split('&').indexOf('debug') >= 0);
-if(isDebugMode) {
-	//デバッグモードであることを表示
-	document.title = '[debug]' + document.title;
-	document.bgColor = '#dce';
-	document.getElementById("TitleName").innerHTML += "*";
-	document.getElementById("TitleName").classList.add("title-debug");
-	document.getElementById("BackToMain").href += "?debug";
-}
-
-//■タグデータ
+//■学校のデータ
 const SchoolData = [
 	{'name' : '青藍高校'   , 'color' : '#abe'},
 	{'name' : '東雲学園'   , 'color' : '#fa9'},
@@ -22,7 +11,7 @@ const SchoolData = [
 //■■サブルーチン
 //■転入生の顔アイコンを出力
 function DrawFace(name){
-	const target = NData.find(q => q.name === name);
+	const target = window['JSON-llsif-n'].find(q => q.name === name);
 	if(target === undefined){
 		return `<div class="face_empty"></div>`;
 	} else {
@@ -39,7 +28,7 @@ function DrawButtons(name) {
 		return false;
 	}
 
-	const target = NData.find( q => q.name === name);
+	const target = window['JSON-llsif-n'].find( q => q.name === name);
 	let Output = `<span class="jump" onclick="DrawProfile('${target.name}')">Profile</span>`
 	+ target.card.reduce( (text, card, index) => {
 		return text + `<span class="jump" onclick="DrawCardData('${target.name}',${index})">${(index+1)}</span>`
@@ -52,13 +41,13 @@ function DrawButtons(name) {
 
 //■プロフィールの描画
 function DrawProfile(name){
-	const target = NData.find( q => q.name === name);
+	const target = window['JSON-llsif-n'].find( q => q.name === name);
 	if(target === undefined){ return false;}
-	
+
 	const Profile = `
 	<h3>${target.name} プロフィール</h3>
 	<div class="profile-container">
-		${DrawFace(name)}
+		${WriteFaceN(target.x, target.y)}
 		<table class="profile-table">
 			<tbody>
 				<tr>
@@ -105,26 +94,26 @@ function DrawProfile(name){
 
 //■カード個別データの作成
 function DrawCardData(name, num){
-	const targetChar = NData.find( q => q.name === name);
+	const targetChar = window['JSON-llsif-n'].find( q => q.name === name);
 	if(targetChar === undefined){ return false;}
 	const targetCard = targetChar.card[num];
 	
-	let Output = `<h3>${targetChar.name} ${(num+1)}枚目 (部員No.${targetCard.num})</h3>`
+	const Header = `<h3>${targetChar.name} ${(num+1)}枚目 (部員No.${targetCard.num})</h3>`
 	+ ('memo' in targetCard ? '<p style="font-size: 90%">' + targetCard.memo + '<\/p>' : '')
 	
-	if('text' in targetCard){
-		Output += '<h4>パートナー時テキスト<\/h4>';
-		for(temp3 of targetCard.text){
-			Output += '<div class="text_partner">' + temp3 + '<\/div>';
-		}
-	}
+	const PartnerText = ('text' in targetCard ?
+		`<h4>パートナー時テキスト</h4>`
+		+ targetCard.text.map( t => `<div class="text_partner">${t}</div>`).join('')
+	:
+		''
+	);
 	
-	const SideStoryText = 
-	('side' in targetCard ? 
+	
+	const SideStoryText = ('side' in targetCard ? 
 		`<h4>サイドストーリー「${targetCard.sidetitle}」</h4>`
 		+ targetCard.side.map( text => {
-			const nameTemp = ('n' in text ? text.n : ('namealt' in targetChar ? targetChar.namealt : targetChar.name));
-			const faceTemp = DrawFace('f' in text ? text.f : targetChar.name);
+			const nameTemp = ('namealt' in text ? text.namealt : ('namealt' in targetChar ? targetChar.namealt : targetChar.name));
+			const faceTemp = ('noface' in text ? '' : WriteFaceN(targetChar.x, targetChar.y));
 			return `
 			<div class="text-story">
 				${faceTemp}
@@ -136,36 +125,16 @@ function DrawCardData(name, num){
 		}).join('')
  	: '' );
  	
-	const FootNote = 
-	('foot' in targetCard ?
-		`<p style="font-size: 90%">${targetCard.foot}</p>`
-	: '');
+	const FootNote = ('foot' in targetCard ? `<p style="font-size: 90%">${targetCard.foot}</p>` : '');
 
-	document.getElementById("NViewer").innerHTML = Output + SideStoryText + FootNote;
+	document.getElementById("NViewer").innerHTML = Header + PartnerText + SideStoryText + FootNote;
 	document.getElementById("NViewer").scrollTop = 0;
 }
 
-
-//■■初期処理
-//■JSONデータベースの読み込み
-const TimeOutputStart = performance.now();
-
-const JSONPath = 'data/llsif-n.json';
-let NData = null;
-fetch(JSONPath)
-	.then(response => response.json())
-	.then(data => {
-		NData = data;
-		initialize();
-	}
-);
-
-const TimeOutputLoaded = performance.now();
-
-//■初期化処理
+//■■初期化処理
 function initialize() {
 	//セレクトボックスに要素を追加
-	NData.forEach( temp => {
+	window['JSON-llsif-n'].forEach( temp => {
 		const option = document.createElement("option");
 		option.text = temp.name;
 		option.style.cssText = 'background-color: ' + SchoolData[temp.y].color;
@@ -182,6 +151,6 @@ function initialize() {
 	if(isDebugMode) {
 		//描画時間の出力
 		const TimeOutputEnd = performance.now();
-		console.log(`スクフェス 転入生データベース\n読み込み： ${TimeOutputLoaded - TimeOutputStart}ミリ秒\n初期化: ${TimeOutputEnd - TimeOutputLoaded}ミリ秒`);
+		console.log(`スクフェス 転入生データベース\n初期化処理： ${TimeOutputEnd - TimeLoadingStart}ミリ秒`);
 	}
 }
