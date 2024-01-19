@@ -256,9 +256,16 @@ a.exlink:after {
 	height: 20px;
 	margin-left: 6px;
 }
+/* 転入生アイコン */
+.icon-n-face{
+	width: 64px;
+	height: 64px;
+	background-image: url(img/students.png);
+	background-repeat: no-repeat;
+}
+
 
 /* 色指定 */
-
 .color-muse {
 	border-color: #e50080;
 	background-color: #ffcce9;
