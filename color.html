@@ -3,6 +3,8 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
 <meta charset="utf-8">
 
+<meta name="description" content="「ラブライブ！」シリーズにおいて、各所で使われているメンバーカラーのまとめです。">
+
 <meta property="og:url" content="https://ratius.github.io/LLS/color.html">
 <meta property="og:title" content="ラブライブ！シリーズ メンバーカラーまとめ">
 <meta property="og:type" content="website">
@@ -14,383 +16,251 @@
 <meta name="twitter:title" content="ラブライブ！シリーズ メンバーカラーまとめ">
 <meta name="twitter:description" content="「ラブライブ！」シリーズにおいて、各所で使われているメンバーカラーのまとめです。">
 <meta name="twitter:image" content="https://ratius.github.io/LLS/img/card_color.png">
-<meta name="description" content="「ラブライブ！」シリーズにおいて、各所で使われているメンバーカラーのまとめです。">
 
-<meta name="viewport" content="width=800">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e50080">
 
 <title>ラブライブ！シリーズ メンバーカラーまとめ | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
-<link rel="stylesheet" href="main.css">
-<link rel="stylesheet" href="color.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="main_gen2.css">
 <style><!--
+.darkbg {
+	background-color: #c0c8d0;
+}
 
-table.call {
+.table-color-list {
 	text-align: center;
-	font-size: 75%;
-	border-style: solid;
-	border-width: 3px;
-	border-collapse: collapse;
-	margin-bottom: 40px;
+	border-style: none;
+	border-collapse: separate;
+	border-spacing: 0;
+}
+.table-color-list-TL, .table-color-list-TR {
+	position: sticky;
+	top: 0;
+	background-color: #cde;
+	border-bottom: solid 2px #79c;
+}
+.table-color-list-TL, .table-color-list-BL {
+	position: sticky;
+	left: 0;
+	border-right: solid 2px #79c;
+}
+.table-color-list-TL {
+	z-index: 2;
+}
+.table-color-list-TR {
+	border-right: solid 1px #79c;
 }
 
-table.call tr:nth-child(even) { background-color: #ddd;}
-table.call tr:nth-child(odd) { background-color: #fff;}
-
-.call td {
-	padding: 4px 2px;
-	border-top: solid 2px white;
-	border-left: solid 2px white;
+.table-color-list-BL {
+	background-color: inherit;
+	height: 50px;
 }
-
-.rgbCode {
+.table-color-list th {
 	font-size: 90%;
+	padding: 5px;
 }
+
+.table-color-list td {
+	border: 1px solid white;
+	font-size: small;
+	padding: 7px 0;
+	line-height: 150%;
+	height: 50px;
+}
+
+
+.table-color-list-main tr:nth-child(even) { background-color: #e0e0e0;}
+.table-color-list-main tr:nth-child(odd) { background-color: #f0f0f0;}
+
+.none { color: #666;}
 
 --></style>
-<script><!--
-//■デバッグモード判定
-let isDebugMode = false;
-const Parameter = location.search.substring(1).split('&');
-if(Parameter.indexOf('debug') >= 0){ isDebugMode = true; }
-
-
-//■ 連想配列のr・g・bから、カラーコードを返す関数
-function GetColorCode (RGB){
-	var temp = '00000' + (Math.floor(RGB.r)*65536 + Math.floor(RGB.g)*256 + Math.floor(RGB.b)).toString(16).toUpperCase();
-	return '#' + temp.substr(temp.length - 6);
-}
-
-//■ 連想配列のr・g・bから、対応する文字色を返す関数
-//   参考：https://katashin.info/2018/12/18/247
-function chooseTextColor(RGB) {
-	// sRGB を RGB に変換し、背景色の相対輝度を求める
-	const toRgbItem = item => {
-		const i = item / 255
-		return i <= 0.03928 ? i / 12.92:  Math.pow((i + 0.055) / 1.055, 2.4)
-	}
-	const R = toRgbItem(RGB.r)
-	const G = toRgbItem(RGB.g)
-	const B = toRgbItem(RGB.b)
-	const Lbg = 0.2126 * R + 0.7152 * G + 0.0722 * B
-	
-	// 白と黒の相対輝度。定義からそれぞれ 1 と 0 になる。
-	const Lw = 1
-	const Lb = 0
-	
-	// 白と背景色のコントラスト比、黒と背景色のコントラスト比を
-	// それぞれ求める。
-	const Cw = (Lw + 0.05) / (Lbg + 0.05)
-	const Cb = (Lbg + 0.05) / (Lb + 0.05)
-	
-	// コントラスト比が大きい方を文字色として返す。
-	return Cw < Cb ? 'black':  'white'
-}
-//■ クリップボードにコピー。わざわざ書くのが長ったらしいのでCpy(this)で済ませる
-function Cpy(temp1) {
-	if(event.ctrlKey){ navigator.clipboard.writeText(temp1.innerHTML);}
-	return false;
-}
-
-
-//■ テーブルを描画
-function CreateColorListTable(Idol, col, tablecol){
-	Output = '\n<table class="call" style="border: solid 3px ' + tablecol + '">\n'
-	+ '<thead>\n<tr>\n\t<th style="width: 110px; background-color:' + tablecol + '">→キャラクター<br>↓媒体<\/th>\n';
-	//■ヘッダーのキャラ名
-	for(x of Idol){
-		const temp = CharData.filter(q => q.id === x)[0];
-		Output += '\t<th class="' + temp.id + '" style="width:' + (92/Idol.length) + '%">'
-		+ temp.name + '<\/th>\n';
-	}
-	Output += '<\/tr>\n<\/thead>\n';
-
-	//◆メイン
-	Output += '<tbody>\n'
-	for (y of col){
-		Output += '<tr>\n\t<th>' + (LabelName[y] ? LabelName[y]:  '未定義の色') + '<\/th>\n';
-	
-		for (x of Idol) {
-			const temp = CharData.filter(q => q.id === x)[0];
-		
-			if(y in temp){
-				const temp2 = GetColorCode(temp[y]);
-				Output += '\t<td style="color:' + chooseTextColor(temp[y]) + '; background:' + temp2 + '">\n'
-				+ '\t\t<span class="rgbCode" onclick="Cpy(this);">('
-				+ Math.floor(temp[y].r) + ', ' + Math.floor(temp[y].g) + ', ' + Math.floor(temp[y].b) + ')<\/span><br>\n'
-				+ '\t\t<span onclick="Cpy(this);">' + temp2 + '<\/span>\n\t<\/td>\n';
-			} else {
-				Output += '\t<td><\/td>\n';
-			}
-		}
-		Output += '<\/tr>\n';
-	}
-	Output += '<\/tbody>\n<\/table>\n';
-	
-	return Output;
-}
---></script>
-
+<script src="data/loader.js" data-src="data/color.js,data/color.json,data/common-library.js"></script>
 </head>
-<body class="RM">
-<header>
-	<h2 id="MainTitle">ラブライブ！シリーズ メンバーカラーまとめ</h2>
-</header>
+<body class="left">
+<main>
+	<header>
+		<h1 id="TitleName">ラブライブ！シリーズ メンバーカラーまとめ</h1>
+		<nav class="right-menu">
+			<ul>
+				<li><strong>目次</strong></li>
+				<li><hr></li>
+				<li><a href="#Foreword">まえがき</a></li>
+				<li><a href="#ColorList">カラー一覧</a></li>
+				<li><ul>
+					<li><a href="#Color_Muse">μ's</a></li>
+					<li><a href="#Color_Aqours">Aqours</a></li>
+					<li><a href="#Color_Niji">虹ヶ咲</a></li>
+					<li><a href="#Color_Liella">Liella!</a></li>
+					<li><a href="#Color_Hasu">蓮ノ空</a></li>
+					<li><a href="#Color_Musical">ミュージカル</a></li>
+					<li><a href="#Color_Yohane">幻日のヨハネ</a></li>
+				</ul></li>
+			<li><a href="#References">出典一覧</a></li>
+			<li><a href="#History">更新履歴</a></li>
+			</ul>
+		</nav>
+	</header>
 
-<section id="Foreword">
-	<h3 class="foreword">まえがき</h3>
-	<p>
-		「ラブライブ！」シリーズにおいて、各所で使われているメンバーカラーのまとめです。<br>
-		PCで閲覧している場合、Ctrlキーを押しながらRGB値やおよびカラーコードの部分をクリックすると、それをクリップボードにコピーできます。<br>
-		このページではRGBでの抽出が可能なデジタルカラーのみを扱っています。
-	</p>
-</section>
-
-<div id="Loading">
-	<h4>Now Loading...</h4>
-	このコンテンツはJavaScriptを使用しています。<br>
-	いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
-	お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
-</div>
-
-<div id="RightMenu">
-	<ul>
-		<li><strong>目次</strong></li>
-		<li><hr></li>
-		<li><a href="#Foreword">まえがき</a></li>
-		<li><a href="#ColorList">カラー一覧</a></li>
-		<li><ul>
-			<li><a href="#Color_Muse">μ's</a></li>
-			<li><a href="#Color_Aqours">Aqours</a></li>
-			<li><a href="#Color_Niji">虹ヶ咲</a></li>
-			<li><a href="#Color_Liella">Liella!</a></li>
-			<li><a href="#Color_Hasu">蓮ノ空</a></li>
-			<li><a href="#Color_Musical">ミュージカル</a></li>
-		</ul></li>
-	<li><a href="#History">更新履歴</a></li>
-	</ul>
-</div>
-
-<section id="ColorList">
-	<h3 class="foreword">カラー一覧</h3>
-
-	<section id="Color_Muse">
-		  <h4 class="box_muse">μ’sのメンバーカラー</h4>
+	<section id="Summary">
+		<h2>概要</h2>
+		<p>
+			「ラブライブ！」シリーズにおいて、各所で使われているメンバーカラーのまとめです。<br>
+			PCで閲覧している場合、Ctrlキーを押しながらRGB値やカラーコードの部分をクリックすると、それをクリップボードにコピーできます。<br>
+			このページではRGBでの抽出が可能なデジタルカラーのみを扱っています。
+		</p>
 	</section>
 
-	<section id="Color_Aqours">
-		  <h4 class="box_aqours">Aqoursのメンバーカラー</h4>
-	</section>
+	<section id="ColorList">
+		<h2 class="foreword">メンバーカラー一覧</h2>
+		<p>
+			各表は上下左右にスクロールできます。
+		</p>
+		<section id="Color_Muse">
+			<h3>μ’s</h3>
+			<div class="output-box darkbg" id="TableMuse" style="max-height: 700px"></div>
+		</section>
 
-	<section id="Color_Niji">
-		  <h4 class="box_niji">虹ヶ咲学園スクールアイドル同好会のメンバーカラー</h4>
-	</section>
+		<section id="Color_Aqours">
+			<h3>Aqours</h3>
+			<div class="output-box darkbg" id="TableAqours"></div>
+		</section>
 
-	<section id="Color_Liella">
-		  <h4 class="box_liella">Liella!のメンバーカラー</h4>
-	</section>
+		<section id="Color_Niji">
+			<h3>虹ヶ咲学園スクールアイドル同好会</h3>
+			<div class="output-box darkbg" id="TableNiji"></div>
+		</section>
 
-	<section id="Color_Hasu">
-		  <h4 class="box_hasu">蓮ノ空女学院スクールアイドルクラブのメンバーカラー</h4>
-	</section>
+		<section id="Color_Liella">
+			<h3>Liella!</h3>
+			<div class="output-box darkbg" id="TableLiella"></div>
+		</section>
 
-	<section id="Color_Musical">
-		  <h4 class="box_musical">スクールアイドルミュージカルのメンバーカラー</h4>
-	</section>
-</section>
+		<section id="Color_Hasu">
+			<h3>蓮ノ空女学院スクールアイドルクラブ</h3>
+			<div class="output-box darkbg" id="TableHasu" style="max-height: 280px"></div>
+		</section>
 
-<section id="History">
-<h3 class="niji">更新履歴 </h3>
-<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
-<div id="history2">
-	<details open>
-		<summary><span class="date">2024/01/21</span> - データの誤りを修正</summary>
-		<div>
-			<span class="fix"></span>一部キャラクターの「スクスタ(ゲーム内)」「スクスタ(公式Web)」の色データの誤りを修正
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/09/15</span> - カラー追加</summary>
-		<div>
-			<span class="new"></span>「公式サイト(総合)」の色を追加<br>
-			<span class="fix"></span>グループの並び順を変更<br>
-			<span class="fix"></span>Ctrlキーを押している時のみ、クリップボードへコピーできるように仕様変更
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/08/23</span> - カラー追加</summary>
-		<div>
-			<span class="new"></span>虹ヶ咲 6thライブの色を追加
-		</div>
-	</details>
-	<details>
-		<summary class="important"><span class="date">2023/04/28</span> - Liella!3期生参戦に伴う調整 他</summary>
-		<div>
-			<span class="new"></span>「ウィーン・マルガレーテ」「鬼塚冬毬」の列を追加<br>
-			<span class="new"></span>「謎解きフェスティバル」の色を追加
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2023/03/18</span> - 目次を追加</summary>
-		<div>
-			<span class="new"></span>目次を追加
-		</div>
-	</details>
-	<details>
-		<summary class="important"><span class="date">2023/02/10</span> - 蓮ノ空参戦 他</summary>
-		<div>
-			<span class="new"></span>「蓮ノ空女学院スクールアイドルクラブ」の表を追加<br>
-			<span class="new"></span>「スクフェス2」を追加<br>
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2022/12/03</span> - 誤り訂正</summary>
-		<div>
-			<span class="fix"></span>キャラクター名の誤りを訂正
-		</div>
-	</details>
-	<details>
-		<summary class="important"><span class="date">2022/11/20</span> - スクールアイドルミュージカル参戦</summary>
-		<div>
-			<span class="new"></span>「スクールアイドルミュージカル」の表を追加<br>
-			<span class="new"></span>幻日のヨハネ(公式webサイト)の色を追加
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2022/11/12</span> - カラー追加</summary>
-		<div>
-			<span class="new"></span>Liella! 3rdライブの色を追加
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2022/07/16</span> - カラー追加</summary>
-		<div>
-			<span class="new"></span>「スクフェス」のミア、ランジュ、Liella!2期生の色を追加
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2022/06/25</span> - 更新履歴リニューアル</summary>
-		<div>
-			<span class="fix"></span>更新履歴をリニューアル（他ページ同様、折りたたみ式に変更）
-		</div>
-	</details>
-	<details>
-		<summary class="important"><span class="date">2022/04/28</span> - 大型アップデート＆Liella!二期生参戦に伴う調整</summary>
-		<div>
-			<span class="new"></span>Liella!2期生の列を追加<br>
-			<span class="new"></span>クリップボードへのコピー機能を実装<br>
-			<span class="new"></span>「ライブロゴ」の色を多数追加
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2022/04/24</span> - ライブロゴの色の掲載</summary>
-		<div>
-			<span class="new"></span>「高咲侑」の列を追加<br>
-			<span class="new"></span>「ライブロゴ」の行を追加<br>
-			<span class="fix"></span>キャラクター名の誤りを修正
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2021/09/03</span> - Liella!及びランジュ・ミア参戦に伴う調整</summary>
-		<div>
-			<span class="new"></span>「ミア・テイラー」「鐘嵐珠」の列を追加<br>
-			<span class="new"></span>Liella!メンバーのテーブルを追加
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2020/08/03</span> - 栞子参戦に伴う調整</summary>
-		<div>
-			<span class="new"></span>「三船栞子」の列を追加
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2020/01/22</span> - カラー追加</summary>
-		<div>
-			<span class="new"></span>「ぷちぐる」「アケフェス」の色を掲載
-		</div>
-	</details>
-	<details>
-		<summary><span class="date">2020/01/06</span> - カラー追加</summary>
-		<div>
-			<span class="new"></span>「スクスタ公式Web」の色を掲載
-		</div>
-	</details>
-	<details>
-		<summary class="important"><span class="date">2019/12/17</span> - 公開</summary>
-		<div>
-			<span class="new"></span>公開
-		</div>
-	</details>
-</div>
-</section>
-
-<nav>
-<p><a id="BackToMain" href="index.html">トップページに戻る。</a></p>
-</nav>
-
-<script><!--
-function loadScript(src, callback) {
-    let done = false;
-    let head = document.getElementsByTagName('head')[0];
-    let script = document.createElement('script');
-    script.src = src;
-    head.appendChild(script);
-    // Attach handlers for all browsers
-    script.onload = script.onreadystatechange = function() {
-        if ( !done && (!this.readyState ||
-                this.readyState === "loaded" || this.readyState === "complete") ) {
-            done = true;
-            callback();
-            // Handle memory leak in IE
-            script.onload = script.onreadystatechange = null;
-            if ( head && script.parentNode ) {
-                head.removeChild( script );
-            }
-        }
-    };
-}
-
-loadScript("data/color.js", function() {
-	const TimeOutputStart = performance.now();
-	
-	document.getElementById("Color_Muse").innerHTML += '\n'
-	+ CreateColorListTable(['Honoka', 'Eli', 'Kotori', 'Umi', 'Rin', 'Maki', 'Nozomi', 'Hanayo', 'Nico'],
-	  ['official', 'sifas', 'sifas_s1', 'puchi', 'llsif', 'llsif_l', 'llsif2', 'sifac', 'nazotoki', 'logofinal'], '#e50080');
-
-	document.getElementById("Color_Aqours").innerHTML += '\n'
-	+ CreateColorListTable(['Chika', 'Riko', 'Kanan', 'Dia', 'You', 'Yoshiko', 'Hanamaru', 'Mari', 'Ruby'],
-	  ['official', 'official2', 'sifas', 'sifas_s1', 'puchi', 'llsif', 'llsif_l', 'llsif2', 'yohane', 'sifac', 'nazotoki', 'vote2nd', 'vote3rd', 'vote4th', 'duotrio', 'logomovie', 'logo1st', 'logo2nd', 'logo4th', 'logo5th', 'logo6th', 'logounit'], '#19b1f6');
-
-	document.getElementById("Color_Niji").innerHTML += '\n'
-	+ CreateColorListTable(['Ayumu', 'Kasumi', 'Shizuku', 'Karin', 'Ai', 'Kanata', 'Setsuna', 'Emma', 'Rina', 'Shioriko', 'Mia', 'Lanzhu', 'Yu'],
-	  ['official', 'official2', 'sifas', 'sifas_s1', 'llsif', 'llsif_l', 'llsif2', 'monthly', 'nijiyon', 'nazotoki', 'logo1st', 'logo3rd', 'logosf', 'logo4th', 'logo5th', 'logo6th','logounit'], '#f8b656');
-
-	document.getElementById("Color_Liella").innerHTML += '\n'
-	+ CreateColorListTable(['Kanon', 'Keke', 'Chisato', 'Sumire', 'Ren', 'Kinako', 'Mei', 'Shiki', 'Natsumi', 'Wien', 'Tomari'],
-	  ['official', 'official2', 'llsif', 'llsif_l', 'llsif2', 'nazotoki', 'logo1st', 'logo2nd_a', 'logo2nd_b', 'logo3rd'], '#da57d8');
-
-	document.getElementById("Color_Hasu").innerHTML += '\n'
-	+ CreateColorListTable(['Kaho', 'Sayaka', 'Kozue', 'Tsuzuri', 'Rurino', 'Megumi'],
-	  ['official', 'official2', 'logo1st'], '#76bde3');
-
-	document.getElementById("Color_Musical").innerHTML += '\n'
-	+ CreateColorListTable(['RurikaM', 'YuzuhaM', 'YukinoM', 'HikaruM', 'MaayaM', 'AnzuM', 'MisuzuM', 'ToaM', 'RenaM', 'SayakaM', 'MadokaM', 'KyokaM'],
-	  ['official', 'official2'], '#c40035');
-
-	document.getElementById("Loading").style.display = "none";
-
-	//■デバックモード時の処理
-	if(isDebugMode) {
-		//◆デバッグモードであることを表示
-		document.title = '[debug]' + document.title;
-		document.bgColor = '#dce';
+		<section id="Color_Musical">
+			<h3>スクールアイドルミュージカル</h3>
+			<div class="output-box darkbg" id="TableMusical" style="max-height: 180px"></div>
+		</section>
 		
-		document.getElementById("MainTitle").innerHTML += "*";
-		document.getElementById("BackToMain").href += "?debug";
+		<section id="Color_Yohane">
+			<h3>幻日のヨハネ</h3>
+			<div class="output-box darkbg" id="TableYohane" style="max-height: 180px"></div>
+		</section>
+	</section>
+
+	<section id="References">
+		<h2>出典一覧</h2>
+		<div class="output-box" id="ReferencesContainer"></div>
+	</section>
 		
-		//◆描画時間の出力
-		const TimeOutputEnd = performance.now();
-		console.log('スクスタ 過去のイベントまとめ\n初期処理: ' + (TimeOutputEnd - TimeOutputStart) + ' ミリ秒');
-	}
-});
---></script>
+	<section id="History">
+		<h2>更新履歴（色追加以外）</h2>
+		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
+		<div class="history-container">
+			<details open>
+				<summary class="important"><span class="date">2024/01/29</span> - リニューアル</summary>
+				<div>
+					<span class="icon-new"></span>CSSをアップデート<br>
+					<span class="icon-new"></span>色の出典を掲載<br>
+					<span class="icon-fix"></span>データ読み込み周りの仕様を変更<br>
+					<span class="icon-fix"></span>「幻日のヨハネ」を「ラブライブ!サンシャイン!!」から分離
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2024/01/21</span> - データの誤り訂正</summary>
+				<div>
+					<span class="icon-fix"></span>一部キャラクターの「スクスタ(ゲーム内)」「スクスタ(公式Web)」の色データの誤りを訂正
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2023/09/15</span> - 機能調整など</summary>
+				<div>
+					<span class="icon-fix"></span>グループの並び順を変更<br>
+					<span class="icon-fix"></span>Ctrlキーを押している時のみ、クリップボードへコピーできるように仕様変更
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2023/04/28</span> - Liella!3期生参戦に伴う調整</summary>
+				<div>
+					<span class="icon-new"></span>「ウィーン・マルガレーテ」「鬼塚冬毬」の列を追加<br>
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2023/03/18</span> - 目次を追加</summary>
+				<div>
+					<span class="icon-new"></span>目次を追加
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2023/02/10</span> - 蓮ノ空の参戦に伴う調整</summary>
+				<div>
+					<span class="icon-new"></span>「蓮ノ空女学院スクールアイドルクラブ」の表を追加<br>
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2022/12/03</span> - 誤り訂正</summary>
+				<div>
+					<span class="icon-fix"></span>キャラクター名の誤りを訂正
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2022/11/20</span> - スクールアイドルミュージカルの参戦に伴う調整</summary>
+				<div>
+					<span class="icon-new"></span>「スクールアイドルミュージカル」の表を追加
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2022/06/25</span> - 更新履歴リニューアル</summary>
+				<div>
+					<span class="icon-fix"></span>更新履歴をリニューアル（他ページ同様、折りたたみ式に変更）
+				</div>
+			</details>
+			<details>
+				<summary class="important"><span class="date">2022/04/28</span> - 大型アップデート＆Liella!二期生参戦に伴う調整</summary>
+				<div>
+					<span class="icon-new"></span>Liella!2期生の列を追加<br>
+					<span class="icon-new"></span>クリップボードへのコピー機能を実装
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2022/04/24</span> - 高咲侑の参戦に伴う調整 他</summary>
+				<div>
+					<span class="icon-new"></span>「高咲侑」の列を追加<br>
+					<span class="icon-fix"></span>キャラクター名の誤りを修正
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2021/09/03</span> - Liella!、ミア、ランジュ参戦に伴う調整</summary>
+				<div>
+					<span class="icon-new"></span>「ミア・テイラー」「鐘嵐珠」の列を追加<br>
+					<span class="icon-new"></span>Liella!メンバーのテーブルを追加
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2020/08/03</span> - 栞子参戦に伴う調整</summary>
+				<div>
+					<span class="icon-new"></span>「三船栞子」の列を追加
+				</div>
+			</details>
+			<details>
+				<summary class="important"><span class="date">2019/12/17</span> - 公開</summary>
+				<div>
+					<span class="icon-new"></span>公開
+				</div>
+			</details>
+		</div>
+	</section>
+
+	<footer>
+		<nav>
+			<a id="BackToMain" href="index.html">トップページに戻る。</a>
+		</nav>
+	</footer>
+</main>
+</body>
 </html>
