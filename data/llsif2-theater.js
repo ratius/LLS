@@ -53,8 +53,9 @@ const TagData = {
 
 //■ソート対象
 const SortTarget = [
-{"name": "2023年", "condition": "date,2023/12/01,2023/12/31"},
-{"name": "2024年", "condition": "date,2024/01/01,2024/03/31"},
+{"name": "2023年12月", "condition": "date,2023/12/01,2023/12/31"},
+{"name": "2024年1月", "condition": "date,2024/01/01,2024/01/31"},
+{"name": "2024年2月", "condition": "date,2024/02/01,2024/02/29"},
 {"name": "----"},
 {"name": "出演：高坂 穂乃果",            "condition": "tag,Honoka"},
 {"name": "出演：絢瀬 絵里",              "condition": "tag,Eli"},
@@ -105,10 +106,6 @@ const SortTarget = [
 //{"name": "----"},
 //{"name": "シリーズ：堕天使ヨハネ", "condition": "tag,Yohane"},
 ];
-
-//■サブルーチン
-//■注釈
-
 
 //■■メイン出力
 //■条件に合致するストーリーを抜き出してリストアップ
@@ -226,7 +223,7 @@ function initialize() {
 	document.querySelector('style').textContent += Object.keys(TagData).map( character => {
 		return `
 		.button_${character} {
-			background-color: ${getColor(TagData[character], 2)};
+			background-color: ${getColor(TagData[character], 2.5)};
 			border-color: ${getColor(TagData[character], 0)}
 		}`;
 	}).join('');
