@@ -274,6 +274,7 @@ function initialize() {
 			}
 			dateTemp = story.date;
 			if(!('text' in story)){ return acc;}
+			if(story['title'] === ''){ return acc;}
 			if(story['text'] === ''){ return acc;}
 			const TextTemp = story.text.split('\n');
 			return acc + TextTemp.reduce( (acc2, txt, index2) => {
