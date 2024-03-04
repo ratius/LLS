@@ -48,7 +48,7 @@ const TagData = {
 	
 	"Season":   {"name": "季節の行事", "r":100, "g":140, "b":160, "style": "square"},
 	"Birthday": {"name": "誕生日",     "r":100, "g":140, "b":160, "style": "square"},
-	"Live":     {"name": "ライブ",     "r":100, "g":140, "b":160, "style": "square"}
+	"Event":    {"name": "イベント",   "r":100, "g":140, "b":160, "style": "square"}
 };
 
 //■ソート対象
@@ -56,6 +56,7 @@ const SortTarget = [
 {"name": "2023年12月", "condition": "date,2023/12/01,2023/12/31"},
 {"name": "2024年1月", "condition": "date,2024/01/01,2024/01/31"},
 {"name": "2024年2月", "condition": "date,2024/02/01,2024/02/29"},
+{"name": "2024年3月", "condition": "date,2024/03/01,2024/03/31"},
 {"name": "----"},
 {"name": "出演：高坂 穂乃果",            "condition": "tag,Honoka"},
 {"name": "出演：絢瀬 絵里",              "condition": "tag,Eli"},
@@ -102,7 +103,7 @@ const SortTarget = [
 {"name": "----"},
 {"name": "テーマ：季節の行事", "condition": "tag,Season"},
 {"name": "テーマ：誕生日", "condition":     "tag,Birthday"},
-//{"name": "テーマ：リアルイベント", "condition": "tag,Event"},
+{"name": "テーマ：イベント", "condition": "tag,Event"},
 //{"name": "----"},
 //{"name": "シリーズ：堕天使ヨハネ", "condition": "tag,Yohane"},
 ];
