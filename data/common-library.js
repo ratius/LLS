@@ -1,8 +1,8 @@
 //■■ラブライブ！ストレージ 共通ライブラリ
 
-//■キャラクター名のボタン ver.20231222a
+//■キャラクター名のボタン ver.20231222b
 //事前にTagData変数の定義が必要です
-function DrawCharName(character){
+const DrawCharName = (character) => {
 	if(character in TagData){ //存在する場合のみ
 		const target = TagData[character];
 		return `<span class="button-${target.style} button_${character}">${target.name}</span>`;
@@ -32,13 +32,19 @@ const formatDate = date => {
 }
 
 //■スクフェス転入生の顔アイコンの作成
-const NFaceIconSize = 64;
-const NFaceImageGridColumn = 10; 
-const NFaceImageGridRow = 7;
 const WriteFaceN = (x, y) => {
+	const IconSize = 64;
+	const ImageGridColumn = 10; 
+	const ImageGridRow = 7;
 	return `<div class="icon-n-face" style="background-position: right -${
-		NFaceIconSize * (NFaceImageGridColumn - x - 1)
+		IconSize * (ImageGridColumn - x - 1)
 	}px bottom -${
-		NFaceIconSize * (NFaceImageGridRow - y - 1)
+		IconSize * (ImageGridRow - y - 1)
 	}px"></div>`;
+}
+
+//■ {{L:タイトル:URL}} をリンクに置換
+const replaceLinkStrings = (text, classes) => {
+	if(classes === undefined){ classes = ""; }
+	return text.replace(/\{\{[lL]:([^:]*):([^}]*)\}\}/g, `<a href="$2" class="${classes}" target="_blank">$1</a>`);
 }

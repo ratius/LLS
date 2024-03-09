@@ -112,11 +112,6 @@ const SortTarget = [
 //■条件に合致するストーリーを抜き出してリストアップ
 function DrawStoryList(conditions){
 	const TimeOutputStart = performance.now();
-	const DecorateText = ( text => {
-		return text
-		// {{L:タイトル:URL}} の部分を、リンクに置換する
-		.replace(/\{\{[lL]:([^:]*):([^}]*)\}\}/g, '<a href="$2" class="pc-exclusive-link" target="_blank">$1<\/a>');
-	});
 
 	let storyResult = new Array();
 	if(conditions === "undefined"){ //絞り込み条件が指定されていない場合、キャンセル
@@ -152,7 +147,7 @@ function DrawStoryList(conditions){
 			<div class="story-date">${story.date}</div>
 			<div class="story-titleContainer">
 				<div ${storyTitleAtttribute}>${story.title}</div>
-				<div class="story-memo">${('memo' in story ? DecorateText(story.memo) : '')}</div>
+				<div class="story-memo">${('memo' in story ? replaceLinkStrings(story.memo, "pc-exclusive-link") : '')}</div>
 			</div>
 			<div class="story-tags">${tagContent}</div>
 			</div>
@@ -175,9 +170,9 @@ function MakeModal(id){
 	
 	//{{note:1:2}}の部分を注釈にする
 	let noteList = [];
-	const pattern = new RegExp(/\{\{note:(.*?):(.*?)\}\}/g);
+	const pattern = new RegExp(/\{\{note:(.*?):(.*)\}\}/g);
 	while ((match = pattern.exec(result.text)) !== null) {
-		noteList.push(match[2]);
+		noteList.push(replaceLinkStrings(match[2], "pc-exclusive-link"));
 	}
 	//テキスト
 	let noteNumber = 1;
