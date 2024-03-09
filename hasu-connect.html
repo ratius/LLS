@@ -121,12 +121,6 @@ article:not(.cancelled) .article-box-title {
 	.article-box-date, .article-box-desc, .article-box-tags{
 		grid-column: span 2;
 	}
-	.pc-exclusive-link {
-		text-decoration: none;
-		color: inherit;
-		cursor: default;
-		pointer-events: none;
-	}
 }
 
 /* ■PC向けレイアウト */
@@ -187,7 +181,7 @@ article:not(.cancelled) .article-box-title {
 	</section>
 
 	<section id="CastedLiveList">
-		<h2 class="muse">動画一覧</h2>
+		<h2>動画一覧</h2>
 		<p>下部のプルダウンメニューから期間を選択すると、その期間に配信された動画の情報が表示されます。
 		</p>
 		<p>「動画リンク」列のサムネイル、または「動画へ」と書かれたリンクをクリック/タップすると、YouTubeの動画を開きます。<br>
@@ -202,6 +196,9 @@ article:not(.cancelled) .article-box-title {
 				<option value="date,2024-10-01,2025-03-31">104期 下半期（2024年10月 - 2025年3月）</option>
 				<option value="date,2025-04-01,2025-09-30">105期 上半期（2025年4月 - 2025年9月）</option>
 				<option value="date,2025-10-01,2026-03-31">105期 下半期（2025年10月 - 2026年3月）</option>-->
+				<option value="undefined">---</option>
+				<option value="tag,live">タグ：Fes×LIVE</option>
+				<option value="tag,SayakaRadio">タグ：村野さやかのラジオ</option>
 			</select>
 		</div>
 		<div id="LiveList" class="output-box output-box-default">
@@ -212,7 +209,7 @@ article:not(.cancelled) .article-box-title {
 	</section>
 
 	<section id="History">
-		<h2 class="niji">更新履歴（動画掲載以外）</h2>
+		<h2>更新履歴（動画掲載以外）</h2>
 		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 		<div class="history-container">
 			<details open>
