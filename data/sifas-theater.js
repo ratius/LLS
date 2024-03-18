@@ -57,8 +57,6 @@ const TagData = {
 	"Maid":         {"name": "ことりのメイドカフェ",       "r":180, "g":160, "b": 80, "style": "square"},
 	"Skateboarding":{"name": "GWはみんなでスケボー",       "r":180, "g":160, "b": 80, "style": "square"},
 };
-const SpecialCharacterName = ["？？？", "〜間〜", "（SE）"];
-
 const SortTarget = [
 	{"name": "2020年 2月〜3月", "condition": "date,2020/02/01,2020/03/31"},
 	{"name": "2020年 4月〜6月", "condition": "date,2020/04/01,2020/06/30"},
@@ -108,7 +106,7 @@ const SortTarget = [
 	{"name": "----"},
 	{"name": "テーマ：季節の行事", "condition": "tag,Season"},
 	{"name": "テーマ：誕生日", "condition": "tag,Birthday"},
-	{"name": "テーマ：リアルイベント", "condition": "tag,Event"},
+	{"name": "テーマ：イベント", "condition": "tag,Event"},
 	{"name": "----"},
 	{"name": "シリーズ：堕天使ヨハネ", "condition": "tag,Yohane"},
 	{"name": "シリーズ：ぽっちゃり大作戦", "condition": "tag,Pocchari"},
@@ -137,11 +135,6 @@ const SortTarget = [
 //■条件に合致するストーリーを抜き出してリストアップ
 function DrawStoryList(conditions){
 	const TimeOutputStart = performance.now();
-	const DecorateText = ( text => {
-		return text
-		// {{L:タイトル:URL}} の部分を、リンクに置換する
-		.replace(/\{\{[lL]:([^:]*):([^}]*)\}\}/g, '<a href="$2" class="pc-exclusive-link" target="_blank">$1<\/a>');
-	});
 
 	let storyResult = new Array();
 	if(conditions === "undefined"){ //絞り込み条件が指定されていない場合、キャンセル
@@ -177,7 +170,7 @@ function DrawStoryList(conditions){
 			<div class="story-date">${story.date}</div>
 			<div class="story-titleContainer">
 				<div ${storyTitleAtttribute}>${story.title}</div>
-				<div class="story-memo">${('memo' in story ? DecorateText(story.memo) : '')}</div>
+				<div class="story-memo">${('memo' in story ? replaceLinkStrings(story.memo, "pc-exclusive-link") : '')}</div>
 			</div>
 			<div class="story-tags">${tagContent}</div>
 			</div>
@@ -186,7 +179,7 @@ function DrawStoryList(conditions){
 	
 	if(isDebugMode) {
 		const TimeOutputEnd = performance.now();
-		console.log(`${conditions}出力完了。\n所要時間: ${TimeOutputEnd - TimeOutputStart}ミリ秒`);
+		console.log(`${conditions} 出力完了。\n所要時間: ${TimeOutputEnd - TimeOutputStart}ミリ秒`);
 	}
 }
 
@@ -200,9 +193,9 @@ function MakeModal(id){
 	
 	//{{note:1:2}}の部分を注釈にする
 	let noteList = [];
-	const pattern = new RegExp(/\{\{note:(.*?):(.*?)\}\}/g);
+	const pattern = new RegExp(/\{\{note:(.*?):(.*)\}\}/g);
 	while ((match = pattern.exec(result.text)) !== null) {
-		noteList.push(match[2]);
+		noteList.push(replaceLinkStrings(match[2], "pc-exclusive-link"));
 	}
 	//テキスト
 	let noteNumber = 1;
@@ -211,11 +204,10 @@ function MakeModal(id){
 	}).split('\n');
 	document.getElementById("Modal-Text").innerHTML = TextLog.map( (text, index) => {
 		text = text.split('\t');
-		const CharacterName = (SpecialCharacterName.find(name => name === text[0]) ?
-		text[0] : DrawCharName(result.tags[text[0]]) );
+		const CharacterName = (isNaN(text[0]) ? text[0] : DrawCharName(result.tags[parseInt(text[0],10)]));
 		
 		let currentNote = [];
-		if(text.length >= 2){
+		if(text.length >= 2){ //「〜間〜」のような名前だけの部分はテキストを持たないため、無視する
 			text[1] = text[1].replace(/\{\{notenum:(\d+)\}\}/g, function(match, noteIndex){
 				if(match) { currentNote.push(`<span>*${noteIndex}： ${noteList[parseInt(noteIndex, 10)-1]}</span>`);}
 				return ``;
@@ -299,7 +291,7 @@ function initialize() {
 				 + '「' + story.title + '」' + (index2+1) + '行目)';
 				
 				const TextTemp2 = val2.split('\t');
-				if(!SpecialCharacterName.find(name => name === TextTemp2[0])){
+				if(!isNaN(TextTemp2[0])){
 					if(TextTemp2.length !== 2){
 						console.error('エラー：パラメータ数が異常' + ErrorLocation);
 						return acc2 + 1;
