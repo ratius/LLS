@@ -8,6 +8,7 @@
 	{"name":"東條希",                  "birth": "0609", "type":"C",  "group":"muse"   },
 	{"name":"小泉花陽",                "birth": "0117", "type":"C",  "group":"muse"   },
 	{"name":"矢澤にこ",                "birth": "0722", "type":"C",  "group":"muse"   },
+
 	{"name":"新田恵海",                "birth": "1210", "type":"V",  "group":"muse"   },
 	{"name":"南條愛乃",                "birth": "0712", "type":"V",  "group":"muse"   },
 	{"name":"内田彩",                  "birth": "0723", "type":"V",  "group":"muse"   },
@@ -29,6 +30,7 @@
 	{"name":"黒澤ルビィ",              "birth": "0921", "type":"C",  "group":"aqours" },
 	{"name":"鹿角理亞",                "birth": "1212", "type":"C",  "group":"aqours" },
 	{"name":"鹿角聖良",                "birth": "0504", "type":"C",  "group":"aqours" },
+
 	{"name":"伊波杏樹",                "birth": "0207", "type":"V",  "group":"aqours" },
 	{"name":"逢田梨香子",              "birth": "0808", "type":"V",  "group":"aqours" },
 	{"name":"諏訪ななか",              "birth": "1102", "type":"V",  "group":"aqours" },
@@ -53,6 +55,7 @@
 	{"name":"三船栞子",                "birth": "1005", "type":"C",  "group":"niji"   },
 	{"name":"ミア・テイラー",          "birth": "1206", "type":"C",  "group":"niji"   },
 	{"name":"鐘嵐珠",                  "birth": "0215", "type":"C",  "group":"niji"   },
+
 	{"name":"大西亜玖璃",              "birth": "0502", "type":"V",  "group":"niji"   },
 	{"name":"相良茉優",                "birth": "0417", "type":"V",  "group":"niji"   },
 	{"name":"前田佳織里",              "birth": "0425", "type":"V",  "group":"niji"   },
@@ -79,6 +82,8 @@
 	{"name":"鬼塚夏実",                "birth": "0807", "type":"C",  "group":"liella" },
 	{"name":"ウィーン・マルガレーテ",  "birth": "0120", "type":"C",  "group":"liella" },
 	{"name":"鬼塚冬毬",                "birth": "1228", "type":"C",  "group":"liella" },
+	{"name":"柊摩央",                  "birth": "1202", "type":"C",  "group":"liella" },
+	{"name":"聖澤悠奈",                "birth": "0811", "type":"C",  "group":"liella" },
 
 	{"name":"伊達さゆり",              "birth": "0930", "type":"V",  "group":"liella" },
 	{"name":"Liyuu",                   "birth": "0109", "type":"V",  "group":"liella" },
