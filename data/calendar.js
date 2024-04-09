@@ -64,7 +64,7 @@ function generateCalendar(y, m){
 		
 		//誕生日のキャラクターの追加
 		const BirthdayCharacters = FilterbyBirthday(m, day+1).map( character => {
-			return `<span class="icon-${character.type} icon-${character.group}">${character.name}</span>`
+			return `<span class="icon-${character.type} icon-${character.group}" ${'tips' in character ? 'title="' + character.tips + '"' : ''}>${character.name}</span>`
 		});
 		
 		const contents = `
