@@ -58,77 +58,77 @@ const TagData = {
 	"Skateboarding":{"name": "GWはみんなでスケボー",       "r":180, "g":160, "b": 80, "style": "square"},
 };
 const SortTarget = [
-	{"name": "2020年 2月〜3月", "condition": "date,2020/02/01,2020/03/31"},
-	{"name": "2020年 4月〜6月", "condition": "date,2020/04/01,2020/06/30"},
-	{"name": "2020年 7月〜9月", "condition": "date,2020/07/01,2020/09/30"},
-	{"name": "2020年 10月〜12月", "condition": "date,2020/10/01,2020/12/31"},
-	{"name": "2021年 1月〜3月", "condition": "date,2021/01/01,2021/03/31"},
-	{"name": "2021年 4月〜6月", "condition": "date,2021/04/01,2021/06/30"},
-	{"name": "2021年 7月〜9月", "condition": "date,2021/07/01,2021/09/30"},
-	{"name": "2021年 10月〜12月", "condition": "date,2021/10/01,2021/12/31"},
-	{"name": "2022年 1月〜3月", "condition": "date,2022/01/01,2022/03/31"},
-	{"name": "2022年 4月〜6月", "condition": "date,2022/04/01,2022/06/30"},
-	{"name": "2022年 7月〜9月", "condition": "date,2022/07/01,2022/09/30"},
-	{"name": "2022年 10月〜12月", "condition": "date,2022/10/01,2022/12/31"},
-	{"name": "2023年 1月〜3月", "condition": "date,2023/01/01,2023/03/31"},
-	{"name": "2023年 4月〜6月", "condition": "date,2023/04/01,2023/06/30"},
+	{"name": "2020年 2月〜3月", "condition": "after:2020-02-01 before:2020-03-31"},
+	{"name": "2020年 4月〜6月", "condition": "after:2020-04-01 before:2020-06-30"},
+	{"name": "2020年 7月〜9月", "condition": "after:2020-07-01 before:2020-09-30"},
+	{"name": "2020年 10月〜12月", "condition": "after:2020-10-01 before:2020-12-31"},
+	{"name": "2021年 1月〜3月", "condition": "after:2021-01-01 before:2021-03-31"},
+	{"name": "2021年 4月〜6月", "condition": "after:2021-04-01 before:2021-06-30"},
+	{"name": "2021年 7月〜9月", "condition": "after:2021-07-01 before:2021-09-30"},
+	{"name": "2021年 10月〜12月", "condition": "after:2021-10-01 before:2021-12-31"},
+	{"name": "2022年 1月〜3月", "condition": "after:2022-01-01 before:2022-03-31"},
+	{"name": "2022年 4月〜6月", "condition": "after:2022-04-01 before:2022-06-30"},
+	{"name": "2022年 7月〜9月", "condition": "after:2022-07-01 before:2022-09-30"},
+	{"name": "2022年 10月〜12月", "condition": "after:2022-10-01 before:2022-12-31"},
+	{"name": "2023年 1月〜3月", "condition": "after:2023-01-01 before:2023-03-31"},
+	{"name": "2023年 4月〜6月", "condition": "after:2023-04-01 before:2023-06-30"},
 	{"name": "----"},
-	{"name": "出演：高坂 穂乃果", "condition": "tag,Honoka"},
-	{"name": "出演：絢瀬 絵里", "condition": "tag,Eli"},
-	{"name": "出演：南 ことり", "condition": "tag,Kotori"},
-	{"name": "出演：園田 海未", "condition": "tag,Umi"},
-	{"name": "出演：星空 凛", "condition": "tag,Rin"},
-	{"name": "出演：西木野 真姫", "condition": "tag,Maki"},
-	{"name": "出演：東條 希", "condition": "tag,Nozomi"},
-	{"name": "出演：小泉 花陽", "condition": "tag,Hanayo"},
-	{"name": "出演：矢澤 にこ", "condition": "tag,Nico"},
-	{"name": "出演：高海 千歌", "condition": "tag,Chika"},
-	{"name": "出演：桜内 梨子", "condition": "tag,Riko"},
-	{"name": "出演：松浦 果南", "condition": "tag,Kanan"},
-	{"name": "出演：黒澤 ダイヤ", "condition": "tag,Dia"},
-	{"name": "出演：渡辺 曜", "condition": "tag,You"},
-	{"name": "出演：津島 善子", "condition": "tag,Yoshiko"},
-	{"name": "出演：国木田 花丸", "condition": "tag,Hanamaru"},
-	{"name": "出演：小原 鞠莉", "condition": "tag,Mari"},
-	{"name": "出演：黒澤 ルビィ", "condition": "tag,Ruby"},
-	{"name": "出演：上原 歩夢", "condition": "tag,Ayumu"},
-	{"name": "出演：中須 かすみ", "condition": "tag,Kasumi"},
-	{"name": "出演：桜坂 しずく", "condition": "tag,Shizuku"},
-	{"name": "出演：朝香 果林", "condition": "tag,Karin"},
-	{"name": "出演：宮下 愛", "condition": "tag,Ai"},
-	{"name": "出演：近江 彼方", "condition": "tag,Kanata"},
-	{"name": "出演：優木 せつ菜", "condition": "tag,Setsuna"},
-	{"name": "出演：エマ・ヴェルデ", "condition": "tag,Emma"},
-	{"name": "出演：天王寺 璃奈", "condition": "tag,Rina"},
-	{"name": "出演：三船 栞子", "condition": "tag,Shioriko"},
-	{"name": "出演：ミア・テイラー", "condition": "tag,Mia"},
-	{"name": "出演：鐘 嵐珠", "condition": "tag,Lanzhu"},
+	{"name": "出演：高坂 穂乃果", "condition": "tag:Honoka"},
+	{"name": "出演：絢瀬 絵里", "condition": "tag:Eli"},
+	{"name": "出演：南 ことり", "condition": "tag:Kotori"},
+	{"name": "出演：園田 海未", "condition": "tag:Umi"},
+	{"name": "出演：星空 凛", "condition": "tag:Rin"},
+	{"name": "出演：西木野 真姫", "condition": "tag:Maki"},
+	{"name": "出演：東條 希", "condition": "tag:Nozomi"},
+	{"name": "出演：小泉 花陽", "condition": "tag:Hanayo"},
+	{"name": "出演：矢澤 にこ", "condition": "tag:Nico"},
+	{"name": "出演：高海 千歌", "condition": "tag:Chika"},
+	{"name": "出演：桜内 梨子", "condition": "tag:Riko"},
+	{"name": "出演：松浦 果南", "condition": "tag:Kanan"},
+	{"name": "出演：黒澤 ダイヤ", "condition": "tag:Dia"},
+	{"name": "出演：渡辺 曜", "condition": "tag:You"},
+	{"name": "出演：津島 善子", "condition": "tag:Yoshiko"},
+	{"name": "出演：国木田 花丸", "condition": "tag:Hanamaru"},
+	{"name": "出演：小原 鞠莉", "condition": "tag:Mari"},
+	{"name": "出演：黒澤 ルビィ", "condition": "tag:Ruby"},
+	{"name": "出演：上原 歩夢", "condition": "tag:Ayumu"},
+	{"name": "出演：中須 かすみ", "condition": "tag:Kasumi"},
+	{"name": "出演：桜坂 しずく", "condition": "tag:Shizuku"},
+	{"name": "出演：朝香 果林", "condition": "tag:Karin"},
+	{"name": "出演：宮下 愛", "condition": "tag:Ai"},
+	{"name": "出演：近江 彼方", "condition": "tag:Kanata"},
+	{"name": "出演：優木 せつ菜", "condition": "tag:Setsuna"},
+	{"name": "出演：エマ・ヴェルデ", "condition": "tag:Emma"},
+	{"name": "出演：天王寺 璃奈", "condition": "tag:Rina"},
+	{"name": "出演：三船 栞子", "condition": "tag:Shioriko"},
+	{"name": "出演：ミア・テイラー", "condition": "tag:Mia"},
+	{"name": "出演：鐘 嵐珠", "condition": "tag:Lanzhu"},
 	{"name": "----"},
-	{"name": "テーマ：季節の行事", "condition": "tag,Season"},
-	{"name": "テーマ：誕生日", "condition": "tag,Birthday"},
-	{"name": "テーマ：イベント", "condition": "tag,Event"},
+	{"name": "テーマ：季節の行事", "condition": "tag:Season"},
+	{"name": "テーマ：誕生日", "condition": "tag:Birthday"},
+	{"name": "テーマ：イベント", "condition": "tag:Event"},
 	{"name": "----"},
-	{"name": "シリーズ：堕天使ヨハネ", "condition": "tag,Yohane"},
-	{"name": "シリーズ：ぽっちゃり大作戦", "condition": "tag,Pocchari"},
-	{"name": "シリーズ：穂乃果と愛のドッキリ", "condition": "tag,Dokkiri"},
-	{"name": "シリーズ：わしわしの秘密", "condition": "tag,Washi"},
-	{"name": "シリーズ：地獄のトライアスロン", "condition": "tag,Triathlon"},
-	{"name": "シリーズ：せつ菜の料理", "condition": "tag,Meshimazu"},
-	{"name": "シリーズ：スクールアイドル達の生配信", "condition": "tag,Broadcast"},
-	{"name": "シリーズ：者どもの森", "condition": "tag,Monodomo"},
-	{"name": "シリーズ：絵里のカロリー事情", "condition": "tag,Calorie"},
-	{"name": "シリーズ：小原家のヘリコプター", "condition": "tag,Helicopter"},
-	{"name": "シリーズ：プールのステージ", "condition": "tag,Pool"},
-	{"name": "シリーズ：空の上のステージ", "condition": "tag,Airborne"},
-	{"name": "シリーズ：にっこにっこにー", "condition": "tag,25252"},
-	{"name": "シリーズ：スクールアイドルDVDマラソン", "condition": "tag,Marathon"},
-	{"name": "シリーズ：セレクトショップ", "condition": "tag,SelectShop"},
-	{"name": "シリーズ：にこにこシュークリーム", "condition": "tag,ChouCream"},
-	{"name": "シリーズ：流行りのマンゴー牛乳", "condition": "tag,Mango"},
-	{"name": "シリーズ：にこちゃんの唐揚げ", "condition": "tag,Karaage"},
-	{"name": "シリーズ：スクールアイドル戦隊", "condition": "tag,Sentai"},
-	{"name": "シリーズ：ことりのメイドカフェ", "condition": "tag,Maid"},
-	{"name": "シリーズ：GWはみんなでスケボー", "condition": "tag,Skateboarding"},
+	{"name": "シリーズ：堕天使ヨハネ", "condition": "tag:Yohane"},
+	{"name": "シリーズ：ぽっちゃり大作戦", "condition": "tag:Pocchari"},
+	{"name": "シリーズ：穂乃果と愛のドッキリ", "condition": "tag:Dokkiri"},
+	{"name": "シリーズ：わしわしの秘密", "condition": "tag:Washi"},
+	{"name": "シリーズ：地獄のトライアスロン", "condition": "tag:Triathlon"},
+	{"name": "シリーズ：せつ菜の料理", "condition": "tag:Meshimazu"},
+	{"name": "シリーズ：スクールアイドル達の生配信", "condition": "tag:Broadcast"},
+	{"name": "シリーズ：者どもの森", "condition": "tag:Monodomo"},
+	{"name": "シリーズ：絵里のカロリー事情", "condition": "tag:Calorie"},
+	{"name": "シリーズ：小原家のヘリコプター", "condition": "tag:Helicopter"},
+	{"name": "シリーズ：プールのステージ", "condition": "tag:Pool"},
+	{"name": "シリーズ：空の上のステージ", "condition": "tag:Airborne"},
+	{"name": "シリーズ：にっこにっこにー", "condition": "tag:25252"},
+	{"name": "シリーズ：スクールアイドルDVDマラソン", "condition": "tag:Marathon"},
+	{"name": "シリーズ：セレクトショップ", "condition": "tag:SelectShop"},
+	{"name": "シリーズ：にこにこシュークリーム", "condition": "tag:ChouCream"},
+	{"name": "シリーズ：流行りのマンゴー牛乳", "condition": "tag:Mango"},
+	{"name": "シリーズ：にこちゃんの唐揚げ", "condition": "tag:Karaage"},
+	{"name": "シリーズ：スクールアイドル戦隊", "condition": "tag:Sentai"},
+	{"name": "シリーズ：ことりのメイドカフェ", "condition": "tag:Maid"},
+	{"name": "シリーズ：GWはみんなでスケボー", "condition": "tag:Skateboarding"},
 ];
 
 //■■メイン出力
@@ -136,26 +136,26 @@ const SortTarget = [
 function DrawStoryList(conditions){
 	const TimeOutputStart = performance.now();
 
-	let storyResult = new Array();
-	if(conditions === "undefined"){ //絞り込み条件が指定されていない場合、キャンセル
-		return false;
-	}
-	conditions = conditions.split(',');
+	let filteredData = window['JSON-sifas-theater'];
 	
-	if(conditions[0] === 'date'){ //日付による絞り込み
-		const dateStart = new Date(conditions[1]);
-		const dateEnd = new Date(conditions[2]);
-		storyResult = window['JSON-sifas-theater'].filter(temp => {
-			const dateStory = new Date(temp.date);
-			return dateStory.getTime() >= dateStart.getTime() && dateStory.getTime() <= dateEnd.getTime();
-		});
-	} else if(conditions[0] === 'tag'){ //タグによる絞り込み
-		storyResult = window['JSON-sifas-theater'].filter(temp => temp.tags.indexOf(conditions[1]) !== -1);
-	} else {
-		return false;
-	}
+	const condition = conditions.split(' ');
+	condition.forEach( c => {
+		if(c.startsWith('before:')) { //「before:」 - 指定された日付以前
+			const beforeDate = new Date(c.split(':')[1]);
+			filteredData = filteredData.filter( connect => new Date(connect.date) <= beforeDate);
+		}
+		else if(c.startsWith('after:')) { //「after:」 - 指定された日付まで
+			const afterDate = new Date(c.split(':')[1]);
+			filteredData = filteredData.filter( connect => new Date(connect.date) >= afterDate);
+		}
+		else if(c.startsWith('tag:')) {
+			const tag = c.split(':')[1];
+			filteredData = filteredData.filter( connect => connect.tags && connect.tags.includes(tag));
+		}
+	});
+	if(filteredData === []){ return false;}
 	
-	document.getElementById("StoryContainer").innerHTML = storyResult.map( story => {
+	document.getElementById("StoryContainer").innerHTML = filteredData.map( story => {
 		const hasStory = ('text' in story && story["text"] !== "");
 		const storyTitleAtttribute = 
 		(hasStory ?
@@ -167,7 +167,7 @@ function DrawStoryList(conditions){
 
 		return `
 		<article class="story">
-			<div class="story-date">${story.date}</div>
+			<div class="story-date">${story.date.replaceAll('-', '/')}</div>
 			<div class="story-titleContainer">
 				<div ${storyTitleAtttribute}>${story.title}</div>
 				<div class="story-memo">${('memo' in story ? replaceLinkStrings(story.memo, "pc-exclusive-link") : '')}</div>
