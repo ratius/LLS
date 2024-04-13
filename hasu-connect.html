@@ -190,15 +190,6 @@ article:not(.cancelled) .article-box-title {
 			<label for="PullDownList">絞り込み</label>
 			<select id="PullDownList" onChange="DrawLiveList(this.value)">
 				<option value="">(期間を選択)</option>
-				<option value="date,2023-04-01,2023-09-30">103期 上半期（2023年4月 - 2023年9月）</option>
-				<option value="date,2023-10-01,2024-03-31">103期 下半期（2023年10月 - 2024年3月）</option>
-				<!--<option value="date,2024-04-01,2024-09-30">104期 上半期（2024年4月 - 2024年9月）</option>
-				<option value="date,2024-10-01,2025-03-31">104期 下半期（2024年10月 - 2025年3月）</option>
-				<option value="date,2025-04-01,2025-09-30">105期 上半期（2025年4月 - 2025年9月）</option>
-				<option value="date,2025-10-01,2026-03-31">105期 下半期（2025年10月 - 2026年3月）</option>-->
-				<option value="undefined">---</option>
-				<option value="tag,live">タグ：Fes×LIVE</option>
-				<option value="tag,SayakaRadio">タグ：村野さやかのラジオ</option>
 			</select>
 		</div>
 		<div id="LiveList" class="output-box output-box-default">
@@ -213,6 +204,13 @@ article:not(.cancelled) .article-box-title {
 		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 		<div class="history-container">
 			<details open>
+				<summary class="important"><span class="date">2024/04/14</span> - 104期新入生参戦に伴う調整</summary>
+				<div>
+					<span class="icon-new"></span>吟子、小鈴、姫芽の名前表示に対応<br>
+					<span class="icon-fix"></span>絞り込みの不具合で、「9月Fes×LIVE振り返り配信」が検索結果に表示されなかった不具合を修正
+				</div>
+			</details>
+			<details>
 				<summary><span class="date">2024/01/10</span></summary>
 				<div>
 					<span class="icon-fix"></span>データ読み込み周りの仕様を変更
