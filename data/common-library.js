@@ -43,8 +43,8 @@ const WriteFaceN = (x, y) => {
 	}px"></div>`;
 }
 
-//■ {{L:タイトル:URL}} をリンクに置換
+//■ {{L:タイトル:URL}} を外部リンクに置換
 const replaceLinkStrings = (text, classes) => {
 	if(classes === undefined){ classes = ""; }
-	return text.replace(/\{\{[lL]:([^:]*):([^}]*)\}\}/g, `<a href="$2" class="${classes}" target="_blank">$1</a>`);
+	return text.replace(/\{\{[lL]:([^:]*):([^}]*)\}\}/g, `<a href="$2" class="${classes}" target="_blank" rel="noopener noreferrer">$1</a>`);
 }

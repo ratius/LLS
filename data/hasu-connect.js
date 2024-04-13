@@ -4,46 +4,67 @@ const TagData = {
 	"live"      : {"name": "Fes×LIVE"   , "r": 80, "g":128, "b":128, "style": "square" },
 	"cancelled" : {"name": "配信中止"    , "r":128, "g":128, "b":128, "style": "square" },
 	
+	"YouTube" : {"name": "YouTube同時配信", "r":224, "g":128, "b": 128, "style": "square" },
+	"SayakaRadio" : {"name": "村野さやかのラジオ", "r":160, "g":112, "b": 96, "style": "square" },
+	
 	"Kaho"    : {"name": "花帆"   , "r":248, "g":181, "b":  0, "style": "round" },
 	"Kozue"   : {"name": "梢"     , "r":104, "g":190, "b":141, "style": "round" },
 	"Sayaka"  : {"name": "さやか" , "r": 83, "g":131, "b":195, "style": "round" },
 	"Tsuzuri" : {"name": "綴理"   , "r":186, "g": 38, "b": 54, "style": "round" },
 	"Rurino"  : {"name": "瑠璃乃" , "r":231, "g": 96, "b":158, "style": "round" },
-	"Megumi"  : {"name": "慈"     , "r":200, "g":194, "b":198, "style": "round" }
+	"Megumi"  : {"name": "慈"     , "r":200, "g":194, "b":198, "style": "round" },
+	"Ginko"   : {"name": "吟子"   , "r":162, "g":215, "b":221, "style": "round" },
+	"Kosuzu"  : {"name": "小鈴"   , "r":250, "g":215, "b":100, "style": "round" },
+	"Hime"    : {"name": "姫芽"   , "r":157, "g":141, "b":226, "style": "round" }
+	
 };
+
+const SortTarget = [
+	{"name": "103期 上半期（2023年4月 - 2023年9月）",  "condition": "after:2023-04-01 before:2023-09-30"},
+	{"name": "103期 下半期（2023年10月 - 2024年3月）", "condition": "after:2023-10-01 before:2024-03-31"},
+	{"name": "104期 上半期（2024年4月 - 2024年9月）",  "condition": "after:2024-04-01 before:2024-09-30"},
+//	{"name": "104期 下半期（2024年10月 - 2025年3月）", "condition": "after:2024-10-01 before:2025-03-31"},
+//	{"name": "105期 上半期（2025年4月 - 2025年9月）",  "condition": "after:2025-04-01 before:2025-09-30"},
+//	{"name": "105期 下半期（2025年10月 - 2026年3月）", "condition": "after:2025-10-01 before:2026-03-31"},
+	{"name": "----"},
+	{"name": "タグ：Fes×LIVE", "condition": "tag:live"},
+	{"name": "タグ：村野さやかのラジオ", "condition": "tag:SayakaRadio"},
+];
 
 //■■出力
 //■「スクールアイドルコネクト一覧」の描画
-function DrawLiveList(condition){
+function DrawLiveList(conditions){
 	const TimeOutputStart = performance.now();
-	let result = null;
+	let filteredData = window['JSON-hasu-connect'];
 	
-	const conditionTemp = condition.split(',');
-	if(conditionTemp[0] === 'date'){ //期間指定
-		const DateStart = new Date(conditionTemp[1]).getTime();
-		const DateEnd = new Date(conditionTemp[2]).getTime();
-		result = window['JSON-hasu-connect'].filter( (connect) => { //当該動画
-			if(!'title' in connect || connect.title === ''){ return false;} //タイトル未指定ならスキップ
-			const DateTemp = new Date(connect.date).getTime();
-			if(DateTemp > DateStart
-			&& DateTemp < DateEnd){ //日付の範囲指定
-				return true;
-			}
-		});
-	}
-	if(result === null){ return false;}
+	const condition = conditions.split(' ');
+	condition.forEach( c => {
+		if(c.startsWith('before:')) { //「before:」 - 指定された日付以前
+			const beforeDate = new Date(c.split(':')[1]);
+			filteredData = filteredData.filter( connect => new Date(connect.date) <= beforeDate);
+		}
+		else if(c.startsWith('after:')) { //「after:」 - 指定された日付まで
+			const afterDate = new Date(c.split(':')[1]);
+			filteredData = filteredData.filter( connect => new Date(connect.date) >= afterDate);
+		}
+		else if(c.startsWith('tag:')) {
+			const tag = c.split(':')[1];
+			filteredData = filteredData.filter( connect => connect.tags && connect.tags.includes(tag));
+		}
+	});
+	if(filteredData === []){ return false;}
 
 	//特定の記法をリンクへと置換する
-	const DecorateText = ( text => text
+	const DecorateText = ( text => {
 		// {{X:タイトル:数字17桁}} → Xへのリンク
-		.replace(/\{\{[xX]:([^:]*):(\d{19})\}\}/g,
-		'<span class="pc-only">（<a href="https://twitter.com/hasunosora_SIC/status/$2" target="blank">$1<\/a>）<\/span>')
+		text = text.replace(/\{\{[xX]:([^:]*):(\d{19})\}\}/g,
+		'<span class="pc-only">（<a href="https://twitter.com/hasunosora_SIC/status/$2" target="blank">$1<\/a>）<\/span>');
 		// {{L:タイトル:URL}} → リンク
-		.replace(/\{\{[lL]:([^:]*):([^}]*)\}\}/g,
-		'<a href="$2" class="pc-exclusive-link" target="_blank" rel="noopener noreferrer">$1<\/a>')
-	);
+		text = replaceLinkStrings(text);
+		return text;
+	});
 	
-	document.getElementById("LiveList").innerHTML = result.map( connect => {
+	document.getElementById("LiveList").innerHTML = filteredData.map( connect => {
 		const isCancelled = (connect.tags.find( (e) => e === 'cancelled') ? 'cancelled' : '');
 		const videoContent =
 		('tube' in connect && connect.tube ?
@@ -91,6 +112,14 @@ function initialize () {
 	});
 	document.querySelector('style').textContent += AddedCSS;
 	
+	//セレクトボックスに要素を追加
+	SortTarget.forEach( temp => {
+		const option = document.createElement("option");
+		option.text = temp.name;
+		option.value = temp.condition;
+		document.getElementById("PullDownList").appendChild(option);
+	});
+
 	//警告解除
 	document.getElementById('LiveList').classList.remove('output-box-default');
 	document.getElementById('LiveList').innerHTML = `

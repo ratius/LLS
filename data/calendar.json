@@ -126,6 +126,9 @@
 	{"name": "夕霧綴理",   "birth": "1117", "type": "C", "group": "hasu"},
 	{"name": "大沢瑠璃乃", "birth": "0831", "type": "C", "group": "hasu"},
 	{"name": "藤島慈",     "birth": "1220", "type": "C", "group": "hasu"},
+	{"name": "百生吟子",   "birth": "1020", "type": "C", "group": "hasu"},
+	{"name": "徒町小鈴",   "birth": "0228", "type": "C", "group": "hasu"},
+	{"name": "安養寺姫芽", "birth": "0924", "type": "C", "group": "hasu"},
 
 	{"name": "楡井希美",   "birth": "0521", "type": "V", "group": "hasu", "tips": "蓮ノ空 日野下花帆 役"},
 	{"name": "花宮初奈",   "birth": "1024", "type": "V", "group": "hasu", "tips": "蓮ノ空 乙宗梢 役"},
@@ -133,6 +136,9 @@
 	{"name": "佐々木琴子", "birth": "0828", "type": "V", "group": "hasu", "tips": "蓮ノ空 夕霧綴理 役"},
 	{"name": "菅叶和",     "birth": "1119", "type": "V", "group": "hasu", "tips": "蓮ノ空 大沢瑠璃乃 役"},
 	{"name": "月音こな",   "birth": "0820", "type": "V", "group": "hasu", "tips": "蓮ノ空 藤島慈 役"},
+	{"name": "櫻井陽菜",   "birth": "0917", "type": "V", "group": "hasu", "tips": "蓮ノ空 百生吟子 役"},
+	{"name": "葉山風花",   "birth": "0128", "type": "V", "group": "hasu", "tips": "蓮ノ空 徒町小鈴 役"},
+	{"name": "来栖りん",   "birth": "1108", "type": "V", "group": "hasu", "tips": "蓮ノ空 安養寺姫芽 役"},
 
 	{"name": "一之瀬マリカ",   "birth": "0420", "type": "C", "group": "llsif"},
 	{"name": "永山みなみ",     "birth": "0830", "type": "C", "group": "llsif"},
