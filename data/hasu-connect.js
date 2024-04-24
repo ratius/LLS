@@ -1,22 +1,21 @@
-//■キャラクターのデータ
+//■タグ欄データ
 const TagData = {
 	"meets"     : {"name": "With×MEETS" , "r":160, "g":112, "b": 96, "style": "square" },
 	"live"      : {"name": "Fes×LIVE"   , "r": 80, "g":128, "b":128, "style": "square" },
 	"cancelled" : {"name": "配信中止"    , "r":128, "g":128, "b":128, "style": "square" },
 	
-	"YouTube" : {"name": "YouTube同時配信", "r":224, "g":128, "b": 128, "style": "square" },
+	"YouTube" : {"name": "YouTubeライブ", "r":224, "g":128, "b": 128, "style": "square" },
 	"SayakaRadio" : {"name": "村野さやかのラジオ", "r":160, "g":112, "b": 96, "style": "square" },
 	
 	"Kaho"    : {"name": "花帆"   , "r":248, "g":181, "b":  0, "style": "round" },
-	"Kozue"   : {"name": "梢"     , "r":104, "g":190, "b":141, "style": "round" },
 	"Sayaka"  : {"name": "さやか" , "r": 83, "g":131, "b":195, "style": "round" },
+	"Kozue"   : {"name": "梢"     , "r":104, "g":190, "b":141, "style": "round" },
 	"Tsuzuri" : {"name": "綴理"   , "r":186, "g": 38, "b": 54, "style": "round" },
 	"Rurino"  : {"name": "瑠璃乃" , "r":231, "g": 96, "b":158, "style": "round" },
 	"Megumi"  : {"name": "慈"     , "r":200, "g":194, "b":198, "style": "round" },
 	"Ginko"   : {"name": "吟子"   , "r":162, "g":215, "b":221, "style": "round" },
 	"Kosuzu"  : {"name": "小鈴"   , "r":250, "g":215, "b":100, "style": "round" },
-	"Hime"    : {"name": "姫芽"   , "r":157, "g":141, "b":226, "style": "round" }
-	
+	"Hime"    : {"name": "姫芽"   , "r":157, "g":141, "b":226, "style": "round" },
 };
 
 const SortTarget = [
@@ -28,12 +27,21 @@ const SortTarget = [
 //	{"name": "105期 下半期（2025年10月 - 2026年3月）", "condition": "after:2025-10-01 before:2026-03-31"},
 	{"name": "----"},
 	{"name": "タグ：Fes×LIVE", "condition": "tag:live"},
+	{"name": "タグ：YouTubeライブ", "condition": "tag:YouTube"},
 	{"name": "タグ：村野さやかのラジオ", "condition": "tag:SayakaRadio"},
+	{"name": "----"},
+	{"name": "配信場所：花帆の部屋",   "condition": "tag:room-Kaho"},
+	{"name": "配信場所：さやかの部屋", "condition": "tag:room-Sayaka"},
+	{"name": "配信場所：梢の部屋",     "condition": "tag:room-Kozue"},
+	{"name": "配信場所：綴理の部屋",   "condition": "tag:room-Tsuzuri"},
+	{"name": "配信場所：瑠璃乃の部屋", "condition": "tag:room-Rurino"},
+	{"name": "配信場所：慈の部屋",     "condition": "tag:room-Megumi"},
 ];
 
 //■■出力
 //■「スクールアイドルコネクト一覧」の描画
-function DrawLiveList(conditions){
+function DrawLiveList(conditions = ''){
+	if(conditions === '' || conditions === "undefined"){ return false;}
 	const TimeOutputStart = performance.now();
 	let filteredData = window['JSON-hasu-connect'];
 	
@@ -73,16 +81,24 @@ function DrawLiveList(conditions){
 				<span class="sp-only">動画へ</span>
 			</a>`
 		:'');
-		const descContent = DecorateText(connect.desc)
-		+ ('setlist' in connect ? 
-			`<details class="setlist">
-				<summary class="setlist-summary">セットリスト (クリックで展開)</summary>
-				<ol class="setlist-ol">
-					${connect.setlist.map(program =>
-					`<li>${(program === 'MC' ? `<i class="setlist-mc">MC</i>` : program)}</li>`).join('')}
-				</ol>
-			</details>`
+		const descContent = ('desc' in connect && connect.desc !== "" ? 
+			DecorateText(connect.desc)
+			//With×MEETS AFTERが無いことを示す一文を表示
+			+ (connect.tags.find(m => m === 'noafter') ? "<br>この配信ではWith×MEETS AFTERは行われなかった。" : "")
+			//セットリストを表示
+			+ ('setlist' in connect ? 
+				`<details class="setlist">
+					<summary class="setlist-summary">セットリスト (クリックで展開)</summary>
+					<ol class="setlist-ol">
+						${connect.setlist.map(program =>
+						`<li>${(program === 'MC' ? `<i class="setlist-mc">MC</i>` : program)}</li>`).join('')}
+					</ol>
+				</details>`
+			:'')
 		:'');
+		const tagsContent = connect.tags.map( tag => {
+			if(tag in TagData){ return DrawCharName(tag); }
+		}).join('')
 		
 		return `
 		<article class="${isCancelled}">
@@ -90,7 +106,7 @@ function DrawLiveList(conditions){
 			<div class="article-box-title ${isCancelled}">${connect.title}</div>
 			<div class="article-box-tube ${isCancelled}">${videoContent}</div>
 			<div class="article-box-desc">${descContent}</div>
-			<div class="article-box-tags">${connect.tags.map( tag => DrawCharName(tag)).join('')}</div>
+			<div class="article-box-tags">${tagsContent}</div>
 		</article>`
 	}).join('');
 	

@@ -43,6 +43,8 @@ const TagData = {
 	"Meshimazu":    {"name": "せつ菜の料理",               "r":180, "g":160, "b": 80, "style": "square"},
 	"Broadcast":    {"name": "スクールアイドル達の生配信", "r":180, "g":160, "b": 80, "style": "square"},
 	"Monodomo":     {"name": "者どもの森",                 "r":180, "g":160, "b": 80, "style": "square"},
+	"MakiHair":     {"name": "真姫の髪",         "r":180, "g":160, "b": 80, "style": "square"},
+	"Calorie":      {"name": "絵里のカロリー事情",         "r":180, "g":160, "b": 80, "style": "square"},
 	"Calorie":      {"name": "絵里のカロリー事情",         "r":180, "g":160, "b": 80, "style": "square"},
 	"Helicopter":   {"name": "小原家のヘリコプター",       "r":180, "g":160, "b": 80, "style": "square"},
 	"Pool":         {"name": "プールのステージ",           "r":180, "g":160, "b": 80, "style": "square"},
@@ -116,6 +118,7 @@ const SortTarget = [
 	{"name": "シリーズ：せつ菜の料理", "condition": "tag:Meshimazu"},
 	{"name": "シリーズ：スクールアイドル達の生配信", "condition": "tag:Broadcast"},
 	{"name": "シリーズ：者どもの森", "condition": "tag:Monodomo"},
+	{"name": "シリーズ：真姫の髪", "condition": "tag:MakiHair"},
 	{"name": "シリーズ：絵里のカロリー事情", "condition": "tag:Calorie"},
 	{"name": "シリーズ：小原家のヘリコプター", "condition": "tag:Helicopter"},
 	{"name": "シリーズ：プールのステージ", "condition": "tag:Pool"},
@@ -284,7 +287,7 @@ function initialize() {
 			}, 0);
 			if(tagError){ return acc + tagError; }
 
-			if(!("text" in story)){ return acc;}
+			if(!("text" in story) || story.text === ""){ return acc;}
 			const TextTemp = story.text.split('\n');
 			return acc + TextTemp.reduce( (acc2, val2, index2) => {
 				const ErrorLocation = ' (' + story.date
