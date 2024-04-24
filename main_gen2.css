@@ -162,15 +162,43 @@ h3:before {
 
 
 /* ■ボタン */
-.button-round, .button-square {
+.button-round, .button-square, .button-hexa, .button-flat {
+	position: relative;
 	display: inline-block;
+    vertical-align: middle;
 	word-break: keep-all;
 	margin: 1px 5px 1px 0;
-	padding: 0px 6px;
 	height: 26px;
+}
+
+.button-round, .button-square {
+	padding: 0px 6px;
 	line-height: 22px;
 	border: 2px solid;
 }
+
+.button-hexa {
+	padding: 0px 10px;
+	line-height: 26px;
+	border: none;
+	clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0 50%);
+}
+
+.button-hexa::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 0;
+	border-style: solid;
+	border-color: inherit;
+	border-width: 13px 0px 13px 0px;
+	clip-path: polygon(0 50%, 2.3px 50%, 9.1px 1.9px, calc(100% - 9.1px) 1.9px, calc(100% - 2.3px) 50%,
+	calc(100% - 9.1px) calc(100% - 1.9px), 9.1px calc(100% - 1.9px), 2.3px 50%,
+	0 50%, 0 100%, 100% 100%, 100% 50%, 100% 0, 0 0);
+}
+
 .button-round {
 	border-radius: 50vh;
 }
