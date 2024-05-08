@@ -78,7 +78,12 @@ article:not(.cancelled) .article-box-title {
 	font-size: small;
 	border-bottom: solid 1px #bbb;
 }
-
+.article-box-tube {
+	flex-direction: column;
+}
+.length {
+	font-size: 70%;
+}
 .setlist { /*セットリスト*/
 	width: min(300px, 100%);
 	border: solid 1px #9ce;
@@ -116,6 +121,7 @@ article:not(.cancelled) .article-box-title {
 		border-bottom: solid 1px #c0b0b8;
 	}
 	.article-box-tube {
+		justify-content: center;
 		border-bottom: solid 1px #bbb;
 	}
 	.article-box-date, .article-box-desc, .article-box-tags{
@@ -148,6 +154,7 @@ article:not(.cancelled) .article-box-title {
 		height: 72px;
 		overflow: hidden;
 		border: solid 2px #936;
+		margin: 3px 0;
 	}
 	.article-box-tube img {
 		width: 120px;
@@ -182,10 +189,10 @@ article:not(.cancelled) .article-box-title {
 
 	<section id="CastedLiveList">
 		<h2>動画一覧</h2>
-		<p>下部のプルダウンメニューから期間を選択すると、その期間に配信された動画の情報が表示されます。
+		<p>下部のプルダウンメニューから絞り込み条件を選択すると、条件に合致する配信の情報が表示されます。
 		</p>
 		<p>「動画リンク」列のサムネイル、または「動画へ」と書かれたリンクをクリック/タップすると、YouTubeの動画を開きます。<br>
-		タグのキャラクター欄は、実際に配信に参加したメンバーを表しています。</p>
+		タグ欄の出演キャラクターは、アプリ内の挙動（With Starの割り振り対象）ではなく、実際に出演したかどうかでタグを付与しているため、アプリ内の絞り込みとは結果が異なる場合があります。ご了承ください。</p>
 		<div id="PullDown-Container">
 			<label for="PullDownList">絞り込み</label>
 			<select id="PullDownList" onChange="DrawLiveList(this.value)">
@@ -200,10 +207,16 @@ article:not(.cancelled) .article-box-title {
 	</section>
 
 	<section id="History">
-		<h2>更新履歴（動画掲載以外）</h2>
+		<h2>更新履歴（動画一覧への掲載以外）</h2>
 		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 		<div class="history-container">
 			<details open>
+				<summary><span class="date">2024/05/08</span> - 機能追加</summary>
+				<div>
+					<span class="icon-new"></span>配信時間の情報を追加（PC向けレイアウトのみ。順次対応予定）
+				</div>
+			</details>
+			<details>
 				<summary class="important"><span class="date">2024/04/14</span> - 104期新入生参戦に伴う調整</summary>
 				<div>
 					<span class="icon-new"></span>吟子、小鈴、姫芽の名前表示に対応<br>
