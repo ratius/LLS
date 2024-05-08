@@ -1,21 +1,21 @@
 //■タグ欄データ
 const TagData = {
-	"meets"     : {"name": "With×MEETS" , "r":160, "g":112, "b": 96, "style": "square" },
-	"live"      : {"name": "Fes×LIVE"   , "r": 80, "g":128, "b":128, "style": "square" },
-	"cancelled" : {"name": "配信中止"    , "r":128, "g":128, "b":128, "style": "square" },
+	"meets"     : {"name": "With×MEETS" , "r":160, "g":112, "b": 96, "style": "square"},
+	"live"      : {"name": "Fes×LIVE"   , "r": 80, "g":128, "b":128, "style": "square"},
+	"cancelled" : {"name": "配信中止"    , "r":128, "g":128, "b":128, "style": "square"},
 	
-	"YouTube" : {"name": "YouTubeライブ", "r":224, "g":128, "b": 128, "style": "square" },
-	"SayakaRadio" : {"name": "村野さやかのラジオ", "r":160, "g":112, "b": 96, "style": "square" },
+	"YouTube" : {"name": "YouTubeライブ", "r":224, "g":128, "b": 128, "style": "square"},
+	"SayakaRadio" : {"name": "村野さやかのラジオ", "r":160, "g":112, "b": 96, "style": "square"},
 	
-	"Kaho"    : {"name": "花帆"   , "r":248, "g":181, "b":  0, "style": "round" },
-	"Sayaka"  : {"name": "さやか" , "r": 83, "g":131, "b":195, "style": "round" },
-	"Kozue"   : {"name": "梢"     , "r":104, "g":190, "b":141, "style": "round" },
-	"Tsuzuri" : {"name": "綴理"   , "r":186, "g": 38, "b": 54, "style": "round" },
-	"Rurino"  : {"name": "瑠璃乃" , "r":231, "g": 96, "b":158, "style": "round" },
-	"Megumi"  : {"name": "慈"     , "r":200, "g":194, "b":198, "style": "round" },
-	"Ginko"   : {"name": "吟子"   , "r":162, "g":215, "b":221, "style": "round" },
-	"Kosuzu"  : {"name": "小鈴"   , "r":250, "g":215, "b":100, "style": "round" },
-	"Hime"    : {"name": "姫芽"   , "r":157, "g":141, "b":226, "style": "round" },
+	"Kaho"    : {"name": "花帆"   , "r":248, "g":181, "b":  0, "style": "round"},
+	"Sayaka"  : {"name": "さやか" , "r": 83, "g":131, "b":195, "style": "round"},
+	"Kozue"   : {"name": "梢"     , "r":104, "g":190, "b":141, "style": "round"},
+	"Tsuzuri" : {"name": "綴理"   , "r":186, "g": 38, "b": 54, "style": "round"},
+	"Rurino"  : {"name": "瑠璃乃" , "r":231, "g": 96, "b":158, "style": "round"},
+	"Megumi"  : {"name": "慈"     , "r":200, "g":194, "b":198, "style": "round"},
+	"Ginko"   : {"name": "吟子"   , "r":162, "g":215, "b":221, "style": "round"},
+	"Kosuzu"  : {"name": "小鈴"   , "r":250, "g":215, "b":100, "style": "round"},
+	"Hime"    : {"name": "姫芽"   , "r":157, "g":141, "b":226, "style": "round"},
 };
 
 const SortTarget = [
@@ -72,38 +72,60 @@ function DrawLiveList(conditions = ''){
 		return text;
 	});
 	
+	//秒数を「h時間mm分ss秒」形式に変換
+	const showLength = ( len => {
+		len = parseInt(len);
+		if(isNaN(len)){ return '不明';}
+		if(len < 0){ console.error(len + ' is not a positive integer'); return '';}
+		len = Math.floor(len);
+		if(len < 60){ return len + '秒'; }
+		if(len < 3600){ return Math.floor(len/60) + '分' + ('0' + (len%60)).slice(-2) + '秒'; }
+
+		return Math.floor(len/3600) + '時間'
+		+ ('0' + Math.floor((len%3600)/60)).slice(-2) + '分'
+		+ ('0' + (len%60)).slice(-2) + '秒';
+	});
+	
 	document.getElementById("LiveList").innerHTML = filteredData.map( connect => {
-		const isCancelled = (connect.tags.find( (e) => e === 'cancelled') ? 'cancelled' : '');
+		const isCancelled = (connect['tags'].find( (e) => e === 'cancelled') ? 'cancelled' : '');
+		const videoLength = 
+		('length' in connect ? (Array.isArray(connect['length']) ? connect['length'] : [connect['length']]) :[]);
 		const videoContent =
-		('tube' in connect && connect.tube ?
-			`<a href="https://www.youtube.com/watch?v=${connect.tube}" target="_blank">
-				<img src="https://img.youtube.com/vi/${connect.tube.split('&')[0]}/default.jpg" alt="${connect.title}" loading="lazy" class="pc-only">
+		('tube' in connect && connect['tube'] ?
+			`<a href="https://www.youtube.com/watch?v=${connect['tube']}" target="_blank">
+				<img src="https://img.youtube.com/vi/${connect['tube'].split('&')[0]}/default.jpg" alt="${connect['title']}" loading="lazy" class="pc-only">
 				<span class="sp-only">動画へ</span>
 			</a>`
+			+ ('length' in connect ?
+				`<span class="length pc-only">本編：${showLength(videoLength[0])}</span>`
+				+ (connect['length'].length >1 ?
+					`<span class="length pc-only">AFTER：${showLength(videoLength[1])}</span>`
+				:'')
+			:'')
 		:'');
-		const descContent = ('desc' in connect && connect.desc !== "" ? 
-			DecorateText(connect.desc)
+		const descContent = ('desc' in connect && connect['desc'] !== "" ? 
+			DecorateText(connect['desc'])
 			//With×MEETS AFTERが無いことを示す一文を表示
-			+ (connect.tags.find(m => m === 'noafter') ? "<br>この配信ではWith×MEETS AFTERは行われなかった。" : "")
+			+ (connect['tags'].find(m => m === 'noafter') ? "<br>この配信ではWith×MEETS AFTERは行われなかった。" : "")
 			//セットリストを表示
 			+ ('setlist' in connect ? 
 				`<details class="setlist">
 					<summary class="setlist-summary">セットリスト (クリックで展開)</summary>
 					<ol class="setlist-ol">
-						${connect.setlist.map(program =>
+						${connect['setlist'].map(program =>
 						`<li>${(program === 'MC' ? `<i class="setlist-mc">MC</i>` : program)}</li>`).join('')}
 					</ol>
 				</details>`
 			:'')
 		:'');
-		const tagsContent = connect.tags.map( tag => {
+		const tagsContent = connect['tags'].map( tag => {
 			if(tag in TagData){ return DrawCharName(tag); }
 		}).join('')
 		
 		return `
 		<article class="${isCancelled}">
-			<div class="article-box-date">${connect.date.replaceAll('-', '/')}</div>
-			<div class="article-box-title ${isCancelled}">${connect.title}</div>
+			<div class="article-box-date">${connect['date'].replaceAll('-', '/')}</div>
+			<div class="article-box-title ${isCancelled}">${connect['title']}</div>
 			<div class="article-box-tube ${isCancelled}">${videoContent}</div>
 			<div class="article-box-desc">${descContent}</div>
 			<div class="article-box-tags">${tagsContent}</div>
