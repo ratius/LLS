@@ -60,6 +60,7 @@
 	width: 40px;
 	height: 40px;
 	font-size: large;
+	text-align: center;
 }
 
 #CurrentDate {
@@ -73,8 +74,8 @@
 
 #CalendarGridContainer {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-	padding: 10px 15px;
+	grid-template-columns: repeat(7, 33px);
+	padding: 10px 10px;
 	gap: 4px;
 	aspect-ratio: 1 / 1;
 }
