@@ -36,6 +36,9 @@ const SortTarget = [
 	{"name": "配信場所：綴理の部屋",   "condition": "tag:room-Tsuzuri"},
 	{"name": "配信場所：瑠璃乃の部屋", "condition": "tag:room-Rurino"},
 	{"name": "配信場所：慈の部屋",     "condition": "tag:room-Megumi"},
+	{"name": "配信場所：吟子の部屋",   "condition": "tag:room-Ginko"},
+	{"name": "配信場所：小鈴の部屋",   "condition": "tag:room-Kosuzu"},
+	{"name": "配信場所：姫芽の部屋",   "condition": "tag:room-Hime"}
 ];
 
 //■■出力
