@@ -183,63 +183,72 @@
 	"title": "5月度Fes×LIVEありがとう配信！",
 	"desc": "先日のFes×LIVEを4人で振り返る。この回より、With×MEETS AFTERが配信されるようになった。",
 	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "room-club"],
-	"tube": "pIm7NNQiinc"
+	"tube": "pIm7NNQiinc",
+	"length": [1115, -1]
 },
 {
 	"date": "2023-06-03",
 	"title": "村野さやかのラジオ",
 	"desc": "個人配信にも慣れてきたさやか。トークの上手さを花帆に褒められたのをきっかけに、ラジオのような配信に挑戦！<br>With×MEETS AFTERで、配信名の略称が「さやラジ」、リスナーネームが「村人」に決定。",
 	"tags": ["meets", "SayakaRadio", "Sayaka", "room-Sayaka"],
-	"tube": "wflHX_IFknw"
+	"tube": "wflHX_IFknw",
+	"length": [1002, 341]
 },
 {
 	"date": "2023-06-05",
 	"title": "衣替えということは・・・？",
 	"desc": "夏に向けて思いを馳せる二人。花帆、さやかの夏制服3Dモデルがお披露目。",
 	"tags": ["meets", "Kaho", "Sayaka", "room-club"],
-	"tube": "ogLFDwHmtM8"
+	"tube": "ogLFDwHmtM8",
+	"length": [989, -1]
 },
 {
 	"date": "2023-06-08",
 	"title": "蓮ノ空の魅力を語りたい！",
 	"desc": "花帆の個人配信。スクールアイドルクラブの魅力を存分に語る！",
 	"tags": ["meets", "Kaho", "room-Kaho"],
-	"tube": "PRIlme36oQM"
+	"tube": "PRIlme36oQM",
+	"length": [1160, -1]
 },
 {
 	"date": "2023-06-10",
 	"title": "入学して２ヶ月経ちました",
 	"desc": "蓮ノ空に通い始めて早2ヶ月。花帆とさやかが、お世話になっている先輩への感謝の気持ちを語る。<br>活動記録第5話に関連する言及あり。",
 	"tags": ["meets", "Kaho", "Sayaka", "room-Kaho"],
-	"tube": "2fHS1QHx4Zg"
+	"tube": "2fHS1QHx4Zg",
+	"length": [850, -1]
 },
 {
 	"date": "2023-06-12",
 	"title": "ジェスチャークイズ。",
 	"desc": "綴理先輩とジェスチャークイズで遊ぼう！ 綴理の独特すぎる表現に、視聴者も大混乱！？<br>綴理の夏制服3Dモデルがお披露目。",
 	"tags": ["meets", "Tsuzuri", "room-club"],
-	"tube": "Qs5ubEHMDwM"
+	"tube": "Qs5ubEHMDwM",
+	"length": [1056, -1]
 },
 {
 	"date": "2023-06-15",
 	"title": "乙宗 梢 生誕祭",
-	"desc": "6月15日は梢ちゃんの誕生日！ みんなでお祝いしよう！<br>梢の夏制服3Dモデルがお披露目。",
+	"desc": "6月15日は梢ちゃんの誕生日！ みんなでお祝いしよう！<br>梢の夏制服3Dモデルがお披露目。AFTERはほぼスクショタイム。",
 	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "room-club"],
-	"tube": "y1ngNblH8gk"
+	"tube": "y1ngNblH8gk",
+	"length": [952, 412]
 },
 {
 	"date": "2023-06-17",
 	"title": "部活動報告",
 	"desc": "部長としての目線で、スクールアイドル部の様子を報告する梢。<br>本編では活動記録2023年度第8話、AFTERでは5月29日のWith×MEETSに関連する言及あり。",
 	"tags": ["meets", "Kozue", "room-Kozue"],
-	"tube": "uPuadnz9WE0"
+	"tube": "uPuadnz9WE0",
+	"length": [1016, -1]
 },
 {
 	"date": "2023-06-19",
 	"title": "村野さやかのラジオ 第2回",
 	"desc": "ラジオ配信第2回。今回からは、一般公募されたお便りを読み上げていく。直前の梢の単独配信に関する言及あり。<br>AFTERにて、さやか本人の肩書きとして「村長」を使っていくことが公言された。",
 	"tags": ["meets", "SayakaRadio", "Sayaka", "room-Sayaka"],
-	"tube": "mqyhuQUaHmc"
+	"tube": "mqyhuQUaHmc",
+	"length": [1195, 335] 
 },
 {
 	"date": "2023-06-22",
@@ -247,7 +256,7 @@
 	"desc": "DOLLCHESTRAの二人の、撫子祭への意気込みや、6月中旬にあった体育祭の思い出を語る。<br>綴理語録：「餅巾着」はTragic Dropsのサビ終わり、指で四角形をなぞる振り付けの部分のこと。",
 	"tags": ["meets", "Sayaka", "Tsuzuri", "room-club"],
 	"tube": "LLEZ8-TEHYI",
-	"length": [1067, ""]
+	"length": [1067, -1]
 },
 {
 	"date": "2023-06-24",
@@ -260,7 +269,8 @@
 	"title": "撫子祭直前配信",
 	"desc": "月末のFes×LIVE（撫子祭）への期待や、意気込みを改めて語る。<br>当初は花帆も出演する予定であったが、キャストの楡井希実氏の体調不良により、予定を変更して3人での配信になった{{X:出演者変更のお知らせ:1673136658315890688}}。",
 	"tags": ["meets", "Sayaka", "Kozue", "Tsuzuri", "room-club"],
-	"tube": "kn-MgGPvI-c"
+	"tube": "kn-MgGPvI-c",
+	"length": [951, 353]
 },
 {
 	"date": "2023-06-29",
@@ -276,28 +286,32 @@
 	"title": "撫子祭ありがとう配信",
 	"desc": "撫子祭も無事に終了。4人の感想や、ファンに向けた感謝の気持ちを語る。",
 	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "room-club"],
-	"tube": "CmYK6gsf2sE"
+	"tube": "CmYK6gsf2sE",
+	"length": [1056, -1]
 },
 {
 	"date": "2023-07-03",
 	"title": "パジャマでお話しよう！",
 	"desc": "花帆が、ぐっすり寝る方法や、撫子祭の感想などを語る。ついでに髪留めをいじられたり…。",
 	"tags": ["meets", "Kaho", "room-Kaho", "noafter"],
-	"tube": "kb3hvXOMiI0"
+	"tube": "kb3hvXOMiI0",
+	"length": 1069
 },
 {
 	"date": "2023-07-06",
 	"title": "蓮ノ空２年生の会",
-	"desc": "梢と綴理が先輩としての目線で、後輩の魅力や、後輩への感謝を存分に語る！<br>綴理語録：『そら豆』はフィギュアスケートの動き、足を高く引っ張り上げる姿勢（ビールマンポジション）。",
+	"desc": "梢と綴理が先輩としての目線で、後輩の魅力や、後輩への感謝を存分に語る！AFTERはほぼスクショタイム。<br>綴理語録：『そら豆』はフィギュアスケートの動き、足を高く引っ張り上げる姿勢（ビールマンポジション）。",
 	"tags": ["meets", "Kozue", "Tsuzuri", "room-club"],
-	"tube": "o5I9hVdRY7A"
+	"tube": "o5I9hVdRY7A",
+	"length": [900,401]
 },
 {
 	"date": "2023-07-08",
 	"title": "もうすぐ１学期が終わりますね",
 	"desc": "もうすぐ期末試験に夏休みと、忙しくなる頃。そんな中、さやかが一人で雑談配信。",
 	"tags": ["meets", "Sayaka", "room-Sayaka"],
-	"tube": "dbakDnoSeb8"
+	"tube": "dbakDnoSeb8",
+	"length": [959, 343]
 },
 {
 	"date": "2023-07-10",
@@ -310,51 +324,58 @@
 {
 	"date": "2023-07-13",
 	"title": "７月度 部活動報告",
-	"desc": "期末試験も無事終了。部長の梢が部活動のことについて報告。そして、機械音痴っぷりも…。",
+	"desc": "期末試験も無事終了。部長の梢が部活動のことについて報告。そして、機械音痴っぷりも…。音量小さめ。",
 	"tags": ["meets", "Kozue", "room-Kozue"],
-	"tube": "t3mnkusRoWU"
+	"tube": "t3mnkusRoWU",
+	"length": [885, 322]
 },
 {
 	"date": "2023-07-15",
 	"title": "蓮ノ空の配信に出たい人がいるらしい…!?",
-	"desc": "スペシャルゲストとして、仮入部中の瑠璃乃がスクールアイドルコネクトに初登場！<br>配信時点では瑠璃乃が未加入扱いであったため、この配信で獲得したWith Starを瑠璃乃に割り振ることはできない。",
+	"desc": "スペシャルゲストとして、仮入部中の瑠璃乃がスクールアイドルコネクトに初登場！<br>配信時点では瑠璃乃は未加入扱いであったため、この配信で獲得したWith Starを瑠璃乃に割り振ることはできない。",
 	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "room-club"],
-	"tube": "SwqT5S5VbFQ"
+	"tube": "SwqT5S5VbFQ",
+	"length": [676, 406]
 },
 {
 	"date": "2023-07-17",
 	"title": "ボクも雑談してみたい。",
 	"desc": "綴理が雑談配信に挑戦。綴理の独特すぎる空気に、視聴者も困惑！？<br>前回の瑠璃乃登場の話題にもちょこっとだけ触れているため、そちらを先に視聴することを推奨。",
 	"tags": ["meets", "Tsuzuri", "room-Tsuzuri"],
-	"tube": "xYWicho_RH0"
+	"tube": "xYWicho_RH0",
+	"length": [739, 387]
 },
 {
 	"date": "2023-07-22",
 	"title": "スクールアイドルクラブからご報告",
-	"desc": "スクールアイドル部に正式加入した瑠璃乃が、改めてみんなに自己紹介！<br>配信時点では瑠璃乃が未加入扱いであったため、この配信で獲得したWith Starを瑠璃乃に割り振ることはできない。",
+	"desc": "スクールアイドル部に正式加入した瑠璃乃が、改めてみんなに自己紹介！<br>配信時点では瑠璃乃は未加入扱いであったため、この配信で獲得したWith Starを瑠璃乃に割り振ることはできない。",
 	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "room-club", "noafter"],
-	"tube": "8VE4QhDwT0w"
+	"tube": "8VE4QhDwT0w",
+	"length": 869
 },
 {
 	"date": "2023-07-24",
 	"title": "蓮ノ空１年生の会！",
-	"desc": "さやかの部屋から、1年生3人が雑談配信。横画面配信でさやかの部屋がよく分かる。<br>さやかの「おやさいさんシリーズ」のトマトの名前が「トマティー」に決定。<br>配信時点では瑠璃乃が未加入扱いであったため、この配信で獲得したWith Starを瑠璃乃に割り振ることはできない。",
+	"desc": "さやかの部屋から、1年生3人が雑談配信。横画面配信でさやかの部屋がよく分かる。<br>さやかの「おやさいさんシリーズ」のトマトの名前が「トマティー」に決定。<br>配信時点では瑠璃乃は未加入扱いであったため、この配信で獲得したWith Starを瑠璃乃に割り振ることはできない。",
 	"tags": ["meets", "Kaho", "Sayaka", "Rurino", "room-Sayaka"],
-	"tube": "T2mjEvzjnMQ"
+	"tube": "T2mjEvzjnMQ",
+	"length": [1038, -1]
 },
 {
 	"date": "2023-07-27",
 	"title": "大沢瑠璃乃の個人配信だ！",
-	"desc": "アプリ上で大沢瑠璃乃が正式加入してから初めてとなる瑠璃乃の出演。蓮ノ空のメンバーを家電に例えると……？ この配信で瑠璃乃の部屋の内装が初めて描写された。",
+	"desc": "アプリ上で大沢瑠璃乃が正式加入してから初めてとなる瑠璃乃の出演。蓮ノ空のメンバーを家電に例えると……？ この配信で、瑠璃乃の部屋の内装が初めて描写された。",
 	"tags": ["meets", "Rurino", "room-Rurino"],
-	"tube": "H85epoTX7sg"
+	"tube": "H85epoTX7sg",
+	"length": [1306, -1]
 },
 {
 	"date": "2023-07-28",
 	"title": "７月度Fes×LIVE直前配信",
 	"desc": "毎月恒例、月末のFes×LIVEの見どころや、Fes×LIVEへ向けての意気込みを語る。",
 	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "room-club"],
-	"tube": "gx8Kq2q1nO4"
+	"tube": "gx8Kq2q1nO4",
+	"length": [1152, -1]
 },
 {
 	"date": "2023-07-31",
@@ -392,7 +413,7 @@
 {
 	"date": "2023-08-12",
 	"title": "合宿ラジオ",
-	"desc": "当初は瑠璃乃の個人配信が行われる予定であったが{{X:当初の予定表:1688490170839183360}}、8月上旬に配信中止が相次いだことにより内容が変更された。<br>梢の都合により部屋を映せないという建前で、この回は音声のみの配信で3Dモデルは未登場。花帆は疲れて寝てしまったという扱いで不参加。<br>慈も少しだけ登場するが、配信時点では慈が未加入扱いであったため、この配信で獲得したWith Starを慈に割り振ることはできない。",
+	"desc": "当初は瑠璃乃の個人配信が行われる予定であったが{{X:当初の予定表:1688490170839183360}}、8月上旬に配信中止が相次いだことにより内容が変更された。<br>梢の都合により部屋を映せないという建前で、この回は音声のみの配信で3Dモデルは未登場。花帆は疲れて寝てしまったという扱いで不参加。<br>慈も少しだけ登場するが、配信時点では慈は未加入扱いであったため、この配信で獲得したWith Starを慈に割り振ることはできない。",
 	"tags": ["meets", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "noafter"],
 	"tube": "4PW3o5haQyw",
 	"length": 1071
@@ -492,7 +513,7 @@
 {
 	"date": "2023-09-14",
 	"title": "ルリの英語力をとくと見よ！",
-	"desc": "当初は瑠璃乃の個人配信の予定であった{{X:予定表:1701113345401872468}}が、キャストの体調不良により配信中止となった{{X:配信中止のお知らせ:1701869033921089759}}。代わりに、WithStarを獲得するための「プレゼントボックス」という配信枠が提供された。",
+	"desc": "当初は瑠璃乃の個人配信の予定であった{{X:予定表:1701113345401872468}}が、キャストの体調不良により配信中止となった{{X:配信中止のお知らせ:1701869033921089759}}。代わりに、With Starを獲得するための「プレゼントボックス」という配信枠が提供された。",
 	"tags": ["meets", "cancelled"]
 },
 {
@@ -908,7 +929,7 @@
 {
 	"date": "2024-02-22",
 	"title": "ただいまスリーズブーケ！",
-	"desc": "当初はスリーズブーケによる配信の予定であった{{X:予定表:1759510637800296905}}が、キャストの花宮初奈氏の体調不良により配信中止となった{{X:配信中止のお知らせ:1760475842856317001}}。代わりに、WithStarを獲得するための「プレゼントボックス」という配信枠が提供された。",
+	"desc": "当初はスリーズブーケによる配信の予定であった{{X:予定表:1759510637800296905}}が、キャストの花宮初奈氏の体調不良により配信中止となった{{X:配信中止のお知らせ:1760475842856317001}}。代わりに、With Starを獲得するための「プレゼントボックス」という配信枠が提供された。",
 	"tags": ["meets", "cancelled", "room-Tsuzuri"],
 	"tube": ""
 },
@@ -1009,78 +1030,88 @@
 	"date": "2024-03-30",
 	"title": "3月度Fes×LIVE振り返り配信",
 	"desc": "103期最後の配信。Fes×LIVEに加え、103期のスクールアイドルクラブの活動も振り返る。<br>今回の配信から、部室に飾られている写真が、沙知先輩と7人で撮った写真に変わった。",
-	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi"],
+	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "room-club"],
 	"tube": "y8S58aSAJ6c"
 },
 {
 	"date": "2024-04-01",
 	"title": "ここ最近の様子をお伝えするぜ",
-	"desc": "",
-	"tags": ["meets", "Kaho", "Sayaka", "Rurino"],
-	"tube": "zBgzG9FTURk"
+	"desc": "エイプリルフールということで、最初から最後まで嘘だらけのハチャメチャな配信。梢センパイはギャルになり、綴理は早起きになり、そして慈は……留年！？ {{L:パズルゲーム://www.lovelive-anime.jp/hasunosora/puchihasu/}}は大作ではないものの、遊べるものが本当に登場した。",
+	"tags": ["meets", "Kaho", "Sayaka", "Rurino", "room-Rurino"],
+	"tube": "zBgzG9FTURk",
+	"length": [1138, 339]
 },
 {
 	"date": "2024-04-04",
 	"title": "進級したよ！",
 	"desc": "",
-	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi"],
-	"tube": "DCKEyQKjyN0"
+	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "room-club"],
+	"tube": "DCKEyQKjyN0",
+	"length": [1154, -1]
 },
 {
 	"date": "2024-04-06",
 	"title": "みらぱだって練習してるし！",
 	"desc": "",
-	"tags": ["meets", "Rurino", "Megumi"],
-	"tube": "tzXZ3s7_THk"
+	"tags": ["meets", "Rurino", "Megumi", "room-lesson"],
+	"tube": "tzXZ3s7_THk",
+	"length": [915, -1]
 },
 {
 	"date": "2024-04-08",
 	"title": "入学1年記念雑談！",
 	"desc": "",
-	"tags": ["meets", "Kaho", "Sayaka"],
-	"tube": "KOVZfeKx7tU"
+	"tags": ["meets", "Kaho", "Sayaka", "room-Kaho"],
+	"tube": "KOVZfeKx7tU",
+	"length": [1030, -1]
 },
 {
 	"date": "2024-04-11",
 	"title": "蓮ノ空3年生の会",
 	"desc": "",
-	"tags": ["meets", "Kozue", "Tsuzuri", "Megumi"],
-	"tube": "PC778-JHH94"
+	"tags": ["meets", "Kozue", "Tsuzuri", "Megumi", "room-Kozue"],
+	"tube": "PC778-JHH94",
+	"length": [861, -1]
 },
 {
 	"date": "2024-04-13",
 	"title": "私たちの新しい仲間です",
 	"desc": "重大発表――それは104期生のスクールアイドルクラブへの加入！ 百生吟子、徒町小鈴、安養寺姫芽の3人が加わり、スクールアイドルクラブは9人に！",
 	"tags": ["meets", "YouTube", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime", "noafter", "room-club"],
-	"tube": "sdzlTpmgQ8k"
+	"tube": "sdzlTpmgQ8k&t=410",
+	"length": [1350]
 },
 {
 	"date": "2024-04-18",
 	"title": "蓮ノ空104期生の会！",
 	"desc": "先輩達は{{L:ライブで遠征中:https://www.lovelive-anime.jp/hasunosora/live-event/live_detail.php?p=BLW}}なので、今回の配信は入部したばかりの104期生の3人がお届け。会話を通して、まだ会って間もない3人の親睦を深めていく。",
 	"tags": ["meets", "Ginko", "Kosuzu", "Hime", "room-club"],
-	"tube": "MiiKkBgK5vQ"
+	"tube": "MiiKkBgK5vQ",
+	"length": [1312, -1]
 },
 {
 	"date": "2024-04-24",
 	"title": "姫芽ちゃんにインタビューだ！",
 	"desc": "",
-	"tags": ["meets", "Rurino", "Hime"],
-	"tube": "egpNasHViYc"
+	"tags": ["meets", "Rurino", "Hime", "room-Hime"],
+	"tube": "egpNasHViYc",
+	"length": [843, -1]
 },
 {
 	"date": "2024-04-25",
 	"title": "小鈴さんをインタビューします",
 	"desc": "",
-	"tags": ["meets", "Sayaka", "Kosuzu"],
-	"tube": "S5qyC80Gkqg"
+	"tags": ["meets", "Sayaka", "Kosuzu", "room-Kosuzu"],
+	"tube": "S5qyC80Gkqg",
+	"length": [1129, -1]
 },
 {
 	"date": "2024-04-27",
 	"title": "吟子ちゃんインタビュー！",
 	"desc": "",
-	"tags": ["meets", "Kaho", "Ginko"],
-	"tube": "lzkyZGs1DCo"
+	"tags": ["meets", "Kaho", "Ginko", "room-Ginko"],
+	"tube": "lzkyZGs1DCo",
+	"length": [966, -1]
 },
 {
 	"date": "2024-04-29",
@@ -1095,46 +1126,105 @@
 	"date": "2024-05-02",
 	"title": "104期生でFes×LIVEを振り返ろう",
 	"desc": "",
-	"tags": ["meets", "Ginko", "Kosuzu", "Hime"],
-	"tube": ""
+	"tags": ["meets", "Ginko", "Kosuzu", "Hime", "room-club"],
+	"tube": "rWQtub9s8fs",
+	"length": [1435, -1]
 },
 {
 	"date": "2024-05-04",
 	"title": "魔法の布が存在するみたい・・・",
 	"desc": "",
-	"tags": ["meets", "Tsuzuri"],
-	"tube": ""
+	"tags": ["meets", "Tsuzuri", "room-club"],
+	"tube": "9GGFw2drV6s",
+	"length": [787, -1]
 },
 {
 	"date": "2024-05-06",
 	"title": "今日は全員敬語禁止ね〜！",
 	"desc": "",
-	"tags": ["meets", "Kaho", "Sayaka", "Rurino"],
-	"tube": ""
+	"tags": ["meets", "Kaho", "Sayaka", "Rurino", "room-Sayaka"],
+	"tube": "Z96cqp2Jj0U",
+	"length": [1152, -1]
 },
 {
 	"date": "2024-05-09",
 	"title": "めぐちゃん必殺ASMRのコーナー！",
-	"desc": "",
+	"desc": "この回は3Dモデルの登場はなく、慈が描いた一枚絵が常時表示されたままであった。",
 	"tags": ["meets", "Megumi"],
-	"tube": ""
+	"tube": "BEXF6B3V94M",
+	"length": [841, -1]
 },
 {
 	"date": "2024-05-11",
 	"title": "なかよくなろ〜",
 	"desc": "",
-	"tags": ["Ginko", "Kosuzu", "Hime"],
-	"tube": ""
+	"tags": ["meets", "Ginko", "Kosuzu", "Hime", "room-Kosuzu"],
+	"tube": "O8zCdYcGb-M",
+	"length": [1104, -1]
 },
 {
-	"date": "2099-05-13",
-	"title": "未定",
+	"date": "2024-05-13",
+	"title": "朗読を二人でします",
 	"desc": "",
-	"tags": ["meets", "Sayaka", "Kozue"],
+	"tags": ["meets", "Sayaka", "Kozue", "room-Kozue"],
+	"tube": "BD_0OJRDi_I",
+	"length": [1019, -1]
+},
+{
+	"date": "2024-05-22",
+	"title": "日野下花帆生誕祭 〜17歳編〜",
+	"desc": "",
+	"tags": ["meets", "Kaho", "Kozue", "Ginko", "room-lesson"],
+	"tube": "Sz3o5Echc-A",
+	"length": [1114, -1]
+},
+{
+	"date": "2024-05-25",
+	"title": "小鈴さんも交えてお話ししましょう",
+	"desc": "DOLLCHESTRAの3人で雑談配信。綴理節に翻弄されたり、コメントしてくれたファンの名前を読み上げたり。",
+	"tags": ["meets", "Sayaka", "Tsuzuri", "Kosuzu", "room-Kosuzu"],
+	"tube": "mgERQKubK4M",
+	"length": [1041, -1]
+},
+{
+	"date": "2024-05-27",
+	"title": "みらくらぱーく！(3人のすがた)",
+	"desc": "",
+	"tags": ["meets", "Rurino", "Megumi", "Hime", "room-Hime"],
+	"tube": "SJARVjulwQw",
+	"length": [866, -1]
+},
+{
+	"date": "2024-05-30",
+	"title": "修学旅行の思い出トーク！",
+	"desc": "修学旅行から戻ってきた3年生たちが、修学旅行の感想を語る！ 3人の願いを書いた絵馬も公開された。<br>この配信より、慈の部屋に謎のトロフィーが飾られるようになった。",
+	"tags": ["meets", "Kozue", "Tsuzuri", "Megumi", "room-Megumi"],
+	"tube": "",
+	"length": [809, 333]
+},
+{
+	"date": "2024-06-01",
+	"title": "百生吟子 個人配信",
+	"desc": "",
+	"tags": ["meets", "Ginko"],
 	"tube": ""
 },
 {
-	"date": "2099-05-01",
+	"date": "2024-06-03",
+	"title": "徒町の個人配信です！",
+	"desc": "",
+	"tags": ["meets", "Kosuzu"],
+	"tube": ""
+},
+{
+	"date": "2024-06-06",
+	"title": "安養寺姫芽の個人配信〜",
+	"desc": "",
+	"tags": ["meets", "Hime"],
+	"tube": ""
+},
+{
+	"date": "2099-06-01",
 	"title": "未定",
 	"desc": "",
 	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime"],
