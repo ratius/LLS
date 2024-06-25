@@ -19,6 +19,8 @@ const TagData = {
 };
 
 const SortTarget = [
+	{"name": "debug",  "condition": "after:2023-05-25 before:2023-07-30 extag:cancelled tag:meets"},
+	{"name": "debug",  "condition": "after:2023-09-22 before:2023-09-30 extag:cancelled"},
 	{"name": "103期 上半期（2023年4月 - 2023年9月）",  "condition": "after:2023-04-01 before:2023-09-30"},
 	{"name": "103期 下半期（2023年10月 - 2024年3月）", "condition": "after:2023-10-01 before:2024-03-31"},
 	{"name": "104期 上半期（2024年4月 - 2024年9月）",  "condition": "after:2024-04-01 before:2024-09-30"},
@@ -61,6 +63,10 @@ function DrawLiveList(conditions = ''){
 		else if(c.startsWith('tag:')) {
 			const tag = c.split(':')[1];
 			filteredData = filteredData.filter( connect => connect.tags && connect.tags.includes(tag));
+		}
+		else if(c.startsWith('extag:')) {
+			const tag = c.split(':')[1];
+			filteredData = filteredData.filter( connect => connect.tags && !connect.tags.includes(tag));
 		}
 	});
 	if(filteredData === []){ return false;}
@@ -106,21 +112,26 @@ function DrawLiveList(conditions = ''){
 				:'')
 			:'')
 		:'');
-		const descContent = ('desc' in connect && connect['desc'] !== "" ? 
-			DecorateText(connect['desc'])
-			//With×MEETS AFTERが無いことを示す一文を表示
-			+ (connect['tags'].find(m => m === 'noafter') ? "<br>この配信ではWith×MEETS AFTERは行われなかった。" : "")
-			//セットリストを表示
-			+ ('setlist' in connect ? 
-				`<details class="setlist">
-					<summary class="setlist-summary">セットリスト (クリックで展開)</summary>
-					<ol class="setlist-ol">
-						${connect['setlist'].map(program =>
-						`<li>${(program === 'MC' ? `<i class="setlist-mc">MC</i>` : program)}</li>`).join('')}
-					</ol>
-				</details>`
+		const isDescription = ('desc' in connect && connect['desc'] !== "");
+		const isMemo        = ('memo' in connect && connect['memo'] !== "");
+		const descContent =
+			(isDescription ? `<div class="desc">${connect['desc']}</div>` : '')
+			+ (isMemo ?
+				DecorateText(connect['memo'])
+				//With×MEETS AFTERが無いことを示す一文を表示
+				+ (connect['tags'].find(m => m === 'noafter') ? "<br>この配信ではWith×MEETS AFTERは行われなかった。" : "")
+				//セットリストを表示
+				+ ('setlist' in connect ? 
+					`<details class="setlist">
+						<summary class="setlist-summary">セットリスト (クリックで展開)</summary>
+						<ol class="setlist-ol">
+							${connect['setlist'].map(program =>
+							`<li>${(program === 'MC' ? `<i class="setlist-mc">MC</i>` : program)}</li>`).join('')}
+						</ol>
+					</details>`
+				:'')
 			:'')
-		:'');
+		;
 		const tagsContent = connect['tags'].map( tag => {
 			if(tag in TagData){ return DrawCharName(tag); }
 		}).join('')
@@ -155,6 +166,7 @@ function initialize () {
 	
 	//セレクトボックスに要素を追加
 	SortTarget.forEach( temp => {
+		if(temp.name === "debug" && !isDebugMode){ return;}
 		const option = document.createElement("option");
 		option.text = temp.name;
 		option.value = temp.condition;

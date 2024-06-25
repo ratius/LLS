@@ -60,6 +60,7 @@ const TagData = {
 	"Skateboarding":{"name": "GWはみんなでスケボー",       "r":180, "g":160, "b": 80, "style": "square"},
 };
 const SortTarget = [
+//	{"name": "debug", "condition": "after:2021-01-01 before:2021-01-31"},
 	{"name": "2020年 2月〜3月", "condition": "after:2020-02-01 before:2020-03-31"},
 	{"name": "2020年 4月〜6月", "condition": "after:2020-04-01 before:2020-06-30"},
 	{"name": "2020年 7月〜9月", "condition": "after:2020-07-01 before:2020-09-30"},
@@ -137,8 +138,8 @@ const SortTarget = [
 //■■メイン出力
 //■条件に合致するストーリーを抜き出してリストアップ
 function DrawStoryList(conditions){
+	if(conditions === "undefined"){ return; }
 	const TimeOutputStart = performance.now();
-
 	let filteredData = window['JSON-sifas-theater'];
 	
 	const condition = conditions.split(' ');
@@ -256,6 +257,7 @@ function initialize() {
 
 	//セレクトボックスに要素を追加
 	SortTarget.forEach( temp => {
+		if(temp.name === "debug" && !isDebugMode){ return;}
 		const option = document.createElement("option");
 		option.text = temp.name;
 		option.value = temp.condition;
@@ -322,6 +324,6 @@ function initialize() {
 		
 		//描画時間の出力
 		const TimeOutputEnd = performance.now();
-		console.log(`スクスタ 毎日劇場アーカイブ\n初期化処理： ${TimeOutputEnd - TimeLoadingStart}ミリ秒`);
+		console.log(`スクスタ 毎日劇場データベース\n初期化処理： ${TimeOutputEnd - TimeLoadingStart}ミリ秒`);
 	}
 }
