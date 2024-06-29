@@ -19,8 +19,8 @@ const TagData = {
 };
 
 const SortTarget = [
-	{"name": "debug",  "condition": "after:2023-05-25 before:2023-07-30 extag:cancelled tag:meets"},
-	{"name": "debug",  "condition": "after:2023-09-22 before:2023-09-30 extag:cancelled"},
+//	{"name": "debug - 概要なし",  "condition": "nodesc max:5"},
+	{"name": "debug - 配信時間なし",  "condition": "nolength max:5"},
 	{"name": "103期 上半期（2023年4月 - 2023年9月）",  "condition": "after:2023-04-01 before:2023-09-30"},
 	{"name": "103期 下半期（2023年10月 - 2024年3月）", "condition": "after:2023-10-01 before:2024-03-31"},
 	{"name": "104期 上半期（2024年4月 - 2024年9月）",  "condition": "after:2024-04-01 before:2024-09-30"},
@@ -48,25 +48,37 @@ const SortTarget = [
 function DrawLiveList(conditions = ''){
 	if(conditions === '' || conditions === "undefined"){ return false;}
 	const TimeOutputStart = performance.now();
-	let filteredData = window['JSON-hasu-connect'];
+	let filteredData = window['JSON-hasu-connect'].filter( connect => new Date(connect.date) <= new Date("2030-01-01"));
 	
 	const condition = conditions.split(' ');
-	condition.forEach( c => {
-		if(c.startsWith('before:')) { //「before:」 - 指定された日付以前
+	condition.forEach( c => { //条件フィルター
+		if(c.startsWith("before:")) { //「before:」 - 指定された日付以前
 			const beforeDate = new Date(c.split(':')[1]);
 			filteredData = filteredData.filter( connect => new Date(connect.date) <= beforeDate);
 		}
-		else if(c.startsWith('after:')) { //「after:」 - 指定された日付まで
+		else if(c.startsWith("after:")) { //「after:」 - 指定された日付まで
 			const afterDate = new Date(c.split(':')[1]);
 			filteredData = filteredData.filter( connect => new Date(connect.date) >= afterDate);
 		}
-		else if(c.startsWith('tag:')) {
+		else if(c.startsWith("tag:")) { //「tag:」 - 特定のタグを持つ配信
 			const tag = c.split(':')[1];
 			filteredData = filteredData.filter( connect => connect.tags && connect.tags.includes(tag));
 		}
-		else if(c.startsWith('extag:')) {
+		else if(c.startsWith("extag:")) { //「extag:」 - 特定のタグを持たない配信
 			const tag = c.split(':')[1];
 			filteredData = filteredData.filter( connect => connect.tags && !connect.tags.includes(tag));
+		}
+		else if(c === "nodesc") { //「nodesc:」 - 概要が未設定の配信
+			filteredData = filteredData.filter( connect => connect.desc === "" && !connect.tags.includes("cancelled"));
+		}
+		else if(c === "nolength") { //「nolength:」 - 動画時間が未設定の配信
+			filteredData = filteredData.filter( connect => !(['length'] in connect) && !connect.tags.includes("cancelled"));
+		}
+	});
+	condition.forEach( c => {
+		if(c.startsWith("max:")) {
+			const limit = parseInt(c.split(':')[1], 10);
+			filteredData = filteredData.slice(0, limit);
 		}
 	});
 	if(filteredData === []){ return false;}
@@ -166,7 +178,7 @@ function initialize () {
 	
 	//セレクトボックスに要素を追加
 	SortTarget.forEach( temp => {
-		if(temp.name === "debug" && !isDebugMode){ return;}
+		if(temp.name.substring(0,5) === "debug" && !isDebugMode){ return;}
 		const option = document.createElement("option");
 		option.text = temp.name;
 		option.value = temp.condition;
