@@ -1415,7 +1415,8 @@
 	"desc": "綴理だよ。めぐがやってたASMR配信、ボクもやってみたかったんだ。今日はこずも誘ったからお楽しみに〜",
 	"memo": "この回は3Dモデルの登場はなく、慈が描いた一枚絵が常時表示されたままであった。",
 	"tags": ["meets", "Kozue", "Tsuzuri"],
-	"tube": "X4Rn-TCwJWY"
+	"tube": "X4Rn-TCwJWY",
+	"length": [851, ""]
 },
 {
 	"date": "2024-06-15",
@@ -1423,7 +1424,8 @@
 	"desc": "花帆だよ！ 今年もやってきた梢センパイの誕生日♪ もう日本の祝日にしてもいいんじゃないかな！？ みんなでいっぱい祝っちゃおう！",
 	"memo": "",
 	"tags": ["meets", "Kaho", "Kozue", "Ginko", "room-club"],
-	"tube": "vU4RM3KHUgE"
+	"tube": "vU4RM3KHUgE",
+	"length": [1365, ""]
 },
 {
 	"date": "2024-06-17",
@@ -1431,31 +1433,35 @@
 	"desc": "大沢瑠璃乃だよー☆ ルリもやります！朗読配信！ 来ず中先輩みたいにはできないかもしれないけど、ルリなりにがんばってみるね！ よろよろ〜！",
 	"memo": "2023年8月17日に梢が行った「朗読配信」に、瑠璃乃も挑戦！",
 	"tags": ["meets", "Rurino", "room-Rurino"],
-	"tube": "_rplkw4wkPA"
+	"tube": "_rplkw4wkPA",
+	"length": [908, ""]
 },
 {
 	"date": "2024-06-20",
 	"title": "勝負だよ、さやかちゃん！",
 	"desc": "村野さやかです 花帆さんに勝負を挑まれてしまいました 瑠璃乃さんも去年挑まれていましたね 勝負となれば花帆さんといえど負けられません！",
 	"memo": "",
-	"tags": ["meets", "Kaho", "Sayaka"],
-	"tube": "hr4lNzkzm8s"
+	"tags": ["meets", "Kaho", "Sayaka", "room-club"],
+	"tube": "hr4lNzkzm8s",
+	"length": [1135, ""]
 },
 {
 	"date": "2024-06-22",
 	"title": "小鈴ちゃんをさらってきたよー！",
 	"desc": "ハロめぐ〜！ 突然だけど小鈴ちゃんをさらってきちゃいました！ 何をするかは配信でのお楽しみ♡",
 	"memo": "",
-	"tags": ["meets",  "Megumi", "Kosuzu"],
-	"tube": "u2G_-EVAjA8"
+	"tags": ["meets",  "Megumi", "Kosuzu", "room-club"],
+	"tube": "u2G_-EVAjA8",
+	"length": [1001, ""]
 },
 {
 	"date": "2024-06-24",
 	"title": "綴理先輩にお伺いします",
 	"desc": "百生吟子です。今日は綴理先輩との配信です。せっかくなので、綴理先輩に色々お伺いしてみようかと思います。",
 	"memo": "",
-	"tags": ["meets", "Tsuzuri", "Ginko"],
-	"tube": ""
+	"tags": ["meets", "Tsuzuri", "Ginko", "room-club"],
+	"tube": "eJkM7xq6Q3E",
+	"length": [955, ""]
 },
 {
 	"date": "2024-06-27",
@@ -1463,26 +1469,93 @@
 	"desc": "ぴんぽんぱんぽーん！瑠璃乃だよ☆ 今日はスペシャルなラジオをお届け！ いよいよ迫ってきた撫子祭のこととか、色々お届けしちゃうぜ〜！",
 	"memo": "この回は音声のみの配信で、3Dモデルは未登場。",
 	"tags": ["meets", "Rurino", "Megumi", "Hime"],
-	"tube": ""
+	"tube": "g8sJ-NNbiiM",
+	"length": [945, ""]
 },
 {
 	"date": "2024-06-29",
 	"title": "ENTERTAINMENT",
 	"desc": "綴理だよ。ボクたちエンターテイナー。",
 	"memo": "",
-	"tags": ["meets", "Sayaka", "Tsuzuri", "Kosuzu"],
-	"tube": ""
+	"tags": ["meets", "Sayaka", "Tsuzuri", "Kosuzu", "room-club"],
+	"tube": "etYlS9vQ03A",
+	"length": [585, ""]
 },
 {
 	"date": "2024-07-01",
 	"title": "撫子祭お疲れ様でした！",
-	"desc": "",
+	"desc": "ルリだよ☆ 撫子祭ではユニットでがんばったから、今日は久しぶりに2年生ズ、大集合！ 企画あり〼！",
 	"memo": "",
-	"tags": ["meets", "Kaho", "Sayaka", "Rurino"],
+	"tags": ["meets", "Kaho", "Sayaka", "Rurino", "room-club"],
+	"tube": "_UDr5iwkbgk",
+	"length": [1521, ""]
+},
+{
+	"date": "2024-07-04",
+	"title": "めぐとつづです",
+	"desc": "めぐと喋るよ。すごく、楽しみだな。",
+	"memo": "",
+	"tags": ["meets", "Tsuzuri", "Megumi", "room-Megumi"],
+	"tube": "H1ZkFzQfhiY",
+	"length": [925, ""]
+},
+{
+	"date": "2024-07-06",
+	"title": "七夕、何をお願いする？",
+	"desc": "花帆だよ！ 七夕、それは織姫さまと彦星さまが出会うロマンティックな日・・・ みんなは短冊のお願い事、決めたかな？",
+	"memo": "",
+	"tags": ["meets", "Kaho"],
 	"tube": ""
 },
 {
-	"date": "2099-06-01",
+	"date": "2024-07-08",
+	"title": "みんなでセリフ読み。",
+	"desc": "村野さやかです みなさん、たくさんのセリフ案を送っていただきありがとうございました 今回は小鈴さんも含めた三人でセリフ読みさせていただきます",
+	"memo": "",
+	"tags": ["meets", "Sayaka", "Tsuzuri", "Kosuzu"],
+	"tube": ""
+},
+{
+	"date": "2024-07-11",
+	"title": "めぐちゃんのお悩み相談室♡",
+	"desc": "ハロめぐ〜！ 本日はめぐちゃんが直々に、みんなの悩みをズバッと解決！ え？サムネイルのポーズ見たことある？気にしない気にしない&#9835;",
+	"memo": "慈が、送られてきたお悩みに答えちゃう！ お悩みは綴理からも！？ サムネイルの慈のポーズは2024/04/01配信With×MEETSのさやかと同じ。",
+	"tags": ["meets", "Megumi", "room-Megumi"],
+	"tube": ""
+},
+{
+	"date": "2024-07-13",
+	"title": "大沢瑠璃乃1周年〜！",
+	"desc": "オッス！大沢瑠璃乃だよ☆ ルリがカリフォルニアから帰国して1年経ちましたー！ みんな応援してくれてありがとね！ 感謝の気持ちを込めて、個人配信やりやす！",
+	"memo": "",
+	"tags": ["meets", "Rurino"],
+	"tube": ""
+},
+{
+	"date": "2024-07-15",
+	"title": "未定",
+	"memo": "この配信はアプリ内ではなくYouTubeで行われた。",
+	"tags": ["YouTube", "Rurino", "Megumi", "Hime"],
+	"tube": ""
+},
+{
+	"date": "2099-07-18",
+	"title": "たまには雑談など。2",
+	"desc": "お久しぶりです、乙宗 梢と申します。前回の入りからずいぶんと時間が空いてしまったので、今日はみなさんとゆっくりお話できればと思います。",
+	"memo": "",
+	"tags": ["meets", "Kozue"],
+	"tube": ""
+},
+{
+	"date": "2024-07-20",
+	"title": "村野さやかのラジオ 第9回",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Sayaka", "Ginko"],
+	"tube": ""
+},
+{
+	"date": "2099-07-01",
 	"title": "未定",
 	"desc": "",
 	"memo": "",
