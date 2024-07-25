@@ -23,70 +23,130 @@
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main_gen2.css">
 <style><!--
-#N1, #N2 {
+#SelectCategory, #SelectSeries {
 	border: solid 2px #b9a;
 	font-size: x-large;
 	font-weight: bold;
 	padding: 5px;
 	margin-right: 10px;
 }
-#N2 {
-	width: 600px;
+#SelectSeries {
+	width: min(600px, 100%);
 }
 
-.story-container {
+.article-wrapper {
+}
+/* チャプター概要欄 */
+.chapter-container {
 	display: grid;
-	grid-template-columns: 100px auto;
-	width: calc(100% - 20px);
-	border-collapse: collapse;
-	border-width: 2px;
-	border-style: solid;
-	margin: 10px;
-}
-.story-title {
-	grid-column: span 2;
 	width: 100%;
-	background: linear-gradient(90deg, rgba(255,255,255,0)0%, rgba(255,255,255,0.25) 100%);
-	border-bottom: inherit;
-	padding: 4px 10px;
-	font-size: 140%;
-	font-weight: bold; 
+	border-color: inherit;
 }
-.story-key {
+
+.chapter-container > div {
+	border-style: solid;
+	border-color: inherit;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 1px;
+	padding: 4px 10px;
+}
+
+.series-title-name {
+	font-size: 120%;
+	font-weight: bold;
+}
+
+.chapter-title-name {
+	font-weight:bold;
+	padding-right: 15px;
+}
+
+.chapter-key {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 4px 10px;
-	background-color: rgba(255, 255, 255, 0.4);
-	border-right-width: 1px;
-	border-right-style: solid;
-	border-right-color: inherit;
+	background-color: rgba(255, 255, 255, 0.5);
 }
-.row2 {
-	border-top-width: 1px;
-	border-top-style: solid;
-	border-top-color: inherit;
-}
-.story-information {
+.chapter-info {
 	background-color: white;
-	padding: 4px 10px;
+}
+.chapter-date {
+	color: #666;
+	font-size: small;
+}
+.desc {
+	padding: 4px 8px;
+	margin: 4px 0;
+	border: 1px solid #bbb;
+	background-color: #eee;
+	font-size: small;
 }
 
-.story-title .debug {
-	border: 2px;
-	border-style: solid;
-	border-color: inherit;
+
+/* ■スマートフォン向けレイアウト */
+@media screen and (max-width: 599px) {
+	.chapter-container.vid {
+		grid-template-columns: auto 70px;
+	}
+	.chapter-container.vid > .chapter-info {
+		grid-column: span 2;
+	}
+	.chapter-container.novid {
+		grid-template-columns: auto;
+	}
+	.vid-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		border-bottom: 1px;
+	}
+	.chapter-container > div {
+		border-right-width: 0;
+	}
+	.chapter-info.tags.debug {
+		position: relative;
+		left: -12.5%;
+		width: 125%;
+		transform: scale(0.8);
+	}
 }
 
-.StoryTable td {
-	padding: 5px 10px;
-	line-height: 170%;
-	border-width: 1px;
-	border-style: solid;
-	border-color: inherit;
-	background-color: rgba(255, 255, 255, 0.4);
+/* ■PC向けレイアウト */
+@media screen and (min-width: 600px) {
+	.chapter-container.vid {
+		grid-template-columns: 90px auto 135px;
+	}
+	.chapter-container.novid {
+		grid-template-columns: 90px auto;
+	}
+	.chapter-container > div {
+		border-right-width: 1px;
+	}
+	.chapter-title { 
+		grid-column: span 2;
+	}
+	.vid-container {
+		grid-row: span 5;
+		width: 135px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: white;
+	}
+	.vid-container a {
+		width: 124px;
+		height: 72px;
+		overflow: hidden;
+		border: solid 2px #936;
+		margin: 3px 0;
+	}
+	.vid-container img {
+		width: 120px;
+		height: 68px;
+		object-fit: cover;
+	}
 }
-
 --></style>
 <script src="data/loader.js" data-src="data/sifas-story.js,data/sifas-story.json,data/common-library.js"></script>
 </head>
@@ -112,26 +172,28 @@
 			「ラブライブ！スクールアイドルフェスティバル ALL STARS」で配信された全てのメインストーリー・イベントエピソード・キズナエピソードの一覧です。<br>
 			イベントストーリーは、公式によるあらすじが設定されていませんが、ネタバレにならない程度に独自にあらすじを加えてあります。
 		</p>
-	
-		<h3 class="foreword">概要を確認可能なストーリー</h3>
-		<ul>
-			<li>メインストーリー：全53章（掲載完了）</li>
-			<li>イベントエピソード：全88イベント（掲載完了）</li>
-			<li>キズナエピソード（掲載完了）：<ul>
-				<li>μ&#39;s：各34話まで</li>
-				<li>Aqours：各34話まで</li>
-				<li>ニジガク：初期9人 (各41話まで)、栞子 (28話まで)、ミア・ランジュ (各20話まで)</li>
+		
+		<details style="border: solid 1px #fbd;">
+			<summary style="background-color:#fde;">概要を確認可能なストーリー</summary>
+			<ul>
+				<li>メインストーリー：全53章（掲載完了）</li>
+				<li>イベントエピソード：全88イベント（掲載完了）</li>
+				<li>キズナエピソード（掲載完了）：<ul>
+					<li>μ&#39;s：各34話まで</li>
+					<li>Aqours：各34話まで</li>
+					<li>ニジガク：初期9人 (各41話まで)、栞子 (28話まで)、ミア・ランジュ (各20話まで)</li>
+				</ul>
+				<li>アニメ連動ストーリー：1期・2期ともに掲載完了</li>
+				<li>サイドエピソード：掲載予定なし</li>
 			</ul>
-			<li>アニメ連動ストーリー：1期・2期ともに掲載完了</li>
-			<li>サイドエピソード：掲載予定なし</li>
-		</ul>
+		</details>
 	</section>
 
 	<section id="Viewer">
-		<h2 class="muse">ストーリー一覧</h2>
+		<h2>ストーリー一覧</h2>
 		<div style="margin-bottom: 10px;">
-			<select id="N1" onChange="NarrowerEvent(1)"><option>(カテゴリを選択)</option></select>
-			<select id="N2" onChange="NarrowerEvent(2)" style="display: none;"></select>
+			<select id="SelectCategory" onChange="NarrowerEvent(1)"><option>(カテゴリを選択)</option></select>
+			<select id="SelectSeries" onChange="NarrowerEvent(2)" style="display: none;"></select>
 		</div>
 		<div id="OutputArea" class="output-box output-box-default">
 			このページでは、情報を表示するためにJavaScriptを使用します。<br>
@@ -145,9 +207,17 @@
 		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 		<div class="history-container">
 			<details open>
-				<summary class="important"><span class="date">2027/06/20</span></summary>
+				<summary><span class="date">2024/07/25</span></summary>
 				<div>
-					<span class="icon-new"></span>CSSをアップデート
+					<span class="icon-new"></span><a href="https://www.youtube.com/@llas_archive" target="_blank" class="exlink">公式アーカイブチャンネル</a>動画へのリンクを掲載<br>
+					<span class="icon-new"></span>スマートフォン向けレイアウトを導入
+				</div>
+			</details>
+			<details>
+				<summary class="important"><span class="date">2024/07/20</span></summary>
+				<div>
+					<span class="icon-new"></span>CSSをアップデート<br>
+					<span class="icon-fix"></span>データ読み込み周りの仕様を変更
 				</div>
 			</details>
 			<details>
