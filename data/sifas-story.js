@@ -58,66 +58,94 @@ const TagData = {
 
 //■プルダウンメニューを操作した時の処理
 function NarrowerEvent(changed){
-	const temp1 = document.getElementById('N1');
-	const temp1index = temp1.selectedIndex -1;
-	const temp1list = window['JSON-sifas-story'][temp1index];
-	const temp2 = document.getElementById('N2');
-	const temp2index = temp2.selectedIndex -1;
+	const categoryIndex = document.getElementById('SelectCategory').selectedIndex -1;
+	const category = window['JSON-sifas-story'][categoryIndex];
+	const seriesElement = document.getElementById('SelectSeries');
 
 	switch (changed){
-		case 1:
-			if (temp1index < 0){
-				temp2.style.display ="none";
+		case 1: //カテゴリー選択
+			if (categoryIndex < 0){
+				seriesElement.style.display ="none";
 			} else {
-				temp2.style.display ="inline-block";
-				temp2.selectedIndex = 0;
-				temp2.length = temp1list.part.length +1;
-				
-				temp2.options[0].innerHTML = "(" + ["章","イベント","キャラクター","区分"][temp1index] + "を選択)";
-				for(i=0; i<temp1list.part.length; i++){
-					temp2.options[i+1].innerHTML = temp1list.part[i].name;
-				}
+				seriesElement.style.display ="inline-block";
+				seriesElement.selectedIndex = 0;
+				seriesElement.length = 1;
+				seriesElement.options[0].innerHTML = "(" + ["章","イベント","キャラクター","区分"][categoryIndex] + "を選択)";
+				category['part'].forEach(c => seriesElement.append(new Option(c.title, null)));
+				return false;
 			}
-			return false;
-		
-		case 2:
-			if (temp2index < 0) return false;
+		case 2: //シリーズ選択
+			const seriesIndex = seriesElement.selectedIndex -1;
+			if (seriesIndex < 0) return false;
+
 			const TimeOutputStart = performance.now();
+			const DecorateDate = (date) => `<span class="chapter-date">${formatDate(new Date(date))} 配信</span><br>`;
 			
-			let coltemp = "none";
-			if('color' in temp1list){ coltemp = temp1list.color;}
-			if('color' in temp1list.part[temp2index]){ coltemp = temp1list.part[temp2index].color;}
+			const series = category['part'][seriesIndex];
+			const seriesColor = ('color' in series ? series['color'] : category['color']);
+			const isSeriesHasVideo = (['tube'] in series && series['tube'] !== "");
+			const seriesDesc = ('desc' in series && series['desc'] !== "" ?
+				`<div class="chapter-key pc-only">概要</div>
+				<div class="chapter-info">
+					${(['date'] in series ? DecorateDate(series['date']) : "") + series['desc']}
+				</div>`
+			: "");
 			
-			//◆データを出力
-			const DataSet = temp1list.part[temp2index].part;
-			
-			const html = DataSet.map( story => {
-				const tags = story.tags.map( tag => DrawCharName(tag) ).join('');
-				const color = ('color' in story ? story.color : coltemp);
-			
+			//データを出力
+			document.getElementById("OutputArea").innerHTML = 
+			//シリーズ概要
+			`<article class="chapter-container article-color-${seriesColor} ${isSeriesHasVideo ? "vid" : "novid"}">
+				<div class="chapter-title">
+					<span class="series-title-name">${series['title']}</span>
+				</div>
+				${drawYouTubeVideoContent(series['tube'], series['title'])}
+				${seriesDesc}
+			</article>`
+				
+			//チャプター概要
+			+ series['part'].map( chapter => {
+				const tags = chapter.tags.map( tag => DrawCharName(tag) ).join('');
+				const chapterColor = ('color' in chapter ? chapter.color : seriesColor);
+				const isChapterHasVideo = (['tube'] in chapter && chapter['tube'] !== "");
 				return `
-				<article class="story-container article-color-${color}">
-					<div class="story-title">${story.title}</div>
-					<div class="story-key">あらすじ</div>
-					<div class="story-information">${story.desc}</div>
-					<div class="story-key row2">登場人物</div>
-					<div class="story-information row2">${tags}</div>
-					${('memo' in story ? `<div class="story-key row2">メモ</div><div class="story-information row2">${story.memo}</div>` : '')}
+				<article class="chapter-container article-color-${chapterColor} ${isChapterHasVideo ? "vid" : "novid"}">
+					<div class="chapter-title">
+						<span class="chapter-title-name">${chapter.title}</span>
+						${('date' in chapter ? DecorateDate(chapter['date']) : "")}
+					</div>
+					${drawYouTubeVideoContent(chapter['tube'], chapter['title'])}
+					<div class="chapter-key pc-only">あらすじ</div>
+					<div class="chapter-info">
+						${chapter.desc}
+					</div>
+					${('memo' in chapter ? `<div class="chapter-key pc-only">メモ</div><div class="chapter-info">${chapter.memo}</div>` : '')}
+					<div class="chapter-key pc-only">登場人物</div>
+					<div class="chapter-info tags">${tags}</div>
 				</article>`;
 			}).join('');
 
-			document.getElementById("OutputArea").innerHTML = html;
 			document.getElementById("OutputArea").scrollTop = 0;
 			
 			if(isDebugMode){
 				const TimeOutputEnd = performance.now();
-				console.log(document.getElementById('N1').value + ' - ' + document.getElementById('N2').value + '\n'
+				console.log(category['name'] + ' - ' + series['title'] + '\n'
 				+ '描画処理時間: ' + (TimeOutputEnd - TimeOutputStart) + ' ミリ秒');
 			}
 			return;
 		}
 	return false;
 }
+
+//■動画へのリンクを作成
+const drawYouTubeVideoContent = ((url, title) => {
+	if(url === undefined || url === ""){ return "";}
+	return `<div class="vid-container">
+		<a href="https://www.youtube.com/watch?v=${url}" target="_blank">
+			<img src="https://img.youtube.com/vi/${url.split('&')[0]}/default.jpg" ${title ? 'alt="'+title+'"' : ""} loading="lazy" class="pc-only">
+			<span class="sp-only">動画へ</span>
+		</a>
+	</div>`
+});
 
 //■初期化処理
 function initialize () {
@@ -126,12 +154,12 @@ function initialize () {
 	let AddedCSS = '\n';
 	Object.keys(TagData).forEach( function(key) {
 		AddedCSS += '.article-color-' + key + '{\n\t'
-		+ 'background-color: ' + getColor(TagData[key], 1.5) + ';\n\t'
-		+ 'border-color: ' + getColor(TagData[key], 1, 1) + '\n}\n';
+		+ 'background-color: ' + getColor(TagData[key], 2) + ';\n\t'
+		+ 'border-color: ' + getColor(TagData[key], 1.5, 1) + '\n}\n';
 		if(TagData[key].style === "round"){
 			AddedCSS += '.button_' + key + '{\n\t'
 			+ 'background-color: ' + getColor(TagData[key], 2) + ';\n\t'
-			+ 'border-color: ' + getColor(TagData[key], 0) + '\n}\n';
+			+ 'border-color: ' + getColor(TagData[key], 0.5) + '\n}\n';
 		}
 	});
 	document.querySelector('style').textContent += AddedCSS;
@@ -140,7 +168,7 @@ function initialize () {
 	window['JSON-sifas-story'].forEach ( temp => {
 		const option = document.createElement("option");
 		option.text = temp.name;
-		document.getElementById("N1").appendChild(option);
+		document.getElementById("SelectCategory").appendChild(option);
 	});
 	
 	//警告解除
@@ -160,14 +188,6 @@ function initialize () {
 		let isError = 0;
 		for(let temp1 of window['JSON-sifas-story']){
 			for(let temp2 of temp1.part){
-				
-				if(!('name' in temp2)){ //●タイトルが無い
-					console.log('[Error] 区分タイトルが未設定:\n\tLocation: ' + temp1.name);
-					console.log(temp2);
-					isError++;
-					break;
-				}
-				
 				for(let temp3 of temp2.part){
 					
 					if(!('title' in temp3)){ //●タイトルが無い
