@@ -99,7 +99,7 @@ function NarrowerEvent(changed){
 					<span class="series-title-name">${series['title']}</span>
 				</div>
 				${drawYouTubeVideoContent(series['tube'], series['title'])}
-				${seriesDesc}
+				${replaceLinkStrings(seriesDesc, "exlink")}
 			</article>`
 				
 			//チャプター概要
@@ -154,12 +154,12 @@ function initialize () {
 	let AddedCSS = '\n';
 	Object.keys(TagData).forEach( function(key) {
 		AddedCSS += '.article-color-' + key + '{\n\t'
-		+ 'background-color: ' + getColor(TagData[key], 2) + ';\n\t'
-		+ 'border-color: ' + getColor(TagData[key], 1.5, 1) + '\n}\n';
+		+ 'background-color: ' + getColor(TagData[key], 1.9, 0.1) + ';\n\t'
+		+ 'border-color: ' + getColor(TagData[key], 2, 1) + '\n}\n';
 		if(TagData[key].style === "round"){
 			AddedCSS += '.button_' + key + '{\n\t'
 			+ 'background-color: ' + getColor(TagData[key], 2) + ';\n\t'
-			+ 'border-color: ' + getColor(TagData[key], 0.5) + '\n}\n';
+			+ 'border-color: ' + getColor(TagData[key], 0.4, 0.1) + '\n}\n';
 		}
 	});
 	document.querySelector('style').textContent += AddedCSS;

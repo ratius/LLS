@@ -12,10 +12,9 @@ const DrawCharName = (character) => {
 	}
 }
 
-//■オブジェクトのRGBから色を計算 ver.20240110
-const getColor = (Object, white, black) => {
+//■オブジェクトのRGBから色を計算 ver.20240727
+const getColor = (Object, white=0, black=0) => {
 	if(white < 0){ white = 0;}
-	if(black === undefined){ black = 0;}
 	else if(black < 0){ black = 0;}
 	const r = Math.floor((Object.r + (255 * white)) / (white + black + 1));
 	const g = Math.floor((Object.g + (255 * white)) / (white + black + 1));
@@ -43,8 +42,7 @@ const WriteFaceN = (x, y) => {
 	}px"></div>`;
 }
 
-//■ {{L:タイトル:URL}} を外部リンクに置換
-const replaceLinkStrings = (text, classes) => {
-	if(classes === undefined){ classes = ""; }
+//■ {{L:タイトル:URL}} を外部リンクに置換 ver.20240727
+const replaceLinkStrings = (text, classes="") => {
 	return text.replace(/\{\{[lL]:([^:]*):([^}]*)\}\}/g, `<a href="$2" class="${classes}" target="_blank" rel="noopener noreferrer">$1</a>`);
 }
