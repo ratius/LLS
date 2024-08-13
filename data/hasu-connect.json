@@ -642,16 +642,16 @@
 	"setlist": ["夏めきペイン", "MC", "Take It Over", "素顔のピクセル", "アイデンティティ", "MC", "ド！ド！ド！", "ツキマカセ", "フォーチュンムービー", "Dream Believers"],
 	"tags": ["live", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi"],
 	"tube": "KL5sO3N8H-4&t=3930",
-	"length": [3692, ""]
+	"length": [3692, 354]
 },
 {
 	"date": "2023-09-30",
 	"title": "9月度Fes×LIVE振り返り配信",
 	"desc": "9月度Fes×LIVEも無事終わりました。応援してくれた皆様、ありがとうございます。ライブの盛り上がりをみんなで振り返りたいと思います。",
-	"memo": "先日行われた103期9月度Fes×LIVEの振り返り。そして、来月度Fes×LIVEの予告も。",
+	"memo": "先日行われた103期9月度Fes×LIVEの振り返ったり、感想メールを読み上げたり。そして、来月度Fes×LIVEの予告も。",
 	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "room-club"],
 	"tube": "mAc8zRdThiE",
-	"length": [1206, ""]
+	"length": [1206, 452]
 },
 {
 	"date": "2023-10-02",
@@ -678,7 +678,7 @@
 	"memo": "綴理の手持ちカメラと共に、部室を360度くまなく探検しよう！",
 	"tags": ["meets", "Tsuzuri", "room-club"],
 	"tube": "zi_YtE0YYNw",
-	"length": [984, ""]
+	"length": [984, 341]
 },
 {
 	"date": "2023-10-09",
@@ -687,7 +687,7 @@
 	"memo": "10月9日はスポーツの日。スポーツの話から部活動の話、そして先輩の話へ…。10月7日のWith×MEETSへの言及あり。",
 	"tags": ["meets", "Kaho", "Sayaka", "Rurino", "room-lesson"],
 	"tube": "Ey6nTbThqkg",
-	"length": [1182, ""]
+	"length": [1182, 409]
 },
 {
 	"date": "2023-10-12",
@@ -696,7 +696,7 @@
 	"memo": "早くも5回目となった村野さやかのラジオ。さやかがゲストを紹介するつもりだったのに、出番を待ちきれない慈が先に顔を出してしまうハプニングも。",
 	"tags": ["meets", "SayakaRadio", "Sayaka", "Megumi", "room-Sayaka"],
 	"tube": "EDX9t5wEs_0",
-	"length": [1313, ""]
+	"length": [1313, 413]
 },
 {
 	"date": "2023-10-14",
@@ -705,7 +705,7 @@
 	"memo": "今日の個人配信は主にゲームの話。瑠璃乃は『{{L:Apex Legends:https://www.ea.com/ja-jp/games/apex-legends}}』『{{L:VALORANT:https://playvalorant.com/ja-jp/}}』といったFPSゲームが好きな様子？2023年10月5日のWith×MEETSへの言及あり。",
 	"tags": ["meets", "Rurino", "room-Rurino"],
 	"tube": "7Tbxtk7Svpk",
-	"length": [1286, ""]
+	"length": [1286, 361]
 },
 {
 	"date": "2023-10-15",
@@ -1509,7 +1509,8 @@
 	"desc": "花帆だよ！ 七夕、それは織姫さまと彦星さまが出会うロマンティックな日・・・ みんなは短冊のお願い事、決めたかな？",
 	"memo": "",
 	"tags": ["meets", "Kaho"],
-	"tube": ""
+	"tube": "Gde8Et03X8Y",
+	"length": [1176, ""]
 },
 {
 	"date": "2024-07-08",
@@ -1579,16 +1580,18 @@
 	"title": "夏休みの予定を立てよう",
 	"desc": "百生吟子です。蓮ノ空女学院は先週から夏休みに入りました。蓮ノ空で過ごす初めての夏休みなので、みんなで予定の相談をしようかと思います。",
 	"memo": "",
-	"tags": ["meets", "Ginko", "Kosuzu", "Hime"],
-	"tube": ""
+	"tags": ["meets", "Ginko", "Kosuzu", "Hime", "room-Hime"],
+	"tube": "fqdxxArQsBU",
+	"length": [949, ""]
 },
 {
 	"date": "2024-07-29",
 	"title": "TWINKLE STAR FESTIVAL!! 直前配信",
 	"desc": "ぴょんぴょん！花帆だよ！ 明後日はFes×LIVE本番だぴょん！ 今回はスリーズブーケで意気込み配信していきます！だぴょん！",
 	"memo": "",
-	"tags": ["meets", "Kaho", "Kozue", "Ginko"],
-	"tube": ""
+	"tags": ["meets", "Kaho", "Kozue", "Ginko", "room-club"],
+	"tube": "jTqE9koPqt8",
+	"length": [1111, ""]
 },
 {
 	"date": "2024-07-31",
@@ -1604,15 +1607,57 @@
 	"title": "TWINKLE STAR FESTIVAL!! 振り返り配信",
 	"desc": "村野さやかです TWINKLE STAR FESTIVAL!!をご観覧くださったみなさん、誠にありがとうございました<br>今日の振り返りは2年生ズで行いたいと思います",
 	"memo": "",
-	"tags": ["meets", "Kaho", "Sayaka", "Rurino"],
-	"tube": ""
+	"tags": ["meets", "Kaho", "Sayaka", "Rurino", "room-club"],
+	"tube": "BbsPoombeNI",
+	"length": [1198, ""]
 },
 {
 	"date": "2024-08-05",
 	"title": "めぐ党さんへの挑戦状！",
+	"desc": "ハロめぐ〜♡ 日常に潜む不可解な状況…めぐ党さんには紐解けるかな？ いざ、勝負！",
+	"memo": "",
+	"tags": ["meets", "Megumi", "room-Megumi"],
+	"tube": "Ww0NOeCpNrc"
+},
+{
+	"date": "2024-08-08",
+	"title": "蓮ノ空の伝統について。",
+	"desc": "乙宗 梢と申します。蓮ノ空女学院は、創立から100年以上の歴史を持っています。本日は吟子さんと一緒に、古くから続く伝統についてお話できればと思います。",
+	"memo": "",
+	"tags": ["meets", "Kozue", "Ginko", "room-Ginko"],
+	"tube": ""
+},
+{
+	"date": "2024-08-10",
+	"title": "恐怖！蓮ノ空怪談！",
+	"desc": "ひゅ〜どろどろ・・・瑠璃乃だよ☆ ルリルリなんでも調査隊、緊急出動〜！<br>今回は蓮ノ空の「怪談」について調査してきたよ！ 花帆ちゃんはちょっと怖がりらしいけど、大丈夫かな〜？ 小鈴ちゃんは・・・どうなんだろ？",
+	"memo": "",
+	"tags": ["meets", "Kaho", "Rurino", "Kosuzu"],
+	"tube": "",
+	"length": [1182, ""]
+},
+{
+	"date": "2024-08-12",
+	"title": "アニメ談義しよっ☆",
 	"desc": "",
 	"memo": "",
-	"tags": ["meets", "Megumi"],
+	"tags": ["meets", "Rurino", "Megumi", "Hime"],
+	"tube": ""
+},
+{
+	"date": "2024-08-15",
+	"title": "あのラジオが帰ってきた！？",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Kaho", "Megumi"],
+	"tube": ""
+},
+{
+	"date": "2024-08-17",
+	"title": "未定",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Kaho", "Ginko"],
 	"tube": ""
 },
 {
