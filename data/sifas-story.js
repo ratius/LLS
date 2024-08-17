@@ -202,19 +202,25 @@ function initialize () {
 						isError++;
 					}
 					if('tags' in temp3){
-						if(temp3['tags'].length === 0){ //●登場人物がない
-							console.log('[Error] 登場人物が未設定:\n' + StoryLocation);
+						if(temp3['tags'].length === 0){ //●タグが空
+							console.log('[Error] タグが空:\n' + StoryLocation);
 							isError++;
 						}
 						for(let temp4 of temp3.tags){
-							if(!(temp4 in TagData)){ //●登場人物が不正
-								console.log('[Error] 登場人物が不正 (' + temp4 + '):\n' + StoryLocation);
+							if(!(temp4 in TagData)){ //●タグが不正
+								console.log('[Error] タグが不正 (' + temp4 + '):\n' + StoryLocation);
 								isError++;
 							}
 						}
-					} else { //●登場人物が未設定
-						console.log('[Error] 登場人物が未設定:\n' + StoryLocation);
+					} else { //●タグが未設定
+						console.log('[Error] タグが未設定:\n' + StoryLocation);
 						isError++;
+					}
+					if('tube' in temp3){
+						if(temp3['tube'] !== "" && temp3['tube'].length !== 11){ //●動画IDが不正
+							console.log('[Error] 動画IDが不正: ' + temp3['tube'] + '\n' + StoryLocation);
+							isError++;
+						}
 					}
 				}
 			}

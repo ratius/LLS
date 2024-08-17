@@ -1617,7 +1617,8 @@
 	"desc": "ハロめぐ〜♡ 日常に潜む不可解な状況…めぐ党さんには紐解けるかな？ いざ、勝負！",
 	"memo": "",
 	"tags": ["meets", "Megumi", "room-Megumi"],
-	"tube": "Ww0NOeCpNrc"
+	"tube": "Ww0NOeCpNrc",
+	"length": [934, ""]
 },
 {
 	"date": "2024-08-08",
@@ -1625,7 +1626,7 @@
 	"desc": "乙宗 梢と申します。蓮ノ空女学院は、創立から100年以上の歴史を持っています。本日は吟子さんと一緒に、古くから続く伝統についてお話できればと思います。",
 	"memo": "",
 	"tags": ["meets", "Kozue", "Ginko", "room-Ginko"],
-	"tube": ""
+	"tube": "Vyh5MWoAVus"
 },
 {
 	"date": "2024-08-10",
@@ -1633,8 +1634,8 @@
 	"desc": "ひゅ〜どろどろ・・・瑠璃乃だよ☆ ルリルリなんでも調査隊、緊急出動〜！<br>今回は蓮ノ空の「怪談」について調査してきたよ！ 花帆ちゃんはちょっと怖がりらしいけど、大丈夫かな〜？ 小鈴ちゃんは・・・どうなんだろ？",
 	"memo": "",
 	"tags": ["meets", "Kaho", "Rurino", "Kosuzu"],
-	"tube": "",
-	"length": [1182, ""]
+	"tube": "TesQ-X4moD0",
+	"length": [1183, ""]
 },
 {
 	"date": "2024-08-12",
@@ -1649,15 +1650,23 @@
 	"title": "あのラジオが帰ってきた！？",
 	"desc": "",
 	"memo": "",
-	"tags": ["meets", "Kaho", "Megumi"],
+	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime"],
 	"tube": ""
 },
 {
 	"date": "2024-08-17",
-	"title": "未定",
-	"desc": "",
+	"title": "映画談義しようよ！",
+	"desc": "百生吟子です。花帆先輩も映画が好きということで、二人で映画についての配信をすることになりました。みなさんは映画、好きですか？",
 	"memo": "",
 	"tags": ["meets", "Kaho", "Ginko"],
+	"tube": ""
+},
+{
+	"date": "2099-08-19",
+	"title": "出動！るりちゃんを調査隊！",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Megumi", "Hime"],
 	"tube": ""
 },
 {

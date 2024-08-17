@@ -195,7 +195,7 @@ function DrawReferences() {
 function initialize () {
 	const MemberIdMuse = ["Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico"];
 	const MemberIdAqours = ["Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby"];
-	const MemberIdNiji = ["Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu"];
+	const MemberIdNiji = ["Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu", "Yu"];
 	const MemberIdLiella = ["Kanon", "Keke", "Chisato", "Sumire", "Ren", "Kinako", "Mei", "Shiki", "Natsumi", "Margarete", "Tomari"];
 	const MemberIdHasu = ["Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime"];
 	const MemberIdMusical = ["RurikaM", "YuzuhaM", "YukinoM", "HikaruM", "MaayaM", "AnzuM", "MisuzuM", "ToaM", "RenaM", "SayakaM"];
