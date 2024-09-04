@@ -714,7 +714,7 @@
 	"memo": "「秋のスクショ鑑賞会」と題して、過去のFes×LIVEから厳選した後輩達のベストショットを見よう！<details><summary style=\"font-weight:bold\">本配信中に紹介されたスクショの出自<\/summary><ul style=\"padding-left: 20px\"><li>慈1枚目：9月度、Dream Believers/1番Aメロ<\/li><li>梢1枚目：7月度、眩耀夜行/1番Aメロ<\/li><li>綴理1枚目：5月度、Tragic Drops/1番サビ直前<\/li><li>慈2枚目：8月度、ハクチューアラモード/ラスサビ<\/li><li>梢2枚目：8月度、眩耀夜行/落ちサビ<\/li><li>綴理2枚目：9月度、Take It Over/Cメロ<\/li><li>慈3枚目：7月度、永遠のEuphoria/2番ラスト<\/li><li>梢3枚目：4月度、謳歌爛漫/2番Bメロ<\/li><li>綴理3枚目：7月度、永遠のEuphoria/1番サビ<\/li><li>全員：9月度、Dream Believers/イントロ終わり<\/li><li>梢AFTER：9月度、夏めきペイン/1番サビ<\/li><li>綴理AFTER：8月度、Mirage Voyage/2番Aメロ<\/li><li>慈AFTER：7月度、永遠のEuphoria/アウトロ（公式Fes×LIVE動画サムネイル）<\/li><\/ul><\/details>この配信でホワイトボードの右下に貼られた星は、104期になっても残り続けている。「このお星さまはね、こう、私達の決意の証です。」<br>活動記録2024年第3話幕間では、この星のことを慈は「戒めスター」と呼んでいる。",
 	"tags": ["meets", "Kozue", "Tsuzuri", "Megumi", "room-club"],
 	"tube": "mIiEcDm9D14",
-	"length": [1162, ""]
+	"length": [1162, 346]
 },
 {
 	"date": "2023-10-25",
@@ -723,16 +723,16 @@
 	"memo": "{{L:1st Live Tour福岡公園:https://www.lovelive-anime.jp/hasunosora/live-event/live_detail.php?p=RCF}}から戻ってきた蓮ノ空メンバー。途中で瑠璃乃がダウンしてしまい……？「しばしまたれよ。」<br>10月17日のアップデートで実装された絵文字機能が利用可能な初めての配信となった。",
 	"tags": ["meets", "Tsuzuri", "Rurino", "Megumi", "room-club"],
 	"tube": "ZIO4HLN5x-g",
-	"length": [661, ""]
+	"length": [661, 359]
 },
 {
 	"date": "2023-10-26",
 	"title": "竜胆祭直前配信",
 	"desc": "ついに10月30日は竜胆祭が開催されます。本日は2年生のみでの配信となりますが、ライブに向けて一致団結して臨みたいと思います。",
-	"memo": "今月の蓮ノ空女学院は「竜胆祭」という学校祭があり、更にラブライブ！予選大会エントリーライブもあるため、いつもより気合が入っている2年生たち。<br>このWith×MEETSは活動記録2023年度第12話との密接なつながりがあるため、先にそちらを視聴しておくことが推奨される。",
+	"memo": "今月の蓮ノ空女学院は「竜胆祭」という学校祭があり、更にラブライブ！予選大会エントリーライブもあるため、いつもより気合が入っている2年生たち。<br>このWith×MEETSは活動記録2023年度第12話との密接なつながりがあるため、先にそちらを視聴しておくことが推奨される。<br>AFTERでは過去のWith×MEETSや、これからの配信内容に関する話。",
 	"tags": ["meets", "Kozue", "Tsuzuri", "Megumi", "room-club"],
 	"tube": "8h9__urzzRM",
-	"length": [1022, ""]
+	"length": [1022, 266]
 },
 {
 	"date": "2023-10-30",
@@ -1310,9 +1310,9 @@
 	"title": "めぐちゃん必殺ASMRのコーナー！",
 	"desc": "お　待　た　せ　♡",
 	"memo": "この回は音声のみの配信で、3Dモデルは未登場。",
-	"tags": ["meets", "Megumi"],
+	"tags": ["meets", "Megumi", "noafter"],
 	"tube": "BEXF6B3V94M",
-	"length": [841, ""]
+	"length": 841
 },
 {
 	"date": "2024-05-11",
@@ -1626,7 +1626,8 @@
 	"desc": "乙宗 梢と申します。蓮ノ空女学院は、創立から100年以上の歴史を持っています。本日は吟子さんと一緒に、古くから続く伝統についてお話できればと思います。",
 	"memo": "",
 	"tags": ["meets", "Kozue", "Ginko", "room-Ginko"],
-	"tube": "Vyh5MWoAVus"
+	"tube": "Vyh5MWoAVus",
+	"length": [930, ""]
 },
 {
 	"date": "2024-08-10",
@@ -1640,18 +1641,20 @@
 {
 	"date": "2024-08-12",
 	"title": "アニメ談義しよっ☆",
-	"desc": "",
-	"memo": "",
-	"tags": ["meets", "Rurino", "Megumi", "Hime"],
-	"tube": ""
+	"desc": "はろはろ〜姫芽です〜 今日はみらくらぱーく！でアニメ談義しちゃいます チャンネルはそのまま〜（・д・）ノ",
+	"memo": "現実のコミックマーケットとの連動のため、配信時刻は14時30分と異例の速さとなっていた。",
+	"tags": ["meets", "Rurino", "Megumi", "Hime", "room-Megumi", "noafter"],
+	"tube": "EQzFgh6Hnek",
+	"length": 1558
 },
 {
 	"date": "2024-08-15",
 	"title": "あのラジオが帰ってきた！？",
-	"desc": "",
-	"memo": "",
+	"desc": "かほめぐ♡じぇらーとです！ な、な、なんとあのラジオが復活！ スペシャルな夜をお届けしちゃうから、お楽しみに♪",
+	"memo": "この回は音声のみの配信で、3Dモデルは未登場。",
 	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime"],
-	"tube": ""
+	"tube": "joJX34NaHxc",
+	"length": [962, ""]
 },
 {
 	"date": "2024-08-17",
@@ -1659,18 +1662,62 @@
 	"desc": "百生吟子です。花帆先輩も映画が好きということで、二人で映画についての配信をすることになりました。みなさんは映画、好きですか？",
 	"memo": "",
 	"tags": ["meets", "Kaho", "Ginko"],
-	"tube": ""
+	"tube": "Bdu6sGusKhI",
+	"length": [1159, ""]
 },
 {
-	"date": "2099-08-19",
+	"date": "2024-08-19",
 	"title": "出動！るりちゃんを調査隊！",
-	"desc": "",
+	"desc": "ハロめぐ〜！ 普段いろんなことを調査してくれてる るりちゃんだけど、今日は逆に るりちゃんを調査しちゃいます！ 私たちしか知らない るりちゃんの調べざる素顔・・・みんな、気になるでしょ？♡",
 	"memo": "",
 	"tags": ["meets", "Megumi", "Hime"],
+	"tube": "QZ8NHJ0pO_U",
+	"length": [1120, ""]
+},
+{
+	"date": "2024-08-22",
+	"title": "村野さやかさん、いつもありがとう。",
+	"desc": "綴理だよ。ボクも、すずも、さやにいっぱいお世話になってるんだ。何かお返ししたいなと思ってるんだけど、どうかな？",
+	"memo": "",
+	"tags": ["meets", "Tsuzuri", "Kosuzu"],
+	"tube": "ofahi0dyo0U",
+	"length": [1106, ""]
+},
+{
+	"date": "2024-08-26",
+	"title": "映画撮影、こんなかんじでした！",
+	"desc": "概要文を務めさせていただきます徒町です！ この夏、徒町はとあることにチャレンジしていました！ 今日はその再現にチャレンジしていこうと思います！ ちぇすとー！",
+	"memo": "",
+	"tags": ["meets", "Sayaka", "Tsuzuri", "Ginko", "Kosuzu"],
+	"tube": "mI8uhVIyiDI",
+	"length": [891, ""]
+},
+{
+	"date": "2024-09-02",
+	"title": "大沢瑠璃乃生誕祭 〜17歳編〜",
+	"desc": "ハロめぐ〜！ 8月31日はるりちゃんの誕生日でした！ 配信はちょっと遅れちゃったけど、改めてみんなでるりちゃんの生誕を祝っちゃお♪ るりちゃんも17歳かぁ・・・しみじみ。",
+	"memo": "",
+	"tags": ["meets", "Rurino", "Megumi", "Hime"],
 	"tube": ""
 },
 {
-	"date": "2099-08-01",
+	"date": "2024-09-05",
+	"title": "吟子と姫芽の雑談回だよ〜",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Ginko", "Hime"],
+	"tube": ""
+},
+{
+	"date": "2024-09-07",
+	"title": "続。ジェスチャークイズ",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Tsuzuri"],
+	"tube": ""
+},
+{
+	"date": "2099-09-01",
 	"title": "未定",
 	"desc": "",
 	"memo": "",

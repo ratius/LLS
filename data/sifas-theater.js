@@ -36,31 +36,33 @@ const TagData = {
 	"Event":        {"name": "イベント",                   "r":100, "g":140, "b":160, "style": "square"},
 
 	"Yohane":       {"name": "堕天使ヨハネ",               "r":180, "g":160, "b": 80, "style": "square"},
+	"Washi":        {"name": "わしわしの秘密",             "r":180, "g":160, "b": 80, "style": "square"},
 	"Pocchari":     {"name": "ぽっちゃり大作戦",           "r":180, "g":160, "b": 80, "style": "square"},
 	"Dokkiri":      {"name": "穂乃果と愛のドッキリ",       "r":180, "g":160, "b": 80, "style": "square"},
-	"Washi":        {"name": "わしわしの秘密",             "r":180, "g":160, "b": 80, "style": "square"},
+	"25252":        {"name": "にっこにっこにー",           "r":180, "g":160, "b": 80, "style": "square"},
 	"Triathlon":    {"name": "地獄のトライアスロン",       "r":180, "g":160, "b": 80, "style": "square"},
-	"Meshimazu":    {"name": "せつ菜の料理",               "r":180, "g":160, "b": 80, "style": "square"},
 	"Broadcast":    {"name": "スクールアイドル達の生配信", "r":180, "g":160, "b": 80, "style": "square"},
+	"Meshimazu":    {"name": "せつ菜の料理",               "r":180, "g":160, "b": 80, "style": "square"},
 	"Monodomo":     {"name": "者どもの森",                 "r":180, "g":160, "b": 80, "style": "square"},
-	"MakiHair":     {"name": "真姫の髪",         "r":180, "g":160, "b": 80, "style": "square"},
-	"Calorie":      {"name": "絵里のカロリー事情",         "r":180, "g":160, "b": 80, "style": "square"},
+	"MakiHair":     {"name": "真姫の髪",                   "r":180, "g":160, "b": 80, "style": "square"},
 	"Calorie":      {"name": "絵里のカロリー事情",         "r":180, "g":160, "b": 80, "style": "square"},
 	"Helicopter":   {"name": "小原家のヘリコプター",       "r":180, "g":160, "b": 80, "style": "square"},
 	"Pool":         {"name": "プールのステージ",           "r":180, "g":160, "b": 80, "style": "square"},
 	"Airborne":     {"name": "空の上のステージ",           "r":180, "g":160, "b": 80, "style": "square"},
-	"25252":        {"name": "にっこにっこにー",           "r":180, "g":160, "b": 80, "style": "square"},
+	"Amazake":      {"name": "おいしい甘酒のお店",         "r":180, "g":160, "b": 80, "style": "square"},
 	"Marathon":     {"name": "スクールアイドルDVDマラソン","r":180, "g":160, "b": 80, "style": "square"},
 	"SelectShop":   {"name": "セレクトショップ",           "r":180, "g":160, "b": 80, "style": "square"},
 	"ChouCream":    {"name": "にこにこシュークリーム",     "r":180, "g":160, "b": 80, "style": "square"},
+	"HoneyLemon":   {"name": "ナイショのはちみつレモン",   "r":180, "g":160, "b": 80, "style": "square"},
 	"Mango":        {"name": "流行りのマンゴー牛乳",       "r":180, "g":160, "b": 80, "style": "square"},
+	"Channel":      {"name": "スクールアイドルチャンネル", "r":180, "g":160, "b": 80, "style": "square"},
 	"Karaage":      {"name": "にこちゃんの唐揚げ",         "r":180, "g":160, "b": 80, "style": "square"},
 	"Sentai":       {"name": "スクールアイドル戦隊",       "r":180, "g":160, "b": 80, "style": "square"},
 	"Maid":         {"name": "ことりのメイドカフェ",       "r":180, "g":160, "b": 80, "style": "square"},
 	"Skateboarding":{"name": "GWはみんなでスケボー",       "r":180, "g":160, "b": 80, "style": "square"},
 };
 const SortTarget = [
-//	{"name": "debug", "condition": "after:2021-01-01 before:2021-01-31"},
+//	{"name": "debug", "condition": "after:2021-06-25 before:2021-06-30"},
 	{"name": "2020年 2月〜3月", "condition": "after:2020-02-01 before:2020-03-31"},
 	{"name": "2020年 4月〜6月", "condition": "after:2020-04-01 before:2020-06-30"},
 	{"name": "2020年 7月〜9月", "condition": "after:2020-07-01 before:2020-09-30"},
@@ -112,23 +114,26 @@ const SortTarget = [
 	{"name": "テーマ：イベント", "condition": "tag:Event"},
 	{"name": "----"},
 	{"name": "シリーズ：堕天使ヨハネ", "condition": "tag:Yohane"},
+	{"name": "シリーズ：わしわしの秘密", "condition": "tag:Washi"},
 	{"name": "シリーズ：ぽっちゃり大作戦", "condition": "tag:Pocchari"},
 	{"name": "シリーズ：穂乃果と愛のドッキリ", "condition": "tag:Dokkiri"},
-	{"name": "シリーズ：わしわしの秘密", "condition": "tag:Washi"},
+	{"name": "シリーズ：にっこにっこにー", "condition": "tag:25252"},
 	{"name": "シリーズ：地獄のトライアスロン", "condition": "tag:Triathlon"},
-	{"name": "シリーズ：せつ菜の料理", "condition": "tag:Meshimazu"},
 	{"name": "シリーズ：スクールアイドル達の生配信", "condition": "tag:Broadcast"},
+	{"name": "シリーズ：せつ菜の料理", "condition": "tag:Meshimazu"},
 	{"name": "シリーズ：者どもの森", "condition": "tag:Monodomo"},
 	{"name": "シリーズ：真姫の髪", "condition": "tag:MakiHair"},
 	{"name": "シリーズ：絵里のカロリー事情", "condition": "tag:Calorie"},
 	{"name": "シリーズ：小原家のヘリコプター", "condition": "tag:Helicopter"},
 	{"name": "シリーズ：プールのステージ", "condition": "tag:Pool"},
 	{"name": "シリーズ：空の上のステージ", "condition": "tag:Airborne"},
-	{"name": "シリーズ：にっこにっこにー", "condition": "tag:25252"},
+	{"name": "シリーズ：おいしい甘酒のお店", "condition": "tag:Amazake"},
 	{"name": "シリーズ：スクールアイドルDVDマラソン", "condition": "tag:Marathon"},
 	{"name": "シリーズ：セレクトショップ", "condition": "tag:SelectShop"},
 	{"name": "シリーズ：にこにこシュークリーム", "condition": "tag:ChouCream"},
+	{"name": "シリーズ：ナイショのはちみつレモン", "condition": "tag:HoneyLemon"},
 	{"name": "シリーズ：流行りのマンゴー牛乳", "condition": "tag:Mango"},
+	{"name": "シリーズ：スクールアイドルチャンネル", "condition": "tag:Channel"},
 	{"name": "シリーズ：にこちゃんの唐揚げ", "condition": "tag:Karaage"},
 	{"name": "シリーズ：スクールアイドル戦隊", "condition": "tag:Sentai"},
 	{"name": "シリーズ：ことりのメイドカフェ", "condition": "tag:Maid"},
@@ -273,6 +278,10 @@ function initialize() {
 
 	//デバック用
 	if(isDebugMode) {
+		document.getElementById('PullDownMenu').selectedIndex = 1;
+		DrawStoryList(document.getElementById('PullDownMenu').value);
+	
+		let publishedStory = 0;
 		//データの不具合チェック
 		const isError = window['JSON-sifas-theater'].reduce( (acc, story) => {
 			const currentStory = '\n該当箇所：' + `${story.date}「${story.title}」`;
@@ -290,6 +299,8 @@ function initialize() {
 			if(tagError){ return acc + tagError; }
 
 			if(!("text" in story) || story.text === ""){ return acc;}
+			publishedStory++;
+			
 			const TextTemp = story.text.split('\n');
 			return acc + TextTemp.reduce( (acc2, val2, index2) => {
 				const ErrorLocation = ' (' + story.date
@@ -321,6 +332,8 @@ function initialize() {
 		`#Modal-ReaderBox {
 			width: 726px !important;
 		}`;
+		
+		console.log(`本文掲載率：${publishedStory}/${window['JSON-sifas-theater'].length} (${(publishedStory / window['JSON-sifas-theater'].length * 100).toFixed(2)}%)`);
 		
 		//描画時間の出力
 		const TimeOutputEnd = performance.now();
