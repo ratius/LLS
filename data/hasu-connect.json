@@ -846,9 +846,10 @@
 	"date": "2023-11-30",
 	"title": "11月度Fes×LIVE振り返り配信",
 	"desc": "乙宗 梢と申します。11月度Fes×LIVEもご観覧くださり、誠にありがとうございました。前回同様、皆様からのメールをご紹介しつつ、ライブを振り返っていこうかと思います。",
-	"memo": "",
+	"memo": "恒例のFes×LIVE振り返り。今回は花帆が進行役。AFTERではどアップでスクショタイム。",
 	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "room-club"],
-	"tube": "I0p8AaVzISg"
+	"tube": "I0p8AaVzISg",
+	"length": [1179, 344]
 },
 {
 	"date": "2023-12-02",
@@ -1508,7 +1509,7 @@
 	"title": "七夕、何をお願いする？",
 	"desc": "花帆だよ！ 七夕、それは織姫さまと彦星さまが出会うロマンティックな日・・・ みんなは短冊のお願い事、決めたかな？",
 	"memo": "",
-	"tags": ["meets", "Kaho"],
+	"tags": ["meets", "Kaho", "room-Kaho"],
 	"tube": "Gde8Et03X8Y",
 	"length": [1176, ""]
 },
@@ -1553,7 +1554,7 @@
 	"title": "村野さやかのラジオ 第9回",
 	"desc": "今回のラジオは吟子さんをゲストにお迎えしています セカンドシーズンになって、はじめての旅人さんです 吟子さんとどんなお話ができるのか、今からとても楽しみです",
 	"memo": "",
-	"tags": ["meets", "Sayaka", "Ginko"],
+	"tags": ["meets", "Sayaka", "Ginko", "room-Sayaka"],
 	"tube": "e4Um9rfidrs",
 	"length": [1574, ""]
 },
@@ -1562,7 +1563,7 @@
 	"title": "練習配信にチャレンジします！",
 	"desc": "はろはろ〜姫芽だよ〜。今日は小鈴ちゃんと練習配信にチャレンジするよ〜。がんばってるとこ、みんなに見せちゃるぞ(　・`A･´)",
 	"memo": "",
-	"tags": ["meets", "Kosuzu", "Hime"],
+	"tags": ["meets", "Kosuzu", "Hime", "room-lesson"],
 	"tube": "NRLzbgFUFHs",
 	"length": [1008, ""]
 },
@@ -1571,7 +1572,7 @@
 	"title": "蓮ノ空女学院の真実！？",
 	"desc": "ハロめぐー！ 今日は「蓮ノ空女学院」にフォーカスしたトークをお届けするよ！ SNSとかメールとかでもよく質問来たりするから、3年生ズが、答えてあ・げ・る♡",
 	"memo": "",
-	"tags": ["meets", "Kozue", "Tsuzuri",  "Megumi"],
+	"tags": ["meets", "Kozue", "Tsuzuri", "Megumi", "room-Tsuzuri"],
 	"tube": "CZViB6cPjL8",
 	"length": [844, ""]
 },
@@ -1599,7 +1600,7 @@
 	"memo": "ライブ会場は、蓮ノ空女学院の校舎の前に設営された屋外ステージ。昨年7月度Fes×LIVEと同じく、ステージは七夕仕様！",
 	"setlist": ["ノンフィクションヒーローショー", "Tragic Drops", "アオクハルカ", "MC", "みらくりえーしょん", "レディバグ", "月夜見海月", "MC", "永遠のEuphoria"],
 	"tags": ["live", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime"],
-	"tube": "",
+	"tube": "cU_-D0BtQq8&t=576",
 	"length": [2755, ""]
 },
 {
@@ -1661,7 +1662,7 @@
 	"title": "映画談義しようよ！",
 	"desc": "百生吟子です。花帆先輩も映画が好きということで、二人で映画についての配信をすることになりました。みなさんは映画、好きですか？",
 	"memo": "",
-	"tags": ["meets", "Kaho", "Ginko"],
+	"tags": ["meets", "Kaho", "Ginko",  "room-Kaho"],
 	"tube": "Bdu6sGusKhI",
 	"length": [1159, ""]
 },
@@ -1670,7 +1671,7 @@
 	"title": "出動！るりちゃんを調査隊！",
 	"desc": "ハロめぐ〜！ 普段いろんなことを調査してくれてる るりちゃんだけど、今日は逆に るりちゃんを調査しちゃいます！ 私たちしか知らない るりちゃんの調べざる素顔・・・みんな、気になるでしょ？♡",
 	"memo": "",
-	"tags": ["meets", "Megumi", "Hime"],
+	"tags": ["meets", "Megumi", "Hime", "room-Megumi"],
 	"tube": "QZ8NHJ0pO_U",
 	"length": [1120, ""]
 },
@@ -1679,7 +1680,7 @@
 	"title": "村野さやかさん、いつもありがとう。",
 	"desc": "綴理だよ。ボクも、すずも、さやにいっぱいお世話になってるんだ。何かお返ししたいなと思ってるんだけど、どうかな？",
 	"memo": "",
-	"tags": ["meets", "Tsuzuri", "Kosuzu"],
+	"tags": ["meets", "Tsuzuri", "Kosuzu", "room-Tsuzuri"],
 	"tube": "ofahi0dyo0U",
 	"length": [1106, ""]
 },
@@ -1688,7 +1689,7 @@
 	"title": "映画撮影、こんなかんじでした！",
 	"desc": "概要文を務めさせていただきます徒町です！ この夏、徒町はとあることにチャレンジしていました！ 今日はその再現にチャレンジしていこうと思います！ ちぇすとー！",
 	"memo": "",
-	"tags": ["meets", "Sayaka", "Tsuzuri", "Ginko", "Kosuzu"],
+	"tags": ["meets", "Sayaka", "Tsuzuri", "Ginko", "Kosuzu", "room-lesson"],
 	"tube": "mI8uhVIyiDI",
 	"length": [891, ""]
 },
@@ -1697,23 +1698,67 @@
 	"title": "大沢瑠璃乃生誕祭 〜17歳編〜",
 	"desc": "ハロめぐ〜！ 8月31日はるりちゃんの誕生日でした！ 配信はちょっと遅れちゃったけど、改めてみんなでるりちゃんの生誕を祝っちゃお♪ るりちゃんも17歳かぁ・・・しみじみ。",
 	"memo": "",
-	"tags": ["meets", "Rurino", "Megumi", "Hime"],
-	"tube": ""
+	"tags": ["meets", "Rurino", "Megumi", "Hime", "room-club"],
+	"tube": "Z79_Y0j0buM",
+	"length": [1100, ""]
 },
 {
 	"date": "2024-09-05",
 	"title": "吟子と姫芽の雑談回だよ〜",
-	"desc": "",
+	"desc": "はろはろ〜姫芽だよ〜 今日は吟子ちゃんとお話しするんだ、いいでしょ〜うらやましいか〜？なんちゃって〜 たくさん喋ってみんなも吟子ちゃんに癒されよっ&#10741;(¯∀¯)/",
 	"memo": "",
-	"tags": ["meets", "Ginko", "Hime"],
-	"tube": ""
+	"tags": ["meets", "Ginko", "Hime", "room-Hime"],
+	"tube": "XpOdVoTvjac",
+	"length": [1104, ""]
 },
 {
 	"date": "2024-09-07",
 	"title": "続。ジェスチャークイズ",
+	"desc": "綴理だよ。ジェスチャークイズ、またやりたくなったんだ。懐かしいね。",
+	"memo": "",
+	"tags": ["meets", "Tsuzuri", "room-club"],
+	"tube": "h6soxi5-fxI",
+	"length": [888, ""]
+},
+{
+	"date": "2024-09-09",
+	"title": "星のお話。",
+	"desc": "乙宗 梢と申します。私、趣味で天体観測をしておりまして・・・。本日は、星についてのお話をさせていただきます。みなさんが天体観測に興味を持ってくれたら嬉しいです。",
+	"memo": "",
+	"tags": ["meets", "Kozue", "room-Kozue"],
+	"tube": "T8s4jvSRlvI",
+	"length": [938, ""]
+},
+{
+	"date": "2024-09-14",
+	"title": "三人で！だらだら配信！",
+	"desc": "花帆だよ！ あたしと綴理センパイ、そして姫芽ちゃんで！やります！だらだら配信！ みんなとまったりできたら嬉しいな♪",
+	"memo": "",
+	"tags": ["meets", "Kaho", "Tsuzuri", "Hime"],
+	"tube": ""
+},
+{
+	"date": "2024-09-16",
+	"title": "家族へ感謝を・・・！",
+	"desc": "百生吟子です。今日は9月16日、敬老の日ということで、小鈴と「家族」をテーマにお話したいと思います。日頃の感謝が少しでも伝わりますように。",
+	"memo": "",
+	"tags": ["meets", "Ginko", "Kosuzu"],
+	"tube": ""
+},
+{
+	"date": "2024-09-19",
+	"title": "もう一度、梢先輩に「気品」を学ぼう！",
+	"desc": "オッス！大沢瑠璃乃だよ☆ 前回「気品」を学んでから半年以上の月日が流れ・・・大沢瑠璃乃、もう一度梢先輩に学ばせていただきます！ 今回は小鈴ちゃんも一緒に、大人のレディーを目指しますわ！よろしくですわ！",
+	"memo": "",
+	"tags": ["meets", "Kozue", "Rurino", "Kosuzu"],
+	"tube": ""
+},
+{
+	"date": "2024-09-21",
+	"title": "村野さやかのラジオ 第10回",
 	"desc": "",
 	"memo": "",
-	"tags": ["meets", "Tsuzuri"],
+	"tags": ["meets", "Sayaka", "Kosuzu"],
 	"tube": ""
 },
 {

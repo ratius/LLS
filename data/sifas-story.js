@@ -182,7 +182,7 @@ function initialize () {
 	if(isDebugMode) {
 		//描画時間の出力
 		const TimeOutputEnd = performance.now();
-		console.log(`リンクラ スクールアイドルコネクトまとめ\n読み込み： ${TimeOutputLoaded - TimeLoadingStart}ミリ秒\n初期化: ${TimeOutputEnd - TimeOutputLoaded}ミリ秒`);
+		console.log(`スクスタ ストーリー便覧\n読み込み： ${TimeOutputLoaded - TimeLoadingStart}ミリ秒\n初期化: ${TimeOutputEnd - TimeOutputLoaded}ミリ秒`);
 		
 		//◆データの不具合チェック
 		let isError = 0;
