@@ -62,7 +62,7 @@ const TagData = {
 	"Skateboarding":{"name": "GWはみんなでスケボー",       "r":180, "g":160, "b": 80, "style": "square"},
 };
 const SortTarget = [
-//	{"name": "debug", "condition": "after:2021-06-25 before:2021-06-30"},
+	//{"name": "debug", "condition": "after:2021-10-01 before:2021-12-30"},
 	{"name": "2020年 2月〜3月", "condition": "after:2020-02-01 before:2020-03-31"},
 	{"name": "2020年 4月〜6月", "condition": "after:2020-04-01 before:2020-06-30"},
 	{"name": "2020年 7月〜9月", "condition": "after:2020-07-01 before:2020-09-30"},
@@ -213,15 +213,17 @@ function MakeModal(id){
 	}).split('\n');
 	document.getElementById("Modal-Text").innerHTML = TextLog.map( (text, index) => {
 		text = text.split('\t');
-		const CharacterName = (isNaN(text[0]) ? text[0] : DrawCharName(result.tags[parseInt(text[0],10)]));
 		
 		let currentNote = [];
-		if(text.length >= 2){ //「〜間〜」のような名前だけの部分はテキストを持たないため、無視する
-			text[1] = text[1].replace(/\{\{notenum:(\d+)\}\}/g, function(match, noteIndex){
+		text = text.map(x => {
+			x = x.replace(/\{\{notenum:(\d+)\}\}/g, function(match, noteIndex){
 				if(match) { currentNote.push(`<span>*${noteIndex}： ${noteList[parseInt(noteIndex, 10)-1]}</span>`);}
-				return ``;
+				return '';
 			});
-		}
+			return x;
+		});
+		
+		const CharacterName = (isNaN(text[0]) ? text[0] : DrawCharName(result.tags[parseInt(text[0],10)]));
 		
 		return CharacterName
 		+ (text.length >=2 ? `<p>${text[1]}</p>` : '')

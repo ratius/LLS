@@ -1734,43 +1734,72 @@
 	"title": "三人で！だらだら配信！",
 	"desc": "花帆だよ！ あたしと綴理センパイ、そして姫芽ちゃんで！やります！だらだら配信！ みんなとまったりできたら嬉しいな♪",
 	"memo": "",
-	"tags": ["meets", "Kaho", "Tsuzuri", "Hime"],
-	"tube": ""
+	"tags": ["meets", "Kaho", "Tsuzuri", "Hime", "room-Kaho"],
+	"tube": "5pfB0bJQ1u8",
+	"length": [1135, ""]
 },
 {
 	"date": "2024-09-16",
 	"title": "家族へ感謝を・・・！",
 	"desc": "百生吟子です。今日は9月16日、敬老の日ということで、小鈴と「家族」をテーマにお話したいと思います。日頃の感謝が少しでも伝わりますように。",
 	"memo": "",
-	"tags": ["meets", "Ginko", "Kosuzu"],
-	"tube": ""
+	"tags": ["meets", "Ginko", "Kosuzu", "room-Ginko"],
+	"tube": "Br4CF_GhUbg",
+	"length": [1032, ""]
 },
 {
 	"date": "2024-09-19",
 	"title": "もう一度、梢先輩に「気品」を学ぼう！",
 	"desc": "オッス！大沢瑠璃乃だよ☆ 前回「気品」を学んでから半年以上の月日が流れ・・・大沢瑠璃乃、もう一度梢先輩に学ばせていただきます！ 今回は小鈴ちゃんも一緒に、大人のレディーを目指しますわ！よろしくですわ！",
 	"memo": "",
-	"tags": ["meets", "Kozue", "Rurino", "Kosuzu"],
-	"tube": ""
+	"tags": ["meets", "Kozue", "Rurino", "Kosuzu", "room-lesson"],
+	"tube": "GErzvSNhHAk",
+	"length": [1126, ""]
 },
 {
 	"date": "2024-09-21",
 	"title": "村野さやかのラジオ 第10回",
-	"desc": "",
+	"desc": "今回のラジオは小鈴さんをゲストにお迎えしています 小鈴さんがDOLLCHESTRAに入ってから、もう半年が経とうとしています 改めて小鈴さんの魅力が伝わるようなラジオにしたいと思います！",
 	"memo": "",
 	"tags": ["meets", "Sayaka", "Kosuzu"],
-	"tube": ""
+	"tube": "EtOkBIwoP6k",
+	"length": [1483, ""]
 },
 {
 	"date": "2024-09-23",
 	"title": "安養寺姫芽生誕 〜16歳編〜",
-	"desc": "",
+	"desc": "大沢瑠璃乃だよ☆ 明日はひめっちの誕生日！盛大に祝ってもてなしちゃおう！ ひめっちが好きなものと言えば、ゲームと・・・「あれ」だよね！",
 	"memo": "",
-	"tags": ["meets", "Rurino", "Megumi", "Hime"],
+	"tags": ["meets", "Rurino", "Megumi", "Hime", "room-lesson"],
+	"tube": "D0usAfneqzQ",
+	"length": [1218, ""]
+},
+{
+	"date": "2024-09-26",
+	"title": "カラオケしちゃお♪",
+	"desc": "花帆だよ！ 今日はさやかちゃんとの配信だー！ 取り出したるはハンドマイク！とくれば・・・歌っちゃお〜！",
+	"memo": "",
+	"tags": ["meets", "Kaho", "Sayaka"],
 	"tube": ""
 },
 {
-	"date": "2099-09-01",
+	"date": "2024-09-30",
+	"title": "○○の日がやってくる！",
+	"desc": "綴理だよ。今日の三人は、いつもとどこか違う、かも。",
+	"memo": "",
+	"tags": ["meets", "Kozue", "Tsuzuri", "Megumi"],
+	"tube": ""
+},
+{
+	"date": "2024-10-03",
+	"title": "1年生ズからのお知らせ！",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime"],
+	"tube": ""
+},
+{
+	"date": "2099-10-01",
 	"title": "未定",
 	"desc": "",
 	"memo": "",
