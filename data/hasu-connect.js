@@ -6,6 +6,8 @@ const TagData = {
 	
 	"YouTube" : {"name": "YouTubeライブ", "r":224, "g":128, "b": 128, "style": "square"},
 	"SayakaRadio" : {"name": "村野さやかのラジオ", "r":160, "g":112, "b": 96, "style": "square"},
+	"birthday": {"name": "誕生日", "r":160, "g":112, "b": 96, "style": "square"},
+	
 	
 	"Kaho"    : {"name": "花帆"   , "r":248, "g":181, "b":  0, "style": "round"},
 	"Sayaka"  : {"name": "さやか" , "r": 83, "g":131, "b":195, "style": "round"},
@@ -31,6 +33,7 @@ const SortTarget = [
 	{"name": "タグ：Fes×LIVE", "condition": "tag:live"},
 	{"name": "タグ：YouTubeライブ", "condition": "tag:YouTube"},
 	{"name": "タグ：村野さやかのラジオ", "condition": "tag:SayakaRadio"},
+	{"name": "タグ：誕生日", "condition": "tag:birthday"},
 	{"name": "----"},
 	{"name": "配信場所：花帆の部屋",   "condition": "tag:room-Kaho"},
 	{"name": "配信場所：さやかの部屋", "condition": "tag:room-Sayaka"},
