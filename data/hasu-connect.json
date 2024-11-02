@@ -561,7 +561,7 @@
 	"date": "2023-09-09",
 	"title": "村野さやかのラジオ 第４回",
 	"desc": "村野さやかのラジオ 第４回は乙宗梢先輩をお迎えしてお送りします",
-	"memo": "さやかのラジオも4回目。今日ものゲストは梢先輩！<br><i>「私、あまり『だけれど』は使っていないつもりなのだけれど……」「あ、今使ってますよ」<\/i>",
+	"memo": "さやかのラジオも4回目。今日のゲストは梢先輩！<br><i>「私、あまり『だけれど』は使っていないつもりなのだけれど……」「あ、今使ってますよ」<\/i>",
 	"tags": ["meets", "SayakaRadio", "Sayaka", "Kozue", "room-Sayaka"],
 	"tube": "w6rduTkw2VY",
 	"length": [1150, 334]
@@ -855,89 +855,100 @@
 	"date": "2023-12-02",
 	"title": "村野さやかのラジオ 第６回",
 	"desc": "今回のラジオは瑠璃乃さんをゲストにお迎えしています さやかちゃんとみんなとお話できるの、めっちゃワクワク！とのことです わたしも今から楽しみです",
-	"memo": "",
+	"memo": "村野さやかのラジオも6回目。今日のトーク内容は「妹にするなら？」「オススメのゲームは？」<br>AFTERではトマティーのぬいぐるみが…？",
 	"tags": ["meets", "SayakaRadio", "Sayaka", "Rurino", "room-Sayaka"],
-	"tube": "8nfk2NkIjLY"
+	"tube": "8nfk2NkIjLY",
+	"length": [1205, 396]
 },
 {
 	"date": "2023-12-04",
 	"title": "もしもみんながファンタジーの世界にいたら…",
 	"desc": "花帆だよ♪蓮ノ空のみんながファンタジーの世界にいたら、どんなことしてるかな？一緒に考えよ！",
-	"memo": "当初は綴理の単独配信の予定だった{{X:当初の予定表:1729017211476472184}}が、諸般の事情により、花帆の単独配信に変更された。{{X:出演者変更のお知らせ:1730196225448632804}}",
+	"memo": "蓮ノ空×ファンタジーシリーズ。みんなでパーティーを組んだらどんな役職になるのか、花帆と一緒に考えてみよう！<br>当初は綴理の単独配信の予定だった{{X:当初の予定表:1729017211476472184}}が、諸般の事情により、花帆の単独配信に変更された。{{X:出演者変更のお知らせ:1730196225448632804}}",
 	"tags": ["meets", "Kaho", "room-Kaho"],
-	"tube": "XytOnKYX_64"
+	"tube": "XytOnKYX_64",
+	"length": [1367, 334]
 },
 {
 	"date": "2023-12-07",
 	"title": "梢先輩に「気品」を学ぼう！",
 	"desc": "大沢瑠璃乃だよ☆ 今日は梢先輩の気品あふれるしょさ？に迫っていこうと思います…！",
-	"memo": "",
+	"memo": "ウォーキングや話し方といった普段の動作を上品に見せる方法を、梢から学ぼう！<br>AFTERでは12月2日のWith×MEETSへの言及あり。",
 	"tags": ["meets", "Kozue", "Rurino", "room-lesson"],
-	"tube": "0J0fgK5MrW0"
+	"tube": "0J0fgK5MrW0",
+	"length": [1001, 361]
 },
 {
 	"date": "2023-12-11",
 	"title": "完全ノープラン雑談！",
 	"desc": "花帆だよ！今日は本当に何も決めてなくて…だから、みんなといろんなお話ができたらいいな！",
-	"memo": "",
+	"memo": "今日は、花帆が気の向くままにお話を展開していく！<br>本編では12月4日、AFTERでは9月7日のWith×MEETSへの言及あり。",
 	"tags": ["meets", "Kaho", "room-Kaho"],
-	"tube": "uRYUfhmLG9Y"
+	"tube": "uRYUfhmLG9Y",
+	"length": [1118, 414]
 },
 {
 	"date": "2023-12-13",
 	"title": "ハロめぐちゃんねる年末スペシャル！",
 	"desc": "ハロめぐ〜♪ 今回はハロめぐチャンネル年末スペシャルだよ☆良いお年に向かって全力疾走だ〜！",
-	"memo": "",
+	"memo": "テストシーズンの嫌な空気を吹き飛ばすハロめぐちゃんねる。今回はYouTubeと同時配信。11月に行われた遠征（1st Live Tour 〜RUN！CAN！FUN！〜）の裏話や、みんなのお部屋で撮られたオフショットも。10月15日のWith×MEETSへの言及あり。",
 	"tags": ["meets", "YouTube", "Megumi", "room-Megumi"],
-	"tube": "lr94xePQ8qA&t=585"
+	"tube": "lr94xePQ8qA&t=585",
+	"length": [1533, 312]
 },
 {
 	"date": "2023-12-16",
 	"title": "蓮ノ空を紹介させてください",
 	"desc": "今一度、私たちの活動についてご紹介させていただければと思います。",
-	"memo": "梢が、蓮ノ空女学院のこと、スクールアイドルクラブのこと、そしてメンバーのことについての話を繰り広げる。<span style=\"display:none\">「AFTER」では機械トラブルにより、音が途切れ途切れになってしまっている。<\/span>",
+	"memo": "梢が、蓮ノ空女学院のこと、スクールアイドルクラブのこと、そしてメンバーのことについての話を繰り広げる。<span style=\"display:none\">「AFTER」では機械トラブルにより、途中から音が途切れ途切れになってしまっている。<\/span>",
 	"tags": ["meets", "YouTube", "Kozue", "room-club"],
-	"tube": "QRXO3FoWLG4&t=583"
+	"tube": "QRXO3FoWLG4&t=583",
+	"length": [1319, 310]
 },
 {
 	"date": "2023-12-20",
 	"title": "藤島 慈生誕祭！",
 	"desc": "瑠璃乃だよー☆ 今日はみなみなさまご存知の通りめぐちゃんの誕生日！みんな！宴の準備はできてるかー！？",
-	"memo": "",
+	"memo": "12月20日は梢ちゃんの誕生日！ みんなでお祝いしよう！<br>諸事情により校舎が使えず（活動記録第14話参照）、レンタルスタジオからの配信となっている。",
 	"tags": ["meets", "birthday", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi"],
-	"tube": "qKZdg89w7uE"
+	"tube": "qKZdg89w7uE",
+	"length": [1006, 342]
 },
 {
 	"date": "2023-12-28",
 	"title": "103期12月度Fes×LIVE〜ラブライブ！北陸地方予選大会〜",
-	"memo": "ライブ会場は、蓮ノ空女学院の音楽堂。北陸大会には6人チームでエントリー！<br>このFes×LIVEは活動記録2023年度第14話との密接なつながりがあるため、公式では活動記録と抱き合わせで配信されている。",
+	"memo": "ライブ会場は、蓮ノ空女学院の音楽堂。北陸大会には6人チームでエントリー！<br>Fes×LIVE AFTERは開催されなかった。",
 	"tags": ["live", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi"],
 	"setlist": ["On your mark", "MC", "アイデンティティ", "Sparkly Spot", "Reflection in the mirror", "MC", "Link to the FUTURE"],
-	"tube": "PBuFbZ4QviQ&t=4422"
+	"tube": "Ny9L5QFmLJo&t=562",
+	"length": [1667]
 },
 {
 	"date": "2023-12-31",
 	"title": "みんな、ありがとう！",
 	"desc": "みんな久しぶり、花帆だよ！ 色々気になることもあると思うんだけど、配信で伝えさせてもらうね！",
-	"memo": "",
+	"memo": "色々あって一週間以上空いたWith×MEETS配信は、年末の日！ 先日のFes×LIVEの振り返り、そしてラブライブ！地方予選の結果発表も！",
 	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "room-club", "noafter"],
-	"tube": "MrUUxozSjfQ"
+	"tube": "MrUUxozSjfQ",
+	"length": [1481]
 },
 {
 	"date": "2024-01-11",
 	"title": "あけましておめでとうございます",
 	"desc": "みなさん、あけましておめでとうございます。今回は新年の挨拶並びに、一つご報告をさせていただきたいと思います。",
-	"memo": "",
+	"memo": "新年最初の配信は、ラブライブ！全国大会の結果の報告と、新年の目標の宣言。AFTERはほぼスクショタイム。",
 	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "room-club"],
-	"tube": "L8uxvjPQ4io"
+	"tube": "L8uxvjPQ4io",
+	"length": [1186, 309]
 },
 {
 	"date": "2024-01-13",
 	"title": "村野 さやか生誕祭",
 	"desc": "綴理だよ。今日はさやの誕生日なんだ。嬉しくて、楽しみで、わくわくで、そわそわで、なんだかボクが誕生日みたい。",
-	"memo": "",
+	"memo": "1月13日はさやかちゃんの誕生日！ みんなでお祝いしよう！ AFTERはほぼスクショタイム。",
 	"tags": ["meets", "birthday", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "room-club"],
-	"tube": "NmbXpWEh7VY"
+	"tube": "NmbXpWEh7VY",
+	"length": [1077, 401]
 },
 {
 	"date": "2024-01-15",
@@ -990,10 +1001,11 @@
 {
 	"date": "2024-01-31",
 	"title": "103期1月度Fes×LIVE",
-	"memo": "ライブ会場は、石川県立金沢図書館ホール。本に囲まれてのライブとなった。<br>この配信は直前のライブグランプリの成績とは関係なく、2023年12月に行われたイベント「Link to Us! Link with Yours!!」をプレイしたプレイヤー全員にSランクチケットが与えられた。<br>このFes×LIVEは活動記録2023年度第16話との密接なつながりがあるため、公式では活動記録と抱き合わせで配信されている。",
+	"memo": "ライブ会場は、石川県立金沢図書館ホール。本に囲まれてのライブとなった。<br>この配信は直前のライブグランプリの成績とは関係なく、2023年12月に行われたイベント「Link to Us! Link with Yours!!」をプレイしたプレイヤー全員にSランクチケットが与えられた。",
 	"tags": ["live", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi"],
 	"setlist": ["Yup! Yup! Yup!", "MC", "青とシャボン", "ミルク", "Special Thanks", "MC", "永遠のEuphoria"],
-	"tube": "ms2lYnH0YTY&t=1432"
+	"tube": "zMhu2RUQM1M&t=554",
+	"length": [2366, ""]
 },
 {
 	"date": "2024-02-03",
@@ -1843,7 +1855,7 @@
 	"desc": "徒町です！徒町小鈴です！ 今日はコメントのみなさんに、自由にお話しできたらいいなって思ってます！ 話し相手が徒町で恐縮ですが！お付き合いいただけたら嬉しいです！！",
 	"memo": "",
 	"tags": ["meets", "Kosuzu"],
-	"tube": ""
+	"tube": "eCc9-z-rYys"
 },
 {
 	"date": "2024-10-17",
@@ -1851,7 +1863,7 @@
 	"desc": "花帆だよ！ 今日はなんと、難読漢字に挑戦していきます！ 今までたくさん本を読んできたから、「読み」ならできるはず・・・！",
 	"memo": "",
 	"tags": ["meets", "Kaho"],
-	"tube": ""
+	"tube": "wo4-JdO9Bwo"
 },
 {
 	"date": "2024-10-19",
@@ -1859,7 +1871,7 @@
 	"desc": "はろはろ〜姫芽だよ〜 先日の小鈴ちゃんに引き続き、自由にお話しちゃお〜のコーナーです みんなは最近何してるのかな？(´▽｀)/",
 	"memo": "",
 	"tags": ["meets", "Hime"],
-	"tube": ""
+	"tube": "G9LTpu1Mu04"
 },
 {
 	"date": "2024-10-20",
@@ -1867,18 +1879,74 @@
 	"desc": "花帆だよ！ 今日は10月20日、すなわち！吟子ちゃんの！お誕生日で〜す！ぱちぱち〜！ あたしと梢センパイと、みんなで！吟子ちゃんをたっくさんお祝いしちゃおうね♪",
 	"memo": "",
 	"tags": ["meets", "birthday", "Kaho", "Kozue", "Ginko"],
-	"tube": ""
+	"tube": "11Ff0lXEx58"
 },
 {
 	"date": "2024-10-24",
 	"title": "お話しませんか？",
-	"desc": "",
+	"desc": "百生吟子です。みなさん、先日はたくさんのお祝い、本当にありがとうございました。今日は小鈴と姫芽に続く形で、みなさんとお話しができれば、と思っています。二人みたいに上手に喋れる自信は無いけど・・・よろしくお願いします。",
 	"memo": "",
-	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime"],
+	"tags": ["meets", "Ginko", "room-Ginko"],
+	"tube": "JF9v3xx5DB8"
+},
+{
+	"date": "2024-10-26",
+	"title": "AUTUMN LINKED CARNIVAL 意気込み配信",
+	"desc": "村野さやかです 今回のFes×LIVEは、ラブライブ！地区予選大会のエントリーを兼ねたライブとなっています メンバーの力を合わせて、全力で臨みたいと思います 応援のほど、何卒よろしくお願いします",
+	"memo": "",
+	"tags": ["meets", "Kozue", "Tsuzuri", "Kosuzu"],
+	"tube": "Rq5JQwdxroU"
+},
+{
+	"date": "2024-10-28",
+	"title": "104期 Fes×LIVE AUTUMN LINKED CARNIVAL",
+	"memo": "今月のFes×LIVEは二部構成！ ライブ会場は、蓮ノ空女学院の第2音楽堂。ラブライブ！予選に向けた決意を表明する！",
+	"tags": ["live", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime"],
+	"setlist": ["月夜見海月", "Proof", "ファンファーレ！！！", "MC", "Now or Never", "MC"],
 	"tube": ""
 },
 {
-	"date": "2099-10-01",
+	"date": "2024-10-28",
+	"title": "104期 Fes×LIVE AUTUMN LINKED CARNIVAL 〜ラブライブ！地区予選エントリー〜",
+	"memo": "今月のFes×LIVEは二部構成！ 第二部は、ラブライブ！へのエントリーとなるライブ。今年度はユニット毎ではなく、「蓮ノ空女学院スクールアイドルクラブ」として出場することになった。<br>この配信は直前のライブグランプリの成績とは関係なく、視聴者全員にSランクチケットが与えられた。また、Fes×LIVE AFTERは開催されなかった。",
+	"tags": ["live", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime"],
+	"setlist": ["MC", "Link to the FUTURE"],
+	"tube": ""
+},
+{
+	"date": "2024-10-31",
+	"title": "AUTUMN LINKED CARNIVAL 振り返り配信",
+	"desc": "徒町小鈴です！ 先日のラブライブ！地区予選、たくさんのご声援本当に！本当にありがとうございました！ 今日はその結果報告と振り返りを、1年生ズで務めさせていただきます！",
+	"memo": "",
+	"tags": ["meets", "Ginko", "Kosuzu", "Hime"],
+	"tube": ""
+},
+{
+	"date": "2024-11-02",
+	"title": "村野さやかの個人配信です",
+	"desc": "みなさんこんばんは 今日は尊重ではなく、村野さやかとしての個人配信です みなさんとのんびりお話ができればと思います",
+	"memo": "",
+	"tags": ["meets", "Sayaka"],
+	"tube": ""
+},
+{
+	"date": "2024-11-04",
+	"title": "ショートメール選手権！",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Megumi"],
+	"tube": ""
+},
+{
+	"date": "2024-11-07",
+	"title": "未定",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Kaho", "Ginko", "Hime"],
+	"tube": ""
+},
+{
+	"date": "2099-11-01",
 	"title": "未定",
 	"desc": "",
 	"memo": "",
