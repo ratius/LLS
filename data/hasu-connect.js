@@ -21,8 +21,6 @@ const TagData = {
 };
 
 const SortTarget = [
-//	{"name": "debug - 概要なし",  "condition": "nodesc max:5"},
-	{"name": "debug - 配信時間なし",  "condition": "nolength max:5"},
 	{"name": "103期 上半期（2023年4月 - 2023年9月）",  "condition": "after:2023-04-01 before:2023-09-30"},
 	{"name": "103期 下半期（2023年10月 - 2024年3月）", "condition": "after:2023-10-01 before:2024-03-31"},
 	{"name": "104期 上半期（2024年4月 - 2024年9月）",  "condition": "after:2024-04-01 before:2024-09-30"},
@@ -63,18 +61,18 @@ function DrawLiveList(conditions = ''){
 			const afterDate = new Date(c.split(':')[1]);
 			filteredData = filteredData.filter( connect => new Date(connect.date) >= afterDate);
 		}
-		else if(c.startsWith("tag:")) { //「tag:」 - 特定のタグを持つ配信
+		else if(c.startsWith("tag:")) { //「tag:」 - 特定のタグを持つ
 			const tag = c.split(':')[1];
 			filteredData = filteredData.filter( connect => connect.tags && connect.tags.includes(tag));
 		}
-		else if(c.startsWith("extag:")) { //「extag:」 - 特定のタグを持たない配信
+		else if(c.startsWith("extag:")) { //「extag:」 - 特定のタグを持たない
 			const tag = c.split(':')[1];
 			filteredData = filteredData.filter( connect => connect.tags && !connect.tags.includes(tag));
 		}
-		else if(c === "nodesc") { //「nodesc:」 - 概要が未設定の配信
+		else if(c === "nodesc") { //「nodesc」 - 概要が未設定
 			filteredData = filteredData.filter( connect => connect.desc === "" && !connect.tags.includes("cancelled"));
 		}
-		else if(c === "nolength") { //「nolength:」 - 動画時間が未設定の配信
+		else if(c === "nolength") { //「nolength」 - 動画時間が未設定
 			filteredData = filteredData.filter( connect => !(['length'] in connect) && !connect.tags.includes("cancelled"));
 		}
 	});
