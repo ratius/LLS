@@ -756,7 +756,7 @@
 	"date": "2023-11-02",
 	"title": "竜胆祭終了！みんなにご報告配信",
 	"desc": "みんな、竜胆祭のステージを見せてくれて本当にありがとう！ラブライブ！地区予選の結果についてご報告するね…！",
-	"memo": "毎月恒例、Fes×LIVEの振り返り。今回はTrick & Cuteの衣装でお届け。そして地区大会予選の結果も……<br>当初は慈も出演する予定であったが、キャストの月音こな氏の体調不良により、5人での配信となった{{X:出演者変更のお知らせ:1720016750346182981}}。この配信で獲得したWith Starは慈にも割り振ることができる。",
+	"memo": "毎月恒例、Fes×LIVEの振り返り。今回はTrick & Cuteの衣装でお届け。さやかの『Runway』に関する話や、地区大会予選の結果も……<br>当初は慈も出演する予定であったが、キャストの月音こな氏の体調不良により、5人での配信となった{{X:出演者変更のお知らせ:1720016750346182981}}。この配信で獲得したWith Starは慈にも割り振ることができる。",
 	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "room-club"],
 	"tube": "-DxHZd4Odow",
 	"length": [1349, 344]
@@ -917,7 +917,7 @@
 {
 	"date": "2023-12-28",
 	"title": "103期12月度Fes×LIVE〜ラブライブ！北陸地方予選大会〜",
-	"memo": "ライブ会場は、蓮ノ空女学院の音楽堂。北陸大会には6人チームでエントリー！<br>Fes×LIVE AFTERは開催されなかった。",
+	"memo": "ライブ会場は、蓮ノ空女学院の音楽堂。学校の意向でインターネットの通信速度が極端に制限される中、ファンの協力のおかげで配信ができることに。<br>地区大会ではユニット毎の出場であったが、北陸大会には「蓮ノ空女学院スクールアイドルクラブ」として6人チームとして出場！<br>このFes×LIVEでは、Fes×LIVE AFTERは開催されなかった。",
 	"tags": ["live", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi"],
 	"setlist": ["On your mark", "MC", "アイデンティティ", "Sparkly Spot", "Reflection in the mirror", "MC", "Link to the FUTURE"],
 	"tube": "Ny9L5QFmLJo&t=562",
@@ -1102,7 +1102,8 @@
 	"memo": "ライブ会場は、蓮ノ空女学院の音楽堂。今回限りの3組のシャッフルユニットがそれぞれ新曲を披露！<br>諸事情により、当初の予定より15分遅れての開演となった{{X:開演時間変更のお知らせ:1763155670973698183}}。",
 	"tags": ["live", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi"],
 	"setlist": ["ハッピー至上主義！", "Pleasure Feather", "Colorfulness", "MC", "Trick & Cute", "Dream Believers", "MC"],
-	"tube": "p2_Pcmx2b20&t=252"
+	"tube": "p2_Pcmx2b20&t=252",
+	"length": [2333, ""]
 },
 {
 	"date": "2024-03-02",
@@ -1655,7 +1656,7 @@
 	"date": "2024-08-12",
 	"title": "アニメ談義しよっ☆",
 	"desc": "はろはろ〜姫芽です〜 今日はみらくらぱーく！でアニメ談義しちゃいます チャンネルはそのまま〜（・д・）ノ",
-	"memo": "現実のコミックマーケットとの連動のため、配信時刻は14時30分と異例の速さとなっていた。",
+	"memo": "現実のコミックマーケットとの連動のため、このWith×MEETSの配信開始時刻は14時30分であった。",
 	"tags": ["meets", "Rurino", "Megumi", "Hime", "room-Megumi", "noafter"],
 	"tube": "EQzFgh6Hnek",
 	"length": 1558
@@ -1855,7 +1856,8 @@
 	"desc": "徒町です！徒町小鈴です！ 今日はコメントのみなさんに、自由にお話しできたらいいなって思ってます！ 話し相手が徒町で恐縮ですが！お付き合いいただけたら嬉しいです！！",
 	"memo": "",
 	"tags": ["meets", "Kosuzu", "room-Kosuzu"],
-	"tube": "eCc9-z-rYys"
+	"tube": "eCc9-z-rYys",
+	"length": [939, ""]
 },
 {
 	"date": "2024-10-17",
@@ -1863,7 +1865,8 @@
 	"desc": "花帆だよ！ 今日はなんと、難読漢字に挑戦していきます！ 今までたくさん本を読んできたから、「読み」ならできるはず・・・！",
 	"memo": "",
 	"tags": ["meets", "Kaho"],
-	"tube": "wo4-JdO9Bwo"
+	"tube": "wo4-JdO9Bwo",
+	"length": [1157, ""]
 },
 {
 	"date": "2024-10-19",
@@ -1871,15 +1874,17 @@
 	"desc": "はろはろ〜姫芽だよ〜 先日の小鈴ちゃんに引き続き、自由にお話しちゃお〜のコーナーです みんなは最近何してるのかな？(´▽｀)/",
 	"memo": "",
 	"tags": ["meets", "Hime", "room-Hime"],
-	"tube": "G9LTpu1Mu04"
+	"tube": "G9LTpu1Mu04",
+	"length": [1082, ""]
 },
 {
 	"date": "2024-10-20",
-	"title": "百生吟子生誕祭 〜16歳編",
+	"title": "百生吟子生誕祭 〜16歳編〜",
 	"desc": "花帆だよ！ 今日は10月20日、すなわち！吟子ちゃんの！お誕生日で〜す！ぱちぱち〜！ あたしと梢センパイと、みんなで！吟子ちゃんをたっくさんお祝いしちゃおうね♪",
 	"memo": "",
 	"tags": ["meets", "birthday", "Kaho", "Kozue", "Ginko", "room-club"],
-	"tube": "11Ff0lXEx58"
+	"tube": "11Ff0lXEx58",
+	"length": [1097, ""]
 },
 {
 	"date": "2024-10-24",
@@ -1887,7 +1892,8 @@
 	"desc": "百生吟子です。みなさん、先日はたくさんのお祝い、本当にありがとうございました。今日は小鈴と姫芽に続く形で、みなさんとお話しができれば、と思っています。二人みたいに上手に喋れる自信は無いけど・・・よろしくお願いします。",
 	"memo": "",
 	"tags": ["meets", "Ginko", "room-Ginko", "room-Ginko"],
-	"tube": "JF9v3xx5DB8"
+	"tube": "JF9v3xx5DB8",
+	"length": [910, ""]
 },
 {
 	"date": "2024-10-26",
@@ -1895,7 +1901,8 @@
 	"desc": "村野さやかです 今回のFes×LIVEは、ラブライブ！地区予選大会のエントリーを兼ねたライブとなっています メンバーの力を合わせて、全力で臨みたいと思います 応援のほど、何卒よろしくお願いします",
 	"memo": "",
 	"tags": ["meets", "Kozue", "Tsuzuri", "Kosuzu", "room-lesson"],
-	"tube": "Rq5JQwdxroU"
+	"tube": "Rq5JQwdxroU",
+	"length": [724, ""]
 },
 {
 	"date": "2024-10-28",
@@ -1903,7 +1910,8 @@
 	"memo": "今月のFes×LIVEは二部構成！ ライブ会場は、蓮ノ空女学院の第2音楽堂。ラブライブ！予選に向けた決意を表明する！",
 	"tags": ["live", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime"],
 	"setlist": ["月夜見海月", "Proof", "ファンファーレ！！！", "MC", "Now or Never", "MC"],
-	"tube": "qctUZQWphPk&t=596"
+	"tube": "qctUZQWphPk&t=596",
+	"length": [1742, ""]
 },
 {
 	"date": "2024-10-28",
@@ -1911,7 +1919,8 @@
 	"memo": "今月のFes×LIVEは二部構成！ 第二部は、ラブライブ！へのエントリーとなるライブ。今年度はユニット毎ではなく、「蓮ノ空女学院スクールアイドルクラブ」として出場することになった。<br>この配信ではFes×LIVE AFTERは開催されなかった。",
 	"tags": ["live", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime"],
 	"setlist": ["MC", "Link to the FUTURE"],
-	"tube": "qctUZQWphPk&t=3595"
+	"tube": "qctUZQWphPk&t=3595",
+	"length": 736
 },
 {
 	"date": "2024-10-31",
@@ -1919,46 +1928,119 @@
 	"desc": "徒町小鈴です！ 先日のラブライブ！地区予選、たくさんのご声援本当に！本当にありがとうございました！ 今日はその結果報告と振り返りを、1年生ズで務めさせていただきます！",
 	"memo": "",
 	"tags": ["meets", "Ginko", "Kosuzu", "Hime", "room-club"],
-	"tube": "x0N-z_jy9qQ"
+	"tube": "x0N-z_jy9qQ",
+	"length": [1087, ""]
 },
 {
 	"date": "2024-11-02",
 	"title": "村野さやかの個人配信です",
 	"desc": "みなさんこんばんは 今日は村長ではなく、村野さやかとしての個人配信です みなさんとのんびりお話ができればと思います",
 	"memo": "",
-	"tags": ["meets", "Sayaka"],
-	"tube": "qGk2rKTeMEs"
+	"tags": ["meets", "Sayaka", "room-Sayaka"],
+	"tube": "qGk2rKTeMEs",
+	"length": [900, ""]
 },
 {
 	"date": "2024-11-04",
 	"title": "ショートメール選手権！",
 	"desc": "ハロめぐ〜！ 前に募集したショートメール、みんな送ってくれたかな？ 限られた文字数の中でめぐ党さんたちは何を伝えてくれるのか・・・！？ 乞うご期待♡",
 	"memo": "",
-	"tags": ["meets", "Megumi"],
-	"tube": ""
+	"tags": ["meets", "Megumi", "room-Megumi"],
+	"tube": "JdUMrbZKoek",
+	"length": [1022, ""]
 },
 {
 	"date": "2024-11-07",
 	"title": "好きな本プレゼン大会！",
 	"desc": "花帆だよ！ 今日は吟子ちゃんとの読書トークを姫芽ちゃんに聞いてもらうんだ！ 姫芽ちゃんに本の良さがいっぱい伝わりますように・・・！",
 	"memo": "",
-	"tags": ["meets", "Kaho", "Ginko", "Hime"],
-	"tube": ""
+	"tags": ["meets", "Kaho", "Ginko", "Hime", "room-Kaho"],
+	"tube": "MOTgQUDesIU",
+	"length": [1383, ""]
 },
 {
 	"date": "2024-11-09",
 	"title": "このあと綴理はなんて言う？",
 	"desc": "乙宗 梢と申します。綴理とはそれなりに長い付き合いになりますが・・・今でもその言動に驚かせされることがあります。今回はそんな綴理の言動を予測しよう、という企画になります。",
 	"memo": "",
-	"tags": ["meets", "Kozue", "Megumi"],
-	"tube": ""
+	"tags": ["meets", "Kozue", "Megumi", "room-Kozue"],
+	"tube": "XcEORSlkYfU",
+	"length": [1277, ""]
 },
 {
 	"date": "2024-11-11",
 	"title": "カラオケしちゃお！パート2！",
+	"desc": "大沢瑠璃乃だよ☆ 今日は花帆ちゃんとカラオケ配信！ さやかちゃんと一緒に歌ってるの見てちょ〜楽しそうだったから、ルリ今からワクワクしてるんだ！ 何を歌うかはその目で！その耳で！確かめろ〜！",
+	"memo": "",
+	"tags": ["meets", "Kaho", "Rurino", "room-lesson"],
+	"tube": "ZJtiIl9_Vbc",
+	"length": [926, ""]
+},
+{
+	"date": "2024-11-14",
+	"title": "心理テストをしてみた〜い！",
+	"desc": "この度概要文を務めさせていただく徒町です！ 梢先輩のご趣味が心理テストということで・・・なんと今回は徒町に心理テストをしていただけることになりました！ 徒町も知らない徒町が明らかになるのでしょうか・・・！？",
+	"memo": "2023年8月21日にもやった梢の心理テスト再び。全3問（1問は前回と共通）。そして小鈴からも心理テストが！",
+	"tags": ["meets", "Sayaka", "Kosuzu", "room-Kozue"],
+	"tube": "jAAz5nxdgWA",
+	"length": [1179, ""]
+},
+{
+	"date": "2024-11-17",
+	"title": "夕霧綴理生誕祭 〜18歳編〜",
+	"desc": "村野さやかです 本日、綴理先輩が18歳のお誕生日を迎えました 小鈴さんとお祝いの準備をしてきたので、是非みなさんも一緒にお祝いしていただけると嬉しいです",
+	"memo": "",
+	"tags": ["meets", "birthday", "Sayaka", "Tsuzuri", "Kosuzu"],
+	"tube": "H6O5zs017VI",
+	"length": [1574, ""]
+},
+{
+	"date": "2024-11-21",
+	"title": "村野さやかのラジオ 第11回",
+	"desc": "今回のラジオは姫芽さんをゲストにお迎えしています これでメンバー全員をゲストに呼ぶことができました 姫芽さんとのラジオも何卒よろしくおねがいします",
+	"memo": "",
+	"tags": ["meets", "Sayaka", "Hime"],
+	"tube": "ZlS9ZuqG1f0",
+	"length": [1341, ""]
+},
+{
+	"date": "2024-11-23",
+	"title": "意外と気が合うんです",
+	"desc": "百生吟子です。今日は瑠璃乃先輩との雑談配信になります。珍しい組み合わせかもですが・・・瑠璃乃先輩とは意外と気が合うところが多いんです。楽しい時間を過ごせたらなと思います。",
+	"memo": "このWith×MEETSの配信開始時刻は14時00分であった。",
+	"tags": ["meets", "Rurino", "Ginko"],
+	"tube": ""
+},
+{
+	"date": "2024-11-25",
+	"title": "金沢ご当地クイズ",
+	"desc": "百生吟子です。スクコネのクイズ機能を使って、金沢にまつわるクイズを出題する企画を考えてきました。クイズを通して金沢のことをもっと知ってもらえたら幸いです。",
+	"memo": "吟子がスクコネアプリの機能を知るため、アンケート機能を使って金沢に関するクイズを出題！",
+	"tags": ["meets", "Ginko"],
+	"tube": ""
+},
+{
+	"date": "2024-11-28",
+	"title": "みんなのビッグボイス！",
 	"desc": "",
 	"memo": "",
-	"tags": ["meets", "Kaho", "Rurino"],
+	"tags": ["meets", "Kaho", "Tsuzuri", "Rurino", "Kosuzu"],
+	"tube": ""
+},
+{
+	"date": "2024-11-30",
+	"title": "未定",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Tsuzuri", "Hime"],
+	"tube": ""
+},
+{
+	"date": "2024-12-01",
+	"title": "未定",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Megumi"],
 	"tube": ""
 },
 {
