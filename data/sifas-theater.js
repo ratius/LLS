@@ -61,7 +61,7 @@ const TagData = {
 	"Skateboarding":{"name": "GWはみんなでスケボー",       "r":180, "g":160, "b": 80, "style": "square"}
 };
 const SortTarget = [
-//	{"name": "debug", "condition": "after:2022-01-01 before:2022-03-31"},
+	{"name": "debug", "condition": "after:2022-04-01 before:2022-06-30"},
 	{"name": "2020年 2月〜3月", "condition": "after:2020-02-01 before:2020-03-31"},
 	{"name": "2020年 4月〜6月", "condition": "after:2020-04-01 before:2020-06-30"},
 	{"name": "2020年 7月〜9月", "condition": "after:2020-07-01 before:2020-09-30"},
@@ -161,6 +161,44 @@ function DrawStoryList(conditions){
 		}
 	});
 	if(filteredData === []){ return false;}
+	/*
+	document.getElementById("StoryContainer").innerHTML = "";
+	const articleList = document.createDocumentFragment();
+	filteredData.forEach( story => {
+		//日付
+		const articleDate = document.createElement("div");
+		articleDate.className = "story-date";
+		articleDate.textContent = story.date.replaceAll('-', '/');
+		
+		//タイトル
+		const articleTitle = document.createElement("div");
+		articleTitle.className = "story-title";
+		articleTitle.textContent = story.title;
+		
+		//メモ
+		const articleMemo = document.createElement("div");
+		articleMemo.className = "story-memo";
+		articleMemo.innerHTML = ('memo' in story ? replaceLinkStrings(story.memo, "pc-exclusive-link") : '');
+		
+		//タグ
+		const articleTags = document.createElement("div");
+		articleTags.className = "story-tags";
+		articleTags.innerHTML = story.tags.map( tag => DrawCharName(tag) ).join('');
+		
+		const articleTitleContainer = document.createElement("div");
+		articleTitleContainer.className = "story-titleContainer";
+		articleTitleContainer.appendChild(articleTitle);
+		articleTitleContainer.appendChild(articleMemo);
+		
+		const newArticle = document.createElement("article");
+		newArticle.className = "story";
+		newArticle.appendChild(articleDate);
+		newArticle.appendChild(articleTitleContainer);
+		newArticle.appendChild(articleTags);
+		articleList.append(newArticle);
+	});
+	document.getElementById("StoryContainer").append(articleList);
+	*/
 	
 	document.getElementById("StoryContainer").innerHTML = filteredData.map( story => {
 		const hasStory = ('text' in story && story["text"] !== "");
@@ -200,7 +238,7 @@ function MakeModal(id){
 	
 	//{{note:1:2}}の部分を注釈にする
 	let noteList = [];
-	const pattern = new RegExp(/\{\{note:(.*?):(.*)\}\}/g);
+	const pattern = new RegExp(/\{\{note:(.+):(.+)\}\}/g);
 	while ((match = pattern.exec(result.text)) !== null) {
 		noteList.push(replaceLinkStrings(match[2], "pc-exclusive-link"));
 	}
@@ -230,6 +268,8 @@ function MakeModal(id){
 	}).join("");
 	
 	//ポップアップを表示
+    document.body.style.paddingRight = `${window.innerWidth - document.documentElement.clientWidth}px`;
+	document.body.style.overflow = 'hidden';
 	document.getElementById("Modal").classList.remove("fadeout");
 	document.getElementById("Modal").style.display = "flex";
 }
@@ -242,6 +282,8 @@ function CloseModal(target){
 			return false;
 		}
 	}
+	document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
 	ModalBG.classList.add("fadeout");
 	setTimeout(function(){
 		document.getElementById("Modal-ReaderBox").scrollTop = 0;

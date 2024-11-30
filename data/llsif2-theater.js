@@ -194,6 +194,8 @@ function MakeModal(id){
 	}).join("");
 	
 	//ポップアップを表示
+    document.body.style.paddingRight = `${window.innerWidth - document.documentElement.clientWidth}px`;
+	document.body.style.overflow = 'hidden';
 	document.getElementById("Modal").classList.remove("fadeout");
 	document.getElementById("Modal").style.display = "flex";
 }
@@ -206,6 +208,8 @@ function CloseModal(target){
 			return false;
 		}
 	}
+	document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
 	ModalBG.classList.add("fadeout");
 	setTimeout(function(){
 		document.getElementById("Modal-ReaderBox").scrollTop = 0;
