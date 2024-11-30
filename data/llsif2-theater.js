@@ -194,10 +194,11 @@ function MakeModal(id){
 	}).join("");
 	
 	//ポップアップを表示
-    document.body.style.paddingRight = `${window.innerWidth - document.documentElement.clientWidth}px`;
-	document.body.style.overflow = 'hidden';
+    document.getElementById("Modal").style.paddingRight = `${window.innerWidth - document.documentElement.clientWidth}px`;
 	document.getElementById("Modal").classList.remove("fadeout");
 	document.getElementById("Modal").style.display = "flex";
+    document.body.style.paddingRight = `${window.innerWidth - document.documentElement.clientWidth}px`;
+	document.body.style.overflow = 'hidden';
 }
 
 //■モーダルウィンドウを閉じる
