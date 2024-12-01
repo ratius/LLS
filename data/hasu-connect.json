@@ -2037,15 +2037,23 @@
 	"tube": ""
 },
 {
-	"date": "2024-12-01",
-	"title": "未定",
+	"date": "2024-12-02",
+	"title": "いろいろなハロめぐを見せちゃうよ",
 	"desc": "",
-	"memo": "",
+	"memo": "この回はあらかじめ録画した分の配信であることが公言されている。",
 	"tags": ["meets", "Megumi"],
 	"tube": ""
 },
 {
-	"date": "2099-11-01",
+	"date": "2024-12-05",
+	"title": "発見どうぶつ公園にチャレンジです！",
+	"desc": "",
+	"memo": "3人が、カイロソフトの「{{L:発見どうぶつ公園:https://kairosoft.net/game/appli/park.html}}」を実況プレイ！",
+	"tags": ["meets", "Kaho", "Kosuzu", "Hime"],
+	"tube": ""
+},
+{
+	"date": "2099-12-01",
 	"title": "未定",
 	"desc": "",
 	"memo": "",
