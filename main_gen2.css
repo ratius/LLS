@@ -177,6 +177,12 @@ h3:before {
 	border: 2px solid;
 }
 
+.button-flat {
+	padding: 0px 4px;
+	line-height: 26px;
+	border: none;
+}
+
 .button-hexa {
 	padding: 0px 10px;
 	line-height: 26px;
@@ -323,4 +329,17 @@ a.exlink:after {
 .color-linklike {
 	border-color: #89c;
 	background: linear-gradient(90deg, #bef 0%, #bcf 100%);
+}
+
+.spoiler {
+	color: #333;
+	background-color: #333;
+	border: solid 1px #666;
+	padding: 0 4px;
+	margin: 0 2px;
+}
+
+.spoiler-revealed {
+	color: inherit;
+	background-color: inherit;
 }
