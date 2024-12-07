@@ -244,6 +244,11 @@ function initialize() {
 			(上のプルダウンメニューから、期間を選んでください)
 		</div>`;
 	
+	//Escキーでモーダルウィンドウを閉じる
+	document.addEventListener('keydown', function(e){
+		if(e.key === 'Escape'){ CloseModal() };
+	});
+
 	//デバック用
 	if(isDebugMode) {
 		//データの不具合チェック

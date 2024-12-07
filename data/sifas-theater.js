@@ -61,7 +61,7 @@ const TagData = {
 	"Skateboarding":{"name": "GWはみんなでスケボー",       "r":180, "g":160, "b": 80, "style": "square"}
 };
 const SortTarget = [
-	{"name": "debug", "condition": "after:2022-04-01 before:2022-06-30"},
+	{"name": "debug", "condition": "after:2022-05-09 before:2022-06-30"},
 	{"name": "2020年 2月〜3月", "condition": "after:2020-02-01 before:2020-03-31"},
 	{"name": "2020年 4月〜6月", "condition": "after:2020-04-01 before:2020-06-30"},
 	{"name": "2020年 7月〜9月", "condition": "after:2020-07-01 before:2020-09-30"},
@@ -306,11 +306,12 @@ function initialize() {
 
 	//セレクトボックスに要素を追加
 	SortTarget.forEach( temp => {
-		if(temp.name === "debug" && !isDebugMode){ return;}
-		const option = document.createElement("option");
-		option.text = temp.name;
-		option.value = temp.condition;
-		document.getElementById("PullDownMenu").appendChild(option);
+		if(temp.name !== "debug" || isDebugMode){
+			const option = document.createElement("option");
+			option.text = temp.name;
+			option.value = temp.condition;
+			document.getElementById("PullDownMenu").appendChild(option);
+		}
 	});
 
 	//警告解除
@@ -319,6 +320,11 @@ function initialize() {
 		<div style="padding: 10px; vertical-align: top; font-size: 130%; color: #666">
 			(上のプルダウンメニューから、期間を選んでください)
 		</div>`;
+
+	//Escキーでモーダルウィンドウを閉じる
+	document.addEventListener('keydown', function(e){
+		if(e.key === 'Escape'){ CloseModal() };
+	});
 
 	//デバック用
 	if(isDebugMode) {
