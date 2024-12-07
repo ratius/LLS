@@ -46,3 +46,14 @@ const WriteFaceN = (x, y) => {
 const replaceLinkStrings = (text, classes="") => {
 	return text.replace(/\{\{[lL]:([^:]*):([^}]*)\}\}/g, `<a href="$2" class="${classes}" target="_blank" rel="noopener noreferrer">$1</a>`);
 }
+
+//■ {{S:テキスト}} を非表示(spoiler)
+const replaceSpoilers = (text) => {
+	return text.replace(/\{\{[sS]:([^:]*)\}\}/g, `<span class="spoiler" onclick="RevealSpoiler(this)">$1</span>`);
+}
+const RevealSpoiler = (elm) => {
+	if(elm.classList.contains('spoiler')){
+		elm.classList.add('spoiler-revealed');
+		elm.removeAttribute('onclick');
+	}
+}
