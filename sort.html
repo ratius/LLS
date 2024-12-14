@@ -87,7 +87,7 @@ const ColKosu = "#f5e3a9";
 const ColHime = "#c6bee8";
 
 
-var MemberGroup = [
+const MemberGroup = [
 	[""  ,"メインキャラクター",["Muse", "Aqours", "Niji", "Liella", "Hasu"]],
 	["┣","メインキャスト",["MuseCast","AqoursCast","NijiCast", "LiellaCast", "HasuCast"]],
 	["┗","楽曲ユニット",["MainUnit"]],
@@ -127,7 +127,7 @@ var MemberGroup = [
 	["┗","Y.G国際学園",["YG"]],
 	[""  ,"動物たち",["Animal"]]
 ];
-var CharList = [
+const CharList = [
 	{name:"高坂穂乃果",     color:[ColHono], group:{"Muse":1}},
 	{name:"絢瀬絵里",       color:[ColEli ], group:{"Muse":1}},
 	{name:"南ことり",       color:[ColKoto], group:{"Muse":1}},
@@ -323,20 +323,29 @@ var CharList = [
 	{name:"ミア・テイラー", color:[ColMia ], group:{"Niji":1}},
 	{name:"高咲侑",         color:[ColYu  ], group:{"Niji":1}},
 
-	{name:"川本美里",       color:["#ddd"], group:{"Niji2":1}},
 	{name:"近江遥",         color:["#ddd"], group:{"Niji2":1}},
+	{name:"川本美里",       color:["#ddd"], group:{"Niji2":1}},
 	{name:"三船薫子",       color:["#ddd"], group:{"Niji2":1}},
 	{name:"夏川マイ",       color:["#ddd"], group:{"Niji2":1}},
-	{name:"虹ヶ咲学園理事長", color:["#ddd"], group:{"Niji2":1}},
+	{name:"しずくの母",     color:["#ddd"], group:{"Niji2":1}},
+	{name:"彼方の母",       color:["#ddd"], group:{"Niji2":1}},
+	{name:"せつ菜の母",     color:["#ddd"], group:{"Niji2":1}},
+	{name:"エマの母",       color:["#ddd"], group:{"Niji2":1}},
+	{name:"ランジュの母",   color:["#ddd"], group:{"Niji2":1}},
 	{name:"右月",           color:["#ddd"], group:{"Niji2":1}},
 	{name:"左月",           color:["#ddd"], group:{"Niji2":1}},
 	{name:"演劇部部長",     color:["#ddd"], group:{"Niji2":1}},
 	{name:"バスケ部部長",   color:["#ddd"], group:{"Niji2":1}},
 	{name:"加藤ツムギ",     color:["#ddd"], group:{"Niji2":1}},
+	{name:"アイラ",         color:["#ddd"], group:{"Niji2":1}},
+	{name:"ペネロペ",       color:["#ddd"], group:{"Niji2":1}},
+	{name:"赤嶺天",         color:["#ddd"], group:{"Niji2":1}},
+	{name:"石嶺小糸",       color:["#ddd"], group:{"Niji2":1}},
 	{name:"はんぺん", subtext:"白い猫", color:["#ddd"], group:{"Niji2":1, "Animal":1}},
 	{name:"オフィーリア", subtext:"しずくの飼い犬", color:["#ddd"], group:{"Niji2":1, "Animal":1}},
+	{name:"アラン", subtext:"璃奈の猫型ロボット", color:["#ddd"], group:{"Niji2":1, "Animal":1}},
 	{name:"サスケ", subtext:"歩夢の飼い蛇?", color:["#ddd"], group:{"Niji2":1, "Animal":1}},
-	
+
 	{name:"大西亜玖璃", subtext:"上原歩夢 役",       color:[ColAyum], group:{"NijiCast":1}},
 	{name:"相良茉優", subtext:"中須かすみ 役",       color:[ColKasu], group:{"NijiCast":1}},
 	{name:"前田佳織里", subtext:"桜坂しずく 役",     color:[ColShiz], group:{"NijiCast":1}},
@@ -467,15 +476,16 @@ var CharList = [
 	{name:"聖澤悠奈",       color:["#cbe"], group:{"Liella2":1}},
 	{name:"澁谷ありあ",     color:["#ddd"], group:{"Liella2":1}},
 	{name:"かのんの母",     color:["#ddd"], group:{"Liella2":1}},
-	{name:"きな子の母",     color:["#ddd"], group:{"Liella2":1}},
 	{name:"すみれの妹",     color:["#ddd"], group:{"Liella2":1}},
 	{name:"葉月花", subtext:"恋の母", color:["#ddd"], group:{"Liella2":1}},
+	{name:"きな子の母",     color:["#ddd"], group:{"Liella2":1}},
 	{name:"七草ナナミ",     color:["#ddd"], group:{"Liella2":1}},
 	{name:"ヤエ",           color:["#ddd"], group:{"Liella2":1}},
 	{name:"ココノ",         color:["#ddd"], group:{"Liella2":1}},
 	{name:"結ヶ丘理事長",   color:["#ddd"], group:{"Liella2":1}},
 	{name:"サヤ", subtext:"葉月家のメイド", color:["#ddd"], group:{"Liella2":1}},
 	{name:"葉月花",         color:["#ddd"], group:{"Liella2":1}},
+	{name:"唐萌萌",         color:["#ddd"], group:{"Liella2":1}},
 	{name:"マンマル", subtext:"澁谷家のフクロウ", color:["#ddd"], group:{"Liella2":1, "Animal":1}},
 	{name:"チビ", subtext:"葉月家の犬", color:["#ddd"], group:{"Liella2":1, "Animal":1}},
 	
@@ -508,6 +518,8 @@ var CharList = [
 	{name:"かのメイ",  color:[ColKano, ColMei ], group:{"LiellaCP":1}},
 	{name:"かのしき",  color:[ColKano, ColShik], group:{"LiellaCP":1}},
 	{name:"かのなつ",  color:[ColKano, ColNats], group:{"LiellaCP":1}},
+	{name:"かのマル",  color:[ColKano, ColWien], group:{"LiellaCP":1}},
+	{name:"かのとま",  color:[ColKano, ColToma], group:{"LiellaCP":1}},
 	{name:"ちさクゥ",  color:[ColChis, ColKeke], group:{"LiellaCP":1}},
 	{name:"クゥすみ",  color:[ColKeke, ColSumi], group:{"LiellaCP":1}},
 	{name:"クゥれん",  color:[ColKeke, ColRen ], group:{"LiellaCP":1}},
@@ -515,27 +527,44 @@ var CharList = [
 	{name:"クゥメイ",  color:[ColKeke, ColMei ], group:{"LiellaCP":1}},
 	{name:"クゥしき",  color:[ColKeke, ColShik], group:{"LiellaCP":1}},
 	{name:"クゥなつ",  color:[ColKeke, ColNats], group:{"LiellaCP":1}},
+	{name:"クゥマル",  color:[ColKeke, ColWien], group:{"LiellaCP":1}},
+	{name:"クゥとま",  color:[ColKeke, ColToma], group:{"LiellaCP":1}},
 	{name:"ちさすみ",  color:[ColChis, ColSumi], group:{"LiellaCP":1}},
 	{name:"ちされん",  color:[ColChis, ColRen ], group:{"LiellaCP":1}},
 	{name:"ちさきな",  color:[ColChis, ColKina], group:{"LiellaCP":1}},
 	{name:"ちさメイ",  color:[ColChis, ColMei ], group:{"LiellaCP":1}},
 	{name:"ちさしき",  color:[ColChis, ColShik], group:{"LiellaCP":1}},
 	{name:"ちさなつ",  color:[ColChis, ColNats], group:{"LiellaCP":1}},
+	{name:"ちさマル",  color:[ColChis, ColWien], group:{"LiellaCP":1}},
+	{name:"ちさとま",  color:[ColChis, ColToma], group:{"LiellaCP":1}},
 	{name:"すみれん",  color:[ColSumi, ColRen ], group:{"LiellaCP":1}},
 	{name:"すみきな",  color:[ColSumi, ColKina], group:{"LiellaCP":1}},
 	{name:"すみメイ",  color:[ColSumi, ColMei ], group:{"LiellaCP":1}},
 	{name:"すみしき",  color:[ColSumi, ColShik], group:{"LiellaCP":1}},
 	{name:"すみなつ",  color:[ColSumi, ColNats], group:{"LiellaCP":1}},
+	{name:"すみマル",  color:[ColSumi, ColWien], group:{"LiellaCP":1}},
+	{name:"すみとま",  color:[ColSumi, ColToma], group:{"LiellaCP":1}},
 	{name:"れんきな",  color:[ColRen , ColKina], group:{"LiellaCP":1}},
 	{name:"れんメイ",  color:[ColRen , ColMei ], group:{"LiellaCP":1}},
 	{name:"れんしき",  color:[ColRen , ColShik], group:{"LiellaCP":1}},
 	{name:"れんなつ",  color:[ColRen , ColNats], group:{"LiellaCP":1}},
+	{name:"れんマル",  color:[ColRen , ColWien], group:{"LiellaCP":1}},
+	{name:"れんとま",  color:[ColRen , ColToma], group:{"LiellaCP":1}},
 	{name:"きなメイ",  color:[ColKina, ColMei ], group:{"LiellaCP":1}},
 	{name:"きなしき",  color:[ColKina, ColShik], group:{"LiellaCP":1}},
 	{name:"きななつ",  color:[ColKina, ColNats], group:{"LiellaCP":1}},
+	{name:"きなマル",  color:[ColKina, ColWien], group:{"LiellaCP":1}},
+	{name:"きなとま",  color:[ColKina, ColToma], group:{"LiellaCP":1}},
 	{name:"しきメイ",  color:[ColShik, ColMei], group:{"LiellaCP":1}},
 	{name:"メイなつ",  color:[ColMei , ColNats], group:{"LiellaCP":1}},
+	{name:"メイマル",  color:[ColMei , ColWien], group:{"LiellaCP":1}},
+	{name:"メイとま",  color:[ColMei , ColToma], group:{"LiellaCP":1}},
 	{name:"しきなつ",  color:[ColShik, ColNats], group:{"LiellaCP":1}},
+	{name:"しきマル",  color:[ColShik, ColWien], group:{"LiellaCP":1}},
+	{name:"しきとま",  color:[ColShik, ColToma], group:{"LiellaCP":1}},
+	{name:"なつマル",  color:[ColNats, ColWien], group:{"LiellaCP":1}},
+	{name:"なつとま",  color:[ColNats, ColToma], group:{"LiellaCP":1}},
+	{name:"マルとま",  color:[ColWien, ColToma], group:{"LiellaCP":1}},
 
 	{name:"椿ルリカ",   color:[ColRurM], group:{"Musical":1}},
 	{name:"皇ユズハ",   color:[ColYuzM], group:{"Musical":1}},
@@ -563,6 +592,9 @@ var CharList = [
 	{name:"びわ", color:["#eee"], group:{"Hasu2":1}},
 	{name:"しいな", color:["#eee"], group:{"Hasu2":1}},
 	{name:"村野つかさ", color:["#eee"], group:{"Hasu2":1}},
+	{name:"吟子の祖母", color:["#eee"], group:{"Hasu2":1}},
+	{name:"桂城泉", color:["#eee"], group:{"Hasu2":1}},
+	{name:"セラス・柳田・リリエンフェルト", color:["#eee"], group:{"Hasu2":1}},
 
 	{name:"楡井希実",   subtext:"日野下花帆 役", color:[ColKaho], group:{"HasuCast":1}},
 	{name:"野中ここな", subtext:"村野さやか 役", color:[ColSaya], group:{"HasuCast":1}},
@@ -574,9 +606,9 @@ var CharList = [
 	{name:"葉山風花",   subtext:"徒町小鈴 役",   color:[ColKosu], group:{"HasuCast":1}},
 	{name:"来栖りん",   subtext:"安養寺姫芽 役", color:[ColHime], group:{"HasuCast":1}},
 
-	{name:"スリーズブーケ",   subtext:"日野下花帆<br>乙宗梢", color:[ColKaho,ColKozu,ColGink], group:{"HasuUnit":1, "MainUnit":1}},
-	{name:"DOLLCHESTRA",      subtext:"村野さやか<br>夕霧綴理", color:[ColSaya,ColTsuz,ColKosu], group:{"HasuUnit":1, "MainUnit":1}},
-	{name:"みらくらぱーく！", subtext:"大沢瑠璃乃<br>藤島慈", color:[ColRuri,ColMegu,ColHime], group:{"HasuUnit":1, "MainUnit":1}},
+	{name:"スリーズブーケ",   subtext:"日野下花帆<br>乙宗梢<br>百生吟子", color:[ColKaho,ColKozu,ColGink], group:{"HasuUnit":1, "MainUnit":1}},
+	{name:"DOLLCHESTRA",      subtext:"村野さやか<br>夕霧綴理<br>徒町小鈴", color:[ColSaya,ColTsuz,ColKosu], group:{"HasuUnit":1, "MainUnit":1}},
+	{name:"みらくらぱーく！", subtext:"大沢瑠璃乃<br>藤島慈<br>安養寺姫芽", color:[ColRuri,ColMegu,ColHime], group:{"HasuUnit":1, "MainUnit":1}},
 	{name:"かほめぐ♡じぇらーと",       subtext:"日野下花帆<br>藤島慈",   color:[ColKaho,ColMegu], group:{"HasuUnit":1, "MainUnit":1}},
 	{name:"るりのとゆかいなつづりたち", namealt:"るりのとゆかいな<br>つづりたち", subtext:"大沢瑠璃乃<br>夕霧綴理", color:[ColRuri,ColTsuz], group:{"HasuUnit":1, "MainUnit":1}},
 	{name:"蓮ノ休日",                  subtext:"村野さやか<br>乙宗梢",   color:[ColSaya,ColKozu], group:{"HasuUnit":1, "MainUnit":1}},
@@ -1131,7 +1163,7 @@ function shuffle(array) {
 		<summary><span class="date">2024/03/12</span> - モード追加 他</summary>
 		<div>
 			<span class="new"></span>「Liella!ユニット」「動物たち」モードを実装<br>
-			<span class="new"></span>結ヶ丘：「坂倉花(冬毬役キャスト)」「サヤ」「葉月花」を追加<br>
+			<span class="new"></span>Liella!：「坂倉花(冬毬役キャスト)」「サヤ」「葉月花」を追加<br>
 			<span class="new"></span>蓮ノ空：「大賀美沙知」「えなこ」「びわ」「しいな」「村野つかさ」を追加<br>
 			<span class="fix"></span>「スクフェスAll Stars」モードを廃止<br>
 		</div>
