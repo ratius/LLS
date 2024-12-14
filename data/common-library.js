@@ -48,10 +48,8 @@ const replaceLinkStrings = (text, classes="") => {
 }
 
 //■ {{S:テキスト}} を非表示(spoiler)
-const replaceSpoilers = (text) => {
-	return text.replace(/\{\{[sS]:([^:]*)\}\}/g, `<span class="spoiler" onclick="RevealSpoiler(this)">$1</span>`);
-}
-const RevealSpoiler = (elm) => {
+const replaceSpoilers = (text) => text.replace(/\{\{[sS]:([^:]*)\}\}/g, `<span class="spoiler" onclick="revealSpoiler(this)">$1</span>`);
+const revealSpoiler = (elm) => {
 	if(elm.classList.contains('spoiler')){
 		elm.classList.add('spoiler-revealed');
 		elm.removeAttribute('onclick');

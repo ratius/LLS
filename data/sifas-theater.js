@@ -57,7 +57,7 @@ const TagData = {
 	"Skateboarding":{"name": "GWはみんなでスケボー",       "r":180, "g":160, "b": 80, "style": "square"}
 };
 const SortTarget = [
-//	{"name": "debug", "condition": "after:2022-07-01 before:2022-09-30"},
+	{"name": "debug", "condition": "after:2023-06-23 before:2023-06-29"},
 	{"name": "2020年 2月〜3月", "condition": "after:2020-02-01 before:2020-03-31"},
 	{"name": "2020年 4月〜6月", "condition": "after:2020-04-01 before:2020-06-30"},
 	{"name": "2020年 7月〜9月", "condition": "after:2020-07-01 before:2020-09-30"},
@@ -178,7 +178,7 @@ function DrawStoryList(conditions){
 	
 	if(isDebugMode) {
 		const TimeOutputEnd = performance.now();
-		console.log(`${conditions} 出力完了。\n所要時間: ${TimeOutputEnd - TimeOutputStart}ミリ秒`);
+		console.log(`${conditions} (${filteredData.length}件) 出力完了。\n所要時間: ${TimeOutputEnd - TimeOutputStart}ミリ秒`);
 	}
 }
 
@@ -302,7 +302,7 @@ function initialize() {
 			}, 0);
 			if(tagError){ return acc + tagError; }
 
-			if(!("text" in story) || story.text === ""){ return acc;}
+			if(!("memo" in story) || story.memo === ""){ return acc;}
 			publishedStory++;
 			
 			const TextTemp = story.text.split('\n');
@@ -337,7 +337,7 @@ function initialize() {
 			width: 726px !important;
 		}`;
 		
-		console.log(`本文掲載率：${publishedStory}/${window['JSON-sifas-theater'].length} (${(publishedStory / window['JSON-sifas-theater'].length * 100).toFixed(2)}%)`);
+		console.log(`メモ掲載率：${publishedStory}/${window['JSON-sifas-theater'].length} (${(publishedStory / window['JSON-sifas-theater'].length * 100).toFixed(2)}%)`);
 		
 		//描画時間の出力
 		const TimeOutputEnd = performance.now();
