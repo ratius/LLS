@@ -83,16 +83,6 @@ function DrawLiveList(conditions = ''){
 		}
 	});
 	if(filteredData === []){ return false;}
-
-	//特定の記法をリンクへと置換する
-	const DecorateText = ( text => {
-		// {{X:タイトル:数字17桁}} → Xへのリンク
-		text = text.replace(/\{\{[xX]:([^:]*):(\d{19})\}\}/g,
-		'<span class="pc-only">（<a href="https://twitter.com/hasunosora_SIC/status/$2" target="blank">$1<\/a>）<\/span>');
-		// {{L:タイトル:URL}} → リンク
-		text = replaceLinkStrings(text);
-		return text;
-	});
 	
 	//秒数を「h時間mm分ss秒」形式に変換
 	const showLength = ( len => {
@@ -130,7 +120,7 @@ function DrawLiveList(conditions = ''){
 		const descContent =
 			(isDescription ? `<div class="desc">${connect['desc']}</div>` : '')
 			+ (isMemo ?
-				DecorateText(connect['memo'])
+				convertMarkup(connect['memo'])
 				//With×MEETS AFTERが無いことを示す一文を表示
 				+ (connect['tags'].find(m => m === 'noafter') ? "<br>この配信ではWith×MEETS AFTERは行われなかった。" : "")
 				//セットリストを表示

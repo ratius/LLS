@@ -55,3 +55,50 @@ const revealSpoiler = (elm) => {
 		elm.removeAttribute('onclick');
 	}
 }
+
+//■ 文章のマークアップの処理 ver.20241215
+const convertMarkup = (str) => {
+	// 最初の開き括弧、2番目の開き括弧、最初の閉じ括弧の位置を把握
+	const pFirstOpen = str.indexOf("{{");
+	const pSecondOpen = str.indexOf("{{", pFirstOpen +2);
+	const pFirstClose = str.search("}}");
+
+	if(pFirstOpen === -1 || pFirstOpen > pFirstClose){ return str; }
+	// 開き括弧や閉じ括弧が欠けているか、かつ最初の閉じ括弧が最初の開き括弧よりも先に来る場合、何もしない
+		
+	if(pSecondOpen < pFirstClose && pSecondOpen !== -1){
+		// 【X{{Y{{Z】 最初の閉じ括弧が、2番目の開き括弧よりも後にある場合：
+		// 2番目の開き括弧以降の部分を先に処理してから、改めて全体をconvertMarkupにかける
+		return convertMarkup(str.substring(0, pSecondOpen) + convertMarkup(str.substring(pSecondOpen)));
+	} else {
+		// 【X{{Y}}Z】 最初の閉じ括弧が、2番目の最初の開き括弧より前にある場合：
+		// 最初の括弧部分を変換してからconvertMarkupをやり直す
+		const strFormer = str.substring(0, pFirstOpen);
+		const strInParentheses =  str.substring(pFirstOpen + 2, pFirstClose).split('::');
+		const strLatter = str.substring(pFirstClose + 2);
+		
+		let strConverted = "";
+		
+		switch (strInParentheses[0].toLowerCase()) {
+			case 'l': // リンクを作成 {{L::文字列::URL::(クラス)}}
+				if(strInParentheses.length < 3){ break; }
+				const LinkClass = (strInParentheses.length>3 ? strInParentheses[3] : '');
+				strConverted = `<a href="${strInParentheses[2]}" class="${LinkClass}" target="_blank" rel="noopener noreferrer">${strInParentheses[1]}</a>`;
+				break;
+			case 's': // ネタバレを作成 {{S::文字列}}
+				if(strInParentheses.length >= 2){
+					strConverted = `<span class="spoiler" onclick="revealSpoiler(this)">${strInParentheses[1]}</span>`;
+				}
+				break;
+			case 'xh': // PC版限定の、蓮ノ空女学院公式Xへのリンクを作成 {{XH::文字列::数字17桁}}
+				if(strInParentheses.length >= 3){
+					strConverted = `<span class="pc-only">（<a href="https://x.com/hasunosora_SIC/status/${strInParentheses[2]}" target="blank">${strInParentheses[1]}</a>）</span>`;
+				}
+				break;
+			default: // 該当しない場合
+				console.error(strInParentheses);
+		}
+		
+		return strFormer + strConverted + convertMarkup(strLatter);
+	}
+}
