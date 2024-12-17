@@ -203,7 +203,6 @@ function MakeModal(id){
 		return `<span class="underline">${s2}<sup style="color:purple">*${noteNumber}</sup></span>{{notenum:${noteNumber++}}}`
 	}).split('\n');
 	
-	console.log(result.text);
 	//本文の描画
 	document.getElementById("Modal-Text").innerHTML = result.text.map( (text, index) => {
 		text = text.split('\t');

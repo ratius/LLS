@@ -164,21 +164,24 @@ function DrawStoryList(conditions){
 function MakeModal(id){
 	const result = window['JSON-llsif2-theater'].find(temp => temp.id === id);
 	if(!result){ return false;}
+	result.text = convertMarkup(result.text);
 	
-	//タイトル
+	//タイトルを表示
 	document.getElementById("Modal-Title").innerHTML = result.title;
 	
 	//{{note:1:2}}の部分を注釈にする
 	let noteList = [];
-	const pattern = new RegExp(/\{\{note:(.*?):(.*)\}\}/g);
+	const pattern = new RegExp(/<span class="_pre-note" data-note="(.+)">(.+)<\/span>/g);
 	while ((match = pattern.exec(result.text)) !== null) {
-		noteList.push(replaceLinkStrings(match[2], "pc-exclusive-link"));
+		noteList.push(match[1]);
 	}
-	//テキスト
+	//本文の置換
 	let noteNumber = 1;
 	const TextLog = result.text.replace(pattern, function(match, s1, s2){
-		return `<span class="underline">${s1}<sup style="color:purple">*${noteNumber}</sup></span>{{notenum:${noteNumber++}}}`
+		return `<span class="underline">${s2}<sup style="color:purple">*${noteNumber}</sup></span>{{notenum:${noteNumber++}}}`
 	}).split('\n');
+	
+	//本文の描画
 	document.getElementById("Modal-Text").innerHTML = TextLog.map( (text, index) => {
 		text = text.split('\t');
 		
@@ -188,9 +191,12 @@ function MakeModal(id){
 			return ``;
 		});
 		
-		return DrawCharName(result.tags[text[0]]) + `<p>${text[1]}</p>`
+		const CharacterName = (isNaN(text[0]) ? text[0] : DrawCharName(result.tags[parseInt(text[0],10)]));
+		
+		return CharacterName
+		+ (text.length >=2 ? `<p>${text[1]}</p>` : '')
 		+ (currentNote.length ? `<p class="note">${currentNote.join('<br>')}</p>` : '')
-		+ (index === TextLog.length-1 ? '' : '<hr>');
+		+ (index === result.text.length-1 ? '' : '<hr>');
 	}).join("");
 	
 	//ポップアップを表示
