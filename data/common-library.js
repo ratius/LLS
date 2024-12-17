@@ -47,8 +47,7 @@ const replaceLinkStrings = (text, classes="") => {
 	return text.replace(/\{\{[lL]:([^:]*):([^}]*)\}\}/g, `<a href="$2" class="${classes}" target="_blank" rel="noopener noreferrer">$1</a>`);
 }
 
-//■ {{S:テキスト}} を非表示(spoiler)
-const replaceSpoilers = (text) => text.replace(/\{\{[sS]:([^:]*)\}\}/g, `<span class="spoiler" onclick="revealSpoiler(this)">$1</span>`);
+//■ {{S::文字列}} で作成されたネタバレの表示用
 const revealSpoiler = (elm) => {
 	if(elm.classList.contains('spoiler')){
 		elm.classList.add('spoiler-revealed');
@@ -80,25 +79,52 @@ const convertMarkup = (str) => {
 		let strConverted = "";
 		
 		switch (strInParentheses[0].toLowerCase()) {
-			case 'l': // リンクを作成 {{L::文字列::URL::(クラス)}}
-				if(strInParentheses.length < 3){ break; }
-				const LinkClass = (strInParentheses.length>3 ? strInParentheses[3] : '');
-				strConverted = `<a href="${strInParentheses[2]}" class="${LinkClass}" target="_blank" rel="noopener noreferrer">${strInParentheses[1]}</a>`;
+			case 'l': // 外部リンクを作成 {{L::文字列::URL(::クラス)}} クラス省略時は "exlink"
+				if(strInParentheses.length >= 3){
+					const LinkClass = (strInParentheses.length>3 ? strInParentheses[3] : 'exlink');
+					strConverted = makeExternalLink(strInParentheses[1], strInParentheses[2], LinkClass);
+				}
 				break;
+
 			case 's': // ネタバレを作成 {{S::文字列}}
 				if(strInParentheses.length >= 2){
 					strConverted = `<span class="spoiler" onclick="revealSpoiler(this)">${strInParentheses[1]}</span>`;
 				}
 				break;
-			case 'xh': // PC版限定の、蓮ノ空女学院公式Xへのリンクを作成 {{XH::文字列::数字17桁}}
+				
+			case 'n': // 脚注になる部分を明記 {{N::文字列}}
 				if(strInParentheses.length >= 3){
-					strConverted = `<span class="pc-only">（<a href="https://x.com/hasunosora_SIC/status/${strInParentheses[2]}" target="blank">${strInParentheses[1]}</a>）</span>`;
+					strConverted = `<span class="_pre-note" alt="${strInParentheses[2]}">${strInParentheses[1]}</span>`;
 				}
 				break;
+
+			case 'xh': // PC版限定の、蓮ノ空女学院公式Xへのリンクを作成 {{XH::文字列::数字17桁}}
+				if(strInParentheses.length >= 3){
+					strConverted = `<span class="pc-only">（<a href="https://x.com/hasunosora_SIC/status/${strInParentheses[2]}" target="blank" rel="noopener noreferrer">${strInParentheses[1]}</a>）</span>`;
+				}
+				break;
+
+//			case 'pc': // PC版限定 {{PC::文字列}}
+//				if(strInParentheses.length >= 2){
+//					strConverted =  `<span class="pc-only">${strInParentheses[1]}</span>`;
+//				}
+//				break;
+
+//			case 'sp': // スマートフォン限定 {{SP::文字列}}
+//				if(strInParentheses.length >= 2){
+//					strConverted = `<span class="sp-only">${strInParentheses[1]}</span>`;
+//				}
+//				break;
+
 			default: // 該当しない場合
 				console.error(strInParentheses);
 		}
 		
 		return strFormer + strConverted + convertMarkup(strLatter);
 	}
+}
+
+//■ 外部リンクを作成
+const makeExternalLink = (text, url, classes="") => {
+	return `<a href="${url}" target="blank" class="${classes}" rel="noopener noreferrer">${text}</a>`;
 }

@@ -57,7 +57,6 @@ const TagData = {
 	"Skateboarding":{"name": "GWはみんなでスケボー",       "r":180, "g":160, "b": 80, "style": "square"}
 };
 const SortTarget = [
-	{"name": "debug", "condition": "after:2023-06-23 before:2023-06-29"},
 	{"name": "2020年 2月〜3月", "condition": "after:2020-02-01 before:2020-03-31"},
 	{"name": "2020年 4月〜6月", "condition": "after:2020-04-01 before:2020-06-30"},
 	{"name": "2020年 7月〜9月", "condition": "after:2020-07-01 before:2020-09-30"},
@@ -169,7 +168,7 @@ function DrawStoryList(conditions){
 			<div class="story-date">${story.date.replaceAll('-', '/')}</div>
 			<div class="story-titleContainer">
 				<div ${storyTitleAtttribute}>${story.title}</div>
-				<div class="story-memo">${('memo' in story ? replaceLinkStrings(story.memo, "pc-exclusive-link") : '')}</div>
+				<div class="story-memo">${('memo' in story ? convertMarkup(story.memo) : '')}</div>
 			</div>
 			<div class="story-tags">${tagContent}</div>
 			</div>
@@ -184,24 +183,29 @@ function DrawStoryList(conditions){
 
 //■指定されたIDの毎日劇場をモーダルウィンドウに描画
 function MakeModal(id){
-	result = window['JSON-sifas-theater'].find((temp) => temp.id === id);
+	const result = window['JSON-sifas-theater'].find((temp) => temp.id === id);
 	if(!result){ return false;}
+	result.text = convertMarkup(result.text);
 	
-	//タイトル
+	//タイトルを表示
 	document.getElementById("Modal-Title").innerHTML = result.title;
 	
-	//{{note:1:2}}の部分を注釈にする
+	//注釈リストの作成
 	let noteList = [];
-	const pattern = new RegExp(/\{\{note:(.+):(.+)\}\}/g);
+	const pattern = new RegExp(/<span class="_pre-note" alt="(.+)">(.+)<\/span>/g);
 	while ((match = pattern.exec(result.text)) !== null) {
-		noteList.push(replaceLinkStrings(match[2], "pc-exclusive-link"));
+		noteList.push(match[1]);
 	}
-	//テキスト
+	
+	//本文の置換
 	let noteNumber = 1;
-	const TextLog = result.text.replace(pattern, function(match, s1, s2){
-		return `<span class="underline">${s1}<sup style="color:purple">*${noteNumber}</sup></span>{{notenum:${noteNumber++}}}`
+	result.text = result.text.replace(pattern, function(match, s1, s2){
+		return `<span class="underline">${s2}<sup style="color:purple">*${noteNumber}</sup></span>{{notenum:${noteNumber++}}}`
 	}).split('\n');
-	document.getElementById("Modal-Text").innerHTML = TextLog.map( (text, index) => {
+	
+	console.log(result.text);
+	//本文の描画
+	document.getElementById("Modal-Text").innerHTML = result.text.map( (text, index) => {
 		text = text.split('\t');
 		
 		let currentNote = [];
@@ -218,7 +222,7 @@ function MakeModal(id){
 		return CharacterName
 		+ (text.length >=2 ? `<p>${text[1]}</p>` : '')
 		+ (currentNote.length ? `<p class="note">${currentNote.join('<br>')}</p>` : '')
-		+ (index === TextLog.length-1 ? '' : '<hr>');
+		+ (index === result.text.length-1 ? '' : '<hr>');
 	}).join("");
 	
 	//ポップアップを表示
@@ -332,10 +336,10 @@ function initialize() {
 		if(isError){
 			alert('' + isError + '件のエラーが見つかりました。コンソールを確認してください。');
 		}
-		document.querySelector('style').textContent += 
-		`#Modal-ReaderBox {
-			width: 726px !important;
-		}`;
+		//document.querySelector('style').textContent += 
+		//`#Modal-ReaderBox {
+		//	width: 726px !important;
+		//}`;
 		
 		console.log(`メモ掲載率：${publishedStory}/${window['JSON-sifas-theater'].length} (${(publishedStory / window['JSON-sifas-theater'].length * 100).toFixed(2)}%)`);
 		
