@@ -42,11 +42,6 @@ const WriteFaceN = (x, y) => {
 	}px"></div>`;
 }
 
-//■ {{L:タイトル:URL}} を外部リンクに置換 ver.20240727
-const replaceLinkStrings = (text, classes="") => {
-	return text.replace(/\{\{[lL]:([^:]*):([^}]*)\}\}/g, `<a href="$2" class="${classes}" target="_blank" rel="noopener noreferrer">$1</a>`);
-}
-
 //■ {{S::文字列}} で作成されたネタバレの表示用
 const revealSpoiler = (elm) => {
 	if(elm.classList.contains('spoiler')){

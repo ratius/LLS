@@ -99,7 +99,7 @@ function NarrowerEvent(changed){
 					<span class="series-title-name">${series['title']}</span>
 				</div>
 				${drawYouTubeVideoContent(series['tube'], series['title'])}
-				${replaceLinkStrings(seriesDesc, "exlink")}
+				${convertMarkup(seriesDesc)}
 			</article>`
 				
 			//チャプター概要
