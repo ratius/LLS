@@ -192,7 +192,7 @@ function MakeModal(id){
 	
 	//注釈リストの作成
 	let noteList = [];
-	const pattern = new RegExp(/<span class="_pre-note" alt="(.+)">(.+)<\/span>/g);
+	const pattern = new RegExp(/<span class="_pre-note" data-note="(.+)">(.+)<\/span>/g);
 	while ((match = pattern.exec(result.text)) !== null) {
 		noteList.push(match[1]);
 	}

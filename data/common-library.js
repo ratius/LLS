@@ -94,7 +94,7 @@ const convertMarkup = (str) => {
 				
 			case 'n': // 脚注になる部分を明記 {{N::文字列}}
 				if(strInParentheses.length >= 3){
-					strConverted = `<span class="_pre-note" alt="${strInParentheses[2]}">${strInParentheses[1]}</span>`;
+					strConverted = `<span class="_pre-note" data-note="${strInParentheses[2]}">${strInParentheses[1]}</span>`;
 				}
 				break;
 
