@@ -147,8 +147,7 @@ function DrawStoryList(conditions){
 			<div class="story-date">${story.date}</div>
 			<div class="story-titleContainer">
 				<div ${storyTitleAtttribute}>${story.title}</div>
-				<div class="story-memo">${('memo' in story ? replaceLinkStrings(story.memo, "pc-exclusive-link") : '')}</div>
-			</div>
+				<div class="story-memo">${('memo' in story ? convertMarkup(story.memo) : '')}</div>
 			<div class="story-tags">${tagContent}</div>
 			</div>
 		</article>`;
