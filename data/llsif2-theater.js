@@ -148,6 +148,7 @@ function DrawStoryList(conditions){
 			<div class="story-titleContainer">
 				<div ${storyTitleAtttribute}>${story.title}</div>
 				<div class="story-memo">${('memo' in story ? convertMarkup(story.memo) : '')}</div>
+			</div>
 			<div class="story-tags">${tagContent}</div>
 			</div>
 		</article>`;
