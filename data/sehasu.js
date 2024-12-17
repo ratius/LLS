@@ -63,20 +63,6 @@ function DrawVideoList(conditions = ''){
 		}
 	});
 	if(filteredData === []){ return false;}
-
-	//特定の記法をリンクへと置換する
-	const DecorateText = ( text => {
-		// {{X:タイトル:数字17桁}} → Xへのリンク
-		text = text.replace(/\{\{[xX]:([^:]*):(\d{19})\}\}/g,
-		`<span class="pc-only">（<a href="https://twitter.com/hasunosora_SIC/status/$2" target="blank">$1</a>）</span>`);
-		// {{L:タイトル:URL}} → リンク
-		text = replaceLinkStrings(text);
-		
-		// {{S:タイトル}} → ネタバレ
-		text = replaceSpoilers(text);
-		
-		return text;
-	});
 	
 	//秒数を「h時間mm分ss秒」形式に変換
 	const showLength = ( len => {
@@ -110,22 +96,7 @@ function DrawVideoList(conditions = ''){
 		const isMemo        = ('memo' in connect && connect['memo'] !== "");
 		const descContent =
 			(isDescription ? `<div class="desc">${connect['desc']}</div>` : '')
-			+ (isMemo ?
-				DecorateText(connect['memo'])
-				//With×MEETS AFTERが無いことを示す一文を表示
-				+ (connect['tags'].find(m => m === 'noafter') ? "<br>この配信ではWith×MEETS AFTERは行われなかった。" : "")
-				//セットリストを表示
-				+ ('setlist' in connect ? 
-					`<details class="setlist">
-						<summary class="setlist-summary">セットリスト (クリックで展開)</summary>
-						<ol class="setlist-ol">
-							${connect['setlist'].map(program =>
-							`<li>${(program === 'MC' ? `<i class="setlist-mc">MC</i>` : program)}</li>`).join('')}
-						</ol>
-					</details>`
-				:'')
-			:'')
-		;
+			+ (isMemo ? convertMarkup(connect['memo']) : '');
 		const tagsContent = connect['tags'].map( tag => {
 			if(tag in TagData){ return DrawCharName(tag); }
 		}).join('')
