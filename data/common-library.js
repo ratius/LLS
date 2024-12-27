@@ -1,15 +1,25 @@
 //■■ラブライブ！ストレージ 共通ライブラリ
 
-//■キャラクター名のボタン ver.20231222b
+//■キャラクター名のボタン ver.20231222b （近々廃止予定）
 //事前にTagData変数の定義が必要です
 const DrawCharName = (character) => {
-	if(character in TagData){ //存在する場合のみ
-		const target = TagData[character];
-		return `<span class="button-${target.style} button_${character}">${target.name}</span>`;
+	if(typeof TagData === 'object'){
+		if(character in TagData){ //存在する場合のみ
+			const target = TagData[character];
+			return `<span class="button-${target.style} button_${character}">${target.name}</span>`;
+		} else {
+			console.error(`キャラクターID ${character} は存在しません`);
+			return
+		}
 	} else {
-		console.error(`キャラクターID ${character} は存在しません`);
-		return
+		console.error("tagdata が存在しません")
 	}
+}
+
+//■Objectからキャラクター名のボタンの生成 ver.20241228
+//オブジェクトに「name」「style」のキーが必要
+Object.prototype.createStyledTag = function(){
+	return `<span class="${this.style}">${this.name}</span>`;
 }
 
 //■オブジェクトのRGBから色を計算 ver.20240727
