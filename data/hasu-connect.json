@@ -2116,7 +2116,7 @@
 	"title": "みらくらぱーく！練習配信",
 	"desc": "大沢瑠璃乃だよ☆ DOLLCHESTRAに続いて、みらくらぱーく！も練習配信しちゃうぞ！ 真剣に練習するから、応援よろしくね！",
 	"memo": "",
-	"tags": ["meets", "Rurino", "Megumi", "Hime"],
+	"tags": ["meets", "Rurino", "Megumi", "Hime", "room-lesson"],
 	"tube": "lDcyIqao2wI",
 	"length": [655, ""]
 },
@@ -2125,7 +2125,7 @@
 	"title": "スリーズブーケ練習配信",
 	"desc": "花帆だよ！ スリーズブーケも練習配信！やっちゃいます！ いつもの練習も、配信しながらだとちょっと緊張するから、本番の対策になるかも？ みんな、見守っててね！",
 	"memo": "",
-	"tags": ["meets", "Kaho", "Sayaka", "Ginko"],
+	"tags": ["meets", "Kaho", "Sayaka", "Ginko", "room-lesson"],
 	"tube": "KkxbcX9WQfo",
 	"length": [690, ""]
 },
@@ -2134,7 +2134,7 @@
 	"title": "藤島 慈生誕祭 〜18歳編〜",
 	"desc": "大沢瑠璃乃だよ☆ ちょっと早いけど、今日はめぐちゃんの生誕祭配信！ ルリとひめっちと、みんなで！めぐちゃんを祝い尽くしちゃお〜！",
 	"memo": "",
-	"tags": ["meets", "Rurino", "Megumi", "Hime", "birthday"],
+	"tags": ["meets", "Rurino", "Megumi", "Hime", "birthday", "room-club"],
 	"tube": "2Cht60W4k0c",
 	"length": [1319, ""]
 },
@@ -2149,21 +2149,53 @@
 {
 	"date": "2024-12-28",
 	"title": "年末！2年！歌合戦！",
-	"desc": "",
-	"memo": "",
-	"tags": ["meets", "Kaho", "Sayaka", "Rurino"],
+	"desc": "花帆だよ！ 気がつけばもう2年末だね・・・！ 今日は2年生ズでいっぱい歌って、今年を締めくくっちゃうよ♪",
+	"memo": "当初は103期生3人による配信の予定であったが{{XH::当初の予定表::1871119172467585066}}、キャストの楡井希実氏の体調不良により、2人での配信となった。{{XH::出演者変更のお知らせ::1872809789149069656}}。この配信で獲得したWith Starは花帆にも割り振ることができる。",
+	"tags": ["meets", "Sayaka", "Rurino"],
 	"tube": ""
 },
 {
 	"date": "2024-12-30",
 	"title": "決勝に向けて。",
-	"desc": "",
-	"memo": "",
-	"tags": ["meets", "Kozue", "Tsuzuri", "Megumi"],
+	"desc": "綴理だよ。今日はこずとめぐと、振り返ったり、意気込んだりするんだ。みんな、良いお年を〜。ぺこり。",
+	"memo": "このWith×MEETSの配信開始時刻は14時30分であった。<br>この配信ではWith×MEETS AFTERは行われなかった。",
+	"tags": ["meets", "Kozue", "Tsuzuri", "Megumi", "room-club", "noafter"],
 	"tube": ""
 },
 {
-	"date": "2099-12-01",
+	"date": "2025-01-13",
+	"title": "未定",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Sayaka", "Tsuzuri", "Kosuzu"],
+	"tube": ""
+},
+{
+	"date": "2025-01-16",
+	"title": "未定",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Kaho", "Kozue", "Ginko"],
+	"tube": ""
+},
+{
+	"date": "2025-01-18",
+	"title": "未定",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Rurino", "Megumi", "Hime"],
+	"tube": ""
+},
+{
+	"date": "2025-01-20",
+	"title": "未定",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Kaho"],
+	"tube": ""
+},
+{
+	"date": "2099-01-01",
 	"title": "未定",
 	"desc": "",
 	"memo": "",

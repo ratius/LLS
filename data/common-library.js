@@ -9,17 +9,20 @@ const DrawCharName = (character) => {
 			return `<span class="button-${target.style} button_${character}">${target.name}</span>`;
 		} else {
 			console.error(`キャラクターID ${character} は存在しません`);
-			return
+			return null;
 		}
 	} else {
 		console.error("tagdata が存在しません")
+		return null;
 	}
 }
 
-//■Objectからキャラクター名のボタンの生成 ver.20241228
-//オブジェクトに「name」「style」のキーが必要
-Object.prototype.createStyledTag = function(){
-	return `<span class="${this.style}">${this.name}</span>`;
+//■キャラクター名のボタンの生成 第二弾 ver.20241231
+const createStyledTag = (tag) => {
+	if(tag.hasOwnProperty('name') && tag.hasOwnProperty('style')){
+		return `<span class="${tag.style}">${tag.name}</span>`;
+	}
+	return null;
 }
 
 //■オブジェクトのRGBから色を計算 ver.20240727

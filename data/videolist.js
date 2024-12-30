@@ -106,7 +106,7 @@ Array.prototype.makeVideoList = function(conditions = ''){
 		:'');
 
 		const tagsContent = video['tags'].map( tag => {
-			if(tag in tagData){ return tagData[tag].createStyledTag(); }
+			if(tag in tagData){ return createStyledTag(tagData[tag]); }
 		}).join('')
 
 		return `
@@ -120,11 +120,15 @@ Array.prototype.makeVideoList = function(conditions = ''){
 	}).join('');
 }
 
+
 //■動画一覧ページ用共通初期処理
-//JSONの保存名を引数に入れてください。
-const initializeVideoList = (JSONpath = undefined) => {
-	if(JSONpath === undefined){ console.error("No argument specified - initializeVideoList"); return;}
+//loader.jsで呼び出され、data-srcに1つだけのJSONファイルパスを持つことを想定しています
+const initialize = () => {
 	const TimeOutputLoaded = performance.now();
+	//JSONデータのパスから変数名を取得
+	const JSONpath = files.filter(file => file.endsWith('.json'));
+	if(!JSONpath.length > 0){ console.error("No argument specified - initializeVideoList"); return;}
+	const databasePath = JSONpath[0].replace(/^.+\/(.+)\.json$/g, "JSON-$1");
 	
 	//ボタンの色データをCSSに追加
 	const AddedCSS = "\n<!--\n" + Object.keys(tagData).map(tag => {
@@ -147,7 +151,7 @@ const initializeVideoList = (JSONpath = undefined) => {
 	//セレクトボックス変更時の処理を追加
 	document.getElementById('VL-Filter').addEventListener('change', function(){
 		const TimeOutputStart = performance.now();
-		document.getElementById('VL-Result').innerHTML = window[JSONpath].makeVideoList(this.value);
+		document.getElementById('VL-Result').innerHTML = window[databasePath].makeVideoList(this.value);
 		if(isDebugMode) {
 			const TimeOutputEnd = performance.now();
 			console.log(`${this.value} 出力完了。\n所要時間: ${TimeOutputEnd - TimeOutputStart}ミリ秒`);

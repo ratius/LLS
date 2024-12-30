@@ -42,8 +42,3 @@ const filterTargets = [
 	{"name": "配信場所：小鈴の部屋",   "condition": "tag:room-Kosuzu"},
 	{"name": "配信場所：姫芽の部屋",   "condition": "tag:room-Hime"}
 ];
-
-//■初期化処理
-function initialize () {
-	initializeVideoList('JSON-hasu-connect');
-}
