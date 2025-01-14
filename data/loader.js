@@ -32,22 +32,22 @@ async function loadFiles() {
 			await loadJSON(file);
 		}
 	}
+	// ローカル環境ではデバッグモードの設定を行う
 	if(isDebugMode){setDebugMode();}
 	initialize();
 }
 loadFiles();
 
-//■デバッグモード設定
-const isDebugMode = (location.search.substring(1).split('&').indexOf('debug') >= 0);
-function setDebugMode(){
-	//デバッグモードであることを表示
+//■デバッグモード用設定
+const isDebugMode = (window.location.hostname === '127.0.0.1');
+const setDebugMode = () => {
 	document.title = '[debug]' + document.title;
-	document.bgColor = '#dce';
-	if(document.getElementById("TitleName") !== null){
+	document.querySelector('html body').style.backgroundColor = '#dce';
+	if (document.getElementById("TitleName") !== null) {
 		document.getElementById("TitleName").innerHTML += "*";
 		document.getElementById("TitleName").classList.add("title-debug");
 	}
-	if(document.getElementById("BackToMain") !== null){
+	if (document.getElementById("BackToMain") !== null) {
 		document.getElementById("BackToMain").href += "?debug";
 	}
 }

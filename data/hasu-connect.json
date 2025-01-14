@@ -2144,7 +2144,8 @@
 	"desc": "乙宗 梢と申します。本日は、北陸大会の結果について、配信を通じて皆さんに直接お伝えできればと思います。",
 	"memo": "",
 	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime"],
-	"tube": ""
+	"tube": "dozYaf2Het8",
+	"length": [1115, ""]
 },
 {
 	"date": "2024-12-28",
@@ -2152,7 +2153,8 @@
 	"desc": "花帆だよ！ 気がつけばもう2年末だね・・・！ 今日は2年生ズでいっぱい歌って、今年を締めくくっちゃうよ♪",
 	"memo": "当初は103期生3人による配信の予定であったが{{XH::当初の予定表::1871119172467585066}}、キャストの楡井希実氏の体調不良により、2人での配信となった。{{XH::出演者変更のお知らせ::1872809789149069656}}。この配信で獲得したWith Starは花帆にも割り振ることができる。",
 	"tags": ["meets", "Sayaka", "Rurino"],
-	"tube": ""
+	"tube": "qw2y_3vnv8Y",
+	"length": [1120, ""]
 },
 {
 	"date": "2024-12-30",
@@ -2160,19 +2162,20 @@
 	"desc": "綴理だよ。今日はこずとめぐと、振り返ったり、意気込んだりするんだ。みんな、良いお年を〜。ぺこり。",
 	"memo": "このWith×MEETSの配信開始時刻は14時30分であった。<br>この配信ではWith×MEETS AFTERは行われなかった。",
 	"tags": ["meets", "Kozue", "Tsuzuri", "Megumi", "room-club", "noafter"],
-	"tube": ""
+	"tube": "KNYmBlfJ43k",
+	"length": 997
 },
 {
 	"date": "2025-01-13",
-	"title": "未定",
-	"desc": "",
+	"title": "村野さやか生誕祭 〜17歳編〜",
+	"desc": "綴理だよ。今日もさやの誕生日がやってきたね。いっぱい準備してきたから、喜んでもらえたらいいな。みんなで一緒にさやを祝おうね。",
 	"memo": "",
-	"tags": ["meets", "Sayaka", "Tsuzuri", "Kosuzu"],
+	"tags": ["meets", "Sayaka", "Tsuzuri", "Kosuzu", "birthday", "room-club"],
 	"tube": ""
 },
 {
 	"date": "2025-01-16",
-	"title": "未定",
+	"title": "新年のご挨拶",
 	"desc": "",
 	"memo": "",
 	"tags": ["meets", "Kaho", "Kozue", "Ginko"],
@@ -2180,7 +2183,7 @@
 },
 {
 	"date": "2025-01-18",
-	"title": "未定",
+	"title": "あけおめ！！",
 	"desc": "",
 	"memo": "",
 	"tags": ["meets", "Rurino", "Megumi", "Hime"],
