@@ -39,7 +39,7 @@ async function loadFiles() {
 loadFiles();
 
 //■デバッグモード用設定
-const isDebugMode = (window.location.hostname === '127.0.0.1');
+const isDebugMode = (window.location.hostname === '127.0.0.1' || location.search.substring(1).split('&').indexOf('debug') >= 0);
 const setDebugMode = () => {
 	document.title = '[debug]' + document.title;
 	document.querySelector('html body').style.backgroundColor = '#dce';
