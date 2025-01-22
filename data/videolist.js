@@ -92,7 +92,7 @@ const makeVideoList = (dbPath, conditions = '') => {
 		const isDescription = ('desc' in video && video['desc'] !== "");
 		const isMemo = ('memo' in video && video['memo'] !== "");
 		const descContent =
-			(isDescription ? `<div class="desc">${video['desc']}</div>` : '')
+			(isDescription ? `<div class="desc">${convertMarkup(video['desc'])}</div>` : '')
 			+ (isMemo ? convertMarkup(video['memo']) : '');
 
 		const setlistContent = ('setlist' in video && video['setlist'] !== "" ?
@@ -106,7 +106,7 @@ const makeVideoList = (dbPath, conditions = '') => {
 			: '');
 
 		const tagsContent = video['tags'].map(tag => {
-			if (tag in tagData) { return createStyledTag(tagData[tag]); }
+			if (tag in tagData) { return createStyledTag(tagData[tag],tag); }
 		}).join('')
 
 		return `
@@ -132,12 +132,12 @@ const initialize = () => {
 	const databasePath = JSONpath[0].replace(/^.+\/(.+)\.json$/g, "JSON-$1");
 
 	//ボタンの色データをCSSに追加
-	const AddedCSS = "\n<!--\n" + Object.keys(tagData).map(tag => {
+	const AddedCSS = "\n<!--\n/* Generated from videolist.js */\n" + Object.keys(tagData).map(tag => {
 		return `.button-${tag} {
-	background-color: ${getColor(tagData[tag], 2)};
-	border-color: ${getColor(tagData[tag], 0)};
+	background-color: ${getColor(tagData[tag], 3)};
+	border-color: ${getColor(tagData[tag])};
 }`;
-	}).join("\n") + "-->";
+	}).join("\n") + "\n-->";
 	document.querySelector('style').textContent += AddedCSS;
 
 	//セレクトボックスに要素を追加
@@ -152,9 +152,10 @@ const initialize = () => {
 	//セレクトボックス変更時の処理を追加
 	document.getElementById('VL-Filter').addEventListener('change', function () {
 		const TimeOutputStart = performance.now();
-		if (makeVideoList(window[databasePath], this.value) && isDebugMode) {
+		const filteredVideos = makeVideoList(window[databasePath], this.value);
+		if (filteredVideos > 0 && isDebugMode) {
 			const TimeOutputEnd = performance.now();
-			console.log(`${this.value} 出力時間：${(TimeOutputEnd - TimeOutputStart).toFixed(1)}ミリ秒`);
+			console.log(`条件：${this.value} (${filteredVideos}件) 出力時間：${(TimeOutputEnd - TimeOutputStart).toFixed(1)}ミリ秒`);
 		}
 	});
 
@@ -164,6 +165,8 @@ const initialize = () => {
 
 	//デバック用
 	if (isDebugMode) {
+		document.getElementById('VL-Filter').selectedIndex = 1;
+		makeVideoList(window[databasePath], document.getElementById('VL-Filter').value);
 		//描画時間の出力
 		const TimeOutputEnd = performance.now();
 		console.log(`${document.getElementById('TitleName').innerHTML} 初期設定完了。読み込み：${(TimeOutputLoaded - TimeLoadingStart).toFixed(1)}ミリ秒 初期化：${(TimeOutputEnd - TimeOutputLoaded).toFixed(1)}ミリ秒`);

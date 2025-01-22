@@ -18,9 +18,9 @@ const DrawCharName = (character) => {
 }
 
 //■キャラクター名のボタンの生成 第二弾 ver.20241231
-const createStyledTag = (tag) => {
+const createStyledTag = (tag, id) => {
 	if (tag.hasOwnProperty('name') && tag.hasOwnProperty('style')) {
-		return `<span class="${tag.style}">${tag.name}</span>`;
+		return `<span class="${tag.style} button-${id}">${tag.name}</span>`;
 	}
 	return null;
 }
@@ -61,7 +61,7 @@ const revealSpoiler = (elm) => {
 	}
 }
 
-//■ 文章のマークアップの処理 ver.20241215
+//■ 文章のマークアップの処理 ver.20250116
 const convertMarkup = (str) => {
 	// 最初の開き括弧、2番目の開き括弧、最初の閉じ括弧の位置を把握
 	const pFirstOpen = str.indexOf("{{");
@@ -101,6 +101,12 @@ const convertMarkup = (str) => {
 			case 'n': // 脚注になる部分を明記 {{N::文字列}}
 				if (strInParentheses.length >= 3) {
 					strConverted = `<span class="_pre-note" data-note="${strInParentheses[2]}">${strInParentheses[1]}</span>`;
+				}
+				break;
+
+			case 'xl': // PC版限定の、ラブライブ！シリーズ公式Xへのリンクを作成 {{XH::文字列::数字17桁}}
+				if (strInParentheses.length >= 3) {
+					strConverted = `<span class="pc-only">（<a href="https://x.com/LoveLive_staff/status/${strInParentheses[2]}" target="blank" rel="noopener noreferrer">${strInParentheses[1]}</a>）</span>`;
 				}
 				break;
 
