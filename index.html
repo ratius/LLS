@@ -243,13 +243,31 @@ h2 {
 				<div class="menu-content-desc">毎月行われていたアンケートの集計や、便利リンクを掲載しています。</div>
 			</div>
 		</a>
+
+		<a href="niji-drama.html" title="虹ヶ咲学園 スペシャルドラマまとめ" class="no-underline">
+			<div class="menu-content col-Niji">
+				<div class="menu-content-label">虹ヶ咲学園スクールアイドル同好会</div>
+				<h3>虹ヶ咲学園 <wbr>スペシャルドラマまとめ</h3>
+				<hr>
+				<div class="menu-content-desc">公式チャンネルでよく配信されていた「スペシャルドラマ」のまとめです。</div>
+			</div>
+		</a>
 		
-		<a href="sehasu.html" title="せーはす動画まとめ" class="no-underline">
+		<a href="sehasu.html" title="蓮ノ空 せーはす動画まとめ" class="no-underline">
 			<div class="menu-content col-Hasu">
 				<div class="menu-content-label">蓮ノ空女学院スクールアイドルクラブ</div>
-				<h3>せーはす動画<wbr>まとめ</h3>
+				<h3>蓮ノ空 <wbr>せーはす動画まとめ</h3>
 				<hr>
-				<div class="menu-content-desc">YouTube上で連載されている「せーので！はすのそら！」の動画のまとめ。</div>
+				<div class="menu-content-desc">YouTube上で連載されている「せーので！はすのそら！」の動画のまとめです。</div>
+			</div>
+		</a>
+		
+		<a href="hasu-radio.html" title="蓮ノ空 みらくらラジオまとめ" class="no-underline">
+			<div class="menu-content col-Hasu">
+				<div class="menu-content-label">蓮ノ空女学院スクールアイドルクラブ</div>
+				<h3>蓮ノ空 <wbr>みらくらラジオまとめ</h3>
+				<hr>
+				<div class="menu-content-desc">公式チャンネルで定期配信されているWebラジオ「みらくら○○室ラジオ」のまとめです。</div>
 			</div>
 		</a>
 
@@ -359,13 +377,8 @@ h2 {
 	document.getElementById('caution').style.display = 'none';
 	
 	//■デバック用
-	if(location.search === "?debug") {
+	if(window.location.hostname === '127.0.0.1' || location.search.substring(1).split('&').indexOf('debug') >= 0) {
 		document.title = '[debug]' + document.title;
-	
-		//◆メニュー内のURLに「?debug」を付与
-		for(temp of document.getElementById("Menu").getElementsByTagName("a")){
-			temp.href += "?debug";
-		}
 	}
 	
 --></script>

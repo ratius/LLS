@@ -3,23 +3,23 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
 <meta charset="utf-8">
 
-<meta name="description" content="ラブライブ！シリーズ公式YouTubeチャンネルで配信された「ラブライブ！虹ヶ咲学園スクールアイドル同好会 スペシャルドラマ」のまとめ。">
+<meta name="description" content="YouTubeの蓮ノ空女学院スクールアイドルクラブ公式チャンネルで連載されている「みらくら○○室ラジオ」動画のまとめ。">
 
-<meta property="og:url" content="https://ratius.github.io/LLS/niji-drama.html">
-<meta property="og:title" content="虹ヶ咲 スペシャルドラマまとめ">
+<meta property="og:url" content="https://ratius.github.io/LLS/hasu-radio.html">
+<meta property="og:title" content="蓮ノ空 みらくらラジオまとめ">
 <meta property="og:type" content="website">
-<meta property="og:description" content="ラブライブ！シリーズ公式YouTubeチャンネルで配信された「ラブライブ！虹ヶ咲学園スクールアイドル同好会 スペシャルドラマ」のまとめ。">
+<meta property="og:description" content="YouTubeの蓮ノ空女学院スクールアイドルクラブ公式チャンネルで連載されている「みらくら○○室ラジオ」動画のまとめ。">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@ratius55">
 <meta name="twitter:creator" content="@ratius55">
-<meta name="twitter:title" content="虹ヶ咲 スペシャルドラマまとめ">
-<meta name="twitter:description" content="ラブライブ！シリーズ公式YouTubeチャンネルで配信された「ラブライブ！虹ヶ咲学園スクールアイドル同好会 スペシャルドラマ」のまとめ。">
+<meta name="twitter:title" content="蓮ノ空 みらくらラジオまとめ">
+<meta name="twitter:description" content="YouTubeの蓮ノ空女学院スクールアイドルクラブ公式チャンネルで連載されている「みらくら○○室ラジオ」動画のまとめ。">
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#e50080">
 
-<title>虹ヶ咲 スペシャルドラマまとめ | ラブライブ！ストレージ</title>
+<title>蓮ノ空 みらくらラジオまとめ | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main_gen2.css">
 <style><!--
@@ -177,52 +177,51 @@ article:not(.cancelled) .article-box-title {
 }
 --></style>
 <script><!--
+//■データリスト
 const tagData = {
-	"Ayumu"   : {"name": "歩夢"   , "r":237, "g":125, "b":149, "style": "button-round"},
-	"Kasumi"  : {"name": "かすみ" , "r":231, "g":214, "b":  0, "style": "button-round"},
-	"Shizuku" : {"name": "しずく" , "r":  1, "g":183, "b":237, "style": "button-round"},
-	"Karin"   : {"name": "果林"   , "r": 72, "g": 94, "b":198, "style": "button-round"},
-	"Ai"      : {"name": "愛"     , "r":255, "g": 88, "b":  0, "style": "button-round"},
-	"Kanata"  : {"name": "彼方"   , "r":166, "g":100, "b":160, "style": "button-round"},
-	"Setsuna" : {"name": "せつ菜" , "r":216, "g": 28, "b": 47, "style": "button-round"},
-	"Emma"    : {"name": "エマ"   , "r":132, "g":195, "b":110, "style": "button-round"},
-	"Rina"    : {"name": "璃奈"   , "r":156, "g":165, "b":185, "style": "button-round"},
-	"Shioriko": {"name": "栞子"   , "r": 55, "g":180, "b":132, "style": "button-round"},
-	"Mia"     : {"name": "ミア"   , "r":169, "g":158, "b":152, "style": "button-round"},
-	"Lanzhu"  : {"name": "嵐珠"   , "r":248, "g":200, "b":196, "style": "button-round"},
-	"Yu"      : {"name": "侑"     , "r": 29, "g": 29, "b": 29, "style": "button-round"}
+	"Kan"      : {"name": "菅叶和"     , "r":231, "g": 96, "b":158, "style": "button-round"},
+	"Tsukine"  : {"name": "月音こな"   , "r":200, "g":194, "b":198, "style": "button-round"},
+	"Kurusu"   : {"name": "来栖りん"   , "r":157, "g":141, "b":226, "style": "button-round"},
+
+	"Nirei"    : {"name": "楡井希実"   , "r":248, "g":181, "b":  0, "style": "button-hexa"},
+	"Nonaka"   : {"name": "野中ここな" , "r": 83, "g":131, "b":195, "style": "button-hexa"},
+	"Hanamiya" : {"name": "花宮初奈"   , "r":104, "g":190, "b":141, "style": "button-hexa"},
+	"Sasaki"   : {"name": "佐々木琴子" , "r":186, "g": 38, "b": 54, "style": "button-hexa"},
+	"Furihata" : {"name": "降幡愛"     , "r":255, "g":111, "b":190, "style": "button-hexa"},
+	"Uchida"   : {"name": "内田秀"     , "r":169, "g":158, "b":152, "style": "button-hexa"},
+	"Kobayashi": {"name": "小林愛香"   , "r":193, "g":202, "b":212, "style": "button-hexa"},
+	"Onishi"   : {"name": "大西亜玖璃" , "r":237, "g":125, "b":149, "style": "button-hexa"},
+	"Nitta"    : {"name": "新田恵海"   , "r":243, "g":133, "b":  0, "style": "button-hexa"},
+	"Okuma"    : {"name": "大熊和奏"   , "r":178, "g":255, "b":221, "style": "button-hexa"},
+	"Saito"    : {"name": "斉藤朱夏"   , "r":102, "g":192, "b":255, "style": "button-hexa"},
+
+	"Sakurai"  : {"name": "櫻井陽菜"   , "r":162, "g":215, "b":221, "style": "button-hexa"},
+	"Hayama"   : {"name": "葉山風花"   , "r":250, "g":215, "b":100, "style": "button-hexa"},
+
+	"Yumi"     : {"name": "ゆみ先生"   , "r":128, "g":128, "b":128, "style": "button-hexa"},
+	"SukiSukiClub" : {"name": "好き好きクラブの皆さん", "r":128, "g":128, "b":128, "style": "button-hexa"},
+
+	"s1" : {"name": "待機室",     "r":160, "g":128, "b":128, "style": "button-square"},
+	"s2" : {"name": "補習室",     "r":160, "g":128, "b":128, "style": "button-square"},
+	"s3" : {"name": "準備室",     "r":160, "g":128, "b":128, "style": "button-square"},
+	"s4" : {"name": "視聴覚室",   "r":160, "g":128, "b":128, "style": "button-square"},
+	"s5" : {"name": "進路相談室", "r":160, "g":128, "b":128, "style": "button-square"},
 };
 
 const filterTargets = [
-	{"name": "2018年", "condition": "after:2018-01-01 before:2018-12-31"},
-	{"name": "2019年", "condition": "after:2019-01-01 before:2019-12-31"},
-	{"name": "2020年", "condition": "after:2020-01-01 before:2020-12-31"},
-	{"name": "2021年", "condition": "after:2021-01-01 before:2021-12-31"},
-	{"name": "2022年", "condition": "after:2022-01-01 before:2022-12-31"},
-	{"name": "2023年", "condition": "after:2023-01-01 before:2023-12-31"},
-	{"name": "2025年", "condition": "after:2025-01-01 before:2025-12-31"},
-	{"name": "----"},
-	{"name": "出演：上原 歩夢",      "condition": "tag:Ayumu"},
-	{"name": "出演：中須 かすみ",    "condition": "tag:Kasumi"},
-	{"name": "出演：桜坂 しずく",    "condition": "tag:Shizuku"},
-	{"name": "出演：朝香 果林",      "condition": "tag:Karin"},
-	{"name": "出演：宮下 愛",        "condition": "tag:Ai"},
-	{"name": "出演：近江彼方",       "condition": "tag:Kanata"},
-	{"name": "出演：優木せつ菜",     "condition": "tag:Setsuna"},
-	{"name": "出演：エマ・ヴェルデ", "condition": "tag:Emma"},
-	{"name": "出演：天王寺璃奈",     "condition": "tag:Rina"},
-	{"name": "出演：三船栞子",       "condition": "tag:Shioriko"},
-	{"name": "出演：ミア・テイラー", "condition": "tag:Mia"},
-	{"name": "出演：鐘 嵐珠",        "condition": "tag:Lanzhu"},
-	{"name": "出演：高咲 侑",        "condition": "tag:Yu"}
+	{"name": "シーズン1 みらくら待機室ラジオ",  "condition": "tag:s1"},
+	{"name": "シーズン2 みらくら補習室ラジオ", "condition": "tag:s2"},
+	{"name": "シーズン3 みらくら準備室ラジオ", "condition": "tag:s3"},
+	{"name": "シーズン4 みらくら視聴覚室ラジオ", "condition": "tag:s4"},
+	{"name": "シーズン5 みらくら進路相談室ラジオ", "condition": "tag:s5"},
 ];
 --></script>
-<script src="data/loader.js" data-src="data/niji-drama.json,data/common-library.js,data/videolist.js"></script>
+<script src="data/loader.js" data-src="data/hasu-radio.json,data/common-library.js,data/videolist.js"></script>
 </head>
 <body class="left">
 <main>
 	<header>
-		<h1 id="TitleName">虹ヶ咲 スペシャルドラマまとめ</h1>
+		<h1 id="TitleName">蓮ノ空 みらくらラジオまとめ</h1>
 		<nav class="right-menu">
 			<ul>
 				<li><strong>目次</strong></li>
@@ -237,7 +236,7 @@ const filterTargets = [
 	<section id="Summary">
 		<h2>概要</h2>
 		<p>
-			ラブライブ！シリーズ公式YouTubeチャンネルで配信された「ラブライブ！虹ヶ咲学園スクールアイドル同好会 スペシャルドラマ」のまとめです。<br>
+			YouTubeの蓮ノ空女学院スクールアイドルクラブ公式チャンネルで連載されている「みらくら○○室ラジオ」動画のまとめです。
 		</p>
 	</section>
 
@@ -245,7 +244,6 @@ const filterTargets = [
 		<h2>動画一覧</h2>
 		<p>下部のプルダウンメニューから絞り込み条件を選択すると、条件に合致する配信の情報が表示されます。
 		</p>
-		<p>「動画リンク」列のサムネイル、または「動画へ」と書かれたリンクをクリック/タップすると、YouTubeの動画を開きます。<br>
 		<div id="Filter-Container">
 			<label for="VL-Filter">絞り込み</label>
 			<select id="VL-Filter">
