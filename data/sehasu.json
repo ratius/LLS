@@ -750,7 +750,7 @@
 	"date": "2025-01-12",
 	"title": "#34 金沢ロケ①",
 	"desc": "念願の9人で金沢へ！ はすぽチャレンジ in 金沢開幕🎉",
-	"memo": "チェックポイントを巡ってはすぽを獲得しつつ、ゴールのゆのくに天祥を目指そう！<br>番外編として、はすぽではなくグッズを賭けたチャレンジも！？",
+	"memo": "「Link！Like！ラブライブ！」の舞台になったチェックポイントを巡ってはすぽを獲得しつつ、ゴールのゆのくに天祥を目指そう！<br>番外編として、はすぽではなくグッズを賭けたチャレンジも！？",
 	"tags": ["Nirei", "Hanamiya", "Nonaka", "Sasaki", "Kan", "Tsukine", "Sakurai", "Hayama", "Kurusu"],
 	"tube": "X4PjyfN74GE",
 	"length": 1044
@@ -765,11 +765,30 @@
 	"length": 1051
 },
 {
+	"date": "2025-01-24",
+	"title": "#36 金沢ロケ③",
+	"desc": "",
+	"memo": "チェックポイントで発生したはすぽチャレンジは、スリーズブーケは「ひゃくまんさんチャレンジ」→{{S::失敗}}と「リフティングチャレンジ」→{{S::失敗}}、DOLLCHESTRAは「名言当てチャレンジ」→{{S::成功}}、みらくらぱーく！は「風鈴鳴らしチャレンジ」→{{S::失敗}}",
+	"tags": ["Nirei", "Hanamiya", "Nonaka", "Sasaki", "Kan", "Tsukine", "Sakurai", "Hayama", "Kurusu"],
+	"tube": "qJcFOa0Eptc",
+	"length": 1054
+},
+{
+	"date": "2025-01-31",
+	"title": "#37 金沢ロケ③",
+	"desc": "",
+	"memo": "はすぽ旅、ついに決着！<br>チェックポイントで発生したはすぽチャレンジは、スリーズブーケは「辞書早引きチャレンジ」→{{S::成功}}、DOLLCHESTRAは「どんどん滑ろう！ダジャレチャレンジ」→{{S::成功}}、みらくらぱーく！は「バッティングチャレンジ」→{{S::成功}}",
+	"tags": ["Nirei", "Hanamiya", "Nonaka", "Sasaki", "Kan", "Tsukine", "Sakurai", "Hayama", "Kurusu"],
+	"tube": "CFkDPls63N8",
+	"length": 1070
+},
+{
 	"date": "2099-02-01",
 	"title": "未定",
 	"desc": "",
 	"memo": "",
 	"tags": ["Nirei", "Hanamiya", "Nonaka", "Sasaki", "Kan", "Tsukine", "Sakurai", "Hayama", "Kurusu"],
-	"tube": ""
+	"tube": "",
+	"length": -1
 }
 ]
