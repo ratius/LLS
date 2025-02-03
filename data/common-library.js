@@ -61,7 +61,7 @@ const revealSpoiler = (elm) => {
 	}
 }
 
-//■ 文章のマークアップの処理 ver.20250116
+//■ 文章のマークアップの処理 ver.20250203
 const convertMarkup = (str) => {
 	// 最初の開き括弧、2番目の開き括弧、最初の閉じ括弧の位置を把握
 	const pFirstOpen = str.indexOf("{{");
@@ -73,11 +73,11 @@ const convertMarkup = (str) => {
 
 	if (pSecondOpen < pFirstClose && pSecondOpen !== -1) {
 		// 【X{{Y{{Z】 最初の閉じ括弧が、2番目の開き括弧よりも後にある場合：
-		// 2番目の開き括弧以降の部分を先に処理してから、改めて全体をconvertMarkupにかける
+		// 【Y{{Z】部分に対してconvertMarkUpを行った後、全体に対してconvertMarkupにを行う
 		return convertMarkup(str.substring(0, pSecondOpen) + convertMarkup(str.substring(pSecondOpen)));
 	} else {
 		// 【X{{Y}}Z】 最初の閉じ括弧が、2番目の最初の開き括弧より前にある場合：
-		// 最初の括弧部分を変換してからconvertMarkupをやり直す
+		// 【{{Y}}】部分を変換し、Zの部分に対してconvertMarkupを行う
 		const strFormer = str.substring(0, pFirstOpen);
 		const strInParentheses = str.substring(pFirstOpen + 2, pFirstClose).split('::');
 		const strLatter = str.substring(pFirstClose + 2);
@@ -102,6 +102,19 @@ const convertMarkup = (str) => {
 				if (strInParentheses.length >= 3) {
 					strConverted = `<span class="_pre-note" data-note="${strInParentheses[2]}">${strInParentheses[1]}</span>`;
 				}
+				break;
+
+			case 'ul': // 箇条書きを作成 {{UL::要素1::要素2:: … }}
+			case 'ol': 
+				const listElements = strInParentheses.slice(1); 
+				strConverted = `<${strInParentheses[0]}>`
+					+ listElements.map((e) => `<li>${e}</li>`).join('')
+					+ `</${strInParentheses[0]}>`;
+				break;
+
+			case 'el': // 折りたたみ要素を展開　{{EL::タイトル::内容::クラス}}
+				const detailsClass = (strInParentheses[3] ? ` class="${strInParentheses[3]}"` : "");
+				strConverted = `<details${detailsClass}><summary>${strInParentheses[1]}</summary><div>${strInParentheses[2]}</div></details>`;
 				break;
 
 			case 'xl': // PC版限定の、ラブライブ！シリーズ公式Xへのリンクを作成 {{XH::文字列::数字17桁}}
@@ -129,7 +142,7 @@ const convertMarkup = (str) => {
 			//	break;
 
 			default: // 該当しない場合
-				console.error(strInParentheses);
+				console.error(`エラー：存在しないマークアップ (${strInParentheses[0]})`);
 		}
 
 		return strFormer + strConverted + convertMarkup(strLatter);

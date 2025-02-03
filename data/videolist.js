@@ -132,13 +132,16 @@ const initialize = () => {
 	const databasePath = JSONpath[0].replace(/^.+\/(.+)\.json$/g, "JSON-$1");
 
 	//ボタンの色データをCSSに追加
-	const AddedCSS = "\n<!--\n/* Generated from videolist.js */\n" + Object.keys(tagData).map(tag => {
-		return `.button-${tag} {
+	const buttonCSS = document.createElement("style");
+	buttonCSS.innerHTML = ("\n<!--\n/* Generated from videolist.js */\n" + Object.keys(tagData).map(tag => {
+	return `.button-${tag} {
 	background-color: ${getColor(tagData[tag], 3)};
 	border-color: ${getColor(tagData[tag])};
-}`;
-	}).join("\n") + "\n-->";
-	document.querySelector('style').textContent += AddedCSS;
+	}`;
+	}).join("\n") + "\n-->");
+	console.log(buttonCSS);
+	document.head.appendChild(buttonCSS);
+	//document.querySelector('style').textContent += AddedCSS;
 
 	//セレクトボックスに要素を追加
 	filterTargets.forEach(temp => {

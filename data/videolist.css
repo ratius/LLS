@@ -1,0 +1,148 @@
+/* 動画一覧ページ用CSS */
+/* 絞り込みプルダウンメニュー */
+#Filter-Container {
+	font-size: x-large;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+#VL-Filter {
+	max-width: 100%;
+	border: solid 2px #b9a;
+	font-size: x-large;
+	font-weight: bold;
+	padding: 5px;
+	margin-right: 10px;
+}
+
+/* 動画一覧 */
+article {
+	width: 100%;
+	display: grid;
+	flex-wrap: wrap;
+}
+article.cancelled {
+	background-color: #ddd;
+}
+div.cancelled {
+	background-color: #ccc;
+}
+article:not(.cancelled) .article-box-title {
+	background-color: #fde;
+}
+.article-box-date, .article-box-title, .article-box-desc, .article-box-tags {
+	padding: 4px 10px;
+}
+.article-box-date, .article-box-tube{
+	display: flex;
+	align-items: center;
+}
+.article-box-date{ /*日付入力欄*/
+	font-size: 95%;
+	font-weight: bold;
+	background-color: #eee;
+	color: #666;
+}
+.article-box-title { /*タイトル*/
+	font-weight: bold;
+	border-bottom: solid 1px #bbb;
+}
+.article-box-desc { /*説明文*/
+	font-size: small;
+	border-bottom: solid 1px #bbb;
+}
+.article-box-tube {
+	flex-direction: column;
+}
+.length {
+	font-size: 70%;
+}
+.desc { /*概要*/
+	padding: 4px 8px;
+	margin: 4px 0;
+	border: 1px solid #bbb;
+	background-color: #eee;
+}
+.setlist { /*セットリスト*/
+	width: min(300px, 100%);
+	border: solid 1px #9ce;
+}
+.setlist summary {
+	margin: 0;
+	padding: 2px 6px;
+	background-color: #d0f0ff;
+}
+.setlist ol, .setlist ul {
+	margin: 5px 0;
+	padding-left: 30px;
+}
+.setlist-mc {
+	color: #69c;
+}
+
+/* ■スマートフォン向けレイアウト */
+@media screen and (max-width: 599px) {
+	article {
+		grid-template-columns: auto 70px;
+	}
+	article:not(:last-child) {
+		border-bottom: solid 3px #999;
+	}
+	.article-box-tube:not(.cancelled) {
+		background-color: #fde;
+	}
+	
+	.article-box-date:before {
+		content: "▼";
+	}
+	.article-box-date {
+		width: 100%;
+		border-bottom: solid 1px #c0b0b8;
+	}
+	.article-box-tube {
+		justify-content: center;
+		border-bottom: solid 1px #bbb;
+	}
+	.article-box-tags {
+		position: relative;
+		left: -12.5%;
+		width: 125%;
+		transform: scale(0.8);
+	}
+	.article-box-date, .article-box-desc, .article-box-tags{
+		grid-column: span 2;
+	}
+}
+
+/* ■PC向けレイアウト */
+@media screen and (min-width: 600px) {
+	article {
+		grid-template-columns: 120px auto 130px;
+		border-right: solid 1px #999;
+		border-bottom: solid 1px #999;
+	}
+
+	.article-box-date {
+		justify-content: center;
+		width: 120px;
+		grid-row: span 3;
+		border-right: solid 1px #999;
+	}
+	.article-box-tube {
+		justify-content: center;
+		width: 130px;
+		grid-row: span 3;
+		border-left: solid 1px #bbb;
+	}
+	.article-box-tube a {
+		width: 124px;
+		height: 72px;
+		overflow: hidden;
+		border: solid 2px #936;
+		margin: 3px 0;
+	}
+	.article-box-tube img {
+		width: 120px;
+		height: 68px;
+		object-fit: cover;
+	}
+}
