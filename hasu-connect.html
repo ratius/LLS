@@ -5,10 +5,12 @@
 
 <meta name="description" content="アプリ「Link! Like! ラブライブ！」で実施された配信のまとめ。">
 
-<meta property="og:url" content="https://ratius.github.io/LLS/hasu-connect.html">
-<meta property="og:title" content="リンクラ スクールアイドルコネクトまとめ">
 <meta property="og:type" content="website">
+<meta property="og:title" content="リンクラ スクールアイドルコネクトまとめ">
+<meta property="og:url" content="https://ratius.github.io/LLS/hasu-connect.html">
+<meta property="og:image" content="https://ratius.github.io/LLS/card/hasu-connect.jpg">
 <meta property="og:description" content="アプリ「Link! Like! ラブライブ！」で実施された配信のまとめ。">
+<meta property="og:site_name" content="ラブライブ！ストレージ">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@ratius55">
@@ -22,160 +24,6 @@
 <title>リンクラ スクールアイドルコネクトまとめ | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main_gen2.css">
-<style><!--
-/* 絞り込み */
-#Filter-Container {
-	font-size: x-large;
-	font-weight: bold;
-	margin-bottom: 10px;
-}
-
-#VL-Filter {
-	max-width: 100%;
-	border: solid 2px #b9a;
-	font-size: x-large;
-	font-weight: bold;
-	padding: 5px;
-	margin-right: 10px;
-}
-
-/* 動画一覧 */
-article {
-	width: 100%;
-	display: grid;
-	flex-wrap: wrap;
-}
-
-article.cancelled {
-	background-color: #ddd;
-}
-div.cancelled {
-	background-color: #ccc;
-}
-
-article:not(.cancelled) .article-box-title {
-	background-color: #fde;
-}
-
-.article-box-date, .article-box-title, .article-box-desc, .article-box-tags {
-	padding: 4px 10px;
-}
-.article-box-date, .article-box-tube{
-	display: flex;
-	align-items: center;
-}
-.article-box-date{ /*日付入力欄*/
-	font-size: 95%;
-	font-weight: bold;
-	background-color: #eee;
-	color: #666;
-}
-.article-box-title { /*タイトル*/
-	font-weight: bold;
-	border-bottom: solid 1px #bbb;
-}
-.article-box-desc { /*説明文*/
-	font-size: small;
-	border-bottom: solid 1px #bbb;
-}
-.article-box-tube {
-	flex-direction: column;
-}
-.length {
-	font-size: 70%;
-}
-.desc { /*概要*/
-	padding: 4px 8px;
-	margin: 4px 0;
-	border: 1px solid #bbb;
-	background-color: #eee;
-}
-
-.setlist { /*セットリスト*/
-	width: min(300px, 100%);
-	border: solid 1px #9ce;
-}
-.setlist-summary {
-	margin: 0;
-	padding: 2px 6px;
-	background-color: #d0f0ff;
-}
-.setlist-ol {
-	margin: 5px 0;
-	padding-left: 30px;
-}
-.setlist-mc {
-	color: #69c;
-}
-
-/* ■スマートフォン向けレイアウト */
-@media screen and (max-width: 599px) {
-	article {
-		grid-template-columns: auto 70px;
-	}
-	article:not(:last-child) {
-		border-bottom: solid 3px #999;
-	}
-	.article-box-tube:not(.cancelled) {
-		background-color: #fde;
-	}
-	
-	.article-box-date:before {
-		content: "▼";
-	}
-	.article-box-date {
-		width: 100%;
-		border-bottom: solid 1px #c0b0b8;
-	}
-	.article-box-tube {
-		justify-content: center;
-		border-bottom: solid 1px #bbb;
-	}
-	.article-box-tags {
-		position: relative;
-		left: -12.5%;
-		width: 125%;
-		transform: scale(0.8);
-	}
-	.article-box-date, .article-box-desc, .article-box-tags{
-		grid-column: span 2;
-	}
-}
-
-/* ■PC向けレイアウト */
-@media screen and (min-width: 600px) {
-	article {
-		grid-template-columns: 120px auto 130px;
-		border-right: solid 1px #999;
-		border-bottom: solid 1px #999;
-	}
-
-	.article-box-date {
-		justify-content: center;
-		width: 120px;
-		grid-row: span 3;
-		border-right: solid 1px #999;
-	}
-	.article-box-tube {
-		justify-content: center;
-		width: 130px;
-		grid-row: span 3;
-		border-left: solid 1px #bbb;
-	}
-	.article-box-tube a {
-		width: 124px;
-		height: 72px;
-		overflow: hidden;
-		border: solid 2px #936;
-		margin: 3px 0;
-	}
-	.article-box-tube img {
-		width: 120px;
-		height: 68px;
-		object-fit: cover;
-	}
-}
---></style>
 <script><!--
 const tagData = {
 	"meets"     : {"name": "With×MEETS" , "r":160, "g":112, "b": 96, "style": "button-square button-meets"},
@@ -194,6 +42,8 @@ const tagData = {
 	"Ginko"   : {"name": "吟子"   , "r":162, "g":215, "b":221, "style": "button-round button-Ginko"},
 	"Kosuzu"  : {"name": "小鈴"   , "r":250, "g":215, "b":100, "style": "button-round button-Kosuzu"},
 	"Hime"    : {"name": "姫芽"   , "r":157, "g":141, "b":226, "style": "button-round button-Hime"},
+	"Izumi"   : {"name": "泉"     , "r": 96, "g": 96, "b": 96, "style": "button-round button-Izumi"},
+	"Ceras"   : {"name": "セラス" , "r": 96, "g": 96, "b": 96, "style": "button-round button-Izumi"}
 };
 
 const filterTargets = [
