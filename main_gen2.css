@@ -174,7 +174,8 @@ h3:before {
 .button-round, .button-square {
 	padding: 0px 6px;
 	line-height: 22px;
-	border: 2px solid;
+	border-width: 2px;
+	border-style: solid;
 }
 
 .button-flat {
