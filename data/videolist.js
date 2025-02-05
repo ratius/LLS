@@ -139,7 +139,6 @@ const initialize = () => {
 	border-color: ${getColor(tagData[tag])};
 	}`;
 	}).join("\n") + "\n-->");
-	console.log(buttonCSS);
 	document.head.appendChild(buttonCSS);
 	//document.querySelector('style').textContent += AddedCSS;
 
