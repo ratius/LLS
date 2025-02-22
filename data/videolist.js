@@ -15,14 +15,11 @@
 const makeVideoList = (dbPath, conditions = '') => {
 	//秒数を「h時間mm分ss秒」形式に変換する関数
 	const convertSecondsToHHMMSS = (len) => {
-		len = parseInt(len);
-		if (isNaN(len)) { return '不明'; }
-		if (len < 0) { console.error(len + ' is not a positive integer'); return ''; }
-		len = Math.floor(len);
-		if (len < 60) { return len + '秒'; }
-		if (len < 3600) { return Math.floor(len / 60) + '分' + ('0' + (len % 60)).slice(-2) + '秒'; }
-
-		return `${Math.floor(len / 3600)}時間${('0' + Math.floor((len % 3600) / 60)).slice(-2) + '分'}${('0' + (len % 60)).slice(-2) + '秒'}`;
+		len = Math.floor(parseInt(len, 10));
+		if (isNaN(len) || len < 0) { return '不明'; }
+		if (len < 60) { return `${len}秒`; }
+		if (len < 3600) { return `${Math.floor(len / 60)}分${('0' + (len % 60)).slice(-2)}秒`; }
+		return `${Math.floor(len / 3600)}時間${('0' + Math.floor((len % 3600) / 60)).slice(-2)}分${('0' + (len % 60)).slice(-2)}秒`;
 	};
 	if (conditions === '') { return false; }
 
@@ -97,7 +94,7 @@ const makeVideoList = (dbPath, conditions = '') => {
 
 		const setlistContent = ('setlist' in video && video['setlist'] !== "" ?
 			`<details class="setlist">
-				<summary class="setlist-summary">セットリスト (クリックで展開)</summary>
+				<summary class="setlist-summary">${'setlistAlt' in video ? video['setlistAlt'] : "セットリスト"} (クリックで展開)</summary>
 				<ol class="setlist-ol">
 					${video['setlist'].map(program =>
 				`<li>${(program === 'MC' ? `<i class="setlist-mc">MC</i>` : program)}</li>`).join('')}
@@ -111,7 +108,7 @@ const makeVideoList = (dbPath, conditions = '') => {
 
 		return `
 		<article class="${isCancelled}">
-			<div class="article-box-date">${video['date'].replaceAll('-', '/')}</div>
+			<div class="article-box-date">${video['date']}</div>
 			<div class="article-box-title ${isCancelled}">${video['title']}</div>
 			<div class="article-box-tube ${isCancelled}">${videoContent}</div>
 			<div class="article-box-desc">${descContent + setlistContent}</div>
@@ -167,8 +164,20 @@ const initialize = () => {
 
 	//デバック用
 	if (isDebugMode) {
+		//データベースの検証
+		window[databasePath].forEach(video => {
+			if(!(['date'] in video)){
+				throw new Error(`JSON contains video data without "date"`);
+				return;
+			}
+			if(video['date'].indexOf("/") >= 0){
+				throw new Error(`"date" must be written with separator hyphens`);
+			}
+		});
+
 		document.getElementById('VL-Filter').selectedIndex = 1;
 		makeVideoList(window[databasePath], document.getElementById('VL-Filter').value);
+
 		//描画時間の出力
 		const TimeOutputEnd = performance.now();
 		console.log(`${document.getElementById('TitleName').innerHTML} 初期設定完了。読み込み：${(TimeOutputLoaded - TimeLoadingStart).toFixed(1)}ミリ秒 初期化：${(TimeOutputEnd - TimeOutputLoaded).toFixed(1)}ミリ秒`);

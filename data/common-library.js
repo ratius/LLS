@@ -119,13 +119,13 @@ const convertMarkup = (str) => {
 
 			case 'xl': // PC版限定の、ラブライブ！シリーズ公式Xへのリンクを作成 {{XH::文字列::数字17桁}}
 				if (strInParentheses.length >= 3) {
-					strConverted = `<span class="pc-only">（<a href="https://x.com/LoveLive_staff/status/${strInParentheses[2]}" target="blank" rel="noopener noreferrer">${strInParentheses[1]}</a>）</span>`;
+					strConverted = `<span class="pc-only">（<a href="https://x.com/LoveLive_staff/status/${strInParentheses[2]}" target="_blank" rel="noopener noreferrer">${strInParentheses[1]}</a>）</span>`;
 				}
 				break;
 
 			case 'xh': // PC版限定の、蓮ノ空女学院公式Xへのリンクを作成 {{XH::文字列::数字17桁}}
 				if (strInParentheses.length >= 3) {
-					strConverted = `<span class="pc-only">（<a href="https://x.com/hasunosora_SIC/status/${strInParentheses[2]}" target="blank" rel="noopener noreferrer">${strInParentheses[1]}</a>）</span>`;
+					strConverted = `<span class="pc-only">（<a href="https://x.com/hasunosora_SIC/status/${strInParentheses[2]}" target="_blank" rel="noopener noreferrer">${strInParentheses[1]}</a>）</span>`;
 				}
 				break;
 
@@ -155,5 +155,5 @@ const convertMarkup = (str) => {
 
 //■ 外部リンクを作成
 const makeExternalLink = (text, url, classes = "") => {
-	return `<a href="${url}" target="blank" class="${classes}" rel="noopener noreferrer">${text}</a>`;
+	return `<a href="${url}" target="_blank" class="${classes}" rel="noopener noreferrer">${text}</a>`;
 }
