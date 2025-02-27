@@ -11,20 +11,23 @@ function FilterbyBirthday(m, d){
 		return (character.birth === dateTempCode)
 		&& (character.type !== 'V' || document.getElementById('EnableCast').checked)
 		&& (character.group !== 'llsif' || document.getElementById('EnableLLSIF').checked)
+		&& (character.group !== 'musical' || document.getElementById('EnableMusical').checked)
+		&& (!(['rival'] in character) || document.getElementById('EnableRivals').checked)
 	});
 }
 
 //■■メイン出力
 //■カレンダーと予定表の描画
 function generateCalendar(y, m){
-	let currentYear = new Date(y, m).getFullYear();
-	let currentMonth = new Date(y, m).getMonth();
+	const currentYear = new Date(y, m).getFullYear();
+	const currentMonth = new Date(y, m).getMonth();
+	const totalDays = new Date(currentYear, currentMonth+1, 0).getDate();
 
 	document.getElementById("CurrentDate").innerHTML = currentYear + '年' + (currentMonth+1) + '月';
 	
 	//カレンダーのヘッダー
-	const calendarHeader = [...Array(7)].map ( (_, char) => {
-		return `<div class="calendar-grid-header">${"日月火水木金土"[char]}</div>`
+	const calendarHeader = [...Array(7)].map ( (_, col) => {
+		return `<div class="calendar-grid-header">${"日月火水木金土"[col]}</div>`
 	},'').join('');
 
 	//カレンダーの本体
@@ -55,29 +58,28 @@ function generateCalendar(y, m){
 	document.getElementById("CalendarGridContainer").innerHTML = calendarHeader + calendarContents;
 
 	//■予定表
-	const scheduleContents = [...Array(31)].map ( (_, day) => {
+	let column1 = "";
+	let column2 = "";
 
-		let dateTemp = new Date(y, m, day + 1);
-		if(dateTemp.getMonth() !== currentMonth){ //現在の月を処理しているか？
-			return `<div></div>`;
-		}
-		
-		//誕生日のキャラクターの追加
+	//日付ごとに情報を追加
+	[...Array(totalDays)].forEach( (_, day) => {
+		//誕生日のキャラクターの検索
 		const BirthdayCharacters = FilterbyBirthday(m, day+1).map( character => {
-			return `<span class="icon-${character.type} icon-${character.group}" ${'tips' in character ? 'title="' + character.tips + '"' : ''}>${character.name}</span>`
+			return `<div class="schedule-name marker-${character.type} marker-${character.group}">${character.name}${['tips'] in character ? `<span class="name-tips">(${character.tips})</span>` : ''}</div>`
 		});
-		
 		const contents = `
-		<div class="schedule-wrapper">
+		<div class="schedule-wrapper ${day === totalDays-1 ? 'schedule-last-day' : ''}">
 			<div class="schedule-day">${day+1}</div>
 			<div class="schedule-memo">${BirthdayCharacters.join(' ')}</div>
 		</div>`;
-		const footer = (day === 14 ? `<div class="none"></div>` : '');
 
-		return contents + footer;
-		
-	},'').join('');
-	document.getElementById("ScheduleContainer").innerHTML = scheduleContents;
+		if(day < Math.ceil(totalDays / 2)){
+			column1 += contents;
+		} else {
+			column2 += contents;
+		}
+	});
+	document.getElementById("ScheduleContainer").innerHTML = `<div class="schedule-column">${column1}</div><div class="schedule-column">${column2}</div>`
 }
 
 //■初期化処理
