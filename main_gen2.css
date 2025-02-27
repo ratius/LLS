@@ -1,4 +1,4 @@
-*{ box-sizing: border-box; }
+*, *:before{ box-sizing: border-box; }
 a {color: #936;}
 a:hover {color: #f03;}
 

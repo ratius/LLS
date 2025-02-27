@@ -26,7 +26,9 @@
 
 .calendar-container {
 	width: 100%;
-	display: grid;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	margin-bottom: 10px;
 }
 
@@ -103,7 +105,14 @@
 	border-color: #c69;
 }
 #ScheduleContainer {
-	display: grid;
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 10px;
+}
+
+.schedule-column {
+	flex: 1;
+	min-width: 400px;
 }
 
 .schedule-wrapper {
@@ -111,9 +120,6 @@
 	grid-template-columns: 40px auto;
 	vertical-align: middle;
 	padding: 3px 5px;
-}
-
-.schedule-wrapper:not(:last-child) {
 	border-bottom: solid 1px #ccc;
 }
 
@@ -124,45 +130,44 @@
 	background-color: #fbd;
 	font-weight: bold;
 	padding-right: 5px;
+	margin-right: 4px;
 	clip-path: polygon(0% 0%, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0% 100%);
 }
 
-.schedule-memo span {
+.schedule-memo {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	margin: auto 0;
+}
+
+
+.schedule-name::before {
+	content: "";
 	display: inline-block;
-	padding: 0 4px;
+	width: 16px;
+	height: 16px;
+	border-style: solid;
+	border-radius: 50%;
+	background-color: white;
+	margin: 0 2px;
 }
 
-.icon-C:before { content: "●"; }
-.icon-V:before { content: "🎤"; }
-
-.icon-muse:before   {color: #e50080;}
-.icon-aqours:before {color: #19b1f6;}
-.icon-niji:before   {color: #f8b656;}
-.icon-liella:before {color: #da57d8;}
-.icon-musical:before{color: #df2743;}
-.icon-hasu:before   {color: #cc4466;}
-.icon-llsif:before  {color: #777777;}
-
-/* ■スマートフォン向け */
-@media screen and (max-width: 599px) {
-	.calendar-container {
-	}
-	#ScheduleContainer {
-		grid-template-columns: 1fr;
-	}
+.name-tips {
+	font-size: small;
+	padding-left: 3px;
 }
-/* ■PC向けレイアウト */
-@media (min-width: 600px) {
-	.calendar-container {
-		grid-auto-flow: column;
-		grid-template-columns: 1fr 1fr;
-	}
-	#ScheduleContainer {
-		grid-auto-flow: column;
-		grid-template-rows: repeat(16, auto);
-		grid-template-columns: 1fr 1fr;
-	}
-}
+
+.marker-C::before { border-width: 8px;}
+.marker-V::before { border-width: 2px;}
+.marker-muse::before    {border-color: #E50080;}
+.marker-aqours::before  {border-color: #19B1F6;}
+.marker-niji::before    {border-color: #F8B656;}
+.marker-liella::before  {border-color: #DA57D8;}
+.marker-musical::before {border-color: #C40035;}
+.marker-hasu::before    {border-color: #FB8A9B;}
+.marker-bluebird::before{border-color: #CECED9;}
+.marker-llsif::before   {border-color: #888888;}
 
 --></style>
 <script src="data/loader.js" data-src="data/calendar.js,data/calendar.json,data/common-library.js"></script>
@@ -177,7 +182,17 @@
 		<h2>概要</h2>
 		<p>
 			ラブライブ！シリーズのキャラクター及びキャストの誕生日を確認できるカレンダーです。<br>
-			（キャストはスクールアイドルを演じている方のみ掲載しています）
+		</p>
+		<p>
+			掲載対象となるグループは以下の通り。誕生日不詳のキャラクターは掲載できないのでご了承ください。<br>
+			<ul>
+				<li>『ラブライブ！』：μ's、A-RISE（3人とも誕生日不詳）</li>
+				<li>『サンシャイン!!』：Aqours、Saint Snow</li>
+				<li>『虹ヶ咲』：虹ヶ咲学園スクールアイドル同好会（高咲侑は誕生日不詳）</li>
+				<li>『スーパースター!!』：Liella!、Sunny Passion</li>
+				<li>『蓮ノ空』：蓮ノ空女学院スクールアイドルクラブ、Adel Note（2人とも誕生日不詳）</li>
+				<li>『スクフェス』：『虹ヶ咲』扱いの桜坂しずく、近江彼方、エマ・ヴェルデを除く転入生51名（『スクフェス』扱いのため、『虹ヶ咲』で声を演じたキャストは掲載しません）</li>
+			</ul>
 		</p>
 		<p id="RecordedData"></p>
 	</section>
@@ -185,10 +200,12 @@
 	<section>
 		<h2>カレンダー</h2>
 		<div class="calendar-container">
-			<div class="options">
+			<div class="options" onchange="generateCalendar(globalYear, globalMonth)">
 				<strong>オプション</strong><br>
-				<label><input type="checkbox" id="EnableCast" onchange="generateCalendar(globalYear, globalMonth)" checked>キャストを表示</label><br>
-				<label><input type="checkbox" id="EnableLLSIF" onchange="generateCalendar(globalYear, globalMonth)" checked>スクフェス転入生を表示</label><br>
+				<label><input type="checkbox" id="EnableCast" checked>キャストを表示</label><br>
+				<label><input type="checkbox" id="EnableRivals" checked>ライバルユニットを表示</label><br>
+				<label><input type="checkbox" id="EnableMusical" checked>スクールアイドルミュージカルを表示</label><br>
+				<label><input type="checkbox" id="EnableLLSIF" checked>スクフェス転入生を表示</label><br>
 			</div>
 			<div class="calendar">
 				<div class="date-container">
@@ -209,6 +226,15 @@
 		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 		<div class="history-container">
 			<details open>
+				<summary><span class="date">2025/02/27</span> - 機能追加</summary>
+				<div>
+					<span class="icon-new"></span>A-RISE、Edel Noteスクールアイドルミュージカル(TVドラマおよび2025年公演分)のキャストを追加<br>
+					<span class="icon-new"></span>「ライバルユニットを表示」「スクールアイドルミュージカルを表示」の絞り込みオプションを追加<br>
+					<span class="icon-fix"></span>グループを表すアイコンを変更<br>
+					<span class="icon-fix"></span>キャストの情報を直接掲載
+				</div>
+			</details>
+			<details>
 				<summary><span class="date">2024/04/14</span> - 蓮ノ空104期新入生参戦に伴う調整</summary>
 				<div>
 					<span class="icon-new"></span>蓮ノ空104期新入生（百生吟子、徒町小鈴、安養寺姫芽）＋当該キャストの誕生日を掲載<br>
