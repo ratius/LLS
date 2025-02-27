@@ -62,13 +62,13 @@ function generateCalendar(y, m){
 	let column2 = "";
 
 	//日付ごとに情報を追加
-	[...Array(totalDays)].forEach( (_, day) => {
+	for(day = 0; day < totalDays; day++){
 		//誕生日のキャラクターの検索
-		const BirthdayCharacters = FilterbyBirthday(m, day+1).map( character => {
+		const BirthdayCharacters = FilterbyBirthday(currentMonth, day+1).map( character => {
 			return `<div class="schedule-name marker-${character.type} marker-${character.group}">${character.name}${['tips'] in character ? `<span class="name-tips">(${character.tips})</span>` : ''}</div>`
 		});
 		const contents = `
-		<div class="schedule-wrapper ${day === totalDays-1 ? 'schedule-last-day' : ''}">
+		<div class="schedule-wrapper">
 			<div class="schedule-day">${day+1}</div>
 			<div class="schedule-memo">${BirthdayCharacters.join(' ')}</div>
 		</div>`;
@@ -78,7 +78,7 @@ function generateCalendar(y, m){
 		} else {
 			column2 += contents;
 		}
-	});
+	}
 	document.getElementById("ScheduleContainer").innerHTML = `<div class="schedule-column">${column1}</div><div class="schedule-column">${column2}</div>`
 }
 
