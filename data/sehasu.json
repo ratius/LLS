@@ -805,9 +805,27 @@
 	"title": "#40 金沢ロケ⑦",
 	"desc": "能登牛に和栗も！ 超絶品！！ご褒美グルメツアー！",
 	"memo": "はすぽ争奪戦で見事1位になったスリーズブーケが、贅沢グルメツアーを堪能！",
-	"tags": ["Nirei", "Hanamiya", "Nonaka", "Sakurai"],
+	"tags": ["Nirei", "Hanamiya", "Sakurai"],
 	"tube": "r9PrqOhTOjM",
 	"length": 1150
+},
+{
+	"date": "2025-02-28",
+	"title": "#41 金沢ロケ⑧",
+	"desc": "九谷焼＆水引、金沢の伝統文化を体験！",
+	"memo": "はすぽ争奪戦で2位になったDOLLCHESTRAが、金沢の伝統文化体験ツアーにやって来た！ 水引作りと九谷焼に挑戦！",
+	"tags": ["Nonaka", "Sasaki", "Hayama"],
+	"tube": "zBiW5RIW8vs",
+	"length": -1
+},
+{
+	"date": "2025-03-07",
+	"title": "#42 金沢ロケ⑨",
+	"desc": "みらくらぱーく！が大野をぶらり！",
+	"memo": "はすぽ争奪戦で3位になったみらくらぱーく！が、大野ぶらりツアーへ出発！ なお、予算は一人1000円！",
+	"tags": ["Kan", "Tsukine", "Kurusu"],
+	"tube": "OoEDyRfl5us",
+	"length": 1215
 },
 {
 	"date": "2099-02-01",
