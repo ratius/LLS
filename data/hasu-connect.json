@@ -2313,11 +2313,11 @@
 {
 	"date": "2025-02-28",
 	"title": "徒町小鈴生誕祭 〜16歳編〜",
-	"desc": "",
+	"desc": "村野さやかです 本日は、小鈴さんのお誕生日です これからも大きく成長していく小鈴さんのお誕生日を、一緒にお祝いしましょう",
 	"memo": "",
-	"tags": ["meets", "Sayaka", "Tsuzuri", "Kosuzu"],
-	"tube": "",
-	"length": -1
+	"tags": ["meets", "Sayaka", "Tsuzuri", "Kosuzu", "room-club", "birthday"],
+	"tube": "PFj7kSmdZQs",
+	"length": [1317, ""]
 },
 {
 	"date": "2025-03-03",
@@ -2325,33 +2325,96 @@
 	"desc": "大沢瑠璃乃だよ！ 今日はアンケート機能を使って、めぐちゃんと真・剣・勝・負！したいと思いやす！ たとえめぐちゃん相手でも負けないぞ〜！",
 	"memo": "瑠璃乃と慈が、アンケート機能を使って、With×MEETS視聴者の回答を予想！ 負けたほうには罰ゲーム！？",
 	"tags": ["meets", "Tsuzuri", "Megumi", "room-Rurino"],
-	"tube": "",
-	"length": -1
+	"tube": "fu_d-QPaQq8",
+	"length": [1188,""]
 },
 {
 	"date": "2025-03-06",
 	"title": "見納めの回",
 	"desc": "綴理だよ。あれれん、これも、全部持ってきたんだ。今日もきっと、楽しいと思う。",
 	"memo": "102期生3人での配信もこれが最後。過去のWith×MEETSでも登場した、色々な小物を付けた姿を披露！",
-	"tags": ["meets", "Kozue", "Tsuzuri", "Megumi"],
-	"tube": "",
-	"length": -1
+	"tags": ["meets", "Kozue", "Tsuzuri", "Megumi", "room-club"],
+	"tube": "ldhMo0mMAA4",
+	"length": [1239, ""]
 },
 {
 	"date": "2025-03-08",
 	"title": "1年生ズの1年間",
 	"desc": "この度概要分を務めさせていただく徒町です！ なんと、蓮ノ空に入学してから1年が経ちました・・・！ 2年生ズを襲名させていただく前に、振り返りをしたいです！",
 	"memo": "",
-	"tags": ["meets", "Ginko", "Kosuzu", "Hime"],
+	"tags": ["meets", "Ginko", "Kosuzu", "Hime", "room-club"],
+	"tube": "9DwoK9NgcGE",
+	"length": [1291, ""]
+},
+{
+	"date": "2025-03-10",
+	"title": "思い出を作ろう！",
+	"desc": "乙宗 梢です。この6人の並びを改めて見ると、感慨深いものがありますね。蓮ノ空を離れるその瞬間まで、たくさんの思い出を作りたいと思います。",
+	"memo": "",
+	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "room-club"],
+	"tube": "4SkYwO4Jd_o",
+	"length": [1131, ""]
+},
+{
+	"date": "2025-03-13",
+	"title": "梢センパイに感謝を！",
+	"desc": "花帆だよ！ 今日は梢センパイがいるスリーズブーケとしては最後の配信なんだ。寂しいけど、今日もいつも通り、絶対楽しい配信になると思う！ 梢センパイ、ありがとうございました！",
+	"memo": "",
+	"tags": ["meets", "Kaho", "Sayaka", "Ginko", "room-club"],
 	"tube": "",
 	"length": -1
 },
 {
-	"date": "2025-03-10",
+	"date": "2025-03-17",
+	"title": "綴理センパイに感謝を。",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Sayaka", "Tsuzuri", "Kosuzu"],
+	"tube": "",
+	"length": -1
+},
+{
+	"date": "2025-03-20",
+	"title": "めぐちゃんに感謝！",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Rurino", "Megumi", "Hime"],
+	"tube": "",
+	"length": -1
+},
+{
+	"date": "2025-03-22",
 	"title": "未定",
 	"desc": "",
 	"memo": "",
-	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi"],
+	"tags": ["meets", "Megumi"],
+	"tube": "",
+	"length": -1
+},
+{
+	"date": "2025-03-24",
+	"title": "未定",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Tsuzuri"],
+	"tube": "",
+	"length": -1
+},
+{
+	"date": "2025-03-27",
+	"title": "未定",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Kozue"],
+	"tube": "",
+	"length": -1
+},
+{
+	"date": "2025-03-30",
+	"title": "104期 Final Term Fes×LIVE -蓮華祭-",
+	"desc": "",
+	"memo": "",
+	"tags": ["live", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime"],
 	"tube": "",
 	"length": -1
 },
