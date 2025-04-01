@@ -2403,7 +2403,7 @@
 {
 	"date": "2025-03-27",
 	"title": "乙宗梢、最後のWith×MEETSです",
-	"desc": "",
+	"desc": "乙宗 梢と申します。遂に102期生最後のWith×MEETSとなりました。配信を通してみなさんと過ごした大切な時間、絶対に忘れません。<br>最後の配信も、よろしくお願いいたします。",
 	"memo": "",
 	"tags": ["meets", "Kozue"],
 	"tube": "",
@@ -2412,9 +2412,36 @@
 {
 	"date": "2025-03-30",
 	"title": "104期 Final Term Fes×LIVE -蓮華祭-",
+	"memo": "ライブ会場は、蓮ノ空女学院第2音楽堂。102期生にとっては最後となるFes×LIVE！",
+	"setlist": ["全方位キュン♡", "COMPASS", "ユメワズライ", "MC", "Dream Believers", "MC", "いつでも、いつまでも", "MC", "365 Days (Fes×LIVE AFTERにて)"],
+	"tags": ["live", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime"],
+	"tube": "",
+	"length": -1
+},
+{
+	"date": "2025-04-03",
+	"title": "お伝えしたいことがあります",
 	"desc": "",
 	"memo": "",
-	"tags": ["live", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime"],
+	"tags": ["meets", "Kaho", "Sayaka", "Rurino"],
+	"tube": "",
+	"length": -1
+},
+{
+	"date": "2025-04-05",
+	"title": "小三角、2年生になりました",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Ginko", "Kosuzu", "Hime"],
+	"tube": "",
+	"length": -1
+},
+{
+	"date": "2025-04-07",
+	"title": "未定",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Ginko"],
 	"tube": "",
 	"length": -1
 },
@@ -2423,7 +2450,7 @@
 	"title": "未定",
 	"desc": "",
 	"memo": "",
-	"tags": ["meets", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime"],
+	"tags": ["meets", "Kaho", "Sayaka", "Rurino", "Ginko", "Kosuzu", "Hime"],
 	"tube": "",
 	"length": -1
 }
