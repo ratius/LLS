@@ -78,14 +78,14 @@ const LLSPLayoutTemplate = (entry) => {
     const isCancelled = (entry['tags'].find((e) => e === 'cancelled') ? 'cancelled' : '');
 
     const videoLengthContent = (typeof entry['length'] === 'number' ?
-        `<span class="length pc-only">動画：${LLSProcessor.convertSecondsToHHMMSS(entry['length'])}</span>`
+        `<span class="length pc-only">動画：${convertSecondsToHHMMSS(entry['length'])}</span>`
         :
         (Array.isArray(entry['length']) ?
             (entry['length'].length >= 0 ?
-                `<span class="length pc-only">動画：${LLSProcessor.convertSecondsToHHMMSS(entry['length'][0])}</span>`
+                `<span class="length pc-only">動画：${convertSecondsToHHMMSS(entry['length'][0])}</span>`
                 : '')
             + (entry['length'].length > 1 ?
-                `<span class="length pc-only">AFTER：${LLSProcessor.convertSecondsToHHMMSS(entry['length'][1])}</span>`
+                `<span class="length pc-only">AFTER：${convertSecondsToHHMMSS(entry['length'][1])}</span>`
                 : '')
             : '')
     );

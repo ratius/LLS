@@ -36,6 +36,9 @@ const tagData = {
 	"Nonaka"   : {"name": "野中ここな" , "r": 83, "g":131, "b":195, "style": "button-hexa"},
 	"Hanamiya" : {"name": "花宮初奈"   , "r":104, "g":190, "b":141, "style": "button-hexa"},
 	"Sasaki"   : {"name": "佐々木琴子" , "r":186, "g": 38, "b": 54, "style": "button-hexa"},
+	"Sakurai"  : {"name": "櫻井陽菜"   , "r":162, "g":215, "b":221, "style": "button-hexa"},
+	"Hayama"   : {"name": "葉山風花"   , "r":250, "g":215, "b":100, "style": "button-hexa"},
+
 	"Furihata" : {"name": "降幡愛"     , "r":255, "g":111, "b":190, "style": "button-hexa"},
 	"Uchida"   : {"name": "内田秀"     , "r":169, "g":158, "b":152, "style": "button-hexa"},
 	"Kobayashi": {"name": "小林愛香"   , "r":193, "g":202, "b":212, "style": "button-hexa"},
@@ -43,10 +46,6 @@ const tagData = {
 	"Nitta"    : {"name": "新田恵海"   , "r":243, "g":133, "b":  0, "style": "button-hexa"},
 	"Okuma"    : {"name": "大熊和奏"   , "r":178, "g":255, "b":221, "style": "button-hexa"},
 	"Saito"    : {"name": "斉藤朱夏"   , "r":102, "g":192, "b":255, "style": "button-hexa"},
-
-	"Sakurai"  : {"name": "櫻井陽菜"   , "r":162, "g":215, "b":221, "style": "button-hexa"},
-	"Hayama"   : {"name": "葉山風花"   , "r":250, "g":215, "b":100, "style": "button-hexa"},
-
 	"Yumi"     : {"name": "ゆみ先生"   , "r":128, "g":128, "b":128, "style": "button-hexa"},
 	"SukiSukiClub" : {"name": "好き好きクラブの皆さん", "r":128, "g":128, "b":128, "style": "button-hexa"},
 
@@ -55,17 +54,47 @@ const tagData = {
 	"s3" : {"name": "準備室",     "r":160, "g":128, "b":128, "style": "button-square"},
 	"s4" : {"name": "視聴覚室",   "r":160, "g":128, "b":128, "style": "button-square"},
 	"s5" : {"name": "進路相談室", "r":160, "g":128, "b":128, "style": "button-square"},
+	"s6" : {"name": "きまっし",   "r":160, "g":128, "b":128, "style": "button-square"},
 };
 
 const filterTargets = [
-	{"name": "シーズン1 みらくら待機室ラジオ",  "condition": "tag:s1"},
+	{"name": "debug", "condition": "after:2024-02-20 max:10"},
+	{"name": "シーズン1 みらくら待機室ラジオ", "condition": "tag:s1"},
 	{"name": "シーズン2 みらくら補習室ラジオ", "condition": "tag:s2"},
 	{"name": "シーズン3 みらくら準備室ラジオ", "condition": "tag:s3"},
 	{"name": "シーズン4 みらくら視聴覚室ラジオ", "condition": "tag:s4"},
 	{"name": "シーズン5 みらくら進路相談室ラジオ", "condition": "tag:s5"},
+	{"name": "シーズン6 きまっし！みらぱの部屋ラジオ", "condition": "tag:s6"},
 ];
+
+const LLSPLayoutTemplate = (entry) => {
+    const isDescription = ('desc' in entry && entry['desc'] !== "");
+    const isMemo = ('memo' in entry && entry['memo'] !== "");
+
+    const videoLength = (typeof entry['length'] === 'number' && entry['length'] >= 0 ? `<span class="length pc-only">動画：${convertSecondsToHHMMSS(entry['length'])}</span>` : '');
+    const videoContent = ('tube' in entry && entry['tube'] ? `${LLSProcessor.getYouTubeLink(entry['tube'], entry['title'])}${videoLength}` : '');
+    const descContent =
+        (isDescription ? `<div class="desc">${convertMarkup(entry['desc'])}</div>` : '')
+        + (isMemo ? convertMarkup(entry['memo']) : '');
+
+    const tagsContent = entry['tags'].map(tag => {
+        if (tag in tagData) { return createStyledTag(tagData[tag], tag); }
+    }).join('')
+	
+	return `<article>
+		<div class="article-box-date">${entry['date']}</div>
+		<div class="article-box-title">${entry['title']}</div>
+		<div class="article-box-tube">${videoContent}</div>
+		<div class="article-box-desc">${descContent}</div>
+		<div class="article-box-tags">${tagsContent}</div>
+	</article>`;
+}
+
+const initialize = () => {
+	LLSProcessor.initialize("VL-Filter", "VL-Result");
+}
 --></script>
-<script src="data/loader.js" data-src="data/hasu-radio.json,data/common-library.js,data/videolist.js"></script>
+<script src="data/loader.js" data-src="data/hasu-radio.json,data/common-library.js,module/LLS-processor.js"></script>
 </head>
 <body class="left">
 <main>
@@ -111,6 +140,12 @@ const filterTargets = [
 		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 		<div class="history-container">
 			<details open>
+				<summary><span class="date">2025/XX/XX</span> - </summary>
+				<div>
+					<span class="icon-new"></span>シーズン6「きまっし！みらぱの部屋ラジオ」を追加
+				</div>
+			</details>
+			<details>
 				<summary class="important"><span class="date">2025/01/22</span> - 公開</summary>
 				<div>
 					<span class="icon-new"></span>公開
