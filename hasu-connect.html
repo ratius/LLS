@@ -24,7 +24,7 @@
 <title>リンクラ スクールアイドルコネクトまとめ | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 <link rel="stylesheet" href="main_gen2.css">
-<link rel="stylesheet" href="data/videolist.css">
+<link rel="stylesheet" href="./data/videolist.css">
 <script><!--
 const tagData = {
 	"meets"     : {"name": "With×MEETS" , "r":160, "g":112, "b": 96, "style": "button-square"},
@@ -73,8 +73,61 @@ const filterTargets = [
 	{"name": "配信場所：小鈴の部屋",   "condition": "tag:room-Kosuzu"},
 	{"name": "配信場所：姫芽の部屋",   "condition": "tag:room-Hime"}
 ];
+
+const LLSPLayoutTemplate = (entry) => {
+    const isCancelled = (entry['tags'].find((e) => e === 'cancelled') ? 'cancelled' : '');
+
+    const videoLengthContent = (typeof entry['length'] === 'number' ?
+        `<span class="length pc-only">動画：${LLSProcessor.convertSecondsToHHMMSS(entry['length'])}</span>`
+        :
+        (Array.isArray(entry['length']) ?
+            (entry['length'].length >= 0 ?
+                `<span class="length pc-only">動画：${LLSProcessor.convertSecondsToHHMMSS(entry['length'][0])}</span>`
+                : '')
+            + (entry['length'].length > 1 ?
+                `<span class="length pc-only">AFTER：${LLSProcessor.convertSecondsToHHMMSS(entry['length'][1])}</span>`
+                : '')
+            : '')
+    );
+
+    const videoContent =
+        ('tube' in entry && entry['tube'] ? `${LLSProcessor.getYouTubeLink(entry['tube'], entry['title'])}${videoLengthContent}`
+            : '');
+    const isDescription = ('desc' in entry && entry['desc'] !== "");
+    const isMemo = ('memo' in entry && entry['memo'] !== "");
+    const descContent =
+        (isDescription ? `<div class="desc">${convertMarkup(entry['desc'])}</div>` : '')
+        + (isMemo ? convertMarkup(entry['memo']) : '');
+
+    const setlistContent = ('setlist' in entry && entry['setlist'] !== "" ?
+        `<details class="setlist">
+		<summary class="setlist-summary">${'setlistAlt' in entry ? entry['setlistAlt'] : "セットリスト"} (クリックで展開)</summary>
+		<ol class="setlist-ol">
+			${entry['setlist'].map(program =>
+            `<li>${(program === 'MC' ? `<i class="setlist-mc">MC</i>` : program)}</li>`).join('')}
+		</ol>
+	</details>`
+        : '');
+
+    const tagsContent = entry['tags'].map(tag => {
+        if (tag in tagData) { return createStyledTag(tagData[tag], tag); }
+    }).join('')
+	
+	return `<article class="${isCancelled}">
+		<div class="article-box-date">${entry['date']}</div>
+		<div class="article-box-title ${isCancelled}">${entry['title']}</div>
+		<div class="article-box-tube ${isCancelled}">${videoContent}</div>
+		<div class="article-box-desc">${descContent + setlistContent}</div>
+		<div class="article-box-tags">${tagsContent}</div>
+	</article>`;
+}
+
+const initialize = () => {
+	LLSProcessor.initialize("VL-Filter", "VL-Result");
+}
+
 --></script>
-<script src="data/loader.js" data-src="data/hasu-connect.json,data/common-library.js,data/videolist.js"></script>
+<script src="data/loader.js" data-src="data/hasu-connect.json,data/common-library.js,module/LLS-processor.js"></script>
 </head>
 <body class="left">
 <main>
