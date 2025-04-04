@@ -58,18 +58,18 @@ const tagData = {
 };
 
 const filterTargets = [
-	{"name": "debug", "condition": "after:2024-02-20 max:10"},
+	{"name": "debug", "condition": "after:2024-03-01 max:10"},
 	{"name": "シーズン1 みらくら待機室ラジオ", "condition": "tag:s1"},
 	{"name": "シーズン2 みらくら補習室ラジオ", "condition": "tag:s2"},
 	{"name": "シーズン3 みらくら準備室ラジオ", "condition": "tag:s3"},
 	{"name": "シーズン4 みらくら視聴覚室ラジオ", "condition": "tag:s4"},
 	{"name": "シーズン5 みらくら進路相談室ラジオ", "condition": "tag:s5"},
-	{"name": "シーズン6 きまっし！みらぱの部屋ラジオ", "condition": "tag:s6"},
+	{"name": "シーズン6 きまっし!!みらぱ！の部屋ラジオ", "condition": "tag:s6"},
 ];
 
 const LLSPLayoutTemplate = (entry) => {
-    const isDescription = ('desc' in entry && entry['desc'] !== "");
-    const isMemo = ('memo' in entry && entry['memo'] !== "");
+    const isDescription = entry?.['desc'] && typeof entry['desc'] == 'string';
+    const isMemo = entry?.['memo'] && typeof entry['memo'] == 'string';
 
     const videoLength = (typeof entry['length'] === 'number' && entry['length'] >= 0 ? `<span class="length pc-only">動画：${convertSecondsToHHMMSS(entry['length'])}</span>` : '');
     const videoContent = ('tube' in entry && entry['tube'] ? `${LLSProcessor.getYouTubeLink(entry['tube'], entry['title'])}${videoLength}` : '');
@@ -88,10 +88,6 @@ const LLSPLayoutTemplate = (entry) => {
 		<div class="article-box-desc">${descContent}</div>
 		<div class="article-box-tags">${tagsContent}</div>
 	</article>`;
-}
-
-const initialize = () => {
-	LLSProcessor.initialize("VL-Filter", "VL-Result");
 }
 --></script>
 <script src="data/loader.js" data-src="data/hasu-radio.json,data/common-library.js,module/LLS-processor.js"></script>
@@ -123,12 +119,12 @@ const initialize = () => {
 		<p>下部のプルダウンメニューから絞り込み条件を選択すると、条件に合致する配信の情報が表示されます。
 		</p>
 		<div id="Filter-Container">
-			<label for="VL-Filter">絞り込み</label>
-			<select id="VL-Filter">
+			<label for="LLSP-Filter">絞り込み</label>
+			<select id="LLSP-Filter">
 				<option value="">(期間を選択)</option>
 			</select>
 		</div>
-		<div id="VL-Result" class="output-box output-box-default">
+		<div id="LLSP-Result" class="output-box output-box-default">
 			このページでは、情報を表示するためにJavaScriptを使用します。<br>
 			いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
 			お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
