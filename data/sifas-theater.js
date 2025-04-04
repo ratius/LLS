@@ -151,7 +151,7 @@ function DrawStoryList(conditions){
 			filteredData = filteredData.filter( connect => connect.tags && connect.tags.includes(tag));
 		}
 	});
-	if(filteredData === []){ return false;}
+	if(filteredData.length === 0){ return false;}
 	
 	document.getElementById("StoryContainer").innerHTML = filteredData.map( story => {
 		const hasStory = ('text' in story && story["text"] !== "");
@@ -199,16 +199,17 @@ function MakeModal(id){
 	
 	//本文の置換
 	let noteNumber = 1;
-	result.text = result.text.replace(pattern, function(match, s1, s2){
-		return `<span class="underline">${s2}<sup style="color:purple">*${noteNumber}</sup></span>{{notenum:${noteNumber++}}}`
-	}).split('\n');
+	const processedText = result.text.replace(pattern, function(match, s1, s2) {
+        return `<span class="underline">${s2}<sup style="color:purple">*${noteNumber}</sup></span>{{notenum:${noteNumber++}}}`
+    });
+    const textLines = processedText.split('\n');
 	
 	//本文の描画
-	document.getElementById("Modal-Text").innerHTML = result.text.map( (text, index) => {
+	document.getElementById("Modal-Text").innerHTML = textLines.map( (text, index) => {
 		text = text.split('\t');
 		
 		let currentNote = [];
-		text = text.map(x => {
+        const processedLine = text.map(x => {
 			x = x.replace(/\{\{notenum:(\d+)\}\}/g, function(match, noteIndex){
 				if(match) { currentNote.push(`<span>*${noteIndex}： ${noteList[parseInt(noteIndex, 10)-1]}</span>`);}
 				return '';
@@ -219,7 +220,7 @@ function MakeModal(id){
 		const CharacterName = (isNaN(text[0]) ? text[0] : DrawCharName(result.tags[parseInt(text[0],10)]));
 		
 		return CharacterName
-		+ (text.length >=2 ? `<p>${text[1]}</p>` : '')
+		+ (processedLine.length >= 2 ? `<p>${processedLine[1]}</p>` : '')
 		+ (currentNote.length ? `<p class="note">${currentNote.join('<br>')}</p>` : '')
 		+ (index === result.text.length-1 ? '' : '<hr>');
 	}).join("");

@@ -169,32 +169,37 @@ function MakeModal(id){
 	//タイトルを表示
 	document.getElementById("Modal-Title").innerHTML = result.title;
 	
-	//{{note:1:2}}の部分を注釈にする
+	//注釈リストの作成
 	let noteList = [];
 	const pattern = new RegExp(/<span class="_pre-note" data-note="(.+)">(.+)<\/span>/g);
 	while ((match = pattern.exec(result.text)) !== null) {
 		noteList.push(match[1]);
 	}
+
 	//本文の置換
 	let noteNumber = 1;
-	const TextLog = result.text.replace(pattern, function(match, s1, s2){
-		return `<span class="underline">${s2}<sup style="color:purple">*${noteNumber}</sup></span>{{notenum:${noteNumber++}}}`
-	}).split('\n');
+	const processedText = result.text.replace(pattern, function(match, s1, s2) {
+        return `<span class="underline">${s2}<sup style="color:purple">*${noteNumber}</sup></span>{{notenum:${noteNumber++}}}`
+    });
+    const textLines = processedText.split('\n');
 	
 	//本文の描画
-	document.getElementById("Modal-Text").innerHTML = TextLog.map( (text, index) => {
+	document.getElementById("Modal-Text").innerHTML = textLines.map( (text, index) => {
 		text = text.split('\t');
 		
 		let currentNote = [];
-		text[1] = text[1].replace(/\{\{notenum:(\d+)\}\}/g, function(match, noteIndex){
-			if(match) { currentNote.push(`<span>*${noteIndex}： ${noteList[parseInt(noteIndex, 10)-1]}</span>`);}
-			return ``;
+        const processedLine = text.map(x => {
+			x = x.replace(/\{\{notenum:(\d+)\}\}/g, function(match, noteIndex){
+				if(match) { currentNote.push(`<span>*${noteIndex}： ${noteList[parseInt(noteIndex, 10)-1]}</span>`);}
+				return '';
+			});
+			return x;
 		});
 		
 		const CharacterName = (isNaN(text[0]) ? text[0] : DrawCharName(result.tags[parseInt(text[0],10)]));
 		
 		return CharacterName
-		+ (text.length >=2 ? `<p>${text[1]}</p>` : '')
+		+ (processedLine.length >= 2 ? `<p>${processedLine[1]}</p>` : '')
 		+ (currentNote.length ? `<p class="note">${currentNote.join('<br>')}</p>` : '')
 		+ (index === result.text.length-1 ? '' : '<hr>');
 	}).join("");
