@@ -5,7 +5,7 @@
 	font-weight: bold;
 	margin-bottom: 10px;
 }
-#VL-Filter {
+#VL-Filter, #LLSP-Filter {
 	max-width: 100%;
 	border: solid 2px #b9a;
 	font-size: x-large;
