@@ -13,14 +13,6 @@
 
 //■動画一覧の出力
 const makeVideoList = (dbPath, conditions = '') => {
-	//秒数を「h時間mm分ss秒」形式に変換する関数
-	const convertSecondsToHHMMSS = (len) => {
-		len = Math.floor(parseInt(len, 10));
-		if (isNaN(len) || len < 0) { return '不明'; }
-		if (len < 60) { return `${len}秒`; }
-		if (len < 3600) { return `${Math.floor(len / 60)}分${('0' + (len % 60)).slice(-2)}秒`; }
-		return `${Math.floor(len / 3600)}時間${('0' + Math.floor((len % 3600) / 60)).slice(-2)}分${('0' + (len % 60)).slice(-2)}秒`;
-	};
 	if (conditions === '') { return false; }
 
 	//条件フィルターを行う。2035年以降は間違いなく入力ミスなので除外

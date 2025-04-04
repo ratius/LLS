@@ -53,6 +53,16 @@ const WriteFaceN = (x, y) => {
 		}px"></div>`;
 }
 
+
+//■秒数を「h時間mm分ss秒」形式に変換する関数
+const convertSecondsToHHMMSS = (len) => {
+	len = Math.floor(parseInt(len, 10));
+	if (isNaN(len) || len < 0) { return '不明'; }
+	if (len < 60) { return `${len}秒`; }
+	if (len < 3600) { return `${Math.floor(len / 60)}分${('0' + (len % 60)).slice(-2)}秒`; }
+	return `${Math.floor(len / 3600)}時間${('0' + Math.floor((len % 3600) / 60)).slice(-2)}分${('0' + (len % 60)).slice(-2)}秒`;
+};
+
 //■ {{S::文字列}} で作成されたネタバレの表示用
 const revealSpoiler = (elm) => {
 	if (elm.classList.contains('spoiler')) {
@@ -105,8 +115,8 @@ const convertMarkup = (str) => {
 				break;
 
 			case 'ul': // 箇条書きを作成 {{UL::要素1::要素2:: … }}
-			case 'ol': 
-				const listElements = strInParentheses.slice(1); 
+			case 'ol':
+				const listElements = strInParentheses.slice(1);
 				strConverted = `<${strInParentheses[0]}>`
 					+ listElements.map((e) => `<li>${e}</li>`).join('')
 					+ `</${strInParentheses[0]}>`;
@@ -142,7 +152,7 @@ const convertMarkup = (str) => {
 			//	break;
 
 			case 'null': // 注釈。デバッグモードでのみ表示される
-				strConverted = (isDebugMode ? `<span style="color: #76a; font-style:italic;">(${strInParentheses[1]})</span>`: '')
+				strConverted = (isDebugMode ? `<span style="color: #76a; font-style:italic;">(${strInParentheses[1]})</span>` : '')
 				break;
 
 			default: // 該当しない場合

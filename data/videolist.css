@@ -62,16 +62,16 @@ article:not(.cancelled) .article-box-title {
 	border: 1px solid #bbb;
 	background-color: #eee;
 }
-.setlist { /*セットリスト*/
-	width: min(300px, 100%);
+.article-box-desc details { /*折りたたみリスト*/
 	border: solid 1px #9ce;
+	margin: 5px auto;
 }
-.setlist summary {
+.article-box-desc summary {
 	margin: 0;
 	padding: 2px 6px;
 	background-color: #d0f0ff;
 }
-.setlist ol, .setlist ul {
+.article-box-desc summary ol, .article-box-desc summary ul {
 	margin: 5px 0;
 	padding-left: 30px;
 }
