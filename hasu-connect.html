@@ -49,7 +49,7 @@ const tagData = {
 };
 
 const filterTargets = [
-	{"name": "debug", "condition": "after:2024-03-10 max:10"},
+	{"name": "debug", "condition": "after:2024-04-01 max:10"},
 	{"name": "103期 上半期（2023年4月 - 2023年9月）",  "condition": "after:2023-04-01 before:2023-09-30"},
 	{"name": "103期 下半期（2023年10月 - 2024年3月）", "condition": "after:2023-10-01 before:2024-03-31"},
 	{"name": "104期 上半期（2024年4月 - 2024年9月）",  "condition": "after:2024-04-01 before:2024-09-30"},
@@ -75,11 +75,9 @@ const filterTargets = [
 ];
 
 const LLSPLayoutTemplate = (entry) => {
-    const isDescription = entry?.['desc'] && typeof entry['desc'] == 'string';
-    const isMemo = entry?.['memo'] && typeof entry['memo'] == 'string';
     const isCancelled = (entry['tags'].includes('cancelled') ? 'cancelled' : '');
 
-    const videoLengthContent = (typeof entry['length'] === 'number' ?
+    const videoLength = (typeof entry['length'] === 'number' ?
         `<span class="length pc-only">本編：${convertSecondsToHHMMSS(entry['length'])}</span>`
         :
         (Array.isArray(entry['length']) ?
@@ -91,38 +89,30 @@ const LLSPLayoutTemplate = (entry) => {
                 : '')
             : '')
     );
-
-    const videoContent =　('tube' in entry && entry['tube'] ? `${LLSProcessor.getYouTubeLink(entry['tube'], entry['title'])}${videoLengthContent}` : '');
-    const descContent =
-        (isDescription ? `<div class="desc">${convertMarkup(entry['desc'])}</div>` : '')
-        + (isMemo ? convertMarkup(entry['memo']) : '');
-
-    const setlistContent = ('setlist' in entry && entry['setlist'] !== "" ?
+    const videoContent = ('tube' in entry && entry['tube'] ? `${LLSProcessor.getYouTubeLink(entry['tube'], entry['title'])}${videoLength}` : '');
+    const descContent = (typeof entry['desc'] === 'string' && entry['desc'] !== "" ? `<div class="desc">${convertMarkup(entry['desc'])}</div>` : '');
+	const memoContent = (typeof entry['memo'] === 'string' && entry['memo'] !== "" ? convertMarkup(entry['memo']) : '');
+	
+    const setlistContent = (typeof entry['setlist'] === 'object' && entry['setlist'].length ?
         `<details class="setlist">
 		<summary class="setlist-summary">${'setlistAlt' in entry ? entry['setlistAlt'] : "セットリスト"} (クリックで展開)</summary>
 		<ol class="setlist-ol">
 			${entry['setlist'].map(program =>
-            `<li>${(program === 'MC' ? `<i class="setlist-mc">MC</i>` : program)}</li>`).join('')}
+            `<li>${(program.startsWith("MC") ? `<i class="setlist-mc">${program}</i>` : program)}</li>`).join('')}
 		</ol>
 	</details>`
         : '');
 
-    const tagsContent = entry['tags'].map(tag => {
-        if (tag in tagData) { return createStyledTag(tagData[tag], tag); }
-    }).join('')
+	const tagsContent = entry['tags'].map(tag => (tag in tagData ? createStyledTag(tagData[tag], tag) : '')).join('');
 	
 	return `<article class="${isCancelled}">
 		<div class="article-box-date">${entry['date']}</div>
 		<div class="article-box-title ${isCancelled}">${entry['title']}</div>
 		<div class="article-box-tube ${isCancelled}">${videoContent}</div>
-		<div class="article-box-desc">${descContent + setlistContent}</div>
+		<div class="article-box-desc">${descContent + memoContent + setlistContent}</div>
 		<div class="article-box-tags">${tagsContent}</div>
 	</article>`;
 }
-function initialize() {
-	LLSProcessor.initialize("LLSP-Filter", "LLSP-Result");
-}
-
 --></script>
 <script src="data/loader.js" data-src="data/hasu-connect.json,data/common-library.js,module/LLS-processor.js"></script>
 </head>

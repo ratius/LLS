@@ -58,7 +58,7 @@ const tagData = {
 };
 
 const filterTargets = [
-	{"name": "debug", "condition": "after:2024-03-01 max:10"},
+	{"name": "debug", "condition": "after:2024-03-11 max:10"},
 	{"name": "シーズン1 みらくら待機室ラジオ", "condition": "tag:s1"},
 	{"name": "シーズン2 みらくら補習室ラジオ", "condition": "tag:s2"},
 	{"name": "シーズン3 みらくら準備室ラジオ", "condition": "tag:s3"},
@@ -68,24 +68,18 @@ const filterTargets = [
 ];
 
 const LLSPLayoutTemplate = (entry) => {
-    const isDescription = entry?.['desc'] && typeof entry['desc'] == 'string';
-    const isMemo = entry?.['memo'] && typeof entry['memo'] == 'string';
-
     const videoLength = (typeof entry['length'] === 'number' && entry['length'] >= 0 ? `<span class="length pc-only">動画：${convertSecondsToHHMMSS(entry['length'])}</span>` : '');
     const videoContent = ('tube' in entry && entry['tube'] ? `${LLSProcessor.getYouTubeLink(entry['tube'], entry['title'])}${videoLength}` : '');
-    const descContent =
-        (isDescription ? `<div class="desc">${convertMarkup(entry['desc'])}</div>` : '')
-        + (isMemo ? convertMarkup(entry['memo']) : '');
-
-    const tagsContent = entry['tags'].map(tag => {
-        if (tag in tagData) { return createStyledTag(tagData[tag], tag); }
-    }).join('')
+    const descContent = (typeof entry['desc'] === 'string' && entry['desc'] !== "" ? `<div class="desc">${convertMarkup(entry['desc'])}</div>` : '');
+	const memoContent = (typeof entry['memo'] === 'string' && entry['memo'] !== "" ? convertMarkup(entry['memo']) : '');
+	const progContent = (typeof entry['program'] == 'object' && entry['program'].length ? convertMarkup(`{{EL::配信内容（クリックで展開）::{{UL::${entry['program'].join("::")}}}}}`) : '');
+    const tagsContent = entry['tags'].map(tag => (tag in tagData ? createStyledTag(tagData[tag], tag) : '')).join('');
 	
 	return `<article>
 		<div class="article-box-date">${entry['date']}</div>
 		<div class="article-box-title">${entry['title']}</div>
 		<div class="article-box-tube">${videoContent}</div>
-		<div class="article-box-desc">${descContent}</div>
+		<div class="article-box-desc">${descContent + memoContent + progContent}</div>
 		<div class="article-box-tags">${tagsContent}</div>
 	</article>`;
 }
@@ -136,7 +130,7 @@ const LLSPLayoutTemplate = (entry) => {
 		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 		<div class="history-container">
 			<details open>
-				<summary><span class="date">2025/XX/XX</span> - </summary>
+				<summary><span class="date">2025/05/04</span> - </summary>
 				<div>
 					<span class="icon-new"></span>シーズン6「きまっし！みらぱの部屋ラジオ」を追加
 				</div>
