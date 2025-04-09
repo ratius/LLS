@@ -139,6 +139,13 @@ const convertMarkup = (str) => {
 				}
 				break;
 
+			case 'yt': // YouTube動画のURLを取得 {{YT::動画ID::頭出し秒数}}
+				const videoId = strInParentheses[1];
+				if (strInParentheses.length >= 2) {
+					strConverted = `https://www.youtube.com/watch?v=${videoId}${strInParentheses.length >= 3 ? `&t=${strInParentheses[2]}s` : ""}`
+				}
+				break;
+
 			//case 'pc': // PC版限定 {{PC::文字列}}
 			//	if(strInParentheses.length >= 2){
 			//		strConverted =  `<span class="pc-only">${strInParentheses[1]}</span>`;
