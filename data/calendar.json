@@ -140,6 +140,8 @@
 	{"name": "百生吟子",   "birth": "1020", "type": "C", "group": "hasu"},
 	{"name": "徒町小鈴",   "birth": "0228", "type": "C", "group": "hasu"},
 	{"name": "安養寺姫芽", "birth": "0924", "type": "C", "group": "hasu"},
+	{"name": "桂城泉",    "birth": "1201", "type": "C", "group": "hasu"},
+	{"name": "セラス・柳田・リリエンフェルト", "birth": "0626", "type": "C", "group": "hasu"},
 
 	{"name": "楡井希美",   "birth": "0521", "type": "V", "group": "hasu", "tips": "蓮ノ空 日野下花帆 役"},
 	{"name": "花宮初奈",   "birth": "1024", "type": "V", "group": "hasu", "tips": "蓮ノ空 乙宗梢 役"},
@@ -150,8 +152,8 @@
 	{"name": "櫻井陽菜",   "birth": "0917", "type": "V", "group": "hasu", "tips": "蓮ノ空 百生吟子 役"},
 	{"name": "葉山風花",   "birth": "0128", "type": "V", "group": "hasu", "tips": "蓮ノ空 徒町小鈴 役"},
 	{"name": "来栖りん",   "birth": "1108", "type": "V", "group": "hasu", "tips": "蓮ノ空 安養寺姫芽 役"},
-	{"name": "進藤あまね", "birth": "0420", "type": "V", "group": "hasu", "tips": "Edel Note 桂城泉 役", "rival": true},
-	{"name": "三宅美羽",   "birth": "1214", "type": "V", "group": "hasu", "tips": "Edel Note セラス・柳田・リリエンフェルト 役", "rival": true},
+	{"name": "進藤あまね", "birth": "0420", "type": "V", "group": "hasu", "tips": "蓮ノ空 桂城泉 役"},
+	{"name": "三宅美羽",   "birth": "1214", "type": "V", "group": "hasu", "tips": "蓮ノ空 セラス・柳田・リリエンフェルト 役"},
 
 	{"name": "一之瀬マリカ",   "birth": "0420", "type": "C", "group": "llsif"},
 	{"name": "永山みなみ",     "birth": "0830", "type": "C", "group": "llsif"},
