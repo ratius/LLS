@@ -55,6 +55,8 @@
 			"Ginko"    : {"r":"162", "g":"215", "b":"221"},
 			"Kosuzu"   : {"r":"250", "g":"215", "b":"100"},
 			"Hime"     : {"r":"157", "g":"141", "b":"226"},
+			"Ceras"    : {"r":"245", "g":"100", "b":" 85"},
+			"Izumi"    : {"r": "30", "g":"190", "b":"205"},
 			"RurikaM"  : {"r":"115", "g":"184", "b":"226"},
 			"YuzuhaM"  : {"r":"239", "g":"239", "b":"239"},
 			"YukinoM"  : {"r":"245", "g":"130", "b":" 32"},
@@ -150,7 +152,9 @@
 			"Megumi"   : {"r":"200", "g":"194", "b":"198"},
 			"Ginko"    : {"r":"162", "g":"215", "b":"221"},
 			"Kosuzu"   : {"r":"250", "g":"215", "b":"100"},
-			"Hime"     : {"r":"157", "g":"141", "b":"226"}
+			"Hime"     : {"r":"157", "g":"141", "b":"226"},
+			"Ceras"    : {"r":"245", "g":"100", "b":" 85"},
+			"Izumi"    : {"r": "30", "g":"190", "b":"205"}
 		}
 	},
 	{
@@ -272,7 +276,7 @@
 	},
 	{
 		"name": "スクフェスAC\n(公式サイト)",
-		"ref": "メンバー - ラブライブ！スクールアイドルフェスティバル ～after school ACTIVITY～ Next Stage 公式サイト",
+		"ref": "メンバー - ラブライブ！スクールアイドルフェスティバル 〜after school ACTIVITY〜 Next Stage 公式サイト",
 		"url": "https://www.jp.square-enix.com/lovelive-sifacns/member.html",
 		"color": {
 			"Honoka"   : {"r":"243", "g":"150", "b":" 47"},
@@ -521,7 +525,7 @@
 	},
 	{
 		"name": "カバーガール\n総選挙",
-		"ref": "『ラブライブ！サンシャイン!!』読者投票企画 【第1回カバーガール総選挙 ～あなたが選ぶAqoursデート♡～】特設ページ",
+		"ref": "『ラブライブ！サンシャイン!!』読者投票企画 【第1回カバーガール総選挙 〜あなたが選ぶAqoursデート♡〜】特設ページ",
 		"url": "http://gs.dengeki.com/serial_tohyo/",
 		"color": {
 			"Chika"    : {"r":"248", "g":"201", "b":"153"},
@@ -832,7 +836,7 @@
 	{
 		"name": "3rdライブ\nロゴ",
 		"group": "虹ヶ咲",
-		"ref": "3rd Live! School Idol Festival ～夢の始まり～",
+		"ref": "3rd Live! School Idol Festival 〜夢の始まり〜",
 		"url": "https://www.lovelive-anime.jp/nijigasaki/sp_3rdlive.php",
 		"color": {
 			"Ayumu"    : {"r":"242", "g":"160", "b":"185"},
@@ -870,7 +874,7 @@
 	{
 		"name": "4thライブ\nロゴ",
 		"group": "虹ヶ咲",
-		"ref": "ラブライブ！虹ヶ咲学園スクールアイドル同好会 4th Live! ～Love the Life We Live～",
+		"ref": "ラブライブ！虹ヶ咲学園スクールアイドル同好会 4th Live! 〜Love the Life We Live〜",
 		"url": "https://www.lovelive-anime.jp/nijigasaki/sp_4thlive.php",
 		"color": {
 			"Ayumu"    : {"r":"234", "g":" 96", "b":"158"},
@@ -925,7 +929,7 @@
 	{
 		"name": "1stライブ\nロゴ",
 		"group": "Liella!",
-		"ref": "ラブライブ！スーパースター!! Liella! First LoveLive! Tour ～Starlines～",
+		"ref": "ラブライブ！スーパースター!! Liella! First LoveLive! Tour 〜Starlines〜",
 		"url": "https://www.lovelive-anime.jp/yuigaoka/live/sp_1stlive/",
 		"color": {
 			"Kanon"    : {"r":"241", "g":"140", "b":" 67"},
@@ -938,7 +942,7 @@
 	{
 		"name": "2ndライブ\nロゴ(濃)",
 		"group": "Liella!",
-		"ref": "ラブライブ！スーパースター!! Liella! 2nd LoveLive! ～What a Wonderful Dream!!～",
+		"ref": "ラブライブ！スーパースター!! Liella! 2nd LoveLive! 〜What a Wonderful Dream!!〜",
 		"url": "https://www.lovelive-anime.jp/yuigaoka/live/sp_2ndlive/",
 		"color": {
 			"Kanon"    : {"r":"239", "g":"130", "b":"  0"},
@@ -951,7 +955,7 @@
 	{
 		"name": "2ndライブ\nロゴ(薄)",
 		"group": "Liella!",
-		"ref": "ラブライブ！スーパースター!! Liella! 2nd LoveLive! ～What a Wonderful Dream!!～",
+		"ref": "ラブライブ！スーパースター!! Liella! 2nd LoveLive! 〜What a Wonderful Dream!!〜",
 		"url": "https://www.lovelive-anime.jp/yuigaoka/live/sp_2ndlive/",
 		"color": {
 			"Kanon"    : {"r":"242", "g":"150", "b":"  0"},
@@ -964,7 +968,7 @@
 	{
 		"name": "3rdライブ\nロゴ",
 		"group": "Liella!",
-		"ref": "ラブライブ！スーパースター!! Liella! 3rd LoveLive! Tour ～WE WILL!!～",
+		"ref": "ラブライブ！スーパースター!! Liella! 3rd LoveLive! Tour 〜WE WILL!!〜",
 		"url": "https://www.lovelive-anime.jp/yuigaoka/live/live_detail.php?p=3rdlive",
 		"color": {
 			"Kanon"    : {"r":"250", "g":"205", "b":"137"},
@@ -982,14 +986,14 @@
 	{
 		"name": "4thライブ\nロゴ",
 		"group": "Liella!",
-		"ref": "ラブライブ！スーパースター!! Liella! 4th LoveLive! Tour ～brand new Sparkle～",
+		"ref": "ラブライブ！スーパースター!! Liella! 4th LoveLive! Tour 〜brand new Sparkle〜",
 		"url": "https://www.lovelive-anime.jp/yuigaoka/live/live_detail.php?p=4thlive",
 		"reason": "画像のイメージカラー部分にグラデーションがかかっている"
 	},
 	{
 		"name": "5thライブ\nロゴ",
 		"group": "Liella!",
-		"ref": "ラブライブ！スーパースター!! Liella! 5th LoveLive! ～Twinkle Triangle～",
+		"ref": "ラブライブ！スーパースター!! Liella! 5th LoveLive! 〜Twinkle Triangle〜",
 		"url": "https://www.lovelive-anime.jp/yuigaoka/live/live_detail.php?p=5thlive",
 		"color": {
 			"Kanon"    : {"r":"238", "g":"139", "b":" 29"},
@@ -1016,7 +1020,7 @@
 	{
 		"name": "1stライブ\nロゴ",
 		"group": "蓮ノ空",
-		"ref": "ラブライブ！蓮ノ空女学院スクールアイドルクラブ 1st Live Tour ～RUN！CAN！FUN！～",
+		"ref": "ラブライブ！蓮ノ空女学院スクールアイドルクラブ 1st Live Tour 〜RUN！CAN！FUN！〜",
 		"url": "https://lovelive-anime.jp/hasunosora/live-event/live_detail.php?p=RCF",
 		"color": {
 			"Kaho"     : {"r":"255", "g":"191", "b":"  0"},
@@ -1044,7 +1048,7 @@
 	{
 		"name": "Fes×ReC：LIVEロゴ",
 		"group": "蓮ノ空",
-		"ref": "ラブライブ！蓮ノ空女学院スクールアイドルクラブ 103期Fes×ReC：LIVE ～first crossing～",
+		"ref": "ラブライブ！蓮ノ空女学院スクールアイドルクラブ 103期Fes×ReC：LIVE 〜first crossing〜",
 		"url": "https://www.lovelive-anime.jp/hasunosora/live-event/live_detail.php?p=FRL",
 		"reason": "ロゴに各キャラクターのイメージカラーが含まれていない"
 	},
@@ -1079,5 +1083,12 @@
 			"Kosuzu"   : {"r":"251", "g":"214", "b":" 46"},
 			"Hime"     : {"r":"174", "g":"160", "b":"231"}
 		}
+	},
+	{
+		"name": "4thライブ\nロゴ",
+		"group": "蓮ノ空",
+		"ref": "ラブライブ！蓮ノ空女学院スクールアイドルクラブ 4th Live Dream ～Bloom, The Dream Believers～",
+		"url": "https://www.lovelive-anime.jp/hasunosora/live-event/live_detail.php?p=BTDB",
+		"reason": "画像が不可逆圧縮であり、正しい色を抽出できない"
 	}
 ]
