@@ -44,12 +44,16 @@ const tagData = {
 	"Ginko"   : {"name": "吟子"   , "r":162, "g":215, "b":221, "style": "button-round"},
 	"Kosuzu"  : {"name": "小鈴"   , "r":250, "g":215, "b":100, "style": "button-round"},
 	"Hime"    : {"name": "姫芽"   , "r":157, "g":141, "b":226, "style": "button-round"},
-	"Izumi"   : {"name": "泉"     , "r": 64, "g": 64, "b": 64, "style": "button-hexa"},
-	"Ceras"   : {"name": "セラス" , "r": 64, "g": 64, "b": 64, "style": "button-hexa"}
+	"Ceras"   : {"name": "セラス" , "r":245, "g":100, "b": 85, "style": "button-round"},
+	"Izumi"   : {"name": "泉"     , "r": 30, "g":190, "b":205, "style": "button-round"},
+
+	"Izumi_Guest" : {"name": "泉"     , "r": 64, "g": 64, "b": 64, "style": "button-hexa"}, //泉 (ライバル)
+	"Ceras_Guest" : {"name": "セラス" , "r": 64, "g": 64, "b": 64, "style": "button-hexa"} //セラス (ライバル)
 };
 
 const filterTargets = [
-	{"name": "debug", "condition": "after:2024-04-01 max:10"},
+	{"name": "debug", "condition": "after:2024-04-25 max:10"},
+	{"name": "debug-配信場所なし", "condition": "after:2025-01-01 tag:meets extag:cancelled extag:room-club extag:room-lesson extag:room-Kaho extag:room-Sayaka extag:room-Kozue extag:room-Tsuzuri extag:room-Rurino extag:room-Megumi extag:room-Ginko extag:room-Kosuzu extag:room-Hime"},
 	{"name": "103期 上半期（2023年4月 - 2023年9月）",  "condition": "after:2023-04-01 before:2023-09-30"},
 	{"name": "103期 下半期（2023年10月 - 2024年3月）", "condition": "after:2023-10-01 before:2024-03-31"},
 	{"name": "104期 上半期（2024年4月 - 2024年9月）",  "condition": "after:2024-04-01 before:2024-09-30"},
@@ -162,6 +166,12 @@ const LLSPLayoutTemplate = (entry) => {
 		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 		<div class="history-container">
 			<details open>
+				<summary class="important"><span class="date">2025/04/11</span> - 105期新入生参戦に伴う調整</summary>
+				<div>
+					<span class="icon-new"></span>セラス、泉の名前表示に対応<br>
+				</div>
+			</details>
+			<details>
 				<summary><span class="date">2024/06/25</span> - 配信概要掲載</summary>
 				<div>
 					<span class="icon-new"></span>アプリ内から見られる配信概要文を掲載
