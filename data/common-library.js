@@ -159,7 +159,7 @@ const convertMarkup = (str) => {
 			//	break;
 
 			case 'null': // 注釈。デバッグモードでのみ表示される
-				strConverted = (isDebugMode ? `<span style="color: #76a; font-style:italic;">(${strInParentheses[1]})</span>` : '')
+				strConverted = (isDebugMode && strInParentheses[1] ? `<span style="color: #76a; font-style:italic;">(${strInParentheses[1]})</span>` : '')
 				break;
 
 			default: // 該当しない場合
