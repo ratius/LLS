@@ -1322,7 +1322,7 @@
 	"date": "2024-05-02",
 	"title": "104期生でFes×LIVEを振り返ろう",
 	"desc": "この度概要文を務めさせていただく徒町です！ 先日のFes×LIVEを見てくださったみなさん、本当にありがとうございました！ 今日は104期生の3人で振り返りをさせていただきます！ ・・・あと何を書けばいいんでしょうか！とりあえず、ちぇすとー！",
-	"memo": "",
+	"memo": "初めてステージに立った104期生の3人が、Fes×LIVEを振り返っていく。お便りの読み上げコーナーも。",
 	"tags": ["meets", "Ginko", "Kosuzu", "Hime", "room-club"],
 	"tube": "rWQtub9s8fs",
 	"length": [1435, ""]
@@ -2476,7 +2476,7 @@
 	"title": "泉ちゃんにインタビュー！",
 	"desc": "大沢瑠璃乃だよ☆ 泉ちゃんへのインタビューは、ルリが務めさせていただきます！それでは泉ちゃん！ご挨拶をお願いします！<hr>ごきげんよう、桂城 泉だ。先日の配信と同様、瑠璃乃先輩が私にインタビューをしてくれるみたいだ。改めて、今日の配信を自己紹介に代えさせていただこうかなと思う。先輩に失礼の無いよう、頑張るよ。",
 	"memo": "",
-	"tags": ["meets", "Rurino", "Isuzi"],
+	"tags": ["meets", "Rurino", "Izumi"],
 	"tube": "",
 	"length": [-1, -1]
 },
@@ -2503,8 +2503,17 @@
 	"title": "私たち、Edel Noteです。",
 	"desc": "セラス 柳田 リリエンフェルトです。色々あって、今日は急遽、大事なお知らせをさせていただくことになりました。詳しくは配信でお話します。泉が。<br>嘘です、ごめんなさい、私もちゃんと話します。見てくれたら嬉しいです。",
 	"memo": "当初は「新入部員が配信します。」というタイトルの配信予定であったが、配信開始前に変更された。",
-	"tags": ["meets", "Ceras", "Isuzi"],
+	"tags": ["meets", "Ceras", "Izumi"],
 	"tube": "",
+	"length": [-1, -1]
+},
+{
+	"date": "2025-04-30",
+	"title": "105期OPENING！Fes×LIVE",
+	"memo": "ライブ会場は、蓮ノ空女学院の第2音楽堂。4つのユニットがそれぞれの新曲を披露！AFTERでは今後の「カラオケ配信」でセラス・泉に歌ってほしい蓮ノ空の楽曲の投票も行われた。<br>本配信の際、1曲目の「Celebration!」が誤ってフライングで流されるミスが発生した。",
+	"setlist": ["Celebration!", "WAWO!", "アンペア", "Retrofuture", "MC", "Dream Believers", "MC"],
+	"tags": ["live", "Kaho", "Sayaka", "Rurino", "Ginko", "Kosuzu", "Hime", "Ceras", "Izumi"],
+	"tube": "Rt0J0ecqSlg",
 	"length": [-1, -1]
 },
 {
@@ -2512,7 +2521,7 @@
 	"title": "未定",
 	"desc": "",
 	"memo": "",
-	"tags": ["meets", "Kaho", "Sayaka", "Rurino", "Ginko", "Kosuzu", "Hime", "Ceras", "Isuzi"],
+	"tags": ["meets", "Kaho", "Sayaka", "Rurino", "Ginko", "Kosuzu", "Hime", "Ceras", "Izumi"],
 	"tube": "",
 	"length": [-1, -1]
 }

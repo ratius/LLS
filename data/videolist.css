@@ -18,7 +18,6 @@
 article {
 	width: 100%;
 	display: grid;
-	flex-wrap: wrap;
 }
 article.cancelled {
 	background-color: #ddd;
@@ -37,20 +36,28 @@ article:not(.cancelled) .article-box-title {
 	align-items: center;
 }
 .article-box-date{ /*日付入力欄*/
+	grid-area: i1;
 	font-size: 95%;
 	font-weight: bold;
 	background-color: #eee;
 	color: #666;
 }
+
 .article-box-title { /*タイトル*/
+	grid-area: i2;
 	font-weight: bold;
 	border-bottom: solid 1px #bbb;
 }
 .article-box-desc { /*説明文*/
+	grid-area: i3;
 	font-size: small;
 	border-bottom: solid 1px #bbb;
 }
+.article-box-tags { /*タグ*/
+	grid-area: i4;
+}
 .article-box-tube {
+	grid-area: i5;
 	flex-direction: column;
 }
 .length {
@@ -81,8 +88,20 @@ article:not(.cancelled) .article-box-title {
 
 /* ■スマートフォン向けレイアウト */
 @media screen and (max-width: 599px) {
-	article {
+	article:has(.article-box-tube) {
 		grid-template-columns: auto 70px;
+		grid-template-areas:
+		  "i1 i1"
+		  "i2 i5"
+		  "i3 i3"
+		  "i4 i4";
+	}
+	article:not(:has(.article-box-tube)) {
+		grid-template-areas:
+		  "i1"
+		  "i2"
+		  "i3"
+		  "i4";
 	}
 	article:not(:last-child) {
 		border-bottom: solid 3px #999;
@@ -98,7 +117,11 @@ article:not(.cancelled) .article-box-title {
 		width: 100%;
 		border-bottom: solid 1px #c0b0b8;
 	}
+	.article-box-wrapper {
+		order: 3;
+	}
 	.article-box-tube {
+		order: 2;
 		justify-content: center;
 		border-bottom: solid 1px #bbb;
 	}
@@ -107,9 +130,6 @@ article:not(.cancelled) .article-box-title {
 		left: -12.5%;
 		width: 125%;
 		transform: scale(0.8);
-	}
-	.article-box-date, .article-box-desc, .article-box-tags{
-		grid-column: span 2;
 	}
 }
 
@@ -120,7 +140,18 @@ article:not(.cancelled) .article-box-title {
 		border-right: solid 1px #999;
 		border-bottom: solid 1px #999;
 	}
-
+	article:has(.article-box-tube) {
+		grid-template-areas:
+		  "i1 i2 i5"
+		  "i1 i3 i5"
+		  "i1 i4 i5";
+	}
+	article:not(:has(.article-box-tube)) {
+		grid-template-areas:
+		  "i1 i2 i2"
+		  "i1 i3 i3"
+		  "i1 i4 i4";
+	}
 	.article-box-date {
 		justify-content: center;
 		width: 120px;
