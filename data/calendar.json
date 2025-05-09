@@ -31,8 +31,8 @@
 	{"name": "国木田花丸", "birth": "0304", "type": "C", "group": "aqours"},
 	{"name": "小原鞠莉",   "birth": "0613", "type": "C", "group": "aqours"},
 	{"name": "黒澤ルビィ", "birth": "0921", "type": "C", "group": "aqours"},
-	{"name": "鹿角理亞",   "birth": "1212", "type": "C", "group": "aqours"},
-	{"name": "鹿角聖良",   "birth": "0504", "type": "C", "group": "aqours"},
+	{"name": "鹿角理亞",   "birth": "1212", "type": "C", "group": "aqours", "rival": true},
+	{"name": "鹿角聖良",   "birth": "0504", "type": "C", "group": "aqours", "rival": true},
 
 	{"name": "伊波杏樹",   "birth": "0207", "type": "V", "group": "aqours", "tips": "Aqours 高海千歌 役"},
 	{"name": "逢田梨香子", "birth": "0808", "type": "V", "group": "aqours", "tips": "Aqours 桜内梨子 役"},
@@ -45,6 +45,9 @@
 	{"name": "降幡愛",     "birth": "0219", "type": "V", "group": "aqours", "tips": "Aqours 黒澤ルビィ 役"},
 	{"name": "田野アサミ", "birth": "0212", "type": "V", "group": "aqours", "tips": "Saint Snow 鹿角理亞 役", "rival": true},
 	{"name": "佐藤日向",   "birth": "1223", "type": "V", "group": "aqours", "tips": "Saint Snow 鹿角聖良 役", "rival": true},
+
+	{"name": "ライラプス", "birth": "0111", "type": "C", "group": "yohane"},
+	{"name": "日笠陽子",   "birth": "0716", "type": "V", "group": "yohane", "tips": "幻日のヨハネ ライラプス 役"},
 
 	{"name": "上原歩夢",       "birth": "0301", "type": "C", "group": "niji"},
 	{"name": "中須かすみ",     "birth": "0123", "type": "C", "group": "niji"},
@@ -85,8 +88,8 @@
 	{"name": "鬼塚夏実",                "birth": "0807", "type": "C", "group": "liella"},
 	{"name": "ウィーン・マルガレーテ",  "birth": "0120", "type": "C", "group": "liella"},
 	{"name": "鬼塚冬毬",                "birth": "1228", "type": "C", "group": "liella"},
-	{"name": "柊摩央",                  "birth": "1202", "type": "C", "group": "liella"},
-	{"name": "聖澤悠奈",                "birth": "0811", "type": "C", "group": "liella"},
+	{"name": "柊摩央",                  "birth": "1202", "type": "C", "group": "liella", "rival": true},
+	{"name": "聖澤悠奈",                "birth": "0811", "type": "C", "group": "liella", "rival": true},
 
 	{"name": "伊達さゆり",   "birth": "0930", "type": "V", "group": "liella", "tips": "Liella! 澁谷かのん 役"},
 	{"name": "Liyuu",        "birth": "0109", "type": "V", "group": "liella", "tips": "Liella! 唐可可 役"},

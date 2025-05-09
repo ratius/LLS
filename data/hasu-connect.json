@@ -2513,13 +2513,13 @@
 	"memo": "ライブ会場は、蓮ノ空女学院の第2音楽堂。4つのユニットがそれぞれの新曲を披露！AFTERでは今後の「カラオケ配信」でセラス・泉に歌ってほしい蓮ノ空の楽曲の投票も行われた。<br>本配信の際、1曲目の「Celebration!」が誤ってフライングで流されるミスが発生した。",
 	"setlist": ["Celebration!", "WAWO!", "アンペア", "Retrofuture", "MC", "Dream Believers", "MC"],
 	"tags": ["live", "Kaho", "Sayaka", "Rurino", "Ginko", "Kosuzu", "Hime", "Ceras", "Izumi"],
-	"tube": "Rt0J0ecqSlg",
-	"length": [-1, -1]
+	"tube": "Rt0J0ecqSlg&t=595",
+	"length": [3560, -1]
 },
 {
 	"date": "2025-05-01",
 	"title": "105期OPENING！ Fes×LIVE振り返り配信",
-	"desc": "",
+	"desc": "はろはろ〜姫芽だよ〜 今年度初のFes×LIVE、お疲れ様でしたぁ〜！ 観てくれたみんな、ありがとね〜 今日はEdel Noteの二人と一緒に振り返っていきますよ〜(ﾟ▽ﾟ)ノ",
 	"memo": "",
 	"tags": ["meets", "Hime", "Ceras", "Izumi"],
 	"tube": "",
@@ -2527,8 +2527,8 @@
 },
 {
 	"date": "2025-05-03",
-	"title": "未定",
-	"desc": "",
+	"title": "改めまして、徒町小鈴です！",
+	"desc": "この度2年生になりました徒町小鈴です！ 同時に、「先輩」になってしまいました・・・！ 良き先輩であれるよう、徒町、もっとパワーアップしたいです！ 改めて、そんな徒町のことをみなさんに知ってもらえたらと思います！",
 	"memo": "",
 	"tags": ["meets", "Kosuzu"],
 	"tube": "",
@@ -2536,19 +2536,55 @@
 },
 {
 	"date": "2025-05-05",
-	"title": "未定",
-	"desc": "",
+	"title": "お弁当のお話など。",
+	"desc": "村野さやかです 本日は村長ではなく、村野さやかです 久しぶりにお料理やお弁当のお話などできたらいいなと思ってます 今年度もよろしくお願いいたします",
 	"memo": "",
-	"tags": ["meets", "Sayaka"],
+	"tags": ["meets", "Sayaka", "room-Sayaka"],
 	"tube": "",
 	"length": [-1, -1]
 },
 {
 	"date": "2025-05-08",
+	"title": "とある日常風景",
+	"desc": "百生吟子です。中間試験の季節がやってきました。流石に勉強に集中すべき期間ではありますので、配信をどうするか悩んだのですが・・・ 今回は、試験勉強中の様子を録音してみることにしました。いつもの日常風景という感じですが、楽しんででただけると嬉しいです。中間試験、精一杯頑張ります。",
+	"memo": "この配信ではWith×MEETS AFTERは行われなかった。",
+	"tags": ["meets", "Ginko", "Kosuzu", "noafter"],
+	"tube": "",
+	"length": -1
+},
+{
+	"date": "2025-05-10",
+	"title": "帰ってきたショートメール選手権！",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Rurino"],
+	"tube": "",
+	"length": [-1, -1]
+},
+{
+	"date": "2025-05-12",
+	"title": "映画館の楽しみ方ガイドです",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Ceras"],
+	"tube": "",
+	"length": [-1, -1]
+},
+{
+	"date": "2025-05-15",
+	"title": "村野さやかのラジオ 第13回",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Sayaka", "Ceras"],
+	"tube": "",
+	"length": [-1, -1]
+},
+{
+	"date": "2025-05-17",
 	"title": "未定",
 	"desc": "",
 	"memo": "",
-	"tags": ["meets", "Ginko", "Kosuzu"],
+	"tags": ["meets", "Kaho", "Sayaka", "Kosuzu"],
 	"tube": "",
 	"length": [-1, -1]
 },
