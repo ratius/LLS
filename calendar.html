@@ -3,18 +3,18 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
 <meta charset="utf-8">
 
-<meta name="description" content="ラブライブ！シリーズのキャラクターやキャストの誕生日を確認できるカレンダーです。">
+<meta name="description" content="ラブライブ！シリーズの主要キャラクター、およびそれを演じたキャストの誕生日を確認できるカレンダー。">
 
 <meta property="og:url" content="https://ratius.github.io/LLS/calendar.html">
 <meta property="og:title" content="ラブライブ！誕生日カレンダー">
 <meta property="og:type" content="website">
-<meta property="og:description" content="ラブライブ！シリーズのキャラクターやキャストの誕生日を確認できるカレンダーです。">
+<meta property="og:description" content="ラブライブ！シリーズの主要キャラクター、およびそれを演じたキャストの誕生日を確認できるカレンダー。">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@ratius55">
 <meta name="twitter:creator" content="@ratius55">
 <meta name="twitter:title" content="ラブライブ！誕生日カレンダー">
-<meta name="twitter:description" content="ラブライブ！シリーズのキャラクターやキャストの誕生日を確認できるカレンダーです。">
+<meta name="twitter:description" content="ラブライブ！シリーズの主要キャラクター、およびそれを演じたキャストの誕生日を確認できるカレンダー。">
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#e50080">
@@ -145,12 +145,10 @@
 .schedule-name::before {
 	content: "";
 	display: inline-block;
-	width: 16px;
-	height: 16px;
 	border-style: solid;
 	border-radius: 50%;
-	background-color: white;
 	margin: 0 2px;
+	vertical-align: middle;
 }
 
 .name-tips {
@@ -158,10 +156,20 @@
 	padding-left: 3px;
 }
 
-.marker-C::before { border-width: 8px;}
-.marker-V::before { border-width: 2px;}
+.marker-C::before { 
+	box-sizing: content-box;
+	width: 0;
+	height: 0;
+	border-width: 8px;
+}
+.marker-V::before { 
+	width: 16px;
+	height: 16px;
+	border-width: 3px;
+}
 .marker-muse::before    {border-color: #E50080;}
 .marker-aqours::before  {border-color: #19B1F6;}
+.marker-yohane::before  {border-color: #19737D;}
 .marker-niji::before    {border-color: #F8B656;}
 .marker-liella::before  {border-color: #DA57D8;}
 .marker-musical::before {border-color: #C40035;}
@@ -181,7 +189,7 @@
 	<section id="Summary">
 		<h2>概要</h2>
 		<p>
-			ラブライブ！シリーズのキャラクター及びキャストの誕生日を確認できるカレンダーです。<br>
+			ラブライブ！シリーズの主要キャラクター、およびそれを演じたキャストの誕生日を確認できるカレンダーです。<br>
 		</p>
 		<p>
 			掲載対象となるグループは以下の通り。誕生日不詳のキャラクターは掲載できないのでご了承ください。<br>
@@ -191,6 +199,7 @@
 				<li>『虹ヶ咲』：虹ヶ咲学園スクールアイドル同好会（高咲侑は誕生日不詳のため、キャストのみ掲載）</li>
 				<li>『スーパースター!!』：Liella!、Sunny Passion</li>
 				<li>『蓮ノ空』：蓮ノ空女学院スクールアイドルクラブ</li>
+				<li>『幻日のヨハネ』：ライラプス（主要キャラクターの多くはAqoursと誕生日・キャストが共通するため割愛）</li>
 				<li>『ミュージカル』：椿咲花女子高校アイドル部、滝桜女学院アイドル部</li>
 				<li>『スクフェス』：『虹ヶ咲』扱いの桜坂しずく、近江彼方、エマ・ヴェルデを除く転入生51名（『スクフェス』扱いのため、『虹ヶ咲』で声を演じたキャストは掲載しません）</li>
 			</ul>
@@ -227,6 +236,13 @@
 		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 		<div class="history-container">
 			<details open>
+				<summary><span class="date">2025/05/09</span> - データ追加</summary>
+				<div>
+					<span class="icon-new"></span>ライラプス（幻日のヨハネ）、およびそのキャストの誕生日を追加<br>
+					<span class="icon-fix"></span>グループを表すアイコンのデザインを調整
+				</div>
+			</details>
+			<details>
 				<summary><span class="date">2025/04/11</span> - 蓮ノ空105期新入生参戦に伴う調整</summary>
 				<div>
 					<span class="icon-new"></span>蓮ノ空105期新入生（セラス 柳田 リリエンフェルト、桂城泉）の誕生日を掲載<br>
@@ -235,7 +251,7 @@
 			<details>
 				<summary><span class="date">2025/02/27</span> - 機能追加</summary>
 				<div>
-					<span class="icon-new"></span>A-RISE、Edel Noteスクールアイドルミュージカル(TVドラマおよび2025年公演分)のキャストを追加<br>
+					<span class="icon-new"></span>A-RISE、Edel Note、スクールアイドルミュージカル(TVドラマおよび2025年公演分)のキャストを追加<br>
 					<span class="icon-new"></span>「ライバルユニットを表示」「スクールアイドルミュージカルを表示」の絞り込みオプションを追加<br>
 					<span class="icon-fix"></span>グループを表すアイコンを変更<br>
 					<span class="icon-fix"></span>キャストの情報を直接掲載
