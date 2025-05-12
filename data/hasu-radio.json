@@ -979,12 +979,52 @@
 	"length": 2921
 },
 {
-	"date": "2095-05-11",
-	"title": "【第6回】",
+	"date": "2025-05-11",
+	"title": "【第6回】考えた上でのドヒャー",
+	"desc": "",
+	"memo": "菅「だよね？なんか『ドヒャー』とかさ」三宅「あれはちゃんとひねり出してる。」来栖「鳴き声？」三宅「考えた上での『ドヒャー』」菅「ごめんごめん」{{NULL::タイトル回収は26:30頃}}",
+	"program": ["オープニング (0:00-)", "蓮ノ空女学院投書箱 (2:46-)", "楽曲紹介（Hello, new dream!） (19:21-)", "全順位ドン♡ (22:38-)", "おしらせコーナー (38:42-)", "エンディング (43:40-)"],
+	"tags": ["s6", "Kan", "Kurusu", "Miyake", "Shindo"],
+	"tube": "SjpJ9ja8Xqg",
+	"length": 2944
+},
+{
+	"date": "2099-05-18",
+	"title": "【第7回】",
 	"desc": "",
 	"memo": "",
 	"program": [],
-	"tags": ["s6", "Kan", "Kurusu", "Miyake", "Shindo"],
+	"tags": ["s6", "Kan", "Kurusu"],
+	"tube": "",
+	"length": -1
+},
+{
+	"date": "2099-05-25",
+	"title": "【第8回】",
+	"desc": "",
+	"memo": "",
+	"program": [],
+	"tags": ["s6", "Kan", "Kurusu"],
+	"tube": "",
+	"length": -1
+},
+{
+	"date": "2099-06-01",
+	"title": "【第9回】",
+	"desc": "",
+	"memo": "",
+	"program": [],
+	"tags": ["s6", "Kan", "Kurusu"],
+	"tube": "",
+	"length": -1
+},
+{
+	"date": "2099-06-08",
+	"title": "【第10回】",
+	"desc": "",
+	"memo": "",
+	"program": [],
+	"tags": ["s6", "Kan", "Kurusu"],
 	"tube": "",
 	"length": -1
 },

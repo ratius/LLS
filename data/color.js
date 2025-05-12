@@ -77,14 +77,26 @@ const CharacterName = {
 	"KananY"   : "カナン",
 	"YouY"     : "ヨウ",
 	"RikoY"    : "リコ",
-	"MariY"    : "マリ"
+	"MariY"    : "マリ",
+
+	"Polka"    : "ポルカ",
+	"Mai"      : "麻衣",
+	"Akira"    : "玲",
+	"Hanabi"   : "花火",
+	"Miracle"  : "奇跡",
+	"Noriko"   : "のりこ",
+	"Yukuri"   : "ゆくり",
+	"Aurora"   : "輝夜",
+	"Midori"   : "真緑",
+	"Shion"    : "翔音"
 };
 
 //■■サブルーチン
 //■ 連想配列のr・g・bから、カラーコードを返す関数
 const GetColorCode = (RGB) => {
-	var temp = "00000" + (Math.floor(RGB.r)*65536 + Math.floor(RGB.g)*256 + Math.floor(RGB.b)).toString(16).toUpperCase();
-	return "#" + temp.substr(temp.length - 6);
+	const col = parseInt(RGB.r,10)*65536 + parseInt(RGB.g,10)*256 + parseInt(RGB.b,10);
+	const rawColorCode = "00000" + col.toString(16).toUpperCase();
+	return "#" + rawColorCode.substring(rawColorCode.length - 6);
 }
 
 //■ 連想配列のr・g・bから、対応する文字色を返す関数
@@ -202,6 +214,7 @@ function initialize () {
 	const MemberIdHasu = ["Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime", "Ceras", "Izumi"];
 	const MemberIdMusical = ["RurikaM", "YuzuhaM", "YukinoM", "HikaruM", "MaayaM", "AnzuM", "MisuzuM", "ToaM", "RenaM", "SayakaM"];
 	const MemberIdYohane = ["YohaneY", "HanamaruY", "DiaY", "RubyY", "ChikaY", "KananY", "YouY", "RikoY", "MariY"];
+	const MemberIdBlueBird = ["Polka", "Mai", "Akira", "Hanabi", "Miracle", "Noriko", "Yukuri", "Aurora", "Midori", "Shion"];
 
 	CreateColorListTable(MemberIdMuse,    "TableMuse");
 	CreateColorListTable(MemberIdAqours,  "TableAqours");
@@ -210,6 +223,7 @@ function initialize () {
 	CreateColorListTable(MemberIdHasu,    "TableHasu");
 	CreateColorListTable(MemberIdMusical, "TableMusical");
 	CreateColorListTable(MemberIdYohane,  "TableYohane");
+	CreateColorListTable(MemberIdBlueBird,"TableBlueBird");
 	DrawReferences();
 	//デバック用
 	if(isDebugMode) {
