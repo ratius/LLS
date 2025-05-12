@@ -2564,7 +2564,7 @@
 {
 	"date": "2025-05-12",
 	"title": "映画館の楽しみ方ガイドです",
-	"desc": "",
+	"desc": "セラスです。突然ですがみなさん、映画、観てますか。わたしは、観てます。そして、みなさんも映画を観てくれたら、とても嬉しいと思っています。全蓮ノ空のこと好き好きクラブのみなさんが泣けるような配信を目指してがんばります。",
 	"memo": "",
 	"tags": ["meets", "Ceras"],
 	"tube": "",
@@ -2575,7 +2575,7 @@
 	"title": "村野さやかのラジオ 第13回",
 	"desc": "",
 	"memo": "",
-	"tags": ["meets", "Sayaka", "Ceras"],
+	"tags": ["meets", "SayakaRadio", "Sayaka", "Ceras"],
 	"tube": "",
 	"length": [-1, -1]
 },
@@ -2584,7 +2584,16 @@
 	"title": "未定",
 	"desc": "",
 	"memo": "",
-	"tags": ["meets", "Kaho", "Sayaka", "Kosuzu"],
+	"tags": ["meets", "Sayaka", "Kosuzu"],
+	"tube": "",
+	"length": [-1, -1]
+},
+{
+	"date": "2025-05-17",
+	"title": "未定",
+	"desc": "",
+	"memo": "",
+	"tags": ["meets", "Izumi"],
 	"tube": "",
 	"length": [-1, -1]
 },
