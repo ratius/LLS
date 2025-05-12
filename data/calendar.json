@@ -160,8 +160,8 @@
 
 	{"name": "高橋ポルカ", "birth": "0818", "type": "C", "group": "bluebird"},
 	{"name": "麻布麻衣",   "birth": "0213", "type": "C", "group": "bluebird"},
-	{"name": "駒形花火",   "birth": "0709", "type": "C", "group": "bluebird"},
-	{"name": "五桐玲",     "birth": "0611", "type": "C", "group": "bluebird"},
+	{"name": "五桐玲",     "birth": "0709", "type": "C", "group": "bluebird"},
+	{"name": "駒形花火",   "birth": "0611", "type": "C", "group": "bluebird"},
 	{"name": "金澤奇跡",   "birth": "0302", "type": "C", "group": "bluebird"},
 	{"name": "調布のりこ", "birth": "0404", "type": "C", "group": "bluebird"},
 	{"name": "春宮ゆくり", "birth": "0922", "type": "C", "group": "bluebird"},
@@ -171,8 +171,8 @@
 
 	{"name": "綾咲穂音",   "birth": "1231", "type": "V", "group": "bluebird", "tips": "イキヅライブ！ 高橋ポルカ 役"},
 	{"name": "遠藤璃菜",   "birth": "1004", "type": "V", "group": "bluebird", "tips": "イキヅライブ！ 麻布麻衣 役"},
-	{"name": "藤野こころ", "birth": "0331", "type": "V", "group": "bluebird", "tips": "イキヅライブ！ 駒形花火 役"},
-	{"name": "宮野芹",     "birth": "0105", "type": "V", "group": "bluebird", "tips": "イキヅライブ！ 五桐玲 役"},
+	{"name": "藤野こころ", "birth": "0331", "type": "V", "group": "bluebird", "tips": "イキヅライブ！ 五桐玲 役"},
+	{"name": "宮野芹",     "birth": "0105", "type": "V", "group": "bluebird", "tips": "イキヅライブ！ 駒形花火 役"},
 	{"name": "坂野愛羽",   "birth": "0531", "type": "V", "group": "bluebird", "tips": "イキヅライブ！ 金澤奇跡 役"},
 	{"name": "瀬古梨愛",   "birth": "0919", "type": "V", "group": "bluebird", "tips": "イキヅライブ！ 調布のりこ 役"},
 	{"name": "奥村優季",   "birth": "1013", "type": "V", "group": "bluebird", "tips": "イキヅライブ！ 春宮ゆくり 役"},
