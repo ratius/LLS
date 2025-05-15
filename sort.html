@@ -88,9 +88,19 @@ const ColHime = "#cdc5f0";
 const ColCera = "#fab1aa";
 const ColIzum = "#8edee6";
 
+const ColPolB = "#ffffB2";
+const ColMaiB = "#a6c9dc";
+const ColAkiB = "#caf2c0";
+const ColHanB = "#ffa3a3";
+const ColMirB = "#ffdae0";
+const ColNorB = "#e5b2ff";
+const ColYukB = "#cff2fa";
+const ColAurB = "#ffadce";
+const ColMidB = "#9fdfbf";
+const ColShiB = "#f8f8f8";
 
 const MemberGroup = [
-	[""  ,"メインキャラクター",["Muse", "Aqours", "Niji", "Liella", "Hasu"]],
+	[""  ,"メインキャラクター",["Muse", "Aqours", "Niji", "Liella", "Hasu", "BlueBird"]],
 	["┣","メインキャスト",["MuseCast","AqoursCast","NijiCast", "LiellaCast", "HasuCast"]],
 	["┗","楽曲ユニット",["MainUnit"]],
 	[""  ,"μ’s",["Muse"]],
@@ -120,6 +130,8 @@ const MemberGroup = [
 	["┣","蓮ノ空関係者",["Hasu", "Hasu2"]],
 	["┣","蓮ノ空キャスト",["HasuCast"]],
 	["┗","蓮ノ空ユニット",["HasuUnit"]],
+	[""  ,"イキヅライブ！",["BlueBird"]],
+	["┗","イキヅライブ！キャスト",["BlueBirdCast"]],
 	[""  ,"スクフェス転入生",["Seiran","Shino","Chitose","Touoh","Shion","YG"]],
 	["┣","青藍高校",["Seiran"]],
 	["┣","東雲学院",["Shino"]],
@@ -370,7 +382,7 @@ const CharList = [
 	{name:"電撃オンライン分室", namealt:"電撃オンライン<br>分室", color:["#eee"], subtext:"中須かすみ<br>朝香果林<br>優木せつ菜", group:{"NijiUnit":1}},
 	{name:"DiverDiva",        color:['#cbf'], subtext:"宮下愛<br>朝香果林", group:{"NijiUnit":1,"MainUnit":1}},
 	{name:"A・ZU・NA",        color:['#f99'], subtext:"上原歩夢<br>桜坂しずく<br>優木せつ菜", group:{"NijiUnit":1,"MainUnit":1}},
-	{name:"QU4RTZ",           color:['#fda'], subtext:"中須かすみ<br>近江彼方<br>エマ・ヴェルデ<br>天王寺璃奈", group:{"NijiUnit":1,"MainUnit":1}},
+	{name:"QU4RTZ",           color:['#edc'], subtext:"中須かすみ<br>近江彼方<br>エマ・ヴェルデ<br>天王寺璃奈", group:{"NijiUnit":1,"MainUnit":1}},
 	{name:"R3BIRTH",          color:['#abf'], subtext:"三船栞子<br>鐘嵐珠<br>ミア・テイラー", group:{"NijiUnit":1,"MainUnit":1}},
 	{name:"グローバル交流チーム", namealt:"グローバル交流<br>チーム",   color:["#eee"], subtext:"エマ・ヴェルデ<br>ミア・テイラー<br>鐘嵐珠", group:{"NijiUnit":1}},
 	{name:"創作料理チーム",                                             color:["#eee"], subtext:"上原歩夢<br>宮下愛<br>近江彼方", group:{"NijiUnit":1}},
@@ -510,7 +522,6 @@ const CharList = [
 	{name:"KALEIDOSCORE",   color:["#bef"], subtext:"唐可可<br>葉月恋<br>ウィーン・マルガレーテ", group:{"LiellaUnit":1, "MainUnit":1}},
 	{name:"5yncri5e!",      color:["#ffb"], subtext:"嵐千砂都<br>桜小路きな子<br>若菜四季<br>鬼塚夏美<br>鬼塚冬毬", group:{"LiellaUnit":1, "MainUnit":1}},
 	{name:"Sunny Passion",  color:["#fca"], subtext:"柊摩央<br>聖澤悠奈", group:{"LiellaUnit":1, "MainUnit":1}},
-	
 
 	{name:"かのクゥ",  color:[ColKano, ColKeke], group:{"LiellaCP":1}},
 	{name:"かのちさ",  color:[ColKano, ColChis], group:{"LiellaCP":1}},
@@ -557,7 +568,7 @@ const CharList = [
 	{name:"きななつ",  color:[ColKina, ColNats], group:{"LiellaCP":1}},
 	{name:"きなマル",  color:[ColKina, ColWien], group:{"LiellaCP":1}},
 	{name:"きなとま",  color:[ColKina, ColToma], group:{"LiellaCP":1}},
-	{name:"しきメイ",  color:[ColShik, ColMei], group:{"LiellaCP":1}},
+	{name:"しきメイ",  color:[ColShik, ColMei ], group:{"LiellaCP":1}},
 	{name:"メイなつ",  color:[ColMei , ColNats], group:{"LiellaCP":1}},
 	{name:"メイマル",  color:[ColMei , ColWien], group:{"LiellaCP":1}},
 	{name:"メイとま",  color:[ColMei , ColToma], group:{"LiellaCP":1}},
@@ -610,12 +621,38 @@ const CharList = [
 	{name:"三宅美羽",   subtext:"セラス 柳田 リリエンフェルト 役",   color:[ColCera], group:{"HasuCast":1}},
 	{name:"進藤あまね", subtext:"桂城泉 役", color:[ColIzum], group:{"HasuCast":1}},
 
+	{name:"蓮ノ空102期生", subtext:"乙宗梢<br>夕霧綴理<br>藤島慈", color:[ColKozu, ColTsuz, ColMegu], group:{"HasuUnit":1}},
+	{name:"蓮ノ空103期生", subtext:"日野下花帆<br>村野さやか<br>大沢瑠璃乃", color:[ColKaho, ColSaya, ColRuri], group:{"HasuUnit":1}},
+	{name:"蓮ノ空104期生", subtext:"百生吟子<br>徒町小鈴<br>安養寺姫芽", color:[ColGink, ColKosu, ColHime], group:{"HasuUnit":1}},
 	{name:"スリーズブーケ",   subtext:"日野下花帆<br>乙宗梢<br>百生吟子", color:[ColKaho,ColKozu,ColGink], group:{"HasuUnit":1, "MainUnit":1}},
 	{name:"DOLLCHESTRA",      subtext:"村野さやか<br>夕霧綴理<br>徒町小鈴", color:[ColSaya,ColTsuz,ColKosu], group:{"HasuUnit":1, "MainUnit":1}},
 	{name:"みらくらぱーく！", subtext:"大沢瑠璃乃<br>藤島慈<br>安養寺姫芽", color:[ColRuri,ColMegu,ColHime], group:{"HasuUnit":1, "MainUnit":1}},
+	{name:"Edel Note",      subtext:"セラス 柳田 リリエンフェルト<br>桂城泉", color:[ColCera, ColIzum], group:{"HasuUnit":1, "MainUnit":1}},
 	{name:"かほめぐ♡じぇらーと",       subtext:"日野下花帆<br>藤島慈",   color:[ColKaho,ColMegu], group:{"HasuUnit":1, "MainUnit":1}},
 	{name:"るりのとゆかいなつづりたち", namealt:"るりのとゆかいな<br>つづりたち", subtext:"大沢瑠璃乃<br>夕霧綴理", color:[ColRuri,ColTsuz], group:{"HasuUnit":1, "MainUnit":1}},
 	{name:"蓮ノ休日",                  subtext:"村野さやか<br>乙宗梢",   color:[ColSaya,ColKozu], group:{"HasuUnit":1, "MainUnit":1}},
+
+	{name:"高橋ポルカ", color:[ColPolB], group:{"BlueBird":1}},
+	{name:"麻布麻衣",   color:[ColMaiB], group:{"BlueBird":1}},
+	{name:"五桐玲",     color:[ColAkiB], group:{"BlueBird":1}},
+	{name:"駒形花火",   color:[ColHanB], group:{"BlueBird":1}},
+	{name:"金澤奇跡",   color:[ColMirB], group:{"BlueBird":1}},
+	{name:"調布のりこ", color:[ColNorB], group:{"BlueBird":1}},
+	{name:"春宮ゆくり", color:[ColYukB], group:{"BlueBird":1}},
+	{name:"此花輝夜",   color:[ColAurB], group:{"BlueBird":1}},
+	{name:"山田真緑",   color:[ColMidB], group:{"BlueBird":1}},
+	{name:"佐々木翔音", color:[ColShiB], group:{"BlueBird":1}},
+
+	{name:"綾咲穂音",   subtext:"高橋ポルカ 役", color:[ColPolB], group:{"BlueBirdCast":1}},
+	{name:"遠藤璃菜",   subtext:"麻布麻衣 役",   color:[ColMaiB], group:{"BlueBirdCast":1}},
+	{name:"宮野芹",     subtext:"五桐玲 役",     color:[ColAkiB], group:{"BlueBirdCast":1}},
+	{name:"藤野こころ", subtext:"駒形花火 役",   color:[ColHanB], group:{"BlueBirdCast":1}},
+	{name:"坂野愛羽",   subtext:"金澤奇跡 役",   color:[ColMirB], group:{"BlueBirdCast":1}},
+	{name:"瀬古梨愛",   subtext:"調布のりこ 役", color:[ColNorB], group:{"BlueBirdCast":1}},
+	{name:"奥村優季",   subtext:"春宮ゆくり 役", color:[ColYukB], group:{"BlueBirdCast":1}},
+	{name:"天沢朱音",   subtext:"此花輝夜 役",   color:[ColAurB], group:{"BlueBirdCast":1}},
+	{name:"小戸森穂花", subtext:"山田真緑 役",   color:[ColMidB], group:{"BlueBirdCast":1}},
+	{name:"涼ノ瀬葵音", subtext:"佐々木翔音 役", color:[ColShiB], group:{"BlueBirdCast":1}},
 
 	{name:"桜坂しずく",    color:["#acf"], group:{"Seiran":1}},
 	{name:"一之瀬マリカ",  color:["#acf"], group:{"Seiran":1}},
@@ -670,7 +707,9 @@ const CharList = [
 	{name:"ジェニファー",  color:["#dfb"], group:{"YG":1}},
 	{name:"マリア",        color:["#dfb"], group:{"YG":1}},
 	{name:"レオ",          color:["#dfb"], group:{"YG":1}},
-	{name:"早乙女紫",      color:["#dfa"], group:{"YG":1}}
+	{name:"早乙女紫",      color:["#dfa"], group:{"YG":1}},
+
+	{name:"AiScReam", subtext:"上原歩夢<br>若菜四季<br>黒澤ルビィ", color:[ColAyum,ColShik, ColRuby], group:{"MainUnit":1}}
 ];
 
 //■デバッグモード判定
@@ -954,16 +993,14 @@ function showResult() {
 
 //比較する２つ要素の表示+++++++++++++++++++++++++++++++++++
 function showImage() {
-	var str0 = "Battle No."+numQuestion+"<br>"+Math.floor(finishSize*100/totalSize)+"% sorted.";
-	var str1 = Member[SortingGroup][lstMember[cmp1][head1]];
-	var str2 = Member[SortingGroup][lstMember[cmp2][head2]];
-	var temp = "";
-	var temp2 = 0;
+	let str0 = "Battle No."+numQuestion+"<br>"+Math.floor(finishSize*100/totalSize)+"% sorted.";
+	let str1 = Member[SortingGroup][lstMember[cmp1][head1]];
+	let str2 = Member[SortingGroup][lstMember[cmp2][head2]];
+	let temp = "";
 	
 	document.getElementById("battleNumber").innerHTML = str0;
 	
-	temp = "";
-	temp2 = 100/CharList[str1].color.length;
+	let temp2 = 100/CharList[str1].color.length;
 	for(i=0; i<CharList[str1].color.length; i++){
 		temp += '<div class="CPcolor" style="background-color:' + CharList[str1].color[i]
 		+ '; left: ' + (i*temp2) + '%; width: ' + temp2 + '%"><\/div>';
@@ -1056,7 +1093,7 @@ function shuffle(array) {
 }
 
 .resultTable{
-	width: 300px;
+	width: 400px;
 	font-size: large;
 	margin: 10px auto;
 	border:1px solid #ccc;
@@ -1158,6 +1195,13 @@ function shuffle(array) {
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2025/05/15</span> - モード追加 他</summary>
+		<div>
+			<span class="new"></span>「イキヅライブ！」及びそのキャストを追加<br>
+			<span class="new"></span>一部のユニットを追加
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2025/04/11</span> - ソート対象追加</summary>
 		<div>
 			<span class="new"></span>蓮ノ空：「セラス 柳田 リリエンフェルト」「桂城泉」、及びそのキャストを追加<br>
