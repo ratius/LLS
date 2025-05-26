@@ -875,7 +875,7 @@
 {
 	"date": "2025-05-02",
 	"title": "#02 新入生を掘り下げよう！　進藤あまねってどんな子？",
-	"desc": "",
+	"desc": "新入生を掘り下げよう！<br>今回は進藤あまねを掘り下げます！✨",
 	"memo": "次は進藤あまねについて掘り下げていこう！ フラフープをしながら自己紹介！？",
 	"tags": ["Miyake", "Shindo"],
 	"tube": "nvQDqqMTwe4",
@@ -884,11 +884,29 @@
 {
 	"date": "2025-05-09",
 	"title": "#03 三宅美羽＆進藤あまね 2人で100の質問！",
-	"desc": "",
+	"desc": "三宅美羽＆進藤あまね 2人で100の質問に答えます！",
 	"memo": "二人でハイペースで質問に答えていく！",
 	"tags": ["Nirei", "Miyake", "Shindo"],
 	"tube": "wxG0Fm0T2rw",
 	"length": 954
+},
+{
+	"date": "2025-05-16",
+	"title": "04 蓮ノ空イントロクイーンに輝くのは！？",
+	"desc": "新入生歓迎パーティー🥳",
+	"memo": "Edel Noteの二人の歓迎会。スリーズブーケの二人が企画した催し物は、イントロクイズ！<br>来栖りん氏は体調不良でお休みのため、7人での収録となっている。",
+	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Miyake", "Shindo"],
+	"tube": "T47M9IC9qOY",
+	"length": 1287
+},
+{
+	"date": "2025-05-23",
+	"title": "#05 新入生歓迎パーティー！NGワードゲーム！",
+	"desc": "",
+	"memo": "パーティーは続く。DOLLCHESTRAの二人が企画した催し物は、NGワードゲーム！",
+	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Miyake", "Shindo"],
+	"tube": "uEwBjVHb46k",
+	"length": 1226
 },
 {
 	"date": "2099-01-01",
