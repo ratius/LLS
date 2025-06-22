@@ -25,7 +25,7 @@ const LLSProcessor = {
     },
 
     renderEntryList: (dataSrc, conditions) => {
-        if (conditions === '') { return false; }
+        if (!conditions) { return false; } //conditionが指定されていない場合、キャンセル
 
         //条件フィルターを行い出力する。日付が2035年以降のエントリーは入力ミスなので常に除外
         let filteredList = dataSrc.filter(_e => new Date(_e.date) <= new Date("2035-01-01"));
@@ -68,6 +68,7 @@ const LLSProcessor = {
         //HTML側で個別に定義された「LLSLayoutTemplate」関数を用いて書き出しを行う
         document.getElementById('LLSP-Result').innerHTML =
             filteredList.map(entry => LLSPLayoutTemplate(entry)).join('');
+	    document.getElementById('LLSP-Result').scrollTop = 0;
         return filteredList.length;
     },
 
@@ -81,7 +82,7 @@ const LLSProcessor = {
 
         //ボタンの色データをCSSに追加
         const buttonCSS = document.createElement("style");
-        buttonCSS.innerHTML = ("\n<!--\n/* Generated from videolist.js */\n" + Object.keys(tagData).map(tag => `.button-${tag} {\n\tbackground-color: ${getColor(tagData[tag], 3)};\n\tborder-color: ${getColor(tagData[tag])};\n}`).join("\n") + "\n-->");
+        buttonCSS.innerHTML = ("\n<!--\n/* Generated from LLS-processor.js */\n" + Object.keys(tagData).map(tag => `.button-${tag} {\n\tbackground-color: ${getColor(tagData[tag], 3)};\n\tborder-color: ${getColor(tagData[tag])};\n}`).join("\n") + "\n-->");
         document.head.appendChild(buttonCSS);
 
         //セレクトボックスに要素を追加
