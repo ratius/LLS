@@ -38,6 +38,8 @@ const tagData = {
 	"Sasaki"   : {"name": "佐々木琴子" , "r":186, "g": 38, "b": 54, "style": "button-hexa"},
 	"Sakurai"  : {"name": "櫻井陽菜"   , "r":162, "g":215, "b":221, "style": "button-hexa"},
 	"Hayama"   : {"name": "葉山風花"   , "r":250, "g":215, "b":100, "style": "button-hexa"},
+	"Miyake"   : {"name": "三宅美羽"   , "r":245, "g":100, "b": 85, "style": "button-hexa"},
+	"Shindo"   : {"name": "進藤あまね" , "r": 30, "g":190, "b":205, "style": "button-hexa"},
 
 	"Furihata" : {"name": "降幡愛"     , "r":255, "g":111, "b":190, "style": "button-hexa"},
 	"Uchida"   : {"name": "内田秀"     , "r":169, "g":158, "b":152, "style": "button-hexa"},
@@ -46,23 +48,23 @@ const tagData = {
 	"Nitta"    : {"name": "新田恵海"   , "r":243, "g":133, "b":  0, "style": "button-hexa"},
 	"Okuma"    : {"name": "大熊和奏"   , "r":178, "g":255, "b":221, "style": "button-hexa"},
 	"Saito"    : {"name": "斉藤朱夏"   , "r":102, "g":192, "b":255, "style": "button-hexa"},
-	"Yumi"     : {"name": "ゆみ先生"   , "r":128, "g":128, "b":128, "style": "button-hexa"},
-	"SukiSukiClub" : {"name": "好き好きクラブの皆さん", "r":128, "g":128, "b":128, "style": "button-hexa"},
+	"Yumi"     : {"name": "ゆみ先生"   , "r":112, "g":112, "b":112, "style": "button-hexa"},
+	"SukiSukiClub" : {"name": "好き好きクラブの皆さん", "r":112, "g":112, "b":112, "style": "button-hexa"},
 
 	"s1" : {"name": "待機室",     "r":160, "g":128, "b":128, "style": "button-square"},
 	"s2" : {"name": "補習室",     "r":160, "g":128, "b":128, "style": "button-square"},
 	"s3" : {"name": "準備室",     "r":160, "g":128, "b":128, "style": "button-square"},
 	"s4" : {"name": "視聴覚室",   "r":160, "g":128, "b":128, "style": "button-square"},
 	"s5" : {"name": "進路相談室", "r":160, "g":128, "b":128, "style": "button-square"},
-	"s6" : {"name": "きまっし",   "r":160, "g":128, "b":128, "style": "button-square"},
+	"s6" : {"name": "きまっし!!", "r":160, "g":128, "b":128, "style": "button-square"},
 };
 
 const filterTargets = [
-	{"name": "debug", "condition": "after:2024-03-11 max:10"},
-	{"name": "シーズン1 みらくら待機室ラジオ", "condition": "tag:s1"},
-	{"name": "シーズン2 みらくら補習室ラジオ", "condition": "tag:s2"},
-	{"name": "シーズン3 みらくら準備室ラジオ", "condition": "tag:s3"},
-	{"name": "シーズン4 みらくら視聴覚室ラジオ", "condition": "tag:s4"},
+	{"name": "debug", "condition": "after:2024-07-10 max:10"},
+	{"name": "シーズン1 みらくら待機室ラジオ (全14回)", "condition": "tag:s1"},
+	{"name": "シーズン2 みらくら補習室ラジオ (全31回)", "condition": "tag:s2"},
+	{"name": "シーズン3 みらくら準備室ラジオ (全24回)", "condition": "tag:s3"},
+	{"name": "シーズン4 みらくら視聴覚室ラジオ (全13回)", "condition": "tag:s4"},
 	{"name": "シーズン5 みらくら進路相談室ラジオ", "condition": "tag:s5"},
 	{"name": "シーズン6 きまっし!!みらぱ！の部屋ラジオ", "condition": "tag:s6"},
 ];
@@ -70,7 +72,7 @@ const filterTargets = [
 const LLSPLayoutTemplate = (entry) => {
     const videoLength = (typeof entry['length'] === 'number' && entry['length'] >= 0 ? `<span class="length pc-only">動画：${convertSecondsToHHMMSS(entry['length'])}</span>` : '');
     const videoContent = ('tube' in entry && entry['tube'] ? `${LLSProcessor.getYouTubeLink(entry['tube'], entry['title'])}${videoLength}` : '');
-    const descContent = (typeof entry['desc'] === 'string' && entry['desc'] !== "" ? `<div class="desc">${convertMarkup(entry['desc'])}</div>` : '');
+    const descContent = (typeof entry['desc'] === 'string' && entry['desc'] !== "" ? convertMarkup(entry['desc']) : '');
 	const memoContent = (typeof entry['memo'] === 'string' && entry['memo'] !== "" ? convertMarkup(entry['memo']) : '');
 	const progContent = (typeof entry['program'] == 'object' && entry['program'].length ? convertMarkup(`{{EL::配信内容（クリックで展開）::{{UL::${entry['program'].join("::")}}}}}`) : '');
     const tagsContent = entry['tags'].map(tag => (tag in tagData ? createStyledTag(tagData[tag], tag) : '')).join('');
@@ -79,7 +81,7 @@ const LLSPLayoutTemplate = (entry) => {
 		<div class="article-box-date">${entry['date']}</div>
 		<div class="article-box-title">${entry['title']}</div>
 		<div class="article-box-tube">${videoContent}</div>
-		<div class="article-box-desc">${descContent + memoContent + progContent}</div>
+		<div class="article-box-desc">${descContent ? `<div class="desc">${descContent}</div>` : ''}${memoContent}${progContent}</div>
 		<div class="article-box-tags">${tagsContent}</div>
 	</article>`;
 }

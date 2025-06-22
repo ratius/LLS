@@ -50,8 +50,24 @@ const filterTargets = [
 //	{"name": "105期 上半期（2025年4月 - 2025年9月）",  "condition": "after:2025-04-01 before:2025-09-30"},
 //	{"name": "105期 下半期（2025年10月 - 2026年3月）", "condition": "after:2025-10-01 before:2026-03-31"},
 ];
+
+const LLSPLayoutTemplate = (entry) => {
+    const videoLength = (typeof entry['length'] === 'number' && entry['length'] >= 0 ? `<span class="length pc-only">動画：${convertSecondsToHHMMSS(entry['length'])}</span>` : '');
+    const videoContent = ('tube' in entry && entry['tube'] ? `${LLSProcessor.getYouTubeLink(entry['tube'], entry['title'])}${videoLength}` : '');
+    const descContent = (typeof entry['desc'] === 'string' && entry['desc'] !== "" ? convertMarkup(entry['desc']) : '');
+	const memoContent = (typeof entry['memo'] === 'string' && entry['memo'] !== "" ? convertMarkup(entry['memo']) : '');
+    const tagsContent = entry['tags'].map(tag => (tag in tagData ? createStyledTag(tagData[tag], tag) : '')).join('');
+	
+	return `<article>
+		<div class="article-box-date">${entry['date']}</div>
+		<div class="article-box-title">${entry['title']}</div>
+		<div class="article-box-tube">${videoContent}</div>
+		<div class="article-box-desc">${descContent ? `<div class="desc">${descContent}</div>` : ''}${memoContent}</div>
+		<div class="article-box-tags">${tagsContent}</div>
+	</article>`;
+}
 --></script>
-<script src="data/loader.js" data-src="data/sehasu.json,data/common-library.js,data/videolist.js"></script>
+<script src="data/loader.js" data-src="data/sehasu.json,data/common-library.js,module/LLS-processor.js"></script>
 </head>
 <body class="left">
 <main>
@@ -82,12 +98,12 @@ const filterTargets = [
 		<p>「動画リンク」列のサムネイル、または「動画へ」と書かれたリンクをクリック/タップすると、YouTubeの動画を開きます。<br>
 		104期以降に開催された「はすぽチャレンジ」の成否はネタバレになるため伏せてあります。黒い長方形の部分をクリック/タップすることで表示されます。</p>
 		<div id="Filter-Container">
-			<label for="VL-Filter">絞り込み</label>
-			<select id="VL-Filter">
+			<label for="LLSP-Filter">絞り込み</label>
+			<select id="LLSP-Filter">
 				<option value="">(期間を選択)</option>
 			</select>
 		</div>
-		<div id="VL-Result" class="output-box output-box-default">
+		<div id="LLSP-Result" class="output-box output-box-default">
 			このページでは、情報を表示するためにJavaScriptを使用します。<br>
 			いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
 			お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
