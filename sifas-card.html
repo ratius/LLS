@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta charset="utf-8">
+
+<meta property="og:url" content="https://ratius.github.io/LLS/sifas_card.html">
+<meta property="og:title" content="スクスタ カード実装状況">
+<meta property="og:type" content="website">
+<meta property="og:description" content="スクフェスALL STARSにおける、UR・SRの追加日時のまとめです。">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@ratius55">
+<meta name="twitter:creator" content="@ratius55">
+<meta name="twitter:title" content="スクスタ カード実装状況">
+<meta name="twitter:description" content="スクフェスALL STARSにおける、UR・SRの追加日時のまとめです。">
+<meta name="twitter:image" content="https://ratius.github.io/LLS/img/card_list.png">
+<meta name="description" content="スクフェスALL STARSにおける、UR・SRの追加日時のまとめです。">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>スクスタ カード実装状況 | ラブライブ！ストレージ</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+<link rel="stylesheet" href="main_gen2.css">
+<style><!--
+
+#Legend table{
+	border-collapse: collapse;
+	border: solid 3px #f29600;
+}
+
+#Legend thead {
+	background-color: #ffefd6;
+}
+
+#Legend td, #Legend th {
+	padding: 4px 12px;
+	border-top: solid 1px #ccc;
+	border-right: solid 1px #ccc;
+}
+
+.output-box {
+	overflow-x: scroll;
+}
+
+.cardlist-table {
+	text-align: center;
+	border-collapse: separate;
+	border-spacing: 0;
+}
+.cardlist-table td, .cardlist-table th {
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+}
+
+.HeaderL {
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	background-color: #cde;
+}
+.HeaderR {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	padding: 0;
+	background-color: white;
+	height: 42px;
+}
+.top-marker {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 4px;
+	border-radius: 20px 20px 0 0;
+}
+.shadowname {
+	color: white;
+	filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.7));
+}
+
+.cardlist-table tbody th {
+	padding: 3px;
+	font-size: 80%;
+	line-height: 150%;
+}
+.cardlist-table td {
+	position: relative;
+	width: 110px;
+	height: 40px;
+	font-size: 80%;
+	padding: 3px;
+}
+.cardlist-table td img {
+	vertical-align: bottom;
+}
+
+.UR > th {
+	position: sticky;
+	left: 0px;
+	z-index: 1;
+	background:linear-gradient(45deg, rgb(255,255,192)0%, rgb(255,208,208)25%, rgb(255,192,255)50%, rgb(208,208,255)75%,  rgb(192,255,255) 100%);
+}
+
+.SR > th {
+	position: sticky;
+	left: 0px;
+	z-index: 1;
+	background-color: #ccc;
+}
+
+.cap { font-size: 120%; }
+.sleep { color: #999; }
+
+.gacha  { background-color: #adf;}
+.reward { background-color: #abf;}
+.fes    { background-color: #fac;}
+.release{ background-color: #eee;}
+.party  { background-color: #ed8;}
+.none   { background-color: #ddd;}
+.scheduled { background-color: #ceb; color:#786;}
+.na     { background-color: #ffefe7; padding: 1px; border: solid 2px #ecb; color: #ba9;}
+--></style>
+
+<script src="data/loader.js" data-src="data/sifas-card.js,data/sifas-card.json,data/common-library.js"></script>
+</head>
+<body class="RM">
+<main>
+	<header>
+		<h1 id="TitleName">スクスタ 実装カード一覧</h1>
+	</header>
+
+	<nav class="right-menu">
+		<ul>	
+			<li><strong>目次</strong></li>
+			<li><hr></li>
+			<li><a href="#Summary">概要</a></li>
+			<li><a href="#Legend">凡例</a></li>
+			<li><a href="#CardList">カード一覧</a></li>
+			<li><ul>
+				<li><a href="#Muse">μ's</a></li>
+				<li><a href="#Aqours">Aqours</a></li>
+				<li><a href="#Niji">虹ヶ咲</a></li>
+			</ul></li>
+		<li><a href="#history">更新履歴</a></li>
+		</ul>
+	</nav>
+
+	<section id="summary">
+		<h2>概要</h2>	
+		<p>
+			「ラブライブ！スクールアイドルフェスティバルALL STARS」で実装されたUR・SRのまとめです。<br>
+			追加メンバーの「○枚目」は、URはゲーム内のパラメータの合計値を、SRは衣装セットを基準に設定しています。<br>
+			PCで閲覧している場合、セルにカーソルを当てることで詳しい情報のツールチップが出現します。
+		</p>
+	</section>
+
+	<section id="Legend">
+		<h2>凡例</h2>
+		<table>
+			<thead>
+				<tr><th>表記</th><th>解説</th></tr>
+			</thead>
+			<tbody>
+				<tr><th class="release">初期</th><td>恒常。そのキャラクターの実装と同時に登場したカード</td></tr>
+				<tr><th class="none">非イベ</th><td>恒常。初期実装分でなく、イベントとも無関係なカード</td></tr>
+				<tr><th class="gacha">Ｅ特効</th><td>恒常。イベントガチャで登場</td></tr>
+				<tr><th class="reward">Ｅ報酬</th><td>イベント報酬として登場</td></tr>
+				<tr><th class="fes">Ｆ限定</th><td><b>スクスタフェス限定</b>。特定のガチャから排出</td></tr>
+				<tr><th class="party">Ｐ限定</th><td><b>パーティーガチャ限定</b>。特定のガチャから排出</td></tr>
+			</tbody>
+		</table>
+	</section>
+
+<section id="CardList">
+	<h2 class="liella">カード一覧</h2>
+	<p>
+	以下の表は上下左右にスクロールすることができます。
+	</p>
+	<section id="Muse">
+		<h3>μ's</h3>
+		<div class="output-box" id="OutputMuse">
+		</div>
+	</section>
+
+	<section id="Aqours">
+		<h3>Aqours</h3>
+		<div class="output-box" id="OutputAqours">
+	</section>
+
+	<section id="Niji">
+		<h3>虹ヶ咲学園スクールアイドル同好会</h3>
+		<div class="output-box" id="OutputNiji">
+	</section>	
+</section>
+
+	<section id="History">
+		<h2>更新履歴</h2>
+		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
+		<div class="history-container">
+			<details open>
+				<summary class="important"><span class="date">2025/08/02</span> - リニューアル</summary>
+				<div>
+					<span class="icon-new"></span>CSSをアップデート<br>
+					<span class="icon-fix"></span>データ読み込み周りの仕様を変更<br>
+					<span class="icon-fix"></span>旧CSSのアップデートにより、レイアウトが意図しないものになっていた問題を修正
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2023/03/18</span></summary>
+				<div>
+					<span class="icon-new"></span>目次を追加
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2022/10/08</span></summary>
+				<div>
+					<span class="icon-fix"></span>栞子の列の表示調整（他の虹ヶ咲キャラの10枚目に相当するURが無いため）
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2022/06/25</span></summary>
+				<div>
+					<span class="icon-fix"></span>「UR ○枚目」の背景を、背景画像を用いない方法に変更<br>
+					<span class="icon-fix"></span>更新履歴をリニューアル（他ページ同様、折りたたみ式に変更）
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2022/01/19</span></summary>
+				<div>
+					<span class="icon-new"></span>凡例を追加<br>
+					<span class="icon-new"></span>SRの行にセット名を記載<br>
+					<span class="icon-fix"></span>栞子・ランジュ・ミアの欠損値のデザインを変更
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2021/09/08</span> - ミア・ランジュ実装に伴う調整</summary>
+				<div>
+					<span class="icon-new"></span>「ミア・テイラー」「鐘嵐珠」の列を追加
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2021/02/13</span> - パーティーガチャ登場に伴う調整</summary>
+				<div>
+					<span class="icon-new"></span>「パーティーガチャ限定」の表示に対応
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2021/08/05</span> - 栞子実装に伴う調整</summary>
+				<div>
+					<span class="icon-new"></span>「三船栞子」の列を追加
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2021/03/19</span> - 属性・タイプを追加</summary>
+				<div>
+					<span class="icon-new"></span>属性・タイプの表示を追加
+				</div>
+			</details>
+			<details>
+				<summary class="important"><span class="date">2021/03/15</span> - 公開</summary>
+				<div>
+					<span class="icon-new"></span>公開
+				</div>
+			</details>
+		</div>
+	</section>
+
+	<footer>
+		<nav>
+			<a id="BackToMain" href="index.html">トップページに戻る。</a>
+		</nav>
+	</footer>
+</main>
+</body>
+</html>
