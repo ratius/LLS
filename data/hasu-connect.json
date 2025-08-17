@@ -2862,9 +2862,27 @@
 {
 	"date": "2025-08-13",
 	"title": "三連華の日常。",
+	"desc": "花帆だよ！ 今、緊急で動画回してるの！ ・・・っていうのは嘘なんだけど、今回は録画回♪ 三連華の日常を録画してみたから、お楽しみに！",
+	"memo": "この配信ではWith×MEETS AFTERは行われなかった。{{NULL::未視聴}}",
+	"tags": ["meets", "Kaho", "Sayaka", "Rurino", "room-Rurino", "noafter"],
+	"tube": "",
+	"length": [-1, -1]
+},
+{
+	"date": "2025-08-16",
+	"title": "この徒町、何の徒町！？",
+	"desc": "はろはろの姫芽だよ〜 今日の企画をそのまま説明すると、「小鈴ちゃんが何の徒町か当てる」・・・って感じなんだけど、これじゃ伝わらないよね(￣▽￣;) 入りでのお楽しみってことにしときましょ〜",
+	"memo": "小鈴の動きを見て、何を表現しているのかを当てよう！<br>この配信ではWith×MEETS AFTERは行われなかった。",
+	"tags": ["meets", "Kaho", "Kosuzu", "Hime", "room-club", "noafter"],
+	"tube": "",
+	"length": [-1, -1]
+},
+{
+	"date": "2025-08-21",
+	"title": "未定",
 	"desc": "",
 	"memo": "{{NULL::未視聴}}",
-	"tags": ["meets", "Kaho", "Sayaka", "Rurino"],
+	"tags": ["meets", "Rurino", "Kosuzu", "Ceras"],
 	"tube": "",
 	"length": [-1, -1]
 },
