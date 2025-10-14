@@ -3032,8 +3032,7 @@
 {
 	"date": "2025-10-04",
 	"title": "Fes×ReC：LIVE Bloom Days Extra Day.1",
-	"desc": "",
-	"memo": "{{NULL::未視聴}}",
+	"memo": "このFes×LIVEは、リアルイベント「{{L::ラブライブ！蓮ノ空女学院スクールアイドルクラブ 5th Live Tour ～4Pair Power Spread!!!!～::https://www.lovelive-anime.jp/hasunosora/live-event/live_detail.php?p=4PPS}}」で流れるバーチャルライブを中継する形となっている。バーチャルライブ部分はあらかじめ撮られており、内容は10月5日のものと同じ。",
 	"setlist": ["MC", "フルーツパンチ", "太陽であれ！", "ニャオシグニャル", "片翼のトリバガ", "MC", "一生に夢が咲くように"],
 	"tags": ["live", "Kaho", "Sayaka", "Rurino", "Ginko", "Kosuzu", "Hime", "Ceras", "Izumi"],
 	"tube": "",
@@ -3042,8 +3041,7 @@
 {
 	"date": "2025-10-05",
 	"title": "Fes×ReC：LIVE Bloom Days Extra Day.2",
-	"desc": "",
-	"memo": "{{NULL::未視聴}}",
+	"memo": "このFes×LIVEは、リアルイベント「{{L::ラブライブ！蓮ノ空女学院スクールアイドルクラブ 5th Live Tour ～4Pair Power Spread!!!!～::https://www.lovelive-anime.jp/hasunosora/live-event/live_detail.php?p=4PPS}}」で流れるバーチャルライブを中継する形となっている。バーチャルライブ部分はあらかじめ撮られており、内容は10月4日のものと同じ。",
 	"setlist": ["MC", "フルーツパンチ", "太陽であれ！", "ニャオシグニャル", "片翼のトリバガ", "MC", "一生に夢が咲くように"],
 	"tags": ["live", "Kaho", "Sayaka", "Rurino", "Ginko", "Kosuzu", "Hime", "Ceras", "Izumi"],
 	"tube": "",
@@ -3051,10 +3049,46 @@
 },
 {
 	"date": "2025-10-09",
-	"title": "未定",
+	"title": "いっぱい舞っちゃおう！姫芽&さやかバージョン！",
+	"desc": "はろはろ〜姫芽ですよ〜 なんとショート動画風ダンス企画、第二回がやってきました(*´ω｀*) お相手はさやか先輩です〜、これはコラボと言ってもいいかもしれませんね〜(ﾟДﾟ)必見！",
+	"memo": "{{NULL::未視聴}}",
+	"tags": ["meets", "dance", "Sayaka", "Hime"],
+	"tube": "",
+	"length": [-1, -1]
+},
+{
+	"date": "2025-10-11",
+	"title": "失敗から学ぼう！",
+	"desc": "徒町です！ 突然ですがみなさんはこれまでどんなチャレンジをしてきましたか？ 本日は徒町のこれまでのチャレンジを紹介させていただきまして、是非皆さんのこれからのチャレンジを参考にしていただきたい、というチャレンジです！ ・・・なんだかややこしい文章になってしまいました！",
+	"memo": "{{NULL::未視聴}}",
+	"tags": ["meets", "Kosuzu"],
+	"tube": "",
+	"length": [-1, -1]
+},
+{
+	"date": "2025-10-13",
+	"title": "セラスちゃんこの後なんて言う？",
+	"desc": "ごきげんよう。桂城 泉だ。今日はセラスへの質問に対してセラスが何と解答するかという・・・そう、みなさんご存知「マニア」企画だ。<br>普段のセラスの言動を考えると、難易度は天を衝くかもしれないね。",
+	"memo": "{{NULL::未視聴}}",
+	"tags": ["meets", "Kaho", "Ginko", "Izumi"],
+	"tube": "",
+	"length": [-1, -1]
+},
+{
+	"date": "2025-10-15",
+	"title": "朗読するよ！",
 	"desc": "",
 	"memo": "{{NULL::未視聴}}",
-	"tags": ["meets", "Sayaka", "Hime"],
+	"tags": ["meets", "Kaho"],
+	"tube": "",
+	"length": [-1, -1]
+},
+{
+	"date": "2025-10-18",
+	"title": "いっぱい踊っちゃおう！吟子&瑠璃乃バージョン！",
+	"desc": "",
+	"memo": "{{NULL::未視聴}}",
+	"tags": ["meets", "dance", "Rurino", "Ginko"],
 	"tube": "",
 	"length": [-1, -1]
 },
