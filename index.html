@@ -181,7 +181,7 @@ h2 {
 
 <body style=" text-align: center; background: url('img/bg.png')">
 
-<h1><img id="titleimage" src="img/title_logo.png" width="640" height="160" alt="ラブライブ！ストレージ"></h1>
+<h1><img id="titleimage" src="img/title_logo.png" width="640" height="160" fetchpriority="high" alt="ラブライブ！ストレージ"></h1>
 
 <div id="caution"> <!--注意-->
 	<div id="caution-1"><span>⚠️</span></div>
@@ -192,6 +192,7 @@ h2 {
 	</div>
 </div>
 
+<main>
 <nav id="Menu">
 	<h2>CONTENTS</h2>
 	<p>
@@ -367,20 +368,12 @@ h2 {
 		</a>
 	</div>
 </nav>
+</main>
 
 <address style="color:#666; margin-bottom: 30px;">
 	ページ作成：らてぃ(@ratius55)<br>
 	ご意見・不具合報告・データの間違い報告などは<a href="https://twitter.com/ratius55" target="_blank" rel="noopener noreferrer" title="作者のX">作者のX</a>まで
 </address>
 
-<script><!--
-	document.getElementById('caution').style.display = 'none';
-	
-	//■デバック用
-	if(window.location.hostname === '127.0.0.1' || location.search.substring(1).split('&').indexOf('debug') >= 0) {
-		document.title = '[debug]' + document.title;
-	}
-	
---></script>
 </body>
 </html>
