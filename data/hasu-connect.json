@@ -2414,7 +2414,7 @@
 {
 	"date": "2025-03-30",
 	"title": "104期 Final Term Fes×LIVE -蓮華祭-",
-	"memo": "ライブ会場は、蓮ノ空女学院第2音楽堂。102期生にとっては最後となるFes×LIVE！<br>今回からYouTubeに代わって、専用WebサイトからFes×LIVEをリアルタイムで視聴できるようになった（AFTERも専用サイトから視聴可能）。",
+	"memo": "ライブ会場は、蓮ノ空女学院の第2音楽堂。102期生にとっては最後となるFes×LIVE！<br>今回からYouTubeに代わって、専用WebサイトからFes×LIVEをリアルタイムで視聴できるようになった（AFTERも専用サイトから視聴可能）。",
 	"setlist": ["全方位キュン♡", "COMPASS", "ユメワズライ", "MC", "Dream Believers", "MC", "いつでも、いつまでも", "MC", "365 Days (Fes×LIVE AFTERにて)"],
 	"tags": ["live", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime"],
 	"tube": "",
@@ -2709,7 +2709,7 @@
 {
 	"date": "2025-06-29",
 	"title": "105期 Fes×LIVE -撫子祭-",
-	"memo": "ライブ会場は、蓮ノ空女学院第2音楽堂。<br>104期時代に披露された衣装「アオクハルカ/華」「レディバグ/麗」「みらくりえーしょん/雅」「Edelied」が再登場。そして、今後のイベント「Bloom Garden Party」の発表も。",
+	"memo": "ライブ会場は、蓮ノ空女学院の2音楽堂。<br>104期時代に披露された衣装「アオクハルカ/華」「レディバグ/麗」「みらくりえーしょん/雅」「Edelied」が再登場。そして、今後のイベント「Bloom Garden Party」の発表も。",
 	"setlist": ["十六夜セレーネ", "MC", "37.5℃のファンタジー", "アイマイメーデー", "BLAST!!", "MC", "アイドゥーミー！"],
 	"tags": ["live", "Kaho", "Sayaka", "Rurino", "Ginko", "Kosuzu", "Hime", "Ceras", "Izumi"],
 	"length": [-1, -1]
@@ -3125,6 +3125,42 @@
 	"desc": "ジャック オー田 ランタンです。トリックオアトリート。意味はわかりますでしょうか。お菓子をくれなきゃ・・・この配信の無事は保証しませんよ。という意味です。",
 	"memo": "{{NULL::未視聴}}",
 	"tags": ["meets", "Rurino", "Kosuzu", "Ceras"],
+	"tube": "",
+	"length": [-1, -1]
+},
+{
+	"date": "2025-10-31",
+	"title": "105期 Fes×LIVE -竜胆祭-",
+	"memo": "ライブ会場は、蓮ノ空女学院の第2音楽堂。<br>配信の際、1曲目の『Dream Believers』でカメラがうまく切り替わらない不具合が発生し、配信が一時中断・仕切り直しとなるトラブルが発生した。",
+	"setlist": ["Dream Believers", "MC", "BLAST!!", "Retrofuture", "37.5℃のファンタジー", "アンペア", "MC", "はじまりの羽音"],
+	"tags": ["live", "Kaho", "Sayaka", "Rurino", "Ginko", "Kosuzu", "Hime", "Ceras", "Izumi"],
+	"tube": "",
+	"length": [-1, -1]
+},
+{
+	"date": "2025-11-01",
+	"title": "DOLLCHESTRAで竜胆祭振り返り",
+	"desc": "村野さやかです 今回のFes×LIVE振り返り入りはDOLLCHESTRAが務めさせていただきます 普段の振り返り配信とは少しだけ違う企画も用意していますので、なにとぞよろしくお願いします",
+	"memo": "{{NULL::未視聴}}",
+	"tags": ["meets",  "Sayaka", "Kosuzu"],
+	"tube": "",
+	"length": [-1, -1]
+},
+{
+	"date": "2025-11-03",
+	"title": "姫芽先輩のイメージを語りましょう",
+	"desc": "",
+	"memo": "{{NULL::未視聴}}",
+	"tags": ["meets", "Hime", "Ceras"],
+	"tube": "",
+	"length": [-1, -1]
+},
+{
+	"date": "2025-11-06",
+	"title": "蓮ノ空あるある",
+	"desc": "",
+	"memo": "この回はあらかじめ録画した分の配信であることが公言されていた。{{NULL::未視聴}}",
+	"tags": ["meets", "Sayaka", "Ginko", "Izumi"],
 	"tube": "",
 	"length": [-1, -1]
 },
