@@ -94,23 +94,27 @@ const convertMarkup = (str) => {
 
 		let strConverted = "";
 
-		switch (strInParentheses[0].toLowerCase()) {
+		const firstVariable = strInParentheses[0].toLowerCase();
+		const secondVariable = (strInParentheses.length >= 2 ? strInParentheses[1] : null);
+		if(secondVariable === null){
+			console.error(`エラー：変数が不足 (${strInParentheses[0]})`);
+			return strFormer + convertMarkup(strLatter);
+		}
+		switch (firstVariable) {
 			case 'l': // 外部リンクを作成 {{L::文字列::URL(::クラス)}} クラス省略時は "exlink"
 				if (strInParentheses.length >= 3) {
-					const LinkClass = (strInParentheses.length > 3 ? strInParentheses[3] : 'exlink');
-					strConverted = makeExternalLink(strInParentheses[1], strInParentheses[2], LinkClass);
+					const LinkClass = (strInParentheses.length >= 4 ? strInParentheses[3] : 'exlink');
+					strConverted = makeExternalLink(secondVariable, strInParentheses[2], LinkClass);
 				}
 				break;
 
 			case 's': // ネタバレを作成 {{S::文字列}}
-				if (strInParentheses.length >= 2) {
-					strConverted = `<span class="spoiler" onclick="revealSpoiler(this)">${strInParentheses[1]}</span>`;
-				}
+				strConverted = `<span class="spoiler" onclick="revealSpoiler(this)">${secondVariable}</span>`;
 				break;
 
 			case 'n': // 脚注になる部分を明記 {{N::文字列}}
 				if (strInParentheses.length >= 3) {
-					strConverted = `<span class="_pre-note" data-note="${strInParentheses[2]}">${strInParentheses[1]}</span>`;
+					strConverted = `<span class="_pre-note" data-note="${strInParentheses[2]}">${secondVariable}</span>`;
 				}
 				break;
 
@@ -123,26 +127,34 @@ const convertMarkup = (str) => {
 				break;
 
 			case 'el': // 折りたたみ要素を展開　{{EL::タイトル::内容::クラス}}
-				const detailsClass = (strInParentheses[3] ? ` class="${strInParentheses[3]}"` : "");
-				strConverted = `<details${detailsClass}><summary>${strInParentheses[1]}</summary><div>${strInParentheses[2]}</div></details>`;
+				if (strInParentheses.length >= 3) {
+					const detailsClass = (strInParentheses[3] ? ` class="${strInParentheses[3]}"` : "");
+					strConverted = `<details${detailsClass}><summary>${secondVariable}</summary><div>${strInParentheses[2]}</div></details>`;
+				}
 				break;
 
 			case 'xl': // PC版限定の、ラブライブ！シリーズ公式Xへのリンクを作成 {{XH::文字列::数字17桁}}
 				if (strInParentheses.length >= 3) {
-					strConverted = `<span class="pc-only">（<a href="https://x.com/LoveLive_staff/status/${strInParentheses[2]}" target="_blank" rel="noopener noreferrer">${strInParentheses[1]}</a>）</span>`;
+					strConverted = `<span class="pc-only">（<a href="https://x.com/LoveLive_staff/status/${strInParentheses[2]}" target="_blank" rel="noopener noreferrer">${secondVariable}</a>）</span>`;
 				}
 				break;
 
 			case 'xh': // PC版限定の、蓮ノ空女学院公式Xへのリンクを作成 {{XH::文字列::数字17桁}}
 				if (strInParentheses.length >= 3) {
-					strConverted = `<span class="pc-only">（<a href="https://x.com/hasunosora_SIC/status/${strInParentheses[2]}" target="_blank" rel="noopener noreferrer">${strInParentheses[1]}</a>）</span>`;
+					strConverted = `<span class="pc-only">（<a href="https://x.com/hasunosora_SIC/status/${strInParentheses[2]}" target="_blank" rel="noopener noreferrer">${secondVariable}</a>）</span>`;
 				}
 				break;
 
 			case 'yt': // YouTube動画のURLを取得 {{YT::動画ID::頭出し秒数}}
-				const videoId = strInParentheses[1];
-				if (strInParentheses.length >= 2) {
-					strConverted = `https://www.youtube.com/watch?v=${videoId}${strInParentheses.length >= 3 ? `&t=${strInParentheses[2]}s` : ""}`
+				strConverted = `https://www.youtube.com/watch?v=${secondVariable}${strInParentheses.length >= 3 ? `&t=${strInParentheses[2]}s` : ""}`;
+				break;
+
+			case 'ys': // YouTubeショート動画のURLを取得 {{YS::動画ID}}
+			case 'tt': // ラブライブ公式TikTok動画のURLを取得 {{TT::動画ID}}
+				if(firstVariable === "ys") {
+					strConverted = `https://www.youtube.com/shorts/${secondVariable}`;
+				} else if(firstVariable === "tt") {
+				strConverted = `https://www.tiktok.com/@lovelive_official/video/${secondVariable}`;
 				}
 				break;
 
