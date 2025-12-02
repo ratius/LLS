@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta charset="utf-8">
+
+<meta name="description" content="ラブライブ！シリーズ公式YouTubeチャンネルに投稿されたリリックビデオの一覧。">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="ラブライブ！シリーズ 楽曲動画まとめ">
+<meta property="og:url" content="https://ratius.github.io/LLS/musicvideo.html">
+<meta property="og:image" content="https://ratius.github.io/LLS/card/musicvideo.jpg">
+<meta property="og:description" content="ラブライブ！シリーズ公式YouTubeチャンネルに投稿されたリリックビデオの一覧。">
+<meta property="og:site_name" content="ラブライブ！ストレージ">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ラブライブ！シリーズ 楽曲動画まとめ">
+<meta name="twitter:description" content="ラブライブ！シリーズ公式YouTubeチャンネルに投稿されたリリックビデオの一覧。">
+<meta name="twitter:site" content="@ratius55">
+<meta name="twitter:creator" content="@ratius55">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e50080">
+
+<title>ラブライブ！シリーズ 楽曲動画まとめ | ラブライブ！ストレージ</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+<link rel="stylesheet" href="main_gen2.css">
+<link rel="stylesheet" href="data/videolist.css">
+<script><!--
+const tagData = {
+	"MV" : {"name": "ミュージックビデオ", "r":160, "g":112, "b": 96, "style": "button-square"},
+	"Lyric" : {"name": "リリックビデオ", "r":160, "g":112, "b": 96, "style": "button-square"},
+	"Anime" : {"name": "アニメ映像", "r":160, "g":112, "b": 96, "style": "button-square"},
+
+	"Game" : {"name": "ゲーム映像", "r":160, "g":112, "b": 96, "style": "button-square"},
+	"SIFAS" : {"name": "スクスタ", "r":160, "g":112, "b": 96, "style": "button-square"},
+
+	"Muse" : {"name": "ラブライブ！", "r":229, "g":  0, "b":128, "style": "button-round"},
+	"Aqours" : {"name": "サンシャイン!!", "r": 25, "g":177, "b":246, "style": "button-round"},
+	"YYY" : {"name": "わいわいわい", "r": 25, "g":177, "b":246, "style": "button-round"},
+	"Niji" : {"name": "虹ヶ咲", "r":248, "g":182, "b": 86, "style": "button-round"},
+	"Liella" : {"name": "スーパースター!!", "r":218, "g": 87, "b":216, "style": "button-round"},
+	"CatChu" : {"name": "CatChu!", "r":218, "g": 87, "b":216, "style": "button-round"},
+	"KALEIDOSCORE" : {"name": "KALEDOSCORE", "r":218, "g": 87, "b":216, "style": "button-round"},
+	"5yncri5e" : {"name": "5yncri5e!", "r":218, "g": 87, "b":216, "style": "button-round"},
+
+	"Yohane" : {"name": "幻日のヨハネ", "r": 25, "g":115, "b":125, "style": "button-round"},
+
+	"Hasu" : {"name": "蓮ノ空", "r":196, "g":  0, "b": 53, "style": "button-round"},
+	"CeriesBouquet" : {"name": "スリーズブーケ", "r":196, "g":  0, "b": 53, "style": "button-round"},
+	"DOLLCHESTRA" : {"name": "DOLLCHESTRA", "r":196, "g":  0, "b": 53, "style": "button-round"},
+	"MiracraPark" : {"name": "みらくらぱーく！", "r":196, "g":  0, "b": 53, "style": "button-round"},
+	"EdelNote" : {"name": "Edel Note", "r":196, "g":  0, "b": 53, "style": "button-round"},
+	"RuriTo" : {"name": "Ruri&To", "r":196, "g":  0, "b": 53, "style": "button-round"},
+	"PRINCESS" : {"name": "PRINCEε>ε>", "r":196, "g":  0, "b": 53, "style": "button-round"},
+
+	"Ikizulive" : {"name": "イキヅライブ！", "r":  0, "g":139, "b":194, "style": "button-round"},
+	"AiScReam" : {"name": "AiScReam", "r":192, "g":192, "b":192, "style": "button-round"}
+};
+
+const filterTargets = [
+	{"name": "すべて", "condition": "after:2010-01-01"},
+	{"name": "ラブライブ！", "condition": "tag:Muse"},
+	{"name": "ラブライブ！サンシャイン!!", "condition": "tag:Aqours"},
+	{"name": "ラブライブ！虹ヶ咲学園スクールアイドル同好会", "condition": "tag:Niji"},
+	{"name": "┗ 虹ヶ咲 TVアニメ", "condition": "tag:Niji tag:Anime"},
+	{"name": "ラブライブ！スーパースター!!", "condition": "tag:SuperStar"},
+	{"name": "┗ スーパースター!! TVアニメ", "condition": "tag:SuperStar tag:Anime"},
+	{"name": "ラブライブ！蓮ノ空女学院スクールアイドルクラブ", "condition": "tag:Hasu"},
+	{"name": "┣ スリーズブーケ", "condition": "tag:CeriesBouquet"},
+	{"name": "┣ DOLLCHESTRA", "condition": "tag:DOLLCHESTRA"},
+	{"name": "┣ みらくらぱーく！", "condition": "tag:MiracraPark"},
+	{"name": "┗ Edel Note", "condition": "tag:EdelNote"},
+	{"name": "幻日のヨハネ", "condition": "tag:Yohane"},
+	{"name": "イキヅライブ！ -LOVELIVE BLUEBIRD-", "condition": "tag:Ikizulive"},
+	{"name": "----"},
+	{"name": "スクスタ", "condition": "tag:SIFAS"}
+];
+
+const LLSPLayoutTemplate = (entry) => {
+    const videoLength = (typeof entry['length'] === 'number' && entry['length'] >= 0 ? `<span class="length pc-only">動画：${convertSecondsToHHMMSS(entry['length'])}</span>` : '');
+    const videoContent = ('tube' in entry && entry['tube'] ? `${LLSProcessor.getYouTubeLink(entry['tube'], entry['title'])}${videoLength}` : '');
+    const descContent = (typeof entry['desc'] === 'string' && entry['desc'] !== "" ? convertMarkup(entry['desc']) : '');
+	const memoContent = (typeof entry['memo'] === 'string' && entry['memo'] !== "" ? convertMarkup(entry['memo']) : '');
+    const tagsContent = entry['tags'].map(tag => (tag in tagData ? createStyledTag(tagData[tag], tag) : '')).join('');
+	
+	return `<article>
+		<div class="article-box-date">${entry['date']}</div>
+		<div class="article-box-title">${entry['title']}</div>
+		<div class="article-box-tube">${videoContent}</div>
+		<div class="article-box-desc">${descContent ? `<div class="desc">${descContent}</div>` : ''}${memoContent}</div>
+		<div class="article-box-tags">${tagsContent}</div>
+	</article>`;
+}
+--></script>
+<script src="data/loader.js" data-src="data/musicvideo.json,data/common-library.js,module/LLS-processor.js"></script>
+</head>
+<body class="left">
+<main>
+	<header>
+		<h1 id="TitleName">ラブライブ！シリーズ 楽曲動画まとめ</h1>
+		<nav class="right-menu">
+			<ul>
+				<li><strong>目次</strong></li>
+				<li><hr></li>
+				<li><a href="#Summary">概要</a></li>
+				<li><a href="#VideoList">動画一覧</a></li>
+				<li><a href="#History">更新履歴</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section id="Summary">
+		<h2>概要</h2>
+		<p>
+			ラブライブ！シリーズ公式YouTubeチャンネルに投稿された楽曲動画（リリックビデオ、アニメライブ映像など）のまとめです。<br>
+		</p>
+	</section>
+
+	<section id="VideoList">
+		<h2>動画一覧</h2>
+		<p>下部のプルダウンメニューから絞り込み条件を選択すると、条件に合致する動画が表示されます。
+		</p>
+		<p>「動画リンク」列のサムネイル、または「動画へ」と書かれたリンクをクリック/タップすると、YouTubeの動画を開きます。<br>
+		<div id="Filter-Container">
+			<label for="LLSP-Filter">絞り込み</label>
+			<select id="LLSP-Filter">
+				<option value="">(期間を選択)</option>
+			</select>
+		</div>
+		<div id="LLSP-Result" class="output-box output-box-default">
+			このページでは、情報を表示するためにJavaScriptを使用します。<br>
+			いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
+			お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
+		</div>
+	</section>
+
+	<section id="History">
+		<h2>更新履歴（動画一覧への掲載以外）</h2>
+		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
+		<div class="history-container">
+			<details open>
+				<summary class="important"><span class="date">2025/01/22</span> - 公開</summary>
+				<div>
+					<span class="icon-new"></span>公開
+				</div>
+			</details>
+		</div>
+	</section>
+
+	<footer>
+		<nav>
+			<a id="BackToMain" href="index.html">トップページに戻る。</a>
+		</nav>
+	</footer>
+</main>
+</body>
+</html>
