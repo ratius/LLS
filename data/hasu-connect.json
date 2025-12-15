@@ -3274,10 +3274,19 @@
 },
 {
 	"date": "2025-12-18",
-	"title": "未定",
+	"title": "小鈴と姫芽で雑談！",
 	"desc": "",
 	"memo": "{{NULL::未視聴}}",
 	"tags": ["meets", "Kosuzu", "Hime"],
+	"tube": "",
+	"length": [-1, -1]
+},
+{
+	"date": "2025-12-20",
+	"title": "アンケート対決リベンジ！",
+	"desc": "",
+	"memo": "{{NULL::未視聴}}",
+	"tags": ["meets", "Rurino", "Hime"],
 	"tube": "",
 	"length": [-1, -1]
 },
