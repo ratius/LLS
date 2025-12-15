@@ -128,6 +128,7 @@ const MemberGroup = [
 	[""  ,"スクールアイドルミュージカル",["Musical"]],
 	[""  ,"蓮ノ空女学院スクールアイドルクラブ",["Hasu"]],
 	["┣","蓮ノ空関係者",["Hasu", "Hasu2"]],
+	["┣","蓮ノ空カップリング",["HasuCP"]],
 	["┣","蓮ノ空キャスト",["HasuCast"]],
 	["┗","蓮ノ空ユニット",["HasuUnit"]],
 	[""  ,"いきづらい部！",["BlueBird"]],
@@ -608,6 +609,8 @@ const CharList = [
 	{name:"しいな", color:["#eee"], group:{"Hasu2":1}},
 	{name:"村野つかさ", color:["#eee"], group:{"Hasu2":1}},
 	{name:"吟子の祖母", color:["#eee"], group:{"Hasu2":1}},
+	{name:"日野下ふたば", color:["#eee"], group:{"Hasu2":1}},
+	{name:"日野下みのり", color:["#eee"], group:{"Hasu2":1}},
 
 	{name:"楡井希実",   subtext:"日野下花帆 役", color:[ColKaho], group:{"HasuCast":1}},
 	{name:"野中ここな", subtext:"村野さやか 役", color:[ColSaya], group:{"HasuCast":1}},
@@ -624,13 +627,65 @@ const CharList = [
 	{name:"蓮ノ空102期生", subtext:"乙宗梢<br>夕霧綴理<br>藤島慈", color:[ColKozu, ColTsuz, ColMegu], group:{"HasuUnit":1}},
 	{name:"蓮ノ空103期生", subtext:"日野下花帆<br>村野さやか<br>大沢瑠璃乃", color:[ColKaho, ColSaya, ColRuri], group:{"HasuUnit":1}},
 	{name:"蓮ノ空104期生", subtext:"百生吟子<br>徒町小鈴<br>安養寺姫芽", color:[ColGink, ColKosu, ColHime], group:{"HasuUnit":1}},
-	{name:"スリーズブーケ",   subtext:"日野下花帆<br>乙宗梢<br>百生吟子", color:[ColKaho,ColKozu,ColGink], group:{"HasuUnit":1, "MainUnit":1}},
-	{name:"DOLLCHESTRA",      subtext:"村野さやか<br>夕霧綴理<br>徒町小鈴", color:[ColSaya,ColTsuz,ColKosu], group:{"HasuUnit":1, "MainUnit":1}},
+	{name:"スリーズブーケ", subtext:"日野下花帆<br>乙宗梢<br>百生吟子", color:[ColKaho,ColKozu,ColGink], group:{"HasuUnit":1, "MainUnit":1}},
+	{name:"DOLLCHESTRA", subtext:"村野さやか<br>夕霧綴理<br>徒町小鈴", color:[ColSaya,ColTsuz,ColKosu], group:{"HasuUnit":1, "MainUnit":1}},
 	{name:"みらくらぱーく！", subtext:"大沢瑠璃乃<br>藤島慈<br>安養寺姫芽", color:[ColRuri,ColMegu,ColHime], group:{"HasuUnit":1, "MainUnit":1}},
-	{name:"Edel Note",      subtext:"セラス 柳田 リリエンフェルト<br>桂城泉", color:[ColCera, ColIzum], group:{"HasuUnit":1, "MainUnit":1}},
-	{name:"かほめぐ♡じぇらーと",       subtext:"日野下花帆<br>藤島慈",   color:[ColKaho,ColMegu], group:{"HasuUnit":1, "MainUnit":1}},
+	{name:"Edel Note", subtext:"セラス 柳田 リリエンフェルト<br>桂城泉", color:[ColCera, ColIzum], group:{"HasuUnit":1, "MainUnit":1}},
+	{name:"かほめぐ♡じぇらーと", subtext:"日野下花帆<br>藤島慈",   color:[ColKaho,ColMegu], group:{"HasuUnit":1, "MainUnit":1}},
 	{name:"るりのとゆかいなつづりたち", namealt:"るりのとゆかいな<br>つづりたち", subtext:"大沢瑠璃乃<br>夕霧綴理", color:[ColRuri,ColTsuz], group:{"HasuUnit":1, "MainUnit":1}},
-	{name:"蓮ノ休日",                  subtext:"村野さやか<br>乙宗梢",   color:[ColSaya,ColKozu], group:{"HasuUnit":1, "MainUnit":1}},
+	{name:"蓮ノ休日", subtext:"村野さやか<br>乙宗梢", color:[ColSaya,ColKozu], group:{"HasuUnit":1, "MainUnit":1}},
+	{name:"Ruri&To", subtext:"大沢瑠璃乃<br>村野さやか<br>徒町小鈴<br>セラス 柳田 リリエンフェルト", color:[ColRuri, ColSaya, ColKosu, ColCera], group:{"HasuUnit":1, "MainUnit":1}},
+	{name:"PRINCEε>ε>", subtext:"安養寺姫芽<br>日野下花帆<br>百生吟子<br>桂城泉",   color:[ColHime, ColKaho, ColGink, ColIzum], group:{"HasuUnit":1, "MainUnit":1}},
+
+	{name:"こずつづ",  color:[ColKozu, ColTsuz], group:{"HasuCP":1}},
+	{name:"こずめぐ",  color:[ColKozu, ColMegu], group:{"HasuCP":1}},
+	{name:"こずかほ",  color:[ColKozu, ColKaho], group:{"HasuCP":1}},
+	{name:"こずさや",  color:[ColKozu, ColSaya], group:{"HasuCP":1}},
+	{name:"こずるり",  color:[ColKozu, ColRuri], group:{"HasuCP":1}},
+	{name:"こずぎん",  color:[ColKozu, ColGink], group:{"HasuCP":1}},
+	{name:"こずすず",  color:[ColKozu, ColKosu], group:{"HasuCP":1}},
+	{name:"こずひめ",  color:[ColKozu, ColHime], group:{"HasuCP":1}},
+	{name:"つづめぐ",  color:[ColTsuz, ColMegu], group:{"HasuCP":1}},
+	{name:"つづかほ",  color:[ColTsuz, ColKaho], group:{"HasuCP":1}},
+	{name:"つづさや",  color:[ColTsuz, ColSaya], group:{"HasuCP":1}},
+	{name:"つづるり",  color:[ColTsuz, ColRuri], group:{"HasuCP":1}},
+	{name:"つづぎん",  color:[ColTsuz, ColGink], group:{"HasuCP":1}},
+	{name:"つづすず",  color:[ColTsuz, ColKosu], group:{"HasuCP":1}},
+	{name:"つづひめ",  color:[ColTsuz, ColHime], group:{"HasuCP":1}},
+	{name:"かほめぐ",  color:[ColKaho, ColMegu], group:{"HasuCP":1}},
+	{name:"めぐさや",  color:[ColMegu, ColSaya], group:{"HasuCP":1}},
+	{name:"めぐるり",  color:[ColMegu, ColRuri], group:{"HasuCP":1}},
+	{name:"めぐぎん",  color:[ColMegu, ColGink], group:{"HasuCP":1}},
+	{name:"めぐすず",  color:[ColMegu, ColKosu], group:{"HasuCP":1}},
+	{name:"めぐひめ",  color:[ColMegu, ColHime], group:{"HasuCP":1}},
+	{name:"さやかほ",  color:[ColSaya, ColKaho], group:{"HasuCP":1}},
+	{name:"かほるり",  color:[ColKaho, ColRuri], group:{"HasuCP":1}},
+	{name:"かほぎん",  color:[ColKaho, ColGink], group:{"HasuCP":1}},
+	{name:"かほすず",  color:[ColKaho, ColKosu], group:{"HasuCP":1}},
+	{name:"かほひめ",  color:[ColKaho, ColHime], group:{"HasuCP":1}},
+	{name:"セラかほ",  color:[ColCera, ColKaho], group:{"HasuCP":1}},
+	{name:"かほいず",  color:[ColKaho, ColIzum], group:{"HasuCP":1}},
+	{name:"さやるり",  color:[ColSaya, ColRuri], group:{"HasuCP":1}},
+	{name:"さやぎん",  color:[ColSaya, ColGink], group:{"HasuCP":1}},
+	{name:"さやすず",  color:[ColSaya, ColKosu], group:{"HasuCP":1}},
+	{name:"さやひめ",  color:[ColSaya, ColHime], group:{"HasuCP":1}},
+	{name:"さやセラ",  color:[ColSaya, ColCera], group:{"HasuCP":1}},
+	{name:"さやいず",  color:[ColSaya, ColIzum], group:{"HasuCP":1}},
+	{name:"るりぎん",  color:[ColRuri, ColGink], group:{"HasuCP":1}},
+	{name:"るりすず",  color:[ColRuri, ColKosu], group:{"HasuCP":1}},
+	{name:"るりひめ",  color:[ColRuri, ColHime], group:{"HasuCP":1}},
+	{name:"るりセラ",  color:[ColRuri, ColCera], group:{"HasuCP":1}},
+	{name:"るりいず",  color:[ColRuri, ColIzum], group:{"HasuCP":1}},
+	{name:"ぎんすず",  color:[ColGink, ColKosu], group:{"HasuCP":1}},
+	{name:"ぎんひめ",  color:[ColGink, ColHime], group:{"HasuCP":1}},
+	{name:"ぎんセラ",  color:[ColGink, ColCera], group:{"HasuCP":1}},
+	{name:"ぎんいず",  color:[ColGink, ColIzum], group:{"HasuCP":1}},
+	{name:"すずひめ",  color:[ColKosu, ColHime], group:{"HasuCP":1}},
+	{name:"すずセラ",  color:[ColKosu, ColCera], group:{"HasuCP":1}},
+	{name:"すずいず",  color:[ColKosu, ColIzum], group:{"HasuCP":1}},
+	{name:"ひめセラ",  color:[ColHime, ColCera], group:{"HasuCP":1}},
+	{name:"ひめいず",  color:[ColHime, ColIzum], group:{"HasuCP":1}},
+	{name:"セラいず",  color:[ColCera, ColIzum], group:{"HasuCP":1}},
 
 	{name:"高橋ポルカ", color:[ColPolB], group:{"BlueBird":1}},
 	{name:"麻布麻衣",   color:[ColMaiB], group:{"BlueBird":1}},
@@ -1195,6 +1250,13 @@ function shuffle(array) {
 <p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 <div id="history2">
 	<details open>
+		<summary><span class="date">2025/12/15</span> - モード追加 他</summary>
+		<div>
+			<span class="new"></span>「蓮ノ空カップリング」モードを追加<br>
+			<span class="new"></span>蓮ノ空：「日野下ふたば」「日野下みのり」「Ruri&To」「PRINCEε>ε>」を追加<br>
+		</div>
+	</details>
+	<details>
 		<summary><span class="date">2025/05/15</span> - モード追加 他</summary>
 		<div>
 			<span class="new"></span>「イキヅライブ！」及びそのキャストを追加<br>
