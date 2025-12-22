@@ -1123,13 +1123,31 @@
 	"length": 930
 },
 {
-	"date": "2099-01-01",
+	"date": "2025-12-12",
 	"title": "#31 シャッフルユニットバトル②",
 	"desc": "白熱のジェスチャーゲーム！ みらぱ！バチバチ！？",
 	"memo": "",
 	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
 	"tube": "_QxQIFbI0Wc",
 	"length": 891
+},
+{
+	"date": "2025-12-19",
+	"title": "#32 シャッフルユニットバトル 完結編！",
+	"desc": "シャッフルユニットバトル決着！ リーダー大奮闘！",
+	"memo": "",
+	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
+	"tube": "3j3Izn_uQsw",
+	"length": 862
+},
+{
+	"date": "2099-12-26",
+	"title": "#33 未定",
+	"desc": "",
+	"memo": "",
+	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
+	"tube": "",
+	"length": -1
 },
 {
 	"date": "2099-01-01",
