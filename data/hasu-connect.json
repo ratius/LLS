@@ -3265,9 +3265,52 @@
 {
 	"date": "2025-12-25",
 	"title": "クリスマスプレゼントのお届けです",
+	"desc": "セラス 柳田 ジングルベルトです。ところで今日はクリスマスですね。ありますよ、プレゼント。お楽しみに。",
+	"memo": "今日はクリスマス。セラスがみんなからのビデオメッセージを紹介！<br>プレゼントは、期間限定の有償セットを販売開始する、という形で行われた。{{XH::公式ポスト::2004160835099545712}}",
+	"tags": ["meets", "Kaho", "Sayaka", "Rurino", "Ginko", "Kosuzu", "Hime", "Ceras", "Izumi", "room-Ceras"]
+},
+{
+	"date": "2025-12-28",
+	"title": "105期 Fes×LIVE 〜The Buds after Snowmelt〜",
+	"memo": "ライブ会場は、蓮ノ空女学院の校舎前ステージ。",
+	"setlist": ["MC", "乙女詩華集", "バイタルサイン", "ガランドFlash", "シアター生き様", "MC", "雪舞う空と二秒の永遠"],
+	"tags": ["live", "Kaho", "Sayaka", "Rurino", "Ginko", "Kosuzu", "Hime", "Ceras", "Izumi"],
+	"tube": "",
+	"length": [-1, -1]
+},
+{
+	"date": "2025-12-29",
+	"title": "三蓮華でまったり振り返り配信",
+	"desc": "大沢瑠璃乃だよ☆ Fes×LIVEおつかれっしたー！ってことで！ 今日はこたつに入りながら三蓮花でまったり配信だよ！ 今年最後のWith×MEETSもいつも通りよろしくね！",
+	"memo": "この回は3Dモデルの登場はなく、慈の描いた一枚絵が常時表示されたままであった。{{NULL::未視聴}}",
+	"tags": ["meets", "Kaho", "Sayaka", "Rurino"],
+	"tube": "",
+	"length": [-1, -1]
+},
+{
+	"date": "2026-01-05",
+	"title": "未定",
 	"desc": "",
 	"memo": "{{NULL::未視聴}}",
-	"tags": ["meets", "Ceras"],
+	"tags": ["meets", "Ginko", "Ceras"],
+	"tube": "",
+	"length": [-1, -1]
+},
+{
+	"date": "2026-01-08",
+	"title": "未定",
+	"desc": "",
+	"memo": "{{NULL::未視聴}}",
+	"tags": ["meets", "Sayaka"],
+	"tube": "",
+	"length": [-1, -1]
+},
+{
+	"date": "2026-01-10",
+	"title": "未定",
+	"desc": "",
+	"memo": "{{NULL::未視聴}}",
+	"tags": ["meets", "Izumi"],
 	"tube": "",
 	"length": [-1, -1]
 },
