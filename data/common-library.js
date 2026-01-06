@@ -79,10 +79,10 @@ const convertMarkup = (str) => {
 	const pFirstClose = str.search("}}");
 
 	if (pFirstOpen === -1 || pFirstOpen > pFirstClose) { return str; }
-	// 開き括弧や閉じ括弧が欠けているか、かつ最初の閉じ括弧が最初の開き括弧よりも先に来る場合、何もしない
+	// 開き括弧が欠けているか、最初の閉じ括弧が最初の開き括弧よりも先に来る場合、何もしない
 
-	if (pSecondOpen < pFirstClose && pSecondOpen !== -1) {
-		// 【X{{Y{{Z】 最初の閉じ括弧が、2番目の開き括弧よりも後にある場合：
+	if (pSecondOpen !== -1 && pSecondOpen < pFirstClose) {
+		// 【X{{Y{{Z】 2番目の開き括弧が存在し、最初の閉じ括弧が2番目の開き括弧よりも後にある場合：
 		// 【Y{{Z】部分に対してconvertMarkUpを行った後、全体に対してconvertMarkupにを行う
 		return convertMarkup(str.substring(0, pSecondOpen) + convertMarkup(str.substring(pSecondOpen)));
 	} else {
