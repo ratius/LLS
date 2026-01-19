@@ -1090,7 +1090,6 @@
 	"date": "2025-11-14",
 	"title": "#27 心理テストで仲を深めよう！①",
 	"desc": "心理テストで深層心理に迫る！ かんかん大ショック！？",
-	"memo": "",
 	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
 	"tube": "RQ6RacZqe8U",
 	"length": 1086
@@ -1099,7 +1098,6 @@
 	"date": "2025-11-21",
 	"title": "#28 心理テストで仲を深めよう！②",
 	"desc": "心理テスト後半戦！ のんちゅけ撃沈！？",
-	"memo": "",
 	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
 	"tube": "LUa_onbKG88",
 	"length": 1057
@@ -1126,7 +1124,6 @@
 	"date": "2025-12-12",
 	"title": "#31 シャッフルユニットバトル②",
 	"desc": "白熱のジェスチャーゲーム！ みらぱ！バチバチ！？",
-	"memo": "",
 	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
 	"tube": "_QxQIFbI0Wc",
 	"length": 891
@@ -1135,7 +1132,6 @@
 	"date": "2025-12-19",
 	"title": "#32 シャッフルユニットバトル 完結編！",
 	"desc": "シャッフルユニットバトル決着！ リーダー大奮闘！",
-	"memo": "",
 	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
 	"tube": "3j3Izn_uQsw",
 	"length": 862
@@ -1144,10 +1140,25 @@
 	"date": "2025-12-26",
 	"title": "#33 プレゼント交換会！",
 	"desc": "クリスマスエピソード大放出！ キャストチョイスプレゼント交換も！",
-	"memo": "",
 	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
-	"tube": "",
-	"length": -1
+	"tube": "KMZXfYuCu_I",
+	"length": 1292
+},
+{
+	"date": "2026-01-09",
+	"title": "#34 おにごっこしよう！",
+	"desc": "おにごっこしよう！ 逃走劇の結末は！？",
+	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
+	"tube": "jXuUUYjY4-w",
+	"length": 1375
+},
+{
+	"date": "2026-01-16",
+	"title": "#35 ひらめきクイーン決定戦！",
+	"desc": "ひらめきクイズ大会！ ひらめきクイーンに輝くのは！？",
+	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
+	"tube": "-1HqcxVtQns",
+	"length": 1156
 },
 {
 	"date": "2099-01-01",
