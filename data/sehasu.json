@@ -978,7 +978,6 @@
 	"date": "2025-08-01",
 	"title": "#14 ユニット旅　みらくらぱーく！編　チャウチャウに会いに行ってみた！",
 	"desc": "みらくらぱーく！がドッグカフェへ！ 念願のチャウチャウとご対面！",
-	"memo": "",
 	"tags": ["Kan", "Kurusu"],
 	"tube": "6lbgytfTEYM",
 	"length": 1093
@@ -987,7 +986,6 @@
 	"date": "2025-08-08",
 	"title": "#15 ユニット旅　Edel Note編　チリコンカン作ってみた！",
 	"desc": "Edel Noteがチリコンカン作り！ 2人の料理の実力は！？",
-	"memo": "",
 	"tags": ["Miyake", "Shindo"],
 	"tube": "QLONQokpvuk",
 	"length": 1199
@@ -1159,6 +1157,47 @@
 	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
 	"tube": "-1HqcxVtQns",
 	"length": 1156
+},
+{
+	"date": "2026-01-23",
+	"title": "#36 金沢＆能登ロケ①",
+	"desc": "能登にせーはす！初上陸 豪華夕飯をかけ水族館で対決！ 金沢ゲーマーズで借り物競争も！",
+	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
+	"tube": "H5Il8if3i3s",
+	"length": 1390
+},
+{
+	"date": "2026-01-30",
+	"title": "#37 金沢＆能登ロケ②",
+	"desc": "白熱のウマい飯バトル！ タコちゅけ登場！？",
+	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
+	"tube": "btBAkzZIdt8",
+	"length": 1135
+},
+{
+	"date": "2026-02-06",
+	"title": "#38 金沢＆能登ロケ③",
+	"desc": "ウマい飯バトル決着！ ウマい飯はどのユニットに！？",
+	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
+	"tube": "TkF-_SRONY0",
+	"length": 1085
+},
+{
+	"date": "2026-02-13",
+	"title": "#39 金沢＆能登ロケ④",
+	"desc": "念願の夕ご飯タイム！ なっす大暴走！",
+	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
+	"tube": "y8cFFON9U7M",
+	"length": 1173
+},
+{
+	"date": "2026-02-20",
+	"title": "40 金沢＆能登ロケ⑤",
+	"desc": "笑いっぱなしの三連華旅！ コラボビジュアルを完全再現！",
+	"memo": "",
+	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
+	"tube": "mjjfjhIEHBI",
+	"length": 1341
 },
 {
 	"date": "2099-01-01",
