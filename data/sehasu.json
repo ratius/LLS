@@ -1192,12 +1192,45 @@
 },
 {
 	"date": "2026-02-20",
-	"title": "40 金沢＆能登ロケ⑤",
+	"title": "#40 金沢＆能登ロケ⑤",
 	"desc": "笑いっぱなしの三連華旅！ コラボビジュアルを完全再現！",
-	"memo": "",
-	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
+	"memo": "103期生の3人が、{{L::「石川県×ラブライブ！蓮ノ空女学院スクールアイドルクラブ能登応援プロジェクト」のコラボビジュアル::https://www.lovelive-anime.jp/news/01_5756.html}}で描かれた場所を訪れる！",
+	"tags": ["Nirei", "Nonaka", "Kan"],
 	"tube": "mjjfjhIEHBI",
 	"length": 1341
+},
+{
+	"date": "2026-02-27",
+	"title": "#41 金沢＆能登ロケ⑥",
+	"desc": "ひらめきクイズに挑戦！ さらに８番らーめんも堪能！",
+	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
+	"tube": "QynD9H1HpeQ",
+	"length": 1176
+},
+{
+	"date": "2026-03-06",
+	"title": "#42 金沢＆能登ロケ⑦",
+	"desc": "ごちゃ混ぜ充電旅！ 金沢の歴史をお勉強！",
+	"memo": "ランダムに分かれた2チームで、英気を養う充電の旅に出発！",
+	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
+	"tube": "keMTPcsfrBg",
+	"length": 1425
+},
+{
+	"date": "2026-03-13",
+	"title": "#43 金沢＆能登ロケ⑧",
+	"desc": "金沢旅完結編！ 静と動が入り乱れる！",
+	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
+	"tube": "jIbPQHp87RU",
+	"length": 1835
+},
+{
+	"date": "2026-03-20",
+	"title": "#44 せーはす！105 学年末テスト前編",
+	"desc": "せーはす！105テスト実施！ おさらいクイズで赤面！",
+	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
+	"tube": "ixa5yydngdQ",
+	"length": 1279
 },
 {
 	"date": "2099-01-01",
