@@ -3520,11 +3520,11 @@
 	"date": "2026-03-30",
 	"title": "Bloom Garden Party Fes×LIVE STAGE",
 	"desc": "",
-	"memo": "{{NULL::未視聴}}",
-	"setlist": [],
+	"memo": "ライブ会場は、蓮ノ空女学院第2音楽堂。先輩たちも交えて、花帆たち103期生の、3年間の集大成がここに花咲く！",
+	"setlist": ["EdelinieN", "トモダチになれる場所", "アイシイ", "不思議と君とライブラリー", "MC", "今、過去、未来の三原色", "MC", "Dream Believers (Fes×LIVE AFTERにて)"],
 	"tags": ["live", "Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime", "Ceras", "Izumi"],
-	"tube": "",
-	"length": [-1, -1]
+	"tube": "qGFxoDblabA&t=1475",
+	"length": [3089, -1]
 },
 {
 	"date": "2099-01-01",
