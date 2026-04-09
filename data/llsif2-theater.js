@@ -1,62 +1,62 @@
-//■タグデータ
-const TagData = {
-	"Honoka":   {"name": "穂乃果",      "r":243, "g":133, "b":  0, "style": "round"},
-	"Eli":      {"name": "絵里",        "r": 46, "g":191, "b":212, "style": "round"},
-	"Kotori":   {"name": "ことり",      "r":166, "g":154, "b":154, "style": "round"},
-	"Umi":      {"name": "海未",        "r":  9, "g": 77, "b":202, "style": "round"},
-	"Rin":      {"name": "凛",          "r":219, "g":212, "b": 30, "style": "round"},
-	"Maki":     {"name": "真姫",        "r":205, "g": 34, "b": 16, "style": "round"},
-	"Nozomi":   {"name": "希",          "r":160, "g": 43, "b":212, "style": "round"},
-	"Hanayo":   {"name": "花陽",        "r": 59, "g":203, "b": 69, "style": "round"},
-	"Nico":     {"name": "にこ",        "r":211, "g": 27, "b": 96, "style": "round"},
+//タグとデータベースを橋渡しする対照表
+const NameMap = {
+	"Honoka":   "穂乃果",
+	"Eli":      "絵里",
+	"Kotori":   "ことり",
+	"Umi":      "海未",
+	"Rin":      "凛",
+	"Maki":     "真姫",
+	"Nozomi":   "希",
+	"Hanayo":   "花陽",
+	"Nico":     "にこ",
+	"Chika":    "千歌",
+	"Riko":     "梨子",
+	"Kanan":    "果南",
+	"Dia":      "ダイヤ",
+	"You":      "曜",
+	"Yoshiko":  "善子",
+	"Hanamaru": "花丸",
+	"Mari":     "鞠莉",
+	"Ruby":     "ルビィ",
+	"Ayumu":    "歩夢",
+	"Kasumi":   "かすみ",
+	"Shizuku":  "しずく",
+	"Karin":    "果林",
+	"Ai":       "愛",
+	"Kanata":   "彼方",
+	"Setsuna":  "せつ菜",
+	"Emma":     "エマ",
+	"Rina":     "璃奈",
+	"Shioriko": "栞子",
+	"Mia":      "ミア",
+	"Lanzhu":   "嵐珠",
+	"Yu":       "侑",
+	"Kanon":    "かのん",
+	"Keke":     "可可",
+	"Chisato":  "千砂都",
+	"Sumire":   "すみれ",
+	"Ren":      "恋",
+	"Kinako":   "きな子",
+	"Mei":      "メイ",
+	"Shiki":    "四季",
+	"Natsumi":  "夏美",
+	"Margarete":"マルガレーテ",
+	"Tomari":   "冬毬"
+};
 
-	"Chika":    {"name": "千歌",        "r":236, "g":116, "b": 28, "style": "round"},
-	"Riko":     {"name": "梨子",        "r":233, "g":114, "b":132, "style": "round"},
-	"Kanan":    {"name": "果南",        "r": 13, "g":148, "b":139, "style": "round"},
-	"Dia":      {"name": "ダイヤ",      "r":170, "g":  0, "b": 40, "style": "round"},
-	"You":      {"name": "曜",          "r": 56, "g":153, "b":220, "style": "round"},
-	"Yoshiko":  {"name": "善子",        "r":151, "g":160, "b":172, "style": "round"},
-	"Hanamaru": {"name": "花丸",        "r":226, "g":181, "b":  0, "style": "round"},
-	"Mari":     {"name": "鞠莉",        "r":148, "g": 35, "b":152, "style": "round"},
-	"Ruby":     {"name": "ルビィ",      "r":234, "g": 75, "b":162, "style": "round"},
-
-	"Ayumu":    {"name": "歩夢",        "r":246, "g":150, "b":201, "style": "round"},
-	"Kasumi":   {"name": "かすみ",      "r":213, "g":222, "b":112, "style": "round"},
-	"Shizuku":  {"name": "しずく",      "r":138, "g":204, "b":228, "style": "round"},
-	"Karin":    {"name": "果林",        "r": 42, "g": 20, "b":180, "style": "round"},
-	"Ai":       {"name": "愛",          "r":232, "g": 89, "b": 21, "style": "round"},
-	"Kanata":   {"name": "彼方",        "r":156, "g": 94, "b":223, "style": "round"},
-	"Setsuna":  {"name": "せつ菜",      "r":179, "g":  6, "b":  6, "style": "round"},
-	"Emma":     {"name": "エマ",        "r":143, "g":218, "b":121, "style": "round"},
-	"Rina":     {"name": "璃奈",        "r":158, "g":154, "b":192, "style": "round"},
-	"Shioriko": {"name": "栞子",        "r": 18, "g":158, "b":112, "style": "round"},
-	"Mia":      {"name": "ミア",        "r":169, "g":168, "b":152, "style": "round"},
-	"Lanzhu":   {"name": "嵐珠",        "r":246, "g":153, "b":146, "style": "round"},
-	"Yu":       {"name": "侑",          "r":195, "g":195, "b":195, "style": "round"},
-
-	"Kanon":    {"name": "かのん",      "r":242, "g": 99, "b":  0, "style": "round"},
-	"Keke":     {"name": "可可",        "r": 58, "g":255, "b":243, "style": "round"},
-	"Chisato":  {"name": "千砂都",      "r":255, "g": 58, "b":107, "style": "round"},
-	"Sumire":   {"name": "すみれ",      "r": 38, "g":228, "b": 17, "style": "round"},
-	"Ren":      {"name": "恋",          "r":  0, "g":  0, "b":109, "style": "round"},
-	"Kinako":   {"name": "きな子",      "r":219, "g":206, "b":  0, "style": "round"},
-	"Mei":      {"name": "メイ",        "r":207, "g":  0, "b":  0, "style": "round"},
-	"Shiki":    {"name": "四季",        "r": 76, "g":255, "b":176, "style": "round"},
-	"Natsumi":  {"name": "夏美",        "r":234, "g":  0, "b":155, "style": "round"},
-	"Margarete":{"name": "マルガレーテ","r":228, "g":157, "b":253, "style": "round"},
-	"Tomari":   {"name": "冬毬",        "r": 76, "g":210, "b":226, "style": "round"},
-	
-	"Season":   {"name": "季節の行事", "r":100, "g":140, "b":160, "style": "square"},
-	"Birthday": {"name": "誕生日",     "r":100, "g":140, "b":160, "style": "square"},
-	"Event":    {"name": "イベント",   "r":100, "g":140, "b":160, "style": "square"}
+//■表示するタグのデータ
+const TagData = {	
+	"Season":   {"name": "季節の行事", "r":100, "g":140, "b":160, "style": "button-square"},
+	"Birthday": {"name": "誕生日",     "r":100, "g":140, "b":160, "style": "button-square"},
+	"Event":    {"name": "イベント",   "r":100, "g":140, "b":160, "style": "button-square"}
 };
 
 //■ソート対象
 const SortTarget = [
 {"name": "2023年12月", "condition": "date,2023/12/01,2023/12/31"},
-{"name": "2024年1月", "condition": "date,2024/01/01,2024/01/31"},
-{"name": "2024年2月", "condition": "date,2024/02/01,2024/02/29"},
-{"name": "2024年3月", "condition": "date,2024/03/01,2024/03/31"},
+{"name": "2024年1月",  "condition": "date,2024/01/01,2024/01/31"},
+{"name": "2024年2月",  "condition": "date,2024/02/01,2024/02/29"},
+{"name": "2024年3月",  "condition": "date,2024/03/01,2024/03/31"},
 {"name": "----"},
 {"name": "出演：高坂 穂乃果",            "condition": "tag,Honoka"},
 {"name": "出演：絢瀬 絵里",              "condition": "tag,Eli"},
@@ -140,7 +140,7 @@ function DrawStoryList(conditions){
 		:
 			`class="story-title"`
 		);
-		const tagContent = story.tags.map( tag => DrawCharName(tag) ).join('');
+		const tagContent = story.tags.map( tag => tag in TagData ? createStyledTag(TagData[tag], tag) : '').join('');
 
 		return `
 		<article class="story">
@@ -231,10 +231,25 @@ function CloseModal(target){
 
 //■初期化処理
 function initialize() {
+	//TagDataにキャラクターの内容を追加
+	Object.keys(NameMap).forEach((tag) => {
+		const firstName = NameMap[tag];
+		const character = window['JSON-characterDB'].find(entry => entry.firstName === firstName);
+
+		const objtemp = new Object();
+		objtemp.name = character.firstName;
+		objtemp.r = parseInt(character['color_llsif2'].substring(0, 2), 16);
+		objtemp.g = parseInt(character['color_llsif2'].substring(2, 4), 16);
+		objtemp.b = parseInt(character['color_llsif2'].substring(4, 6), 16);
+		objtemp.style = "button-round";
+
+		TagData[tag] = objtemp;
+	});
+
 	//TagDataの色データをCSSに追加
 	document.querySelector('style').textContent += Object.keys(TagData).map( character => {
 		return `
-		.button_${character} {
+		.button-${character} {
 			background-color: ${getColor(TagData[character], 2.5)};
 			border-color: ${getColor(TagData[character], 0)}
 		}`;

@@ -1,0 +1,544 @@
+[
+    {
+        "name": "高坂穂乃果",
+        "firstName": "穂乃果",
+        "group": "μ's",
+        "birthday": "0803",
+        "color": "F38500",
+        "color_sifas": "FFA336",
+        "color_llsif2": "F38500"
+    },
+    {
+        "name": "絢瀬絵里",
+        "firstName": "絵里",
+        "group": "μ's",
+        "birthday": "1021",
+        "color": "7AEEFF",
+        "color_sifas": "7AEEFF",
+        "color_llsif2": "2EBFD4"
+    },
+    {
+        "name": "南ことり",
+        "firstName": "ことり",
+        "group": "μ's",
+        "birthday": "0912",
+        "color": "CEBFBF",
+        "color_sifas": "CEBFBF",
+        "color_llsif2": "A69A9A"
+    },
+    {
+        "name": "園田海未",
+        "firstName": "海未",
+        "group": "μ's",
+        "birthday": "0315",
+        "color": "1769FF",
+        "color_sifas": "1769FF",
+        "color_llsif2": "094DCA"
+    },
+    {
+        "name": "星空凛",
+        "firstName": "凛",
+        "group": "μ's",
+        "birthday": "1101",
+        "color": "FFF832",
+        "color_sifas": "DBD41E",
+        "color_llsif2": "DBD41E"
+    },
+    {
+        "name": "西木野真姫",
+        "firstName": "真姫",
+        "group": "μ's",
+        "birthday": "0419",
+        "color": "FF503E",
+        "color_sifas": "FF503E",
+        "color_llsif2": "CD2210"
+    },
+    {
+        "name": "東條希",
+        "firstName": "希",
+        "group": "μ's",
+        "birthday": "0609",
+        "color": "C455F6",
+        "color_sifas": "C455F6",
+        "color_llsif2": "A02BD4"
+    },
+    {
+        "name": "小泉花陽",
+        "firstName": "花陽",
+        "group": "μ's",
+        "birthday": "0117",
+        "color": "6AE673",
+        "color_sifas": "6AE673",
+        "color_llsif2": "3BCB45"
+    },
+    {
+        "name": "矢澤にこ",
+        "firstName": "にこ",
+        "group": "μ's",
+        "birthday": "0722",
+        "color": "FF4F91",
+        "color_sifas": "FF4F91",
+        "color_llsif2": "D31B60"
+    },
+    {
+        "name": "綺羅ツバサ",
+        "firstName": "ツバサ",
+        "group": "A-RISE"
+    },
+    {
+        "name": "統堂英玲奈",
+        "firstName": "英玲奈",
+        "group": "A-RISE"
+    },
+    {
+        "name": "優木あんじゅ",
+        "firstName": "あんじゅ",
+        "group": "A-RISE"
+    },
+    {
+        "name": "高海千歌",
+        "firstName": "千歌",
+        "group": "Aqours",
+        "birthday": "0801",
+        "color": "FF9547",
+        "color_sifas": "FF9547",
+        "color_llsif2": "EC741C"
+    },
+    {
+        "name": "桜内梨子",
+        "firstName": "梨子",
+        "group": "Aqours",
+        "birthday": "0919",
+        "color": "FF9EAC",
+        "color_sifas": "FF9EAC",
+        "color_llsif2": "E97284"
+    },
+    {
+        "name": "松浦果南",
+        "firstName": "果南",
+        "group": "Aqours",
+        "birthday": "0210",
+        "color": "27C1B7",
+        "color_sifas": "27C1B7",
+        "color_llsif2": "0D948B"
+    },
+    {
+        "name": "黒澤ダイヤ",
+        "firstName": "ダイヤ",
+        "group": "Aqours",
+        "birthday": "0101",
+        "color": "DB0839",
+        "color_sifas": "DB0739",
+        "color_llsif2": "AA0028"
+    },
+    {
+        "name": "渡辺曜",
+        "firstName": "曜",
+        "group": "Aqours",
+        "birthday": "0417",
+        "color": "66C0FF",
+        "color_sifas": "66C0FF",
+        "color_llsif2": "3899DC"
+    },
+    {
+        "name": "津島善子",
+        "firstName": "善子",
+        "group": "Aqours",
+        "birthday": "0713",
+        "color": "C1CAD4",
+        "color_sifas": "C1CAD4",
+        "color_llsif2": "97A0AC"
+    },
+    {
+        "name": "国木田花丸",
+        "firstName": "花丸",
+        "group": "Aqours",
+        "birthday": "0304",
+        "color": "FFD010",
+        "color_sifas": "FFD00F",
+        "color_llsif2": "E2B500"
+    },
+    {
+        "name": "小原鞠莉",
+        "firstName": "鞠莉",
+        "group": "Aqours",
+        "birthday": "0613",
+        "color": "C252C6",
+        "color_sifas": "C252C6",
+        "color_llsif2": "942398"
+    },
+    {
+        "name": "黒澤ルビィ",
+        "firstName": "ルビィ",
+        "group": "Aqours",
+        "birthday": "0921",
+        "color": "FF6FBE",
+        "color_sifas": "FF6FBE",
+        "color_llsif2": "EA4BA2"
+    },
+    {
+        "name": "鹿角理亞",
+        "firstName": "理亞",
+        "group": "Saint Snow",
+        "birthday": "1212"
+    },
+    {
+        "name": "鹿角聖良",
+        "firstName": "聖良",
+        "group": "Saint Snow",
+        "birthday": "0504"
+    },
+    {
+        "name": "上原歩夢",
+        "firstName": "歩夢",
+        "group": "虹ヶ咲",
+        "birthday": "0301",
+        "color": "ED7D95",
+        "color_sifas": "FFBFE0",
+        "color_llsif2": "F696C9"
+    },
+    {
+        "name": "中須かすみ",
+        "firstName": "かすみ",
+        "group": "虹ヶ咲",
+        "birthday": "0123",
+        "color": "E7D600",
+        "color_sifas": "D5DE70",
+        "color_llsif2": "D5DE70"
+    },
+    {
+        "name": "桜坂しずく",
+        "firstName": "しずく",
+        "group": "虹ヶ咲",
+        "birthday": "0403",
+        "color": "01B7ED",
+        "color_sifas": "BBEDFF",
+        "color_llsif2": "8ACCE4"
+    },
+    {
+        "name": "朝香果林",
+        "firstName": "果林",
+        "group": "虹ヶ咲",
+        "birthday": "0629",
+        "color": "485EC6",
+        "color_sifas": "4A2FED",
+        "color_llsif2": "2A14B4"
+    },
+    {
+        "name": "宮下愛",
+        "firstName": "愛",
+        "group": "虹ヶ咲",
+        "birthday": "0530",
+        "color": "FF5800",
+        "color_sifas": "FF8246",
+        "color_llsif2": "E85915"
+    },
+    {
+        "name": "近江彼方",
+        "firstName": "彼方",
+        "group": "虹ヶ咲",
+        "birthday": "1216",
+        "color": "A664A0",
+        "color_sifas": "BE82FF",
+        "color_llsif2": "9C5EDF"
+    },
+    {
+        "name": "優木せつ菜",
+        "firstName": "せつ菜",
+        "group": "虹ヶ咲",
+        "birthday": "0808",
+        "color": "D81C2F",
+        "color_sifas": "F60E0E",
+        "color_llsif2": "B30606"
+    },
+    {
+        "name": "エマ・ヴェルデ",
+        "firstName": "エマ",
+        "group": "虹ヶ咲",
+        "birthday": "0205",
+        "color": "84C36E",
+        "color_sifas": "8FDA79",
+        "color_llsif2": "8FDA79"
+    },
+    {
+        "name": "天王寺璃奈",
+        "firstName": "璃奈",
+        "group": "虹ヶ咲",
+        "birthday": "1113",
+        "color": "9CA5B9",
+        "color_sifas": "D0CEE1",
+        "color_llsif2": "9E9AC0"
+    },
+    {
+        "name": "三船栞子",
+        "firstName": "栞子",
+        "group": "虹ヶ咲",
+        "birthday": "1005",
+        "color": "37B484",
+        "color_sifas": "24BD8B",
+        "color_llsif2": "129E70"
+    },
+    {
+        "name": "ミア・テイラー",
+        "firstName": "ミア",
+        "group": "虹ヶ咲",
+        "birthday": "1206",
+        "color": "A99E98",
+        "color_sifas": "D6D5CA",
+        "color_llsif2": "A9A898"
+    },
+    {
+        "name": "鐘嵐珠",
+        "firstName": "嵐珠",
+        "group": "虹ヶ咲",
+        "birthday": "0215",
+        "color": "F8C8C4",
+        "color_sifas": "F8C8C4",
+        "color_llsif2": "F69992"
+    },
+    {
+        "name": "高咲侑",
+        "firstName": "侑",
+        "group": "虹ヶ咲",
+        "color": "1D1D1D",
+        "color_llsif2": "C3C3C3"
+    },
+    {
+        "name": "澁谷かのん",
+        "firstName": "かのん",
+        "group": "Liella!",
+        "birthday": "0501",
+        "color": "FF7F27",
+        "color_llsif2": "F26300"
+    },
+    {
+        "name": "唐可可",
+        "firstName": "可可",
+        "group": "Liella!",
+        "birthday": "0717",
+        "color": "A0FFF9",
+        "color_llsif2": "3AFFF3"
+    },
+    {
+        "name": "嵐千砂都",
+        "firstName": "千砂都",
+        "group": "Liella!",
+        "birthday": "0225",
+        "color": "FF6E90",
+        "color_llsif2": "FF3A6B"
+    },
+    {
+        "name": "平安名すみれ",
+        "firstName": "すみれ",
+        "group": "Liella!",
+        "birthday": "0928",
+        "color": "74F466",
+        "color_llsif2": "26E411"
+    },
+    {
+        "name": "葉月恋",
+        "firstName": "恋",
+        "group": "Liella!",
+        "birthday": "1124",
+        "color": "0000A0",
+        "color_llsif2": "00006D"
+    },
+    {
+        "name": "桜小路きな子",
+        "firstName": "きな子",
+        "group": "Liella!",
+        "birthday": "0410",
+        "color": "FFF442",
+        "color_llsif2": "DBCE00"
+    },
+    {
+        "name": "米女メイ",
+        "firstName": "メイ",
+        "group": "Liella!",
+        "birthday": "1029",
+        "color": "FF3535",
+        "color_llsif2": "CF0000"
+    },
+    {
+        "name": "若菜四季",
+        "firstName": "四季",
+        "group": "Liella!",
+        "birthday": "0617",
+        "color": "B2FFDD",
+        "color_llsif2": "4CFFB0"
+    },
+    {
+        "name": "鬼塚夏美",
+        "firstName": "夏美",
+        "group": "Liella!",
+        "birthday": "0817",
+        "color": "FF51C4",
+        "color_llsif2": "EA009B"
+    },
+    {
+        "name": "ウィーン・マルガレーテ",
+        "firstName": "マルガレーテ",
+        "group": "Liella!",
+        "birthday": "0120",
+        "color": "E49DFD",
+        "color_llsif2": "E49DFD"
+    },
+    {
+        "name": "鬼塚冬毬",
+        "firstName": "冬毬",
+        "group": "Liella!",
+        "birthday": "1228",
+        "color": "76DDDF",
+        "color_llsif2": "4CD2E2"
+    },
+    {
+        "name": "柊摩央",
+        "firstName": "摩央",
+        "group": "Sunny Passion",
+        "birthday": "1202"
+    },
+    {
+        "name": "聖澤悠奈",
+        "firstName": "悠奈",
+        "group": "Sunny Passion",
+        "birthday": "0811"
+    },
+    {   
+        "name": "日野下花帆",
+        "firstName": "花帆",
+        "group": "蓮ノ空",
+        "birthday": "0522",
+        "color": "F8B500"
+    },
+    {
+        "name": "村野さやか",
+        "firstName": "さやか",
+        "group": "蓮ノ空",
+        "birthday": "0113",
+        "color": "5383C3"
+    },
+    {
+        "name": "乙宗梢",   
+        "firstName": "梢",
+        "group": "蓮ノ空",
+        "birthday": "0615",
+        "color": "68BE8D"
+    },
+    {
+        "name": "夕霧綴理",
+        "firstName": "綴理",
+        "group": "蓮ノ空",
+        "birthday": "1117",
+        "color": "BA2636"
+    },
+    {
+        "name": "大沢瑠璃乃",
+        "firstName": "瑠璃乃",
+        "group": "蓮ノ空",
+        "birthday": "0831",
+        "color": "E7609E"
+    },
+    {
+        "name": "藤島慈",
+        "firstName": "慈",
+        "group": "蓮ノ空",
+        "birthday": "1220",
+        "color": "C8C2C6"
+    },
+    {
+        "name": "百生吟子",
+        "firstName": "吟子",
+        "group": "蓮ノ空",
+        "birthday": "1020",
+        "color": "A2D7DD"
+    },
+    {
+        "name": "徒町小鈴",
+        "firstName": "小鈴",
+        "group": "蓮ノ空",
+        "birthday": "0228",
+        "color": "FAD764"
+    },
+    {
+        "name": "安養寺姫芽",
+        "firstName": "姫芽",
+        "group": "蓮ノ空",
+        "birthday": "0924",
+        "color": "9D8DE2"
+    },
+    {
+        "name": "セラス 柳田 リリエンフェルト",
+        "firstName": "セラス",
+        "group": "蓮ノ空",
+        "birthday": "0626",
+        "color": "F56455"
+    },
+    {
+        "name": "桂城泉",
+        "firstName": "泉",
+        "group": "蓮ノ空",
+        "birthday": "1201",
+        "color": "1EBECD"
+    },
+	{
+        "name": "高橋ポルカ",
+        "firstName": "ポルカ",
+        "group": "いきづらい部",
+        "birthday": "0818",
+        "color": "FFFF66"
+    },    
+	{"name": "麻布麻衣",
+        "firstName": "麻衣",
+        "group": "いきづらい部",
+        "birthday": "0213",
+        "color": "4D93D9"
+    },
+	{"name": "五桐玲",
+        "firstName": "玲",
+        "group": "いきづらい部",
+        "birthday": "0709",
+        "color": "B5E6A2"
+    },    
+	{"name": "駒形花火",
+        "firstName": "花火",
+        "group": "いきづらい部",
+        "birthday": "0611",
+        "color": "FF4747"
+    },    
+	{"name": "金澤奇跡",
+        "firstName": "奇跡",
+        "group": "いきづらい部",
+        "birthday": "0302",
+        "color": "FFB6C1"
+    },    
+	{"name": "調布のりこ",
+        "firstName": "のりこ",
+        "group": "いきづらい部",
+        "birthday": "0404",
+        "color": "CC66FF"
+    },    
+	{"name": "春宮ゆくり",
+        "firstName": "ゆくり",
+        "group": "いきづらい部",
+        "birthday": "0922",
+        "color": "C0E6F5"
+    },    
+	{"name": "此花輝夜",
+        "firstName": "輝夜",
+        "group": "いきづらい部",
+        "birthday": "12010301",
+        "color": "FF5B9D"
+    },    
+	{"name": "山田真緑",
+        "firstName": "真緑",
+        "group": "いきづらい部",
+        "birthday": "0507",
+        "color": "3FBF7F"
+    },    
+	{"name": "佐々木翔音",
+        "firstName": "翔音",
+        "group": "いきづらい部",
+        "birthday": "1111",
+        "color": "F2F2F2"
+    }
+]
