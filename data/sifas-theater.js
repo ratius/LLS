@@ -1,35 +1,35 @@
 //タグとデータベースを橋渡しする対照表
 const NameMap = {
-	"Honoka":   "穂乃果",
-	"Eli":      "絵里",
-	"Kotori":   "ことり",
-	"Umi":      "海未",
-	"Rin":      "凛",
-	"Maki":     "真姫",
-	"Nozomi":   "希",
-	"Hanayo":   "花陽",
-	"Nico":     "にこ",
-	"Chika":    "千歌",
-	"Riko":     "梨子",
-	"Kanan":    "果南",
-	"Dia":      "ダイヤ",
-	"You":      "曜",
-	"Yoshiko":  "善子",
-	"Hanamaru": "花丸",
-	"Mari":     "鞠莉",
-	"Ruby":     "ルビィ",
-	"Ayumu":    "歩夢",
-	"Kasumi":   "かすみ",
-	"Shizuku":  "しずく",
-	"Karin":    "果林",
-	"Ai":       "愛",
-	"Kanata":   "彼方",
-	"Setsuna":  "せつ菜",
-	"Emma":     "エマ",
-	"Rina":     "璃奈",
-	"Shioriko": "栞子",
-	"Mia":      "ミア",
-	"Lanzhu":   "嵐珠"
+	"穂乃果": "Honoka",
+	"絵里":   "Eli",
+	"ことり": "Kotori",
+	"海未":   "Umi",
+	"凛":     "Rin",
+	"真姫":   "Maki",
+	"希":     "Nozomi",
+	"花陽":   "Hanayo",
+	"にこ":   "Nico",
+	"千歌":   "Chika",
+	"梨子":   "Riko",
+	"果南":   "Kanan",
+	"ダイヤ": "Dia",
+	"曜":     "You",
+	"善子":   "Yoshiko",
+	"花丸":   "Hanamaru",
+	"鞠莉":   "Mari",
+	"ルビィ": "Ruby",
+	"歩夢":   "Ayumu",
+	"かすみ": "Kasumi",
+	"しずく": "Shizuku",
+	"果林":   "Karin",
+	"愛":     "Ai", 
+	"彼方":   "Kanata",
+	"せつ菜": "Setsuna",
+	"エマ":   "Emma",
+	"璃奈":   "Rina",
+	"栞子":   "Shioriko",
+	"ミア":   "Mia",
+	"嵐珠":   "Lanzhu"
 };
 
 //■表示するタグのデータ
@@ -257,18 +257,16 @@ function CloseModal(target){
 //■初期化処理
 function initialize() {
 	//TagDataにキャラクターの内容を追加
-	Object.keys(NameMap).forEach((tag) => {
-		const firstName = NameMap[tag];
-		const character = window['JSON-characterDB'].find(entry => entry.firstName === firstName);
-
+	const characterList = window['JSON-characterDB'].filter(entry => entry.hasOwnProperty('color_sifas'));
+	characterList.forEach(character => {
 		const objtemp = new Object();
-		objtemp.name = (tag === 'Lanzhu' ? 'ランジュ' : character.firstName); //鐘嵐珠はスクスタでは「ランジュ」表記
+		objtemp.name = (character.firstName === '嵐珠' ? 'ランジュ' : character.firstName); //鐘嵐珠はスクスタでは「ランジュ」表記
 		objtemp.r = parseInt(character['color_sifas'].substring(0, 2), 16);
 		objtemp.g = parseInt(character['color_sifas'].substring(2, 4), 16);
 		objtemp.b = parseInt(character['color_sifas'].substring(4, 6), 16);
 		objtemp.style = "button-round";
 
-		TagData[tag] = objtemp;
+		TagData[NameMap[character.firstName]] = objtemp;
 	});
 
 	//TagDataの色データをCSSに追加
