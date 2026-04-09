@@ -196,9 +196,10 @@ function MakeModal(id){
 			return x;
 		});
 		
-		const CharacterName = (isNaN(text[0]) ? text[0] : DrawCharName(result.tags[parseInt(text[0],10)]));
+		const characterTagName = result.tags[parseInt(text[0],10)];
+		const characterName = (isNaN(text[0]) ? text[0] : createStyledTag(TagData[characterTagName], characterTagName));
 		
-		return CharacterName
+		return characterName
 		+ (processedLine.length >= 2 ? `<p>${processedLine[1]}</p>` : '')
 		+ (currentNote.length ? `<p class="note">${currentNote.join('<br>')}</p>` : '')
 		+ (index === result.text.length-1 ? '' : '<hr>');
