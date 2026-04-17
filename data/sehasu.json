@@ -856,7 +856,7 @@
 },
 {
 	"date": "2025-04-18",
-	"title": "特別編 2nd Live Tour ～Blooming with ○○○～名場面コメンタリーをちょい見せ！",
+	"title": "#特別編 2nd Live Tour ～Blooming with ○○○～名場面コメンタリーをちょい見せ！",
 	"desc": "せーはすはリニューアル準備中のため、今回は特別に『2nd Live Tour ～Blooming with ○○○～』名場面コメンタリーをちょい見せしちゃいます！",
 	"memo": "キャストのみんなが、『ラブライブ！蓮ノ空女学院スクールアイドルクラブ 2nd Live Tour「〜Blooming with ○○○〜」Blu-ray Memorial Box』の映像を見ながら語り合う。",
 	"tags": ["Nirei", "Hanamiya", "Nonaka", "Sasaki", "Kan", "Tsukine", "Sakurai", "Hayama", "Kurusu"],
@@ -909,7 +909,7 @@
 },
 {
 	"date": "2025-05-30",
-	"title": "新入生歓迎パーティー！人狼は誰だ！？",
+	"title": "#新入生歓迎パーティー！人狼は誰だ！？",
 	"desc": "みらくらぱーく！持ち込み 人狼ゲーム！ 蓮の伝統を新入生に伝授！ どうしたあまねす…",
 	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Miyake", "Shindo"],
 	"tube": "GVnVe10c81k",
@@ -1241,8 +1241,26 @@
 	"length": 1283
 },
 {
+	"date": "2026-04-06",
+	"title": "#1 愛の巣祭の褒めっこ対決♡",
+	"desc": "褒め合い×にらめっこ！ 褒め褒めクイーンに輝くのは！？",
+	"memo": "",
+	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
+	"tube": "anJqh1FH7C8",
+	"length": 1340
+},
+{
+	"date": "2026-04-13",
+	"title": "#2 楽曲クイズ！",
+	"desc": "蓮ノ空楽曲クイズ！ 超難問続出！？",
+	"memo": "",
+	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
+	"tube": "UJozYn1hc7U",
+	"length": 1446
+},
+{
 	"date": "2099-01-01",
-	"title": "未定",
+	"title": "#未定",
 	"desc": "",
 	"memo": "",
 	"tags": ["Nirei", "Nonaka", "Hanamiya", "Sasaki", "Kan", "Tsukine", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
