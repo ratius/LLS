@@ -155,8 +155,11 @@
 	{"name": "櫻井陽菜",   "birth": "0917", "type": "V", "group": "hasu", "tips": "蓮ノ空 百生吟子 役"},
 	{"name": "葉山風花",   "birth": "0128", "type": "V", "group": "hasu", "tips": "蓮ノ空 徒町小鈴 役"},
 	{"name": "来栖りん",   "birth": "1108", "type": "V", "group": "hasu", "tips": "蓮ノ空 安養寺姫芽 役"},
-	{"name": "進藤あまね", "birth": "0420", "type": "V", "group": "hasu", "tips": "蓮ノ空 桂城泉 役"},
 	{"name": "三宅美羽",   "birth": "1214", "type": "V", "group": "hasu", "tips": "蓮ノ空 セラス・柳田・リリエンフェルト 役"},
+	{"name": "進藤あまね", "birth": "0420", "type": "V", "group": "hasu", "tips": "蓮ノ空 桂城泉 役"},
+	{"name": "星宮じゅりあ", "birth": "0411", "type": "V", "group": "hasu", "tips": "蓮ノ空 錦上マイカ 役"},
+	{"name": "湯浅かなえ", "birth": "1008", "type": "V", "group": "hasu", "tips": "蓮ノ空 令沢葵 役"},
+	{"name": "湯浅かなえ", "birth": "0805", "type": "V", "group": "hasu", "tips": "蓮ノ空 紫輪みおん 役"},
 
 	{"name": "高橋ポルカ", "birth": "0818", "type": "C", "group": "bluebird"},
 	{"name": "麻布麻衣",   "birth": "0213", "type": "C", "group": "bluebird"},

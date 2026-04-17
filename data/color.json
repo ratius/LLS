@@ -784,6 +784,13 @@
 		}
 	},
 	{
+		"name": "Finalライブ\nロゴ",
+		"group": "Aqours",
+		"ref": "ラブライブ！サンシャイン!! Aqours Finale Lovelive! 〜永久stage〜",
+		"url": "https://www.lovelive-anime.jp/uranohoshi/live/live_detail.php?p=Aqours_Finale",
+		"reason": "画像が不可逆圧縮であり、正しい色を抽出できない"
+	},
+	{
 		"name": "マンスリー\nランキング",
 		"group": "虹ヶ咲",
 		"ref": "Vote | ラブライブ！スクールアイドルフェスティバル ALL STARS（スクスタ）",
@@ -964,11 +971,32 @@
 		"reason": "ロゴに各キャラクターのイメージカラーが含まれていない"
 	},
 	{
-		"name": "6th Live!ロゴ",
+		"name": "6thライブロゴ",
 		"group": "虹ヶ咲",
 		"ref": "ラブライブ！虹ヶ咲学園スクールアイドル同好会 6th Live! 特設サイト",
 		"url": "https://www.lovelive-anime.jp/nijigasaki/live/live_detail.php?p=sp_6thlive",
 		"reason": "画像が不可逆圧縮であり、正しい色を抽出できない"
+	},
+	{
+		"name": "FLOWER MUSIC LIVEロゴ",
+		"group": "虹ヶ咲",
+		"ref": "ラブライブ！虹ヶ咲学園スクールアイドル同好会 FLOWRE MUSIC LIVE『Boooooom Boooooom Bee!!』",
+		"url": "https://www.lovelive-anime.jp/nijigasaki/live/live_detail.php?p=flower_live",
+		"reason": "ロゴに各キャラクターのイメージカラーが含まれていない"
+	},
+	{
+		"name": "7thライブロゴ",
+		"group": "虹ヶ咲",
+		"ref": "ラブライブ！虹ヶ咲学園スクールアイドル同好会 7th Live! 特設サイト",
+		"url": "https://www.lovelive-anime.jp/nijigasaki/live/live_detail.php?p=sp_7thlive",
+		"reason": "ロゴに各キャラクターのイメージカラーが含まれていない"
+	},
+	{
+		"name": "8thライブロゴ",
+		"group": "虹ヶ咲",
+		"ref": "ラブライブ！虹ヶ咲学園スクールアイドル同好会 8th Live! 特設サイト",
+		"url": "https://www.lovelive-anime.jp/nijigasaki/live/live_detail.php?p=8thlive",
+		"reason": "ロゴに各キャラクターのイメージカラーが含まれていない"
 	},
 	{
 		"name": "1stライブ\nロゴ",
@@ -1055,6 +1083,59 @@
 		}
 	},
 	{
+		"name": "6thライブ\nロゴ",
+		"group": "Liella!",
+		"ref": "ラブライブ！スーパースター!! Liella! 6th LoveLive! Tour 〜Let's be ONE〜",
+		"url": "https://www.lovelive-anime.jp/yuigaoka/live/live_detail.php?p=6thlive",
+		"color": {
+			"Kanon"    : {"r":"241", "g":"162", "b":" 74"},
+			"Keke"     : {"r":"176", "g":"221", "b":"239"},
+			"Chisato"  : {"r":"249", "g":"165", "b":"212"},
+			"Sumire"   : {"r":"173", "g":"210", "b":"118"},
+			"Ren"      : {"r":"105", "g":"117", "b":"172"},
+			"Kinako"   : {"r":"242", "g":"243", "b":"105"},
+			"Mei"      : {"r":"234", "g":" 98", "b":" 97"},
+			"Shiki"    : {"r":"188", "g":"229", "b":"217"},
+			"Natsumi"  : {"r":"227", "g":"132", "b":"179"},
+			"Margarete": {"r":"205", "g":"173", "b":"207"},
+			"Tomari"   : {"r":"136", "g":"207", "b":"213"}
+	
+		}
+	},
+	{
+		"name": "1st Gen\nライブロゴ(濃)",
+		"group": "Liella!",
+		"ref": "ラブライブ！スーパースター!! Liella! 1st Generation LoveLive! 〜Wonderful Starlines〜",
+		"url": "https://www.lovelive-anime.jp/yuigaoka/live/live_detail.php?p=1stgenlive",
+		"color": {
+			"Kanon"    : {"r":"238", "g":"139", "b":" 29"},
+			"Keke"     : {"r":"156", "g":"212", "b":"235"},
+			"Chisato"  : {"r":"237", "g":"146", "b":"193"},
+			"Sumire"   : {"r":"153", "g":"199", "b":" 84"},
+			"Ren"      : {"r":" 70", "g":" 85", "b":"153"}
+	
+		}
+	},
+	{
+		"name": "1st Gen\nライブロゴ(薄)",
+		"group": "Liella!",
+		"color": {
+			"Kanon"    : {"r":"243", "g":"174", "b":" 97"},
+			"Keke"     : {"r":"196", "g":"229", "b":"243"},
+			"Chisato"  : {"r":"244", "g":"190", "b":"218"},
+			"Sumire"   : {"r":"184", "g":"216", "b":"135"},
+			"Ren"      : {"r":"116", "g":"128", "b":"179"}
+	
+		}
+	},
+	{
+		"name": "7thライブ\nロゴ",
+		"group": "Liella!",
+		"ref": "ラブライブ！スーパースター!! Liella! 7th LoveLive! 〜Fly! MUSIC WORLD♪〜",
+		"url": "https://www.lovelive-anime.jp/yuigaoka/live/live_detail.php?p=7thlive",
+		"reason": "画像のイメージカラー部分にグラデーションがかかっている"
+	},
+	{
 		"name": "デビューイベント\nロゴ",
 		"group": "蓮ノ空",
 		"ref": "ラブライブ！蓮ノ空女学院スクールアイドルクラブ デビューミニアルバム発売記念イベント「Dream Believers」特設サイト",
@@ -1131,9 +1212,30 @@
 	{
 		"name": "4thライブ\nロゴ",
 		"group": "蓮ノ空",
-		"ref": "ラブライブ！蓮ノ空女学院スクールアイドルクラブ 4th Live Dream ～Bloom, The Dream Believers～",
+		"ref": "ラブライブ！蓮ノ空女学院スクールアイドルクラブ 4th Live Dream 〜Bloom, The Dream Believers〜",
 		"url": "https://www.lovelive-anime.jp/hasunosora/live-event/live_detail.php?p=BTDB",
+		"reason": "ロゴに各キャラクターのイメージカラーが含まれていない"
+	},
+	{
+		"name": "5thライブロゴ",
+		"group": "蓮ノ空",
+		"ref": "ラブライブ！蓮ノ空女学院スクールアイドルクラブ 5th Live Tour 〜4Pair Power Spread!!!!〜",
+		"url": "https://www.lovelive-anime.jp/hasunosora/live-event/live_detail.php?p=4PPS",
 		"reason": "画像が不可逆圧縮であり、正しい色を抽出できない"
+	},
+	{
+		"name": "103-105th Fes×ReC：LIVEロゴ",
+		"group": "蓮ノ空",
+		"ref": "ラブライブ！蓮ノ空女学院スクールアイドルクラブ 103-105th Fes×ReC：LIVE 〜Road to Bloom〜",
+		"url": "https://www.lovelive-anime.jp/hasunosora/live-event/live_detail.php?p=RTB",
+		"reason": "ロゴに各キャラクターのイメージカラーが含まれていない"
+	},
+	{
+		"name": "6thライブロゴ",
+		"group": "蓮ノ空",
+		"ref": "ラブライブ！蓮ノ空女学院スクールアイドルクラブ 6th Live Dream 〜Bloom Garden Party〜",
+		"url": "https://www.lovelive-anime.jp/hasunosora/live-event/live_detail.php?p=6thBGP",
+		"reason": "ロゴに各キャラクターのイメージカラーが含まれていない"
 	},
 	{
 		"name": "毎日放送公式サイト",
@@ -1144,6 +1246,7 @@
 	},
 	{
 		"name": "いきづらい部！\nアイコン発表",
+		"group": "イキヅライブ",
 		"ref": "いきづらい部！メンバーアイコン決定！ | ラブライブ！シリーズ Official Web Site",
 		"url": "https://www.lovelive-anime.jp/news/01_5561.html",
 		"color": {
@@ -1158,5 +1261,19 @@
 			"Midori"   : {"r":" 66", "g":"180", "b":"121"},
 			"Shion"    : {"r":"206", "g":"206", "b":"204"}
 		}
+	},
+	{
+		"name": "1stライブ\nロゴ",
+		"group": "イキヅライブ",
+		"ref": "いきづらい部！ 1st LIVE 〜 What is my L ? 〜",
+		"url": "https://www.lovelive-anime.jp/lovehigh/live/live_detail.php?_id=WhatismyL",
+		"reason": "ロゴに各キャラクターのイメージカラーが含まれていない"
+	},
+	{
+		"name": "2ndライブ\nロゴ",
+		"group": "イキヅライブ",
+		"ref": "いきづらい部！ 2nd LIVE Dou-Da? DOING! 〜Reply to L〜",
+		"url": "https://www.lovelive-anime.jp/lovehigh/live/live_detail.php?_id=2ndLIVE",
+		"reason": "ロゴに各キャラクターのイメージカラーが含まれていない"
 	}
 ]
