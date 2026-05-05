@@ -1244,26 +1244,52 @@
 	"date": "2026-04-06",
 	"title": "#1 愛の巣祭の褒めっこ対決♡",
 	"desc": "褒め合い×にらめっこ！ 褒め褒めクイーンに輝くのは！？",
-	"memo": "",
+	"memo": "「ブルパ開催！映画大入り祈願！inせーので！はすのそら！」の各動画の本編とエンドカードの間に、劇場版の宣伝(60秒)が入る。{{PC::<br>本ページの動画リンクの下には、宣伝部分およびエンドカード部分を除いた動画の長さを表示している。}}",
 	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
 	"tube": "anJqh1FH7C8",
-	"length": 1340
+	"length": 1280
 },
 {
 	"date": "2026-04-13",
 	"title": "#2 楽曲クイズ！",
 	"desc": "蓮ノ空楽曲クイズ！ 超難問続出！？",
-	"memo": "",
 	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
 	"tube": "UJozYn1hc7U",
-	"length": 1446
+	"length": 1386
+},
+{
+	"date": "2026-04-20",
+	"title": "#3 声ゲーム！",
+	"desc": "声に関するゲームパーティー！ 爆笑のモノマネ大会！？",
+	"memo": "せーはす！ゲームパーティー第1弾。声を使ったゲームで遊ぼう！",
+	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
+	"tube": "5LFMLPAMFXc",
+	"length": 1265
+},
+{
+	"date": "2026-04-27",
+	"title": "#4 帰ってきた タイムボム！",
+	"desc": "タイムボムリターンズ！ 究極の心理戦勃発！？",
+	"memo": "せーはす！ゲームパーティー第2弾。103期の蓮ノ空でもプレイした「タイムボム」で遊ぼう！",
+	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
+	"tube": "3Lzz-hz3jQM",
+	"length": 1361
+},
+{
+	"date": "2026-05-04",
+	"title": "#5 全国花咲くキャンペーン　スリーズブーケ①",
+	"desc": "花咲くキャンペーン始動！ 全国に花を咲かせます！",
+	"memo": "本編は11:08まで。日本全国に花を咲かせるため、折り紙、水引、フラワーアレンジメントに挑戦！<br>そこから約5分間、映画のグッズの紹介や、映画試写前のキャストの様子を撮影した「せーはす！NEWS」が入る。",
+	"tags": ["Nirei", "Hanamiya", "Sakurai"],
+	"tube": "8eqDYdE6N4o",
+	"length": 981
 },
 {
 	"date": "2099-01-01",
 	"title": "#未定",
 	"desc": "",
 	"memo": "",
-	"tags": ["Nirei", "Nonaka", "Hanamiya", "Sasaki", "Kan", "Tsukine", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
+	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
 	"tube": "",
 	"length": -1
 }
