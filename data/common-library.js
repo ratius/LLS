@@ -18,9 +18,9 @@ const DrawCharName = (character) => {
 }
 
 //■キャラクター名のボタンの生成 第二弾 ver.20241231
-const createStyledTag = (tag, id) => {
+const createStyledTag = (tag, id, style = false) => {
 	if (tag.hasOwnProperty('name') && tag.hasOwnProperty('style')) {
-		return `<span class="${tag.style} button-${id}">${tag.name}</span>`;
+		return `<span class="${style ? style : tag.style} button-${id}">${tag.name}</span>`;
 	}
 	return null;
 }
@@ -158,17 +158,17 @@ const convertMarkup = (str) => {
 				}
 				break;
 
-			//case 'pc': // PC版限定 {{PC::文字列}}
-			//	if(strInParentheses.length >= 2){
-			//		strConverted =  `<span class="pc-only">${strInParentheses[1]}</span>`;
-			//	}
-			//	break;
+			case 'pc': // PC版限定 {{PC::文字列}}
+				if(strInParentheses.length >= 2){
+					strConverted =  `<span class="pc-only">${strInParentheses[1]}</span>`;
+				}
+				break;
 
-			//case 'sp': // スマートフォン限定 {{SP::文字列}}
-			//	if(strInParentheses.length >= 2){
-			//		strConverted = `<span class="sp-only">${strInParentheses[1]}</span>`;
-			//	}
-			//	break;
+			case 'sp': // スマートフォン限定 {{SP::文字列}}
+				if(strInParentheses.length >= 2){
+					strConverted = `<span class="sp-only">${strInParentheses[1]}</span>`;
+				}
+				break;
 
 			case 'null': // 注釈。デバッグモードでのみ表示される
 				strConverted = (isDebugMode && strInParentheses[1] ? `<span style="color: #76a; font-style:italic;">(${strInParentheses[1]})</span>` : '')
