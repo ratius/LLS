@@ -1321,12 +1321,39 @@
 	"length": 1263
 },
 {
+	"date": "2026-06-08",
+	"title": "#10 全国花咲くキャンペーン　みらくらぱーく！②",
+	"desc": "全国花咲くキャンペーン！ こなち大暴走で大爆笑！？",
+	"memo": "本編は16:48まで。",
+	"tags": ["Kan", "Tsukine", "Kurusu"],
+	"tube": "0GrEXJKTCoQ",
+	"length": 1420
+},
+{
+	"date": "2026-06-15",
+	"title": "#11 全国花咲くキャンペーン　Edel Note①",
+	"desc": "全国花咲くキャンペーン！ Edel Noteに心境の変化！？",
+	"memo": "本編は13:09まで。",
+	"tags": ["Miyake", "Shindo"],
+	"tube": "-4JR0L_V_hw",
+	"length": 1109
+},
+{
+	"date": "2026-06-22",
+	"title": "#12 全国花咲くキャンペーン　Edel Note②",
+	"desc": "ダジャレ番長誰じゃ！？ 花咲くキャンペーン完結！",
+	"memo": "本編は14:29まで。",
+	"tags": ["Miyake", "Shindo"],
+	"tube": "M5dWVJiDCMI",
+	"length": 1070
+},
+{
 	"date": "2099-01-01",
 	"title": "#未定",
 	"desc": "",
 	"memo": "",
 	"tags": ["Nirei", "Nonaka", "Kan", "Sakurai", "Hayama", "Kurusu", "Miyake", "Shindo"],
 	"tube": "",
-	"length": -1
+	"length": -10
 }
 ]
