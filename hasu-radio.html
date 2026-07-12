@@ -60,6 +60,7 @@ const tagData = {
 	"s6" : {"name": "きまっし!!", "r":160, "g":128, "b":128, "style": "button-square"},
 	"s7" : {"name": "進路相談室105", "r":160, "g":128, "b":128, "style": "button-square"},
 	"s8" : {"name": "はすのそラジオ", "r":160, "g":128, "b":128, "style": "button-square"},
+	"s9" : {"name": "補習室FINAL", "r":160, "g":128, "b":128, "style": "button-square"},
 };
 
 const filterTargets = [
@@ -71,7 +72,8 @@ const filterTargets = [
 	{"name": "シーズン5 みらくら進路相談室ラジオ (全11回)", "condition": "tag:s5"},
 	{"name": "シーズン6 きまっし!!みらぱ！の部屋ラジオ (全39回)", "condition": "tag:s6"},
 	{"name": "シーズン7 みらくら進路相談室ラジオ (全13回)", "condition": "tag:s7"},
-	{"name": "シーズン8 期間限定！はすのそラジオ", "condition": "tag:s8"}
+	{"name": "シーズン8 期間限定！はすのそラジオ (全12回)", "condition": "tag:s8"},
+	{"name": "シーズン9 みらくら補習室ラジオ THE FINAL", "condition": "tag:s9"}
 ];
 
 const LLSPLayoutTemplate = (entry) => {
@@ -146,6 +148,12 @@ const LLSPLayoutTemplate = (entry) => {
 		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 		<div class="history-container">
 			<details open>
+				<summary><span class="date">2026/07/12</span> - シーズン9追加</summary>
+				<div>
+					<span class="icon-new"></span>絞り込みに「シーズン9 みらくら補習室ラジオ THE FINAL」を追加
+				</div>
+			</details>
+			<details>
 				<summary><span class="date">2026/06/22</span> - ページタイトル変更</summary>
 				<div>
 					<span class="icon-fix"></span>ページタイトルを「みらくらラジオまとめ」から「Webラジオまとめ」に変更<br>（メインパーソナリティがみらくらぱーく！に限定されなくなったため）
