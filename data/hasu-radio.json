@@ -1497,12 +1497,22 @@
 	"length": 3066
 },
 {
+	"date": "2026-07-12",
+	"title": "【第1FINAL】頑張り出した、ありがとう",
+	"desc": "来栖「どう？」 月音「Bloom Garden Party。」 菅「…そうだよね。」 月「まあ、そう」 来栖「Bloom Garden Partyだと難しいじゃん。」 菅「でも、その映画を……」 月音「頑張り出した。ありがとう。」{{NULL::タイトル回収は18:20頃}}",
+	"memo": "",
+	"program": ["オープニング (0:00-)", "蓮ノ空女学院投書箱 (7:45-)", "楽曲紹介（ハナ咲けばユメ駆ける） (28:42-)", "おしらせコーナー (31:41-)", "エンディング (33:40-)"],
+	"tags": ["s9", "Kan", "Tsukine", "Kurusu"],
+	"tube": "xpH-CdE8cjc",
+	"length": -1
+},
+{
 	"date": "2099-01-01",
 	"title": "未定",
 	"desc": "{{NULL::タイトル回収は:頃}}",
 	"memo": "",
 	"program": [],
-	"tags": ["s8", "Kan", "Kurusu"],
+	"tags": ["s9", "Kan", "Tsukine", "Kurusu"],
 	"tube": "",
 	"length": -1
 }
