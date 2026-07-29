@@ -295,9 +295,23 @@ a.exlink:after {
 	vertical-align: middle;
 	width: 16px;
 	height: 20px;
-	margin-left: 6px;
+	margin-left: 0.3em;
 }
-/* 転入生アイコン */
+/* スクールアイドルの顔やメンバーアイコンの画像表示用 */
+.icon-face-64{
+	width: 64px;
+	height: 64px;
+	background-image: url(img/face_64.png);
+	background-repeat: no-repeat;
+}
+.icon-face-32{
+	width: 32px;
+	height: 32px;
+	background-image: url(img/face_32.png);
+	background-repeat: no-repeat;
+}
+
+/* (旧)転入生アイコン */
 .icon-n-face{
 	width: 64px;
 	height: 64px;
