@@ -8,30 +8,19 @@ const SchoolData = [
 	{'name' : 'Y.G国際学院', 'color' : '#cea'}
 ];
 
-//■■サブルーチン
-//■転入生の顔アイコンを出力
-function DrawFace(name){
-	const target = window['JSON-llsif-n'].find(q => q.name === name);
-	if(target === undefined){
-		return `<div class="face_empty"></div>`;
-	} else {
-		return `<div class="face" style="background-position: right ${target.x*64-576}px bottom ${target.y*64-384}px"></div>`;
-	}
-}
-
 //■■出力
 //■ボタンの描画
-function DrawButtons(name) {
-	if(name === ""){
+function DrawButtons(id) {
+	if(id === ""){
 		document.getElementById("ButtonField").innerHTML = '';
 		document.getElementById("ButtonField").classList.remove("has_button");
 		return false;
 	}
 
-	const target = window['JSON-llsif-n'].find( q => q.name === name);
-	let Output = `<span class="jump" onclick="DrawProfile('${target.name}')">Profile</span>`
+	const target = window['JSON-llsif-n'].find( q => q.id === id);
+	let Output = `<span class="jump" onclick="DrawProfile('${target.id}')">Profile</span>`
 	+ target.card.reduce( (text, card, index) => {
-		return text + `<span class="jump" onclick="DrawCardData('${target.name}',${index})">${(index+1)}</span>`
+		return text + `<span class="jump" onclick="DrawCardData('${target.id}',${index})">${(index+1)}</span>`
 	}, '');
 
 	document.getElementById("ButtonField").innerHTML = Output;
@@ -40,19 +29,20 @@ function DrawButtons(name) {
 }
 
 //■プロフィールの描画
-function DrawProfile(name){
-	const target = window['JSON-llsif-n'].find( q => q.name === name);
+function DrawProfile(id){
+	const target = window['JSON-llsif-n'].find( q => q.id === id);
 	if(target === undefined){ return false;}
+	const baseProfile = LLSIdolManager.getCharacterData("llsif", id);
 
 	const Profile = `
-	<h3>${target.name} プロフィール</h3>
+	<h3>${baseProfile["name"]} プロフィール</h3>
 	<div class="profile-container">
-		${WriteFaceN(target.x, target.y)}
+		${LLSIdolManager.drawFace("llsif", target.id)}
 		<table class="profile-table">
 			<tbody>
 				<tr>
 					<td style="width: 40%">学校</td>
-					<td>${SchoolData[target.y].name}</td>
+					<td>${SchoolData[target.school]["name"]}</td>
 				</tr>
 				<tr>
 					<td>学年</td>
@@ -60,7 +50,7 @@ function DrawProfile(name){
 				</tr>
 				<tr>
 					<td>誕生日</td>
-					<td>${target.birth}日</td>
+					<td>${parseInt(baseProfile["birthday"].substring(0,2))}月${parseInt(baseProfile["birthday"].substring(2,4))}日</td>
 				</tr>
 				<tr>
 					<td>血液型</td>
@@ -93,12 +83,13 @@ function DrawProfile(name){
 }
 
 //■カード個別データの作成
-function DrawCardData(name, num){
-	const targetChar = window['JSON-llsif-n'].find( q => q.name === name);
+function DrawCardData(id, num){
+	const targetChar = window['JSON-llsif-n'].find( q => q.id === id);
 	if(targetChar === undefined){ return false;}
 	const targetCard = targetChar.card[num];
+	const baseProfile = LLSIdolManager.getCharacterData("llsif", id);
 	
-	const Header = `<h3>${targetChar.name} ${(num+1)}枚目 (部員No.${targetCard.num})</h3>`
+	const Header = `<h3>${baseProfile.name} ${(num+1)}枚目 (部員No.${targetCard.num})</h3>`
 	+ ('memo' in targetCard ? '<p style="font-size: 90%">' + targetCard.memo + '<\/p>' : '')
 	
 	const PartnerText = ('text' in targetCard ?
@@ -112,8 +103,8 @@ function DrawCardData(name, num){
 	const SideStoryText = ('side' in targetCard ? 
 		`<h4>サイドストーリー「${targetCard.sidetitle}」</h4>`
 		+ targetCard.side.map( text => {
-			const nameTemp = ('namealt' in text ? text.namealt : ('namealt' in targetChar ? targetChar.namealt : targetChar.name));
-			const faceTemp = ('noface' in text ? '' : WriteFaceN(targetChar.x, targetChar.y));
+			const nameTemp = ('namealt' in text ? text.namealt : baseProfile.firstName);
+			const faceTemp = ('noface' in text ? '' : LLSIdolManager.drawFace("llsif", id));
 			return `
 			<div class="text-story">
 				${faceTemp}
@@ -134,11 +125,15 @@ function DrawCardData(name, num){
 //■■初期化処理
 function initialize() {
 	//セレクトボックスに要素を追加
-	window['JSON-llsif-n'].forEach( temp => {
-		const option = document.createElement("option");
-		option.text = temp.name;
-		option.style.cssText = 'background-color: ' + SchoolData[temp.y].color;
-		document.getElementById('PullDownMenu').appendChild(option);
+	window['JSON-llsif-n'].forEach( (member) => {
+		const characterData = LLSIdolManager.getCharacterData("llsif", member.id);
+		if(characterData !== undefined){
+			const option = document.createElement("option");
+			option.text = characterData.name;
+			option.value = member.id;
+			option.style.cssText = 'background-color: ' + SchoolData[member.school].color;
+			document.getElementById('PullDownMenu').appendChild(option);
+		}
 	});
 	//警告解除
 	document.getElementById('NViewer').classList.remove('output-box-default');
