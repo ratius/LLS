@@ -1,0 +1,1169 @@
+[
+    {
+        "group_id": "muse",
+        "group_name": "μ's",
+        "image_offset": "0",
+        "characters": [
+            {
+                "id": "Honoka",
+                "name": "高坂穂乃果",
+                "firstName": "穂乃果",
+                "birthday": "0803",
+                "color": "F38500",
+                "color_sifas": "FFA336",
+                "color_llsif2": "F38500",
+                "face": "1",
+                "icon": "17"
+            },
+            {
+                "id": "Eli",
+                "name": "絢瀬絵里",
+                "firstName": "絵里",
+                "birthday": "1021",
+                "color": "7AEEFF",
+                "color_sifas": "7AEEFF",
+                "color_llsif2": "2EBFD4",
+                "face": "2",
+                "icon": "18"
+            },
+            {
+                "id": "Kotori",
+                "name": "南ことり",
+                "firstName": "ことり",
+                "birthday": "0912",
+                "color": "CEBFBF",
+                "color_sifas": "CEBFBF",
+                "color_llsif2": "A69A9A",
+                "face": "3",
+                "icon": "19"
+            },
+            {
+                "id": "Umi",
+                "name": "園田海未",
+                "firstName": "海未",
+                "birthday": "0315",
+                "color": "1769FF",
+                "color_sifas": "1769FF",
+                "color_llsif2": "094DCA",
+                "face": "4",
+                "icon": "20"
+            },
+            {
+                "id": "Rin",
+                "name": "星空凛",
+                "firstName": "凛",
+                "birthday": "1101",
+                "color": "FFF832",
+                "color_sifas": "DBD41E",
+                "color_llsif2": "DBD41E",
+                "face": "5",
+                "icon": "21"
+            },
+            {
+                "id": "Maki",
+                "name": "西木野真姫",
+                "firstName": "真姫",
+                "birthday": "0419",
+                "color": "FF503E",
+                "color_sifas": "FF503E",
+                "color_llsif2": "CD2210",
+                "face": "6",
+                "icon": "22"
+            },
+            {
+                "id": "Nozomi",
+                "name": "東條希",
+                "firstName": "希",
+                "birthday": "0609",
+                "color": "C455F6",
+                "color_sifas": "C455F6",
+                "color_llsif2": "A02BD4",
+                "face": "7",
+                "icon": "23"
+            },
+            {
+                "id": "Hanayo",
+                "name": "小泉花陽",
+                "firstName": "花陽",
+                "birthday": "0117",
+                "color": "6AE673",
+                "color_sifas": "6AE673",
+                "color_llsif2": "3BCB45",
+                "face": "8",
+                "icon": "24"
+            },
+            {
+                "id": "Nico",
+                "name": "矢澤にこ",
+                "firstName": "にこ",
+                "birthday": "0722",
+                "color": "FF4F91",
+                "color_sifas": "FF4F91",
+                "color_llsif2": "D31B60",
+                "face": "9",
+                "icon": "25"
+            }
+        ]
+    },
+    {
+        "group_id": "a-rise",
+        "group_name": "A-RISE",
+        "image_offset": "10",
+        "characters": [
+            {
+                "id": "Tsubasa",
+                "name": "綺羅ツバサ",
+                "firstName": "ツバサ",
+                "face": "0"
+            },
+            {
+                "id": "Erena",
+                "name": "統堂英玲奈",
+                "firstName": "英玲奈",
+                "face": "1"
+            },
+            {
+                "id": "Anju",
+                "name": "優木あんじゅ",
+                "firstName": "あんじゅ",
+                "face": "2"
+            }
+        ]
+    },
+    {
+        "group_id": "aqours",
+        "group_name": "Aqours",
+        "image_offset": "32",
+        "characters": [
+            {
+                "id": "Chika",
+                "name": "高海千歌",
+                "firstName": "千歌",
+                "birthday": "0801",
+                "color": "FF9547",
+                "color_sifas": "FF9547",
+                "color_llsif2": "EC741C",
+                "face": "1",
+                "icon": "17"
+            },
+            {
+                "id": "Riko",
+                "name": "桜内梨子",
+                "firstName": "梨子",
+                "birthday": "0919",
+                "color": "FF9EAC",
+                "color_sifas": "FF9EAC",
+                "color_llsif2": "E97284",
+                "face": "2",
+                "icon": "18"
+            },
+            {
+                "id": "Kanan",
+                "name": "松浦果南",
+                "firstName": "果南",
+                "birthday": "0210",
+                "color": "27C1B7",
+                "color_sifas": "27C1B7",
+                "color_llsif2": "0D948B",
+                "face": "3",
+                "icon": "19"
+            },
+            {
+                "id": "Dia",
+                "name": "黒澤ダイヤ",
+                "firstName": "ダイヤ",
+                "birthday": "0101",
+                "color": "DB0839",
+                "color_sifas": "DB0739",
+                "color_llsif2": "AA0028",
+                "face": "4",
+                "icon": "20"
+            },
+            {
+                "id": "You",
+                "name": "渡辺曜",
+                "firstName": "曜",
+                "birthday": "0417",
+                "color": "66C0FF",
+                "color_sifas": "66C0FF",
+                "color_llsif2": "3899DC",
+                "face": "5",
+                "icon": "21"
+            },
+            {
+                "id": "Yoshiko",
+                "name": "津島善子",
+                "firstName": "善子",
+                "birthday": "0713",
+                "color": "C1CAD4",
+                "color_sifas": "C1CAD4",
+                "color_llsif2": "97A0AC",
+                "face": "6",
+                "icon": "22"
+            },
+            {
+                "id": "Hanamaru",
+                "name": "国木田花丸",
+                "firstName": "花丸",
+                "birthday": "0304",
+                "color": "FFD010",
+                "color_sifas": "FFD00F",
+                "color_llsif2": "E2B500",
+                "face": "7",
+                "icon": "23"
+            },
+            {
+                "id": "Mari",
+                "name": "小原鞠莉",
+                "firstName": "鞠莉",
+                "birthday": "0613",
+                "color": "C252C6",
+                "color_sifas": "C252C6",
+                "color_llsif2": "942398",
+                "face": "8",
+                "icon": "24"
+            },
+            {
+                "id": "Ruby",
+                "name": "黒澤ルビィ",
+                "firstName": "ルビィ",
+                "birthday": "0921",
+                "color": "FF6FBE",
+                "color_sifas": "FF6FBE",
+                "color_llsif2": "EA4BA2",
+                "face": "9",
+                "icon": "25"
+            }
+        ]
+    },
+    {
+        "group_id": "saintsnow",
+        "group_name": "Saint Snow",
+        "image_offset": "32",
+        "characters": [
+            {
+                "id": "Leah",
+                "name": "鹿角理亞",
+                "firstName": "理亞",
+                "birthday": "1212",
+                "face": "10",
+                "icon": "26"
+            },
+            {
+                "id": "Sarah",
+                "name": "鹿角聖良",
+                "firstName": "聖良",
+                "birthday": "0504",
+                "face": "11",
+                "icon": "27"
+            }
+        ]
+    },
+    {
+        "group_id": "niji",
+        "group_name": "虹ヶ咲",
+        "image_offset": "64",
+        "characters": [
+            {
+                "id": "Ayumu",
+                "name": "上原歩夢",
+                "firstName": "歩夢",
+                "birthday": "0301",
+                "color": "ED7D95",
+                "color_sifas": "FFBFE0",
+                "color_llsif2": "F696C9",
+                "face": "1",
+                "icon": "17"
+            },
+            {
+                "id": "Kasumi",
+                "name": "中須かすみ",
+                "firstName": "かすみ",
+                "birthday": "0123",
+                "color": "E7D600",
+                "color_sifas": "D5DE70",
+                "color_llsif2": "D5DE70",
+                "face": "2",
+                "icon": "18"
+            },
+            {
+                "id": "Shizuku",
+                "name": "桜坂しずく",
+                "firstName": "しずく",
+                "birthday": "0403",
+                "color": "01B7ED",
+                "color_sifas": "BBEDFF",
+                "color_llsif2": "8ACCE4",
+                "face": "3",
+                "icon": "19"
+            },
+            {
+                "id": "Karin",
+                "name": "朝香果林",
+                "firstName": "果林",
+                "birthday": "0629",
+                "color": "485EC6",
+                "color_sifas": "4A2FED",
+                "color_llsif2": "2A14B4",
+                "face": "4",
+                "icon": "20"
+            },
+            {
+                "id": "Ai",
+                "name": "宮下愛",
+                "firstName": "愛",
+                "birthday": "0530",
+                "color": "FF5800",
+                "color_sifas": "FF8246",
+                "color_llsif2": "E85915",
+                "face": "5",
+                "icon": "21"
+            },
+            {
+                "id": "Kanata",
+                "name": "近江彼方",
+                "firstName": "彼方",
+                "birthday": "1216",
+                "color": "A664A0",
+                "color_sifas": "BE82FF",
+                "color_llsif2": "9C5EDF",
+                "face": "6",
+                "icon": "22"
+            },
+            {
+                "id": "Setsuna",
+                "name": "優木せつ菜",
+                "firstName": "せつ菜",
+                "birthday": "0808",
+                "color": "D81C2F",
+                "color_sifas": "F60E0E",
+                "color_llsif2": "B30606",
+                "face": "7",
+                "icon": "23"
+            },
+            {
+                "id": "Emma",
+                "name": "エマ・ヴェルデ",
+                "firstName": "エマ",
+                "birthday": "0205",
+                "color": "84C36E",
+                "color_sifas": "8FDA79",
+                "color_llsif2": "8FDA79",
+                "face": "8",
+                "icon": "24"
+            },
+            {
+                "id": "Rina",
+                "name": "天王寺璃奈",
+                "firstName": "璃奈",
+                "birthday": "1113",
+                "color": "9CA5B9",
+                "color_sifas": "D0CEE1",
+                "color_llsif2": "9E9AC0",
+                "face": "9",
+                "icon": "25"
+            },
+            {
+                "id": "Shioriko",
+                "name": "三船栞子",
+                "firstName": "栞子",
+                "birthday": "1005",
+                "color": "37B484",
+                "color_sifas": "24BD8B",
+                "color_llsif2": "129E70",
+                "face": "10",
+                "icon": "26"
+            },
+            {
+                "id": "Mia",
+                "name": "ミア・テイラー",
+                "firstName": "ミア",
+                "birthday": "1206",
+                "color": "A99E98",
+                "color_sifas": "D6D5CA",
+                "color_llsif2": "A9A898",
+                "face": "11",
+                "icon": "27"
+            },
+            {
+                "id": "Lanzhu",
+                "name": "鐘嵐珠",
+                "firstName": "嵐珠",
+                "birthday": "0215",
+                "color": "F8C8C4",
+                "color_sifas": "F8C8C4",
+                "color_llsif2": "F69992",
+                "face": "12",
+                "icon": "28"
+            },
+            {
+                "id": "Yu",
+                "name": "高咲侑",
+                "firstName": "侑",
+                "color": "1D1D1D",
+                "color_llsif2": "C3C3C3",
+                "face": "13",
+                "icon": "29"
+            }
+        ]
+    },
+    {
+        "group_id": "liella",
+        "group_name": "Liella!",
+        "image_offset": "160",
+        "characters": [
+            {
+                "id": "Kanon",
+                "name": "澁谷かのん",
+                "firstName": "かのん",
+                "birthday": "0501",
+                "color": "FF7F27",
+                "color_llsif2": "F26300",
+                "face": "1",
+                "icon": "17"
+            },
+            {
+                "id": "Keke",
+                "name": "唐可可",
+                "firstName": "可可",
+                "birthday": "0717",
+                "color": "A0FFF9",
+                "color_llsif2": "3AFFF3",
+                "face": "2",
+                "icon": "18"
+            },
+            {
+                "id": "Chisato",
+                "name": "嵐千砂都",
+                "firstName": "千砂都",
+                "birthday": "0225",
+                "color": "FF6E90",
+                "color_llsif2": "FF3A6B",
+                "face": "3",
+                "icon": "19"
+            },
+            {
+                "id": "Sumire",
+                "name": "平安名すみれ",
+                "firstName": "すみれ",
+                "birthday": "0928",
+                "color": "74F466",
+                "color_llsif2": "26E411",
+                "face": "4",
+                "icon": "20"
+            },
+            {
+                "id": "Ren",
+                "name": "葉月恋",
+                "firstName": "恋",
+                "birthday": "1124",
+                "color": "0000A0",
+                "color_llsif2": "00006D",
+                "face": "5",
+                "icon": "21"
+            },
+            {
+                "id": "Kinako",
+                "name": "桜小路きな子",
+                "firstName": "きな子",
+                "birthday": "0410",
+                "color": "FFF442",
+                "color_llsif2": "DBCE00",
+                "face": "6",
+                "icon": "22"
+            },
+            {
+                "id": "Mei",
+                "name": "米女メイ",
+                "firstName": "メイ",
+                "birthday": "1029",
+                "color": "FF3535",
+                "color_llsif2": "CF0000",
+                "face": "7",
+                "icon": "23"
+            },
+            {
+                "id": "Shiki",
+                "name": "若菜四季",
+                "firstName": "四季",
+                "birthday": "0617",
+                "color": "B2FFDD",
+                "color_llsif2": "4CFFB0",
+                "face": "8",
+                "icon": "24"
+            },
+            {
+                "id": "Natsumi",
+                "name": "鬼塚夏美",
+                "firstName": "夏美",
+                "birthday": "0807",
+                "color": "FF51C4",
+                "color_llsif2": "EA009B",
+                "face": "9",
+                "icon": "25"
+            },
+            {
+                "id": "Margarete",
+                "name": "ウィーン・マルガレーテ",
+                "firstName": "マルガレーテ",
+                "birthday": "0120",
+                "color": "E49DFD",
+                "color_llsif2": "E49DFD",
+                "face": "10",
+                "icon": "26"
+            },
+            {
+                "id": "Tomari",
+                "name": "鬼塚冬毬",
+                "firstName": "冬毬",
+                "birthday": "1228",
+                "color": "76DDDF",
+                "color_llsif2": "4CD2E2",
+                "face": "11",
+                "icon": "27"
+            }
+        ]
+    },
+    {
+        "group_id": "sunny",
+        "group_name": "Sunny Passion",
+        "image_offset": "160",
+        "characters": [
+            {
+                "id": "Mao",
+                "name": "柊摩央",
+                "firstName": "摩央",
+                "birthday": "1202",
+                "face": "12",
+                "icon": "28"
+            },
+            {
+                "id": "Yuuna",
+                "name": "聖澤悠奈",
+                "firstName": "悠奈",
+                "birthday": "0811",
+                "face": "13",
+                "icon": "29"
+            }
+        ]
+    },
+    {
+        "group_id": "hasu",
+        "group_name": "蓮ノ空",
+        "image_offset": "192",
+        "characters": [
+            {
+                "id": "Kaho",
+                "name": "日野下花帆",
+                "firstName": "花帆",
+                "birthday": "0522",
+                "color": "F8B500",
+                "face": "1",
+                "icon": "17"
+            },
+            {
+                "id": "Sayaka",
+                "name": "村野さやか",
+                "firstName": "さやか",
+                "birthday": "0113",
+                "color": "5383C3",
+                "face": "2",
+                "icon": "18"
+            },
+            {
+                "id": "Kozue",
+                "name": "乙宗梢",
+                "firstName": "梢",
+                "birthday": "0615",
+                "color": "68BE8D",
+                "face": "3",
+                "icon": "19"
+            },
+            {
+                "id": "Tsuzuri",
+                "name": "夕霧綴理",
+                "firstName": "綴理",
+                "birthday": "1117",
+                "color": "BA2636",
+                "face": "4",
+                "icon": "20"
+            },
+            {
+                "id": "Rurino",
+                "name": "大沢瑠璃乃",
+                "firstName": "瑠璃乃",
+                "birthday": "0831",
+                "color": "E7609E",
+                "face": "5",
+                "icon": "21"
+            },
+            {
+                "id": "Megumi",
+                "name": "藤島慈",
+                "firstName": "慈",
+                "birthday": "1220",
+                "color": "C8C2C6",
+                "face": "6",
+                "icon": "22"
+            },
+            {
+                "id": "Ginko",
+                "name": "百生吟子",
+                "firstName": "吟子",
+                "birthday": "1020",
+                "color": "A2D7DD",
+                "face": "7",
+                "icon": "23"
+            },
+            {
+                "id": "Kosuzu",
+                "name": "徒町小鈴",
+                "firstName": "小鈴",
+                "birthday": "0228",
+                "color": "FAD764",
+                "face": "8",
+                "icon": "24"
+            },
+            {
+                "id": "Hime",
+                "name": "安養寺姫芽",
+                "firstName": "姫芽",
+                "birthday": "0924",
+                "color": "9D8DE2",
+                "face": "9",
+                "icon": "25"
+            },
+            {
+                "id": "Ceras",
+                "name": "セラス 柳田 リリエンフェルト",
+                "firstName": "セラス",
+                "birthday": "0626",
+                "color": "F56455",
+                "face": "10",
+                "icon": "26"
+            },
+            {
+                "id": "Izumi",
+                "name": "桂城泉",
+                "firstName": "泉",
+                "birthday": "1201",
+                "color": "1EBECD",
+                "face": "11",
+                "icon": "27"
+            },
+            {
+                "id": "Maika",
+                "name": "錦上マイカ",
+                "firstName": "マイカ",
+                "face": "12",
+                "icon": "28"
+            },
+            {
+                "id": "Aoi",
+                "name": "令沢葵",
+                "firstName": "葵",
+                "face": "13",
+                "icon": "29"
+            },
+            {
+                "id": "Mion",
+                "name": "箕輪みおん",
+                "firstName": "みおん",
+                "face": "14",
+                "icon": "30"
+            },
+            {
+                "id": "Sachi",
+                "name": "大賀美沙知",
+                "firstName": "沙知",
+                "face": "15",
+                "icon": "31"
+            }
+        ]
+    },
+    {
+        "group_id": "iki",
+        "group_name": "いきづらい部！",
+        "image_offset": "224",
+        "characters": [
+            {
+                "id": "Polka",
+                "name": "高橋ポルカ",
+                "firstName": "ポルカ",
+                "birthday": "0818",
+                "color": "FFFF66",
+                "face": "1",
+                "icon": "17"
+            },
+            {
+                "id": "Mai",
+                "name": "麻布麻衣",
+                "firstName": "麻衣",
+                "birthday": "0213",
+                "color": "4D93D9",
+                "face": "2",
+                "icon": "18"
+            },
+            {
+                "id": "Akira",
+                "name": "五桐玲",
+                "firstName": "玲",
+                "birthday": "0709",
+                "color": "B5E6A2",
+                "face": "3",
+                "icon": "19"
+            },
+            {
+                "id": "Hanabi",
+                "name": "駒形花火",
+                "firstName": "花火",
+                "birthday": "0611",
+                "color": "FF4747",
+                "face": "4",
+                "icon": "20"
+            },
+            {
+                "id": "Miracle",
+                "name": "金澤奇跡",
+                "firstName": "奇跡",
+                "birthday": "0302",
+                "color": "FFB6C1",
+                "face": "5",
+                "icon": "21"
+            },
+            {
+                "id": "Noriko",
+                "name": "調布のりこ",
+                "firstName": "のりこ",
+                "birthday": "0404",
+                "color": "CC66FF",
+                "face": "6",
+                "icon": "22"
+            },
+            {
+                "id": "Yukuri",
+                "name": "春宮ゆくり",
+                "firstName": "ゆくり",
+                "birthday": "0922",
+                "color": "C0E6F5",
+                "face": "7",
+                "icon": "23"
+            },
+            {
+                "id": "Aurora",
+                "name": "此花輝夜",
+                "firstName": "輝夜",
+                "birthday": "0103",
+                "color": "FF5B9D",
+                "face": "8",
+                "icon": "24"
+            },
+            {
+                "id": "Midori",
+                "name": "山田真緑",
+                "firstName": "真緑",
+                "birthday": "0507",
+                "color": "3FBF7F",
+                "face": "9",
+                "icon": "25"
+            },
+            {
+                "id": "Shion",
+                "name": "佐々木翔音",
+                "firstName": "翔音",
+                "birthday": "1111",
+                "color": "F2F2F2",
+                "face": "10",
+                "icon": "26"
+            }
+        ]
+    },
+    {
+        "group_id": "llsif",
+        "group_name": "スクフェス",
+        "image_offset": "96",
+        "characters": [
+            {
+                "id": "Shizuku",
+                "name": "桜坂しずく",
+                "firstName": "しずく",
+                "birthday": "0403",
+                "face": "1",
+                "duplicated": "1"
+            },
+            {
+                "id": "Marika",
+                "name": "一之瀬マリカ",
+                "firstName": "マリカ",
+                "birthday": "0420",
+                "face": "2"
+            },
+            {
+                "id": "Minami",
+                "name": "永山みなみ",
+                "firstName": "みなみ",
+                "birthday": "0830",
+                "face": "3"
+            },
+            {
+                "id": "Aya",
+                "name": "杉崎亜矢",
+                "firstName": "亜矢",
+                "birthday": "0930",
+                "face": "4"
+            },
+            {
+                "id": "Ayumi",
+                "name": "鳥居歩美",
+                "firstName": "歩美",
+                "birthday": "0308",
+                "face": "5"
+            },
+            {
+                "id": "Seira",
+                "name": "九条聖来",
+                "firstName": "聖来",
+                "birthday": "1115",
+                "face": "6"
+            },
+            {
+                "id": "Sachiko",
+                "name": "田中さち子",
+                "firstName": "さち子",
+                "birthday": "0903",
+                "face": "7"
+            },
+            {
+                "id": "Akiru",
+                "name": "篠宮あきる",
+                "firstName": "あきる",
+                "birthday": "0720",
+                "face": "8"
+            },
+            {
+                "id": "Yumi",
+                "name": "藤城悠弓",
+                "firstName": "悠弓",
+                "birthday": "0515",
+                "face": "9"
+            },
+            {
+                "id": "Coco",
+                "name": "宮下ココ",
+                "firstName": "ココ",
+                "birthday": "0602",
+                "face": "10"
+            },
+            {
+                "id": "Sana",
+                "name": "結城紗菜",
+                "firstName": "紗菜",
+                "birthday": "0820",
+                "face": "11"
+            },
+            {
+                "id": "Christina",
+                "name": "クリスティーナ",
+                "firstName": "クリスティーナ",
+                "birthday": "0121",
+                "face": "12"
+            },
+            {
+                "id": "Yuri",
+                "name": "御堂優理",
+                "firstName": "優理",
+                "birthday": "1224",
+                "face": "13"
+            },
+            {
+                "id": "Rika",
+                "name": "神谷理華",
+                "firstName": "理華",
+                "birthday": "0107",
+                "face": "14"
+            },
+            {
+                "id": "Kanata",
+                "name": "近江彼方",
+                "firstName": "彼方",
+                "birthday": "1216",
+                "face": "15",
+                "duplicated": "1"
+            },
+            {
+                "id": "Haruka",
+                "name": "近江遥",
+                "firstName": "遥",
+                "birthday": "1111",
+                "face": "17"
+            },
+            {
+                "id": "Kasane",
+                "name": "支倉かさね",
+                "firstName": "かさね",
+                "birthday": "1212",
+                "face": "18"
+            },
+            {
+                "id": "Mizuki",
+                "name": "吉川瑞希",
+                "firstName": "瑞希",
+                "birthday": "1020",
+                "face": "19"
+            },
+            {
+                "id": "Yu",
+                "name": "逢沢遊宇",
+                "firstName": "遊宇",
+                "birthday": "0707",
+                "face": "20"
+            },
+            {
+                "id": "Fumie",
+                "name": "西村文絵",
+                "firstName": "文絵",
+                "birthday": "0920",
+                "face": "21"
+            },
+            {
+                "id": "Akemi",
+                "name": "菊池朱美",
+                "firstName": "朱美",
+                "birthday": "1030",
+                "face": "22"
+            },
+            {
+                "id": "Iruka",
+                "name": "須田いるか",
+                "firstName": "いるか",
+                "birthday": "0218",
+                "face": "23"
+            },
+            {
+                "id": "Reine",
+                "name": "佐伯麗音",
+                "firstName": "麗音",
+                "birthday": "0616",
+                "face": "24"
+            },
+            {
+                "id": "Nanaka",
+                "name": "森嶋ななか",
+                "firstName": "ななか",
+                "birthday": "0307",
+                "face": "25"
+            },
+            {
+                "id": "Saki",
+                "name": "下園咲",
+                "firstName": "咲",
+                "birthday": "0505",
+                "face": "26"
+            },
+            {
+                "id": "Ru",
+                "name": "多々良るう",
+                "firstName": "るう",
+                "birthday": "0325",
+                "face": "27"
+            },
+            {
+                "id": "Nagi",
+                "name": "白木凪",
+                "firstName": "凪",
+                "birthday": "0209",
+                "face": "28"
+            },
+            {
+                "id": "Shun",
+                "name": "黒崎隼",
+                "firstName": "隼",
+                "birthday": "0615",
+                "face": "29"
+            },
+            {
+                "id": "Fumi",
+                "name": "設楽ふみ",
+                "firstName": "ふみ",
+                "birthday": "0320",
+                "face": "30"
+            },
+            {
+                "id": "Tsurugi",
+                "name": "門田剣",
+                "firstName": "剣",
+                "birthday": "0710",
+                "face": "31"
+            },
+            {
+                "id": "Yuuka",
+                "name": "桐原優香",
+                "firstName": "優香",
+                "birthday": "0402",
+                "face": "33"
+            },
+            {
+                "id": "Fuu",
+                "name": "斉木風",
+                "firstName": "風",
+                "birthday": "0812",
+                "face": "34"
+            },
+            {
+                "id": "Misaki",
+                "name": "紫藤美咲",
+                "firstName": "美咲",
+                "birthday": "0407",
+                "face": "35"
+            },
+            {
+                "id": "Himeno",
+                "name": "綾小路姫乃",
+                "firstName": "姫乃",
+                "birthday": "0417",
+                "face": "36"
+            },
+            {
+                "id": "Koyuki",
+                "name": "白瀬小雪",
+                "firstName": "小雪",
+                "birthday": "0223",
+                "face": "37"
+            },
+            {
+                "id": "Ryo",
+                "name": "相川涼",
+                "firstName": "涼",
+                "birthday": "0506",
+                "face": "38"
+            },
+            {
+                "id": "Mikoto",
+                "name": "福原命",
+                "firstName": "命",
+                "birthday": "1105",
+                "face": "39"
+            },
+            {
+                "id": "Chiduko",
+                "name": "坂巻千鶴子",
+                "firstName": "千鶴子",
+                "birthday": "0714",
+                "face": "40"
+            },
+            {
+                "id": "Hitomi",
+                "name": "志賀仁美",
+                "firstName": "仁美",
+                "birthday": "0606",
+                "face": "41"
+            },
+            {
+                "id": "Akira",
+                "name": "鬼崎アキラ",
+                "firstName": "アキラ",
+                "birthday": "0810",
+                "face": "42"
+            },
+            {
+                "id": "Yuka",
+                "name": "月島結架",
+                "firstName": "結架",
+                "birthday": "0721",
+                "face": "43"
+            },
+            {
+                "id": "Sayuri",
+                "name": "兵藤さゆり",
+                "firstName": "さゆり",
+                "birthday": "0422",
+                "face": "44"
+            },
+            {
+                "id": "Sakura",
+                "name": "黒羽咲良",
+                "firstName": "咲良",
+                "birthday": "0404",
+                "face": "45"
+            },
+            {
+                "id": "Sakuya",
+                "name": "黒羽咲夜",
+                "firstName": "咲夜",
+                "birthday": "0909",
+                "face": "46"
+            },
+            {
+                "id": "Mutsuki",
+                "name": "高天原睦月",
+                "firstName": "睦月",
+                "birthday": "0125",
+                "face": "47"
+            },
+            {
+                "id": "Ranpha",
+                "name": "蘭花",
+                "firstName": "蘭花",
+                "birthday": "0208",
+                "face": "49"
+            },
+            {
+                "id": "Rakshata",
+                "name": "ラクシャータ",
+                "firstName": "ラクシャータ",
+                "birthday": "0618",
+                "face": "50"
+            },
+            {
+                "id": "Rebecca",
+                "name": "レベッカ",
+                "firstName": "レベッカ",
+                "birthday": "1114",
+                "face": "51"
+            },
+            {
+                "id": "Isabella",
+                "name": "イザベラ",
+                "firstName": "イザベラ",
+                "birthday": "1116",
+                "face": "52"
+            },
+            {
+                "id": "Emma",
+                "name": "エマ・ヴェルデ",
+                "firstName": "エマ",
+                "birthday": "0205",
+                "face": "53",
+                "duplicated": "1"
+            },
+            {
+                "id": "Jennifer",
+                "name": "ジェニファー",
+                "firstName": "ジェニファー",
+                "birthday": "0512",
+                "face": "54"
+            },
+            {
+                "id": "Maria",
+                "name": "マリア",
+                "firstName": "マリア",
+                "birthday": "0806",
+                "face": "55"
+            },
+            {
+                "id": "Leo",
+                "name": "レオ",
+                "firstName": "レオ",
+                "birthday": "0816",
+                "face": "56"
+            },
+            {
+                "id": "Yukari",
+                "name": "早乙女紫",
+                "firstName": "紫",
+                "birthday": "0303",
+                "face": "57"
+            }
+        ]
+    }
+]
