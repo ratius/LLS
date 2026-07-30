@@ -1,59 +1,59 @@
-const TagData = {
-	"main":       {"name": "メイン",  "r":122, "g":202, "b":223, "style": "square"},
-	"main2":      {"name": "メイン",  "r":160, "g":140, "b":240, "style": "square"},
-	"event":      {"name": "イベント","r":255, "g":130, "b":127, "style": "square"},
-	"kizuna":     {"name": "キズナ",  "r":119, "g":191, "b":220, "style": "square"},
-	"special":    {"name": "特殊",    "r":240, "g":192, "b":128, "style": "square"},
+const tagData = {
+	"main":       {"name": "メイン",  "r":122, "g":202, "b":223, "style": "button-square"},
+	"main2":      {"name": "メイン",  "r":160, "g":140, "b":240, "style": "button-square"},
+	"event":      {"name": "イベント","r":255, "g":130, "b":127, "style": "button-square"},
+	"kizuna":     {"name": "キズナ",  "r":119, "g":191, "b":220, "style": "button-square"},
+	"special":    {"name": "特殊",    "r":240, "g":192, "b":128, "style": "button-square"},
 
-	"Honoka":     {"name": "穂乃果",  "r":255, "g":163, "b": 54, "style": "round"},
-	"Eli":        {"name": "絵里",    "r":122, "g":238, "b":255, "style": "round"},
-	"Kotori":     {"name": "ことり",  "r":206, "g":191, "b":191, "style": "round"},
-	"Umi":        {"name": "海未",    "r": 23, "g":105, "b":255, "style": "round"},
-	"Rin":        {"name": "凛",      "r":219, "g":212, "b": 30, "style": "round"},
-	"Maki":       {"name": "真姫",    "r":255, "g": 80, "b": 62, "style": "round"},
-	"Nozomi":     {"name": "希",      "r":196, "g": 85, "b":246, "style": "round"},
-	"Hanayo":     {"name": "花陽",    "r":106, "g":230, "b":115, "style": "round"},
-	"Nico":       {"name": "にこ",    "r":255, "g": 79, "b":145, "style": "round"},
-	"Chika":      {"name": "千歌",    "r":255, "g":149, "b": 71, "style": "round"},
-	"Riko":       {"name": "梨子",    "r":255, "g":158, "b":172, "style": "round"},
-	"Kanan":      {"name": "果南",    "r": 39, "g":193, "b":183, "style": "round"},
-	"Dia":        {"name": "ダイヤ",  "r":219, "g":  8, "b": 57, "style": "round"},
-	"You":        {"name": "曜",      "r":102, "g":192, "b":255, "style": "round"},
-	"Yoshiko":    {"name": "善子",    "r":193, "g":202, "b":212, "style": "round"},
-	"Hanamaru":   {"name": "花丸",    "r":255, "g":208, "b": 16, "style": "round"},
-	"Mari":       {"name": "鞠莉",    "r":194, "g": 82, "b":198, "style": "round"},
-	"Ruby":       {"name": "ルビィ",  "r":255, "g":111, "b":190, "style": "round"},
-	"Ayumu":      {"name": "歩夢",    "r":255, "g":191, "b":224, "style": "round"},
-	"Kasumi":     {"name": "かすみ",  "r":213, "g":222, "b":112, "style": "round"},
-	"Shizuku":    {"name": "しずく",  "r":187, "g":237, "b":255, "style": "round"},
-	"Karin":      {"name": "果林",    "r": 74, "g": 47, "b":237, "style": "round"},
-	"Ai":         {"name": "愛",      "r":255, "g":130, "b": 70, "style": "round"},
-	"Kanata":     {"name": "彼方",    "r":190, "g":130, "b":255, "style": "round"},
-	"Setsuna":    {"name": "せつ菜",  "r":246, "g": 14, "b": 14, "style": "round"},
-	"Emma":       {"name": "エマ",    "r":143, "g":218, "b":121, "style": "round"},
-	"Rina":       {"name": "璃奈",    "r":208, "g":206, "b":225, "style": "round"},
-	"Shioriko":   {"name": "栞子",    "r": 36, "g":189, "b":139, "style": "round"},
-	"Mia":        {"name": "ミア",    "r":214, "g":213, "b":202, "style": "round"},
-	"Lanzhu":     {"name": "ランジュ","r":248, "g":200, "b":196, "style": "round"},
-	"Player":     {"name": "あなた",  "r":160, "g":192, "b":160, "style": "round"},
+	"Honoka":     {"name": "穂乃果",  "r":255, "g":163, "b": 54, "style": "button-round"},
+	"Eli":        {"name": "絵里",    "r":122, "g":238, "b":255, "style": "button-round"},
+	"Kotori":     {"name": "ことり",  "r":206, "g":191, "b":191, "style": "button-round"},
+	"Umi":        {"name": "海未",    "r": 23, "g":105, "b":255, "style": "button-round"},
+	"Rin":        {"name": "凛",      "r":219, "g":212, "b": 30, "style": "button-round"},
+	"Maki":       {"name": "真姫",    "r":255, "g": 80, "b": 62, "style": "button-round"},
+	"Nozomi":     {"name": "希",      "r":196, "g": 85, "b":246, "style": "button-round"},
+	"Hanayo":     {"name": "花陽",    "r":106, "g":230, "b":115, "style": "button-round"},
+	"Nico":       {"name": "にこ",    "r":255, "g": 79, "b":145, "style": "button-round"},
+	"Chika":      {"name": "千歌",    "r":255, "g":149, "b": 71, "style": "button-round"},
+	"Riko":       {"name": "梨子",    "r":255, "g":158, "b":172, "style": "button-round"},
+	"Kanan":      {"name": "果南",    "r": 39, "g":193, "b":183, "style": "button-round"},
+	"Dia":        {"name": "ダイヤ",  "r":219, "g":  8, "b": 57, "style": "button-round"},
+	"You":        {"name": "曜",      "r":102, "g":192, "b":255, "style": "button-round"},
+	"Yoshiko":    {"name": "善子",    "r":193, "g":202, "b":212, "style": "button-round"},
+	"Hanamaru":   {"name": "花丸",    "r":255, "g":208, "b": 16, "style": "button-round"},
+	"Mari":       {"name": "鞠莉",    "r":194, "g": 82, "b":198, "style": "button-round"},
+	"Ruby":       {"name": "ルビィ",  "r":255, "g":111, "b":190, "style": "button-round"},
+	"Ayumu":      {"name": "歩夢",    "r":255, "g":191, "b":224, "style": "button-round"},
+	"Kasumi":     {"name": "かすみ",  "r":213, "g":222, "b":112, "style": "button-round"},
+	"Shizuku":    {"name": "しずく",  "r":187, "g":237, "b":255, "style": "button-round"},
+	"Karin":      {"name": "果林",    "r": 74, "g": 47, "b":237, "style": "button-round"},
+	"Ai":         {"name": "愛",      "r":255, "g":130, "b": 70, "style": "button-round"},
+	"Kanata":     {"name": "彼方",    "r":190, "g":130, "b":255, "style": "button-round"},
+	"Setsuna":    {"name": "せつ菜",  "r":246, "g": 14, "b": 14, "style": "button-round"},
+	"Emma":       {"name": "エマ",    "r":143, "g":218, "b":121, "style": "button-round"},
+	"Rina":       {"name": "璃奈",    "r":208, "g":206, "b":225, "style": "button-round"},
+	"Shioriko":   {"name": "栞子",    "r": 36, "g":189, "b":139, "style": "button-round"},
+	"Mia":        {"name": "ミア",    "r":214, "g":213, "b":202, "style": "button-round"},
+	"Lanzhu":     {"name": "ランジュ","r":248, "g":200, "b":196, "style": "button-round"},
+	"Player":     {"name": "あなた",  "r":160, "g":192, "b":160, "style": "button-round"},
 
-	"Yukiho":     {"name": "雪穂",        "r":128, "g": 80, "b": 96, "style": "round"},
-	"Arisa":      {"name": "亜里沙",      "r":128, "g": 80, "b": 96, "style": "round"},
-	"Yoitsumu":   {"name": "よいつむ",    "r": 80, "g":112, "b":128, "style": "round"},
-	"Mito":       {"name": "美渡",        "r": 80, "g":112, "b":128, "style": "round"},
-	"Uchicchi":   {"name": "うちっちー",  "r": 80, "g":112, "b":128, "style": "round"},
-	"Haruka":     {"name": "遥",          "r":128, "g":112, "b": 80, "style": "round"},
-	"Misato":     {"name": "美里",        "r":128, "g":112, "b": 80, "style": "round"},
-	"Mai":        {"name": "マイ",        "r":128, "g":112, "b": 80, "style": "round"},
-	"Kaoruko":    {"name": "薫子",        "r":128, "g":112, "b": 80, "style": "round"},
-	"Uzuki":      {"name": "右月",        "r":128, "g":112, "b": 80, "style": "round"},
-	"Satsuki":    {"name": "左月",        "r":128, "g":112, "b": 80, "style": "round"},
-	"Hanpen":     {"name": "はんぺん",    "r":128, "g":112, "b": 80, "style": "round"},
-	"Rijicho":    {"name": "理事長",      "r":128, "g":112, "b": 80, "style": "round"},
-	"Asagi":      {"name": "浅希",        "r":128, "g":112, "b": 80, "style": "round"},
-	"Acting":     {"name": "演劇部部長"  ,"r":128, "g":112, "b": 80, "style": "round"},
-	"Basketball": {"name": "バスケ部部長","r":128, "g":112, "b": 80, "style": "round"},
-	"Tsumugi":    {"name": "ツムギ",      "r":128, "g":112, "b": 80, "style": "round"},
+	"Yukiho":     {"name": "雪穂",        "r":128, "g": 80, "b": 96, "style": "button-round"},
+	"Arisa":      {"name": "亜里沙",      "r":128, "g": 80, "b": 96, "style": "button-round"},
+	"Yoitsumu":   {"name": "よいつむ",    "r": 80, "g":112, "b":128, "style": "button-round"},
+	"Mito":       {"name": "美渡",        "r": 80, "g":112, "b":128, "style": "button-round"},
+	"Uchicchi":   {"name": "うちっちー",  "r": 80, "g":112, "b":128, "style": "button-round"},
+	"Haruka":     {"name": "遥",          "r":128, "g":112, "b": 80, "style": "button-round"},
+	"Misato":     {"name": "美里",        "r":128, "g":112, "b": 80, "style": "button-round"},
+	"Mai":        {"name": "マイ",        "r":128, "g":112, "b": 80, "style": "button-round"},
+	"Kaoruko":    {"name": "薫子",        "r":128, "g":112, "b": 80, "style": "button-round"},
+	"Uzuki":      {"name": "右月",        "r":128, "g":112, "b": 80, "style": "button-round"},
+	"Satsuki":    {"name": "左月",        "r":128, "g":112, "b": 80, "style": "button-round"},
+	"Hanpen":     {"name": "はんぺん",    "r":128, "g":112, "b": 80, "style": "button-round"},
+	"Rijicho":    {"name": "理事長",      "r":128, "g":112, "b": 80, "style": "button-round"},
+	"Asagi":      {"name": "浅希",        "r":128, "g":112, "b": 80, "style": "button-round"},
+	"Acting":     {"name": "演劇部部長"  ,"r":128, "g":112, "b": 80, "style": "button-round"},
+	"Basketball": {"name": "バスケ部部長","r":128, "g":112, "b": 80, "style": "button-round"},
+	"Tsumugi":    {"name": "ツムギ",      "r":128, "g":112, "b": 80, "style": "button-round"},
 };
 
 //■プルダウンメニューを操作した時の処理
@@ -104,7 +104,7 @@ function NarrowerEvent(changed){
 				
 			//チャプター概要
 			+ series['part'].map( chapter => {
-				const tags = chapter.tags.map( tag => DrawCharName(tag) ).join('');
+				const tags = chapter.tags.map( tag => createStyledTag(tagData[tag], tag)).join('');
 				const chapterColor = ('color' in chapter ? chapter.color : seriesColor);
 				const isChapterHasVideo = (['tube'] in chapter && chapter['tube'] !== "");
 				return `
@@ -151,18 +151,18 @@ const drawYouTubeVideoContent = ((url, title) => {
 function initialize () {
 	const TimeOutputLoaded = performance.now();
 	//色データをCSSに追加
-	let AddedCSS = '\n';
-	Object.keys(TagData).forEach( function(key) {
-		AddedCSS += '.article-color-' + key + '{\n\t'
-		+ 'background-color: ' + getColor(TagData[key], 1.9, 0.1) + ';\n\t'
-		+ 'border-color: ' + getColor(TagData[key], 2, 1) + '\n}\n';
-		if(TagData[key].style === "round"){
-			AddedCSS += '.button_' + key + '{\n\t'
-			+ 'background-color: ' + getColor(TagData[key], 2) + ';\n\t'
-			+ 'border-color: ' + getColor(TagData[key], 0.4, 0.1) + '\n}\n';
-		}
-	});
-	document.querySelector('style').textContent += AddedCSS;
+	const buttonCSS = document.createElement("style");
+	buttonCSS.innerHTML = ("\n<!--\n/* Generated from sifas-story.js */\n" + Object.keys(tagData).map(tag => {
+	return `.article-color-${tag} {
+	background-color: ${getColor(tagData[tag], 1.9, 0.1)};
+	border-color: ${getColor(tagData[tag], 2, 1)};
+	}
+	.button-${tag} {
+	background-color: ${getColor(tagData[tag], 2)};
+	border-color: ${getColor(tagData[tag], 0.4, 0.1)};
+	}`;
+	}).join("\n") + "\n-->");
+	document.head.appendChild(buttonCSS);
 	
 	//セレクトボックスに要素を追加
 	window['JSON-sifas-story'].forEach ( temp => {
@@ -207,7 +207,7 @@ function initialize () {
 							isError++;
 						}
 						for(let temp4 of temp3.tags){
-							if(!(temp4 in TagData)){ //●タグが不正
+							if(!(temp4 in tagData)){ //●タグが不正
 								console.log('[Error] タグが不正 (' + temp4 + '):\n' + StoryLocation);
 								isError++;
 							}
