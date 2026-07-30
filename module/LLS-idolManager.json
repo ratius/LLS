@@ -789,7 +789,7 @@
                 "firstName": "しずく",
                 "birthday": "0403",
                 "face": "1",
-                "duplicated": "1"
+                "hidden": "1"
             },
             {
                 "id": "Marika",
@@ -888,7 +888,7 @@
                 "firstName": "彼方",
                 "birthday": "1216",
                 "face": "15",
-                "duplicated": "1"
+                "hidden": "1"
             },
             {
                 "id": "Haruka",
@@ -1134,7 +1134,7 @@
                 "firstName": "エマ",
                 "birthday": "0205",
                 "face": "53",
-                "duplicated": "1"
+                "hidden": "1"
             },
             {
                 "id": "Jennifer",
@@ -1163,6 +1163,34 @@
                 "firstName": "紫",
                 "birthday": "0303",
                 "face": "57"
+            }
+        ]
+    },
+    {
+        "group_id": "llsif_collab",
+        "group_name": "スクフェス(コラボ)",
+        "image_offset": "156",
+        "hidden": "1",
+        "characters": [
+            {
+                "id": "P3",
+                "name": "ペルソナ3",
+                "face": "0"
+            },
+            {
+                "id": "P4",
+                "name": "ペルソナ4",
+                "face": "1"
+            },
+            {
+                "id": "P5",
+                "name": "ペルソナ5",
+                "face": "2"
+            },
+            {
+                "id": "geass",
+                "name": "コードギアス",
+                "face": "3"
             }
         ]
     }

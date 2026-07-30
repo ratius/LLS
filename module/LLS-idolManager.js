@@ -3,15 +3,15 @@
 
 const LLSIdolManager = {
     //グループIDとキャラクターIDからキャラクターの情報を取得
-    //これにより返るキャラクター情報は、グループの情報を含んだものとなる
+    //これにより返るキャラクター情報は、グループの共通情報も含んだものとなる
     getCharacterData:  function (group, id) {
         const targetGroup = window[this.JSONPath].find((e) => e?.["group_id"] === group) ?? { "characters": [] };
         const targetCharacter = targetGroup["characters"].find((e) => e?.id === id);
-        if (targetCharacter === undefined) {
-            throw new Error(`Error: target not found`);
+        if (targetCharacter === undefined) { //見つからなかった場合、undefinedを返す
+            return undefined;
         }
-        const { characters, ...groupData } = targetGroup;
-        return { ...targetCharacter, ...groupData };
+        const { characters, ...groupInfo } = targetGroup;
+        return { ...targetCharacter, ...groupInfo };
     },
 
     // グループIDとキャラクターIDを指定して顔画像を作成。imageSizeは32と64のみ対応
@@ -21,10 +21,10 @@ const LLSIdolManager = {
             throw new Error ("Error: invalid image size");
         }
         const targetCharacter = this.getCharacterData(group, id);
-        const imageID = targetCharacter.hasOwnProperty("face") ? parseInt(targetCharacter?.["image_offset"] ?? 0) + parseInt(targetCharacter["face"]) : 0;
+        const imageID = parseInt(targetCharacter?.["image_offset"] ?? 0) + parseInt(targetCharacter?.["face"] ?? 0);
         const imageOffsetX = - imageSize * (this.imageGridColumn - (imageID % 16) - 1);
         const imageOffsetY = - imageSize * (this.imageGridRow - Math.floor(imageID / 16) - 1);
-        return `<div class="icon-face-${imageSize}" style="background-position: right ${imageOffsetX}px bottom ${imageOffsetY}px"${targetCharacter.name ? ` title="${targetCharacter.name}"` : ``}></div>`
+        return `<div class="icon-face-${imageSize}" style="background-position: right ${imageOffsetX}px bottom ${imageOffsetY}px"${targetCharacter?.name ? ` title="${targetCharacter.name}"` : ``}></div>`
     },
 
     //全キャラクターのリストを取得
