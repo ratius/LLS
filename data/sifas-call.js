@@ -1,7 +1,7 @@
 const CharactersWithSpecificColor = []; //専用色が定義されているキャラクターのID
 
+//呼称表のテーブルを作成
 function CreateTable(column, defaultBGColor) {
-    console.log(column);
     //ヘッダー
     const header = `<tr><th style="background-color:#cde" class="calltable-TL">→呼ばれる側<br>↓呼ぶ側</th>${column.map(id => {
         const targetCharacter = window['JSON-sifas-call'].find(entry => entry.id === id);
