@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta charset="utf-8">
+
+<meta name="description" content="YouTubeのイキヅライブ! LOVELIVE! BLUEBIRD公式チャンネルで配信されているWebラジオ動画のまとめ。">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="いきづらい部！ Webラジオまとめ">
+<meta property="og:url" content="https://ratius.github.io/LLS/ikizulive-radio.html">
+<meta property="og:image" content="https://ratius.github.io/LLS/card/ikizulive-radio.jpg">
+<meta property="og:description" content="YouTubeのイキヅライブ! LOVELIVE! BLUEBIRD公式チャンネルで配信されているWebラジオ動画のまとめ。">
+<meta property="og:site_name" content="ラブライブ！ストレージ">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="いきづらい部！ Webラジオまとめ">
+<meta name="twitter:description" content="YouTubeのイキヅライブ! LOVELIVE! BLUEBIRD公式チャンネルで配信されているWebラジオ動画のまとめ。">
+<meta name="twitter:site" content="@ratius55">
+<meta name="twitter:creator" content="@ratius55">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e50080">
+
+<title>いきづらい部！ Webラジオまとめ | ラブライブ！ストレージ</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+<link rel="stylesheet" href="main_gen2.css">
+<link rel="stylesheet" href="data/videolist.css">
+<script><!--
+//■データリスト
+const tagData = {
+	"Ayasaki"  : {"name": "綾咲穂音"   , "r":255, "g":255, "b":102, "style": "button-round"},
+	"Endo"     : {"name": "遠藤璃菜"   , "r": 77, "g":147, "b":217, "style": "button-round"},
+	"Miyano"   : {"name": "宮野芹"     , "r":181, "g":230, "b":162, "style": "button-round"},
+	"Fujino"   : {"name": "藤野こころ" , "r":255, "g": 71, "b": 71, "style": "button-round"},
+	"Sakano"   : {"name": "坂野愛羽"   , "r":255, "g":182, "b":193, "style": "button-round"},
+	"Seko"     : {"name": "瀬古梨愛"   , "r":204, "g":102, "b":255, "style": "button-round"},
+	"Okumura"  : {"name": "奥村優季"   , "r":192, "g":230, "b":245, "style": "button-round"},
+	"Amasawa"  : {"name": "天沢朱音"   , "r":255, "g": 91, "b":157, "style": "button-round"},
+	"Kotomori" : {"name": "小戸森穂花" , "r": 63, "g":191, "b":127, "style": "button-round"},
+	"Suzunose" : {"name": "涼ノ瀬葵音" , "r":242, "g":242, "b":242, "style": "button-round"},
+};
+
+const filterTargets = [
+	{"name": "debug", "condition": "after:2025-11-01"},
+	{"name": "本編をすべて表示", "condition": "tag:s1"},
+	{"name": "----"},
+	{"name": "出演：綾咲穂音"   , "condition": "tag:Ayasaki"},
+	{"name": "出演：遠藤璃菜"   , "condition": "tag:Endo"},
+	{"name": "出演：宮野芹"     , "condition": "tag:Miyano"},
+	{"name": "出演：藤野こころ" , "condition": "tag:Fujino"},
+	{"name": "出演：坂野愛羽"   , "condition": "tag:Sakano"},
+	{"name": "出演：瀬古梨愛"   , "condition": "tag:Seko"},
+	{"name": "出演：奥村優季"   , "condition": "tag:Okumura"},
+	{"name": "出演：天沢朱音"   , "condition": "tag:Amasawa"},
+	{"name": "出演：小戸森穂花" , "condition": "tag:Kotomori"},
+	{"name": "出演：涼ノ瀬葵音" , "condition": "tag:Suzunose"},
+];
+
+const LLSPLayoutTemplate = (entry) => {
+    const videoLength = (typeof entry['length'] === 'number' && entry['length'] >= 0 ? `<span class="length pc-only">動画：${convertSecondsToHHMMSS(entry['length'])}</span>` : '');
+    const videoContent = ('tube' in entry && entry['tube'] ? `${LLSProcessor.getYouTubeLink(entry['tube'], entry['title'])}${videoLength}` : '');
+    const descContent = (typeof entry['desc'] === 'string' && entry['desc'] !== "" ? convertMarkup(entry['desc']) : '');
+	const memoContent = (typeof entry['memo'] === 'string' && entry['memo'] !== "" ? convertMarkup(entry['memo']) : '');
+	const progContent = (typeof entry['program'] == 'object' && entry['program'].length ? convertMarkup(`{{EL::配信内容（クリックで展開）::{{UL::${entry['program'].join("::")}}}}}`) : '');
+    const tagsContent = entry['tags'].map(tag => {
+		let isGuest = false;
+		if(tag.startsWith("_")){
+			isGuest = true;
+			tag = tag.slice(1);
+		}
+		if(tag in tagData){
+			return createStyledTag(tagData[tag], tag, (isGuest ? "button-hexa" : null));
+		}
+	}).join('');
+	
+	return `<article>
+		<div class="article-box-date">${entry['date']}</div>
+		<div class="article-box-title">${entry['title']}</div>
+		<div class="article-box-tube">${videoContent}</div>
+		<div class="article-box-desc">${descContent ? `<div class="desc">${descContent}</div>` : ''}${memoContent}${progContent}</div>
+		<div class="article-box-tags">${tagsContent}</div>
+	</article>`;
+}
+--></script>
+<script src="data/loader.js" data-src="data/ikizulive-radio.json,data/common-library.js,module/LLS-processor.js"></script>
+</head>
+<body class="left">
+<main>
+	<header>
+		<h1 id="TitleName">いきづらい部！ Webラジオまとめ</h1>
+		<nav class="right-menu">
+			<ul>
+				<li><strong>目次</strong></li>
+				<li><hr></li>
+				<li><a href="#Summary">概要</a></li>
+				<li><a href="#VideoList">動画一覧</a></li>
+				<li><a href="#History">更新履歴</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section id="Summary">
+		<h2>概要</h2>
+		<p>
+			YouTubeのイキヅライブ! LOVELIVE! BLUEBIRD公式チャンネルで配信されているWebラジオ動画のまとめです。
+		</p>
+	</section>
+
+	<section id="VideoList">
+		<h2>動画一覧</h2>
+		<p>下部のプルダウンメニューから絞り込み条件を選択すると、条件に合致する配信の情報が表示されます。
+		</p>
+		<div id="Filter-Container">
+			<label for="LLSP-Filter">絞り込み</label>
+			<select id="LLSP-Filter">
+				<option value="">(期間を選択)</option>
+			</select>
+		</div>
+		<div id="LLSP-Result" class="output-box output-box-default">
+			このページでは、情報を表示するためにJavaScriptを使用します。<br>
+			いつまで待ってもこの表示が消えない場合、JavaScriptがオフになっている可能性があります。<br>
+			お手数ですが、JavaScriptの実行を許可した上でページを再読み込みしてください。<br>
+		</div>
+	</section>
+
+	<section id="History">
+		<h2>更新履歴（動画一覧への掲載以外）</h2>
+		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
+		<div class="history-container">
+			<details open>
+				<summary class="important"><span class="date">2026/08/01</span> - 公開</summary>
+				<div>
+					<span class="icon-new"></span>公開
+				</div>
+			</details>
+		</div>
+	</section>
+
+	<footer>
+		<nav>
+			<a id="BackToMain" href="index.html">トップページに戻る。</a>
+		</nav>
+	</footer>
+</main>
+</body>
+</html>

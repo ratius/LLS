@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta charset="utf-8">
+
+<meta name="description" content="スクスタ内におけるキャラクターの呼び方のまとめ。">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="スクスタ 呼称表">
+<meta property="og:url" content="https://ratius.github.io/LLS/sifas-call.html">
+<meta property="og:description" content="スクスタ内におけるキャラクターの呼び方のまとめです。">
+<meta property="og:site_name" content="ラブライブ！ストレージ">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="スクスタ 呼称表">
+<meta name="twitter:description" content="スクスタ内におけるキャラクターの呼び方のまとめです。">
+<meta name="twitter:site" content="@ratius55">
+<meta name="twitter:creator" content="@ratius55">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e50080">
+
+<title>スクスタ 呼称表 | ラブライブ！ストレージ</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+<link rel="stylesheet" href="main_gen2.css">
+<style><!--
+table.call {
+	text-align: center;
+	font-size: 80%;
+	border-collapse: separate;
+	border-spacing: 0px;
+	overflow-y: scroll;
+}
+
+.call th {
+	width: 100px;
+}
+
+.calltable-TL {
+	z-index: 2;
+}
+
+.calltable-TL, .calltable-TR { /*上*/
+	position: sticky;
+	top: 0;
+	border-bottom: 2px solid #79a;
+}
+.calltable-TL, .calltable-BL { /*左*/
+	position: sticky;
+	left: 0;
+	border-right: 2px solid #79a;
+}
+.calltable-BL, .calltable-BR { /*下*/
+	border-bottom: 1px solid #aaa;
+}
+.calltable-TR, .calltable-BR { /*右*/
+	border-right: 1px solid #aaa;
+}
+.call th, .call td {
+	padding: 5px 2px;
+}
+.shadowname {
+	color: white;
+	filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.6));
+}
+.bg_index_Emma, .bg_index_Mia {
+	font-size: 80%;
+}
+.memo {
+	border-bottom: dashed 1px #666;
+}
+--></style>
+<script src="data/loader.js" data-src="data/sifas-call.json,data/sifas-call.js,data/common-library.js,module/LLS-idolManager.json,module/LLS-idolManager.js"></script>
+</head>
+<body class="left">
+<main>
+	<header>
+		<h1>スクスタ 呼称表</h1>
+	</header>
+	
+	<nav class="right-menu">
+		<ul>
+			<li><strong>目次</strong></li>
+			<li><hr></li>
+			<li><a href="#Foreword">まえがき</a></li>
+			<li><a href="#CallList">呼ばれ方一覧</a></li>
+			<li><ul>
+				<li><a href="#Call_Muse">μ's</a></li>
+				<li><a href="#Call_Aqours">Aqours</a></li>
+				<li><a href="#Call_Niji">虹ヶ咲</a></li>
+				<li><a href="#Call_Misc1">その他(1)</a></li>
+				<li><a href="#Call_Misc2">その他(2)</a></li>
+			</ul></li>
+			<li><a href="#History">更新履歴</a></li>
+		</ul>
+	</nav>
+
+	<section>
+		<h2 class="foreword">まえがき</h2>
+		<p>
+		「ラブライブ！スクールアイドルフェスティバルALL STARS」内におけるキャラクターの呼び方のまとめです。<br>
+			打ち解ける前だと思しき呼び方は掲載しないか、注釈つきで掲載します。
+		</p>
+	</section>
+
+	<section id="CallList">
+		<h2 class="muse">呼ばれ方一覧</h2>
+		<section id="Call_Muse">
+			<h3>μ'sの呼ばれ方</h3>
+			<div class="output-box darkbg" id="OutputAreaMuse"></div>
+		</section>
+
+		<section id="Call_Aqours">
+			<h3>Aqoursの呼ばれ方</h3>
+			<div class="output-box darkbg" id="OutputAreaAqours"></div>
+		</section>
+
+		<section id="Call_Niji">
+			<h3>虹ヶ咲の呼ばれ方</h3>
+			<div class="output-box darkbg" id="OutputAreaNiji"></div>
+		</section>
+
+		<section id="Call_Misc1">
+			<h3>その他キャラクターの呼ばれ方(1)</h3>
+			<div class="output-box darkbg" style="max-height: 400px;" id="OutputAreaMisc1"></div>
+		</section>
+
+		<section id="Call_Misc2">
+			<h3>その他キャラクターの呼ばれ方(2)</h3>
+			<div class="output-box darkbg" id="OutputAreaMisc2"></div>
+		</section>
+	</section>
+
+	<section id="History">
+		<h2>更新履歴 (呼び方の追加以外)</h2>
+		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
+		<div class="history-container">
+			<details open>
+				<summary class="important"><span class="date">2026/08/01</span> - リニューアル</summary>
+				<div>
+					<span class="icon-new"></span>CSSをアップデート<br>
+					<span class="icon-fix"></span>データ読み込み周りの仕様を変更<br>
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2023/04/05</span> - キャラクター追加</summary>
+				<div>
+					<span class="icon-new"></span>はんぺんの呼ばれ方を追加（第49章まで）
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2023/03/18</span> - 目次を追加</summary>
+				<div>
+					<span class="icon-new"></span>目次を追加
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2020/12/31</span> - キャラクター追加</summary>
+				<div>
+					<span class="icon-new"></span>加藤ツムギの呼び方・呼ばれ方を追加（第46章まで）
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2022/06/25</span> - レイアウト調整</summary>
+				<div>
+					<span class="icon-new"></span>まえがきを追加<br>
+					<span class="icon-fix"></span>「その他キャラクター」を、シリーズ別に色分け<br>
+					<span class="icon-fix"></span>更新履歴をリニューアル（他ページ同様、折りたたみ式に変更）<br>
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2022/05/18</span> - ニジガクの呼ばれ方分割</summary>
+				<div>
+					<span class="icon-new"></span>「ニジガクの呼ばれ方」を更に分割し、表が3つに
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2022/02/17</span> - 表を統合</summary>
+				<div>
+					<span class="icon-fix"></span>「その他キャラクターの呼ばれ方(2)」をニジガクに統合
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2021/01/14</span> - 表を分割</summary>
+				<div>
+					<span class="icon-new"></span>「その他キャラクターの呼ばれ方」を分割
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2021/09/03</span> - ミア＆ランジュのプレイアブル化に伴う調整</summary>
+				<div>
+					<span class="icon-new"></span>ランジュ・ミアのパーソナルカラーを設定
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2020/11/01</span> - 表を分割</summary>
+				<div>
+					<span class="icon-new"></span>「ニジガクの呼ばれ方」を分割
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2020/02/07</span> - 表を追加</summary>
+				<div>
+					<span class="icon-new"></span>「その他キャラクターの呼ばれ方」を追加
+				</div>
+			</details>
+			<details>
+				<summary class="important"><span class="date">2019/12/17</span> - 公開</summary>
+				<div>
+					<span class="icon-new"></span>公開
+				</div>
+			</details>
+		</div>
+	</section>
+	<footer>
+		<nav>
+			<a id="BackToMain" href="index.html">トップページに戻る。</a>
+		</nav>
+	</footer>
+</main>
+</body>
+</html>
