@@ -1,26 +1,9 @@
 //■■ラブライブ！ストレージ 共通ライブラリ
 
-//■キャラクター名のボタン ver.20231222b （近々廃止予定）
-//事前にTagData変数の定義が必要です
-const DrawCharName = (character) => {
-	if (typeof TagData === 'object') {
-		if (character in TagData) { //存在する場合のみ
-			const target = TagData[character];
-			return `<span class="button-${target.style} button_${character}">${target.name}</span>`;
-		} else {
-			console.error(`キャラクターID ${character} は存在しません`);
-			return null;
-		}
-	} else {
-		console.error("tagdata が存在しません")
-		return null;
-	}
-}
-
-//■キャラクター名のボタンの生成 第二弾 ver.20241231
+//■キャラクター名のボタンの生成 ver.20260730
 const createStyledTag = (tag, id, style = false) => {
 	if (tag.hasOwnProperty('name') && tag.hasOwnProperty('style')) {
-		return `<span class="${style ? style : tag.style} button-${id}">${tag.name}</span>`;
+		return `<span class="${style || tag.style} button-${id}">${tag.name}</span>`;
 	}
 	return null;
 }
@@ -33,6 +16,14 @@ const getColor = (Object, white = 0, black = 0) => {
 	const g = Math.floor((Object.g + (255 * white)) / (white + black + 1));
 	const b = Math.floor((Object.b + (255 * white)) / (white + black + 1));
 	return 'rgb(' + r + ',' + g + ',' + b + ')';
+}
+
+//■カラーコードから色を計算 ver.20260801
+const getColorFromColorCode = (colorcode, white = 0, black = 0) => {
+	if(colorcode.charAt(0) == "#"){ return getColorFromColorCode(colorcode.substring(1), white, black);}
+	const ColorHex = parseInt(colorcode, 16);
+	const ColorObject = {"r": (ColorHex / 65536) % 256, "g" : Math.trunc(ColorHex / 256) % 256, "b" : ColorHex % 256};
+	return getColor(ColorObject, white, black);
 }
 
 //■Date型 → "YYYY/MM/DD" への変換
