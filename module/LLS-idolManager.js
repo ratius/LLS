@@ -50,7 +50,7 @@ const LLSIdolManager = {
                 const cKeyValue = val.split(":")[2];
 
                 if (cType === "is" && (!character?.[cKeyName] || character[cKeyName] !== cKeyValue)){ return false;}
-                else if (cType === "isnot" && (!character?.[cKeyName] && character[cKeyName] === cKeyValue)){ return false;}
+                else if (cType === "isnot" && character?.[cKeyName] && character[cKeyName] === cKeyValue){ return false;}
                 else if (cType === "has" && !character?.[cKeyName]){ return false;}
                 else if (cType === "exhas" && character?.[cKeyName]){ return false;}
                 return true;
