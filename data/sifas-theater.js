@@ -1,37 +1,3 @@
-//タグとデータベースを橋渡しする対照表
-const NameMap = {
-	"穂乃果": "Honoka",
-	"絵里":   "Eli",
-	"ことり": "Kotori",
-	"海未":   "Umi",
-	"凛":     "Rin",
-	"真姫":   "Maki",
-	"希":     "Nozomi",
-	"花陽":   "Hanayo",
-	"にこ":   "Nico",
-	"千歌":   "Chika",
-	"梨子":   "Riko",
-	"果南":   "Kanan",
-	"ダイヤ": "Dia",
-	"曜":     "You",
-	"善子":   "Yoshiko",
-	"花丸":   "Hanamaru",
-	"鞠莉":   "Mari",
-	"ルビィ": "Ruby",
-	"歩夢":   "Ayumu",
-	"かすみ": "Kasumi",
-	"しずく": "Shizuku",
-	"果林":   "Karin",
-	"愛":     "Ai", 
-	"彼方":   "Kanata",
-	"せつ菜": "Setsuna",
-	"エマ":   "Emma",
-	"璃奈":   "Rina",
-	"栞子":   "Shioriko",
-	"ミア":   "Mia",
-	"嵐珠":   "Lanzhu"
-};
-
 //■表示するタグのデータ
 const TagData = {
 	"Season":       {"name": "季節の行事",                 "r":100, "g":140, "b":160, "style": "button-square"},
@@ -185,8 +151,8 @@ function DrawStoryList(conditions){
 }
 
 //■指定されたIDの毎日劇場をモーダルウィンドウに描画
-function MakeModal(id){
-	const result = window['JSON-sifas-theater'].find((temp) => temp.id === id);
+function MakeModal(story_id){
+	const result = window['JSON-sifas-theater'].find((e) => e.id === story_id);
 	if(!result){ return false;}
 	result.text = convertMarkup(result.text);
 	
@@ -194,7 +160,7 @@ function MakeModal(id){
 	document.getElementById("Modal-Title").innerHTML = result.title;
 	
 	//注釈リストの作成
-	let noteList = [];
+	const noteList = [];
 	const pattern = new RegExp(/<span class="_pre-note" data-note="(.+)">(.+)<\/span>/g);
 	while ((match = pattern.exec(result.text)) !== null) {
 		noteList.push(match[1]);
@@ -211,7 +177,7 @@ function MakeModal(id){
 	document.getElementById("Modal-Text").innerHTML = textLines.map( (text, index) => {
 		text = text.split('\t');
 		
-		let currentNote = [];
+		const currentNote = [];
         const processedLine = text.map(x => {
 			x = x.replace(/\{\{notenum:(\d+)\}\}/g, function(match, noteIndex){
 				if(match) { currentNote.push(`<span>*${noteIndex}： ${noteList[parseInt(noteIndex, 10)-1]}</span>`);}
@@ -220,7 +186,10 @@ function MakeModal(id){
 			return x;
 		});
 		const characterTagName = result.tags[parseInt(text[0],10)];
-		const characterName = (isNaN(text[0]) ? text[0] : createStyledTag(TagData[characterTagName], characterTagName));
+		const characterData = LLSIdolManager.filterCharacterList(`is:id:${characterTagName}`,"has:color_sifas")[0];
+		const characterName = characterData
+			? `<span class="modal-character-face">${LLSIdolManager.drawFace(characterData.group_id, characterData.id, 32)}</span><span class="modal-character-name">${characterData.firstName === '嵐珠' ? 'ランジュ' : characterData.firstName}</span>`
+			: characterTagName;
 		
 		return characterName
 		+ (processedLine.length >= 2 ? `<p>${processedLine[1]}</p>` : '')
@@ -257,7 +226,7 @@ function CloseModal(target){
 //■初期化処理
 function initialize() {
 	//TagDataにキャラクターの内容を追加
-	const characterList = window['JSON-characterDB'].filter(entry => entry.hasOwnProperty('color_sifas'));
+	const characterList = LLSIdolManager.filterCharacterList("has:color_sifas");
 	characterList.forEach(character => {
 		const objtemp = new Object();
 		objtemp.name = (character.firstName === '嵐珠' ? 'ランジュ' : character.firstName); //鐘嵐珠はスクスタでは「ランジュ」表記
@@ -266,21 +235,21 @@ function initialize() {
 		objtemp.b = parseInt(character['color_sifas'].substring(4, 6), 16);
 		objtemp.style = "button-round";
 
-		TagData[NameMap[character.firstName]] = objtemp;
+		TagData[character.id] = objtemp;
 	});
 
 	//TagDataの色データをCSSに追加
-	document.querySelector('style').textContent += Object.keys(TagData).map( character => {
+	document.querySelector('style').textContent += "\n<!--" + Object.keys(TagData).map( character => {
 		return `
 		.button-${character} {
 			background-color: ${getColor(TagData[character], 2)};
 			border-color: ${getColor(TagData[character], 0)}
 		}`;
-	}).join('');
+	}).join('') + "\n-->";
 
 	//セレクトボックスに要素を追加
 	SortTarget.forEach( temp => {
-		if(temp.name !== "debug" || isDebugMode){
+		if(temp.name.startsWith("debug") || isDebugMode){
 			const option = document.createElement("option");
 			option.text = temp.name;
 			option.value = temp.condition;

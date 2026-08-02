@@ -1,49 +1,3 @@
-//タグとデータベースを橋渡しする対照表
-const NameMap = {
-	"穂乃果":       "Honoka",
-	"絵里":         "Eli",
-	"ことり":       "Kotori",
-	"海未":         "Umi",
-	"凛":           "Rin",
-	"真姫":         "Maki",
-	"希":           "Nozomi",
-	"花陽":         "Hanayo",
-	"にこ":         "Nico",
-	"千歌":         "Chika",
-	"梨子":         "Riko",
-	"果南":         "Kanan",
-	"ダイヤ":       "Dia",
-	"曜":           "You",
-	"善子":         "Yoshiko",
-	"花丸":         "Hanamaru",
-	"鞠莉":         "Mari",
-	"ルビィ":       "Ruby",
-	"歩夢":         "Ayumu",
-	"かすみ":       "Kasumi",
-	"しずく":       "Shizuku",
-	"果林":         "Karin",
-	"愛":           "Ai",
-	"彼方":         "Kanata",
-	"せつ菜":       "Setsuna",
-	"エマ":         "Emma",
-	"璃奈":         "Rina",
-	"栞子":         "Shioriko",
-	"ミア":         "Mia",
-	"嵐珠":         "Lanzhu",
-	"侑":           "Yu",
-	"かのん":       "Kanon",
-	"可可":         "Keke",
-	"千砂都":       "Chisato",
-	"すみれ":       "Sumire",
-	"恋":           "Ren",
-	"きな子":       "Kinako",
-	"メイ":         "Mei",
-	"四季":         "Shiki",
-	"夏美":         "Natsumi",
-	"マルガレーテ": "Margarete",
-	"冬毬":         "Tomari"
-};
-
 //■表示するタグのデータ
 const TagData = {	
 	"Season":   {"name": "季節の行事", "r":100, "g":140, "b":160, "style": "button-square"},
@@ -51,88 +5,86 @@ const TagData = {
 	"Event":    {"name": "イベント",   "r":100, "g":140, "b":160, "style": "button-square"}
 };
 
-//■ソート対象
+//■ソ絞り込みのソート対象
 const SortTarget = [
-{"name": "2023年12月", "condition": "date,2023/12/01,2023/12/31"},
-{"name": "2024年1月",  "condition": "date,2024/01/01,2024/01/31"},
-{"name": "2024年2月",  "condition": "date,2024/02/01,2024/02/29"},
-{"name": "2024年3月",  "condition": "date,2024/03/01,2024/03/31"},
-{"name": "----"},
-{"name": "出演：高坂 穂乃果",            "condition": "tag,Honoka"},
-{"name": "出演：絢瀬 絵里",              "condition": "tag,Eli"},
-{"name": "出演：南 ことり",              "condition": "tag,Kotori"},
-{"name": "出演：園田 海未",              "condition": "tag,Umi"},
-{"name": "出演：星空 凛",                "condition": "tag,Rin"},
-{"name": "出演：西木野 真姫",            "condition": "tag,Maki"},
-{"name": "出演：東條 希",                "condition": "tag,Nozomi"},
-{"name": "出演：小泉 花陽",              "condition": "tag,Hanayo"},
-{"name": "出演：矢澤 にこ",              "condition": "tag,Nico"},
-{"name": "出演：高海 千歌",              "condition": "tag,Chika"},
-{"name": "出演：桜内 梨子",              "condition": "tag,Riko"},
-{"name": "出演：松浦 果南",              "condition": "tag,Kanan"},
-{"name": "出演：黒澤 ダイヤ",            "condition": "tag,Dia"},
-{"name": "出演：渡辺 曜",                "condition": "tag,You"},
-{"name": "出演：津島 善子",              "condition": "tag,Yoshiko"},
-{"name": "出演：国木田 花丸",            "condition": "tag,Hanamaru"},
-{"name": "出演：小原 鞠莉",              "condition": "tag,Mari"},
-{"name": "出演：黒澤 ルビィ",            "condition": "tag,Ruby"},
-{"name": "出演：上原 歩夢",              "condition": "tag,Ayumu"},
-{"name": "出演：中須 かすみ",            "condition": "tag,Kasumi"},
-{"name": "出演：桜坂 しずく",            "condition": "tag,Shizuku"},
-{"name": "出演：朝香 果林",              "condition": "tag,Karin"},
-{"name": "出演：宮下 愛",                "condition": "tag,Ai"},
-{"name": "出演：近江 彼方",              "condition": "tag,Kanata"},
-{"name": "出演：優木 せつ菜",            "condition": "tag,Setsuna"},
-{"name": "出演：エマ・ヴェルデ",         "condition": "tag,Emma"},
-{"name": "出演：天王寺 璃奈",            "condition": "tag,Rina"},
-{"name": "出演：三船 栞子",              "condition": "tag,Shioriko"},
-{"name": "出演：ミア・テイラー",         "condition": "tag,Mia"},
-{"name": "出演：鐘 嵐珠",                "condition": "tag,Lanzhu"},
-{"name": "出演：高咲 侑",                "condition": "tag,Yu"},
-{"name": "出演：澁谷 かのん",            "condition": "tag,Kanon"},
-{"name": "出演：唐 可可",                "condition": "tag,Keke"},
-{"name": "出演：嵐 千砂都",              "condition": "tag,Chisato"},
-{"name": "出演：平安名 すみれ",          "condition": "tag,Sumire"},
-{"name": "出演：葉月 恋",                "condition": "tag,Ren"},
-{"name": "出演：桜小路 きな子",          "condition": "tag,Kinako"},
-{"name": "出演：米女 メイ",              "condition": "tag,Mei"},
-{"name": "出演：若菜 四季",              "condition": "tag,Shiki"},
-{"name": "出演：鬼塚 夏美",              "condition": "tag,Natsumi"},
-{"name": "出演：ウィーン・マルガレーテ", "condition": "tag,Margarete"},
-{"name": "出演：鬼塚 冬毬",              "condition": "tag,Tomari"},
-{"name": "----"},
-{"name": "テーマ：季節の行事", "condition": "tag,Season"},
-{"name": "テーマ：誕生日", "condition":     "tag,Birthday"},
-{"name": "テーマ：イベント", "condition": "tag,Event"},
-//{"name": "----"},
-//{"name": "シリーズ：堕天使ヨハネ", "condition": "tag,Yohane"},
+	{"name": "2023年12月", "condition": "after:2023/12/01 before:2023/12/31"},
+	{"name": "2024年1月",  "condition": "after:2024/01/01 before:2024/01/31"},
+	{"name": "2024年2月",  "condition": "after:2024/02/01 before:2024/02/29"},
+	{"name": "2024年3月",  "condition": "after:2024/03/01 before:2024/03/31"},
+	{"name": "----"},
+	{"name": "出演：高坂 穂乃果",            "condition": "tag:Honoka"},
+	{"name": "出演：絢瀬 絵里",              "condition": "tag:Eli"},
+	{"name": "出演：南 ことり",              "condition": "tag:Kotori"},
+	{"name": "出演：園田 海未",              "condition": "tag:Umi"},
+	{"name": "出演：星空 凛",                "condition": "tag:Rin"},
+	{"name": "出演：西木野 真姫",            "condition": "tag:Maki"},
+	{"name": "出演：東條 希",                "condition": "tag:Nozomi"},
+	{"name": "出演：小泉 花陽",              "condition": "tag:Hanayo"},
+	{"name": "出演：矢澤 にこ",              "condition": "tag:Nico"},
+	{"name": "出演：高海 千歌",              "condition": "tag:Chika"},
+	{"name": "出演：桜内 梨子",              "condition": "tag:Riko"},
+	{"name": "出演：松浦 果南",              "condition": "tag:Kanan"},
+	{"name": "出演：黒澤 ダイヤ",            "condition": "tag:Dia"},
+	{"name": "出演：渡辺 曜",                "condition": "tag:You"},
+	{"name": "出演：津島 善子",              "condition": "tag:Yoshiko"},
+	{"name": "出演：国木田 花丸",            "condition": "tag:Hanamaru"},
+	{"name": "出演：小原 鞠莉",              "condition": "tag:Mari"},
+	{"name": "出演：黒澤 ルビィ",            "condition": "tag:Ruby"},
+	{"name": "出演：上原 歩夢",              "condition": "tag:Ayumu"},
+	{"name": "出演：中須 かすみ",            "condition": "tag:Kasumi"},
+	{"name": "出演：桜坂 しずく",            "condition": "tag:Shizuku"},
+	{"name": "出演：朝香 果林",              "condition": "tag:Karin"},
+	{"name": "出演：宮下 愛",                "condition": "tag:Ai"},
+	{"name": "出演：近江 彼方",              "condition": "tag:Kanata"},
+	{"name": "出演：優木 せつ菜",            "condition": "tag:Setsuna"},
+	{"name": "出演：エマ・ヴェルデ",         "condition": "tag:Emma"},
+	{"name": "出演：天王寺 璃奈",            "condition": "tag:Rina"},
+	{"name": "出演：三船 栞子",              "condition": "tag:Shioriko"},
+	{"name": "出演：ミア・テイラー",         "condition": "tag:Mia"},
+	{"name": "出演：鐘 嵐珠",                "condition": "tag:Lanzhu"},
+	{"name": "出演：高咲 侑",                "condition": "tag:Yu"},
+	{"name": "出演：澁谷 かのん",            "condition": "tag:Kanon"},
+	{"name": "出演：唐 可可",                "condition": "tag:Keke"},
+	{"name": "出演：嵐 千砂都",              "condition": "tag:Chisato"},
+	{"name": "出演：平安名 すみれ",          "condition": "tag:Sumire"},
+	{"name": "出演：葉月 恋",                "condition": "tag:Ren"},
+	{"name": "出演：桜小路 きな子",          "condition": "tag:Kinako"},
+	{"name": "出演：米女 メイ",              "condition": "tag:Mei"},
+	{"name": "出演：若菜 四季",              "condition": "tag:Shiki"},
+	{"name": "出演：鬼塚 夏美",              "condition": "tag:Natsumi"},
+	{"name": "出演：ウィーン・マルガレーテ", "condition": "tag:Margarete"},
+	{"name": "出演：鬼塚 冬毬",              "condition": "tag:Tomari"},
+	{"name": "----"},
+	{"name": "テーマ：季節の行事", "condition": "tag:Season"},
+	{"name": "テーマ：誕生日", "condition":     "tag:Birthday"},
+	{"name": "テーマ：イベント", "condition": "tag:Event"},
 ];
 
 //■■メイン出力
 //■条件に合致するストーリーを抜き出してリストアップ
 function DrawStoryList(conditions){
+	if(conditions === "undefined"){ return; }
 	const TimeOutputStart = performance.now();
+	let filteredData = window['JSON-llsif2-theater'];
 
-	let storyResult = new Array();
-	if(conditions === "undefined"){ //絞り込み条件が指定されていない場合、キャンセル
-		return false;
-	}
-	conditions = conditions.split(',');
+	const condition = conditions.split(' ');
+	condition.forEach( c => {
+		if(c.startsWith('before:')) { //「before:」 - 指定された日付以前
+			const beforeDate = new Date(c.split(':')[1]);
+			filteredData = filteredData.filter( connect => new Date(connect.date) <= beforeDate);
+		}
+		else if(c.startsWith('after:')) { //「after:」 - 指定された日付まで
+			const afterDate = new Date(c.split(':')[1]);
+			filteredData = filteredData.filter( connect => new Date(connect.date) >= afterDate);
+		}
+		else if(c.startsWith('tag:')) {
+			const tag = c.split(':')[1];
+			filteredData = filteredData.filter( connect => connect.tags && connect.tags.includes(tag));
+		}
+	});
+	if(filteredData.length === 0){ return false;}
 	
-	if(conditions[0] === 'date'){ //日付による絞り込み
-		const dateStart = new Date(conditions[1]);
-		const dateEnd = new Date(conditions[2]);
-		storyResult = window['JSON-llsif2-theater'].filter(temp => {
-			const dateStory = new Date(temp.date);
-			return dateStory.getTime() >= dateStart.getTime() && dateStory.getTime() <= dateEnd.getTime();
-		});
-	} else if(conditions[0] === 'tag'){ //タグによる絞り込み
-		storyResult = window['JSON-llsif2-theater'].filter(temp => temp.tags.indexOf(conditions[1]) !== -1);
-	} else {
-		return false;
-	}
-	
-	document.getElementById("StoryContainer").innerHTML = storyResult.map( story => {
+	document.getElementById("StoryContainer").innerHTML = filteredData.map( story => {
 		const hasStory = ('text' in story && story["text"] !== "");
 		const storyTitleAtttribute = 
 		(hasStory ?
@@ -144,7 +96,7 @@ function DrawStoryList(conditions){
 
 		return `
 		<article class="story">
-			<div class="story-date">${story.date}</div>
+			<div class="story-date">${story.date.replaceAll('-', '/')}</div>
 			<div class="story-titleContainer">
 				<div ${storyTitleAtttribute}>${story.title}</div>
 				<div class="story-memo">${('memo' in story ? convertMarkup(story.memo) : '')}</div>
@@ -156,13 +108,13 @@ function DrawStoryList(conditions){
 	
 	if(isDebugMode) {
 		const TimeOutputEnd = performance.now();
-		console.log(`${conditions}出力完了。\n所要時間: ${TimeOutputEnd - TimeOutputStart}ミリ秒`);
+		console.log(`${conditions} (${filteredData.length}件) 出力完了。\n所要時間: ${TimeOutputEnd - TimeOutputStart}ミリ秒`);
 	}
 }
 
 //■指定されたIDの毎日劇場をモーダルウィンドウに描画
-function MakeModal(id){
-	const result = window['JSON-llsif2-theater'].find(temp => temp.id === id);
+function MakeModal(story_id){
+	const result = window['JSON-llsif2-theater'].find((e) => e.id === story_id);
 	if(!result){ return false;}
 	result.text = convertMarkup(result.text);
 	
@@ -170,7 +122,7 @@ function MakeModal(id){
 	document.getElementById("Modal-Title").innerHTML = result.title;
 	
 	//注釈リストの作成
-	let noteList = [];
+	const noteList = [];
 	const pattern = new RegExp(/<span class="_pre-note" data-note="(.+)">(.+)<\/span>/g);
 	while ((match = pattern.exec(result.text)) !== null) {
 		noteList.push(match[1]);
@@ -187,7 +139,7 @@ function MakeModal(id){
 	document.getElementById("Modal-Text").innerHTML = textLines.map( (text, index) => {
 		text = text.split('\t');
 		
-		let currentNote = [];
+		const currentNote = [];
         const processedLine = text.map(x => {
 			x = x.replace(/\{\{notenum:(\d+)\}\}/g, function(match, noteIndex){
 				if(match) { currentNote.push(`<span>*${noteIndex}： ${noteList[parseInt(noteIndex, 10)-1]}</span>`);}
@@ -197,7 +149,10 @@ function MakeModal(id){
 		});
 		
 		const characterTagName = result.tags[parseInt(text[0],10)];
-		const characterName = (isNaN(text[0]) ? text[0] : createStyledTag(TagData[characterTagName], characterTagName));
+		const characterData = LLSIdolManager.filterCharacterList(`is:id:${characterTagName}`,"has:color_llsif2")[0];
+		const characterName = characterData
+			? `<span class="modal-character-face">${LLSIdolManager.drawFace(characterData.group_id, characterData.id, 32)}</span><span class="modal-character-name">${characterData.firstName}</span>`
+			: characterTagName;
 		
 		return characterName
 		+ (processedLine.length >= 2 ? `<p>${processedLine[1]}</p>` : '')
@@ -233,7 +188,7 @@ function CloseModal(target){
 //■初期化処理
 function initialize() {
 	//TagDataにキャラクターの内容を追加
-	const characterList = window['JSON-characterDB'].filter(entry => entry.hasOwnProperty('color_llsif2'));
+	const characterList = LLSIdolManager.filterCharacterList("has:color_llsif2");
 	characterList.forEach(character => {
 		const objtemp = new Object();
 		objtemp.name = character.firstName;
@@ -242,17 +197,17 @@ function initialize() {
 		objtemp.b = parseInt(character['color_llsif2'].substring(4, 6), 16);
 		objtemp.style = "button-round";
 
-		TagData[NameMap[character.firstName]] = objtemp;
+		TagData[character.id] = objtemp;
 	});
 
 	//TagDataの色データをCSSに追加
-	document.querySelector('style').textContent += Object.keys(TagData).map( character => {
+	document.querySelector('style').textContent += "\n<!--" + Object.keys(TagData).map( character => {
 		return `
 		.button-${character} {
-			background-color: ${getColor(TagData[character], 2.5)};
+			background-color: ${getColor(TagData[character], 2)};
 			border-color: ${getColor(TagData[character], 0)}
 		}`;
-	}).join('');
+	}).join('') + "\n-->";
 
 	//セレクトボックスに要素を追加
 	SortTarget.forEach( temp => {
