@@ -299,12 +299,16 @@ a.exlink:after {
 }
 /* スクールアイドルの顔やメンバーアイコンの画像表示用 */
 .icon-face-64{
+	display: inline-block;
+	vertical-align: top;
 	width: 64px;
 	height: 64px;
 	background-image: url(img/face_64.png);
 	background-repeat: no-repeat;
 }
 .icon-face-32{
+	display: inline-block;
+	vertical-align: top;
 	width: 32px;
 	height: 32px;
 	background-image: url(img/face_32.png);

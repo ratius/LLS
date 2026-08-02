@@ -135,11 +135,22 @@ p{
 	padding: 10px;
 }
 #Modal-Text p {
-		margin: 5px 5px 5px 30px;
+		margin: 5px 5px 5px 15px;
 }
 #Modal-Text hr {
 	height: 0px; 
 	border-top: 2px dotted #ccc;
+}
+
+.modal-character-face {
+	display: inline-block;
+	vertical-align: bottom;
+	border: 1px solid #999;
+}
+
+.modal-character-name {
+	font-size: 115%;
+	margin-left: 5px;
 }
 
 .note {
@@ -241,7 +252,7 @@ p{
 	100% { opacity: 0;}
 }
 --></style>
-<script src="data/loader.js" data-src="data/sifas-theater.js,data/sifas-theater.json,data/common-library.js,data/characterDB.json"></script>
+<script src="data/loader.js" data-src="data/sifas-theater.js,data/sifas-theater.json,data/common-library.js,module/LLS-idolManager.json,module/LLS-idolManager.js"></script>
 </head>
 <body class="left">
 <main>
@@ -302,7 +313,14 @@ p{
 		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 		<div class="history-container">
 			<details open>
-				<summary><span class="date">2024/12/14</span> - 全話掲載完了</summary>
+				<summary><span class="date">2026/08/02</span></summary>
+				<div>
+					<span class="icon-new"></span>本文内にキャラクターの顔アイコンを追加<br>
+					<span class="icon-fix"></span>データ読み込み周りの仕様を変更
+				</div>
+			</details>
+			<details>
+				<summary><span class="date">2024/12/14</span> - 本文掲載完了</summary>
 				<div>
 					<span class="icon-new"></span>全1245話の本文を閲覧できるようになりました！
 				</div>

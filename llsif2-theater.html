@@ -133,12 +133,24 @@ p{
 	padding: 10px;
 }
 #Modal-Text p {
-	margin: 5px 5px 5px 30px;
+	margin: 5px 5px 5px 15px;
 }
 #Modal-Text hr {
 	height: 0px; 
 	border: 1px solid #bbb;
 }
+
+.modal-character-face {
+	display: inline-block;
+	vertical-align: bottom;
+	border: 1px solid #999;
+}
+
+.modal-character-name {
+	font-size: 115%;
+	margin-left: 5px;
+}
+
 .note {
 	background-color: #e8d8e0;
 	border: 1px solid #cbd;
@@ -238,7 +250,7 @@ p{
 	100% { opacity: 0;}
 }
 --></style>
-<script src="data/loader.js" data-src="data/llsif2-theater.js,data/llsif2-theater.json,data/characterDB.json,data/common-library.js"></script>
+<script src="data/loader.js" data-src="data/llsif2-theater.js,data/llsif2-theater.json,data/common-library.js,module/LLS-idolManager.json,module/LLS-idolManager.js"></script>
 </head>
 <body class="left">
 <main>
@@ -299,6 +311,13 @@ p{
 		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 		<div class="history-container">
 			<details open>
+				<summary><span class="date">2026/08/02</span></summary>
+				<div>
+					<span class="icon-new"></span>本文内にキャラクターの顔アイコンを追加<br>
+					<span class="icon-fix"></span>データ読み込み周りの仕様を変更
+				</div>
+			</details>
+			<details>
 				<summary><span class="date">2024/12/07</span> - キー入力対応</summary>
 				<div>
 					<span class="icon-new"></span>Escキーでモーダルウィンドウを閉じられるようになりました
