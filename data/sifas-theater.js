@@ -249,7 +249,7 @@ function initialize() {
 
 	//セレクトボックスに要素を追加
 	SortTarget.forEach( temp => {
-		if(temp.name.startsWith("debug") || isDebugMode){
+		if(!temp.name.startsWith("debug") || isDebugMode){
 			const option = document.createElement("option");
 			option.text = temp.name;
 			option.value = temp.condition;
