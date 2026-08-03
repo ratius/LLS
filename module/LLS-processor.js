@@ -26,49 +26,49 @@ const LLSProcessor = {
 
     renderEntryList: (dataSrc, conditions) => {
         if (!conditions) { return false; } //conditionが指定されていない場合、キャンセル
+        conditions = conditions.split(' ');
 
-        //条件フィルターを行い出力する。日付が2035年以降のエントリーは入力ミスなので常に除外
-        let filteredList = dataSrc.filter(_e => new Date(_e.date) <= new Date("2035-01-01"));
+        let maxVideos = 1000; //表示する動画の最大件数
 
-        const condition = conditions.split(' ');
-        condition.forEach(c => {
-            if (c.startsWith("before:")) { //「before:」 - 指定された日付以前
-                const beforeDate = new Date(c.split(':')[1]);
-                filteredList = filteredList.filter(_e => new Date(_e.date) <= beforeDate);
-            }
-            else if (c.startsWith("after:")) { //「after:」 - 指定された日付まで
-                const afterDate = new Date(c.split(':')[1]);
-                filteredList = filteredList.filter(_e => new Date(_e.date) >= afterDate);
-            }
-            else if (c.startsWith("has:")) { //「has:」 - trueyな特定のキー値を持つ
-                const key = c.split(':')[1];
-                filteredList = filteredList.filter(_e => _e?.[key]);
-            }
-            else if (c.startsWith("exhas:")) { //「exhas:」 - trueyな特定のキー値を持たない
-                const key = c.split(':')[1];
-                filteredList = filteredList.filter(_e => !_e?.[key]);
-            }
-            else if (c.startsWith("tag:")) { //「tag:」 - 特定のタグを持つ
-                const tag = c.split(':')[1];
-                filteredList = filteredList.filter(_e => _e?.tags && _e.tags.includes(tag));
-            }
-            else if (c.startsWith("extag:")) { //「extag:」 - 特定のタグを持たない
-                const tag = c.split(':')[1];
-                filteredList = filteredList.filter(_e => !(_e?.tags && _e.tags.includes(tag)));
-            }
-        });
-        //「max」 - 最大件数の指定
-        condition.forEach(c => {
-            if (c.startsWith("max:")) {
-                const limit = parseInt(c.split(':')[1], 10);
-                filteredList = filteredList.slice(0, limit);
-            }
-        });
+        //与えられた条件でフィルターを行う
+        const filteredList = dataSrc.filter((video) => {
+            //2035年以降は間違いなく入力ミスなので除外
+            if (new Date(video.date) >= new Date("2035-01-01")) { return false; }
+
+            return conditions.reduce((acc, condition) => {
+                condition = condition.split(':');
+                if (condition[0] === "max") { //「max」 - 最大件数の指定
+                    maxVideos = parseInt(condition[1], 10);
+                    return acc;
+                }
+
+                if (acc === false) { return false; }
+
+                if (condition[0] === "before") { //「before:」 - 指定された日付以前
+                    const beforeDate = new Date(condition[1]);
+                    if (new Date(video.date) > beforeDate) { return false; }
+                } else if (condition[0] === "after") { //「after:」 - 指定された日付以降
+                    const beforeDate = new Date(condition[1]);
+                    if (new Date(video.date) < beforeDate) { return false; }
+                } else if (condition[0] === "tag") { //「tag:」 - 特定のタグを持つ
+                    if (!video?.tags.includes(condition[1])) { return false; }
+                } else if (condition[0] === "extag") { //「extag:」 - 特定のタグを持たない
+                    if (video?.tags.includes(condition[1])) { return false; }
+                } else if (condition[0] === "nodesc") { //「nodesc」 - 概要が未設定
+                    if (!video?.['desc'] || video.tag.includes("cancelled")) { return false; }
+                } else if (condition[0] === "nolength") { //「nolength」 - 動画時間が未設定
+                    if (!video?.['length'] || video.tag.includes("cancelled")) { return false; }
+                } else if (condition[0] === "novideo") { //「novideo」 - 動画が未設定
+                    if (!video?.['tube'] || video.tag.includes("cancelled")) { return false; }
+                }
+                return true;
+            }, true);
+        }).slice(0, maxVideos);
 
         //HTML側で個別に定義された「LLSLayoutTemplate」関数を用いて書き出しを行う
         document.getElementById('LLSP-Result').innerHTML =
             filteredList.map(entry => LLSPLayoutTemplate(entry)).join('');
-	    document.getElementById('LLSP-Result').scrollTop = 0;
+        document.getElementById('LLSP-Result').scrollTop = 0;
         return filteredList.length;
     },
 
@@ -82,7 +82,7 @@ const LLSProcessor = {
 
         //ボタンの色データをCSSに追加
         const buttonCSS = document.createElement("style");
-        buttonCSS.innerHTML = ("\n<!--\n/* Generated from LLS-processor.js */\n" + Object.keys(tagData).map(tag => `.button-${tag} {\n\tbackground-color: ${getColor(tagData[tag], 3)};\n\tborder-color: ${getColor(tagData[tag])};\n}`).join("\n") + "\n-->");
+        buttonCSS.innerHTML = ("\n<!--\n/* Generated from LLS-processor.js */\n" + Object.keys(tagData).map(tag => `.button-${tag} {\n\tbackground-color: ${getColor(tagData[tag], 3)};\n\tborder-color: ${getColor(tagData[tag], 0, 0.15)};\n}`).join("\n") + "\n-->");
         document.head.appendChild(buttonCSS);
 
         //セレクトボックスに要素を追加
@@ -111,7 +111,7 @@ const LLSProcessor = {
         //デバック用
         if (isDebugMode) {
             // 個別のデバッグ用関数を実行
-            if (typeof window["LLSPDebug"] === "function") {　window["LLSPDebug"](); }
+            if (typeof window["LLSPDebug"] === "function") { window["LLSPDebug"](); }
 
             // 共通の簡単なデータベースのチェック
             window[databasePath].forEach(_entry => {
@@ -123,6 +123,15 @@ const LLSProcessor = {
                     throw new Error(`"date" must be written with separator hyphens`);
                 }
             });
+
+            // データが日付順で並んでいるかどうかのチェック
+            for (i = 0; i < window[databasePath].length - 1; i++) {
+                const tempDate1 = new Date(window[databasePath][i].date);
+                const tempDate2 = new Date(window[databasePath][i + 1].date);
+                if (tempDate2 < tempDate1) {
+                    alert(`JSON isn't sorted by date: ${window[databasePath][i].title}`);
+                }
+            }
 
             document.getElementById("LLSP-Filter").selectedIndex = 1;
             LLSProcessor.renderEntryList(window[databasePath], document.getElementById("LLSP-Filter").value, "LLSP-Result");
