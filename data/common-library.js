@@ -34,17 +34,6 @@ const formatDate = date => {
 	return `${year}/${month}/${day}`;
 }
 
-//■スクフェス転入生の顔アイコンの作成
-const WriteFaceN = (x, y) => {
-	const IconSize = 64;
-	const ImageGridColumn = 10;
-	const ImageGridRow = 7;
-	return `<div class="icon-n-face" style="background-position: right -${IconSize * (ImageGridColumn - x - 1)
-		}px bottom -${IconSize * (ImageGridRow - y - 1)
-		}px"></div>`;
-}
-
-
 //■秒数を「h時間mm分ss秒」形式に変換する関数
 const convertSecondsToHHMMSS = (len) => {
 	len = Math.floor(parseInt(len, 10));
@@ -133,6 +122,12 @@ const convertMarkup = (str) => {
 			case 'xh': // PC版限定の、蓮ノ空女学院公式Xへのリンクを作成 {{XH::文字列::数字17桁}}
 				if (strInParentheses.length >= 3) {
 					strConverted = `<span class="pc-only">（<a href="https://x.com/hasunosora_SIC/status/${strInParentheses[2]}" target="_blank" rel="noopener noreferrer">${secondVariable}</a>）</span>`;
+				}
+				break;
+
+			case 'xi': // PC版限定の、イキヅライブ！公式Xへのリンクを作成 {{XI::文字列::数字17桁}}
+				if (strInParentheses.length >= 3) {
+					strConverted = `<span class="pc-only">（<a href="https://x.com/ikizulive_staff/status/${strInParentheses[2]}" target="_blank" rel="noopener noreferrer">${secondVariable}</a>）</span>`;
 				}
 				break;
 
