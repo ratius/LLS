@@ -1,11 +1,516 @@
 [
 {
+	"date": "2017-04-27",
+	"title": "恋になりたいAQUARIUM",
+	"desc": "",
+	"memo": "Aqours 2ndシングル「恋になりたいAQUARIUM」付属のBD/DVDに収録されているアニメーション映像。",
+	"tags": ["Anime", "Aqours"],
+	"tube": "Qj0Dmwxv-KY",
+	"length": 383
+},
+{
+	"date": "2018-04-05",
+	"title": "HAPPY PARTY TRAIN",
+	"desc": "",
+	"memo": "Aqours 3rdシングル「HAPPY PARTY TRAIN」付属のBD/DVDに収録されているアニメーション映像。",
+	"tags": ["Anime", "Aqours"],
+	"tube": "eVwdeIDjXeM",
+	"length": 465
+},
+{
+	"date": "2019-01-04",
+	"title": "Hop? Stop? Nonstop!",
+	"desc": "劇場版『ラブライブ！サンシャイン!!The School Idol Movie Over the Rainbow』より",
+	"tags": ["Anime", "Aqours"],
+	"tube": "6MtVoB9qhIs",
+	"length": 182
+},
+{
+	"date": "2019-10-18",
+	"title": "僕らのLIVE 君とのLIFE",
+	"desc": "",
+	"memo": "",
+	"tags": ["MV", "Muse"],
+	"tube": "YIgoFjO9Mg4",
+	"length": 311
+},
+{
+	"date": "2019-10-19",
+	"title": "Snow halation",
+	"desc": "",
+	"memo": "",
+	"tags": ["MV", "Muse"],
+	"tube": "vJ3jNTH2QL0",
+	"length": 342
+},
+{
+	"date": "2019-10-20",
+	"title": "夏色えがおで1,2,Jump!",
+	"desc": "",
+	"memo": "",
+	"tags": ["MV", "Muse"],
+	"tube": "1j-u11dHWnI",
+	"length": 300
+},
+{
+	"date": "2019-10-21",
+	"title": "もぎゅっと&#34;love&#34;で接近中！",
+	"desc": "",
+	"memo": "",
+	"tags": ["MV", "Muse"],
+	"tube": "nDl_2RI6kU0",
+	"length": 341
+},
+{
+	"date": "2019-10-22",
+	"title": "Wonderful Rush",
+	"desc": "",
+	"memo": "",
+	"tags": ["MV", "Muse"],
+	"tube": "3WOzeKu2hjw",
+	"length": 359
+},
+{
+	"date": "2019-10-23",
+	"title": "Music S.T.A.R.T!!",
+	"desc": "",
+	"memo": "",
+	"tags": ["MV", "Muse"],
+	"tube": "NeaeJ0u3kR0",
+	"length": 310
+},
+{
+	"date": "2019-12-13",
+	"title": "TOKIMEKI Runners",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Niji"],
+	"tube": "ab_1Nqrxz74",
+	"length": 99
+},
+{
+	"date": "2019-12-20",
+	"title": "未来の僕らは知ってるよ",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Aqours"],
+	"tube": "AstXx7hOPvU",
+	"length": 94
+},
+{
+	"date": "2020-01-24",
+	"title": "夢への一歩",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Niji"],
+	"tube": "0_kamUj3Xfc",
+	"length": 131
+},
+{
+	"date": "2020-02-07",
+	"title": "Strawberry Trapper",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Aqours"],
+	"tube": "uDAc22a7rvM",
+	"length": 101
+},
+{
+	"date": "2020-02-22",
+	"title": "元気全開DAY！DAY！DAY！",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Aqours"],
+	"tube": "nuARxjZtlzg",
+	"length": 128
+},
+{
+	"date": "2020-02-28",
+	"title": "ダイアモンド",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Niji"],
+	"tube": "gb1SlXjviY4",
+	"length": 111
+},
+{
+	"date": "2020-03-20",
+	"title": "Wake up, Challenger!!",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Aqours"],
+	"tube": "rjGZnfu8qAU",
+	"length": 126
+},
+{
+	"date": "2020-03-27",
+	"title": "Brightest Melody",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Aqours"],
+	"tube": "kzAf3hsKk8s",
+	"length": 120
+},
+{
+	"date": "2020-05-01",
+	"title": "ユメノトビラ",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Muse"],
+	"tube": "vnhQwxGvS3s",
+	"length": 126
+},
+{
+	"date": "2020-05-08",
+	"title": "Starlight",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Niji"],
+	"tube": "Xl4tCSJViXs",
+	"length": 101
+},
+{
+	"date": "2020-05-16",
+	"title": "ドキピポ☆エモーション",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Niji"],
+	"tube": "9oMTZ5ztXq0",
+	"length": 98
+},
+{
+	"date": "2020-05-22",
+	"title": "めっちゃGoing!!",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Niji"],
+	"tube": "ObWbsqDKvBE",
+	"length": 127
+},
+{
+	"date": "2020-06-26",
+	"title": "CHASE!",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Niji"],
+	"tube": "pzzFg13Xyjk",
+	"length": 107
+},
+{
+	"date": "2020-08-01",
+	"title": "Never giving up!",
+	"desc": "(動画制作スタッフ不明)",
+	"tags": ["MV", "Aqours"],
+	"tube": "8QOIkBN3dq0",
+	"length": 247
+},
+{
+	"date": "2020-09-19",
+	"title": "PURE PHRASE",
+	"desc": "イラスト：{{L::hiko::https://x.com/hiko_il}}　編集：{{L::ぬヴェントス::https://x.com/NNNuventus}}",
+	"tags": ["MV", "Aqours"],
+	"tube": "l_a5iCwRBlU",
+	"length": 306
+},
+{
+	"date": "2020-09-21",
+	"title": "コットンキャンディえいえいおー!",
+	"desc": "映像：{{L::可哀想に！::https://x.com/kawaisouni_stf}}",
+	"tags": ["MV", "Aqours"],
+	"tube": "Ksf_gq6fZZM",
+	"length": 256
+},
+{
+	"date": "2020-10-02",
+	"title": "TOKIMEKI Runners 17章Ver.",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Niji"],
+	"tube": "vvGG6p3Uu2A",
+	"length": 117
+},
+{
+	"date": "2020-10-05",
+	"title": "Dream with You",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』第1話より",
+	"tags": ["Anime", "Niji"],
+	"tube": "Nxr3Y7Fx-zs",
+	"length": 115
+},
+{
+	"date": "2020-10-05",
+	"title": "NEO SKY, NEO MAP!",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』より",
+	"tags": ["Anime", "Niji"],
+	"tube": "_7uLfiTtQeY",
+	"length": 90
+},
+{
+	"date": "2020-10-09",
+	"title": "それは僕たちの奇跡",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Muse"],
+	"tube": "j2ztNLvSMno",
+	"length": 99
+},
+{
 	"date": "2020-10-12",
 	"title": "虹色Passions！",
 	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』より",
 	"tags": ["Anime", "Niji"],
 	"tube": "mefHQA2fGzg",
 	"length": 90
+},
+{
+	"date": "2020-10-12",
+	"title": "Poppin' Up!",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』第2話より",
+	"tags": ["Anime", "Niji"],
+	"tube": "gknDmz_5AFo",
+	"length": 94
+},
+{
+	"date": "2020-10-19",
+	"title": "DIVE！",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』第3話より",
+	"tags": ["Anime", "Niji"],
+	"tube": "a615YBN6CBg",
+	"length": 113
+},
+{
+	"date": "2020-10-26",
+	"title": "サイコーハート",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』第4話より",
+	"tags": ["Anime", "Niji"],
+	"tube": "MOUnOovLizw",
+	"length": 107
+},
+{
+	"date": "2020-11-02",
+	"title": "La Bella Patria",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』第5話より",
+	"tags": ["Anime", "Niji"],
+	"tube": "ceDfcGIxhDg",
+	"length": 104
+},
+{
+	"date": "2020-11-09",
+	"title": "ツナガルコネクト",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』第6話より",
+	"tags": ["Anime", "Niji"],
+	"tube": "bFEQmHKxK_Q",
+	"length": 103
+},
+{
+	"date": "2020-11-16",
+	"title": "Butterfly",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』第7話より",
+	"tags": ["Anime", "Niji"],
+	"tube": "G6G5NopjVfU",
+	"length": 88
+},
+{
+	"date": "2020-11-23",
+	"title": "Solitude Rain",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』第8話より",
+	"tags": ["Anime", "Niji"],
+	"tube": "d9hGriTd7-o",
+	"length": 97
+},
+{
+	"date": "2020-11-30",
+	"title": "VIVID WORLD",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』第9話より",
+	"tags": ["Anime", "Niji"],
+	"tube": "80SXsYjjNoA",
+	"length": 98
+},
+{
+	"date": "2020-12-21",
+	"title": "Awakening Promise",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』第12話より",
+	"tags": ["Anime", "Niji"],
+	"tube": "oH9bVb-gEJk",
+	"length": 109
+},
+{
+	"date": "2020-12-28",
+	"title": "夢がここからはじまるよ",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』第12話より",
+	"tags": ["Anime", "Niji"],
+	"tube": "6rYT31OEFvk",
+	"length": 98
+},
+{
+	"date": "2021-01-01",
+	"title": "Perfect SEKAI",
+	"desc": "イラスト：{{L::慧子::https://x.com/um7mr1}}　ディレクション：{{L::10GAUGE::https://x.com/10GAUGEinfo}}",
+	"tags": ["MV", "Aqours"],
+	"tube": "umyV8sR-jh8",
+	"length": 272
+},
+{
+	"date": "2021-02-10",
+	"title": "もっとね！",
+	"desc": "映像：{{L::けけ::https://x.com/ktwr_}}",
+	"tags": ["MV", "Aqours"],
+	"tube": "YoYVNh9WgnM",
+	"length": 208
+},
+{
+	"date": "2021-03-04",
+	"title": "あこがれランララン",
+	"desc": "映像：{{L::coalowl::https://x.com/coalowl}}",
+	"tags": ["MV", "Aqours"],
+	"tube": "2aCe7FRp7HE",
+	"length": 244
+},
+{
+	"date": "2021-04-07",
+	"title": "突然GIRL",
+	"desc": "映像：koshi-kun　イラスト：apapico　文字デザイン：Hazuki Tamano　プロデューサー：Sosuke Watanabe (THINKR)",
+	"tags": ["MV", "Aqours"],
+	"tube": "B_4CYXZT_Yg",
+	"length": 282
+},
+{
+	"date": "2021-04-11",
+	"title": "Say Good-Bye 涙",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Niji"],
+	"tube": "JKiNOedlUTs",
+	"length": 108
+},
+{
+	"date": "2021-06-06",
+	"title": "Fire Bird",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Niji"],
+	"tube": "Gn5lLtZoJFw",
+	"length": 124
+},
+{
+	"date": "2021-06-13",
+	"title": "虹色Passions！",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Niji"],
+	"tube": "pGqQNBH_Ob4",
+	"length": 94
+},
+{
+	"date": "2021-06-13",
+	"title": "Shiny Racers",
+	"desc": "映像：Hurray!、{{L::ぽぷりか::https://x.com/popreq}}、{{L::おはじき::https://x.com/ohajikihko}}",
+	"tags": ["MV", "Aqours"],
+	"tube": "BfUsGx5Xd2s",
+	"length": 214
+},
+{
+	"date": "2021-06-20",
+	"title": "NEO SKY, NEO MAP!",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Niji"],
+	"tube": "cFSDzaD2FiA",
+	"length": 88
+},
+{
+	"date": "2021-06-27",
+	"title": "Love U my friends",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Niji"],
+	"tube": "weKjkDyOQdM",
+	"length": 100
+},
+{
+	"date": "2021-07-05",
+	"title": "MONSTER GIRLS",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"memo": "",
+	"tags": ["Game", "SIFAS", "Niji", "R3BIRTH"],
+	"tube": "mMQJDmBFMlM",
+	"length": 115
+},
+{
+	"date": "2021-07-13",
+	"title": "未来予報ハレルヤ！",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』第1話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "BHzYNQ-irmU",
+	"length": 215
+},
+{
+	"date": "2021-07-13",
+	"title": "未来は風のように",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』第2話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "A1bleJVhZeY",
+	"length": 123
+},
+{
+	"date": "2021-07-14",
+	"title": "夢がここからはじまるよ",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Niji"],
+	"tube": "EybcR81cmpA",
+	"length": 102
+},
+{
+	"date": "2021-07-22",
+	"title": "タテホコツバサ",
+	"desc": "映像：{{L::eieioooo::https://x.com/eieioooo_tw}}",
+	"tags": ["MV", "Aqours"],
+	"tube": "gOYIa1U4hNI",
+	"length": 233
+},
+{
+	"date": "2021-07-25",
+	"title": "START!! True dreams",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』より",
+	"tags": ["Anime", "Liella"],
+	"tube": "HGkoec4genw",
+	"length": 90
+},
+{
+	"date": "2021-07-25",
+	"title": "Tiny Stars",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』第3話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "gmpCJnMfMR4",
+	"length": 148
+},
+{
+	"date": "2021-09-07",
+	"title": "常夏☆サンシャイン",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』第6話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "XR3h_agJgXQ",
+	"length": 122
+},
+{
+	"date": "2021-09-21",
+	"title": "Wish Song",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』第8話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "KL2l7nH8Uus",
+	"length": 117
+},
+{
+	"date": "2021-10-05",
+	"title": "ノンフィクション!!",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』第10話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "_oZ3EcOO5xU",
+	"length": 117
+},
+{
+	"date": "2021-10-19",
+	"title": "Starlight Prologue",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』第12話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "Ccyjkq75T9E",
+	"length": 178
+},
+{
+	"date": "2021-12-18",
+	"title": "WATER BLUE NEW WORLD",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Aqours"],
+	"tube": "OV9HvOKP_k8",
+	"length": 104
+},
+{
+	"date": "2021-12-23",
+	"title": "Just Believe!!!",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Niji"],
+	"tube": "rDJ5GO1bCfs",
+	"length": 117
 },
 {
 	"date": "2022-03-02",
@@ -15,12 +520,196 @@
 	"length": 236
 },
 {
+	"date": "2022-04-02",
+	"title": "夢が僕らの太陽さ",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』2期より",
+	"tags": ["Anime", "Niji"],
+	"tube": "IQq9kDckWcI",
+	"length": 89
+},
+{
+	"date": "2022-04-02",
+	"title": "Eutopia",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』2期第1話より",
+	"tags": ["Anime", "Niji"],
+	"tube": "Z2P818AAOn8",
+	"length": 100
+},
+{
 	"date": "2022-04-07",
 	"title": "始まりは君の空",
 	"memo": "楽曲終了後にスタッフロールが流れる。",
 	"tags": ["Anime", "Liella"],
 	"tube": "tk5RkDdm_Bs",
 	"length": 315
+},
+{
+	"date": "2022-04-09",
+	"title": "Colorful Dreams! Colorful Smiles!",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』2期より",
+	"tags": ["Anime", "Niji"],
+	"tube": "_OMjQzHPqB0",
+	"length": 90
+},
+{
+	"date": "2022-04-16",
+	"title": "ENJOY IT！",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』2期第3話より",
+	"tags": ["Anime", "Niji", "QU4RTZ"],
+	"tube": "TAyNApV8I-A",
+	"length": 105
+},
+{
+	"date": "2022-04-23",
+	"title": "Eternal Light",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』2期第4話より",
+	"tags": ["Anime", "Niji", "DiverDiva"],
+	"tube": "hzA2ddo0wNA",
+	"length": 96
+},
+{
+	"date": "2022-05-07",
+	"title": "Infinity！Our wings!!",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』2期第6話より",
+	"tags": ["Anime", "Niji", "AZUNA"],
+	"tube": "0yG6qZxvY_U",
+	"length": 115
+},
+{
+	"date": "2022-05-14",
+	"title": "EMOTION",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』2期第7話より",
+	"tags": ["Anime", "Niji"],
+	"tube": "T_st0a-ONi4",
+	"length": 98
+},
+{
+	"date": "2022-05-21",
+	"title": "TOKIMEKI Runners（TVアニメ挿入歌Ver.)",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』2期第8話より",
+	"tags": ["Anime", "Niji"],
+	"tube": "3tk_MjFzG7Y",
+	"length": 115
+},
+{
+	"date": "2022-05-28",
+	"title": "stars we chase",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』第9話より",
+	"tags": ["Anime", "Niji"],
+	"tube": "akcBV589e-g",
+	"length": 87
+},
+{
+	"date": "2022-06-25",
+	"title": "Future Parade",
+	"desc": "TVアニメ『ラブライブ！虹ヶ咲学園スクールアイドル同好会』2期第13話より",
+	"tags": ["Anime", "Niji"],
+	"tube": "ABev5T5D26E",
+	"length": 124
+},
+{
+	"date": "2022-07-09",
+	"title": "無敵級*ビリーバー",
+	"desc": "",
+	"tags": ["Anime", "Niji"],
+	"tube": "iUv2QSYEdhk",
+	"length": 244
+},
+{
+	"date": "2022-07-19",
+	"title": "WE WILL!!",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』2期より",
+	"tags": ["Anime", "Liella"],
+	"tube": "2tJGGmJhm_E",
+	"length": 90
+},
+{
+	"date": "2022-07-19",
+	"title": "Welcome to 僕らのセカイ",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』2期第1話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "eF-mzOHunEc",
+	"length": 99
+},
+{
+	"date": "2022-07-26",
+	"title": "追いかける夢の先で",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』2期第2話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "1DK_oVU9X1M",
+	"length": 108
+},
+{
+	"date": "2022-07-31",
+	"title": "Butterfly Wing",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』2期第3話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "4qmLnVCXQgY",
+	"length": 79
+},
+{
+	"date": "2022-07-31",
+	"title": "Go!! リスタート",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』2期第3話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "uiz8kU2JKZM",
+	"length": 94
+},
+{
+	"date": "2022-08-21",
+	"title": "ビタミンSUMMER！",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』2期第6話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "_rLihz4cQ4E",
+	"length": 95
+},
+{
+	"date": "2022-09-01",
+	"title": "Chance Day, Chance Way！",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』2期第8話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "4wKBNVE_DVU",
+	"length": 104
+},
+{
+	"date": "2022-09-25",
+	"title": "Sing！Shine！Smile！",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』2期第10話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "EY4_wcu7iI0",
+	"length": 128
+},
+{
+	"date": "2022-09-25",
+	"title": "エーデルシュタイン",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』2期第10話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "aVbKE7cZxck",
+	"length": 84
+},
+{
+	"date": "2022-10-09",
+	"title": "未来の音が聴こえる",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』2期第12話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "PjvpC-o1Sjk",
+	"length": 137
+},
+{
+	"date": "2022-12-23",
+	"title": "MY舞☆TONIGHT",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Aqours"],
+	"tube": "_Y1ydaS8sKQ",
+	"length": 96
+},
+{
+	"date": "2022-12-23",
+	"title": "A song for You! You? You!!",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Muse"],
+	"tube": "WWWqj6JWasU",
+	"length": 115
 },
 {
 	"date": "2023-02-11",
@@ -56,7 +745,7 @@
 },
 {
 	"date": "2023-03-09",
-	"title": "Secnond Sparkle",
+	"title": "Second Sparkle",
 	"tags": ["MV", "Liella"],
 	"tube": "LG4k38rObdg",
 	"length": 213
@@ -102,12 +791,60 @@
 	"length": 228
 },
 {
+	"date": "2023-06-25",
+	"title": "幻日ミステリウム",
+	"desc": "TVアニメ『幻日のヨハネ』より",
+	"tags": ["Anime", "Yohane"],
+	"tube": "vouRbTrqkyU",
+	"length": 90
+},
+{
+	"date": "2023-06-25",
+	"title": "Far far away",
+	"desc": "TVアニメ『幻日のヨハネ』第1話より",
+	"tags": ["Anime", "Yohane"],
+	"tube": "7Hli9vemRMk",
+	"length": 111
+},
+{
+	"date": "2023-07-02",
+	"title": "キミノタメボクノタメ",
+	"desc": "TVアニメ『幻日のヨハネ』より",
+	"tags": ["Anime", "Yohane"],
+	"tube": "wtaRqDufRAg",
+	"length": 90
+},
+{
+	"date": "2023-07-09",
+	"title": "Be as one!!!",
+	"desc": "TVアニメ『幻日のヨハネ』第3話より",
+	"tags": ["Anime", "Yohane"],
+	"tube": "q6kKTabsSqo",
+	"length": 121
+},
+{
+	"date": "2023-07-16",
+	"title": "R・E・P",
+	"desc": "TVアニメ『幻日のヨハネ』第4話より",
+	"tags": ["Anime", "Yohane"],
+	"tube": "Zv8bcT4ju20",
+	"length": 135
+},
+{
 	"date": "2023-07-22",
 	"title": "DEEPNESS",
 	"desc": "イラスト：{{L::れおえん::https://x.com/reoenl}} / 映像：{{L::筆者::https://x.com/ohissya}}",
 	"tags": ["Lyric", "Hasu"],
 	"tube": "rFu_T2qZA-M",
 	"length": 276
+},
+{
+	"date": "2023-07-30",
+	"title": "Hey, dear my friends",
+	"desc": "TVアニメ『幻日のヨハネ』第6話より",
+	"tags": ["Anime", "Yohane"],
+	"tube": "kHBxCgz4_qs",
+	"length": 127
 },
 {
 	"date": "2023-08-01",
@@ -118,12 +855,44 @@
 	"length": 250
 },
 {
+	"date": "2023-08-06",
+	"title": "GIRLS!!",
+	"desc": "TVアニメ『幻日のヨハネ』第7話より",
+	"tags": ["Anime", "Yohane"],
+	"tube": "ctqgbz3vQGg",
+	"length": 93
+},
+{
 	"date": "2023-08-11",
 	"title": "Jump Into the New World",
-	"desc": "Director : Cube（Hifumi,inc.） / Creative Producer : 荒木悟（Hifumi,inc.） / Production : Hifumi,inc.",
-	"tags": ["Lyric", "SuperStar", "Liella"],
+	"desc": "Director : Cube(Hifumi,inc.) / Creative Producer : 荒木悟(Hifumi,inc.) / Production : Hifumi,inc.",
+	"tags": ["Lyric", "Liella"],
 	"tube": "TCknEoeAJqg",
 	"length": 245
+},
+{
+	"date": "2023-08-13",
+	"title": "Wonder sea breeze",
+	"desc": "TVアニメ『幻日のヨハネ』第8話より",
+	"tags": ["Anime", "Yohane"],
+	"tube": "IAiqYXOiZA0",
+	"length": 139
+},
+{
+	"date": "2023-09-10",
+	"title": "Forever U & I",
+	"desc": "TVアニメ『幻日のヨハネ』第12話より",
+	"tags": ["Anime", "Yohane"],
+	"tube": "ujGAtmz4_wU",
+	"length": 103
+},
+{
+	"date": "2023-09-17",
+	"title": "La la 勇気のうた",
+	"desc": "TVアニメ『幻日のヨハネ』第13話より",
+	"tags": ["Anime", "Yohane"],
+	"tube": "b2Otjp18SC8",
+	"length": 109
 },
 {
 	"date": "2023-09-19",
@@ -241,7 +1010,7 @@
 },
 {
 	"date": "2023-12-02",
-	"title": "",
+	"title": "ツバサ・ラ・リベルテ",
 	"desc": "映像：{{L::佐久間よる::https://x.com/Yoru_Sakuma}}",
 	"memo": "映像は「103期11月度Fes×LIVE」を流用している。",
 	"tags": ["Lyric", "Hasu"],
@@ -291,22 +1060,6 @@
 	"length": 248
 },
 {
-	"date": "2024-03-29",
-	"title": "抱きしめる花びら",
-	"desc": "イラスト：{{L::徹田::https://x.com/tettaakira}} / 映像：{{L::yama_ko::https://x.com/yama_ko}}",
-	"tags": ["Lyric", "Hasu"],
-	"tube": "rjInEoKntb0",
-	"length": 343
-},
-{
-	"date": "2024-04-01",
-	"title": "チョイになりたいCHAMCHARIUM",
-	"memo": "2024年エイプリルフール企画",
-	"tags": ["MV", "Sunshine"],
-	"tube": "0qUs0O3pQJM",
-	"length": 95
-},
-{
 	"date": "2024-03-09",
 	"title": "Jellyfish",
 	"tags": ["MV", "Liella", "5yncri5e"],
@@ -318,9 +1071,25 @@
 	"title": "わーいわいわい　わいわいわい！",
 	"desc": "ディレクター：{{L::坂本渉太::https://x.com/shotasakamoto}} / アニメーション：{{L::へばね::https://x.com/chiffoncake25}} / 3DCG：{{L::しばしん::https://x.com/shbtshn}} / モーショングラフィックス：{{L::ャﾊｷﾞ::https://x.com/@bisbis_hagi}}",
 	"memo": "",
-	"tags": ["MV", "Sunshine", "YYY"],
+	"tags": ["MV", "YYY"],
 	"tube": "FV36aGHP6WE",
 	"length": 191
+},
+{
+	"date": "2024-03-29",
+	"title": "抱きしめる花びら",
+	"desc": "イラスト：{{L::徹田::https://x.com/tettaakira}} / 映像：{{L::yama_ko::https://x.com/yama_ko}}",
+	"tags": ["Lyric", "Hasu"],
+	"tube": "rjInEoKntb0",
+	"length": 343
+},
+{
+	"date": "2024-04-01",
+	"title": "チョイになりたいCHAMCHARIUM",
+	"memo": "2024年エイプリルフール企画",
+	"tags": ["MV", "Aqours"],
+	"tube": "0qUs0O3pQJM",
+	"length": 95
 },
 {
 	"date": "2024-04-18",
@@ -356,7 +1125,7 @@
 	"date": "2024-06-19",
 	"title": "ディストーション",
 	"desc": "イラスト：{{L::路地子::https://x.com/rojirojiroji}} / 映像：{{L::野良いぬ::https://x.com/norainu03019}}",
-	"tags": ["Lyric", "SuperStar", "CatChu"],
+	"tags": ["Lyric", "Liella", "CatChu"],
 	"tube": "aTUay1sjmHM",
 	"length": 205
 },
@@ -380,7 +1149,7 @@
 	"date": "2024-07-05",
 	"title": "Jellyfish",
 	"desc": "イラスト：{{L::鯱ノ丸::https://x.com/Shachi_Mr}} / 映像：{{L::有栖 永真::https://x.com/alice_eishin}}",
-	"tags": ["Lyric", "SuperStar", "5yncri5e"],
+	"tags": ["Lyric", "Liella", "5yncri5e"],
 	"tube": "ZvZQmTe8LhI",
 	"length": 190
 },
@@ -388,13 +1157,13 @@
 	"date": "2024-07-11",
 	"title": "ニュートラル",
 	"desc": "イラスト：{{L::イシダタツキ::https://x.com/isd_ss}} / 映像：{{L::okina::https://x.com/okinacreative}}",
-	"tags": ["Lyric", "SuperStar", "KALEIDOSCORE"],
+	"tags": ["Lyric", "Liella", "KALEIDOSCORE"],
 	"tube": "w-QCDkghDpQ",
 	"length": 271
 },
 {
 	"date": "2024-07-15",
-	"title": "ミラクルショッピング ～ドン・キホーテのテーマ～",
+	"title": "ミラクルショッピング 〜ドン・キホーテのテーマ〜",
 	"desc": "映像：{{L::佐久間よる::https://x.com/Yoru_Sakuma}}",
 	"memo": "「ラブライブ！蓮ノ空女学院スクールアイドルクラブ」 × ドン・キホーテ コラボ記念",
 	"tags": ["Lyric", "Hasu", "MiracraPark"],
@@ -410,12 +1179,28 @@
 	"length": 217
 },
 {
+	"date": "2024-07-27",
+	"title": "Go Our Way！",
+	"desc": "『ラブライブ！虹ヶ咲学園スクールアイドル同好会 NEXT SKY』より",
+	"tags": ["Anime", "Niji"],
+	"tube": "J0FK3fH8RjM",
+	"length": 134
+},
+{
 	"date": "2024-08-11",
 	"title": "夏色えがおで1,2,Jump!",
 	"desc": "イラスト：{{L::浜弓場 双::L::sou_hmymb}} / 映像：{{L::佐久間よる::https://x.com/Yoru_Sakuma}}",
-	"tags": ["LV", "Hasu"],
+	"tags": ["Lyric", "Hasu"],
 	"tube": "u9g6OAbswqo",
 	"length": 265
+},
+{
+	"date": "2024-08-30",
+	"title": "愛してるばんざーい！",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Muse"],
+	"tube": "AvIUIMbp1G8",
+	"length": 109
 },
 {
 	"date": "2024-09-13",
@@ -443,6 +1228,46 @@
 	"length": 178
 },
 {
+	"date": "2024-10-06",
+	"title": "Let's be ONE",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』3期より",
+	"tags": ["Anime", "Liella"],
+	"tube": "mZ3DPE5mgH8",
+	"length": 90
+},
+{
+	"date": "2024-10-06",
+	"title": "DAISUKI FULL POWER",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』3期第1話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "B3JAxDoYOs4",
+	"length": 95
+},
+{
+	"date": "2024-10-13",
+	"title": "Bubble Rise",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』3期第2話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "13tq2ij9tZU",
+	"length": 120
+},
+{
+	"date": "2024-10-20",
+	"title": "Special Color",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』3期第3話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "gk5Vi6bONdI",
+	"length": 96
+},
+{
+	"date": "2024-11-10",
+	"title": "絶対的LOVER",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』3期第6話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "V_7QdhrCVEA",
+	"length": 101
+},
+{
 	"date": "2024-11-16",
 	"title": "ジョーショーキリュー",
 	"desc": "イラスト：{{L::つむみ::https://x.com/kandumesss}} / 映像：{{L::aco::https://x.com/acco_0v0}}",
@@ -459,12 +1284,38 @@
 	"length": 244
 },
 {
+	"date": "2024-11-24",
+	"title": "Dazzling Game",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』3期第8話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "9Yf-yBmPVlY",
+	"length": 122
+},
+{
 	"date": "2024-12-01",
 	"title": "ハナムスビ",
 	"desc": "イラスト：{{L::つむみ::https://x.com/kandumesss}} / 映像：{{L::佐久間よる::https://x.com/Yoru_Sakuma}}",
 	"tags": ["Lyric", "Hasu", "CeriesBouquet"],
 	"tube": "mbHCIgZ1cT4",
 	"length": 220
+},
+{
+	"date": "2024-12-05",
+	"title": "HAPPY PARTY TRAIN",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"memo": "",
+	"tags": ["SIFAS", "Aqours"],
+	"tube": "fhrzfWdKExw",
+	"length": 120
+},
+{
+	"date": "2024-12-05",
+	"title": "笑顔のPromise",
+	"desc": "",
+	"memo": "",
+	"tags": ["Anime", "Liella"],
+	"tube": "1pa9NaXKHOU",
+	"length": 107
 },
 {
 	"date": "2024-12-12",
@@ -474,6 +1325,22 @@
 	"tags": ["Lyric", "Hasu"],
 	"tube": "uIUsL2TKStU",
 	"length": 296
+},
+{
+	"date": "2024-12-15",
+	"title": "スーパースター!!",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』3期第11話より",
+	"tags": ["Anime", "Liella"],
+	"tube": "55eopmI4UuE",
+	"length": 137
+},
+{
+	"date": "2024-12-22",
+	"title": "始まりは君の空 〜11 Ver.〜",
+	"desc": "TVアニメ『ラブライブ！スーパースター!!』3期より",
+	"tags": ["Anime", "Liella"],
+	"tube": "i9lw8bfmwLU",
+	"length": 133
 },
 {
 	"date": "2024-12-29",
@@ -499,6 +1366,14 @@
 	"tags": ["Lyric", "Hasu", "MiracraPark"],
 	"tube": "fq2KGJm8kp8",
 	"length": 200
+},
+{
+	"date": "2025-02-07",
+	"title": "ミラクル STAY TUNE！",
+	"desc": "アプリ『ラブライブ！スクールアイドルフェスティバルALL STARS』より",
+	"tags": ["Game", "SIFAS", "Niji"],
+	"tube": "P6WHV8Lxll4",
+	"length": 105
 },
 {
 	"date": "2025-02-09",
@@ -585,7 +1460,7 @@
 },
 {
 	"date": "2025-05-29",
-	"title": "愛♡スクリ～ム！",
+	"title": "愛♡スクリ〜ム！",
 	"desc": "キャラクターデザイン：{{L::ちょん*::https://x.com/xx_Chon_xx}} / 3Dモデリング：{{L::脳髄::https://x.com/know_xiii}} / 映像：{{L::末尾,::https://x.com/sueo_oeus}}",
 	"tags": ["Lyric", "AiScReam"],
 	"tube": "L1mFVp9IM9c",
@@ -626,11 +1501,420 @@
 },
 {
 	"date": "2025-07-08",
+	"title": "アイドゥーミー！",
+	"desc": "映像：{{L::佐久間よる::https://x.com/Yoru_Sakuma}}",
+	"tags": ["Lyric", "Hasu"],
+	"tube": "RZprR5LDMac",
+	"length": 237
+},
+{
+	"date": "2025-07-08",
 	"title": "HIBANA―火花―",
 	"desc": "イラスト：田畑壽之 / 衣装デザイン：sotobayashi kenta(RIM) / 制作：CASANE.",
 	"tags": ["Lyric", "Ikizulive"],
 	"tube": "NmuHI-CgEEU",
 	"length": 250
+},
+{
+	"date": "2025-07-15",
+	"title": "Pray for love",
+	"desc": "イラスト：田畑壽之 / 衣装デザイン：sotobayashi kenta(RIM) / 制作：CASANE.",
+	"tags": ["Lyric", "Ikizulive"],
+	"tube": "4ksdedLxcpQ",
+	"length": -1
+},
+{
+	"date": "2025-07-23",
+	"title": "Edelied",
+	"desc": "イラスト：{{L::トマリ::https://x.com/ttomarii}} / 映像：{{L::筆者::https://x.com/ohissya}}、{{L::お菊::https://x.com/__Lizel}}",
+	"tags": ["Lyric", "Hasu", "EdelNote"],
+	"tube": "IDIeG_FG7jE",
+	"length": 205
+},
+{
+	"date": "2025-07-29",
+	"title": "僕らの旅は終わらない",
+	"desc": "映像：成田拓弘　デフォルメイラスト：nene.pie　CGアシスタント：JB　ロケ撮影：タナカマチコ",
+	"memo": "",
+	"tags": ["Lyric", "Aqours"],
+	"tube": "7l4MJZ0eZEc",
+	"length": 230
+},
+{
+	"date": "2025-07-29",
+	"title": "キミは夜のポラリス",
+	"desc": "イラスト：田畑壽之 / 衣装デザイン：sotobayashi kenta(RIM) / 制作：CASANE.",
+	"tags": ["Lyric", "Ikizulive"],
+	"tube": "vLF4HHpimCE",
+	"length": 269
+},
+{
+	"date": "2025-07-31",
+	"title": "Little Green委員会",
+	"desc": "イラスト：田畑壽之 / 衣装デザイン：sotobayashi kenta(RIM) / 制作：CASANE.",
+	"tags": ["Lyric", "Ikizulive"],
+	"tube": "jjUDY94Qu1Q",
+	"length": 249
+},
+{
+	"date": "2025-08-05",
+	"title": "HomeRun Queen!!",
+	"desc": "イラスト：田畑壽之 / 衣装デザイン：sotobayashi kenta(RIM) / 制作：CASANE.",
+	"tags": ["Lyric", "Ikizulive"],
+	"tube": "aq10IOW7DR0",
+	"length": 227
+},
+{
+	"date": "2025-08-07",
+	"title": "恋のワンタイムパスワード",
+	"desc": "イラスト：田畑壽之 / 衣装デザイン：sotobayashi kenta(RIM) / 制作：CASANE.",
+	"tags": ["Lyric", "Ikizulive"],
+	"tube": "YTil7dfJM0o",
+	"length": 243
+},
+{
+	"date": "2025-08-12",
+	"title": "イキタクナイEvery Day",
+	"desc": "イラスト：田畑壽之 / 衣装デザイン：sotobayashi kenta(RIM) / 制作：CASANE.",
+	"tags": ["Lyric", "Ikizulive"],
+	"tube": "gs4E5WAIpWo",
+	"length": 260
+},
+{
+	"date": "2025-08-14",
+	"title": "ヒミツミチ",
+	"desc": "イラスト：{{L::リチャード::https://x.com/richaball/}}　制作：CASANE.",
+	"tags": ["Lyric", "Ikizulive"],
+	"tube": "BUiB24JvEPw",
+	"length": 219
+},
+{
+	"date": "2025-08-21",
+	"title": "Cheer Mode",
+	"memo": "",
+	"tags": ["Anime", "Niji"],
+	"tube": "6ygmzfu8XjQ",
+	"length": 102
+},
+{
+	"date": "2025-08-31",
+	"title": "愛♡スクリ〜ム！",
+	"tags": ["MV"],
+	"tube": "8Yy7Jzle338",
+	"length": 261
+},
+{
+	"date": "2025-09-21",
+	"title": "Celebration!",
+	"desc": "イラスト：{{L::フライ::https://x.com/flyco_}} / 映像：{{L::aco::https://x.com/acco_0v0}}",
+	"memo": "",
+	"tags": ["Lyric", "Hasu", "CeriesBouquet"],
+	"tube": "NEnDR9ALBDU",
+	"length": 214
+},
+{
+	"date": "2025-09-29",
+	"title": "ブルウモーメント",
+	"desc": "",
+	"memo": "映像は「105期 Fes×LIVE 〜A Day in Summer Light〜」を流用している。",
+	"tags": ["Lyric", "Hasu", "DOLLCHESTRA"],
+	"tube": "9KJNqj4alRQ",
+	"length": 244
+},
+{
+	"date": "2025-09-29",
+	"title": "Very! Very! COCO夏っ",
+	"desc": "",
+	"memo": "映像は「105期 Fes×LIVE 〜A Day in Summer Light〜」を流用している。",
+	"tags": ["Lyric", "Hasu", "MiracraPark"],
+	"tube": "SmmwTrqe1L4",
+	"length": 191
+},
+{
+	"date": "2025-09-29",
+	"title": "フュージョンクラスト",
+	"desc": "",
+	"memo": "映像は「105期 Fes×LIVE 〜A Day in Summer Light〜」を流用している。",
+	"tags": ["Lyric", "Hasu", "EdelNote"],
+	"tube": "LhTOjzlNEuo",
+	"length": 270
+},
+{
+	"date": "2025-09-29",
+	"title": "可惜夜花火",
+	"desc": "",
+	"memo": "映像は「105期 Fes×LIVE 〜A Day in Summer Light〜」を流用している。",
+	"tags": ["Lyric", "Hasu", "CeriesBouquet"],
+	"tube": "Jn1QqgOhHW0",
+	"length": 240
+},
+{
+	"date": "2025-10-04",
+	"title": "Dazzling White Town",
+	"memo": "ラブライブ！サンシャイン!! Saint Snow 1st シングル「Dazzling White Town」に収録されているアニメーション映像。",
+	"tags": ["Anime", "Aqours", "SaintSnow"],
+	"tube": "_W9SQ2-QNCk",
+	"length": 594
+},
+{
+	"date": "2025-10-15",
+	"title": "Rise Up High!",
+	"desc": "『映画 ラブライブ！虹ヶ咲学園スクールアイドル同好会 完結編第1章』より",
+	"tags": ["Anime", "Niji"],
+	"tube": "xc5LflA6K2M",
+	"length": 96
+},
+{
+	"date": "2025-10-16",
+	"title": "Daydream Mermaid",
+	"desc": "『映画 ラブライブ！虹ヶ咲学園スクールアイドル同好会 完結編第1章』より",
+	"tags": ["Anime", "Niji"],
+	"tube": "0O6x3qKY9GQ",
+	"length": 102
+},
+{
+	"date": "2025-10-20",
+	"title": "Cara Tesoro",
+	"desc": "『映画 ラブライブ！虹ヶ咲学園スクールアイドル同好会 完結編第1章』より",
+	"tags": ["Anime", "Niji"],
+	"tube": "tnQgPgo3rBc",
+	"length": 103
+},
+{
+	"date": "2025-10-22",
+	"title": "PHOENIX",
+	"desc": "『映画 ラブライブ！虹ヶ咲学園スクールアイドル同好会 完結編第1章』より",
+	"tags": ["Anime", "Niji"],
+	"tube": "daUIydkp3zQ",
+	"length": 107
+},
+{
+	"date": "2025-10-23",
+	"title": "Stellar Stream",
+	"desc": "『映画 ラブライブ！虹ヶ咲学園スクールアイドル同好会 完結編第1章』より",
+	"tags": ["Anime", "Niji"],
+	"tube": "5_PWMgiJ2o4",
+	"length": 91
+},
+{
+	"date": "2025-11-05",
+	"title": "OPEN THE G☆TE!!!",
+	"tags": ["MV", "Liella"],
+	"tube": "mKRNpQ8nfD0",
+	"length": 258
+},
+{
+	"date": "2025-11-10",
+	"title": "ちょ、尊いLOVE",
+	"desc": "イラスト・映像：{{L::佐久間よる::https://x.com/Yoru_Sakuma}} / ロゴ：{{L::高垣::https://x.com/102__design}} / モーション：{{L::杜水 天::https://x.com/amemorimizu2}}",
+	"tags": ["Lyric", "Hasu", "RuriTo"],
+	"tube": "6OiPxmr_21E",
+	"length": 225
+},
+{
+	"date": "2025-11-21",
+	"title": "Nεw Black",
+	"desc": "イラスト・映像：{{L::佐久間よる::https://x.com/Yoru_Sakuma}} / ロゴ：{{L::高垣::https://x.com/102__design}} / モーション：{{L::杜水 天::https://x.com/amemorimizu2}}",
+	"tags": ["Lyric", "Hasu", "PRINCESS"],
+	"tube": "kUPSC3Tl7Dg",
+	"length": 183
+},
+{
+	"date": "2025-11-23",
+	"title": "はじまりの羽音",
+	"desc": "",
+	"memo": "映像は「105期 Fes×LIVE -竜胆祭-」を流用している。",
+	"tags": ["Lyric", "Hasu"],
+	"tube": "GsDJRse1il8",
+	"length": 244
+},
+{
+	"date": "2025-11-27",
+	"title": "【歌ってみた】恋するフォーチュンクッキー",
+	"desc": "イラスト：いぬもと(Hifumi,inc.) / 映像：tugutugu(Hifumi,inc.) / 制作進行：廣井結実(Hifumi,inc.)・Bushiroad Move,inc.",
+	"memo": "",
+	"tags": ["Lyric", "Ikizulive", "CHAKI"],
+	"tube": "zD1fc0WrhBw",
+	"length": 284
+},
+{
+	"date": "2025-12-04",
+	"title": "【歌ってみた】UFO",
+	"desc": "映像：れでぃば(Hifumi,inc.) / 制作進行：廣井結実(Hifumi,inc.)・Buhiroad Move,inc.",
+	"memo": "",
+	"tags": ["Lyric", "Ikizulive", "MiNoriTea"],
+	"tube": "j-hFuRRvJ40",
+	"length": 193
+},
+{
+	"date": "2025-12-15",
+	"title": "【歌ってみた】君じゃなきゃダメみたい",
+	"desc": "イラスト：いぬもと(Hifumi,inc.) / 映像：古清水勇輝(Hifumi,inc.) / 制作進行：廣井結実(Hifumi,inc.)・Bushiroad Move,inc.",
+	"memo": "",
+	"tags": ["Lyric", "Ikizulive", "Plumina"],
+	"tube": "2ETR6ohPveg",
+	"length": 231
+},
+{
+	"date": "2025-12-17",
+	"title": "SAVOTINA!!",
+	"memo": "リリックビデオの制作に関わったスタッフは不明（動画概要、および本編に記載なし）。",
+	"tags": ["Lyric", "Niji"],
+	"tube": "rcgSp6OeLmw",
+	"length": 221
+},
+{
+	"date": "2025-12-18",
+	"title": "SOL de ROSA",
+	"memo": "リリックビデオの制作に関わったスタッフは不明（動画概要、および本編に記載なし）。",
+	"tags": ["Lyric", "Niji"],
+	"tube": "JJ_VzUQe2jM",
+	"length": 255
+},
+{
+	"date": "2025-12-23",
+	"title": "DIZZY LILY VALLEY",
+	"memo": "リリックビデオの制作に関わったスタッフは不明（動画概要、および本編に記載なし）。",
+	"tags": ["Lyric", "Niji"],
+	"tube": "PTlK9VHAfWA",
+	"length": 178
+},
+{
+	"date": "2025-12-24",
+	"title": "【歌ってみた】UNDEAD",
+	"desc": "イラスト：RHTG / 映像：kariade (Hifumi,inc.) / 制作進行：廣井結実 (Hifumi,inc.)・Bushiroad Move,inc.",
+	"memo": "",
+	"tags": ["Lyric", "Ikizulive", "SH1ON"],
+	"tube": "cxEiDFsYP2o",
+	"length": 184
+},
+{
+	"date": "2025-12-25",
+	"title": "ふわふわり",
+	"memo": "リリックビデオの制作に関わったスタッフは不明（動画概要、および本編に記載なし）。",
+	"tags": ["Lyric", "Niji"],
+	"tube": "umTZEBZkH3M",
+	"length": 240
+},
+{
+	"date": "2025-12-29",
+	"title": "ワンダーメイツ",
+	"memo": "リリックビデオの制作に関わったスタッフは不明（動画概要、および本編に記載なし）。",
+	"tags": ["Lyric", "Niji"],
+	"tube": "xXs60McaCcQ",
+	"length": 140
+},
+{
+	"date": "2025-12-31",
+	"title": "VIVA！",
+	"memo": "リリックビデオの制作に関わったスタッフは不明（動画概要、および本編に記載なし）。",
+	"tags": ["Lyric", "Niji"],
+	"tube": "8Mxs34QX1B0",
+	"length": -1
+},
+{
+	"date": "2026-01-04",
+	"title": "もういちど ルミナス",
+	"memo": "2026年6月30日をもって公開終了。<br>リリックビデオの制作に関わったスタッフは不明（動画概要、および本編に記載なし）。",
+	"tags": ["deleted", "Lyric", "Hasu"],
+	"tube2": "pV8uOlYryME",
+	"length": 264
+},
+{
+	"date": "2026-01-05",
+	"title": "壱雫空",
+	"memo": "2026年6月30日をもって公開終了。<br>リリックビデオの制作に関わったスタッフは不明（動画概要、および本編に記載なし）。",
+	"tags": ["deleted", "Lyric", "Hasu"],
+	"tube2": "et3wSsXdO3c",
+	"length": 198
+},
+{
+	"date": "2026-01-06",
+	"title": "キミがいなくちゃっ！",
+	"memo": "2026年6月30日をもって公開終了。<br>リリックビデオの制作に関わったスタッフは不明（動画概要、および本編に記載なし）。",
+	"tags": ["deleted", "Lyric", "Hasu"],
+	"tube2": "_PpS3ZKfXMQ",
+	"length": 253
+},
+{
+	"date": "2026-01-07",
+	"title": "FIRE BIRD",
+	"memo": "2026年6月30日をもって公開終了。<br>リリックビデオの制作に関わったスタッフは不明（動画概要、および本編に記載なし）。",
+	"tags": ["deleted", "Lyric", "Hasu"],
+	"tube2": "58FtRPhjKIg",
+	"length": 329
+},
+{
+	"date": "2026-02-14",
+	"title": "IcHiGo milK love",
+	"memo": "映像：{{L::佐久間よる::https://x.com/Yoru_Sakuma}}",
+	"tags": ["Lyric", "PRINCESS"],
+	"tube": "iP7xfo6oaSM",
+	"length": 231
+},
+{
+	"date": "2026-02-15",
+	"title": "Dou-Da? DOING!",
+	"memo": "ミュージックビデオの制作に関わったスタッフは不明（動画概要、および本編に記載なし）。",
+	"tags": ["MV", "Ikizulive"],
+	"tube": "1rh28c5sVZ4",
+	"length": 388
+},
+{
+	"date": "2026-02-20",
+	"title": "トモダチになれる場所",
+	"memo": "映像：{{L::yama_ko::https://x.com/yama_ko}}",
+	"tags": ["Lyric", "MiracraPark"],
+	"tube": "YhmNq239P_U",
+	"length": 243
+},
+{
+	"date": "2026-02-21",
+	"title": "WAWO!",
+	"desc": "イラスト：{{L::さいね::https://x.com/sainexxx}} / 映像：{{L::佐久間よる::https://x.com/Yoru_Sakuma}}",
+	"tags": ["Lyric", "MiracraPark"],
+	"tube": "76aedYVelVs",
+	"length": 214
+},
+{
+	"date": "2026-02-28",
+	"title": "不思議と君とライブラリー",
+	"desc": "映像：{{L::えむめろ::https://salon.io/emumelo}}",
+	"tags": ["Lyric", "CeriesBouquet"],
+	"tube": "Z1S7MDhqpyE",
+	"length": 200
+},
+{
+	"date": "2026-03-10",
+	"title": "アイシイ",
+	"memo": "映像：{{L::佐久間よる::https://x.com/Yoru_Sakuma}}",
+	"tags": ["Lyric", "DOLLCHESTRA"],
+	"tube": "zeoHaohQKfg",
+	"length": 190
+},
+{
+	"date": "2026-03-20",
+	"title": "EdelinieN",
+	"memo": "映像：{{L::佐久間よる::https://x.com/Yoru_Sakuma}}",
+	"tags": ["Lyric", "EdelNote"],
+	"tube": "HyfwKUF7yJ8",
+	"length": 197
+},
+{
+	"date": "2026-03-27",
+	"title": "REGAIN AGAIN LLLLOVE",
+	"memo": "イラスト : えびちり, くるみつ / 制作：YANAGI.(CASANE.), AKITO(CASANE.), Ko Sato(CASANE.)",
+	"tags": ["Lyric", "Ikizulive"],
+	"tube": "UfPLXW8cpT8",
+	"length": 298
+},
+{
+	"date": "2026-04-09",
+	"title": "シンメトリー",
+	"memo": "イラスト : わき / 制作：YANAGI.(THINGS.), Ko Sato(THINGS.), YAMADA",
+	"tags": ["Lyric", "Ikizulive", "MiNoriTea"],
+	"tube": "tjz6uK4LYHM",
+	"length": 229
 },
 {
 	"date": "2099-01-01",
