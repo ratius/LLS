@@ -70,19 +70,16 @@
 {
 	"date": "2025-12-31",
 	"title": "いきづらい部！知らんらんらじお！#9",
-	"desc": "",
-	"memo": "",
-	"program": ["オープニング (0:00-)", "おたより紹介 (:-)", "楽曲紹介 (:-)", "お知らせ＆エンディング (:-)"],
+	"memo": "前回のラジオで考案された「あなたのヒミツミチ」がコーナーとして新設！",
+	"program": ["オープニング (0:00-)", "おたより紹介 (4:41-)", "それぞれのサテライトの印象 (23:29-)", "あなたのヒミツミチ (36:07-)", "楽曲紹介（REGAIN AGAIN LLLLOVE） (46:33-)", "お知らせ＆エンディング (52:13-)"],
 	"tags": ["s1", "Miyano", "Sakano", "Amasawa", "Suzunose"],
 	"tube": "VLOngADYywg",
-	"length": 3719
+	"length": 3419
 },
 {
 	"date": "2026-01-14",
 	"title": "いきづらい部！知らんらんらじお！#10",
-	"desc": "",
-	"memo": "",
-	"program": [],
+	"program": ["オープニング (0:00-)", "おたより紹介 (4:08-)", "あなたのヒミツミチ (12:21-)", "楽曲紹介（REGAIN AGAIN LLLLOVE） (26:45-)", "お知らせ＆エンディング (32:14-)"],
 	"tags": ["s1", "Endo", "Fujino", "Seko"],
 	"tube": "i_2LzbRZ5K4",
 	"length": 2203
@@ -90,9 +87,8 @@
 {
 	"date": "2026-01-28",
 	"title": "いきづらい部！知らんらんらじお！#11",
-	"desc": "",
-	"memo": "今回からタイトルロゴがリニューアル！",
-	"program": [],
+	"memo": "第7回配信で考案されたタイトルロゴが完成！（今回はサムネイルのみ。動画本編への反映は次回から）",
+	"program": ["オープニング (0:00-)", "おたより紹介 (5:16-)", "いきづらい部！1st LIVE ウォーミングアップ (16:45-)", "楽曲紹介（REGAIN AGAIN LLLLOVE） (32:11-)", "お知らせ＆エンディング (35:38-)"],
 	"tags": ["s1", "Ayasaki", "Miyano", "Okumura", "Kotomori"],
 	"tube": "CfCFlG-3YI4",
 	"length": 2491
@@ -100,19 +96,15 @@
 {
 	"date": "2026-02-11",
 	"title": "いきづらい部！知らんらんらじお！#12",
-	"desc": "",
-	"memo": "",
-	"program": [],
-	"tags": ["s1", "Ayasaki", "Sakano", "Seko", "Amasawa"],
+	"program": ["オープニング (0:00-)", "おたより紹介 (10:58-)", "いきづらい部！1st LIVE ウォーミングアップ (22:01-)", "楽曲紹介（REGAIN AGAIN LLLLOVE） (31:17-)", "お知らせ＆エンディング (36:19-)"],
+	"tags": ["s1", "Ayasaki", "Seko", "Amasawa", "Suzunose"],
 	"tube": "STTuRSfm1Iw",
 	"length": 2647
 },
 {
 	"date": "2026-02-25",
 	"title": "いきづらい部！知らんらんらじお！#13",
-	"desc": "",
-	"memo": "",
-	"program": [],
+	"program": ["オープニング (0:00-)", "おたより紹介 (2:24-)", "楽曲紹介（Dou-Da? Doing!） (32:23-)", "お知らせ＆エンディング (39:27-)"],
 	"tags": ["s1",  "Endo", "Miyano", "Okumura", "Kotomori"],
 	"tube": "booAw7tcEgI",
 	"length": 2643
@@ -120,9 +112,7 @@
 {
 	"date": "2026-03-11",
 	"title": "いきづらい部！知らんらんらじお！#14",
-	"desc": "",
-	"memo": "",
-	"program": [],
+	"program": ["オープニング (0:00-)", "おたより紹介 (3:21-)", "楽曲紹介（Dou-Da? Doing!） (28:01-)", "お知らせ＆エンディング (37:52-)"],
 	"tags": ["s1", "Sakano", "Seko", "Amasawa"],
 	"tube": "ztY74ycG6RE",
 	"length": 2562
@@ -226,6 +216,16 @@
 	"tags": ["s1", "Endo", "Miyano", "Okumura", "Suzunose"],
 	"tube": "AnHWEeAtDPY",
 	"length": 2776
+},
+{
+	"date": "2026-08-12",
+	"title": "いきづらい部！知らんらんらじお！#25",
+	"desc": "",
+	"memo": "",
+	"program": [],
+	"tags": ["s1", "Ayasaki", "Sakano", "Kotomori", "Suzunose"],
+	"tube": "-oainAehSBs",
+	"length": 2579
 },
 {
 	"date": "2099-01-01",
