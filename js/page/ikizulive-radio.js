@@ -29,11 +29,11 @@ const filterTargets = [
 ];
 
 const LLSPLayoutTemplate = (entry) => {
-    const videoLength = (typeof entry['length'] === 'number' && entry['length'] >= 0 ? `<span class="length pc-only">動画：${convertSecondsToHHMMSS(entry['length'])}</span>` : '');
+    const videoLength = (typeof entry['length'] === 'number' && entry['length'] >= 0 ? `<span class="length pc-only">動画：${LLS.convertSecondsToHHMMSS(entry['length'])}</span>` : '');
     const videoContent = ('tube' in entry && entry['tube'] ? `${LLSVideo.getYouTubeLink(entry['tube'], entry['title'])}${videoLength}` : '');
-    const descContent = (typeof entry['desc'] === 'string' && entry['desc'] !== "" ? convertMarkup(entry['desc']) : '');
-	const memoContent = (typeof entry['memo'] === 'string' && entry['memo'] !== "" ? convertMarkup(entry['memo']) : '');
-	const progContent = (typeof entry['program'] == 'object' && entry['program'].length ? convertMarkup(`{{EL::配信内容（クリックで展開）::{{UL::${entry['program'].join("::")}}}}}`) : '');
+    const descContent = (typeof entry['desc'] === 'string' && entry['desc'] !== "" ? LLS.markup(entry['desc']) : '');
+	const memoContent = (typeof entry['memo'] === 'string' && entry['memo'] !== "" ? LLS.markup(entry['memo']) : '');
+	const progContent = (typeof entry['program'] == 'object' && entry['program'].length ? LLS.markup(`{{EL::配信内容（クリックで展開）::{{UL::${entry['program'].join("::")}}}}}`) : '');
     const tagsContent = entry['tags'].map(tag => {
 		let isGuest = false;
 		if(tag.startsWith("_")){
@@ -41,7 +41,7 @@ const LLSPLayoutTemplate = (entry) => {
 			tag = tag.slice(1);
 		}
 		if(tag in tagData){
-			return createStyledTag(tagData[tag], tag, (isGuest ? "button-hexa" : null));
+			return LLS.createStyledTag(tagData[tag], tag, (isGuest ? "button-hexa" : null));
 		}
 	}).join('');
 	
