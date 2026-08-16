@@ -28,7 +28,7 @@ const filterTargets = [
 	{"name": "出演：涼ノ瀬葵音" , "condition": "tag:Suzunose"},
 ];
 
-const LLSPLayoutTemplate = (entry) => {
+const LLSVLayoutTemplate = (entry) => {
     const videoLength = (typeof entry['length'] === 'number' && entry['length'] >= 0 ? `<span class="length pc-only">動画：${LLS.convertSecondsToHHMMSS(entry['length'])}</span>` : '');
     const videoContent = ('tube' in entry && entry['tube'] ? `${LLSVideo.getYouTubeLink(entry['tube'], entry['title'])}${videoLength}` : '');
     const descContent = (typeof entry['desc'] === 'string' && entry['desc'] !== "" ? LLS.markup(entry['desc']) : '');
