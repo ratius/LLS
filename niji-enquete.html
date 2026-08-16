@@ -21,7 +21,7 @@
 
 <title>虹ヶ咲 マンスリーアンケートまとめ | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
-<link rel="stylesheet" href="main_gen2.css">
+<link rel="stylesheet" href="css/main_gen3.css">
 <style><!--
 /* アンケート一覧*/
 .enquete-header {
@@ -80,8 +80,6 @@
 	row-gap: 4px;
 }
 
-
-
 /* ■スマートフォン向けレイアウト */
 @media screen and (max-width: 599px) {
 	.enquete {
@@ -125,7 +123,7 @@
 	border-color: #ba9;
 }
 --></style>
-<script src="data/niji-enquete.js" defer></script>
+<script src="js/common/loader.js" data-src="js/common/LLS-misc.js,js/page/niji-enquete.js,data/page/niji-enquete.json"></script>
 </head>
 <body class="left">
 <main>
@@ -153,7 +151,7 @@
 	</section>
 
 	<section id="EnqueteList">
-		<h2 class="muse">アンケート一覧</h2>
+		<h2>アンケート一覧</h2>
 		<p>下表の「第○○回」部分をクリック/タップすると、結果発表ページを開きます。</p>
 		<div id="EnqueteResult" class="table-wrapper output-box output-box-default">
 			このページでは、情報を表示するためにJavaScriptを使用します。<br>
@@ -163,17 +161,23 @@
 	</section>
 
 	<section id="MostVoted">
-		<h2 class="aqours">キャラ別最多得票項目</h2>
+		<h2>キャラ別最多得票項目</h2>
 		<p>PCで閲覧している場合、「第○回」のボタンにカーソルを合わせることで、ツールチップにその回のテーマが表示されます。</p>
 		<div id="PrizeList" class="table-wrapper output-box output-box-default">
 		</div>
 	</section>
 
 	<section id="History">
-		<h2 class="niji">更新履歴（結果掲載以外）</h2>
+		<h2>更新履歴（結果掲載以外）</h2>
 		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 		<div class="history-container">
 			<details open>
+				<summary><span class="date">2024/01/11</span></summary>
+				<div>
+					<span class="icon-fix"></span>データ読み込み周りの仕様を変更
+				</div>
+			</details>
+			<details>
 				<summary class="important"><span class="date">2023/12/28</span></summary>
 				<div>
 					<span class="icon-new"></span>CSSをアップデート
