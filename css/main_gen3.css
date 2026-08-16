@@ -315,7 +315,7 @@ a.exlink:after {
 	background-repeat: no-repeat;
 }
 
-//ネタバレ
+/* ネタバレ */
 .spoiler {
 	color: #333;
 	background-color: #333;
