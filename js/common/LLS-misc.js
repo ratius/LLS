@@ -183,7 +183,7 @@ const LLS = {
 
                 case 'yt':
                     // {{YT::動画ID::頭出し秒数}} - YouTube動画のURLを取得
-                    const headstart = markupArgument[2] ? `&t=${markupArguments[2]}s` : ""
+                    const headstart = markupArguments[2] ? `&t=${markupArguments[2]}s` : ""
                     strConverted = `https://www.youtube.com/watch?v=${markupArguments[1]}${headstart}`;
                     break;
 
