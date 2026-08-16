@@ -21,7 +21,6 @@
 
 <title>ラブライブ！誕生日カレンダー | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
-<link rel="stylesheet" href="main_gen2.css">
 <style><!--
 
 .calendar-container {
@@ -167,18 +166,19 @@
 	height: 16px;
 	border-width: 3px;
 }
-.marker-muse::before    {border-color: #E50080;}
-.marker-aqours::before  {border-color: #19B1F6;}
-.marker-yohane::before  {border-color: #19737D;}
-.marker-niji::before    {border-color: #F8B656;}
-.marker-liella::before  {border-color: #DA57D8;}
-.marker-musical::before {border-color: #C40035;}
-.marker-hasu::before    {border-color: #FB8A9B;}
-.marker-bluebird::before{border-color: #008BC2;}
-.marker-llsif::before   {border-color: #888888;}
+.marker-muse::before, .marker-arise::before  {border-color: rgb(230,0,127)}
+.marker-aqours::before, .marker-saintsnow::before   {border-color: rgb(25,177,247)}
+.marker-yohane::before  {border-color: rgb(26,115,126)}
+.marker-nijigasaki::before {border-color: rgb(240,214,87)}
+.marker-liella::before, .marker-sunnypassion::before {border-color: rgb(218,87,216)}
+.marker-musical::before {border-color: rgb(196,0,53)}
+.marker-hasunosora::before {border-color: rgb(194,35,18)}
+.marker-ikizulive::before{border-color: rgb(237,109,0);}
+.marker-llsif::before {border-color: #999999;}
 
 --></style>
-<script src="data/loader.js" data-src="data/calendar.js,data/calendar.json,data/common-library.js"></script>
+<link rel="stylesheet" href="css/main_gen3.css">
+<script src="js/common/loader.js" data-src="js/common/LLS-idol.js,data/common/LLS-idol.json,js/page/calendar.js,data/page/calendar.json,js/common/LLS-misc.js"></script>
 </head>
 <body>
 <main>
@@ -199,10 +199,10 @@
 			<li>『サンシャイン!!』：Aqours、Saint Snow</li>
 			<li>『虹ヶ咲』：虹ヶ咲学園スクールアイドル同好会（高咲侑は誕生日不詳のため、キャストのみ載）</li>
 			<li>『スーパースター!!』：Liella!、Sunny Passion</li>
-			<li>『蓮ノ空』：蓮ノ空女学院スクールアイドルクラブ103～105期生（106期生はキャストのみ掲載）</li>
-			<li>『幻日のヨハネ』：ライラプスのみ（Aqoursと共通するキャストは割愛）</li>
+			<li>『蓮ノ空』：蓮ノ空女学院スクールアイドルクラブ103～105期生（106期生は誕生日不詳のため、キャストのみ掲載）</li>
+			<li>『幻日のヨハネ』：ライラプスのみ（Aqoursと対応するキャラクターやキャストは割愛）</li>
 			<li>『ミュージカル』：椿咲花女子高校アイドル部、滝桜女学院アイドル部（2023～2025年度公演およびTVドラマ）</li>
-			<li>『イキヅライブ！』：メイン組10名</li>
+			<li>『イキヅライブ！』：いきづらい部！</li>
 			<li>スクフェス転入生：『虹ヶ咲』扱いの桜坂しずく、近江彼方、エマ・ヴェルデを除く転入生51名（『虹ヶ咲』で声を演じたキャストは掲載しません）</li>
 		</ul>
 		<p id="RecordedData">
@@ -238,6 +238,12 @@
 		<p>下のボックス内の、色つきの日付の行をクリックすると詳しい情報が表示されます。</p>
 		<div class="history-container">
 			<details open>
+				<summary><span class="date">2026/04/17</span> - グループカラー調整</summary>
+				<div>
+					<span class="icon-fix"></span>グループカラーを調整<br>
+				</div>
+			</details>
+			<details>
 				<summary><span class="date">2026/04/17</span> - データ追加</summary>
 				<div>
 					<span class="icon-new"></span>蓮ノ空106期生キャストの誕生日を掲載<br>
