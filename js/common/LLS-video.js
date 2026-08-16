@@ -1,10 +1,10 @@
-// ■■ ラブライブ！ストレージ データ抽出・出力用モジュール「LLS Processor」
+// ■■ ラブライブ！ストレージ データ抽出・出力用モジュール「LLS Video」
 // データとなるJSONファイル、ならびに「loader.js」「LLS-misc.js」が必要です
 //
 // また、HTML側で以下のものを指定してください：
 // ■タグ要素
-// ・id="LLSP-Filter" (絞り込み用のプルダウンメニュー)
-// ・id="LLSP-Result" (出力表示場所)
+// ・id="LLSV-Filter" (絞り込み用のプルダウンメニュー)
+// ・id="LLSV-Result" (出力表示場所)
 //
 // ■JSONファイル
 //
@@ -62,9 +62,9 @@ const LLSVideo = {
         }).slice(0, maxVideos);
 
         //HTML側で個別に定義された「LLSLayoutTemplate」関数を用いて書き出しを行う
-        document.getElementById('LLSP-Result').innerHTML =
+        document.getElementById('LLSV-Result').innerHTML =
             filteredList.map(entry => LLSPLayoutTemplate(entry)).join('');
-        document.getElementById('LLSP-Result').scrollTop = 0;
+        document.getElementById('LLSV-Result').scrollTop = 0;
         return filteredList.length;
     },
 
@@ -87,13 +87,13 @@ const LLSVideo = {
             const option = document.createElement('option');
             option.text = temp.name;
             option.value = temp.condition || '';
-            document.getElementById("LLSP-Filter").appendChild(option);
+            document.getElementById("LLSV-Filter").appendChild(option);
         });
 
         //セレクトボックス変更時の処理を追加
-        document.getElementById("LLSP-Filter").addEventListener('change', function () {
+        document.getElementById("LLSV-Filter").addEventListener('change', function () {
             const TimeOutputStart = performance.now();
-            const filteredVideos = LLSVideo.renderEntryList(window[databasePath], this.value, "LLSP-Result");
+            const filteredVideos = LLSVideo.renderEntryList(window[databasePath], this.value, "LLSV-Result");
             if (filteredVideos > 0 && isDebugMode) {
                 const TimeOutputEnd = performance.now();
                 console.log(`条件：${this.value} (${filteredVideos}件) 出力時間：${(TimeOutputEnd - TimeOutputStart).toFixed(1)}ミリ秒`);
@@ -101,8 +101,8 @@ const LLSVideo = {
         });
 
         //警告解除
-        document.getElementById("LLSP-Result").classList.remove('output-box-default');
-        document.getElementById("LLSP-Result").innerHTML = `<div style="padding: 10px; vertical-align: top; font-size: 130%; color: #666">(上のプルダウンメニューから、期間を選んでください)</div>`;
+        document.getElementById("LLSV-Result").classList.remove('output-box-default');
+        document.getElementById("LLSV-Result").innerHTML = `<div style="padding: 10px; vertical-align: top; font-size: 130%; color: #666">(上のプルダウンメニューから、期間を選んでください)</div>`;
 
         //デバック用
         if (isDebugMode) {
@@ -129,8 +129,8 @@ const LLSVideo = {
                 }
             }
 
-            document.getElementById("LLSP-Filter").selectedIndex = 1;
-            LLSVideo.renderEntryList(window[databasePath], document.getElementById("LLSP-Filter").value, "LLSP-Result");
+            document.getElementById("LLSV-Filter").selectedIndex = 1;
+            LLSVideo.renderEntryList(window[databasePath], document.getElementById("LLSV-Filter").value, "LLSV-Result");
 
             //描画時間の出力
             const TimeOutputEnd = performance.now();
