@@ -1,5 +1,5 @@
 // ■■ ラブライブ！ストレージ データ抽出・出力用モジュール「LLS Processor」
-// データとなるJSONファイル、ならびに「loader.js」「common-library.js」が必要です
+// データとなるJSONファイル、ならびに「loader.js」「LLS-misc.js」が必要です
 //
 // また、HTML側で以下のものを指定してください：
 // ■タグ要素
@@ -78,7 +78,7 @@ const LLSVideo = {
 
         //ボタンの色データをCSSに追加
         const buttonCSS = document.createElement("style");
-        buttonCSS.innerHTML = ("\n<!--\n/* Generated from LLS-processor.js */\n" + Object.keys(tagData).map(tag => `.button-${tag} {\n\tbackground-color: ${getColor(tagData[tag], 3)};\n\tborder-color: ${getColor(tagData[tag], 0, 0.15)};\n}`).join("\n") + "\n-->");
+        buttonCSS.innerHTML = ("\n<!--\n/* Generated from LLS-processor.js */\n" + Object.keys(tagData).map(tag => `.button-${tag} {\n\tbackground-color: ${LLS.getColorFromObject(tagData[tag], 3)};\n\tborder-color: ${LLS.getColorFromObject(tagData[tag], 0, 0.15)};\n}`).join("\n") + "\n-->");
         document.head.appendChild(buttonCSS);
 
         //セレクトボックスに要素を追加
