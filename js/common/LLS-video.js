@@ -13,8 +13,8 @@
 // ・filterTargets (Array) - 各要素は {"name":<String>, "condition":<String>}
 //
 // ■関数
-// ・LLSPLayoutTemplate - 記事1つ分のデータを整形するための関数 (必須)
-// ・LLSPDebug - 読み込み完了後、デバッグモードであった場合にのみ実行される関数（任意）
+// ・LLSVLayoutTemplate - 記事1つ分のデータを整形するための関数 (必須)
+// ・LLSVDebug - 読み込み完了後、デバッグモードであった場合にのみ実行される関数（任意）
 
 const LLSVideo = {
     //YouTubeへのリンクを作成
@@ -63,7 +63,7 @@ const LLSVideo = {
 
         //HTML側で個別に定義された「LLSLayoutTemplate」関数を用いて書き出しを行う
         document.getElementById('LLSV-Result').innerHTML =
-            filteredList.map(entry => LLSPLayoutTemplate(entry)).join('');
+            filteredList.map(entry => LLSVLayoutTemplate(entry)).join('');
         document.getElementById('LLSV-Result').scrollTop = 0;
         return filteredList.length;
     },
@@ -106,9 +106,6 @@ const LLSVideo = {
 
         //デバック用
         if (isDebugMode) {
-            // 個別のデバッグ用関数を実行
-            if (typeof window["LLSPDebug"] === "function") { window["LLSPDebug"](); }
-
             // 共通の簡単なデータベースのチェック
             window[databasePath].forEach(_entry => {
                 if (!(['date'] in _entry)) {
