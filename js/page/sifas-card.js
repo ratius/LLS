@@ -58,7 +58,7 @@ const DrawCardTable = (group, characters) => {
 	//ヘッダー
 	const header = `<table class="cardlist-table" style="min-width: ${(characters.length + 1) * 110}px"><thead>\n<tr>\n<th class="HeaderL"></th>\n`
 		+ characters.map((characterId) => {
-			const characterData = LLSIdol.getCharacterData(group, characterId);
+			const characterData = LLSIdol.getCharacterDataFromGroups(characterId, group);
 			const color = LLS.getColorFromObject(characterData);
 			return `<th class="HeaderR">
 				<div class="top-marker bg_${characterId}">
@@ -121,9 +121,7 @@ function initialize() {
 	//キャラクターIDから色データをCSSに追加
 	document.querySelector('style').textContent +=
 		AllMembers.map(characterId => {
-			const characterData = LLSIdol.getCharacterData("muse", characterId)
-				?? LLSIdol.getCharacterData("aqours", characterId)
-				?? LLSIdol.getCharacterData("nijigasaki", characterId);
+			const characterData = LLSIdol.getCharacterDataFromGroups(characterId, "muse", "aqours", "nijigasaki");
 			const characterColor = LLS.getColorFromColorCode(characterData["color_sifas"]);
 			return `
 		.bg_${characterId} {
