@@ -12,7 +12,7 @@ const LLS = {
 
     //■ LLS.getColorFromObject (object[, white, black])
     //オブジェクトのRGBから色を計算する。(ver.20240727)
-    //0～255の値でr, g, bが定義されたオブジェクトが必要
+    //0〜255の値でr, g, bが定義されたオブジェクトが必要
     getColorFromObject: (object, white = 0, black = 0) => {
         if (white < 0) { white = 0; }
         else if (black < 0) { black = 0; }
@@ -24,7 +24,7 @@ const LLS = {
 
     //■カラーコードから色を計算 ver.20260801
     getColorFromColorCode: (colorcode, white = 0, black = 0) => {
-        if (colorcode.charAt(0) == "#") { return getColorFromColorCode(colorcode.substring(1), white, black); }
+        if (colorcode.charAt(0) == "#") { return LLS.getColorFromColorCode(colorcode.substring(1), white, black); }
         const ColorHex = parseInt(colorcode, 16);
         const ColorObject = { "r": (ColorHex / 65536) % 256, "g": Math.trunc(ColorHex / 256) % 256, "b": ColorHex % 256 };
         return LLS.getColorFromObject(ColorObject, white, black);
