@@ -32,7 +32,7 @@ const LLSVideo = {
 
         //与えられた条件でフィルターを行う
         const filteredList = dataSrc.filter((video) => {
-            //2035年以降は間違いなく入力ミスなので除外
+            //日付が2035年以降のものは、間違いなく入力ミスなので除外
             if (new Date(video.date) >= new Date("2035-01-01")) { return false; }
 
             return conditions.every((condition) => {
@@ -61,7 +61,7 @@ const LLSVideo = {
             });
         }).slice(0, maxVideos);
 
-        //HTML側で個別に定義された「LLSLayoutTemplate」関数を用いて書き出しを行う
+        //HTML側で個別に定義された「LLSVLayoutTemplate」関数を用いて書き出しを行う
         document.getElementById('LLSV-Result').innerHTML =
             filteredList.map(entry => LLSVLayoutTemplate(entry)).join('');
         document.getElementById('LLSV-Result').scrollTop = 0;
@@ -78,7 +78,7 @@ const LLSVideo = {
 
         //ボタンの色データをCSSに追加
         const buttonCSS = document.createElement("style");
-        buttonCSS.innerHTML = ("\n<!--\n/* Generated from LLS-processor.js */\n" + Object.keys(tagData).map(tag => `.button-${tag} {\n\tbackground-color: ${LLS.getColorFromObject(tagData[tag], 3)};\n\tborder-color: ${LLS.getColorFromObject(tagData[tag], 0, 0.15)};\n}`).join("\n") + "\n-->");
+        buttonCSS.innerHTML = ("\n<!--\n/* Generated from LLS-video.js */\n" + Object.keys(tagData).map(tag => `.button-${tag} {\n\tbackground-color: ${LLS.getColorFromObject(tagData[tag], 3)};\n\tborder-color: ${LLS.getColorFromObject(tagData[tag], 0, 0.15)};\n}`).join("\n") + "\n-->");
         document.head.appendChild(buttonCSS);
 
         //セレクトボックスに要素を追加
