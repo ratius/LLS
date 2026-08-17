@@ -1,10 +1,11 @@
 // ■■ ラブライブ！ストレージ キャラクターデータ抽出用モジュール「LLS Idol」
-// 動作には、キャラクターデータとなるJSONファイルの内容を事前に読み込み、グローバル配列 window["JSON-LLS-idols"] として保存しておく必要があります。
+// 動作には、キャラクターデータとなるJSONファイルの内容を事前に読み込み、グローバル配列 window["JSON-LLS-idol"] として保存しておく必要があります。
 
 const LLSIdol = {
     //グループIDとキャラクターIDからキャラクターの情報を取得
     //これにより返るキャラクター情報は、グループの共通情報も含んだものとなる
-    getCharacterData:  function (group, id) {
+    //近々廃止予定
+    getCharacterData: function (group, id) {
         const targetGroup = window[this.JSONPath].find((e) => e?.["group_id"] === group) ?? { "characters": [] };
         const targetCharacter = targetGroup["characters"].find((e) => e?.id === id);
         if (targetCharacter === undefined) { //見つからなかった場合、undefinedを返す
@@ -14,11 +15,23 @@ const LLSIdol = {
         return { ...targetCharacter, ...groupInfo };
     },
 
+    //キャラクターIDと、1つ以上指定されたグループIDから、キャラクター1人の情報を取得
+    //「Sayaka」「Akira」が2人いるのでこんな関数が必要
+    getCharacterDataFromGroups: function (id, ...groups) {
+        const targetCharacters = window[this.JSONPath]
+            .filter((e) => groups.includes(e?.["group_id"]))
+            .map(groupData => groupData?.characters)
+            .flat()
+            .filter(character => character.id === id);
+        if(targetCharacters.length === 0){ return undefined; } //見つからなかった場合、undefinedを返す
+        return targetCharacters[0]; //見つかった場合、先頭の要素を返す
+    },
+
     // グループIDとキャラクターIDを指定して顔画像を作成。imageSizeは32と64のみ対応
     // キャラクターにfaceのキーがない場合、0番の画像を出力する
     drawFace: function (group, id, imageSize = 64) {
-        if ( imageSize !== 64 && imageSize !== 32){
-            throw new Error ("Error: invalid image size");
+        if (imageSize !== 64 && imageSize !== 32) {
+            throw new Error("Error: invalid image size");
         }
         const targetCharacter = this.getCharacterData(group, id);
         const imageID = parseInt(targetCharacter?.["image_offset"] ?? 0) + parseInt(targetCharacter?.["face"] ?? 0);
@@ -42,37 +55,35 @@ const LLSIdol = {
     //・"has:(キー名)" - 対象のキーを持つ
     //・"exhas:(キー名)" - 対象のキーを持たない
     filterCharacterList: function (...conditions) {
-        return this.getAllCharacterList().filter( (character) => {
-            return conditions.reduce( (acc, val) => {
-                if(acc === false){ return false}
-                const cType = val.split(":")[0];
-                const cKeyName = val.split(":")[1];
-                const cKeyValue = val.split(":")[2];
+        return this.getAllCharacterList().filter((character) => {
+            return conditions.every(condition => {
+                const cType = condition.split(":")[0];
+                const cKeyName = condition.split(":")[1];
+                const cKeyValue = condition.split(":")[2];
 
-                if (cType === "is" && (!character?.[cKeyName] || character[cKeyName] !== cKeyValue)){ return false;}
-                else if (cType === "isnot" && character?.[cKeyName] && character[cKeyName] === cKeyValue){ return false;}
-                else if (cType === "has" && !character?.[cKeyName]){ return false;}
-                else if (cType === "exhas" && character?.[cKeyName]){ return false;}
+                if (cType === "is" && (!character?.[cKeyName] || character[cKeyName] !== cKeyValue)) { return false; }
+                else if (cType === "isnot" && character?.[cKeyName] && character[cKeyName] === cKeyValue) { return false; }
+                else if (cType === "has" && !character?.[cKeyName]) { return false; }
+                else if (cType === "exhas" && character?.[cKeyName]) { return false; }
                 return true;
-            }, true);
+            });
         });
     },
     //与えられた各条件のうち1つ以上に一致するキャラクター情報のリストを返す
     //引数の形式は filterCharacterList と同様
     filterCharacterListOR: function (...conditions) {
-        return this.getAllCharacterList().filter( (character) => {
-            return conditions.reduce( (acc, val) => {
-                if(acc === true){ return true;}
-                const cType = val.split(":")[0];
-                const cKeyName = val.split(":")[1];
-                const cKeyValue = val.split(":")[2];
+        return this.getAllCharacterList().filter((character) => {
+            return conditions.some(condition => {
+                const cType = condition.split(":")[0];
+                const cKeyName = condition.split(":")[1];
+                const cKeyValue = condition.split(":")[2];
 
-                if (cType === "is" && character?.[cKeyName] && character[cKeyName] === cKeyValue){ return true;}
-                else if (cType === "isnot" && character?.[cKeyName] && character[cKeyName] !== cKeyValue){ return true;}
-                else if (cType === "has" && character?.[cKeyName]){ return true;}
-                else if (cType === "exhas" && !character?.[cKeyName]){ return true;}
+                if (cType === "is" && character?.[cKeyName] && character[cKeyName] === cKeyValue) { return true; }
+                else if (cType === "isnot" && character?.[cKeyName] && character[cKeyName] !== cKeyValue) { return true; }
+                else if (cType === "has" && character?.[cKeyName]) { return true; }
+                else if (cType === "exhas" && !character?.[cKeyName]) { return true; }
                 return false;
-            }, false);
+            });
         });
     },
     JSONPath: "JSON-LLS-idol",
