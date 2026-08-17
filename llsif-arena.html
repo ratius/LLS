@@ -22,7 +22,6 @@
 
 <title>ライブ♪アリーナ テキスト集 | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
-<link rel="stylesheet" href="main_gen2.css">
 <style><!--
 
 /*■共通 */
@@ -195,7 +194,8 @@ div.note { /*注釈*/
 }
 
 --></style>
-<script src="data/loader.js" data-src="data/llsif-arena.js,data/llsif-arena.json,data/common-library.js,module/LLS-idolManager.js,module/LLS-idolManager.json"></script>
+<link rel="stylesheet" href="css/main_gen3.css">
+<script src="js/common/loader.js" data-src="js/common/LLS-misc.js,js/common/LLS-video.js,js/common/LLS-idol.js,data/common/LLS-idol.json,js/page/llsif-arena.js,data/page/llsif-arena.json"></script>
 </head>
 <body class="left">
 <main>
@@ -238,7 +238,7 @@ div.note { /*注釈*/
 					<tr>
 						<th id="ButtonLeft"  rowspan="2" onclick="false"><span style="font-size:40px">&#x2b05;</span><br>前回</th>
 						<th id="HeaderUpper">
-							<select id="select-box" onchange="WriteMessage()">
+							<select id="select-box">
 							<optgroup id="sb-t1" label="本編テキスト"></optgroup>
 							<optgroup id="sb-t2" label="その他"></optgroup>
 							</select>
