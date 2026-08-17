@@ -303,7 +303,7 @@ a.exlink:after {
 	vertical-align: top;
 	width: 64px;
 	height: 64px;
-	background-image: url(img/face_64.png);
+	background-image: url(../img/face_64.png);
 	background-repeat: no-repeat;
 }
 .icon-face-32{
@@ -311,7 +311,7 @@ a.exlink:after {
 	vertical-align: top;
 	width: 32px;
 	height: 32px;
-	background-image: url(img/face_32.png);
+	background-image: url(../img/face_32.png);
 	background-repeat: no-repeat;
 }
 
