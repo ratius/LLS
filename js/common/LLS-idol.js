@@ -16,15 +16,20 @@ const LLSIdol = {
     },
 
     //キャラクターIDと、1つ以上指定されたグループIDから、キャラクター1人の情報を取得
-    //「Sayaka」「Akira」が2人いるのでこんな関数が必要
+    //メインキャラクターに「さやか」と「サヤカ」がいるのでこんな関数が必要になっている
     getCharacterDataFromGroups: function (id, ...groups) {
-        const targetCharacters = window[this.JSONPath]
-            .filter((e) => groups.includes(e?.["group_id"]))
-            .map(groupData => groupData?.characters)
-            .flat()
-            .filter(character => character.id === id);
-        if(targetCharacters.length === 0){ return undefined; } //見つからなかった場合、undefinedを返す
-        return targetCharacters[0]; //見つかった場合、先頭の要素を返す
+        const targetGroups = window[this.JSONPath] //グループを抽出
+            .filter((e) => groups.includes(e?.["group_id"]));
+        const targetCharacterList = [];
+
+        targetGroups.forEach( group => { //各グループの character 内オブジェクトに、親グループのキーを与えたものを、targetCharacterListに追加していく
+            group?.characters.forEach(character => {
+                const { characters, ...groupInfo} = group;
+                targetCharacterList.push({ ...character, ...groupInfo});
+            })
+            return group?.characters;
+        });
+        return targetCharacterList.find(character => character.id === id);
     },
 
     // グループIDとキャラクターIDを指定して顔画像を作成。imageSizeは32と64のみ対応
