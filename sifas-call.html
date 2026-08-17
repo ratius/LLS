@@ -22,7 +22,6 @@
 
 <title>スクスタ 呼称表 | ラブライブ！ストレージ</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
-<link rel="stylesheet" href="main_gen2.css">
 <style><!--
 table.call {
 	text-align: center;
@@ -70,19 +69,20 @@ table.call {
 	border-bottom: dashed 1px #666;
 }
 --></style>
-<script src="data/loader.js" data-src="data/sifas-call.json,data/sifas-call.js,data/common-library.js,module/LLS-idolManager.json,module/LLS-idolManager.js"></script>
+<link rel="stylesheet" href="css/main_gen3.css">
+<script src="js/common/loader.js" data-src="js/common/LLS-misc.js,js/common/LLS-idol.js,data/common/LLS-idol.json,js/page/sifas-call.js,data/page/sifas-call.json"></script>
 </head>
 <body class="left">
 <main>
 	<header>
-		<h1>スクスタ 呼称表</h1>
+		<h1 id="TitleName">スクスタ 呼称表</h1>
 	</header>
 	
 	<nav class="right-menu">
 		<ul>
 			<li><strong>目次</strong></li>
 			<li><hr></li>
-			<li><a href="#Foreword">概要</a></li>
+			<li><a href="#Summary">概要</a></li>
 			<li><a href="#CallList">呼ばれ方一覧</a></li>
 			<li><ul>
 				<li><a href="#Call_Muse">μ's</a></li>
@@ -95,8 +95,8 @@ table.call {
 		</ul>
 	</nav>
 
-	<section>
-		<h2 class="foreword">概要</h2>
+	<section id="Summary">
+		<h2>概要</h2>
 		<p>
 		「ラブライブ！スクールアイドルフェスティバルALL STARS」内におけるキャラクターの呼び方のまとめです。<br>
 			打ち解ける前だと思しき呼び方は掲載しないか、注釈つきで掲載します。
@@ -104,7 +104,7 @@ table.call {
 	</section>
 
 	<section id="CallList">
-		<h2 class="muse">呼ばれ方一覧</h2>
+		<h2>呼ばれ方一覧</h2>
 		<section id="Call_Muse">
 			<h3>μ'sの呼ばれ方</h3>
 			<div class="output-box darkbg" id="OutputAreaMuse"></div>
@@ -163,7 +163,7 @@ table.call {
 			<details>
 				<summary><span class="date">2022/06/25</span> - レイアウト調整</summary>
 				<div>
-					<span class="icon-new"></span>まえがきを追加<br>
+					<span class="icon-new"></span>ページの概要を追加<br>
 					<span class="icon-fix"></span>「その他キャラクター」を、シリーズ別に色分け<br>
 					<span class="icon-fix"></span>更新履歴をリニューアル（他ページ同様、折りたたみ式に変更）<br>
 				</div>
