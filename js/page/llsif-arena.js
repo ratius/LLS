@@ -75,7 +75,7 @@ function DisplayMessages(page) {
 	if (page > 0) {
 		document.getElementById('ButtonLeft').classList.add('button-enable');
 		document.getElementById('ButtonLeft').classList.remove('button-disable');
-		document.getElementById('ButtonLeft').setAttribute('onclick', `WriteMessage(${page - 1})`);
+		document.getElementById('ButtonLeft').setAttribute('onclick', `DisplayMessages(${page - 1})`);
 	} else {
 		document.getElementById('ButtonLeft').classList.add('button-disable');
 		document.getElementById('ButtonLeft').classList.remove('button-enable');
@@ -86,7 +86,7 @@ function DisplayMessages(page) {
 	if (page < window['JSON-llsif-arena'].length - 1) {
 		document.getElementById('ButtonRight').classList.add('button-enable');
 		document.getElementById('ButtonRight').classList.remove('button-disable');
-		document.getElementById('ButtonRight').setAttribute('onclick', `WriteMessage(${page + 1})`);
+		document.getElementById('ButtonRight').setAttribute('onclick', `DisplayMessages(${page + 1})`);
 	} else {
 		document.getElementById('ButtonRight').classList.add('button-disable');
 		document.getElementById('ButtonRight').classList.remove('button-enable');
