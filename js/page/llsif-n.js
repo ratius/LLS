@@ -32,7 +32,7 @@ function DrawButtons(id) {
 function DrawProfile(id){
 	const target = window['JSON-llsif-n'].find( q => q.id === id);
 	if(target === undefined){ return false;}
-	const baseProfile = LLSIdol.getCharacterData("llsif", id);
+	const baseProfile = LLSIdol.getCharacterDataFromGroups(id, "llsif");
 
 	const Profile = `
 	<h3>${baseProfile["name"]} プロフィール</h3>
@@ -87,7 +87,7 @@ function DrawCardData(id, num){
 	const targetChar = window['JSON-llsif-n'].find( q => q.id === id);
 	if(targetChar === undefined){ return false;}
 	const targetCard = targetChar.card[num];
-	const baseProfile = LLSIdol.getCharacterData("llsif", id);
+	const baseProfile = LLSIdol.getCharacterDataFromGroups(id, "llsif");
 	
 	const Header = `<h3>${baseProfile.name} ${(num+1)}枚目 (部員No.${targetCard.num})</h3>`
 	+ ('memo' in targetCard ? '<p style="font-size: 90%">' + targetCard.memo + '<\/p>' : '')
@@ -125,7 +125,7 @@ function DrawCardData(id, num){
 function initialize() {
 	//セレクトボックスに要素を追加
 	window['JSON-llsif-n'].forEach( (member) => {
-		const characterData = LLSIdol.getCharacterData("llsif", member.id);
+		const characterData = LLSIdol.getCharacterDataFromGroups(member.id, "llsif")
 		if(characterData){
 			const option = document.createElement("option");
 			option.text = characterData.name;
