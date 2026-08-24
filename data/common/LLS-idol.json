@@ -685,6 +685,140 @@
         ]
     },
     {
+        "group_id": "musical",
+        "group_name": "スクールアイドルミュージカル",
+        "isRival": "",
+        "image_offset": "0",
+        "characters": [
+            {
+                "id": "Rurika",
+                "name": "椿ルリカ",
+                "firstName": "ルリカ",
+                "color": "73B8E2"
+            },
+            {
+                "id": "Yuzuha",
+                "name": "皇ユズハ",
+                "firstName": "ユズハ",
+                "color": "EFEFEF"
+            },
+            {
+                "id": "Yukino",
+                "name": "北条ユキノ",
+                "firstName": "ユキノ",
+                "color": "F58220"
+            },
+            {
+                "id": "Hikaru",
+                "name": "天草ヒカル",
+                "firstName": "ヒカル",
+                "color": "3C6854"
+            },
+            {
+                "id": "Maya",
+                "name": "三笠マーヤ",
+                "firstName": "マーヤ",
+                "color": "E48898"
+            },
+            {
+                "id": "Anzu",
+                "name": "滝沢アンズ",
+                "firstName": "アンズ",
+                "color": "D81F35"
+            },
+            {
+                "id": "Misuzu",
+                "name": "若槻ミスズ",
+                "firstName": "ミスズ",
+                "color": "004C71"
+            },
+            {
+                "id": "Toa",
+                "name": "来栖トア",
+                "firstName": "トア",
+                "color": "FF8C90"
+            },
+            {
+                "id": "Rena",
+                "name": "鈴賀レナ",
+                "firstName": "レナ",
+                "color": "ABC900"
+            },
+            {
+                "id": "Sayaka",
+                "name": "晴風サヤカ",
+                "firstName": "サヤカ",
+                "color": "FFEE50"
+            }
+        ]
+    },
+    {
+        "group_id": "yohane",
+        "group_name": "幻日のヨハネ",
+        "characters": [
+            {
+                "id": "Yohane",
+                "name": "ヨハネ",
+                "firstName": "ヨハネ",
+                "color": "#E4E2E2"
+            },
+            {
+                "id": "Hanamaru",
+                "name": "ハナマル",
+                "firstName": "ハナマル",
+                "color": "#FDF3CA"
+            },
+            {
+                "id": "Dia",
+                "name": "ダイヤ",
+                "firstName": "ダイヤ",
+                "color": "#FAE1E5"
+            },
+            {
+                "id": "Ruby",
+                "name": "ルビィ",
+                "firstName": "ルビィ",
+                "color": "#FDDEEF"
+            },
+            {
+                "id": "Chika",
+                "name": "チカ",
+                "firstName": "チカ",
+                "color": "#F7E1D4"
+            },
+            {
+                "id": "Kanan",
+                "name": "カナン",
+                "firstName": "カナン",
+                "color": "#E4F4F3"
+            },
+            {
+                "id": "You",
+                "name": "ヨウ",
+                "firstName": "ヨウ",
+                "color": "#DAF6FD"
+            },
+            {
+                "id": "Riko",
+                "name": "リコ",
+                "firstName": "リコ",
+                "color": "#F8E1E5"
+            },
+            {
+                "id": "Mari",
+                "name": "マリ",
+                "firstName": "マリ",
+                "color": "#EADAEC"
+            },
+            {
+                "id": "Lailaps",
+                "name": "ライラプス",
+                "firstName": "ライラプス",
+                "color": "#C6C6C4"
+            }
+        ]
+    },
+    {
         "group_id": "ikizulive",
         "group_name": "いきづらい部！",
         "image_offset": "224",
