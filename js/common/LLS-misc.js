@@ -24,7 +24,12 @@ const LLS = {
 
     //■カラーコードから色を計算 ver.20260801
     getColorFromColorCode: (colorcode, white = 0, black = 0) => {
-        if (colorcode.charAt(0) == "#") { return LLS.getColorFromColorCode(colorcode.substring(1), white, black); }
+        if (colorcode.charAt(0) === "#") { colorcode = colorcode.substring(1); } // #つき
+        if (colorcode.length === 3){ //3文字指定のカラーコードの場合、
+            colorcode = colorcode.substring(0,1) + colorcode.substring(0,1)
+            + colorcode.substring(1,2) + colorcode.substring(1,2)
+            + colorcode.substring(2,3) + colorcode.substring(2,3);
+        }
         const ColorHex = parseInt(colorcode, 16);
         const ColorObject = { "r": (ColorHex / 65536) % 256, "g": Math.trunc(ColorHex / 256) % 256, "b": ColorHex % 256 };
         return LLS.getColorFromObject(ColorObject, white, black);
