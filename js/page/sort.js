@@ -335,7 +335,7 @@ const wrtieResult = () => {
 	}).join('');
 	const TweetText = `${SortTitle} をソートしたよ！\n${ResultForTweet}\n#ラブライブなんでもソート\nhttps://ratius.github.io/LLS/sort.html`;
 	const TweetURI = encodeURIComponent(TweetText).replaceAll("'", "%27");
-	const TweetButton = `<button id="TweetButton" onclick="window.open('https://x.com/intent/tweet?text=${TweetURI}')"><img src="img/x-logo-white.png" style="width:25px; height:25px">この結果をポスト</button>`;
+	const TweetButton = `<a id="TweetButton" href="https://x.com/intent/tweet?text=${TweetURI}" target="_blank"><img src="img/x-logo-white.png" style="width:25px; height:25px">この結果をポスト</a>`;
 
 	document.getElementById("ResultArea").innerHTML = Header + Rankings + Footer + TweetButton;
 };
