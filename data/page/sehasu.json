@@ -1394,7 +1394,7 @@
 	"date": "2026-08-07",
 	"title": "#4 STEP UP！旅　江ノ島で最高の夏満喫！",
 	"desc": "Let's enjoy summer time! 来栖＆進藤がえのすいへ！",
-	"memo": "「STEP UP！旅」と題して、103期～105期生の8人が、くじ引きで2人ずつペアになって、旅をすることに！ 今回は櫻井＆来栖！",
+	"memo": "「STEP UP！旅」と題して、103期〜105期生の8人が、くじ引きで2人ずつペアになって、旅をすることに！ 今回は櫻井＆来栖！",
 	"tags": ["Sakurai", "Kurusu"],
 	"tube": "6NghpxRDReI",
 	"length": 1149
@@ -1403,10 +1403,26 @@
 	"date": "2026-08-14",
 	"title": "#5 STEP UP ! 旅　念願のアフタヌーンティー",
 	"desc": "三宅お嬢様とアフタヌーンティー！ 葉山執事の心配事とは！？",
-	"memo": "",
 	"tags": ["Hayama", "Miyake"],
 	"tube": "Ey0MzdAH0qQ",
 	"length": 1115
+},
+{
+	"date": "2026-08-21",
+	"title": "#6 STEP UP ! 旅　VS PARKで白熱の五番勝負！",
+	"desc": "VS PARKで大はしゃぎ！ ちゅけ姉さんにメロメロ！？",
+	"tags": ["Nirei", "Nonaka"],
+	"tube": "zSNOZ5InzO8",
+	"length": 1289
+},
+{
+	"date": "2099-01-01",
+	"title": "#未定",
+	"desc": "",
+	"memo": "",
+	"tags": ["Kan", "Shindo"],
+	"tube": "",
+	"length": -1
 },
 {
 	"date": "2099-01-01",
