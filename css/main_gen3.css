@@ -124,7 +124,7 @@ h3:before {
 /* ■幅広環境向けレイアウト */
 @media screen and (min-width: 1280px) {
 	body {
-		background: url('img/bg.png');
+		background: url('../img/bg.png');
 	}
 	body.left {
 		margin-right: 233px;
