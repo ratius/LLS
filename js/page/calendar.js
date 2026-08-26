@@ -87,8 +87,9 @@ function initialize() {
 	const TimeOutputLoaded = performance.now();
 	
 	//LLS-idol を参照し、誕生日を持つキャラクターの情報を window["JSON-calendar"] に追加
-	//ただし、hiddenタグが付与されているキャラクター（転入生扱いのしずく、彼方、エマ）を除く
-	const additionalList = LLSIdol.filterCharacterList("exhas:hidden", "has:birthday").map( (character) => {
+	//ただし、現行はキャストを除外し、
+	//hiddenタグが付与されているキャラクター（転入生扱いのしずく、彼方、エマ）も除く
+	const _AdditionalList = LLSIdol.filterCharacterList("has:birthday", "exhas:cast", "exhas:hidden").map( (character) => {
 		const characterProfile = {};
 		characterProfile.name = character.name; //フルネーム
 		characterProfile.birthday = character.birthday; //誕生日
@@ -97,7 +98,7 @@ function initialize() {
 		if(character.isRival){ characterProfile.isRival = true;}
 		return characterProfile;
 	});
-	window["JSON-calendar"].push(...additionalList);
+	window["JSON-calendar"].push(..._AdditionalList);
 
 	//カレンダーの描画
 	generateCalendar(globalYear, globalMonth);
