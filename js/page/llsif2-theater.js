@@ -148,13 +148,13 @@ function MakeModal(story_id){
 			return x;
 		});
 		
-		const characterTagName = result.tags[parseInt(text[0],10)];
-		const characterData = LLSIdol.filterCharacterList(`is:id:${characterTagName}`,"has:color_llsif2")[0];
-		const characterName = characterData
-			? `<span class="modal-character-face">${LLSIdol.drawFace(characterData.group_id, characterData.id, 32)}</span><span class="modal-character-name">${characterData.firstName}</span>`
-			: characterTagName;
+		const characterId = result.tags[parseInt(text[0],10)];
+		const characterData = LLSIdol.findCharacterData(characterId);
+		const characterNameElement = characterData
+			? `<span class="modal-character-face">${LLSIdol.drawFaceFromObject(characterData, 32)}</span><span class="modal-character-name">${characterData.firstName}</span>`
+			: text[0];
 		
-		return characterName
+		return characterNameElement
 		+ (processedLine.length >= 2 ? `<p>${processedLine[1]}</p>` : '')
 		+ (currentNote.length ? `<p class="note">${currentNote.join('<br>')}</p>` : '')
 		+ (index === result.text.length-1 ? '' : '<hr>');
@@ -192,9 +192,9 @@ function initialize() {
 	characterList.forEach(character => {
 		const objtemp = new Object();
 		objtemp.name = character.firstName;
-		objtemp.r = parseInt(character['color_llsif2'].substring(0, 2), 16);
-		objtemp.g = parseInt(character['color_llsif2'].substring(2, 4), 16);
-		objtemp.b = parseInt(character['color_llsif2'].substring(4, 6), 16);
+		objtemp.r = character["color_llsif2"].r;
+		objtemp.g = character["color_llsif2"].g;
+		objtemp.b = character["color_llsif2"].b;
 		objtemp.style = "button-round";
 
 		TagData[character.id] = objtemp;
@@ -231,12 +231,14 @@ function initialize() {
 
 	//デバック用
 	if(isDebugMode) {
+		document.getElementById('PullDownMenu').selectedIndex = 1;
+		DrawStoryList(document.getElementById('PullDownMenu').value);
+	
+		let publishedStory = 0;
 		//データの不具合チェック
-		let idTemp = "";
-		let dateTemp = "";
 		const isError = window['JSON-llsif2-theater'].reduce( (acc, story) => {
-			const currentStory = `(${story.date}「${story.title}」)`;
-			
+			const currentStory = '\n該当箇所：' + `${story.date}「${story.title}」`;
+
 			if(!("tags" in story)){
 				console.error('エラー：tagsが存在しない' + currentStory);
 				return acc + 1;
@@ -248,38 +250,30 @@ function initialize() {
 				}
 			}, 0);
 			if(tagError){ return acc + tagError; }
+
+			if(!("memo" in story) || story.memo === ""){ return acc;}
+			publishedStory++;
 			
-			if(idTemp === story.id) { 
-				console.error('エラー：ID重複 (' + story.id + ')' + currentStory);
-				acc++;
-			}
-			idTemp = story.id;
-			if(dateTemp === story.date) { 
-				console.error('エラー：日付重複 ' + currentStory);
-				acc++;
-			}
-			dateTemp = story.date;
-			if(!('text' in story)){ return acc;}
-			if(story['title'] === ''){ return acc;}
-			if(story['text'] === ''){ return acc;}
 			const TextTemp = story.text.split('\n');
-			return acc + TextTemp.reduce( (acc2, txt, index2) => {
-				const ErrorLocation = ` (${story.date}「${story.title}」${(index2+1)}行目)`;
+			return acc + TextTemp.reduce( (acc2, val2, index2) => {
+				const ErrorLocation = ' (' + story.date
+				 + '「' + story.title + '」' + (index2+1) + '行目)';
 				
-				const TextTemp2 = txt.split('\t');
-				if(TextTemp2.length !== 2){
-					console.error('エラー：パラメータ数が異常' + ErrorLocation);
-					return ++acc2;
-				}
-				if(!isFinite(TextTemp2[0])){
-					console.error('エラー：登場人物が不正な値' + ErrorLocation);
-					return ++acc2;
-				} else if(TextTemp2[0] === ''){
-					console.error('エラー：登場人物が未設定' + ErrorLocation);
-					return ++acc2;
-				} else if(TextTemp2[0] > story.tags.length){
-					console.error('エラー：登場人物のデータ範囲エラー' + ErrorLocation);
-					return ++acc2;
+				const TextTemp2 = val2.split('\t');
+				if(!isNaN(TextTemp2[0])){
+					if(TextTemp2.length !== 2){
+						console.error('エラー：パラメータ数が異常' + ErrorLocation);
+						return acc2 + 1;
+					} else if(!isFinite(TextTemp2[0])){
+						console.error('エラー：登場人物が不正な値 (' + TextTemp2[0] + ')' + ErrorLocation);
+						return acc2 + 1;
+					} else if(TextTemp2[0] === ''){
+						console.error('エラー：登場人物が未設定' + ErrorLocation);
+						return acc2 + 1;
+					} else if(TextTemp2[0] > story.tags.length){
+						console.error('エラー：登場人物のデータ範囲エラー' + ErrorLocation);
+						return acc2 + 1;
+					}
 				}
 				return acc2;
 			}, 0);
@@ -287,6 +281,8 @@ function initialize() {
 		if(isError){
 			alert('' + isError + '件のエラーが見つかりました。コンソールを確認してください。');
 		}
+
+		console.log(`メモ掲載率：${publishedStory}/${window['JSON-llsif2-theater'].length} (${(publishedStory / window['JSON-llsif2-theater'].length * 100).toFixed(2)}%)`);
 
 		//描画時間の出力
 		const TimeOutputEnd = performance.now();

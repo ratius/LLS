@@ -146,7 +146,7 @@ function DrawStoryList(conditions){
 	
 	if(isDebugMode) {
 		const TimeOutputEnd = performance.now();
-		console.log(`${conditions} (${filteredData.length}件) 出力完了。\n所要時間: ${TimeOutputEnd - TimeOutputStart}ミリ秒`);
+		console.log(`${conditions} (${filteredData.length}件) 出力完了。\n所要時間: ${(TimeOutputEnd - TimeOutputStart).toFixed(1)}ミリ秒`);
 	}
 }
 
@@ -185,13 +185,14 @@ function MakeModal(story_id){
 			});
 			return x;
 		});
-		const characterTagName = result.tags[parseInt(text[0],10)];
-		const characterData = LLSIdol.filterCharacterList(`is:id:${characterTagName}`,"has:color_sifas")[0];
-		const characterName = characterData
-			? `<span class="modal-character-face">${LLSIdol.drawFace(characterData.group_id, characterData.id, 32)}</span><span class="modal-character-name">${characterData.firstName === '嵐珠' ? 'ランジュ' : characterData.firstName}</span>`
-			: characterTagName;
+		const characterId = result.tags[parseInt(text[0],10)];
+		const characterData = LLSIdol.findCharacterData(characterId);
+		const characterName = characterData.firstName === '嵐珠' ? 'ランジュ' : characterData.firstName; 
+		const characterNameElement = characterData
+			? `<span class="modal-character-face">${LLSIdol.drawFaceFromObject(characterData, 32)}</span><span class="modal-character-name">${characterName}</span>`
+			: text[0];
 		
-		return characterName
+		return characterNameElement
 		+ (processedLine.length >= 2 ? `<p>${processedLine[1]}</p>` : '')
 		+ (currentNote.length ? `<p class="note">${currentNote.join('<br>')}</p>` : '')
 		+ (index === result.text.length-1 ? '' : '<hr>');
@@ -228,12 +229,11 @@ function initialize() {
 	//TagDataにキャラクターの内容を追加
 	const characterList = LLSIdol.filterCharacterList("has:color_sifas");
 	characterList.forEach(character => {
-		const characterColor = character.color_sifas[0] == '#' ? character.color_sifas.substring(1, 7) : character.color_sifas;
 		const objtemp = new Object();
 		objtemp.name = (character.firstName === '嵐珠' ? 'ランジュ' : character.firstName); //鐘嵐珠はスクスタでは「ランジュ」表記
-		objtemp.r = parseInt(characterColor.substring(0, 2), 16);
-		objtemp.g = parseInt(characterColor.substring(2, 4), 16);
-		objtemp.b = parseInt(characterColor.substring(4, 6), 16);
+		objtemp.r = character["color_sifas"].r;
+		objtemp.g = character["color_sifas"].g;
+		objtemp.b = character["color_sifas"].b;
 		objtemp.style = "button-round";
 
 		TagData[character.id] = objtemp;
@@ -331,6 +331,6 @@ function initialize() {
 		
 		//描画時間の出力
 		const TimeOutputEnd = performance.now();
-		console.log(`スクスタ 毎日劇場データベース\n初期化処理： ${TimeOutputEnd - TimeLoadingStart}ミリ秒`);
+		console.log(`スクスタ 毎日劇場データベース\n初期化処理： ${(TimeOutputEnd - TimeLoadingStart).toFixed(1)}ミリ秒`);
 	}
 }
