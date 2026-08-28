@@ -1,18 +1,5 @@
 //■タグデータ
-const TagData = {
-	"Ayumu":   {"name": "上原 歩夢",      "r":237, "g":125, "b":149, "style": "Round"},
-	"Kasumi":  {"name": "中須 かすみ",    "r":231, "g":214, "b":  0, "style": "Round"},
-	"Shizuku": {"name": "桜坂 しずく",    "r":  1, "g":183, "b":237, "style": "Round"},
-	"Karin":   {"name": "朝香 果林",      "r": 72, "g": 94, "b":198, "style": "Round"},
-	"Ai":      {"name": "宮下 愛",        "r":255, "g": 88, "b":  0, "style": "Round"},
-	"Kanata":  {"name": "近江 彼方",      "r":166, "g":100, "b":160, "style": "Round"},
-	"Setsuna": {"name": "優木 せつ菜",    "r":216, "g": 28, "b": 47, "style": "Round"},
-	"Emma":    {"name": "エマ・ヴェルデ", "r":132, "g":195, "b":110, "style": "Round"},
-	"Rina":    {"name": "天王寺 璃奈",    "r":156, "g":165, "b":185, "style": "Round"},
-	"Shioriko":{"name": "三船 栞子",      "r": 55, "g":180, "b":132, "style": "Round"},
-	"Mia":     {"name": "ミア・テイラー", "r":169, "g":158, "b":152, "style": "Round"},
-	"Lanzhu":  {"name": "鐘 嵐珠",        "r":248, "g":200, "b":196, "style": "Round"}
-};
+const TagData = {};
 
 //■■メイン出力
 //■「アンケート一覧」のテーブルを描画
@@ -57,29 +44,43 @@ function DrawPrizeList(){
 			<div class="prize-character bg-${character}">${TagData[character].name}</div>
 			<div class="prize-container">`;
 		const footerTemp2 = `</div></div>`;
+		let timesWon = 0;
 		const PrizeList = window['JSON-niji-enquete'].map( enquete => {
 			if(character === enquete.winner1){
+				timesWon++;
 				return `<div>
 					<span class="button-round button-title" title="${enquete.theme}">第${enquete.id}回</span>${enquete.option1}
 				</div>`;
 			}
 			if(character === enquete.winner2){
+				timesWon++;
 				return `<div>
 					<span class="button-round button-title" title="${enquete.theme}">第${enquete.id}回</span>${enquete.option2}
 				</div>`;
 			}
 			return '';
 		}).join('');
-
+		if(timesWon === 0){ return ""; }
 		return headerTemp2 + PrizeList + footerTemp2;
 	}).join('');
 	document.getElementById("PrizeList").classList.remove("output-box-default");
 	document.getElementById("PrizeList").innerHTML = contents;
 }
 
-
 //■初期化処理
 function initialize() {
+	//TagDataにキャラクターの内容を追加
+	const characterList = LLSIdol.filterCharacterList("is:group_id:nijigasaki");
+	characterList.forEach(character => {
+		const objtemp = new Object();
+		objtemp.name = character.firstName;
+		objtemp.r = character["color"].r;
+		objtemp.g = character["color"].g;
+		objtemp.b = character["color"].b;
+
+		TagData[character.id] = objtemp;
+	});
+
 	//色データをCSSに追加
 	document.querySelector('style').textContent +=
 	Object.keys(TagData).map( character => {
@@ -96,6 +97,6 @@ function initialize() {
 	if(isDebugMode) {
 		//描画時間の出力
 		const TimeOutputEnd = performance.now();
-		console.log(`虹ヶ咲学園スクールアイドル同好会 マンスリーアンケートまとめ\n初期化処理： ${TimeOutputEnd - TimeLoadingStart}ミリ秒`);
+		console.log(`虹ヶ咲学園スクールアイドル同好会 マンスリーアンケートまとめ\n初期化処理： ${(TimeOutputEnd - TimeLoadingStart).toFixed(1)}ミリ秒`);
 	}
 }
