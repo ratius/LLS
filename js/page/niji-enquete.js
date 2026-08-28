@@ -24,10 +24,10 @@ function DrawEnqueteTable(){
 
 		const winnersTemp2 = (enquete.winner1 in TagData ?
 			`<div class="enquete-winner bg-${enquete.winner1}">
-				<span style="font-size: small;"><span class="pc-only">「</span>${enquete.option1}<span class="pc-only">」</span></span><strong>${TagData[enquete.winner1].name}</strong>
+				<span style="font-size: small;"><span class="pc-only">「</span>${enquete.option1}<span class="pc-only">」</span></span><strong>${TagData[enquete.winner1].fullName}</strong>
 			</div>
 			<div class="enquete-winner bg-${enquete.winner2}">
-				<span style="font-size: small;"><span class="pc-only">「</span>${enquete.option2}<span class="pc-only">」</span></span><strong>${TagData[enquete.winner2].name}</strong>
+				<span style="font-size: small;"><span class="pc-only">「</span>${enquete.option2}<span class="pc-only">」</span></span><strong>${TagData[enquete.winner2].fullName}</strong>
 			</div>`
 		: `<div>TBA</div><div>TBA</div><div></div>`);
 		
@@ -41,7 +41,7 @@ function DrawEnqueteTable(){
 function DrawPrizeList(){
 	const contents = Object.keys(TagData).map( character => {
 		const headerTemp2 = `<div class="prize">
-			<div class="prize-character bg-${character}">${TagData[character].name}</div>
+			<div class="prize-character bg-${character}">${TagData[character].fullName}</div>
 			<div class="prize-container">`;
 		const footerTemp2 = `</div></div>`;
 		let timesWon = 0;
@@ -73,7 +73,7 @@ function initialize() {
 	const characterList = LLSIdol.filterCharacterList("is:group_id:nijigasaki");
 	characterList.forEach(character => {
 		const objtemp = new Object();
-		objtemp.name = character.firstName;
+		objtemp.fullName = character.fullName;
 		objtemp.r = character["color"].r;
 		objtemp.g = character["color"].g;
 		objtemp.b = character["color"].b;
