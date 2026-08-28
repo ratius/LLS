@@ -35,6 +35,14 @@ const LLS = {
         return LLS.getColorFromObject(ColorObject, white, black);
     },
 
+    //オブジェクトをカラーコードに変換 ver.20260829
+    getColorCodeFromObject: (object) => {
+        const r = object?.r ?? 0;
+        const g = object?.g ?? 0;
+        const b = object?.b ?? 0;
+        return "#" + [r,g,b].map(x => x.toString(16).padStart(2, '0')).join('');
+    },
+
     //■Date型 → "YYYY/MM/DD" への変換
     formatDate: (date) => {
         const year = date.getFullYear();
