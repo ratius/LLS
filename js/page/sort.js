@@ -26,7 +26,7 @@ const SortTarget = [
 	{ "name": "いきづらい部！", "group_id": ["ikizulive"] },
 	{ "prefix": "┣", "name": "いきづらい部！キャスト", "group_id": ["ikizulive-cast"] },
 	{ "prefix": "┗", "name": "いきづらい部！カップリング", "group_id": ["ikizulive-relation"] },
-	{ "name": "----"},
+	{ "name": "----" },
 	{ "name": "スクフェス転入生", "group_id": ["llsif"] },
 	{ "prefix": "┣", "name": "青藍高校", "group_id": ["llsif"], "color": "#69f" },
 	{ "prefix": "┣", "name": "東雲学院", "group_id": ["llsif"], "color": "#e65" },
@@ -241,9 +241,9 @@ const startSort = () => {
 	const targets = [];
 	window["JSON-sort"].forEach(group => {
 		if (conditions.some(c => group?.["group_id"] === c)) { //グループに入っている
-			if(colorRestriction){
+			if (colorRestriction) {
 				group["characters"].forEach(character => {
-					if(character.color === colorRestriction){
+					if (character.color === colorRestriction) {
 						targets.push(character);
 					}
 				});
@@ -275,21 +275,21 @@ const updateSorter = () => {
 
 		//左ボタン：CSS
 		const LeftCandidate = LLSorter.getCandidate(false);
-		const LeftData = LLSIdol.getCharacterDataFromGroups(LeftCandidate.id, LeftCandidate.group_id);
-		const LeftColor = getColorObject(LeftCandidate?.color, LeftCandidate);
+		const LeftData = LLSIdol.findCharacterData(LeftCandidate.id, LeftCandidate.group_id);
+		const LeftColor = getColorObject(LeftCandidate?.color?.split(','), LeftData?.color);
 		const LeftBGColor = LeftColor["bg"];
 		const LeftBorderColor = LeftColor["border"];
 		Buttons[0].style.setProperty('--bg-color', LeftBGColor);
 		Buttons[0].style.setProperty('border-color', LeftBorderColor);
 		document.getElementById("SortPanel-Name-Left").innerHTML =
-			LeftData?.["name"] ?? LeftCandidate?.["name"] ?? "Name未設定";
+			LeftData?.["fullName"] ?? LeftCandidate?.["name"] ?? "Name未設定";
 		document.getElementById("SortPanel-Caption-Left").innerHTML =
 			LeftCandidate?.["caption"] ?? "";
 
 		//右ボタン
 		const RightCandidate = LLSorter.getCandidate(true);
-		const RightData = LLSIdol.getCharacterDataFromGroups(RightCandidate.id, RightCandidate.group_id);
-		const RightColor = getColorObject(RightCandidate?.color, RightCandidate);
+		const RightData = LLSIdol.findCharacterData(RightCandidate.id, RightCandidate.group_id);
+		const RightColor = getColorObject(RightCandidate?.color?.split(','), RightData?.color);
 		const RightBGColor = RightColor["bg"];
 		const RightBorderColor = RightColor["border"];
 
@@ -297,7 +297,7 @@ const updateSorter = () => {
 		Buttons[1].style.setProperty('border-color', RightBorderColor);
 
 		document.getElementById("SortPanel-Name-Right").innerHTML =
-			RightData?.["name"] ?? RightCandidate?.["name"] ?? "Name未設定";
+			RightData?.["fullName"] ?? RightCandidate?.["name"] ?? "Name未設定";
 		document.getElementById("SortPanel-Caption-Right").innerHTML =
 			RightCandidate?.["caption"] ?? "";
 
@@ -316,19 +316,20 @@ const wrtieResult = () => {
 	const Header = `<table class="result-table"><thead><tr><th>順位</th><th>名前</th></tr></thead><tbody>`;
 	const Footer = `</tbody></table>`;
 	const Rankings = LLSorter.result.map(entry => {
-		const CharacterData = LLSIdol.getCharacterDataFromGroups(entry.id, entry.group_id)
+		const CharacterData = LLSIdol.findCharacterData(entry.id, entry.group_id)
 			?? LLSorter.targetData.find(e => e.id === entry.id);
-		const BaseColor = getColorObject(entry?.color, CharacterData);
+		const CharacterColor = entry.color ?? CharacterData.color;
+		const BaseColor = getColorObject(CharacterColor, CharacterData);
 		const BGColor = BaseColor["bggr"] ?? BaseColor["bg"];
 		const rankText = (entry.rank === Infinity ? "圏外" : `${entry.rank}位`);
-		const nameText = CharacterData?.["name"] ?? entry?.["name"] ?? "Name未設定";
+		const nameText = CharacterData?.fullName ?? entry?.name ?? entry?.id;
 		return `<tr style="background:${BGColor};"><td>${rankText}</td><td>${nameText}</td>`;
 	}).join('');
 
 	const SortTitle = LLSorter.targetTitle;
 	const ResultForTweet = LLSorter.result.map((entry, index) => {
-		const CharacterData = LLSIdol.getCharacterDataFromGroups(entry.id, entry.group_id);
-		const nameText = CharacterData?.["name"] ?? entry?.name ?? entry.id
+		const CharacterData = LLSIdol.findCharacterData(entry.id, entry.group_id);
+		const nameText = CharacterData?.fullName ?? entry?.name ?? entry.id
 		if (index >= 7) { return ''; }
 		if (entry.rank === Infinity) { return ''; }
 		return `${entry.rank}位 ${nameText}\n`;
@@ -341,22 +342,22 @@ const wrtieResult = () => {
 };
 
 //ボタンおよび出力用のカラーコードを取得する関数
-const getColorObject = (colors, target) => {
-	const tempColorCodes = [];
+const getColorObject = (...targets) => {
+	const colorCodePattern = new RegExp(/^(#[\da-f]{3}|#?[\da-f]{6})$/i);
 
-	// colorsで指定されたものを取得して、tempColorsに加える
-	const colorCodePattern = new RegExp(/^(#?[\da-f]{3}|#?[\da-f]{6})$/i);
-	if (typeof colors === 'string') { colors = colors.split(','); }
-	colors?.forEach(color => {
-		if (colorCodePattern.test(color)) { //生のカラーコード
-			tempColorCodes.push(color);
+	//一旦カラーコードに変換する
+	const tempColors = [];
+	const K = targets.map(t => typeof t === 'string' ? t.split() : t).flat();
+	K.forEach(target => {
+		if (typeof target === 'string' && colorCodePattern.test(target)) {
+			tempColors.push(target);
+		} else if (typeof target === 'object' && 'r' in target && 'g' in target && 'b' in target) {
+			tempColors.push(LLS.getColorCodeFromObject(target));
 		}
 	});
-	// targetの情報をLLS-idol側で探す
-	const CharacterData = LLSIdol.getCharacterDataFromGroups(target?.id, target?.group_id);
-	if (CharacterData?.color) { tempColorCodes.push(CharacterData.color); }
 
-	switch (tempColorCodes.length) {
+	//出力
+	switch (tempColors.length) {
 		case 0: //無い場合、デフォルトの色を用いる
 			const DEFAULT_COLOR = '#eee';
 			return {
@@ -365,20 +366,19 @@ const getColorObject = (colors, target) => {
 			};
 		case 1:
 			return {
-				"bg": LLS.getColorFromColorCode(tempColorCodes[0], 1.5),
-				"border": LLS.getColorFromColorCode(tempColorCodes[0], 0.3, 1.2)
+				"bg": LLS.getColorFromColorCode(tempColors[0], 1.5),
+				"border": LLS.getColorFromColorCode(tempColors[0], 0.3, 1.2)
 			};
 		default: //2色以上の場合、合成して出力する
 			return {
-				"bg": `linear-gradient(to right, ${
-					tempColorCodes.map((c, index) => {
-						const color = LLS.getColorFromColorCode(c, 2);
-						const start = (100 * index / tempColorCodes.length).toFixed(2);
-						const end = (100 * (index + 1) / tempColorCodes.length).toFixed(2);
-						return `${color} ${start}% ${end}%`
-					}).join()
-				})`,
-				"bggr": `linear-gradient(to right, ${tempColorCodes.map(c => LLS.getColorFromColorCode(c, 2)).join(',')})`,
+				"bg": `linear-gradient(to right, ${tempColors.map((c, index) => {
+					const color = LLS.getColorFromColorCode(c, 2);
+					const start = (100 * index / tempColors.length).toFixed(2);
+					const end = (100 * (index + 1) / tempColors.length).toFixed(2);
+					return `${color} ${start}% ${end}%`
+				}).join()
+					})`,
+				"bggr": `linear-gradient(to right, ${tempColors.map(c => LLS.getColorFromObject(c, 2)).join(',')})`,
 				"border": "#777",
 			}
 			break;
@@ -394,15 +394,16 @@ function initialize() {
 	const inheritPattern = new RegExp(/^inherit:[^\:]+:[^\:]+$/i);
 	window['JSON-sort'].forEach(group => {
 		group?.["characters"].forEach(character => {
-			if(!character?.id){ character.id = character?.name; }
+			if (!character?.id) { character.id = character?.name; }
 			character["group_id"] = group["group_id"];
 			if (typeof character["color"] === 'string') { character["color"] = character["color"].split(','); }
 			if (Array.isArray(character?.color)) {
 				character["color"] = character["color"].map(c => {
 					if (inheritPattern.test(c)) {
 						const inheritTemplate = c.split(':');
-						const CharacterData = LLSIdol.getCharacterDataFromGroups(inheritTemplate[1], inheritTemplate[2]);
-						return CharacterData?.color;
+						const characterData = LLSIdol.findCharacterData(inheritTemplate[1], inheritTemplate[2]);
+						if(!characterData.color){ return '';}
+						return (typeof characterData.color === "string" ? characterData.color : LLS.getColorCodeFromObject(characterData.color));
 					} else {
 						return c;
 					}
@@ -415,11 +416,11 @@ function initialize() {
 	//セレクトボックスに要素を追加
 	SortTarget.forEach(target => {
 		const sortTargetNumber = window["JSON-sort"].reduce((total, group) => {
-			if(!target["group_id"]?.includes(group["group_id"])){
+			if (!target["group_id"]?.includes(group["group_id"])) {
 				return total;
-			} else if(target?.color){
+			} else if (target?.color) {
 				return total
-			+ group["characters"].filter(character => target.color === character.color).length;
+					+ group["characters"].filter(character => target.color === character.color).length;
 			} else {
 				return total + group["characters"].length;
 			}
