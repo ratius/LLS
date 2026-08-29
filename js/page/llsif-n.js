@@ -137,7 +137,7 @@ function initialize() {
 	//警告解除
 	document.getElementById('NViewer').classList.remove('output-box-default');
 	document.getElementById('NViewer').innerHTML = `
-		<div style="padding: 10px; vertical-align: top; font-size: 130%; color: #666">
+		<div style="padding: 10px; font-size: 130%; color: #666">
 			(上のプルダウンメニューから、転入生を選択してください)
 		</div>`;
 	

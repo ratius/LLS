@@ -3,17 +3,17 @@ let CurrentPage = 0;
 
 //■セレクトボックスの初期化
 function InitializeSelectBox() {
-	for (temp1 of window['JSON-llsif-arena']) {
-		var temp2 = document.createElement("option");
-		temp2.text = temp1.title;
-		if ('num' in temp1) {
-			temp2.text = "第" + temp1.num + "回 ライブ♪アリーナ　" + temp2.text;
-			document.getElementById("sb-t1").appendChild(temp2);
+	for (series of window['JSON-llsif-arena']) {
+		const elm = document.createElement("option");
+		if ('num' in series) {
+			elm.text = `第${series.num}回 ライブ♪アリーナ　${series.title}`;
+			document.getElementById("sb-t1").appendChild(elm);
 		} else {
-			document.getElementById("sb-t2").appendChild(temp2);
+			elm.text = series.title;
+			document.getElementById("sb-t2").appendChild(elm);
 		}
 	}
-	document.addEventListener('keydown', function () {
+	document.addEventListener('keydown', function (event) {
 		act = document.activeElement.toString();
 		if (act === '[object HTMLDivElement]') {
 			if (event.code == 'ArrowLeft') {
@@ -42,26 +42,29 @@ function DisplayMessages(page) {
 
 	const Output = CurrentSet.opponents.map((opponent) => {
 		//キャラクターの抽出。スクフェス、コラボ、A-RISE、Saint Snowを検索
-		const targetCharacter = LLSIdol.getCharacterDataFromGroups(opponent.id, "llsif", "a-rise", "saintsnow", "llsif_collab");
+		const CharacterData = LLSIdol.findCharacterData(opponent.id, "llsif") ?? LLSIdol.findCharacterData(opponent.id);
 
 		//ステージ数
-		const StageContent = opponent?.['num'] ?? MessageNumber++;
+		const StageNumber = opponent?.['num'] ?? MessageNumber++;
 
 		//顔画像
-		const FaceContent = targetCharacter ? LLSIdol.drawFace(targetCharacter.group_id, targetCharacter.id) : '';
+		const FaceContent = CharacterData?.face
+		? `<div class="face-container">${LLSIdol.drawFace(CharacterData.face)}`
+		: '';
 
+		//対戦相手の名前
 		const getOpponentName = () => {
 			if (opponent.hasOwnProperty('namealt')) {
 				return `<span class="OpponentName">${opponent.namealt}</span><br>`;
-			} else if (targetCharacter?.hasOwnProperty('name')) {
-				return `<span class="OpponentName">${targetCharacter.name}</span><br>`
+			} else if (CharacterData?.fullName) {
+				return `<span class="OpponentName">${CharacterData.fullName}</span><br>`
 			} else {
 				return "";
 			}
 		}
 
 		return `<tr>
-			<th>${StageContent}</th>
+			<th>${StageNumber}</th>
 			<td>${FaceContent}</td>
 			<td>${getOpponentName() + opponent.text}</td>
 		</tr>`
@@ -115,9 +118,10 @@ function WriteSummary() {
 	});
 
 	const Output = summaryMap.keys().toArray().map(key => {
+		const CharacterData = LLSIdol.findCharacterData(key, "llsif");
 		return `<tr>
-		<th>${LLSIdol.drawFace("llsif", key)}</th>
-		<th>${LLSIdol.getCharacterDataFromGroups(key, "llsif").name}</th>
+		<th><div class="face-container">${LLSIdol.drawFace(CharacterData.face)}</div></th>
+		<th>${CharacterData.fullName}</th>
 		<td>${summaryMap.get(key).length}</td>
 		<td>${summaryMap.get(key).map(num => `第${num}回`).join(', ')}</td>`
 	}).join('');
