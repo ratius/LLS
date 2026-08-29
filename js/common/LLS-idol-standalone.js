@@ -1448,24 +1448,28 @@ const LLSIdol = {
         // スクフェスコラボ用
         {
             "id": "P3",
+            "group_id": "llsif_collab",
             "fullName": "ペルソナ3",
             "face": 156,
             "hidden": true
         },
         {
             "id": "P4",
+            "group_id": "llsif_collab",
             "fullName": "ペルソナ4",
             "face": 157,
             "hidden": true
         },
         {
             "id": "P5",
+            "group_id": "llsif_collab",
             "fullName": "ペルソナ5",
             "face": 158,
             "hidden": true
         },
         {
             "id": "geass",
+            "group_id": "llsif_collab",
             "fullName": "コードギアス",
             "face": 159,
             "hidden": true
