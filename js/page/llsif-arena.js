@@ -48,9 +48,7 @@ function DisplayMessages(page) {
 		const StageNumber = opponent?.['num'] ?? MessageNumber++;
 
 		//顔画像
-		const FaceContent = CharacterData?.face
-		? `<div class="face-container">${LLSIdol.drawFace(CharacterData.face)}`
-		: '';
+		const FaceContent = CharacterData?.face ? LLSIdol.drawFace(CharacterData.face) : '';
 
 		//対戦相手の名前
 		const getOpponentName = () => {
@@ -120,7 +118,7 @@ function WriteSummary() {
 	const Output = summaryMap.keys().toArray().map(key => {
 		const CharacterData = LLSIdol.findCharacterData(key, "llsif");
 		return `<tr>
-		<th><div class="face-container">${LLSIdol.drawFace(CharacterData.face)}</div></th>
+		<th>${LLSIdol.drawFace(CharacterData.face)}</th>
 		<th>${CharacterData.fullName}</th>
 		<td>${summaryMap.get(key).length}</td>
 		<td>${summaryMap.get(key).map(num => `第${num}回`).join(', ')}</td>`
