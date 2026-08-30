@@ -165,7 +165,6 @@ h3:before {
 .button-round, .button-square, .button-hexa, .button-flat {
 	position: relative;
 	display: inline-block;
-    vertical-align: middle;
 	word-break: keep-all;
 	margin: 1px 5px 1px 0;
 	height: 26px;
@@ -298,9 +297,13 @@ a.exlink:after {
 	margin-left: 0.3em;
 }
 /* スクールアイドルの顔やメンバーアイコンの画像表示用 */
+.icon-face-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 .icon-face-64{
 	display: inline-block;
-	vertical-align: top;
 	width: 64px;
 	height: 64px;
 	background-image: url(../img/face_64.png);
@@ -308,7 +311,6 @@ a.exlink:after {
 }
 .icon-face-32{
 	display: inline-block;
-	vertical-align: top;
 	width: 32px;
 	height: 32px;
 	background-image: url(../img/face_32.png);
