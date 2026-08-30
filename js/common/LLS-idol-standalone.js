@@ -26,7 +26,7 @@ const LLSIdol = {
         }
         const imageOffsetX = - image_size * (this._imageGridColumn - (image_id % this._imageGridColumn) - 1);
         const imageOffsetY = - image_size * (this._imageGridRow - Math.floor(image_id / this._imageGridColumn) - 1);
-        return `<div class="icon-face-${image_size}" style="background-position: right ${imageOffsetX}px bottom ${imageOffsetY}px"${alt ? ` title="${alt}"` : ``}></div>`
+        return `<div class="icon-face-container"><div class="icon-face-${image_size}" style="background-position: right ${imageOffsetX}px bottom ${imageOffsetY}px"${alt ? ` title="${alt}"` : ``}></div></div>`
     },
 
     //■drawFaceFromObject (character, [image_size])
