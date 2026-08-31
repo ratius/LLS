@@ -1,38 +1,3 @@
-//■各種データ
-const TagData = {
-	"Honoka": { "number": 0, "name": "高坂 穂乃果", "r": 255, "g": 163, "b": 54 },
-	"Eli": { "number": 1, "name": "絢瀬 絵里", "r": 122, "g": 238, "b": 255 },
-	"Kotori": { "number": 2, "name": "南 ことり", "r": 206, "g": 191, "b": 191 },
-	"Umi": { "number": 3, "name": "園田 海未", "r": 23, "g": 105, "b": 255 },
-	"Rin": { "number": 4, "name": "星空 凛", "r": 219, "g": 212, "b": 30 },
-	"Maki": { "number": 5, "name": "西木野 真姫", "r": 255, "g": 80, "b": 62 },
-	"Nozomi": { "number": 6, "name": "東條 希", "r": 196, "g": 85, "b": 246 },
-	"Hanayo": { "number": 7, "name": "小泉 花陽", "r": 106, "g": 230, "b": 115 },
-	"Nico": { "number": 8, "name": "矢澤 にこ", "r": 255, "g": 79, "b": 145 },
-	"Chika": { "number": 9, "name": "高海 千歌", "r": 255, "g": 149, "b": 71 },
-	"Riko": { "number": 10, "name": "桜内 梨子", "r": 255, "g": 158, "b": 172 },
-	"Kanan": { "number": 11, "name": "松浦 果南", "r": 39, "g": 193, "b": 183 },
-	"Dia": { "number": 12, "name": "黒澤 ダイヤ", "r": 219, "g": 7, "b": 57 },
-	"You": { "number": 13, "name": "渡辺 曜", "r": 102, "g": 192, "b": 255 },
-	"Yoshiko": { "number": 14, "name": "津島 善子", "r": 193, "g": 202, "b": 212 },
-	"Hanamaru": { "number": 15, "name": "国木田 花丸", "r": 255, "g": 208, "b": 15 },
-	"Mari": { "number": 16, "name": "小原 鞠莉", "r": 194, "g": 82, "b": 198 },
-	"Ruby": { "number": 17, "name": "黒澤 ルビィ", "r": 255, "g": 111, "b": 190 },
-	"Ayumu": { "number": 18, "name": "上原 歩夢", "r": 255, "g": 191, "b": 224 },
-	"Kasumi": { "number": 19, "name": "中須 かすみ", "r": 213, "g": 222, "b": 112 },
-	"Shizuku": { "number": 20, "name": "桜坂 しずく", "r": 187, "g": 237, "b": 255 },
-	"Karin": { "number": 21, "name": "朝香 果林", "r": 74, "g": 47, "b": 237 },
-	"Ai": { "number": 22, "name": "宮下 愛", "r": 255, "g": 130, "b": 70 },
-	"Kanata": { "number": 23, "name": "近江 彼方", "r": 190, "g": 130, "b": 255 },
-	"Setsuna": { "number": 24, "name": "優木 せつ菜", "r": 246, "g": 14, "b": 14 },
-	"Emma": { "number": 25, "name": "エマ・ヴェルデ", "r": 143, "g": 218, "b": 121 },
-	"Rina": { "number": 26, "name": "天王寺 璃奈", "r": 208, "g": 206, "b": 225 },
-	"Shioriko": { "number": 27, "name": "三船 栞子", "r": 36, "g": 189, "b": 139 },
-	"Mia": { "number": 28, "name": "ミア・テイラー", "r": 214, "g": 213, "b": 202 },
-	"Lanzhu": { "number": 29, "name": "鐘 嵐珠", "r": 248, "g": 200, "b": 196 }
-};
-const numCharacters = Object.keys(TagData).length;
-
 const sortedCardList = {};
 
 const OutfitList = {
@@ -58,11 +23,10 @@ const DrawCardTable = (group, characters) => {
 	//ヘッダー
 	const header = `<table class="cardlist-table" style="min-width: ${(characters.length + 1) * 110}px"><thead>\n<tr>\n<th class="HeaderL"></th>\n`
 		+ characters.map((characterId) => {
-			const characterData = LLSIdol.getCharacterDataFromGroups(characterId, group);
-			const color = LLS.getColorFromObject(characterData);
+			const characterData = LLSIdol.findCharacterData(characterId);
 			return `<th class="HeaderR">
 				<div class="top-marker bg_${characterId}">
-				<strong class="shadowname">${characterData.name}</strong>
+				<strong class="shadowname">${characterData.fullName}</strong>
 				</div>
 				</th>\n`;
 		}).join('')
@@ -121,8 +85,8 @@ function initialize() {
 	//キャラクターIDから色データをCSSに追加
 	document.querySelector('style').textContent +=
 		AllMembers.map(characterId => {
-			const characterData = LLSIdol.getCharacterDataFromGroups(characterId, "muse", "aqours", "nijigasaki");
-			const characterColor = LLS.getColorFromColorCode(characterData["color_sifas"]);
+			const characterData = LLSIdol.findCharacterData(characterId);
+			const characterColor = LLS.getColorFromObject(characterData["color_sifas"]);
 			return `
 		.bg_${characterId} {
 			background-color: ${characterColor};
