@@ -84,21 +84,19 @@ function generateCalendar(y, m){
 
 //■初期化処理
 function initialize() {
-	const TimeOutputLoaded = performance.now();
-	
 	//LLS-idol を参照し、誕生日を持つキャラクターの情報を window["JSON-calendar"] に追加
 	//ただし、現行はキャストを除外し、
 	//hiddenタグが付与されているキャラクター（転入生扱いのしずく、彼方、エマ）も除く
-	const _AdditionalList = LLSIdol.filterCharacterList("has:birthday", "exhas:cast", "exhas:hidden").map( (character) => {
+	LLSIdol.filterCharacterList("has:birthday", "exhas:cast", "exhas:hidden").forEach( (character) => {
 		const characterProfile = {};
-		characterProfile.name = character.name; //フルネーム
+		characterProfile.name = character.fullName; //フルネーム
 		characterProfile.birthday = character.birthday; //誕生日
 		characterProfile.type = "C"; //キャストでなくキャラクターであることが確定
 		characterProfile.group = character.group_id;
 		if(character.isRival){ characterProfile.isRival = true;}
-		return characterProfile;
+		window["JSON-calendar"].push(characterProfile);
 	});
-	window["JSON-calendar"].push(..._AdditionalList);
+	Object.freeze(window["JSON-calendar"]);
 
 	//カレンダーの描画
 	generateCalendar(globalYear, globalMonth);
@@ -107,6 +105,6 @@ function initialize() {
 	if(isDebugMode) {
 		//描画時間の出力
 		const TimeOutputEnd = performance.now();
-		console.log(`ラブライブ！誕生日カレンダー\n初期化処理： ${TimeOutputEnd - TimeLoadingStart}ミリ秒`);
+		console.log(`ラブライブ！誕生日カレンダー\n初期化処理： ${(TimeOutputEnd - TimeLoadingStart).toFixed(1)}ミリ秒`);
 	}
 }
