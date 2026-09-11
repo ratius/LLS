@@ -10,11 +10,15 @@ const tagData = {
 	"Amasawa"  : {"name": "天沢朱音"   , "r":255, "g": 91, "b":157, "style": "button-round"},
 	"Kotomori" : {"name": "小戸森穂花" , "r": 63, "g":191, "b":127, "style": "button-round"},
 	"Suzunose" : {"name": "涼ノ瀬葵音" , "r":242, "g":242, "b":242, "style": "button-round"},
+
+	"Sakikawa" : {"name": "咲川ひなの" , "r":160, "g":133, "b":215, "style": "button-hexa"},
+	"Momose"   : {"name": "百瀬帆南"   , "r": 40, "g":195, "b":255, "style": "button-hexa"}
 };
 
 const filterTargets = [
-	{"name": "debug", "condition": "after:2026-04-01"},
-	{"name": "本編をすべて表示", "condition": "tag:s1"},
+	{"name": "debug", "condition": "after:2026-05-01"},
+	{"name": "2025年配信 (全9本)", "condition": "tag:s1 before:2025-12-31"},
+	{"name": "2026年配信 (進行中)", "condition": "tag:s1 after:2026-01-01 before:2026-12-31"},
 	{"name": "----"},
 	{"name": "出演：綾咲穂音"   , "condition": "tag:Ayasaki"},
 	{"name": "出演：遠藤璃菜"   , "condition": "tag:Endo"},
@@ -29,11 +33,11 @@ const filterTargets = [
 ];
 
 const LLSVLayoutTemplate = (entry) => {
-    const videoLength = (typeof entry['length'] === 'number' && entry['length'] >= 0 ? `<span class="length pc-only">動画：${LLS.convertSecondsToHHMMSS(entry['length'])}</span>` : '');
-    const videoContent = ('tube' in entry && entry['tube'] ? `${LLSVideo.getYouTubeLink(entry['tube'], entry['title'])}${videoLength}` : '');
-    const descContent = (typeof entry['desc'] === 'string' && entry['desc'] !== "" ? LLS.markup(entry['desc']) : '');
-	const memoContent = (typeof entry['memo'] === 'string' && entry['memo'] !== "" ? LLS.markup(entry['memo']) : '');
-	const progContent = (typeof entry['program'] == 'object' && entry['program'].length ? LLS.markup(`{{EL::配信内容（クリックで展開）::{{UL::${entry['program'].join("::")}}}}}`) : '');
+    const videoLength = (entry?.['length'] >= 0 ? `<span class="length pc-only">動画：${LLS.convertSecondsToHHMMSS(entry['length'])}</span>` : '');
+    const videoContent = (entry?.['tube'] ? `${LLSVideo.getYouTubeLink(entry['tube'], entry['title'])}${videoLength}` : '');
+    const descContent = (entry?.['desc'] ? LLS.markup(entry['desc']) : '');
+	const memoContent = (entry?.['memo'] ? LLS.markup(entry['memo']) : '');
+	const progContent = (entry?.['program']?.length ? LLS.markup(`{{EL::配信内容（クリックで展開）::{{UL::${entry['program'].join("::")}}}}}`) : '');
     const tagsContent = entry['tags'].map(tag => {
 		let isGuest = false;
 		if(tag.startsWith("_")){

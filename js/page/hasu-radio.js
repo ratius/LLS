@@ -23,6 +23,7 @@ const tagData = {
 	"Okuma"    : {"name": "大熊和奏"   , "r":178, "g":255, "b":221, "style": "button-hexa"},
 	"Yumi"     : {"name": "ゆみ先生"   , "r":112, "g":112, "b":112, "style": "button-hexa"},
 	"SukiSukiClub" : {"name": "好き好きクラブの皆さん", "r":112, "g":112, "b":112, "style": "button-hexa"},
+	"Kohara"   : {"name": "小原好美"   , "r":  0, "g":168, "b":107, "style": "button-hexa"},
 
 	"s1" : {"name": "待機室", "r":160, "g":128, "b":128, "style": "button-square"},
 	"s2" : {"name": "補習室", "r":160, "g":128, "b":128, "style": "button-square"},
@@ -49,11 +50,11 @@ const filterTargets = [
 ];
 
 const LLSVLayoutTemplate = (entry) => {
-    const videoLength = (typeof entry['length'] === 'number' && entry['length'] >= 0 ? `<span class="length pc-only">動画：${LLS.convertSecondsToHHMMSS(entry['length'])}</span>` : '');
-    const videoContent = ('tube' in entry && entry['tube'] ? `${LLSVideo.getYouTubeLink(entry['tube'], entry['title'])}${videoLength}` : '');
-    const descContent = (typeof entry['desc'] === 'string' && entry['desc'] !== "" ? LLS.markup(entry['desc']) : '');
-	const memoContent = (typeof entry['memo'] === 'string' && entry['memo'] !== "" ? LLS.markup(entry['memo']) : '');
-	const progContent = (typeof entry['program'] == 'object' && entry['program'].length ? LLS.markup(`{{EL::配信内容（クリックで展開）::{{UL::${entry['program'].join("::")}}}}}`) : '');
+    const videoLength = (entry?.['length'] >= 0 ? `<span class="length pc-only">動画：${LLS.convertSecondsToHHMMSS(entry['length'])}</span>` : '');
+    const videoContent = (entry?.['tube'] ? `${LLSVideo.getYouTubeLink(entry['tube'], entry['title'])}${videoLength}` : '');
+    const descContent = (entry?.['desc'] ? LLS.markup(entry['desc']) : '');
+	const memoContent = (entry?.['memo'] ? LLS.markup(entry['memo']) : '');
+	const progContent = (entry['program']?.length ? LLS.markup(`{{EL::配信内容（クリックで展開）::{{UL::${entry['program'].join("::")}}}}}`) : '');
     const tagsContent = entry['tags'].map(tag => {
 		let isGuest = false;
 		if(tag.startsWith("_")){
