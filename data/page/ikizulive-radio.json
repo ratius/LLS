@@ -204,8 +204,6 @@
 {
 	"date": "2026-07-29",
 	"title": "いきづらい部！知らんらんらじお！#24",
-	"desc": "",
-	"memo": "",
 	"program": ["オープニング (0:00-)", "おたより紹介 (8:23-)", "楽曲紹介（シンメトリー） (18:41-)", "あなたのヒミツミチ (22:25-)", "楽曲紹介（REGAIN AGAIN LLLLOVE） (32:31-)", "お知らせ＆エンディング (36:35-)"],
 	"tags": ["s1", "Endo", "Miyano", "Okumura", "Suzunose"],
 	"tube": "AnHWEeAtDPY",
@@ -220,6 +218,46 @@
 	"tags": ["s1", "Ayasaki", "Sakano", "Kotomori", "Suzunose"],
 	"tube": "-oainAehSBs",
 	"length": 2579
+},
+{
+	"date": "2026-08-26",
+	"title": "いきづらい部！知らんらんらじお！#26",
+	"desc": "",
+	"memo": "アニメ『{{L::前橋ウィッチーズ::https://www.maebashi-witches.com}}』とのコラボ回！",
+	"program": [],
+	"tags": ["s1", "Sakano", "Amasawa", "Sakikawa", "Momose"],
+	"tube": "bU1uQvGEacI",
+	"length": 2770
+},
+{
+	"date": "2026-09-09",
+	"title": "いきづらい部！知らんらんらじお！#27",
+	"desc": "",
+	"memo": "今回は知らんらんらじお放送1周年を記念して、メンバー全員による生配信でのお届け！ ボリュームも大増量！",
+	"program": ["オープニング (9:58-)", "楽曲紹介（Dou-Da? Doing!）(16:42-)", "こーるみー!!!による雑談 (18:37-)", "Lコメンタリー（全力Calling!! I LOVE YOU!!）(32:49-)", "既読待ちLOVERSによる雑談 (40:23-)", "Lコメンタリー（tap tap tappin'!!）(52:37-)", "恋文乙女純情派による雑談 (58:12-)", "Lコメンタリー（未完成なラブレター） (1:15:34)", "みんなで雑談 (1:22:53-)", "Lコメンタリー（SUPER SUMMER SENSATION!!） (1:31:15-)", "Lコメンタリー（What is my LIFE?） (1:51:00-)", "お知らせ＆エンディング (1:56:46-)"],
+	"tags": ["s1", "Ayasaki", "Endo", "Miyano", "Fujino", "Sakano", "Seko", "Okumura", "Amasawa", "Kotomori", "Suzunose"],
+	"tube": "EAufklHL1ZM&t=598s",
+	"length": 7215
+},
+{
+	"date": "2026-09-30",
+	"title": "いきづらい部！知らんらんらじお！#28",
+	"desc": "",
+	"memo": "収録スケジュールの都合で、本来よりも1週間遅れでの配信となっている。",
+	"program": [],
+	"tags": ["s1", "Ayasaki", "Miyano", "Sakano", "Seko", "Kotomori"],
+	"tube": "",
+	"length": -1
+},
+{
+	"date": "2026-10-07",
+	"title": "いきづらい部！知らんらんらじお！#29",
+	"desc": "",
+	"memo": "",
+	"program": [],
+	"tags": ["s1", "Endo", "Fujino", "Okumura", "Amasawa", "Suzunose"],
+	"tube": "",
+	"length": -1
 },
 {
 	"date": "2099-01-01",
