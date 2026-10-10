@@ -707,7 +707,7 @@ const LLSIdol = {
         {
             "id": "Mion",
             "group_id": "hasunosora",
-            "fullName": "箕輪みおん",
+            "fullName": "紫輪みおん",
             "firstName": "みおん",
             "face": 206,
             "icon": 222
