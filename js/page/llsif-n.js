@@ -32,12 +32,11 @@ function DrawButtons(id) {
 function DrawProfile(id){
 	const target = window['JSON-llsif-n'].find( q => q.id === id);
 	if(target === undefined){ return false;}
-	const baseProfile = LLSIdol.getCharacterDataFromGroups(id, "llsif");
-
+	const baseProfile = LLSIdol.findCharacterData(id, "llsif");
 	const Profile = `
-	<h3>${baseProfile["name"]} プロフィール</h3>
+	<h3>${baseProfile.fullName} プロフィール</h3>
 	<div class="profile-container">
-		${LLSIdol.drawFace("llsif", target.id)}
+		${LLSIdol.drawFace(baseProfile.face, 64)}
 		<table class="profile-table">
 			<tbody>
 				<tr>
@@ -87,9 +86,9 @@ function DrawCardData(id, num){
 	const targetChar = window['JSON-llsif-n'].find( q => q.id === id);
 	if(targetChar === undefined){ return false;}
 	const targetCard = targetChar.card[num];
-	const baseProfile = LLSIdol.getCharacterDataFromGroups(id, "llsif");
+	const baseProfile = LLSIdol.findCharacterData(id, "llsif");
 	
-	const Header = `<h3>${baseProfile.name} ${(num+1)}枚目 (部員No.${targetCard.num})</h3>`
+	const Header = `<h3>${baseProfile.fullName} ${(num+1)}枚目 (部員No.${targetCard.num})</h3>`
 	+ ('memo' in targetCard ? '<p style="font-size: 90%">' + targetCard.memo + '<\/p>' : '')
 	
 	const PartnerText = ('text' in targetCard ?
@@ -103,7 +102,7 @@ function DrawCardData(id, num){
 		`<h4>サイドストーリー「${targetCard.sidetitle}」</h4>`
 		+ targetCard.side.map( text => {
 			const nameTemp = ('namealt' in text ? text.namealt : baseProfile.firstName);
-			const faceTemp = ('noface' in text ? '' : LLSIdol.drawFace("llsif", id));
+			const faceTemp = ('noface' in text ? '' : LLSIdol.drawFace(baseProfile.face, 64));
 			return `
 			<div class="text-story">
 				${faceTemp}
@@ -125,10 +124,10 @@ function DrawCardData(id, num){
 function initialize() {
 	//セレクトボックスに要素を追加
 	window['JSON-llsif-n'].forEach( (member) => {
-		const characterData = LLSIdol.getCharacterDataFromGroups(member.id, "llsif")
+		const characterData = LLSIdol.findCharacterData(member.id, "llsif")
 		if(characterData){
 			const option = document.createElement("option");
-			option.text = characterData.name;
+			option.text = characterData.fullName;
 			option.value = member.id;
 			option.style.cssText = 'background-color: ' + SchoolData[member.school].color;
 			document.getElementById('PullDownMenu').appendChild(option);
