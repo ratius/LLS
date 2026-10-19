@@ -694,6 +694,7 @@ const LLSIdol = {
             "fullName": "錦上マイカ",
             "firstName": "マイカ",
             "birthday": "0819",
+            "color": { "r": 255, "g": 153, "b": 0 },
             "face": 204,
             "icon": 220
         },
@@ -703,6 +704,7 @@ const LLSIdol = {
             "fullName": "令沢葵",
             "firstName": "葵",
             "birthday": "1107",
+            "color": { "r": 238, "g": 251, "b": 195 },
             "face": 205,
             "icon": 221
         },
@@ -712,6 +714,7 @@ const LLSIdol = {
             "fullName": "紫輪みおん",
             "firstName": "みおん",
             "birthday": "0127",
+            "color": { "r": 100, "g": 97, "b": 191 },
             "face": 206,
             "icon": 222
         },
