@@ -7,12 +7,13 @@ let globalMonth = new Date().getMonth();
 function FilterbyBirthday(m, d){
 	const dateTemp = new Date(2020, m, d); //3月1日と2月29日を区別するため、閏年上で比較する必要がある
 	const dateTempCode = ((dateTemp.getMonth()+1).toString().padStart(2, '0')) + (dateTemp.getDate()).toString().padStart(2, '0');
+	const isRival = (group_id) => (group_id === 'arise' || group_id === 'saintsnow' || group_id === 'sunnypassion');
 	return isBirthday = window['JSON-calendar'].filter (character => {
 		return (character.birthday === dateTempCode)
 		&& (character.type !== 'V' || document.getElementById('EnableCast').checked)
 		&& (character.group !== 'llsif' || document.getElementById('EnableLLSIF').checked)
 		&& (character.group !== 'musical' || document.getElementById('EnableMusical').checked)
-		&& (!character?.isRival || document.getElementById('EnableRivals').checked)
+		&& (!isRival(character.group) || document.getElementById('EnableRivals').checked)
 	});
 }
 
