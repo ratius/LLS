@@ -2,7 +2,7 @@
 // データベースと一体化したスタンドアロン版
 
 const LLSIdol = {
-    //■getCharacterData (id, [group_id])
+    //■findCharacterData (id, [group_id])
     //キャラクター1人分の情報を、オブジェクトとして取得する
     //条件に合うものが複数ある場合、エントリーが最も先にあるキャラクターの情報を返す
     findCharacterData(id, group_id) {
@@ -693,6 +693,7 @@ const LLSIdol = {
             "group_id": "hasunosora",
             "fullName": "錦上マイカ",
             "firstName": "マイカ",
+            "birthday": "0819",
             "face": 204,
             "icon": 220
         },
@@ -701,6 +702,7 @@ const LLSIdol = {
             "group_id": "hasunosora",
             "fullName": "令沢葵",
             "firstName": "葵",
+            "birthday": "1107",
             "face": 205,
             "icon": 221
         },
@@ -709,6 +711,7 @@ const LLSIdol = {
             "group_id": "hasunosora",
             "fullName": "紫輪みおん",
             "firstName": "みおん",
+            "birthday": "0127",
             "face": 206,
             "icon": 222
         },
@@ -977,6 +980,7 @@ const LLSIdol = {
         },
         {
             "id": "Leah",
+            "group_id": "saintsnow",
             "fullName": "鹿角理亞",
             "firstName": "理亞",
             "birthday": "1212",
@@ -985,6 +989,7 @@ const LLSIdol = {
         },
         {
             "id": "Sarah",
+            "group_id": "saintsnow",
             "fullName": "鹿角聖良",
             "firstName": "聖良",
             "birthday": "0504",
