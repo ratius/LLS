@@ -57,6 +57,9 @@ const CharacterName = {
 	"Hime"     : "姫芽",
 	"Ceras"    : "セラス",
 	"Izumi"    : "泉",
+	"Maika"    : "マイカ",
+	"Aoi"      : "葵",
+	"Mion"     : "みおん",
 
 	"RurikaM"  : "ルリカ",
 	"YuzuhaM"  : "ユズハ",
@@ -216,7 +219,7 @@ function initialize () {
 	const MemberIdAqours = ["Chika", "Riko", "Kanan", "Dia", "You", "Yoshiko", "Hanamaru", "Mari", "Ruby"];
 	const MemberIdNiji = ["Ayumu", "Kasumi", "Shizuku", "Karin", "Ai", "Kanata", "Setsuna", "Emma", "Rina", "Shioriko", "Mia", "Lanzhu", "Yu"];
 	const MemberIdLiella = ["Kanon", "Keke", "Chisato", "Sumire", "Ren", "Kinako", "Mei", "Shiki", "Natsumi", "Margarete", "Tomari"];
-	const MemberIdHasu = ["Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime", "Ceras", "Izumi"];
+	const MemberIdHasu = ["Kaho", "Sayaka", "Kozue", "Tsuzuri", "Rurino", "Megumi", "Ginko", "Kosuzu", "Hime", "Ceras", "Izumi", "Maika", "Aoi", "Mion"];
 	const MemberIdMusical = ["RurikaM", "YuzuhaM", "YukinoM", "HikaruM", "MaayaM", "AnzuM", "MisuzuM", "ToaM", "RenaM", "SayakaM"];
 	const MemberIdYohane = ["YohaneY", "HanamaruY", "DiaY", "RubyY", "ChikaY", "KananY", "YouY", "RikoY", "MariY"];
 	const MemberIdBlueBird = ["Polka", "Mai", "Akira", "Hanabi", "Miracle", "Noriko", "Yukuri", "Aurora", "Midori", "Shion"];
