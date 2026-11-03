@@ -11,6 +11,9 @@ const tagData = {
 	"Kurusu"  : {"name": "来栖"   , "r":157, "g":141, "b":226, "style": "button-round"},
 	"Miyake"  : {"name": "三宅"   , "r":245, "g":100, "b": 85, "style": "button-round"},
 	"Shindo"  : {"name": "進藤"   , "r": 30, "g":190, "b":205, "style": "button-round"},
+
+	"Saito"    : {"name": "斉藤朱夏" , "r":102, "g":192, "b":255, "style": "button-hexa"},
+	"Kobayashi": {"name": "小林愛香" , "r":193, "g":202, "b":212, "style": "button-hexa"},
 };
 
 //■プルダウンメニューの中身
@@ -22,7 +25,8 @@ const filterTargets = [
 	{"name": "105期 上半期（2025年4月 – 2025年10月）", "condition": "after:2025-04-21 before:2025-10-08"},
 	{"name": "105期 下半期（2025年10月 – 2026年3月）", "condition": "after:2025-10-09 before:2026-03-31"},
 	{"name": "BGP（2026年4月 – 2026年7月）", "condition": "after:2026-04-01 before:2026-07-03"},
-	{"name": "せーはすPlus（2026年7月 – ）", "condition": "after:2026-07-17 before:2027-03-31"}
+	{"name": "せーはすPlus（2026年7月 – 2026年10月）", "condition": "after:2026-07-17 before:2026-10-08"},
+	{"name": "ラブライブ！フェス開催記念（2026年10月 –）", "condition": "after:2026-10-09 before:2027-03-31"}
 ];
 
 //■「動画一覧」への出力
