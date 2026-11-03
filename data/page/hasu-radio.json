@@ -1600,23 +1600,63 @@
 },
 {
 	"date": "2026-09-27",
-	"title": "【第12FINAL】",
-	"desc": "{{NULL::タイトル回収は:頃}}",
+	"title": "【第12FINAL】覚えておいた",
+	"desc": "月音「1回なかった？ 直近で」 来栖「あったあったあった。」 月音「あったよね。」 菅「え、怖かったっしょ？さすがに」 来栖「んー、そのパイロットの名前を覚えておいた」{{NULL::タイトル回収は30:50頃}}",
 	"memo": "",
-	"program": [],
+	"program": ["オープニング (0:00-)", "蓮ノ空女学院投書箱 (2:33-)", "楽曲紹介（おいでよ！石川大観光Ⅱ） (31:38-)", "おしらせコーナー (34:11-)", "エンディング (38:39-)"],
 	"tags": ["s9", "Kan", "Tsukine", "Kurusu"],
-	"tube": "",
-	"length": -1
+	"tube": "oEQOzIKv1MQ",
+	"length": 2477
 },
 {
 	"date": "2026-10-04",
-	"title": "【第13FINAL】",
+	"title": "【第13FINAL】せいぎのみかたかん",
 	"desc": "{{NULL::タイトル回収は:頃}}",
 	"memo": "",
 	"program": [],
 	"tags": ["s9", "Kan", "Tsukine", "Kurusu", "Nirei"],
-	"tube": "",
-	"length": -1
+	"tube": "vSaRQqf8GJ4",
+	"length": 2754
+},
+{
+	"date": "2026-10-11",
+	"title": "【第14FINAL】答えたくない",
+	"desc": "{{NULL::タイトル回収は:頃}}",
+	"memo": "",
+	"program": [],
+	"tags": ["s9", "Kan", "Tsukine", "Kurusu", "Nirei"],
+	"tube": "QZiwlKOt3zk",
+	"length": 2955
+},
+{
+	"date": "2026-10-18",
+	"title": "【第15FINAL】好きなところ：芸歴",
+	"desc": "{{NULL::タイトル回収は:頃}}",
+	"memo": "菅叶和ディレクション回。",
+	"program": [],
+	"tags": ["s9", "Kan", "Tsukine", "Kurusu"],
+	"tube": "5ppSBuvPMYs",
+	"length": 3774
+},
+{
+	"date": "2026-10-25",
+	"title": "【第16FINAL】ドジっ娘かんかんメイドのなんでもやるっ！",
+	"desc": "{{NULL::タイトル回収は:頃}}",
+	"memo": "",
+	"program": [],
+	"tags": ["s9", "Kan", "Tsukine", "Kurusu"],
+	"tube": "RPfplCnRBPk",
+	"length": 3699
+},
+{
+	"date": "2026-11-01",
+	"title": "【第17FINAL】飛びます　飛べます",
+	"desc": "{{NULL::タイトル回収は:頃}}",
+	"memo": "",
+	"program": [],
+	"tags": ["s9", "Kan", "Tsukine", "Kurusu"],
+	"tube": "gcxwjaM_w1A",
+	"length": 2930
 },
 {
 	"date": "2099-01-01",

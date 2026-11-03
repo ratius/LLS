@@ -107,7 +107,7 @@
 	"program": ["オープニング (0:00-)", "おたより紹介 (2:24-)", "楽曲紹介（Dou-Da? Doing!） (32:23-)", "お知らせ＆エンディング (39:27-)"],
 	"tags": ["s1",  "Endo", "Miyano", "Okumura", "Kotomori"],
 	"tube": "booAw7tcEgI",
-	"length": 2643
+	"length": 2642
 },
 {
 	"date": "2026-03-11",
@@ -144,9 +144,8 @@
 {
 	"date": "2026-05-06",
 	"title": "いきづらい部！知らんらんらじお！#18",
-	"desc": "",
-	"memo": "",
-	"program": [],
+	"memo": "今回より、楽曲紹介は楽曲が流れている間にキャストが喋る「L高リアクション(仮)」形式となった。",
+	"program": ["オープニング (0:00-)", "おたより紹介 (3:20-)", "楽曲紹介（シンメトリー） (13:49-)", "あなたのヒミツミチ (18:57-)", "新コーナー告知 (27:12-)", "楽曲紹介（凸凹QUARTET） (28:36-)", "お知らせ＆エンディング (33:11-)", "お知らせ＆エンディング (35:23-)"],
 	"tags": ["s1", "Ayasaki", "Fujino", "Sakano", "Seko"],
 	"tube": "wkO_KXZWDT0",
 	"length": 2326
@@ -154,9 +153,8 @@
 {
 	"date": "2026-05-20",
 	"title": "いきづらい部！知らんらんらじお！#19",
-	"desc": "",
-	"memo": "",
-	"program": [],
+	"memo": "前回より始まった、楽曲紹介中にキャストが喋る形式は、リスナーからの提案により「Lコメンタリー」と命名された。",
+	"program": ["オープニング (0:00-)", "おたより紹介 (8:57-)", "楽曲紹介（Daitan Party Time）(19:53-)", "Dou-Da? DO IT! (25:55-)", "楽曲紹介（Silent Stella）(31:14-)"],
 	"tags": ["s1", "Ayasaki", "Endo", "Amasawa", "Kotomori"],
 	"tube": "arZT13BBi5s",
 	"length": 2557
@@ -227,14 +225,14 @@
 	"program": [],
 	"tags": ["s1", "Sakano", "Amasawa", "Sakikawa", "Momose"],
 	"tube": "bU1uQvGEacI",
-	"length": 2770
+	"length": 2760
 },
 {
 	"date": "2026-09-09",
 	"title": "いきづらい部！知らんらんらじお！#27",
 	"desc": "",
 	"memo": "今回は知らんらんらじお放送1周年を記念して、メンバー全員による生配信でのお届け！ ボリュームも大増量！",
-	"program": ["オープニング (9:58-)", "楽曲紹介（Dou-Da? Doing!）(16:42-)", "こーるみー!!!による雑談 (18:37-)", "Lコメンタリー（全力Calling!! I LOVE YOU!!）(32:49-)", "既読待ちLOVERSによる雑談 (40:23-)", "Lコメンタリー（tap tap tappin'!!）(52:37-)", "恋文乙女純情派による雑談 (58:12-)", "Lコメンタリー（未完成なラブレター） (1:15:34)", "みんなで雑談 (1:22:53-)", "Lコメンタリー（SUPER SUMMER SENSATION!!） (1:31:15-)", "Lコメンタリー（What is my LIFE?） (1:51:00-)", "お知らせ＆エンディング (1:56:46-)"],
+	"program": ["オープニング (9:58-)", "楽曲紹介（Dou-Da? Doing!）(16:42-)", "こーるみー!!!による雑談 (18:37-)", "楽曲紹介（全力Calling!! I LOVE YOU!!）(32:49-)", "既読待ちLOVERSによる雑談 (40:23-)", "楽曲紹介（tap tap tappin'!!）(52:37-)", "恋文乙女純情派による雑談 (58:12-)", "楽曲紹介（未完成なラブレター） (1:15:34)", "みんなで雑談 (1:22:53-)", "楽曲紹介（SUPER SUMMER SENSATION!!） (1:31:15-)", "楽曲紹介（What is my LIFE?） (1:51:00-)", "お知らせ＆エンディング (1:56:46-)"],
 	"tags": ["s1", "Ayasaki", "Endo", "Miyano", "Fujino", "Sakano", "Seko", "Okumura", "Amasawa", "Kotomori", "Suzunose"],
 	"tube": "EAufklHL1ZM&t=598s",
 	"length": 7215
@@ -246,8 +244,8 @@
 	"memo": "収録スケジュールの都合で、本来よりも1週間遅れでの配信となっている。",
 	"program": [],
 	"tags": ["s1", "Ayasaki", "Miyano", "Sakano", "Seko", "Kotomori"],
-	"tube": "",
-	"length": -1
+	"tube": "4RwS0Jx8gCY",
+	"length": 2902
 },
 {
 	"date": "2026-10-07",
@@ -256,6 +254,26 @@
 	"memo": "",
 	"program": [],
 	"tags": ["s1", "Endo", "Fujino", "Okumura", "Amasawa", "Suzunose"],
+	"tube": "xJ9LnAU-6VU",
+	"length": 2767
+},
+{
+	"date": "2026-10-21",
+	"title": "いきづらい部！知らんらんらじお！#30",
+	"desc": "",
+	"memo": "",
+	"program": [],
+	"tags": ["s1", "Endo", "Fujino", "Sakano", "Kotomori"],
+	"tube": "CjnVSewt_0A",
+	"length": 2559
+},
+{
+	"date": "2099-01-01",
+	"title": "いきづらい部！知らんらんらじお！#",
+	"desc": "",
+	"memo": "",
+	"program": [],
+	"tags": ["s1", "Ayasaki", "Endo", "Miyano", "Fujino", "Sakano", "Seko", "Okumura", "Amasawa", "Kotomori", "Suzunose"],
 	"tube": "",
 	"length": -1
 },
